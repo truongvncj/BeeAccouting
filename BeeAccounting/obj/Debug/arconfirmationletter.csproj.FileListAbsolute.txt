@@ -1,0 +1,92 @@
+C:\Users\Truong\Desktop\ArconfirmationC#\arconfirmationletter\arconfirmationletter\bin\Debug\arconfirmationletter.exe.config
+C:\Users\Truong\Desktop\ArconfirmationC#\arconfirmationletter\arconfirmationletter\bin\Debug\arconfirmationletter.exe
+C:\Users\Truong\Desktop\ArconfirmationC#\arconfirmationletter\arconfirmationletter\bin\Debug\arconfirmationletter.pdb
+C:\Users\Truong\Desktop\ArconfirmationC#\arconfirmationletter\arconfirmationletter\obj\Debug\arconfirmationletter.csprojResolveAssemblyReference.cache
+C:\Users\Truong\Desktop\ArconfirmationC#\arconfirmationletter\arconfirmationletter\obj\Debug\arconfirmationletter.Main.resources
+C:\Users\Truong\Desktop\ArconfirmationC#\arconfirmationletter\arconfirmationletter\obj\Debug\arconfirmationletter.Properties.Resources.resources
+C:\Users\Truong\Desktop\ArconfirmationC#\arconfirmationletter\arconfirmationletter\obj\Debug\arconfirmationletter.csproj.GenerateResource.Cache
+C:\Users\Truong\Desktop\ArconfirmationC#\arconfirmationletter\arconfirmationletter\obj\Debug\arconfirmationletter.exe
+C:\Users\Truong\Desktop\ArconfirmationC#\arconfirmationletter\arconfirmationletter\obj\Debug\arconfirmationletter.pdb
+C:\Users\Truong\Desktop\ArconfirmationC#\arconfirmationletter\arconfirmationletter\obj\Debug\arconfirmationletter.MasterdataInput.resources
+F:\ArconfirmationC#\arconfirmationletter\arconfirmationletter\bin\Debug\arconfirmationletter.exe.config
+F:\ArconfirmationC#\arconfirmationletter\arconfirmationletter\obj\Debug\arconfirmationletter.exe
+F:\ArconfirmationC#\arconfirmationletter\arconfirmationletter\obj\Debug\arconfirmationletter.pdb
+F:\ArconfirmationC#\arconfirmationletter\arconfirmationletter\obj\Debug\arconfirmationletter.csprojResolveAssemblyReference.cache
+F:\ArconfirmationC#\arconfirmationletter\arconfirmationletter\obj\Debug\arconfirmationletter.Main.resources
+F:\ArconfirmationC#\arconfirmationletter\arconfirmationletter\obj\Debug\arconfirmationletter.MasterdataInput.resources
+F:\ArconfirmationC#\arconfirmationletter\arconfirmationletter\obj\Debug\arconfirmationletter.Properties.Resources.resources
+F:\ArconfirmationC#\arconfirmationletter\arconfirmationletter\obj\Debug\arconfirmationletter.csproj.GenerateResource.Cache
+C:\Users\TRUONG\Desktop\ArconfirmationC#\arconfirmationletter\arconfirmationletter\bin\Debug\Microsoft.Office.Interop.Excel.dll
+C:\Users\TRUONG\Desktop\ArconfirmationC#\arconfirmationletter\arconfirmationletter\bin\Debug\stdole.dll
+C:\Users\TRUONG\Desktop\ARdevelop\arconfirmationletter\bin\Debug\arconfirmationletter.exe.config
+C:\Users\TRUONG\Desktop\ARdevelop\arconfirmationletter\obj\Debug\arconfirmationletter.exe
+C:\Users\TRUONG\Desktop\ARdevelop\arconfirmationletter\obj\Debug\arconfirmationletter.pdb
+C:\Users\TRUONG\Desktop\ARdevelop\arconfirmationletter\bin\Debug\Reports\ARletter.rdlc
+C:\Users\TRUONG\Desktop\ARdevelop\arconfirmationletter\bin\Debug\arconfirmationletter.exe
+C:\Users\TRUONG\Desktop\ARdevelop\arconfirmationletter\bin\Debug\arconfirmationletter.pdb
+C:\Users\TRUONG\Desktop\ARdevelop\arconfirmationletter\bin\Debug\Microsoft.Office.Interop.Excel.dll
+C:\Users\TRUONG\Desktop\ARdevelop\arconfirmationletter\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\TRUONG\Desktop\ARdevelop\arconfirmationletter\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\TRUONG\Desktop\ARdevelop\arconfirmationletter\bin\Debug\stdole.dll
+C:\Users\TRUONG\Desktop\ARdevelop\arconfirmationletter\bin\Debug\de\Microsoft.SqlServer.Types.resources.dll
+C:\Users\TRUONG\Desktop\ARdevelop\arconfirmationletter\bin\Debug\es\Microsoft.SqlServer.Types.resources.dll
+C:\Users\TRUONG\Desktop\ARdevelop\arconfirmationletter\bin\Debug\fr\Microsoft.SqlServer.Types.resources.dll
+C:\Users\TRUONG\Desktop\ARdevelop\arconfirmationletter\bin\Debug\it\Microsoft.SqlServer.Types.resources.dll
+C:\Users\TRUONG\Desktop\ARdevelop\arconfirmationletter\bin\Debug\ja\Microsoft.SqlServer.Types.resources.dll
+C:\Users\TRUONG\Desktop\ARdevelop\arconfirmationletter\bin\Debug\ko\Microsoft.SqlServer.Types.resources.dll
+C:\Users\TRUONG\Desktop\ARdevelop\arconfirmationletter\bin\Debug\pt\Microsoft.SqlServer.Types.resources.dll
+C:\Users\TRUONG\Desktop\ARdevelop\arconfirmationletter\bin\Debug\ru\Microsoft.SqlServer.Types.resources.dll
+C:\Users\TRUONG\Desktop\ARdevelop\arconfirmationletter\bin\Debug\zh-Hans\Microsoft.SqlServer.Types.resources.dll
+C:\Users\TRUONG\Desktop\ARdevelop\arconfirmationletter\bin\Debug\zh-Hant\Microsoft.SqlServer.Types.resources.dll
+C:\Users\TRUONG\Desktop\ARdevelop\arconfirmationletter\obj\Debug\arconfirmationletter.csprojResolveAssemblyReference.cache
+C:\Users\TRUONG\Desktop\ARdevelop\arconfirmationletter\obj\Debug\arconfirmationletter.View.Depositconfirmline.resources
+C:\Users\TRUONG\Desktop\ARdevelop\arconfirmationletter\obj\Debug\arconfirmationletter.View.fRM_AROPTION.resources
+C:\Users\TRUONG\Desktop\ARdevelop\arconfirmationletter\obj\Debug\arconfirmationletter.View.Priodchoice.resources
+C:\Users\TRUONG\Desktop\ARdevelop\arconfirmationletter\obj\Debug\arconfirmationletter.View.Reportoptionbuilt.resources
+C:\Users\TRUONG\Desktop\ARdevelop\arconfirmationletter\obj\Debug\arconfirmationletter.View.VInputchange.resources
+C:\Users\TRUONG\Desktop\ARdevelop\arconfirmationletter\obj\Debug\arconfirmationletter.View.Reportsview.resources
+C:\Users\TRUONG\Desktop\ARdevelop\arconfirmationletter\obj\Debug\arconfirmationletter.View.Viewtable.resources
+C:\Users\TRUONG\Desktop\ARdevelop\arconfirmationletter\obj\Debug\arconfirmationletter.View.Main.resources
+C:\Users\TRUONG\Desktop\ARdevelop\arconfirmationletter\obj\Debug\arconfirmationletter.Properties.Resources.resources
+C:\Users\TRUONG\Desktop\ARdevelop\arconfirmationletter\obj\Debug\arconfirmationletter.csproj.GenerateResource.Cache
+C:\Users\TRUONG\Desktop\ARdevelop\arconfirmationletter\obj\Debug\RdlCompile.cache
+C:\Users\TRUONG\Desktop\ARdevelop\arconfirmationletter\obj\Debug\RdlCompile.compiled
+C:\Users\TRUONG\Desktop\Developing product\KAmanagement\arconfirmationletter\bin\Debug\arconfirmationletter.exe.config
+C:\Users\TRUONG\Desktop\Developing product\KAmanagement\arconfirmationletter\obj\Debug\arconfirmationletter.exe
+C:\Users\TRUONG\Desktop\Developing product\KAmanagement\arconfirmationletter\obj\Debug\arconfirmationletter.pdb
+C:\Users\TRUONG\Desktop\Developing product\KAmanagement\arconfirmationletter\bin\Debug\Reports\ARletter.rdlc
+C:\Users\TRUONG\Desktop\Developing product\KAmanagement\arconfirmationletter\bin\Debug\arconfirmationletter.exe
+C:\Users\TRUONG\Desktop\Developing product\KAmanagement\arconfirmationletter\bin\Debug\arconfirmationletter.pdb
+C:\Users\TRUONG\Desktop\Developing product\KAmanagement\arconfirmationletter\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\TRUONG\Desktop\Developing product\KAmanagement\arconfirmationletter\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\TRUONG\Desktop\Developing product\KAmanagement\arconfirmationletter\bin\Debug\stdole.dll
+C:\Users\TRUONG\Desktop\Developing product\KAmanagement\arconfirmationletter\bin\Debug\de\Microsoft.SqlServer.Types.resources.dll
+C:\Users\TRUONG\Desktop\Developing product\KAmanagement\arconfirmationletter\bin\Debug\es\Microsoft.SqlServer.Types.resources.dll
+C:\Users\TRUONG\Desktop\Developing product\KAmanagement\arconfirmationletter\bin\Debug\fr\Microsoft.SqlServer.Types.resources.dll
+C:\Users\TRUONG\Desktop\Developing product\KAmanagement\arconfirmationletter\bin\Debug\it\Microsoft.SqlServer.Types.resources.dll
+C:\Users\TRUONG\Desktop\Developing product\KAmanagement\arconfirmationletter\bin\Debug\ja\Microsoft.SqlServer.Types.resources.dll
+C:\Users\TRUONG\Desktop\Developing product\KAmanagement\arconfirmationletter\bin\Debug\ko\Microsoft.SqlServer.Types.resources.dll
+C:\Users\TRUONG\Desktop\Developing product\KAmanagement\arconfirmationletter\bin\Debug\pt\Microsoft.SqlServer.Types.resources.dll
+C:\Users\TRUONG\Desktop\Developing product\KAmanagement\arconfirmationletter\bin\Debug\ru\Microsoft.SqlServer.Types.resources.dll
+C:\Users\TRUONG\Desktop\Developing product\KAmanagement\arconfirmationletter\bin\Debug\zh-Hans\Microsoft.SqlServer.Types.resources.dll
+C:\Users\TRUONG\Desktop\Developing product\KAmanagement\arconfirmationletter\bin\Debug\zh-Hant\Microsoft.SqlServer.Types.resources.dll
+C:\Users\TRUONG\Desktop\Developing product\KAmanagement\arconfirmationletter\obj\Debug\arconfirmationletter.csprojResolveAssemblyReference.cache
+C:\Users\TRUONG\Desktop\Developing product\KAmanagement\arconfirmationletter\obj\Debug\arconfirmationletter.View.Caculating.resources
+C:\Users\TRUONG\Desktop\Developing product\KAmanagement\arconfirmationletter\obj\Debug\arconfirmationletter.View.DatePicker.resources
+C:\Users\TRUONG\Desktop\Developing product\KAmanagement\arconfirmationletter\obj\Debug\arconfirmationletter.View.Depositconfirmline.resources
+C:\Users\TRUONG\Desktop\Developing product\KAmanagement\arconfirmationletter\obj\Debug\arconfirmationletter.View.filteroption.resources
+C:\Users\TRUONG\Desktop\Developing product\KAmanagement\arconfirmationletter\obj\Debug\arconfirmationletter.View.fRM_AROPTION.resources
+C:\Users\TRUONG\Desktop\Developing product\KAmanagement\arconfirmationletter\obj\Debug\arconfirmationletter.View.fromdate.resources
+C:\Users\TRUONG\Desktop\Developing product\KAmanagement\arconfirmationletter\obj\Debug\arconfirmationletter.View.Login.resources
+C:\Users\TRUONG\Desktop\Developing product\KAmanagement\arconfirmationletter\obj\Debug\arconfirmationletter.View.PrintLetterOption.resources
+C:\Users\TRUONG\Desktop\Developing product\KAmanagement\arconfirmationletter\obj\Debug\arconfirmationletter.View.Seachcode.resources
+C:\Users\TRUONG\Desktop\Developing product\KAmanagement\arconfirmationletter\obj\Debug\arconfirmationletter.View.Serversetup.resources
+C:\Users\TRUONG\Desktop\Developing product\KAmanagement\arconfirmationletter\obj\Debug\arconfirmationletter.View.valueinput.resources
+C:\Users\TRUONG\Desktop\Developing product\KAmanagement\arconfirmationletter\obj\Debug\arconfirmationletter.View.VInputchange.resources
+C:\Users\TRUONG\Desktop\Developing product\KAmanagement\arconfirmationletter\obj\Debug\arconfirmationletter.View.Reportsview.resources
+C:\Users\TRUONG\Desktop\Developing product\KAmanagement\arconfirmationletter\obj\Debug\arconfirmationletter.View.Viewtable.resources
+C:\Users\TRUONG\Desktop\Developing product\KAmanagement\arconfirmationletter\obj\Debug\arconfirmationletter.View.Main.resources
+C:\Users\TRUONG\Desktop\Developing product\KAmanagement\arconfirmationletter\obj\Debug\arconfirmationletter.Properties.Resources.resources
+C:\Users\TRUONG\Desktop\Developing product\KAmanagement\arconfirmationletter\obj\Debug\arconfirmationletter.csproj.GenerateResource.Cache
+C:\Users\TRUONG\Desktop\Developing product\KAmanagement\arconfirmationletter\obj\Debug\RdlCompile.cache
+C:\Users\TRUONG\Desktop\Developing product\KAmanagement\arconfirmationletter\obj\Debug\RdlCompile.compiled

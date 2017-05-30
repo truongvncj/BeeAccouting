@@ -1,0 +1,93 @@
+E:\Desktop\Developing product\POSM\POSM\POSM\bin\x86\Debug\Reports\PaymentRequest.rdlc
+E:\Desktop\Developing product\POSM\POSM\POSM\bin\x86\Debug\POSM.exe.config
+E:\Desktop\Developing product\POSM\POSM\POSM\bin\x86\Debug\POSM.exe
+E:\Desktop\Developing product\POSM\POSM\POSM\bin\x86\Debug\POSM.pdb
+E:\Desktop\Developing product\POSM\POSM\POSM\bin\x86\Debug\Microsoft.ReportViewer.WinForms.dll
+E:\Desktop\Developing product\POSM\POSM\POSM\bin\x86\Debug\stdole.dll
+E:\Desktop\Developing product\POSM\POSM\POSM\obj\x86\Debug\POSM.View.Caculating.resources
+E:\Desktop\Developing product\POSM\POSM\POSM\obj\x86\Debug\POSM.View.EditContractItem.resources
+E:\Desktop\Developing product\POSM\POSM\POSM\obj\x86\Debug\POSM.View.Createpayment.resources
+E:\Desktop\Developing product\POSM\POSM\POSM\obj\x86\Debug\POSM.View.CreatnewCust.resources
+E:\Desktop\Developing product\POSM\POSM\POSM\obj\x86\Debug\POSM.View.kAuserRightsetup.resources
+E:\Desktop\Developing product\POSM\POSM\POSM\obj\x86\Debug\POSM.View.Noouthourise.resources
+E:\Desktop\Developing product\POSM\POSM\POSM\obj\x86\Debug\POSM.View.Passwordchange.resources
+E:\Desktop\Developing product\POSM\POSM\POSM\obj\x86\Debug\POSM.View.SetCustGroup.resources
+E:\Desktop\Developing product\POSM\POSM\POSM\obj\x86\Debug\POSM.View.selectinput.resources
+E:\Desktop\Developing product\POSM\POSM\POSM\obj\x86\Debug\POSM.View.Viewdatatable.resources
+E:\Desktop\Developing product\POSM\POSM\POSM\obj\x86\Debug\POSM.View.kapricingcheck.resources
+E:\Desktop\Developing product\POSM\POSM\POSM\obj\x86\Debug\POSM.View.kaconfirmPayment.resources
+E:\Desktop\Developing product\POSM\POSM\POSM\obj\x86\Debug\POSM.View.kaPriodmake.resources
+E:\Desktop\Developing product\POSM\POSM\POSM\obj\x86\Debug\POSM.View.kareportsform.resources
+E:\Desktop\Developing product\POSM\POSM\POSM\obj\x86\Debug\POSM.View.Kasalesuploadandreports.resources
+E:\Desktop\Developing product\POSM\POSM\POSM\obj\x86\Debug\POSM.View.KAcontractlisting.resources
+E:\Desktop\Developing product\POSM\POSM\POSM\obj\x86\Debug\POSM.View.CreatenewContract.resources
+E:\Desktop\Developing product\POSM\POSM\POSM\obj\x86\Debug\POSM.View.Datepick.resources
+E:\Desktop\Developing product\POSM\POSM\POSM\obj\x86\Debug\POSM.View.kaPriodpicker.resources
+E:\Desktop\Developing product\POSM\POSM\POSM\obj\x86\Debug\POSM.View.Login.resources
+E:\Desktop\Developing product\POSM\POSM\POSM\obj\x86\Debug\POSM.View.PrintLetterOption.resources
+E:\Desktop\Developing product\POSM\POSM\POSM\obj\x86\Debug\POSM.View.KASeachcontract.resources
+E:\Desktop\Developing product\POSM\POSM\POSM\obj\x86\Debug\POSM.View.Seachcode.resources
+E:\Desktop\Developing product\POSM\POSM\POSM\obj\x86\Debug\POSM.View.Serversetup.resources
+E:\Desktop\Developing product\POSM\POSM\POSM\obj\x86\Debug\POSM.View.SetGroupFrom.resources
+E:\Desktop\Developing product\POSM\POSM\POSM\obj\x86\Debug\POSM.View.valueinput.resources
+E:\Desktop\Developing product\POSM\POSM\POSM\obj\x86\Debug\POSM.View.VInputchange.resources
+E:\Desktop\Developing product\POSM\POSM\POSM\obj\x86\Debug\POSM.View.Reportsview.resources
+E:\Desktop\Developing product\POSM\POSM\POSM\obj\x86\Debug\POSM.View.Viewtable.resources
+E:\Desktop\Developing product\POSM\POSM\POSM\obj\x86\Debug\POSM.View.Main.resources
+E:\Desktop\Developing product\POSM\POSM\POSM\obj\x86\Debug\POSM.Properties.Resources.resources
+E:\Desktop\Developing product\POSM\POSM\POSM\obj\x86\Debug\POSM.csproj.GenerateResource.Cache
+E:\Desktop\Developing product\POSM\POSM\POSM\obj\x86\Debug\RdlCompile.cache
+E:\Desktop\Developing product\POSM\POSM\POSM\obj\x86\Debug\RdlCompile.compiled
+E:\Desktop\Developing product\POSM\POSM\POSM\obj\x86\Debug\POSM.exe
+E:\Desktop\Developing product\POSM\POSM\POSM\obj\x86\Debug\POSM.pdb
+E:\Desktop\Developing product\POSM\POSM\POSM\obj\x86\Debug\POSM.View.Posmmasterinput.resources
+E:\Desktop\Developing product\POSM\POSM\POSM\obj\x86\Debug\POSM.csprojResolveAssemblyReference.cache
+E:\Desktop\Developing product\POSM\POSM\POSM\obj\x86\Debug\POSM.View.PosmCreateTK.resources
+E:\Desktop\Developing product\Bee Accounting  C#\Bee Accounting\POSM\bin\x86\Debug\POSM.exe.config
+E:\Desktop\Developing product\Bee Accounting  C#\Bee Accounting\POSM\obj\x86\Debug\POSM.exe
+E:\Desktop\Developing product\Bee Accounting  C#\Bee Accounting\POSM\obj\x86\Debug\POSM.pdb
+E:\Desktop\Developing product\Bee Accounting  C#\Bee Accounting\POSM\bin\x86\Debug\Reports\PaymentRequest.rdlc
+E:\Desktop\Developing product\Bee Accounting  C#\Bee Accounting\POSM\bin\x86\Debug\POSM.exe
+E:\Desktop\Developing product\Bee Accounting  C#\Bee Accounting\POSM\bin\x86\Debug\POSM.pdb
+E:\Desktop\Developing product\Bee Accounting  C#\Bee Accounting\POSM\bin\x86\Debug\Microsoft.ReportViewer.WinForms.dll
+E:\Desktop\Developing product\Bee Accounting  C#\Bee Accounting\POSM\bin\x86\Debug\stdole.dll
+E:\Desktop\Developing product\Bee Accounting  C#\Bee Accounting\POSM\obj\x86\Debug\POSM.csprojResolveAssemblyReference.cache
+E:\Desktop\Developing product\Bee Accounting  C#\Bee Accounting\POSM\obj\x86\Debug\POSM.View.Caculating.resources
+E:\Desktop\Developing product\Bee Accounting  C#\Bee Accounting\POSM\obj\x86\Debug\POSM.View.PosmCreateTK.resources
+E:\Desktop\Developing product\Bee Accounting  C#\Bee Accounting\POSM\obj\x86\Debug\POSM.View.EditContractItem.resources
+E:\Desktop\Developing product\Bee Accounting  C#\Bee Accounting\POSM\obj\x86\Debug\POSM.View.Createpayment.resources
+E:\Desktop\Developing product\Bee Accounting  C#\Bee Accounting\POSM\obj\x86\Debug\POSM.View.CreatnewCust.resources
+E:\Desktop\Developing product\Bee Accounting  C#\Bee Accounting\POSM\obj\x86\Debug\POSM.View.kAuserRightsetup.resources
+E:\Desktop\Developing product\Bee Accounting  C#\Bee Accounting\POSM\obj\x86\Debug\POSM.View.Noouthourise.resources
+E:\Desktop\Developing product\Bee Accounting  C#\Bee Accounting\POSM\obj\x86\Debug\POSM.View.Passwordchange.resources
+E:\Desktop\Developing product\Bee Accounting  C#\Bee Accounting\POSM\obj\x86\Debug\POSM.View.SetCustGroup.resources
+E:\Desktop\Developing product\Bee Accounting  C#\Bee Accounting\POSM\obj\x86\Debug\POSM.View.selectinput.resources
+E:\Desktop\Developing product\Bee Accounting  C#\Bee Accounting\POSM\obj\x86\Debug\POSM.View.Viewdatatable.resources
+E:\Desktop\Developing product\Bee Accounting  C#\Bee Accounting\POSM\obj\x86\Debug\POSM.View.kapricingcheck.resources
+E:\Desktop\Developing product\Bee Accounting  C#\Bee Accounting\POSM\obj\x86\Debug\POSM.View.kaconfirmPayment.resources
+E:\Desktop\Developing product\Bee Accounting  C#\Bee Accounting\POSM\obj\x86\Debug\POSM.View.kaPriodmake.resources
+E:\Desktop\Developing product\Bee Accounting  C#\Bee Accounting\POSM\obj\x86\Debug\POSM.View.kareportsform.resources
+E:\Desktop\Developing product\Bee Accounting  C#\Bee Accounting\POSM\obj\x86\Debug\POSM.View.Kasalesuploadandreports.resources
+E:\Desktop\Developing product\Bee Accounting  C#\Bee Accounting\POSM\obj\x86\Debug\POSM.View.KAcontractlisting.resources
+E:\Desktop\Developing product\Bee Accounting  C#\Bee Accounting\POSM\obj\x86\Debug\POSM.View.CreatenewContract.resources
+E:\Desktop\Developing product\Bee Accounting  C#\Bee Accounting\POSM\obj\x86\Debug\POSM.View.Datepick.resources
+E:\Desktop\Developing product\Bee Accounting  C#\Bee Accounting\POSM\obj\x86\Debug\POSM.View.Posmmasterinput.resources
+E:\Desktop\Developing product\Bee Accounting  C#\Bee Accounting\POSM\obj\x86\Debug\POSM.View.kaPriodpicker.resources
+E:\Desktop\Developing product\Bee Accounting  C#\Bee Accounting\POSM\obj\x86\Debug\POSM.View.Login.resources
+E:\Desktop\Developing product\Bee Accounting  C#\Bee Accounting\POSM\obj\x86\Debug\POSM.View.PrintLetterOption.resources
+E:\Desktop\Developing product\Bee Accounting  C#\Bee Accounting\POSM\obj\x86\Debug\POSM.View.KASeachcontract.resources
+E:\Desktop\Developing product\Bee Accounting  C#\Bee Accounting\POSM\obj\x86\Debug\POSM.View.Seachcode.resources
+E:\Desktop\Developing product\Bee Accounting  C#\Bee Accounting\POSM\obj\x86\Debug\POSM.View.Serversetup.resources
+E:\Desktop\Developing product\Bee Accounting  C#\Bee Accounting\POSM\obj\x86\Debug\POSM.View.SetGroupFrom.resources
+E:\Desktop\Developing product\Bee Accounting  C#\Bee Accounting\POSM\obj\x86\Debug\POSM.View.valueinput.resources
+E:\Desktop\Developing product\Bee Accounting  C#\Bee Accounting\POSM\obj\x86\Debug\POSM.View.VInputchange.resources
+E:\Desktop\Developing product\Bee Accounting  C#\Bee Accounting\POSM\obj\x86\Debug\POSM.View.Reportsview.resources
+E:\Desktop\Developing product\Bee Accounting  C#\Bee Accounting\POSM\obj\x86\Debug\POSM.View.Viewtable.resources
+E:\Desktop\Developing product\Bee Accounting  C#\Bee Accounting\POSM\obj\x86\Debug\POSM.View.Main.resources
+E:\Desktop\Developing product\Bee Accounting  C#\Bee Accounting\POSM\obj\x86\Debug\POSM.Properties.Resources.resources
+E:\Desktop\Developing product\Bee Accounting  C#\Bee Accounting\POSM\obj\x86\Debug\POSM.csproj.GenerateResource.Cache
+E:\Desktop\Developing product\Bee Accounting  C#\Bee Accounting\POSM\obj\x86\Debug\RdlCompile.cache
+E:\Desktop\Developing product\Bee Accounting  C#\Bee Accounting\POSM\obj\x86\Debug\RdlCompile.compiled
+E:\Desktop\Developing product\Bee Accounting\Bee Accounting\POSM\bin\x86\Debug\POSM.exe.config
+E:\Desktop\Developing product\Bee Accounting\Bee Accounting\POSM\obj\x86\Debug\POSM.exe
+E:\Desktop\Developing product\Bee Accounting\Bee Accounting\POSM\obj\x86\Debug\POSM.pdb
