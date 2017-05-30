@@ -45,3 +45,50 @@ E:\Desktop\Developing product\Bee Accounting\Bee Accounting\BeeAccounting\obj\x8
 E:\Desktop\Developing product\Bee Accounting\Bee Accounting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.BeeCaculating.resources
 E:\Desktop\Developing product\Bee Accounting\Bee Accounting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.BeeCreatenewaccount.resources
 E:\Desktop\Developing product\Bee Accounting\Bee Accounting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.BeeAccountsetup.resources
+D:\Product\BeeAccouting\BeeAccounting\bin\x86\Debug\BEE ACCOUNTING.exe.config
+D:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BEE ACCOUNTING.exe
+D:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BEE ACCOUNTING.pdb
+D:\Product\BeeAccouting\BeeAccounting\bin\x86\Debug\Reports\Paymentrequest.rdlc
+D:\Product\BeeAccouting\BeeAccounting\bin\x86\Debug\BEE ACCOUNTING.exe
+D:\Product\BeeAccouting\BeeAccounting\bin\x86\Debug\BEE ACCOUNTING.pdb
+D:\Product\BeeAccouting\BeeAccounting\bin\x86\Debug\Microsoft.ReportViewer.WinForms.dll
+D:\Product\BeeAccouting\BeeAccounting\bin\x86\Debug\stdole.dll
+D:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BeeAccounting.csprojResolveAssemblyReference.cache
+D:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.Beemainload.resources
+D:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.BeeAccountsetup.resources
+D:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.Beestoreinput.resources
+D:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.BeeCaculating.resources
+D:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.BeeCreatenewaccount.resources
+D:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.PosmCreateTK.resources
+D:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.EditContractItem.resources
+D:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.Createpayment.resources
+D:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.CreatnewCust.resources
+D:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.Noouthourise.resources
+D:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.Passwordchange.resources
+D:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.SetCustGroup.resources
+D:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.selectinput.resources
+D:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.Viewdatatable.resources
+D:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.kaconfirmPayment.resources
+D:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.kaPriodmake.resources
+D:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.kareportsform.resources
+D:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.Kasalesuploadandreports.resources
+D:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.KAcontractlisting.resources
+D:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.CreatenewContract.resources
+D:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.Datepick.resources
+D:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.Beestorereciept.resources
+D:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.kaPriodpicker.resources
+D:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.Login.resources
+D:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.PrintLetterOption.resources
+D:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.KASeachcontract.resources
+D:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.Seachcode.resources
+D:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.BeeServersetup.resources
+D:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.SetGroupFrom.resources
+D:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.valueinput.resources
+D:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.BeeInputchange.resources
+D:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.Reportsview.resources
+D:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.Viewtable.resources
+D:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.Main.resources
+D:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.Properties.Resources.resources
+D:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BeeAccounting.csproj.GenerateResource.Cache
+D:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\RdlCompile.cache
+D:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\RdlCompile.compiled
