@@ -2804,6 +2804,24 @@ namespace BEEACCOUNT.View
 
 
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+           panelmain.Controls.Clear();
+
+            View.BeePhieuThu accsup = new BeePhieuThu();
+
+            accsup.TopLevel = false;
+            accsup.AutoScroll = true;
+            panelmain.Controls.Add(accsup);
+            accsup.Show();
+
+
+
+          //  panelmain.Controls.Add(inputcdata);
+           // inputcdata.Show();
+
+        }
     }
 
 

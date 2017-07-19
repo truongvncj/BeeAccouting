@@ -42,7 +42,6 @@
             this.button12 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
@@ -77,10 +76,18 @@
             this.hêThôngTaiKhoanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dfasfToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ádfasdfToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button13 = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button14 = new System.Windows.Forms.Button();
+            this.button15 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panelmain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -141,12 +148,12 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelmain.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panelmain.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panelmain.Controls.Add(this.groupBox2);
+            this.panelmain.Controls.Add(this.groupBox1);
             this.panelmain.Controls.Add(this.button12);
             this.panelmain.Controls.Add(this.button11);
             this.panelmain.Controls.Add(this.button10);
-            this.panelmain.Controls.Add(this.button9);
             this.panelmain.Controls.Add(this.button8);
-            this.panelmain.Controls.Add(this.button7);
             this.panelmain.Controls.Add(this.button6);
             this.panelmain.Controls.Add(this.button5);
             this.panelmain.Controls.Add(this.button4);
@@ -161,7 +168,7 @@
             // 
             // button12
             // 
-            this.button12.Location = new System.Drawing.Point(991, 47);
+            this.button12.Location = new System.Drawing.Point(690, 33);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(88, 74);
             this.button12.TabIndex = 18;
@@ -171,7 +178,7 @@
             // 
             // button11
             // 
-            this.button11.Location = new System.Drawing.Point(788, 301);
+            this.button11.Location = new System.Drawing.Point(690, 160);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(88, 74);
             this.button11.TabIndex = 17;
@@ -180,25 +187,16 @@
             // 
             // button10
             // 
-            this.button10.Location = new System.Drawing.Point(788, 189);
+            this.button10.Location = new System.Drawing.Point(507, 33);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(88, 74);
             this.button10.TabIndex = 16;
             this.button10.Text = "Kế toán tổng hợp";
             this.button10.UseVisualStyleBackColor = true;
             // 
-            // button9
-            // 
-            this.button9.Location = new System.Drawing.Point(664, 487);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(88, 74);
-            this.button9.TabIndex = 15;
-            this.button9.Text = "Ngân hàng";
-            this.button9.UseVisualStyleBackColor = true;
-            // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(269, 382);
+            this.button8.Location = new System.Drawing.Point(120, 354);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(88, 74);
             this.button8.TabIndex = 14;
@@ -207,16 +205,17 @@
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(545, 487);
+            this.button7.Location = new System.Drawing.Point(6, 32);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(88, 74);
+            this.button7.Size = new System.Drawing.Size(166, 22);
             this.button7.TabIndex = 13;
-            this.button7.Text = "Tiền mặt";
+            this.button7.Text = "Phiếu thu tiền";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(538, 47);
+            this.button6.Location = new System.Drawing.Point(118, 33);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(88, 74);
             this.button6.TabIndex = 12;
@@ -225,7 +224,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(788, 47);
+            this.button5.Location = new System.Drawing.Point(368, 33);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(88, 74);
             this.button5.TabIndex = 11;
@@ -234,7 +233,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(664, 47);
+            this.button4.Location = new System.Drawing.Point(244, 33);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(88, 74);
             this.button4.TabIndex = 10;
@@ -243,7 +242,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(269, 487);
+            this.button3.Location = new System.Drawing.Point(120, 459);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(88, 74);
             this.button3.TabIndex = 9;
@@ -252,7 +251,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(269, 286);
+            this.button2.Location = new System.Drawing.Point(120, 258);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(88, 74);
             this.button2.TabIndex = 8;
@@ -261,7 +260,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(269, 189);
+            this.button1.Location = new System.Drawing.Point(120, 161);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(88, 74);
             this.button1.TabIndex = 7;
@@ -461,6 +460,65 @@
             this.ádfasdfToolStripMenuItem.Text = "Thiết lập hệ thống";
             this.ádfasdfToolStripMenuItem.Click += new System.EventHandler(this.ádfasdfToolStripMenuItem_Click);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.button9);
+            this.groupBox1.Controls.Add(this.button13);
+            this.groupBox1.Controls.Add(this.button7);
+            this.groupBox1.Location = new System.Drawing.Point(870, 33);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(184, 182);
+            this.groupBox1.TabIndex = 19;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Tiền mặt";
+            // 
+            // button13
+            // 
+            this.button13.Location = new System.Drawing.Point(6, 72);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(166, 22);
+            this.button13.TabIndex = 14;
+            this.button13.Text = "Phiếu chi tiền";
+            this.button13.UseVisualStyleBackColor = true;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.button14);
+            this.groupBox2.Controls.Add(this.button15);
+            this.groupBox2.Location = new System.Drawing.Point(882, 388);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(184, 120);
+            this.groupBox2.TabIndex = 20;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Ngân hàng";
+            // 
+            // button14
+            // 
+            this.button14.Location = new System.Drawing.Point(6, 72);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(166, 22);
+            this.button14.TabIndex = 14;
+            this.button14.Text = "Ủy nhiệm chi";
+            this.button14.UseVisualStyleBackColor = true;
+            // 
+            // button15
+            // 
+            this.button15.Location = new System.Drawing.Point(6, 32);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(166, 22);
+            this.button15.TabIndex = 13;
+            this.button15.Text = "Ủy nhiệm thu";
+            this.button15.UseVisualStyleBackColor = true;
+            // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(6, 114);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(166, 22);
+            this.button9.TabIndex = 15;
+            this.button9.Text = "Sổ quỹ";
+            this.button9.UseVisualStyleBackColor = true;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -480,6 +538,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -514,7 +574,6 @@
         private Button button1;
         private Button button11;
         private Button button10;
-        private Button button9;
         private ToolStripSeparator toolStripSeparator11;
         private ToolStripMenuItem sôKhoToolStripMenuItem;
         private ToolStripSeparator toolStripSeparator12;
@@ -530,6 +589,12 @@
         private ToolStripSeparator toolStripSeparator1;
         private ToolStripMenuItem hêThôngTaiKhoanToolStripMenuItem;
         private Button button12;
+        private GroupBox groupBox2;
+        private Button button14;
+        private Button button15;
+        private GroupBox groupBox1;
+        private Button button9;
+        private Button button13;
     }
 }
 

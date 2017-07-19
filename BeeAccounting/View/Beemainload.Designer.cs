@@ -38,7 +38,12 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button13 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // button8
@@ -88,7 +93,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(116, 402);
+            this.button3.Location = new System.Drawing.Point(679, 172);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(88, 74);
             this.button3.TabIndex = 34;
@@ -97,7 +102,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(45, 240);
+            this.button2.Location = new System.Drawing.Point(679, 92);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(88, 74);
             this.button2.TabIndex = 33;
@@ -106,7 +111,7 @@
             // 
             // button9
             // 
-            this.button9.Location = new System.Drawing.Point(118, 64);
+            this.button9.Location = new System.Drawing.Point(679, 12);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(88, 74);
             this.button9.TabIndex = 32;
@@ -124,11 +129,53 @@
             this.pictureBox7.TabIndex = 31;
             this.pictureBox7.TabStop = false;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.button5);
+            this.groupBox1.Controls.Add(this.button13);
+            this.groupBox1.Controls.Add(this.button10);
+            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(143, 164);
+            this.groupBox1.TabIndex = 40;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Tiền mặt";
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(6, 114);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(115, 22);
+            this.button5.TabIndex = 15;
+            this.button5.Text = "      Sổ quỹ";
+            this.button5.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // button13
+            // 
+            this.button13.Location = new System.Drawing.Point(6, 72);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(115, 22);
+            this.button13.TabIndex = 14;
+            this.button13.Text = "Phiếu chi tiền";
+            this.button13.UseVisualStyleBackColor = true;
+            // 
+            // button10
+            // 
+            this.button10.Location = new System.Drawing.Point(6, 32);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(115, 22);
+            this.button10.TabIndex = 13;
+            this.button10.Text = "Phiếu thu tiền";
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click_1);
+            // 
             // Beemainload
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(779, 572);
             this.ControlBox = false;
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);
@@ -151,6 +198,7 @@
             this.Deactivate += new System.EventHandler(this.KAmasterinput_Deactivate);
             this.Load += new System.EventHandler(this.KAmasterinput_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -165,5 +213,9 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Button button10;
     }
 }

@@ -165,6 +165,12 @@
     <Compile Include="View\BeeCreatenewaccount.Designer.cs">
       <DependentUpon>BeeCreatenewaccount.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\BeeLisstDoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\BeeLisstDoc.Designer.cs">
+      <DependentUpon>BeeLisstDoc.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\PosmCreateTK.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -364,6 +370,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\BeeCreatenewaccount.resx">
       <DependentUpon>BeeCreatenewaccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\BeeLisstDoc.resx">
+      <DependentUpon>BeeLisstDoc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\PosmCreateTK.resx">
       <DependentUpon>PosmCreateTK.cs</DependentUpon>
