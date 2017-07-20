@@ -21,11 +21,34 @@ namespace BEEACCOUNT.View
     public partial class Main : Form
     {
 
-
+       // public 
         //   private string rptname;
     //    private IQueryable rs1;
   //      private IQueryable rs2;
         //
+        public void clearpannel()  
+        {
+
+
+            panelmain.Controls.Clear();
+
+
+        }
+
+        public void clearpannelload(Form Formload)
+        {
+
+
+            //   View.Beemainload accsup = new Beemainload(this);
+
+            Formload.TopLevel = false;
+            Formload.AutoScroll = true;
+            panelmain.Controls.Add(Formload);
+            Formload.Show();
+
+
+
+        }
         public Main()
         {
             Model.Username used = new Username();
@@ -37,6 +60,22 @@ namespace BEEACCOUNT.View
 
                 string username = Utils.getusername();
                 lbusername.Text = username;
+
+
+
+                panelmain.Controls.Clear();
+
+                View.Beemainload accsup = new Beemainload(this);
+
+                accsup.TopLevel = false;
+                accsup.AutoScroll = true;
+                panelmain.Controls.Add(accsup);
+                accsup.Show();
+
+                // Beemainload
+
+                //  panelmain.Controls.Add(inputcdata);
+                // inputcdata.Show();
 
                 ////reports
                 //if (used.reports)
@@ -79,7 +118,7 @@ namespace BEEACCOUNT.View
                 //}
 
                 //// pricingcheckview
-           
+
 
                 //// // masterdate          
                 //if (used.masterdata == true)
@@ -2807,19 +2846,19 @@ namespace BEEACCOUNT.View
 
         private void button7_Click(object sender, EventArgs e)
         {
-           panelmain.Controls.Clear();
+           //panelmain.Controls.Clear();
 
-            View.BeePhieuThu accsup = new BeePhieuThu();
+           // View.BeePhieuThu accsup = new BeePhieuThu();
 
-            accsup.TopLevel = false;
-            accsup.AutoScroll = true;
-            panelmain.Controls.Add(accsup);
-            accsup.Show();
+           // accsup.TopLevel = false;
+           // accsup.AutoScroll = true;
+           // panelmain.Controls.Add(accsup);
+           // accsup.Show();
 
+            // Beemainload
 
-
-          //  panelmain.Controls.Add(inputcdata);
-           // inputcdata.Show();
+            //  panelmain.Controls.Add(inputcdata);
+            // inputcdata.Show();
 
         }
     }

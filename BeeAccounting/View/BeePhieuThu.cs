@@ -11,9 +11,13 @@ namespace BEEACCOUNT.View
 {
     public partial class BeePhieuThu : Form
     {
-        public BeePhieuThu()
+        public View.Main main1;
+        public BeePhieuThu(View.Main Main)
         {
             InitializeComponent();
+            this.main1 = Main;
+
+
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -24,6 +28,10 @@ namespace BEEACCOUNT.View
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             this.Close();
+            main1.clearpannel();
+            View.Beemainload main = new Beemainload(main1);
+
+            main1.clearpannelload(main);
         }
     }
 }

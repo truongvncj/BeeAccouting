@@ -14,12 +14,15 @@ namespace BEEACCOUNT.View
 {
     public partial class Beemainload : Form
     {
-        public Beemainload()
+
+        public View.Main main1;
+
+        public Beemainload(View.Main Main)
         {
             InitializeComponent();
 
             Model.Username used = new Username();
-
+            this.main1 = Main;
             //if (used.masterbegin)
             //{
             //    begin.Enabled = true;
@@ -800,7 +803,23 @@ namespace BEEACCOUNT.View
 
         private void button10_Click_1(object sender, EventArgs e)
         {
-          
+            //  Main.clearpannel();
+
+            main1.clearpannel();
+
+
+            View.BeePhieuThu accsup = new BeePhieuThu(main1);
+            main1.clearpannelload(accsup);
+        //    accsup.TopLevel = false;
+        //  accsup.AutoScroll = true;
+        //    panelmain.Controls.Add(accsup);
+        //    accsup.Show();
+
+
+        }
+
+        private void pictureBox7_Click(object sender, EventArgs e)
+        {
 
         }
     }
