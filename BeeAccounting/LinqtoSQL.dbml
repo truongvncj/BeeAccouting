@@ -162,8 +162,9 @@
   </Table>
   <Table Name="dbo.tbl_loaitk" Member="tbl_loaitks">
     <Type Name="tbl_loaitk">
-      <Column Name="idloaitk" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="name" Type="System.String" DbType="NChar(50)" CanBeNull="true" />
+      <Column Name="idloaitk" Type="System.Int32" DbType="Int" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.tbl_Socai" Member="tbl_Socais">
@@ -206,7 +207,8 @@
       <Column Name="Diachinguoinhannop" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
       <Column Name="Chungtugockemtheo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="Ngayghiso" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Username" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
     </Type>
   </Table>
 </Database>

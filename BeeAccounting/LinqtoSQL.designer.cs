@@ -3613,18 +3613,22 @@ namespace BEEACCOUNT
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
-		private int _idloaitk;
+		private int _id;
 		
 		private string _name;
+		
+		private System.Nullable<int> _idloaitk;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
-    partial void OnidloaitkChanging(int value);
-    partial void OnidloaitkChanged();
+    partial void OnidChanging(int value);
+    partial void OnidChanged();
     partial void OnnameChanging(string value);
     partial void OnnameChanged();
+    partial void OnidloaitkChanging(System.Nullable<int> value);
+    partial void OnidloaitkChanged();
     #endregion
 		
 		public tbl_loaitk()
@@ -3632,22 +3636,22 @@ namespace BEEACCOUNT
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idloaitk", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int idloaitk
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int id
 		{
 			get
 			{
-				return this._idloaitk;
+				return this._id;
 			}
 			set
 			{
-				if ((this._idloaitk != value))
+				if ((this._id != value))
 				{
-					this.OnidloaitkChanging(value);
+					this.OnidChanging(value);
 					this.SendPropertyChanging();
-					this._idloaitk = value;
-					this.SendPropertyChanged("idloaitk");
-					this.OnidloaitkChanged();
+					this._id = value;
+					this.SendPropertyChanged("id");
+					this.OnidChanged();
 				}
 			}
 		}
@@ -3668,6 +3672,26 @@ namespace BEEACCOUNT
 					this._name = value;
 					this.SendPropertyChanged("name");
 					this.OnnameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idloaitk", DbType="Int")]
+		public System.Nullable<int> idloaitk
+		{
+			get
+			{
+				return this._idloaitk;
+			}
+			set
+			{
+				if ((this._idloaitk != value))
+				{
+					this.OnidloaitkChanging(value);
+					this.SendPropertyChanging();
+					this._idloaitk = value;
+					this.SendPropertyChanged("idloaitk");
+					this.OnidloaitkChanged();
 				}
 			}
 		}
@@ -4179,6 +4203,8 @@ namespace BEEACCOUNT
 		
 		private System.Nullable<System.DateTime> _Ngayghiso;
 		
+		private string _Username;
+		
 		private int _id;
 		
     #region Extensibility Method Definitions
@@ -4219,6 +4245,8 @@ namespace BEEACCOUNT
     partial void OnChungtugockemtheoChanged();
     partial void OnNgayghisoChanging(System.Nullable<System.DateTime> value);
     partial void OnNgayghisoChanged();
+    partial void OnUsernameChanging(string value);
+    partial void OnUsernameChanged();
     partial void OnidChanging(int value);
     partial void OnidChanged();
     #endregion
@@ -4568,7 +4596,27 @@ namespace BEEACCOUNT
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Username", DbType="NVarChar(50)")]
+		public string Username
+		{
+			get
+			{
+				return this._Username;
+			}
+			set
+			{
+				if ((this._Username != value))
+				{
+					this.OnUsernameChanging(value);
+					this.SendPropertyChanging();
+					this._Username = value;
+					this.SendPropertyChanged("Username");
+					this.OnUsernameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
 		public int id
 		{
 			get
