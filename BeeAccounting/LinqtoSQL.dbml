@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="BEE" Class="LinqtoSQLDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-8D4F853\SQLEXPRESS;Initial Catalog=BEE;Persist Security Info=True;User ID=sa" SettingsObjectName="BEEACCOUNT.Properties.Settings" SettingsPropertyName="BEEConnectionString" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-Q6VJ0TS\SQLEXPRESS;Initial Catalog=BEE;Persist Security Info=True;User ID=sa" SettingsObjectName="BEEACCOUNT.Properties.Settings" SettingsPropertyName="BEEConnectionString1" Provider="System.Data.SqlClient" />
   <Table Name="dbo.tbl_ctkhachhang" Member="tbl_ctkhachhangs">
     <Type Name="tbl_ctkhachhang">
       <Column Name="Matk" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
@@ -184,6 +184,28 @@
       <Column Name="SochitietTK" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
       <Column Name="Sochitiet" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
       <Column Name="Nghiepvuso" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_SoQuy" Member="tbl_SoQuys">
+    <Type Name="tbl_SoQuy">
+      <Column Name="TKtienmat" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="ChitietTM" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Ngayctu" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Sochungtu" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Machungtu" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="PsNo" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PsCo" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="SoduDk" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="SoduCk" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Sodu" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Diengiai" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="TKdoiung" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Chitietdoiung" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Nguoinopnhantien" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Diachinguoinhannop" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="Chungtugockemtheo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Ngayghiso" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
     </Type>
   </Table>

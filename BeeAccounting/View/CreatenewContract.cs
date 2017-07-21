@@ -15,6 +15,8 @@ namespace BEEACCOUNT.View
 
     public partial class CreatenewContract : Form
     {
+
+
         public class ComboboxItem
         {
             public string Text { get; set; }
@@ -910,21 +912,8 @@ namespace BEEACCOUNT.View
         //        }
 
 
-        //        #region load cb currency
+       
 
-        //        var rs2 = from tbl_kacurrency in dc.tbl_kacurrencies
-
-        //                  select tbl_kacurrency;
-
-        //        string drowdownshow = "";
-
-        //        foreach (var item in rs2)
-        //        {
-        //            drowdownshow = item.Currency;
-        //            this.cb_curency.Items.Add(drowdownshow);
-
-
-        //        }
         //        this.cb_curency.SelectedIndex = 0;
         //        this.cb_contractstatus.SelectedIndex = 0;
         //        #endregion

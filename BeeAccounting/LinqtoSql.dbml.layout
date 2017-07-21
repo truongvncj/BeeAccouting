@@ -1,59 +1,65 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 12, 16.125" name="LinqtoSQL">
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 12, 16.25" name="LinqtoSQL">
   <DataContextMoniker Name="/LinqtoSQLDataContext" />
   <nestedChildShapes>
-    <classShape Id="12d063d9-8d87-45b3-8c0d-241563a84aba" absoluteBounds="0.75, 0.75, 2, 4.0785139973958326">
+    <classShape Id="72af0c6b-8a64-4ef1-9389-fc9b6d233bfc" absoluteBounds="0.75, 0.75, 2, 4.0785139973958326">
       <DataClassMoniker Name="/LinqtoSQLDataContext/tbl_ctkhachhang" />
       <nestedChildShapes>
-        <elementListCompartment Id="fd9c7626-d442-43f4-bb6d-f010e9bee9c2" absoluteBounds="0.765, 1.21, 1.9700000000000002, 3.518513997395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="ca0ad04f-67a5-48f3-a4d6-edff0c909734" absoluteBounds="0.765, 1.21, 1.9700000000000002, 3.518513997395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="d71f0fd6-95e8-4921-b5eb-d50afead5f84" absoluteBounds="3.75, 0.75, 2, 5.6169254557291657">
+    <classShape Id="e60e46e2-c41c-47ef-8722-9ada3347030a" absoluteBounds="3.75, 0.75, 2, 5.6169254557291657">
       <DataClassMoniker Name="/LinqtoSQLDataContext/tbl_Temp" />
       <nestedChildShapes>
-        <elementListCompartment Id="7e489573-5f88-45eb-b4f7-23b7726f0287" absoluteBounds="3.765, 1.21, 1.9700000000000002, 5.0569254557291661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="01899689-b05d-45ab-80a2-c694083e6620" absoluteBounds="3.765, 1.21, 1.9700000000000002, 5.0569254557291661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="60143461-b96e-4c85-9140-8d91f56a1f21" absoluteBounds="6.75, 0.75, 2, 4.0785139973958326">
+    <classShape Id="8c6e3a44-bdb6-4c4b-8b7e-e882d27c0d97" absoluteBounds="6.75, 0.75, 2, 4.0785139973958326">
       <DataClassMoniker Name="/LinqtoSQLDataContext/tbl_ctnganhang" />
       <nestedChildShapes>
-        <elementListCompartment Id="5a950556-470d-42e3-ab27-1561c8725a45" absoluteBounds="6.765, 1.21, 1.9700000000000002, 3.518513997395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="4b156a83-65d3-4b52-8319-96e40524d82a" absoluteBounds="6.765, 1.21, 1.9700000000000002, 3.518513997395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="67a4dcc1-be01-482a-b9d1-9c2112ba5b73" absoluteBounds="6.75, 5.75, 2, 4.0785139973958326">
+    <classShape Id="35fddc7d-aa88-498f-b951-d5a9797447b2" absoluteBounds="6.75, 5.75, 2, 4.0785139973958326">
       <DataClassMoniker Name="/LinqtoSQLDataContext/tbl_ctnhacungcap" />
       <nestedChildShapes>
-        <elementListCompartment Id="01fea9af-f5d7-4f33-943c-94af3537d1cc" absoluteBounds="6.765, 6.21, 1.9700000000000002, 3.518513997395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="8b3f2150-7837-4338-9f00-fa83c45dfde3" absoluteBounds="6.765, 6.21, 1.9700000000000002, 3.518513997395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="b1b8cf2b-94fa-4906-8331-f8f609bc3eb2" absoluteBounds="0.75, 7.75, 2, 4.0785139973958318">
+    <classShape Id="778b23b8-5b7d-462e-819d-f22f2f57352d" absoluteBounds="0.75, 7.75, 2, 4.0785139973958318">
       <DataClassMoniker Name="/LinqtoSQLDataContext/tbl_cttamung" />
       <nestedChildShapes>
-        <elementListCompartment Id="64d0fa48-bc86-4b66-9581-e3ee270eed56" absoluteBounds="0.765, 8.21, 1.9700000000000002, 3.518513997395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="cfb39726-35a9-474d-99a7-fb29d5558cd7" absoluteBounds="0.765, 8.21, 1.9700000000000002, 3.518513997395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="33ac80f3-68ec-4328-8f9e-292235f0acfa" absoluteBounds="9.75, 0.75, 2, 7.1553369140624987">
+    <classShape Id="8e31693c-f41c-45b3-ad05-16c48c919797" absoluteBounds="9.75, 0.75, 2, 7.1553369140624987">
       <DataClassMoniker Name="/LinqtoSQLDataContext/tbl_Customer" />
       <nestedChildShapes>
-        <elementListCompartment Id="b5821a26-6af1-44ee-8252-57fb7788a513" absoluteBounds="9.765, 1.21, 1.9700000000000002, 6.5953369140625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="9663651c-6da1-418a-a01a-fe0c21c4dd56" absoluteBounds="9.765, 1.21, 1.9700000000000002, 6.5953369140625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="56569310-dc51-4d9c-8d48-fb0d3b729d12" absoluteBounds="9.75, 8.75, 2, 1.9631982421874987">
+    <classShape Id="cc7236fa-c84a-404d-ae72-dd9bc6587acb" absoluteBounds="9.75, 8.75, 2, 1.9631982421874987">
       <DataClassMoniker Name="/LinqtoSQLDataContext/tbl_dstaikhoan" />
       <nestedChildShapes>
-        <elementListCompartment Id="fb60a7a7-06d4-4207-bd93-d6be7d4163ba" absoluteBounds="9.765, 9.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="733d5a6f-a3e3-4f90-a4b4-428bad2d5c1a" absoluteBounds="9.765, 9.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="c15bd3d7-baa5-433c-9f3c-3290df62925d" absoluteBounds="3.75, 10.75, 2, 1.1939925130208344">
+    <classShape Id="045f3636-ee27-4c6c-9bf4-d4481be74efa" absoluteBounds="3.75, 10.75, 2, 1.1939925130208344">
       <DataClassMoniker Name="/LinqtoSQLDataContext/tbl_loaitk" />
       <nestedChildShapes>
-        <elementListCompartment Id="dd3e8b25-8536-47eb-868e-563632bf0835" absoluteBounds="3.765, 11.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="78687159-4958-427f-89ff-843677b05244" absoluteBounds="3.765, 11.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="f16520e0-06e5-4f56-971e-635e81c525cb" absoluteBounds="6.75, 11.75, 2, 4.0785139973958309">
+    <classShape Id="a913cb8e-d1bf-41a7-abd1-4ba77830a7e2" absoluteBounds="6.75, 11.75, 2, 4.0785139973958309">
       <DataClassMoniker Name="/LinqtoSQLDataContext/tbl_Socai" />
       <nestedChildShapes>
-        <elementListCompartment Id="5d829c7a-4584-4267-8229-1e222ff1cd8b" absoluteBounds="6.765, 12.21, 1.9700000000000002, 3.518513997395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="4c2f57d5-fbae-4795-9d6e-f7e63965a306" absoluteBounds="6.765, 12.21, 1.9700000000000002, 3.518513997395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="fdd6965c-e70f-468a-8441-8115851d0db7" absoluteBounds="9.75, 11.75, 2, 4.2708154296874987">
+      <DataClassMoniker Name="/LinqtoSQLDataContext/tbl_SoQuy" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fab31d23-0601-4cca-922a-086d503389fd" absoluteBounds="9.765, 12.21, 1.9700000000000002, 3.7108154296875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
   </nestedChildShapes>
