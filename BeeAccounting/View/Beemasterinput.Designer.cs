@@ -340,11 +340,11 @@
             // button8
             // 
             this.button8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button8.Location = new System.Drawing.Point(513, 141);
+            this.button8.Location = new System.Drawing.Point(476, 141);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(164, 23);
+            this.button8.Size = new System.Drawing.Size(201, 23);
             this.button8.TabIndex = 24;
-            this.button8.Text = "List begin master contract";
+            this.button8.Text = "Danh sách tài khoản kế toán";
             this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button8.UseVisualStyleBackColor = true;
             this.button8.Click += new System.EventHandler(this.button8_Click);
@@ -352,11 +352,11 @@
             // button3
             // 
             this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.Location = new System.Drawing.Point(513, 106);
+            this.button3.Location = new System.Drawing.Point(476, 106);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(164, 23);
+            this.button3.Size = new System.Drawing.Size(201, 23);
             this.button3.TabIndex = 26;
-            this.button3.Text = "Set Detail Customer Group";
+            this.button3.Text = "Danh sách loại tài khoản kế toán";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click_1);
@@ -398,15 +398,13 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.ErrorImage")));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(294, 245);
+            this.pictureBox1.Location = new System.Drawing.Point(270, 201);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(125, 73);
+            this.pictureBox1.Size = new System.Drawing.Size(138, 134);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;

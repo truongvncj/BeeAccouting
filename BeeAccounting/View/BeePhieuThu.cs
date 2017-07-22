@@ -516,6 +516,21 @@ namespace BEEACCOUNT.View
 
 
         }
-      
+
+        private void cbtkno_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            //List<ComboboxItem> CombomCollection = new List<ComboboxItem>();
+            //var rs = from tbl_Kafuctionlist in db.tbl_Kafuctionlists
+            //         where tbl_Kafuctionlist.Code != "DIS"
+            //         orderby tbl_Kafuctionlist.Code
+            //         select tbl_Kafuctionlist;
+            //foreach (var item2 in rs)
+            //{
+            //    ComboboxItem cb = new ComboboxItem();
+            //    cb.Value = item2.Code.Trim();
+            //    cb.Text = item2.Code.Trim() + ": " + item2.Description.Trim() + "    || Example: " + item2.Example;
+            //    CombomCollection.Add(cb);
+            //}
+        }
     }
 }

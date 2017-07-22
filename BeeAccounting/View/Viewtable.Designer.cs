@@ -32,17 +32,16 @@ namespace BEEACCOUNT.View
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Viewtable));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.gboxUnpaid = new System.Windows.Forms.GroupBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.comboucontractstst = new System.Windows.Forms.ComboBox();
-            this.cbocntracttype = new System.Windows.Forms.ComboBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.bt_exporttoex = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.formlabel = new System.Windows.Forms.Label();
             this.lb_seach = new System.Windows.Forms.Label();
             this.bt_addtomaster = new System.Windows.Forms.Button();
             this.statussum = new System.Windows.Forms.Label();
             this.lb_totalrecord = new System.Windows.Forms.Label();
-            this.bt_exporttoex = new System.Windows.Forms.Button();
             this.Pl_endview = new System.Windows.Forms.Panel();
             this.lb_uc = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -57,7 +56,7 @@ namespace BEEACCOUNT.View
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
-            this.gboxUnpaid.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.Pl_endview.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -67,13 +66,12 @@ namespace BEEACCOUNT.View
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.Controls.Add(this.gboxUnpaid);
+            this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.formlabel);
             this.panel1.Controls.Add(this.lb_seach);
             this.panel1.Controls.Add(this.bt_addtomaster);
             this.panel1.Controls.Add(this.statussum);
             this.panel1.Controls.Add(this.lb_totalrecord);
-            this.panel1.Controls.Add(this.bt_exporttoex);
             this.panel1.Controls.Add(this.Pl_endview);
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Location = new System.Drawing.Point(4, -2);
@@ -81,69 +79,74 @@ namespace BEEACCOUNT.View
             this.panel1.Size = new System.Drawing.Size(1338, 471);
             this.panel1.TabIndex = 0;
             // 
-            // gboxUnpaid
+            // panel2
             // 
-            this.gboxUnpaid.Controls.Add(this.label6);
-            this.gboxUnpaid.Controls.Add(this.label2);
-            this.gboxUnpaid.Controls.Add(this.comboucontractstst);
-            this.gboxUnpaid.Controls.Add(this.cbocntracttype);
-            this.gboxUnpaid.ForeColor = System.Drawing.Color.Red;
-            this.gboxUnpaid.Location = new System.Drawing.Point(835, 6);
-            this.gboxUnpaid.Name = "gboxUnpaid";
-            this.gboxUnpaid.Size = new System.Drawing.Size(448, 36);
-            this.gboxUnpaid.TabIndex = 44;
-            this.gboxUnpaid.TabStop = false;
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel2.Controls.Add(this.button3);
+            this.panel2.Controls.Add(this.button2);
+            this.panel2.Controls.Add(this.bt_exporttoex);
+            this.panel2.Controls.Add(this.button1);
+            this.panel2.Location = new System.Drawing.Point(0, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1332, 28);
+            this.panel2.TabIndex = 45;
             // 
-            // label6
+            // button3
             // 
-            this.label6.AutoSize = true;
-            this.label6.ForeColor = System.Drawing.Color.Red;
-            this.label6.Location = new System.Drawing.Point(228, 15);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(74, 13);
-            this.label6.TabIndex = 43;
-            this.label6.Text = "Contract Type";
+            this.button3.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.button3.Location = new System.Drawing.Point(188, 2);
+            this.button3.Name = "button3";
+            this.button3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.button3.Size = new System.Drawing.Size(87, 23);
+            this.button3.TabIndex = 6;
+            this.button3.Text = "Xóa";
+            this.button3.UseVisualStyleBackColor = true;
             // 
-            // label2
+            // button2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(11, 15);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 13);
-            this.label2.TabIndex = 42;
-            this.label2.Text = "Contract Status";
+            this.button2.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.button2.Location = new System.Drawing.Point(95, 2);
+            this.button2.Name = "button2";
+            this.button2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.button2.Size = new System.Drawing.Size(87, 23);
+            this.button2.TabIndex = 5;
+            this.button2.Text = "Sửa";
+            this.button2.UseVisualStyleBackColor = true;
             // 
-            // comboucontractstst
+            // bt_exporttoex
             // 
-            this.comboucontractstst.FormattingEnabled = true;
-            this.comboucontractstst.Items.AddRange(new object[] {
-            "",
-            "CLS",
-            "ALV",
-            "CAN",
-            "CRT"});
-            this.comboucontractstst.Location = new System.Drawing.Point(97, 11);
-            this.comboucontractstst.Name = "comboucontractstst";
-            this.comboucontractstst.Size = new System.Drawing.Size(119, 21);
-            this.comboucontractstst.TabIndex = 41;
+            this.bt_exporttoex.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.bt_exporttoex.Location = new System.Drawing.Point(1232, 2);
+            this.bt_exporttoex.Name = "bt_exporttoex";
+            this.bt_exporttoex.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.bt_exporttoex.Size = new System.Drawing.Size(87, 23);
+            this.bt_exporttoex.TabIndex = 3;
+            this.bt_exporttoex.Text = "Export to Excel";
+            this.bt_exporttoex.UseVisualStyleBackColor = true;
+            this.bt_exporttoex.Click += new System.EventHandler(this.bt_exporttoex_Click);
             // 
-            // cbocntracttype
+            // button1
             // 
-            this.cbocntracttype.FormattingEnabled = true;
-            this.cbocntracttype.Location = new System.Drawing.Point(314, 11);
-            this.cbocntracttype.Name = "cbocntracttype";
-            this.cbocntracttype.Size = new System.Drawing.Size(119, 21);
-            this.cbocntracttype.TabIndex = 40;
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.button1.Location = new System.Drawing.Point(2, 2);
+            this.button1.Name = "button1";
+            this.button1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.button1.Size = new System.Drawing.Size(87, 23);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Thêm mới";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // formlabel
             // 
             this.formlabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.formlabel.AutoSize = true;
             this.formlabel.BackColor = System.Drawing.Color.Transparent;
-            this.formlabel.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.formlabel.Location = new System.Drawing.Point(495, 11);
+            this.formlabel.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.formlabel.Location = new System.Drawing.Point(495, 34);
             this.formlabel.Name = "formlabel";
-            this.formlabel.Size = new System.Drawing.Size(147, 20);
+            this.formlabel.Size = new System.Drawing.Size(156, 20);
             this.formlabel.TabIndex = 8;
             this.formlabel.Text = "VIEW TABLE REPORTS";
             // 
@@ -164,7 +167,7 @@ namespace BEEACCOUNT.View
             // bt_addtomaster
             // 
             this.bt_addtomaster.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.bt_addtomaster.Location = new System.Drawing.Point(1125, 450);
+            this.bt_addtomaster.Location = new System.Drawing.Point(1113, 448);
             this.bt_addtomaster.Name = "bt_addtomaster";
             this.bt_addtomaster.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.bt_addtomaster.Size = new System.Drawing.Size(108, 19);
@@ -193,17 +196,6 @@ namespace BEEACCOUNT.View
             this.lb_totalrecord.Size = new System.Drawing.Size(13, 14);
             this.lb_totalrecord.TabIndex = 2;
             this.lb_totalrecord.Text = "0";
-            // 
-            // bt_exporttoex
-            // 
-            this.bt_exporttoex.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.bt_exporttoex.Location = new System.Drawing.Point(1241, 449);
-            this.bt_exporttoex.Name = "bt_exporttoex";
-            this.bt_exporttoex.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.bt_exporttoex.Size = new System.Drawing.Size(87, 20);
-            this.bt_exporttoex.TabIndex = 3;
-            this.bt_exporttoex.Text = "Export to Excel";
-            this.bt_exporttoex.UseVisualStyleBackColor = true;
             // 
             // Pl_endview
             // 
@@ -346,13 +338,14 @@ namespace BEEACCOUNT.View
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 37);
+            this.dataGridView1.Location = new System.Drawing.Point(3, 57);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.dataGridView1.Size = new System.Drawing.Size(1325, 406);
+            this.dataGridView1.Size = new System.Drawing.Size(1332, 386);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.VirtualMode = true;
+            this.dataGridView1.Paint += new System.Windows.Forms.PaintEventHandler(this.dataGridView1_Paint);
             // 
             // Viewtable
             // 
@@ -368,8 +361,7 @@ namespace BEEACCOUNT.View
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.gboxUnpaid.ResumeLayout(false);
-            this.gboxUnpaid.PerformLayout();
+            this.panel2.ResumeLayout(false);
             this.Pl_endview.ResumeLayout(false);
             this.Pl_endview.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -403,10 +395,9 @@ namespace BEEACCOUNT.View
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lb_seach;
         private System.Windows.Forms.Label formlabel;
-        private System.Windows.Forms.GroupBox gboxUnpaid;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboucontractstst;
-        private System.Windows.Forms.ComboBox cbocntracttype;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
     }
 }

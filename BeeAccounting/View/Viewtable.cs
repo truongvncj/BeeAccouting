@@ -260,7 +260,7 @@ namespace BEEACCOUNT.View
             //      this.bt_sendinggroup.Visible = false;
             this.lb_seach.Visible = false;
             this.Pl_endview.Visible = false;
-            gboxUnpaid.Visible = false; // an nhom field upaid
+         //   gboxUnpaid.Visible = false; // an nhom field upaid
 
             this.formlabel.Text = fornname;
 
@@ -272,219 +272,244 @@ namespace BEEACCOUNT.View
                                                                                                             //   this.Show();
             this.KeyPreview = true;
 
-            if (viewcode == 5)// tuwc la view mastercontract
-            {
-                #region viewcode = 5 tuwc la view mastercontract
-                #region  format lsstmatercontracts
-                //                  tbl_kacontractdata.ContractNo,
-                //                           tbl_kacontractdata.SalesOrg,
-                //                           tbl_kacontractdata.ConType,//contract type
-                //                           tbl_kacontractdata.Consts, //contract status
-                //                           tbl_kacontractdata.Currency,
-                //                           Validfrom = tbl_kacontractdata.EffDate,
-                //                           Validto = tbl_kacontractdata.EftDate,
+            //if (viewcode == 5)// tuwc la view mastercontract
+            //{
+            //    #region viewcode = 5 tuwc la view mastercontract
+            //    #region  format lsstmatercontracts
+            //    //                  tbl_kacontractdata.ContractNo,
+            //    //                           tbl_kacontractdata.SalesOrg,
+            //    //                           tbl_kacontractdata.ConType,//contract type
+            //    //                           tbl_kacontractdata.Consts, //contract status
+            //    //                           tbl_kacontractdata.Currency,
+            //    //                           Validfrom = tbl_kacontractdata.EffDate,
+            //    //                           Validto = tbl_kacontractdata.EftDate,
 
-                //                           tbl_kacontractdata.Customer,
-                //                           tbl_kacontractdata.Fullname,
-                //                           tbl_kacontractdata.Channel,
-                //                           FullCommitment = tbl_kacontractdata.TotSponsoredcommit,
-                this.dataGridView1.Columns["FullCommitment"].DefaultCellStyle.Format = "N0";
-                this.dataGridView1.Columns["FullCommitment"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;// = "N0";
+            //    //                           tbl_kacontractdata.Customer,
+            //    //                           tbl_kacontractdata.Fullname,
+            //    //                           tbl_kacontractdata.Channel,
+            //    //                           FullCommitment = tbl_kacontractdata.TotSponsoredcommit,
+            //    this.dataGridView1.Columns["FullCommitment"].DefaultCellStyle.Format = "N0";
+            //    this.dataGridView1.Columns["FullCommitment"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;// = "N0";
 
-                //                           AchivedCommitment = tbl_kacontractdata.TotDeal,
-                this.dataGridView1.Columns["AchivedCommitment"].DefaultCellStyle.Format = "N0";
-                this.dataGridView1.Columns["AchivedCommitment"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;// = "N0";
-                this.dataGridView1.Columns["AchivedCommitment"].HeaderText = "Achived Commitment";
+            //    //                           AchivedCommitment = tbl_kacontractdata.TotDeal,
+            //    this.dataGridView1.Columns["AchivedCommitment"].DefaultCellStyle.Format = "N0";
+            //    this.dataGridView1.Columns["AchivedCommitment"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;// = "N0";
+            //    this.dataGridView1.Columns["AchivedCommitment"].HeaderText = "Achived Commitment";
 
-                //                           tbl_kacontractdata.Tot_paid,
-                this.dataGridView1.Columns["Tot_paid"].DefaultCellStyle.Format = "N0";
-                this.dataGridView1.Columns["Tot_paid"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;// = "N0";
-                this.dataGridView1.Columns["Tot_paid"].HeaderText = "Total Paid";
+            //    //                           tbl_kacontractdata.Tot_paid,
+            //    this.dataGridView1.Columns["Tot_paid"].DefaultCellStyle.Format = "N0";
+            //    this.dataGridView1.Columns["Tot_paid"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;// = "N0";
+            //    this.dataGridView1.Columns["Tot_paid"].HeaderText = "Total Paid";
 
-                //                           Balance = tbl_kacontractdata.TotDeal - tbl_kacontractdata.Tot_paid,
-                this.dataGridView1.Columns["Balance"].DefaultCellStyle.Format = "N0";
-                this.dataGridView1.Columns["Balance"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;// = "N0";
-                                                                                                                            //       this.dataGridView1.Columns["Balance"].HeaderText = "Total Paid";
-                                                                                                                            //                           VolumeCommit = tbl_kacontractdata.VolComm,
-                this.dataGridView1.Columns["VolumeCommit"].DefaultCellStyle.Format = "N0";
-                this.dataGridView1.Columns["VolumeCommit"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;// = "N0";
-                this.dataGridView1.Columns["VolumeCommit"].HeaderText = "Volume Commit";
+            //    //                           Balance = tbl_kacontractdata.TotDeal - tbl_kacontractdata.Tot_paid,
+            //    this.dataGridView1.Columns["Balance"].DefaultCellStyle.Format = "N0";
+            //    this.dataGridView1.Columns["Balance"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;// = "N0";
+            //                                                                                                                //       this.dataGridView1.Columns["Balance"].HeaderText = "Total Paid";
+            //                                                                                                                //                           VolumeCommit = tbl_kacontractdata.VolComm,
+            //    this.dataGridView1.Columns["VolumeCommit"].DefaultCellStyle.Format = "N0";
+            //    this.dataGridView1.Columns["VolumeCommit"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;// = "N0";
+            //    this.dataGridView1.Columns["VolumeCommit"].HeaderText = "Volume Commit";
 
-                //                           tbl_kacontractdata.PCVolAched,
-                this.dataGridView1.Columns["PCVolAched"].DefaultCellStyle.Format = "N0";
-                this.dataGridView1.Columns["PCVolAched"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;// = "N0";
-                this.dataGridView1.Columns["PCVolAched"].HeaderText = "PC VolAched";
+            //    //                           tbl_kacontractdata.PCVolAched,
+            //    this.dataGridView1.Columns["PCVolAched"].DefaultCellStyle.Format = "N0";
+            //    this.dataGridView1.Columns["PCVolAched"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;// = "N0";
+            //    this.dataGridView1.Columns["PCVolAched"].HeaderText = "PC VolAched";
 
-                //                           tbl_kacontractdata.NSRAched,
-                this.dataGridView1.Columns["NSRAched"].DefaultCellStyle.Format = "N0";
-                this.dataGridView1.Columns["NSRAched"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;// = "N0";
-                this.dataGridView1.Columns["NSRAched"].HeaderText = "NSR Ached";
+            //    //                           tbl_kacontractdata.NSRAched,
+            //    this.dataGridView1.Columns["NSRAched"].DefaultCellStyle.Format = "N0";
+            //    this.dataGridView1.Columns["NSRAched"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;// = "N0";
+            //    this.dataGridView1.Columns["NSRAched"].HeaderText = "NSR Ached";
 
 
-                //                           tbl_kacontractdata.UCVolAched,
-                this.dataGridView1.Columns["UCVolAched"].DefaultCellStyle.Format = "N0";
-                this.dataGridView1.Columns["UCVolAched"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;// = "N0";
-                this.dataGridView1.Columns["UCVolAched"].HeaderText = "UC VolAched";
+            //    //                           tbl_kacontractdata.UCVolAched,
+            //    this.dataGridView1.Columns["UCVolAched"].DefaultCellStyle.Format = "N0";
+            //    this.dataGridView1.Columns["UCVolAched"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;// = "N0";
+            //    this.dataGridView1.Columns["UCVolAched"].HeaderText = "UC VolAched";
 
-                //                           tbl_kacontractdata.CRDDAT,
-                //                           tbl_kacontractdata.CRDUSR,
+            //    //                           tbl_kacontractdata.CRDDAT,
+            //    //                           tbl_kacontractdata.CRDUSR,
 
 
 
-                #endregion
+            //    #endregion
 
 
-                #endregion viewcpde = 5
-            }
+            //    #endregion viewcpde = 5
+            //}
 
 
-            if (viewcode == 4)// tuwc la view detailcontract
-            {
+            //if (viewcode == 4)// tuwc la view detailcontract
+            //{
 
-                #region format
+            //    #region format
 
 
 
 
 
-                //ContractNo = tbl_kacontractsdatadetail.ContractNo,
-                //Region = tbl_kacontractsdatadetail.SalesOrg,
+            //    //ContractNo = tbl_kacontractsdatadetail.ContractNo,
+            //    //Region = tbl_kacontractsdatadetail.SalesOrg,
 
-                //Constatus = tbl_kacontractsdatadetail.Constatus,
-                //Contracttype = tbl_kacontractsdatadetail.ConType,
-                //EffFrm = tbl_kacontractsdatadetail.EffFrm,
+            //    //Constatus = tbl_kacontractsdatadetail.Constatus,
+            //    //Contracttype = tbl_kacontractsdatadetail.ConType,
+            //    //EffFrm = tbl_kacontractsdatadetail.EffFrm,
 
-                //EffTo = tbl_kacontractsdatadetail.EffTo,
-                //CustomerCode = tbl_kacontractsdatadetail.Customercode,
-                //EftNoOfMonth = tbl_kacontractsdatadetail.EftNoOfMonth,
-                //CurrentMonth = tbl_kacontractsdatadetail.CurrentMonth,
+            //    //EffTo = tbl_kacontractsdatadetail.EffTo,
+            //    //CustomerCode = tbl_kacontractsdatadetail.Customercode,
+            //    //EftNoOfMonth = tbl_kacontractsdatadetail.EftNoOfMonth,
+            //    //CurrentMonth = tbl_kacontractsdatadetail.CurrentMonth,
 
-                //PCVolAched = tbl_kacontractsdatadetail.PCVolAched,
-                this.dataGridView1.Columns["PCVolAched"].DefaultCellStyle.Format = "N0";
-                this.dataGridView1.Columns["PCVolAched"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;// = "N0";
-                                                                                                                               //UCVolAched = tbl_kacontractsdatadetail.UCVolAched,
-                this.dataGridView1.Columns["UCVolAched"].DefaultCellStyle.Format = "N0";
-                this.dataGridView1.Columns["UCVolAched"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;// = "N0";
+            //    //PCVolAched = tbl_kacontractsdatadetail.PCVolAched,
+            //    this.dataGridView1.Columns["PCVolAched"].DefaultCellStyle.Format = "N0";
+            //    this.dataGridView1.Columns["PCVolAched"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;// = "N0";
+            //                                                                                                                   //UCVolAched = tbl_kacontractsdatadetail.UCVolAched,
+            //    this.dataGridView1.Columns["UCVolAched"].DefaultCellStyle.Format = "N0";
+            //    this.dataGridView1.Columns["UCVolAched"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;// = "N0";
 
-                //LitAched = tbl_kacontractsdatadetail.LitAched,
-                this.dataGridView1.Columns["LitAched"].DefaultCellStyle.Format = "N0";
-                this.dataGridView1.Columns["LitAched"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;// = "N0";
+            //    //LitAched = tbl_kacontractsdatadetail.LitAched,
+            //    this.dataGridView1.Columns["LitAched"].DefaultCellStyle.Format = "N0";
+            //    this.dataGridView1.Columns["LitAched"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;// = "N0";
 
-                //FTNAched = tbl_kacontractsdatadetail.ECAched,
-                this.dataGridView1.Columns["FTNAched"].DefaultCellStyle.Format = "N0";
-                this.dataGridView1.Columns["FTNAched"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;// = "N0";
+            //    //FTNAched = tbl_kacontractsdatadetail.ECAched,
+            //    this.dataGridView1.Columns["FTNAched"].DefaultCellStyle.Format = "N0";
+            //    this.dataGridView1.Columns["FTNAched"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;// = "N0";
 
-                //NSRAched = tbl_kacontractsdatadetail.NSRAched,
-                this.dataGridView1.Columns["NSRAched"].DefaultCellStyle.Format = "N0";
-                this.dataGridView1.Columns["NSRAched"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;// = "N0";
-                                                                                                                             //AccruedAmt = tbl_kacontractsdatadetail.AccruedAmt,
-                this.dataGridView1.Columns["AccruedAmt"].DefaultCellStyle.Format = "N0";
-                this.dataGridView1.Columns["AccruedAmt"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;// = "N0";
+            //    //NSRAched = tbl_kacontractsdatadetail.NSRAched,
+            //    this.dataGridView1.Columns["NSRAched"].DefaultCellStyle.Format = "N0";
+            //    this.dataGridView1.Columns["NSRAched"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;// = "N0";
+            //                                                                                                                 //AccruedAmt = tbl_kacontractsdatadetail.AccruedAmt,
+            //    this.dataGridView1.Columns["AccruedAmt"].DefaultCellStyle.Format = "N0";
+            //    this.dataGridView1.Columns["AccruedAmt"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;// = "N0";
 
-                //PayControl = tbl_kacontractsdatadetail.PayControl,
+            //    //PayControl = tbl_kacontractsdatadetail.PayControl,
 
 
-                //Description = tbl_kacontractsdatadetail.Description,
-                //PrdGrp = tbl_kacontractsdatadetail.PrdGrp,
-                //FundPercentage = tbl_kacontractsdatadetail.FundPercentage,
-                //SponsoredAmtperPC = tbl_kacontractsdatadetail.SponsoredAmtperPC,
-                this.dataGridView1.Columns["SponsoredAmtperPC"].DefaultCellStyle.Format = "N0";
-                this.dataGridView1.Columns["SponsoredAmtperPC"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;// = "N0";
+            //    //Description = tbl_kacontractsdatadetail.Description,
+            //    //PrdGrp = tbl_kacontractsdatadetail.PrdGrp,
+            //    //FundPercentage = tbl_kacontractsdatadetail.FundPercentage,
+            //    //SponsoredAmtperPC = tbl_kacontractsdatadetail.SponsoredAmtperPC,
+            //    this.dataGridView1.Columns["SponsoredAmtperPC"].DefaultCellStyle.Format = "N0";
+            //    this.dataGridView1.Columns["SponsoredAmtperPC"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;// = "N0";
 
-                //AccruedDate = tbl_kacontractsdatadetail.AccruedDate,
-                //FullCommitment = tbl_kacontractsdatadetail.SponsoredAmt,
+            //    //AccruedDate = tbl_kacontractsdatadetail.AccruedDate,
+            //    //FullCommitment = tbl_kacontractsdatadetail.SponsoredAmt,
 
-                this.dataGridView1.Columns["FullCommitment"].DefaultCellStyle.Format = "N0";
-                this.dataGridView1.Columns["FullCommitment"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;// = "N0";
+            //    this.dataGridView1.Columns["FullCommitment"].DefaultCellStyle.Format = "N0";
+            //    this.dataGridView1.Columns["FullCommitment"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;// = "N0";
 
-                //CommitmentCurrent = tbl_kacontractsdatadetail.SponsoredTotal,
-                this.dataGridView1.Columns["CommitmentCurrent"].DefaultCellStyle.Format = "N0";
-                this.dataGridView1.Columns["CommitmentCurrent"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;// = "N0";
-                                                                                                                                      //TotalPaid = tbl_kacontractsdatadetail.PaidAmt,
-                this.dataGridView1.Columns["TotalPaid"].DefaultCellStyle.Format = "N0";
-                this.dataGridView1.Columns["TotalPaid"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;// = "N0";
-                                                                                                                              //Balance = tbl_kacontractsdatadetail.Balance, //(to be accrual)
+            //    //CommitmentCurrent = tbl_kacontractsdatadetail.SponsoredTotal,
+            //    this.dataGridView1.Columns["CommitmentCurrent"].DefaultCellStyle.Format = "N0";
+            //    this.dataGridView1.Columns["CommitmentCurrent"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;// = "N0";
+            //                                                                                                                          //TotalPaid = tbl_kacontractsdatadetail.PaidAmt,
+            //    this.dataGridView1.Columns["TotalPaid"].DefaultCellStyle.Format = "N0";
+            //    this.dataGridView1.Columns["TotalPaid"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;// = "N0";
+            //                                                                                                                  //Balance = tbl_kacontractsdatadetail.Balance, //(to be accrual)
 
 
-                this.dataGridView1.Columns["Balance"].DefaultCellStyle.Format = "N0";
-                this.dataGridView1.Columns["Balance"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;// = "N0";
+            //    this.dataGridView1.Columns["Balance"].DefaultCellStyle.Format = "N0";
+            //    this.dataGridView1.Columns["Balance"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;// = "N0";
 
 
 
-                #endregion
+            //    #endregion
 
 
-            }
+            //}
 
-            if (viewcode == 1 || viewcode == 2)// nếu là hiện salevolum ta cộng salesvolume
-            {
-                #region view code = 1 hoac 2
+            //if (viewcode == 1 || viewcode == 2)// nếu là hiện salevolum ta cộng salesvolume
+            //{
+            //    #region view code = 1 hoac 2
 
 
-                Pl_endview.Visible = true;
-                bt_addtomaster.Visible = true;
+            //    Pl_endview.Visible = true;
+            //    bt_addtomaster.Visible = true;
 
-                if (viewcode == 2)
-                {
-                    bt_addtomaster.Visible = false;
-                    lb_seach.Visible = true;
+            //    if (viewcode == 2)
+            //    {
+            //        bt_addtomaster.Visible = false;
+            //        lb_seach.Visible = true;
 
 
 
 
-                    this.dataGridView1.Columns["PCs"].DefaultCellStyle.Format = "N0";
-                    this.dataGridView1.Columns["GSR"].DefaultCellStyle.Format = "N0";
+            //        this.dataGridView1.Columns["PCs"].DefaultCellStyle.Format = "N0";
+            //        this.dataGridView1.Columns["GSR"].DefaultCellStyle.Format = "N0";
 
-                    this.dataGridView1.Columns["Litter"].DefaultCellStyle.Format = "N0";
-                    this.dataGridView1.Columns["NSR"].DefaultCellStyle.Format = "N0";
+            //        this.dataGridView1.Columns["Litter"].DefaultCellStyle.Format = "N0";
+            //        this.dataGridView1.Columns["NSR"].DefaultCellStyle.Format = "N0";
 
 
-                    this.dataGridView1.Columns["EC"].DefaultCellStyle.Format = "N0";
-                    this.dataGridView1.Columns["UC"].DefaultCellStyle.Format = "N0";
+            //        this.dataGridView1.Columns["EC"].DefaultCellStyle.Format = "N0";
+            //        this.dataGridView1.Columns["UC"].DefaultCellStyle.Format = "N0";
 
 
-                }
+            //    }
 
-                #region// tính sum of biliing q ty, ....
+            //    #region// tính sum of biliing q ty, ....
 
 
 
 
-                #endregion
+            //    #endregion
 
-                System.Data.DataTable dt = new System.Data.DataTable();
+            //    System.Data.DataTable dt = new System.Data.DataTable();
 
 
 
-                Utils ut = new Utils();
-                dt = ut.ToDataTable(db, rs);
+            //    Utils ut = new Utils();
+            //    dt = ut.ToDataTable(db, rs);
 
 
 
-                this.dataGridView1.DataSource = dt;
+            //    this.dataGridView1.DataSource = dt;
 
 
-                this.Status.Text = "Caculating ...";
+            //    this.Status.Text = "Caculating ...";
 
-                Thread tt1 = new Thread(sumtitleGrid);
+            //    Thread tt1 = new Thread(sumtitleGrid);
 
-                tt1.IsBackground = true;
-                tt1.Start(new datatoExport() { datatble = dt });
+            //    tt1.IsBackground = true;
+            //    tt1.Start(new datatoExport() { datatble = dt });
 
-                #endregion
+            //#endregion
 
 
 
 
-            }
-
-
-        
-            }
+            //}
 
 
 
         }
+
+        private void dataGridView1_Paint(object sender, PaintEventArgs e)
+        {
+            //   Private Sub DataGridView1_Paint(ByVal sender As Object, ByVal e As System.Windows.Forms.PaintEventArgs) Handles DataGridView1.Paint
+            //  For Each c As DataGridViewColumn In dataGridViewListphieuthu.Columns
+
+            foreach (var c in dataGridView1.Columns)
+            {
+                DataGridViewColumn clm = (DataGridViewColumn)c;
+                clm.HeaderText = clm.HeaderText.Replace("_", " ");
+            }
+
+            // Next
+
+
+        }
+
+        private void bt_exporttoex_Click(object sender, EventArgs e)
+        {
+            Control_ac ctrex = new Control_ac();
+
+
+             ctrex.exportexceldatagridtofile(this.rs, this.db, this.Text);
+
+
+
+
+        }
+    }
 
 
     

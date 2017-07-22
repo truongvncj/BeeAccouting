@@ -66,7 +66,6 @@ D:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.CreatnewCust
 D:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.Noouthourise.resources
 D:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.Passwordchange.resources
 D:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.SetCustGroup.resources
-D:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.selectinput.resources
 D:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.Viewdatatable.resources
 D:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.kaconfirmPayment.resources
 D:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.kaPriodmake.resources
@@ -94,3 +93,4 @@ D:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\RdlCompile.cache
 D:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\RdlCompile.compiled
 D:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.BeePhieuThu.resources
 D:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.BeeLisstDoc.resources
+D:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.beeselectinput.resources

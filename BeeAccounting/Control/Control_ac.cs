@@ -2401,87 +2401,11 @@ namespace BEEACCOUNT.Control
         // }
 
 
-        // public static void CaculationContract(string Contractno)
-        // {
-
-
-        //     #region convert PaymentinforContract begin to 
-        //     SqlConnection conn2 = null;
-        //     SqlDataReader rdr1 = null;
-
-        //     string destConnString = Utils.getConnectionstr();
-        //     try
-        //     {
-
-        //         conn2 = new SqlConnection(destConnString);
-        //         conn2.Open();
-        //         SqlCommand cmd1 = new SqlCommand("kaCaculationContractinSQLdetail", conn2);
-        //         cmd1.CommandType = CommandType.StoredProcedure;
-        //         cmd1.Parameters.Add("@Contractno", SqlDbType.VarChar).Value = Contractno;
-        //         cmd1.CommandTimeout = 0;
-        //         rdr1 = cmd1.ExecuteReader();
-
-
-
-        //         //       rdr1 = cmd1.ExecuteReader();
-
-        //     }
-        //     finally
-        //     {
-        //         if (conn2 != null)
-        //         {
-        //             conn2.Close();
-        //         }
-        //         if (rdr1 != null)
-        //         {
-        //             rdr1.Close();
-        //         }
-        //     }
-        //     //     MessageBox.Show("ok", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-        //     #endregion
+      
 
 
 
 
-
-
-        // }
-        // public IQueryable KArptdataset2(LinqtoSQLDataContext db)
-        // {
-
-        //     string usrname = Utils.getusername();
-        //     //    var db = new LinqtoSQLDataContext(connection_string);
-        //     var rs = from tbl_KAdetailprogrRpt in db.tbl_KAdetailprogrRpts
-        //              where tbl_KAdetailprogrRpt.Username == usrname 
-        //              select tbl_KAdetailprogrRpt;
-
-        //     return rs;
-
-
-
-
-        //     //  throw new NotImplementedException();
-        // }
-
-        // public IQueryable KArptdataset1(LinqtoSQLDataContext db)
-        // {
-
-
-
-        //     #region lấy dữ liệu bảng ar letter reports ra
-        //     string usrname = Utils.getusername();
-
-        //     var rs = from tbl_KapaymentrequestRpt in db.tbl_KapaymentrequestRpts
-        //              where tbl_KapaymentrequestRpt.Username == usrname 
-        //              select tbl_KapaymentrequestRpt;
-
-        //     return rs;
-
-        //     #endregion lấy dữ liệu bảng ar letter reports ra
-
-
-        // }
 
 
         class datatoExport
@@ -2491,33 +2415,10 @@ namespace BEEACCOUNT.Control
             public string tittle { get; set; }
         }
 
-        // public static void caculationAllContract()
-        // {
-
-        //     string connection_string = Utils.getConnectionstr();
-
-        //     LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
-
-        //     var contractrs = from tbl_kacontractbegindata in dc.tbl_kacontractbegindatas
-        //                      select tbl_kacontractbegindata.ContractNo;
-
-        //     if (contractrs.Count() > 0)
-        //     {
-        //         foreach (var item in contractrs)
-        //         {
-        //             CaculationContract(item);
-        //         }
+      
 
 
 
-
-        //     }
-
-
-
-
-
-        //   }
 
         public static void exportsexcel(object objextoEl)
         {
@@ -2617,50 +2518,39 @@ namespace BEEACCOUNT.Control
         }
 
 
-        //public void exportExceldatagridtofile(IQueryable IQuery, LinqtoSQLDataContext db, string tittle)
-        //{
+        public void exportexceldatagridtofile(IQueryable iquery, LinqtoSQLDataContext db, string tittle)
+        {
+            System.Data.DataTable datatable1 = new System.Data.DataTable();
+            //
+           
+            Utils ul = new Utils();
+
+            datatable1 = ul.ToDataTable(db, iquery);
+            SaveFileDialog thedialog = new SaveFileDialog();
+            //
 
 
-        //    System.Data.DataTable datatable1 = new System.Data.DataTable();
-        //    //
+            //   datagridview datagridview1 = new datagridview();
+            //   datagridview1.datasource = datagrid.datasource;
 
-        //    Utils ul = new Utils();
+            thedialog.Title = "export to excel file";
+            thedialog.Filter = "excel files|*.xlsx";
+            thedialog.InitialDirectory = @"c:\";
 
-        //    datatable1 = ul.ToDataTable(db, IQuery);
+        
+            if (thedialog.ShowDialog() == DialogResult.OK)
+            {
 
-
-        //    //  this.dataGridView2.DataSource =  dataGridView1.DataSource;
-        //    //
-        //    #region // connect to excel
-        //    SaveFileDialog theDialog = new SaveFileDialog();
-        //    //
-
-
-        //    //   DataGridView dataGridView1 = new DataGridView();
-        //    //   dataGridView1.DataSource = dataGrid.DataSource;
-
-        //    theDialog.Title = "Export to Excel file";
-        //    theDialog.Filter = "Excel files|*.xlsx";
-        //    theDialog.InitialDirectory = @"C:\";
-
-        //    #endregion
-        //    if (theDialog.ShowDialog() == DialogResult.OK)
-        //    {
-
-        //        string filename = theDialog.FileName.ToString();
-
-        //        //   DataGridView datagr1 = new DataGridView();
-        //        //  datagr1 = dataGrid1;
-
-        //        Thread t1 = new Thread(exportsexcel);
-        //        t1.IsBackground = true;
-        //        t1.Start(new datatoExport() { dataGrid1 = datatable1, filename = filename, tittle = tittle });
-        //        // t1.Join();
-        //    }
+                string filename = thedialog.FileName.ToString();
+                Thread t1 = new Thread(exportsexcel);
+                t1.IsBackground = true;
+                t1.Start(new datatoExport() { dataGrid1 = datatable1, filename = filename, tittle = tittle });
+                // t1.join();
+            }
 
 
 
-        //}
+        }
 
 
 

@@ -306,6 +306,7 @@
             this.cbtkno.Name = "cbtkno";
             this.cbtkno.Size = new System.Drawing.Size(198, 28);
             this.cbtkno.TabIndex = 8;
+            this.cbtkno.SelectionChangeCommitted += new System.EventHandler(this.cbtkno_SelectionChangeCommitted);
             this.cbtkno.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbtkno_KeyPress);
             // 
             // label3

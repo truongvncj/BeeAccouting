@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace BEEACCOUNT.View
 {
-    public partial class selectinput : Form
+    public partial class beeselectinput : Form
     {
 
         public string valuetext ;
@@ -28,7 +28,7 @@ namespace BEEACCOUNT.View
 
 
 
-        public selectinput(String headcolumname, List<ComboboxItem> CombomCollection)
+        public beeselectinput(String headcolumname, List<ComboboxItem> CombomCollection)
         {
             InitializeComponent();
 

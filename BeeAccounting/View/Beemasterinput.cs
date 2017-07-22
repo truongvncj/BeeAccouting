@@ -770,8 +770,19 @@ namespace BEEACCOUNT.View
 
         private void button3_Click_1(object sender, EventArgs e)
         {
-            View.SetCustGroup cusgrp = new SetCustGroup();
-            cusgrp.Show();
+            string connection_string = Utils.getConnectionstr();
+
+            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+            var rs1 = from loaitks in dc.tbl_loaitks
+                      select new
+                      {
+                      Mã_loại_tài_khoản =    loaitks.idloaitk,
+                      Tên_mã_loại_tài_khoản =    loaitks.name,
+                      ID = loaitks.id
+                      };
+               Viewtable viewtbl = new Viewtable(rs1, dc, "DANH SÁCH LOẠI TÀI KHOẢN", 0);// view code 1 la can viet them lenh
+
+               viewtbl.Show();
         }
 
         private void button11_Click(object sender, EventArgs e)
@@ -808,13 +819,18 @@ namespace BEEACCOUNT.View
             string connection_string = Utils.getConnectionstr();
 
             LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
-          //  var rscustemp2 = from tbl_kacontractbegindata in dc.tbl_kacontractbegindatas
+            var rs1 = from dstaikhoan in dc.tbl_dstaikhoans
+                      select new
+                      {
+                          Mã_tài_khoản = dstaikhoan.matk,
+                          Tên_tài_khoản = dstaikhoan.tentk,
+                          Mã_tài_khoản_cấp_trên =dstaikhoan.matktren,
+                          Cấp_tài_khoản = dstaikhoan.captk,
+                          ID = dstaikhoan.id
+                      };
+            Viewtable viewtbl = new Viewtable(rs1, dc, "DANH SÁCH TÀI KHOẢN KẾ TOÁN", 0);// view code 1 la can viet them lenh
 
-
-          //                   select tbl_kacontractbegindata;
-       //     Viewtable viewtbl = new Viewtable(rscustemp2, dc, "List Begin Master Contract", 3);// view code 1 la can viet them lenh
-
-          //  viewtbl.Show();
+            viewtbl.Show();
         }
 
         private void button7_Click_1(object sender, EventArgs e)

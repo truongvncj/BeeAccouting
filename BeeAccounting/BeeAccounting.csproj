@@ -213,11 +213,11 @@
     <Compile Include="View\SetCustGroup.Designer.cs">
       <DependentUpon>SetCustGroup.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\selectinput.cs">
+    <Compile Include="View\beeselectinput.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\selectinput.Designer.cs">
-      <DependentUpon>selectinput.cs</DependentUpon>
+    <Compile Include="View\beeselectinput.Designer.cs">
+      <DependentUpon>beeselectinput.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Viewdatatable.cs">
       <SubType>Form</SubType>
@@ -395,8 +395,8 @@
     <EmbeddedResource Include="View\SetCustGroup.resx">
       <DependentUpon>SetCustGroup.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\selectinput.resx">
-      <DependentUpon>selectinput.cs</DependentUpon>
+    <EmbeddedResource Include="View\beeselectinput.resx">
+      <DependentUpon>beeselectinput.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Viewdatatable.resx">
       <DependentUpon>Viewdatatable.cs</DependentUpon>
