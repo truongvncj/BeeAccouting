@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BeeCreatenewaccount));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.checkbookchitiet = new System.Windows.Forms.CheckBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.btupdate = new System.Windows.Forms.Button();
             this.btxoa = new System.Windows.Forms.Button();
             this.cbtkmother = new System.Windows.Forms.ComboBox();
@@ -48,6 +50,8 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.checkbookchitiet);
+            this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.btupdate);
             this.panel1.Controls.Add(this.btxoa);
             this.panel1.Controls.Add(this.cbtkmother);
@@ -63,8 +67,30 @@
             this.panel1.Controls.Add(this.label21);
             this.panel1.Location = new System.Drawing.Point(5, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(604, 255);
+            this.panel1.Size = new System.Drawing.Size(604, 297);
             this.panel1.TabIndex = 0;
+            // 
+            // checkbookchitiet
+            // 
+            this.checkbookchitiet.AutoSize = true;
+            this.checkbookchitiet.Location = new System.Drawing.Point(170, 207);
+            this.checkbookchitiet.Name = "checkbookchitiet";
+            this.checkbookchitiet.Size = new System.Drawing.Size(29, 17);
+            this.checkbookchitiet.TabIndex = 59;
+            this.checkbookchitiet.Text = " ";
+            this.checkbookchitiet.UseVisualStyleBackColor = true;
+            // 
+            // label4
+            // 
+            this.label4.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(14, 207);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(126, 16);
+            this.label4.TabIndex = 58;
+            this.label4.Text = "Theo dõi chi tiết";
             // 
             // btupdate
             // 
@@ -72,7 +98,7 @@
             this.btupdate.BackColor = System.Drawing.Color.Transparent;
             this.btupdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btupdate.ForeColor = System.Drawing.Color.Red;
-            this.btupdate.Location = new System.Drawing.Point(235, 218);
+            this.btupdate.Location = new System.Drawing.Point(235, 260);
             this.btupdate.Name = "btupdate";
             this.btupdate.Size = new System.Drawing.Size(94, 21);
             this.btupdate.TabIndex = 6;
@@ -86,7 +112,7 @@
             this.btxoa.BackColor = System.Drawing.Color.Transparent;
             this.btxoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btxoa.ForeColor = System.Drawing.Color.Red;
-            this.btxoa.Location = new System.Drawing.Point(46, 218);
+            this.btxoa.Location = new System.Drawing.Point(46, 260);
             this.btxoa.Name = "btxoa";
             this.btxoa.Size = new System.Drawing.Size(94, 21);
             this.btxoa.TabIndex = 6;
@@ -166,7 +192,7 @@
             this.btnew.BackColor = System.Drawing.Color.Transparent;
             this.btnew.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnew.ForeColor = System.Drawing.Color.Red;
-            this.btnew.Location = new System.Drawing.Point(358, 218);
+            this.btnew.Location = new System.Drawing.Point(358, 260);
             this.btnew.Name = "btnew";
             this.btnew.Size = new System.Drawing.Size(94, 21);
             this.btnew.TabIndex = 8;
@@ -220,7 +246,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(621, 270);
+            this.ClientSize = new System.Drawing.Size(621, 312);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -251,5 +277,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btupdate;
         private System.Windows.Forms.Button btxoa;
+        private System.Windows.Forms.CheckBox checkbookchitiet;
+        private System.Windows.Forms.Label label4;
     }
 }

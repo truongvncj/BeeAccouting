@@ -35,10 +35,9 @@ namespace BEEACCOUNT.View
             this.grviewlisttk.Columns["loaitkid"].HeaderText = "Loại tài khoản";
             this.grviewlisttk.Columns["matktren"].HeaderText = "Mã tài khoản cấp trên";
             this.grviewlisttk.Columns["captk"].HeaderText = "Cấp tài khoản";
-
-
-
-        }
+            this.grviewlisttk.Columns["loaichitiet"].HeaderText = "Theo dõi chi tiết";
+        
+    }
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -911,7 +910,7 @@ namespace BEEACCOUNT.View
             View.BeeCreatenewaccount createacc = new BeeCreatenewaccount( 3,"");
 
             createacc.ShowDialog();
-
+            bool chitiettheodoi = createacc.tkchitiet;
             bool chon = createacc.chon;
             string tentk = createacc.tentk;
 
@@ -936,7 +935,7 @@ namespace BEEACCOUNT.View
                 tk.loaitkid = loaitk;
                 tk.captk = captk;
                 tk.matktren = tkcaptren;
-
+                tk.loaichitiet = chitiettheodoi;
 
                 db.tbl_dstaikhoans.InsertOnSubmit(tk);
                 db.SubmitChanges();
@@ -1156,5 +1155,12 @@ namespace BEEACCOUNT.View
 
             }
         }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+          //  Beemosochitiettaikhoan
+
+
         }
+    }
 }

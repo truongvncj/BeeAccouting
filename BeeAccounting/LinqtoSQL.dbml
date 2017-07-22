@@ -158,6 +158,7 @@
       <Column Name="captk" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="matktren" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
       <Column Name="loaitkid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="loaichitiet" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
     </Type>
   </Table>
   <Table Name="dbo.tbl_loaitk" Member="tbl_loaitks">
@@ -165,6 +166,14 @@
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="name" Type="System.String" DbType="NChar(50)" CanBeNull="true" />
       <Column Name="idloaitk" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_machitiettk" Member="tbl_machitiettks">
+    <Type Name="tbl_machitiettk">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="tenchitiet" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="matkchitiet" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="machitiet" Type="System.Int32" DbType="Int" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.tbl_Socai" Member="tbl_Socais">

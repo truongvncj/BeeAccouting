@@ -18,7 +18,7 @@ namespace BEEACCOUNT.View
         public string matk { get; set; }
         public string tentk { get; set; }
         public bool chon { get; set; }
-
+        public bool tkchitiet { get; set; }
         public int loaitk { get; set; }
 
         public int captk { get; set; }
@@ -150,7 +150,7 @@ namespace BEEACCOUNT.View
                     this.txtcaptaikhoan.Text = rs1.captk.ToString();
 
                     this.cbtkmother.Text = rs1.matktren;
-
+                    this.checkbookchitiet.Checked = rs1.loaichitiet;
 
                 }
 
@@ -483,6 +483,16 @@ namespace BEEACCOUNT.View
                 return;
             }
 
+            if (checkbookchitiet.Checked == true)
+            {
+                tkchitiet = true;
+            }
+            else
+            {
+                tkchitiet = false;
+            }
+
+             
 
 
             if (matk != "" && tentk != "" && loaitk > 0)
@@ -690,6 +700,14 @@ namespace BEEACCOUNT.View
                     rs.loaitkid = loaitk;
                     rs.captk = captk;
                     rs.matktren = tkcaptren;
+                    if (checkbookchitiet.Checked == true)
+                    {
+                        rs.loaichitiet = true;
+                    }
+                    else
+                    {
+                        rs.loaichitiet = false;
+                    }
 
                     db.SubmitChanges();
                     this.Close();

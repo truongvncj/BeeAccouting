@@ -54,6 +54,9 @@ namespace BEEACCOUNT
     partial void Inserttbl_loaitk(tbl_loaitk instance);
     partial void Updatetbl_loaitk(tbl_loaitk instance);
     partial void Deletetbl_loaitk(tbl_loaitk instance);
+    partial void Inserttbl_machitiettk(tbl_machitiettk instance);
+    partial void Updatetbl_machitiettk(tbl_machitiettk instance);
+    partial void Deletetbl_machitiettk(tbl_machitiettk instance);
     partial void Inserttbl_Socai(tbl_Socai instance);
     partial void Updatetbl_Socai(tbl_Socai instance);
     partial void Deletetbl_Socai(tbl_Socai instance);
@@ -153,6 +156,14 @@ namespace BEEACCOUNT
 			get
 			{
 				return this.GetTable<tbl_loaitk>();
+			}
+		}
+		
+		public System.Data.Linq.Table<tbl_machitiettk> tbl_machitiettks
+		{
+			get
+			{
+				return this.GetTable<tbl_machitiettk>();
 			}
 		}
 		
@@ -3443,6 +3454,8 @@ namespace BEEACCOUNT
 		
 		private System.Nullable<int> _loaitkid;
 		
+		private bool _loaichitiet;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -3459,6 +3472,8 @@ namespace BEEACCOUNT
     partial void OnmatktrenChanged();
     partial void OnloaitkidChanging(System.Nullable<int> value);
     partial void OnloaitkidChanged();
+    partial void OnloaichitietChanging(bool value);
+    partial void OnloaichitietChanged();
     #endregion
 		
 		public tbl_dstaikhoan()
@@ -3586,6 +3601,26 @@ namespace BEEACCOUNT
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_loaichitiet", DbType="Bit NOT NULL")]
+		public bool loaichitiet
+		{
+			get
+			{
+				return this._loaichitiet;
+			}
+			set
+			{
+				if ((this._loaichitiet != value))
+				{
+					this.OnloaichitietChanging(value);
+					this.SendPropertyChanging();
+					this._loaichitiet = value;
+					this.SendPropertyChanged("loaichitiet");
+					this.OnloaichitietChanged();
+				}
+			}
+		}
+		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -3692,6 +3727,140 @@ namespace BEEACCOUNT
 					this._idloaitk = value;
 					this.SendPropertyChanged("idloaitk");
 					this.OnidloaitkChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tbl_machitiettk")]
+	public partial class tbl_machitiettk : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _id;
+		
+		private string _tenchitiet;
+		
+		private string _matkchitiet;
+		
+		private System.Nullable<int> _machitiet;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnidChanging(int value);
+    partial void OnidChanged();
+    partial void OntenchitietChanging(string value);
+    partial void OntenchitietChanged();
+    partial void OnmatkchitietChanging(string value);
+    partial void OnmatkchitietChanged();
+    partial void OnmachitietChanging(System.Nullable<int> value);
+    partial void OnmachitietChanged();
+    #endregion
+		
+		public tbl_machitiettk()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int id
+		{
+			get
+			{
+				return this._id;
+			}
+			set
+			{
+				if ((this._id != value))
+				{
+					this.OnidChanging(value);
+					this.SendPropertyChanging();
+					this._id = value;
+					this.SendPropertyChanged("id");
+					this.OnidChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tenchitiet", DbType="NVarChar(50)")]
+		public string tenchitiet
+		{
+			get
+			{
+				return this._tenchitiet;
+			}
+			set
+			{
+				if ((this._tenchitiet != value))
+				{
+					this.OntenchitietChanging(value);
+					this.SendPropertyChanging();
+					this._tenchitiet = value;
+					this.SendPropertyChanged("tenchitiet");
+					this.OntenchitietChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_matkchitiet", DbType="NVarChar(50)")]
+		public string matkchitiet
+		{
+			get
+			{
+				return this._matkchitiet;
+			}
+			set
+			{
+				if ((this._matkchitiet != value))
+				{
+					this.OnmatkchitietChanging(value);
+					this.SendPropertyChanging();
+					this._matkchitiet = value;
+					this.SendPropertyChanged("matkchitiet");
+					this.OnmatkchitietChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_machitiet", DbType="Int")]
+		public System.Nullable<int> machitiet
+		{
+			get
+			{
+				return this._machitiet;
+			}
+			set
+			{
+				if ((this._machitiet != value))
+				{
+					this.OnmachitietChanging(value);
+					this.SendPropertyChanging();
+					this._machitiet = value;
+					this.SendPropertyChanged("machitiet");
+					this.OnmachitietChanged();
 				}
 			}
 		}

@@ -168,11 +168,10 @@ namespace BEEACCOUNT.View
 
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            View.BeeServersetup stup = new BeeServersetup();
-            stup.Show();
-        }
+        //private void pictureBox1_Click(object sender, EventArgs e)
+        //{
+      
+        //}
 
         private void textBox1_Enter(object sender, EventArgs e)
         {
@@ -198,6 +197,20 @@ namespace BEEACCOUNT.View
             {
                 this.textBox2.Focus();
             }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+
+                View.BeeServersetup stup = new BeeServersetup();
+                stup.Show();
+
+
         }
     }
 

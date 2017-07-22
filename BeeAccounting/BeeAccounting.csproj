@@ -129,6 +129,12 @@
     <Compile Include="shared\ExtractToDataTableOptions.cs" />
     <Compile Include="shared\LinQToExcel.cs" />
     <Compile Include="shared\StringExtensions.cs" />
+    <Compile Include="View\Beemosochitiettaikhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Beemosochitiettaikhoan.Designer.cs">
+      <DependentUpon>Beemosochitiettaikhoan.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Beemainload.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -352,6 +358,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\Socai_NCC.rdlc" />
+    <EmbeddedResource Include="View\Beemosochitiettaikhoan.resx">
+      <DependentUpon>Beemosochitiettaikhoan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Beemainload.resx">
       <DependentUpon>Beemainload.cs</DependentUpon>
     </EmbeddedResource>

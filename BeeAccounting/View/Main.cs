@@ -72,6 +72,10 @@ namespace BEEACCOUNT.View
                 panelmain.Controls.Add(accsup);
                 accsup.Show();
 
+
+
+
+
                 // Beemainload
 
                 //  panelmain.Controls.Add(inputcdata);

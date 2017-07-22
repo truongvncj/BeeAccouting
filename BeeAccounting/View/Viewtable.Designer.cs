@@ -88,7 +88,7 @@ namespace BEEACCOUNT.View
             this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.bt_exporttoex);
             this.panel2.Controls.Add(this.button1);
-            this.panel2.Location = new System.Drawing.Point(0, 3);
+            this.panel2.Location = new System.Drawing.Point(0, 28);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1332, 28);
             this.panel2.TabIndex = 45;
@@ -144,7 +144,7 @@ namespace BEEACCOUNT.View
             this.formlabel.AutoSize = true;
             this.formlabel.BackColor = System.Drawing.Color.Transparent;
             this.formlabel.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.formlabel.Location = new System.Drawing.Point(495, 34);
+            this.formlabel.Location = new System.Drawing.Point(495, 5);
             this.formlabel.Name = "formlabel";
             this.formlabel.Size = new System.Drawing.Size(156, 20);
             this.formlabel.TabIndex = 8;
