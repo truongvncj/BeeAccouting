@@ -48,8 +48,8 @@ namespace BEEACCOUNT.View
             if (manghiepvu == 4) // xóa + xóa
             {
                
-                this.txtcode.Text = matk;
-                txtcode.Enabled = false;
+          //      this.txtcode.Text = matk;
+            //    txtcode.Enabled = false;
 
                 string connection_string = Utils.getConnectionstr();
                 LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
@@ -89,7 +89,7 @@ namespace BEEACCOUNT.View
             {
 
 
-                txt_nametk.Focus();
+           //     txt_nametk.Focus();
 
 
             }
@@ -104,7 +104,7 @@ namespace BEEACCOUNT.View
             {
 
 
-                txt_nametk.Focus();
+            //    txt_nametk.Focus();
 
 
             }
@@ -227,51 +227,7 @@ namespace BEEACCOUNT.View
         private void button5_Click(object sender, EventArgs e)
         {
 
-           
-
-
-
-            matk = this.txtcode.Text;
-
-            if (this.txtcode.Text == "")
-            {
-            
-
-                MessageBox.Show("Bạn chưa có  mã tài khoản", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-            else
-            {
-
-                    string connection_string = Utils.getConnectionstr();
-                    LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
-
-
-                    var rs1 = (from tbl_dstaikhoan in dc.tbl_dstaikhoans
-                              where tbl_dstaikhoan.matk == matk
-                              select tbl_dstaikhoan.matk).FirstOrDefault();
-
-                //    captk = rs + 1;
-
-
-
-
-                if (rs1 != null)
-                {
-                    MessageBox.Show("Mã tài khoản này đã tồn tại, bạn phải chọn mã tài khoản khác", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-
-                }
-                else
-                {
-                    matk = this.txtcode.Text;
-
-                }
-
-
-            }
-
-
+         
           
              
 

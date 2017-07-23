@@ -780,7 +780,7 @@ namespace BEEACCOUNT.View
                       Tên_mã_loại_tài_khoản =    loaitks.name,
                       ID = loaitks.id
                       };
-               Viewtable viewtbl = new Viewtable(rs1, dc, "DANH SÁCH LOẠI TÀI KHOẢN", 0);// view code 1 la can viet them lenh
+               Viewtable viewtbl = new Viewtable(rs1, dc, "DANH SÁCH LOẠI TÀI KHOẢN", 0);// view code 0 la danh sach tai koan ke toan la can viet them lenh
 
                viewtbl.Show();
         }
@@ -819,16 +819,20 @@ namespace BEEACCOUNT.View
             string connection_string = Utils.getConnectionstr();
 
             LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
-            var rs1 = from dstaikhoan in dc.tbl_dstaikhoans
-                      select new
-                      {
-                          Mã_tài_khoản = dstaikhoan.matk,
-                          Tên_tài_khoản = dstaikhoan.tentk,
-                          Mã_tài_khoản_cấp_trên =dstaikhoan.matktren,
-                          Cấp_tài_khoản = dstaikhoan.captk,
-                          ID = dstaikhoan.id
-                      };
-            Viewtable viewtbl = new Viewtable(rs1, dc, "DANH SÁCH TÀI KHOẢN KẾ TOÁN", 0);// view code 1 la can viet them lenh
+            //var rs1 = from dstaikhoan in dc.tbl_dstaikhoans
+            //          select new
+            //          {
+            //              Mã_tài_khoản = dstaikhoan.matk,
+            //              Tên_tài_khoản = dstaikhoan.tentk,
+            //              Mã_tài_khoản_cấp_trên =dstaikhoan.matktren,
+            //              Cấp_tài_khoản = dstaikhoan.captk,
+            //              ID = dstaikhoan.id
+
+
+            //          };
+
+            var rs = Model.Taikhoanketoan.danhsachtaikhoan();
+            Viewtable viewtbl = new Viewtable(rs, dc, "DANH SÁCH TÀI KHOẢN KẾ TOÁN", 0);// view code 0 la danh sach tai khoan ke toan
 
             viewtbl.Show();
         }

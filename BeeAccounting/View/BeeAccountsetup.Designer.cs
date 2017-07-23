@@ -85,12 +85,17 @@
             // grviewlisttk
             // 
             this.grviewlisttk.AllowUserToOrderColumns = true;
+            this.grviewlisttk.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.grviewlisttk.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grviewlisttk.Location = new System.Drawing.Point(237, 11);
             this.grviewlisttk.Name = "grviewlisttk";
-            this.grviewlisttk.Size = new System.Drawing.Size(749, 460);
+            this.grviewlisttk.Size = new System.Drawing.Size(782, 460);
             this.grviewlisttk.TabIndex = 56;
+            this.grviewlisttk.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grviewlisttk_CellContentClick);
             this.grviewlisttk.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.grviewlisttk_CellMouseDoubleClick);
+            this.grviewlisttk.Paint += new System.Windows.Forms.PaintEventHandler(this.grviewlisttk_Paint);
             // 
             // button1
             // 

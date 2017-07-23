@@ -18,24 +18,24 @@ namespace BEEACCOUNT.View
         {
             InitializeComponent();
 
-              string connection_string = Utils.getConnectionstr();
+            //  string connection_string = Utils.getConnectionstr();
 
-             LinqtoSQLDataContext db = new LinqtoSQLDataContext(connection_string);
-            var rs = from tbl_dstaikhoan in db.tbl_dstaikhoans
-                     orderby tbl_dstaikhoan.matk, tbl_dstaikhoan.matktren
-                     select tbl_dstaikhoan;
-
+            // LinqtoSQLDataContext db = new LinqtoSQLDataContext(connection_string);
+            //var rs = from tbl_dstaikhoan in db.tbl_dstaikhoans
+            //         orderby tbl_dstaikhoan.matk, tbl_dstaikhoan.matktren
+            //         select tbl_dstaikhoan;
+            var rs = Model.Taikhoanketoan.danhsachtaikhoan();
             grviewlisttk.DataSource = rs;
 
 
 
 
-            this.grviewlisttk.Columns["matk"].HeaderText = "Mã tài khoản";
-            this.grviewlisttk.Columns["tentk"].HeaderText = "Tên tài khoản";
-            this.grviewlisttk.Columns["loaitkid"].HeaderText = "Loại tài khoản";
-            this.grviewlisttk.Columns["matktren"].HeaderText = "Mã tài khoản cấp trên";
-            this.grviewlisttk.Columns["captk"].HeaderText = "Cấp tài khoản";
-            this.grviewlisttk.Columns["loaichitiet"].HeaderText = "Theo dõi chi tiết";
+            //this.grviewlisttk.Columns["matk"].HeaderText = "Mã tài khoản";
+            //this.grviewlisttk.Columns["tentk"].HeaderText = "Tên tài khoản";
+            //this.grviewlisttk.Columns["loaitkid"].HeaderText = "Loại tài khoản";
+            //this.grviewlisttk.Columns["matktren"].HeaderText = "Mã tài khoản cấp trên";
+            //this.grviewlisttk.Columns["captk"].HeaderText = "Cấp tài khoản";
+            //this.grviewlisttk.Columns["loaichitiet"].HeaderText = "Theo dõi chi tiết";
         
     }
 
@@ -906,51 +906,14 @@ namespace BEEACCOUNT.View
         {
 
 
+            Model.Taikhoanketoan.themmoitaikhoan();
 
-            View.BeeCreatenewaccount createacc = new BeeCreatenewaccount( 3,"");
-
-            createacc.ShowDialog();
-            bool chitiettheodoi = createacc.tkchitiet;
-            bool chon = createacc.chon;
-            string tentk = createacc.tentk;
-
-            string matk = createacc.matk;
-            int captk = createacc.captk;
-            string   tkcaptren =  createacc.tkcaptren;
-           int   loaitk =  createacc.loaitk;
-
-
-
-            if (chon)
-            {
-                string connection_string = Utils.getConnectionstr();
-                // string urs = Utils.getusername();
-                //  var db = new LinqtoSQLDataContext(connection_string);
-                LinqtoSQLDataContext db = new LinqtoSQLDataContext(connection_string);
-
-                tbl_dstaikhoan tk = new tbl_dstaikhoan();
-
-                tk.matk = matk;
-                tk.tentk = tentk;
-                tk.loaitkid = loaitk;
-                tk.captk = captk;
-                tk.matktren = tkcaptren;
-                tk.loaichitiet = chitiettheodoi;
-
-                db.tbl_dstaikhoans.InsertOnSubmit(tk);
-                db.SubmitChanges();
-
-                //    MeasureItemEventArgs.re
-                var rs = from tbl_dstaikhoan in db.tbl_dstaikhoans
-                         orderby tbl_dstaikhoan.matk
-                         select tbl_dstaikhoan;
+            var rs = Model.Taikhoanketoan.danhsachtaikhoan();
 
                 grviewlisttk.DataSource = rs;
 
 
-            }
-
-
+            
 
 
         }
@@ -993,34 +956,10 @@ namespace BEEACCOUNT.View
                 createacc.ShowDialog();
 
 
-                //    this.Refresh();
-                LinqtoSQLDataContext db = new LinqtoSQLDataContext(connection_string);
-
-                tbl_dstaikhoan tk = new tbl_dstaikhoan();
-
-                //tk.matk = matk;
-                //tk.tentk = tentk;
-                //tk.loaitkid = loaitk;
-                //tk.captk = captk;
-                //tk.matktren = tkcaptren;
-
-
-                //db.tbl_dstaikhoans.InsertOnSubmit(tk);
-                //db.SubmitChanges();
-
-                //    MeasureItemEventArgs.re
-                var rs3 = from tbl_dstaikhoan in db.tbl_dstaikhoans
-                          orderby tbl_dstaikhoan.matk
-
-                          select tbl_dstaikhoan;
+                var rs3 = Model.Taikhoanketoan.danhsachtaikhoan();
 
                 grviewlisttk.DataSource = rs3;
 
-                this.grviewlisttk.Columns["matk"].HeaderText = "Mã tài khoản";
-                this.grviewlisttk.Columns["tentk"].HeaderText = "Tên tài khoản";
-                this.grviewlisttk.Columns["loaitkid"].HeaderText = "Loại tài khoản";
-                this.grviewlisttk.Columns["matktren"].HeaderText = "Mã tài khoản cấp trên";
-                this.grviewlisttk.Columns["captk"].HeaderText = "Cấp tài khoản";
 
 
             }
@@ -1054,29 +993,11 @@ namespace BEEACCOUNT.View
         private void button4_Click_2(object sender, EventArgs e)
         {
 
-            string connection_string = Utils.getConnectionstr();
-            // string urs = Utils.getusername();
-            //  var db = new LinqtoSQLDataContext(connection_string);
-            LinqtoSQLDataContext db = new LinqtoSQLDataContext(connection_string);
 
-            tbl_dstaikhoan tk = new tbl_dstaikhoan();
+            var rs3 = Model.Taikhoanketoan.danhsachtaikhoan();
 
-            //tk.matk = matk;
-            //tk.tentk = tentk;
-            //tk.loaitkid = loaitk;
-            //tk.captk = captk;
-            //tk.matktren = tkcaptren;
+            grviewlisttk.DataSource = rs3;
 
-
-            //db.tbl_dstaikhoans.InsertOnSubmit(tk);
-            //db.SubmitChanges();
-
-            //    MeasureItemEventArgs.re
-            var rs = from tbl_dstaikhoan in db.tbl_dstaikhoans
-                     orderby tbl_dstaikhoan.matk
-                     select tbl_dstaikhoan;
-
-            grviewlisttk.DataSource = rs;
 
 
             this.Refresh();
@@ -1122,34 +1043,12 @@ namespace BEEACCOUNT.View
                 createacc.ShowDialog();
 
 
-                //    this.Refresh();
-                LinqtoSQLDataContext db = new LinqtoSQLDataContext(connection_string);
 
-                tbl_dstaikhoan tk = new tbl_dstaikhoan();
-
-                //tk.matk = matk;
-                //tk.tentk = tentk;
-                //tk.loaitkid = loaitk;
-                //tk.captk = captk;
-                //tk.matktren = tkcaptren;
-
-
-                //db.tbl_dstaikhoans.InsertOnSubmit(tk);
-                //db.SubmitChanges();
-
-                //    MeasureItemEventArgs.re
-                var rs3 = from tbl_dstaikhoan in db.tbl_dstaikhoans
-                          orderby tbl_dstaikhoan.matk
-
-                          select tbl_dstaikhoan;
+                var rs3 = Model.Taikhoanketoan.danhsachtaikhoan();
 
                 grviewlisttk.DataSource = rs3;
 
-                this.grviewlisttk.Columns["matk"].HeaderText = "Mã tài khoản";
-                this.grviewlisttk.Columns["tentk"].HeaderText = "Tên tài khoản";
-                this.grviewlisttk.Columns["loaitkid"].HeaderText = "Loại tài khoản";
-                this.grviewlisttk.Columns["matktren"].HeaderText = "Mã tài khoản cấp trên";
-                this.grviewlisttk.Columns["captk"].HeaderText = "Cấp tài khoản";
+              
 
 
 
@@ -1160,6 +1059,22 @@ namespace BEEACCOUNT.View
         {
           //  Beemosochitiettaikhoan
 
+
+        }
+
+        private void grviewlisttk_Paint(object sender, PaintEventArgs e)
+        {
+
+            foreach (var c in grviewlisttk.Columns)
+            {
+                DataGridViewColumn clm = (DataGridViewColumn)c;
+                clm.HeaderText = clm.HeaderText.Replace("_", " ");
+            }
+
+        }
+
+        private void grviewlisttk_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }

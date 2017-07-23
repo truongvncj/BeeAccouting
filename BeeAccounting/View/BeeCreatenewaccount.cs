@@ -627,43 +627,7 @@ namespace BEEACCOUNT.View
 
             matk = this.txtcode.Text;
 
-            //if (this.txtcode.Text == "")
-            //{
-
-
-            //    MessageBox.Show("Bạn chưa có  mã tài khoản", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //    return;
-            //}
-            //else
-            //{
-
-            //    string connection_string = Utils.getConnectionstr();
-            //    LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
-
-
-            //    var rs1 = (from tbl_dstaikhoan in dc.tbl_dstaikhoans
-            //               where tbl_dstaikhoan.matk == matk
-            //               select tbl_dstaikhoan.matk).FirstOrDefault();
-
-            //    //    captk = rs + 1;
-
-
-
-
-            //    if (rs1 != null)
-            //    {
-            //        MessageBox.Show("Mã tài khoản này đã tồn tại, bạn phải chọn mã tài khoản khác", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //        return;
-
-            //    }
-            //    else
-            //    {
-            //        matk = this.txtcode.Text;
-
-            //    }
-
-
-         //   }
+          
 
 
             tentk = this.txt_nametk.Text;
@@ -712,29 +676,7 @@ namespace BEEACCOUNT.View
                     db.SubmitChanges();
                     this.Close();
                 }
-                //tk.matk = matk;
-                //tk.tentk = tentk;
-                //tk.loaitkid = loaitk;
-                //tk.captk = captk;
-                //tk.matktren = tkcaptren;
-
-
-                //db.tbl_dstaikhoans.InsertOnSubmit(tk);
-                //var rs3 = from tbl_dstaikhoan in db.tbl_dstaikhoans
-                //          orderby tbl_dstaikhoan.matk
-
-                //          select tbl_dstaikhoan;
-
-                //grviewlisttk.DataSource = rs3;
-
-                //this.grviewlisttk.Columns["matk"].HeaderText = "Mã tài khoản";
-                //this.grviewlisttk.Columns["tentk"].HeaderText = "Tên tài khoản";
-                //this.grviewlisttk.Columns["loaitkid"].HeaderText = "Loại tài khoản";
-                //this.grviewlisttk.Columns["matktren"].HeaderText = "Mã tài khoản cấp trên";
-
-
-
-                //grviewlisttk.DataSource = rs;
+            
 
 
             }

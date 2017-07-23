@@ -111,6 +111,7 @@
     <Compile Include="Model\Contract.cs" />
     <Compile Include="Model\programlist.cs" />
     <Compile Include="Model\Product.cs" />
+    <Compile Include="Model\Taikhoanketoan.cs" />
     <Compile Include="Model\Username.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
