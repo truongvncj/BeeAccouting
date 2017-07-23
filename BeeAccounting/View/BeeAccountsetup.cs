@@ -18,24 +18,17 @@ namespace BEEACCOUNT.View
         {
             InitializeComponent();
 
-            //  string connection_string = Utils.getConnectionstr();
+             string connection_string = Utils.getConnectionstr();
 
-            // LinqtoSQLDataContext db = new LinqtoSQLDataContext(connection_string);
+             LinqtoSQLDataContext db = new LinqtoSQLDataContext(connection_string);
             //var rs = from tbl_dstaikhoan in db.tbl_dstaikhoans
             //         orderby tbl_dstaikhoan.matk, tbl_dstaikhoan.matktren
             //         select tbl_dstaikhoan;
-            var rs = Model.Taikhoanketoan.danhsachtaikhoan();
+            var rs = Model.Taikhoanketoan.danhsachtaikhoan(db);
             grviewlisttk.DataSource = rs;
 
 
 
-
-            //this.grviewlisttk.Columns["matk"].HeaderText = "Mã tài khoản";
-            //this.grviewlisttk.Columns["tentk"].HeaderText = "Tên tài khoản";
-            //this.grviewlisttk.Columns["loaitkid"].HeaderText = "Loại tài khoản";
-            //this.grviewlisttk.Columns["matktren"].HeaderText = "Mã tài khoản cấp trên";
-            //this.grviewlisttk.Columns["captk"].HeaderText = "Cấp tài khoản";
-            //this.grviewlisttk.Columns["loaichitiet"].HeaderText = "Theo dõi chi tiết";
         
     }
 
@@ -49,75 +42,7 @@ namespace BEEACCOUNT.View
 
         }
 
-        //private void button1_Click(object sender, EventArgs e)
-        //{
-        //    customerinput_ctrl md = new customerinput_ctrl();
-          
-        //    string connection_string = Utils.getConnectionstr();
-
-        //    LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
-
-        //  var typeffmain = typeof(tbl_PosCustomer);
-        //  var typeffsub = typeof(tbl_PosCustomer);
-
-        //    DialogResult kq1 = MessageBox.Show("Xóa toàn bộ tbl_PosCustomer ? ", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-        // //   bool kq;
-        //    switch (kq1)
-        //    {
-
-        //        case DialogResult.None:
-        //            break;
-        //        case DialogResult.Yes:
-
-        //            //  this.uploadCustomerToolStripMenuItem.Enabled = false;
-
-        //            DialogResult kq2 = MessageBox.Show("YEs là xóa dữ liệu customer, bạn định xóa ? ", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-        //            if (kq2 == DialogResult.Yes)
-        //            {
-        //                md.customerinput();
-
-        //                VInputchange inputcdata1 = new VInputchange("", "LIST MASTER DATA CUSTOMER ", dc, "tbl_PosCustomer", "tbl_PosCustomer", typeffmain, typeffsub, "id", "id", "");
-        //                inputcdata1.Show();
-        //            }
-        //            else
-        //            {
-        //                return;
-        //            }
-
-             
-
-
-
-        //            break;
-        //        case DialogResult.Cancel:
-        //            break;
-        //        case DialogResult.Abort:
-        //            break;
-        //        case DialogResult.Retry:
-        //            break;
-        //        case DialogResult.Ignore:
-        //            break;
-        //        case DialogResult.OK:
-        //            break;
-        //        case DialogResult.No:
-
-        //        //    var typeffmain = typeof(tbl_PosCustomer);
-        //     //       var typeffsub = typeof(tbl_PosCustomer);
-
-        //            VInputchange inputcdata = new VInputchange("", "LIST MASTER DATA CUSTOMER ", dc, "tbl_PosCustomer", "tbl_PosCustomer", typeffmain, typeffsub, "id", "id", "");
-        //            inputcdata.Show();
-
-
-
-        //            break;
-        //        default:
-        //            break;
-        //    }
-
-
-
-        //}
-
+   
         private void button6_Click(object sender, EventArgs e)
         {
             //Product prd = new Product();
@@ -905,10 +830,12 @@ namespace BEEACCOUNT.View
         private void button1_Click(object sender, EventArgs e)
         {
 
+            string connection_string = Utils.getConnectionstr();
 
+            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
             Model.Taikhoanketoan.themmoitaikhoan();
 
-            var rs = Model.Taikhoanketoan.danhsachtaikhoan();
+            var rs = Model.Taikhoanketoan.danhsachtaikhoan(dc);
 
                 grviewlisttk.DataSource = rs;
 
@@ -956,7 +883,7 @@ namespace BEEACCOUNT.View
                 createacc.ShowDialog();
 
 
-                var rs3 = Model.Taikhoanketoan.danhsachtaikhoan();
+                var rs3 = Model.Taikhoanketoan.danhsachtaikhoan(dc);
 
                 grviewlisttk.DataSource = rs3;
 
@@ -993,8 +920,10 @@ namespace BEEACCOUNT.View
         private void button4_Click_2(object sender, EventArgs e)
         {
 
+            string connection_string = Utils.getConnectionstr();
 
-            var rs3 = Model.Taikhoanketoan.danhsachtaikhoan();
+            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+            var rs3 = Model.Taikhoanketoan.danhsachtaikhoan(dc);
 
             grviewlisttk.DataSource = rs3;
 
@@ -1038,13 +967,14 @@ namespace BEEACCOUNT.View
             {
 
                 string taikhoan = rs.matk;
-                View.BeeCreatenewaccount createacc = new BeeCreatenewaccount(4, taikhoan); // int = 1 xóa; int = 2 sửa ; int = 3 tao mới; int = 4 vừa sửa+ xóa
 
-                createacc.ShowDialog();
+                ////View.BeeCreatenewaccount createacc = new BeeCreatenewaccount(4, taikhoan); // int = 1 xóa; int = 2 sửa ; int = 3 tao mới; int = 4 vừa sửa+ xóa
 
+                ////createacc.ShowDialog();
 
+                Model.Taikhoanketoan.suataikhoan(taikhoan);
 
-                var rs3 = Model.Taikhoanketoan.danhsachtaikhoan();
+                var rs3 = Model.Taikhoanketoan.danhsachtaikhoan(dc);
 
                 grviewlisttk.DataSource = rs3;
 

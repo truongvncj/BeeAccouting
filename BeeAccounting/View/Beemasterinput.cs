@@ -831,7 +831,7 @@ namespace BEEACCOUNT.View
 
             //          };
 
-            var rs = Model.Taikhoanketoan.danhsachtaikhoan();
+            var rs = Model.Taikhoanketoan.danhsachtaikhoan(dc);
             Viewtable viewtbl = new Viewtable(rs, dc, "DANH SÁCH TÀI KHOẢN KẾ TOÁN", 0);// view code 0 la danh sach tai khoan ke toan
 
             viewtbl.Show();

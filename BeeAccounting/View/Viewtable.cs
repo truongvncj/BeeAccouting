@@ -258,21 +258,21 @@ namespace BEEACCOUNT.View
             this.rs = rs;
             this.lb_seach.Text = "F3 TÌM KIẾM";
             //      this.bt_sendinggroup.Visible = false;
-       //     this.lb_seach.Visible = false;
+            //     this.lb_seach.Visible = false;
             this.Pl_endview.Visible = false;
-         //   gboxUnpaid.Visible = false; // an nhom field upaid
+            //   gboxUnpaid.Visible = false; // an nhom field upaid
 
             this.formlabel.Text = fornname;
 
-       //     bt_addtomaster.Visible = false;
-       //     this.bt_addtomaster.Visible = false;
+            //     bt_addtomaster.Visible = false;
+            //     this.bt_addtomaster.Visible = false;
 
             this.lb_totalrecord.Text = dataGridView1.RowCount.ToString("#,#", CultureInfo.InvariantCulture);// ;//String.Format("{0:0,0}", k33q); 
                                                                                                             //  this.lb_totalrecord.ForeColor = Color.Chocolate;
                                                                                                             //   this.Show();
             this.KeyPreview = true;
 
-       
+
 
 
 
@@ -299,7 +299,7 @@ namespace BEEACCOUNT.View
             Control_ac ctrex = new Control_ac();
 
 
-             ctrex.exportexceldatagridtofile(this.rs, this.db, this.Text);
+            ctrex.exportexceldatagridtofile(this.rs, this.db, this.Text);
 
 
 
@@ -313,11 +313,11 @@ namespace BEEACCOUNT.View
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (this.viewcode ==0)  // viewcode ==0  la danh sách tài k khoản kê toán
+            if (this.viewcode == 0)  // viewcode ==0  la danh sách tài k khoản kê toán
             {
 
                 Model.Taikhoanketoan.themmoitaikhoan();
-                var rs = Model.Taikhoanketoan.danhsachtaikhoan();
+                var rs = Model.Taikhoanketoan.danhsachtaikhoan(this.db);
 
                 dataGridView1.DataSource = rs;
 
@@ -331,10 +331,71 @@ namespace BEEACCOUNT.View
 
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+            #region  viewcode = 0 là danh mục tài khoản kế toán
+
+
+            if (this.viewcode == 0)  // viewcode ==0  la danh sách tài k khoản kê toán
+            {
+
+                int idtk = 0;
+                try
+                {
+                    idtk = (int)this.dataGridView1.Rows[this.dataGridView1.CurrentCell.RowIndex].Cells["ID"].Value;
+                }
+                catch (Exception)
+                {
+
+                    MessageBox.Show("Bạn chọn một tài khoản bên bảng danh sách tài khoản!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                string connection_string = Utils.getConnectionstr();
+
+                LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+
+                var rs = (from tbl_dstaikhoan in dc.tbl_dstaikhoans
+                          where tbl_dstaikhoan.id == idtk
+                          select tbl_dstaikhoan).FirstOrDefault();
+                if (rs == null)
+                {
+                    MessageBox.Show("Bạn chọn một tài khoản khác bên bảng danh sách tài khoản!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+
+                if (rs != null)
+                {
+
+                    string taikhoan = rs.matk;
+
+                    ////View.BeeCreatenewaccount createacc = new BeeCreatenewaccount(4, taikhoan); // int = 1 xóa; int = 2 sửa ; int = 3 tao mới; int = 4 vừa sửa+ xóa
+
+                    ////createacc.ShowDialog();
+
+                    Model.Taikhoanketoan.suataikhoan(taikhoan);
+
+                    var rs3 = Model.Taikhoanketoan.danhsachtaikhoan(dc);
+
+                    dataGridView1.DataSource = rs3;
+
+                }
+            }
+
+
+
+
+            #endregion viewcode = 0 dnah muc tai khoan ke toan
+
+            //     }
+
+        }
     }
 
 
-    
 
-   
 }

@@ -33,7 +33,6 @@ namespace BEEACCOUNT.View
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Viewtable));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.bt_exporttoex = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -82,7 +81,6 @@ namespace BEEACCOUNT.View
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.bt_exporttoex);
             this.panel2.Controls.Add(this.button1);
@@ -90,17 +88,6 @@ namespace BEEACCOUNT.View
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1332, 28);
             this.panel2.TabIndex = 45;
-            // 
-            // button3
-            // 
-            this.button3.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.button3.Location = new System.Drawing.Point(188, 2);
-            this.button3.Name = "button3";
-            this.button3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.button3.Size = new System.Drawing.Size(87, 23);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "Xóa";
-            this.button3.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
@@ -112,6 +99,7 @@ namespace BEEACCOUNT.View
             this.button2.TabIndex = 5;
             this.button2.Text = "Sửa";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // bt_exporttoex
             // 
@@ -384,7 +372,6 @@ namespace BEEACCOUNT.View
         private System.Windows.Forms.Label lb_seach;
         private System.Windows.Forms.Label formlabel;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
     }

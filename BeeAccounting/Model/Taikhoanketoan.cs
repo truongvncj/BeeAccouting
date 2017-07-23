@@ -10,16 +10,17 @@ namespace BEEACCOUNT.Model
     {
         public IQueryable Danhsach { get; set; }
         
-        public static IQueryable danhsachtaikhoan()
+        public static IQueryable danhsachtaikhoan(LinqtoSQLDataContext dc)
         {
 
 
 
 
-            string connection_string = Utils.getConnectionstr();
+            //// string connection_string = Utils.getConnectionstr();
 
-            LinqtoSQLDataContext db = new LinqtoSQLDataContext(connection_string);
-            var rs = from tbl_dstaikhoan in db.tbl_dstaikhoans
+            //   LinqtoSQLDataContext db = new LinqtoSQLDataContext(connection_string);
+            LinqtoSQLDataContext db = dc;
+              var rs = from tbl_dstaikhoan in db.tbl_dstaikhoans
                      orderby tbl_dstaikhoan.matk, tbl_dstaikhoan.matktren
                      select new {
 
@@ -93,6 +94,18 @@ namespace BEEACCOUNT.Model
             }
 
 
+
+
+        }
+
+        public static void suataikhoan(string matk)
+        {
+
+          //  string taikhoan = rs.matk;
+
+            View.BeeCreatenewaccount createacc = new BeeCreatenewaccount(4, matk); // int = 1 xóa; int = 2 sửa ; int = 3 tao mới; int = 4 vừa sửa+ xóa
+
+            createacc.ShowDialog();
 
 
         }
