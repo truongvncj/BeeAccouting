@@ -324,6 +324,17 @@ namespace BEEACCOUNT.View
 
 
             }
+            if (this.viewcode == 1)  // viewcode ==1  lA DANH SACH  loại tai khoan ke toan
+            {
+
+                Model.loaitaikhoanketoan.themmoiloaitaikhoan();
+                var rs = Model.loaitaikhoanketoan.danhsachloaitaikhoan(this.db);
+
+                dataGridView1.DataSource = rs;
+
+
+
+            }
 
 
 
@@ -335,7 +346,7 @@ namespace BEEACCOUNT.View
         private void button2_Click(object sender, EventArgs e)
         {
 
-            #region  viewcode = 0 là danh mục tài khoản kế toán
+            #region  viewcode = 0 à  tài khoản kế toán
 
 
             if (this.viewcode == 0)  // viewcode ==0  la danh sách tài k khoản kê toán
@@ -389,9 +400,67 @@ namespace BEEACCOUNT.View
 
 
 
-            #endregion viewcode = 0 dnah muc tai khoan ke toan
+            #endregion viewcode = 1 dnah muc tai khoan ke toan
 
-            //     }
+
+            #region loai tai khoan ke toan voi viewcode ==0
+            if (this.viewcode == 1)
+            {
+
+                int idtk = 0;
+                try
+                {
+                    idtk = (int)this.dataGridView1.Rows[this.dataGridView1.CurrentCell.RowIndex].Cells["ID"].Value;
+                }
+                catch (Exception)
+                {
+
+                    MessageBox.Show("Bạn chọn một tài khoản bên bảng danh sách loại tài khoản!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                string connection_string = Utils.getConnectionstr();
+
+                LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+
+                var rs = (from tbloaitk in dc.tbl_loaitks
+                          where tbloaitk.id == idtk
+                          select tbloaitk).FirstOrDefault();
+                if (rs == null)
+                {
+                    MessageBox.Show("Bạn chọn một tài khoản khác bên bảng danh sách loại tài khoản!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+
+                if (rs != null)
+                {
+
+                    int id = (int)rs.id;
+
+                    ////View.BeeCreatenewaccount createacc = new BeeCreatenewaccount(4, taikhoan); // int = 1 xóa; int = 2 sửa ; int = 3 tao mới; int = 4 vừa sửa+ xóa
+
+                    ////createacc.ShowDialog();
+
+                    Model.loaitaikhoanketoan.sualoaitaikhoanketoan(id);
+
+                    var rs3 = Model.loaitaikhoanketoan.danhsachloaitaikhoan(dc);
+
+                    dataGridView1.DataSource = rs3;
+
+
+
+
+
+                }
+
+                #endregion loai tai khoan ke toan
+
+
+
+
+            }
 
         }
     }

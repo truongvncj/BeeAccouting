@@ -2445,7 +2445,7 @@ namespace BEEACCOUNT.Control
             // Copy the column names to the first row of the object array
             for (int col = 0; col < dt.Columns.Count; col++)
             {
-                rawData[0, col] = dt.Columns[col].ColumnName;
+                rawData[0, col] = dt.Columns[col].ColumnName.Replace("_"," ");
             }
 
             // Copy the values to the object array

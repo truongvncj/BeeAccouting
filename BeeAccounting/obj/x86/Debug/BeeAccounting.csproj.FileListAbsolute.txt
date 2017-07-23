@@ -92,6 +92,6 @@ D:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BeeAccounting.csproj.Generat
 D:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\RdlCompile.cache
 D:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\RdlCompile.compiled
 D:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.BeePhieuThu.resources
-D:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.BeeLisstDoc.resources
 D:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.beeselectinput.resources
 D:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.Beemosochitiettaikhoan.resources
+D:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.Beeloaitaikhoan.resources

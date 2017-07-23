@@ -773,16 +773,20 @@ namespace BEEACCOUNT.View
             string connection_string = Utils.getConnectionstr();
 
             LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
-            var rs1 = from loaitks in dc.tbl_loaitks
-                      select new
-                      {
-                      Mã_loại_tài_khoản =    loaitks.idloaitk,
-                      Tên_mã_loại_tài_khoản =    loaitks.name,
-                      ID = loaitks.id
-                      };
-               Viewtable viewtbl = new Viewtable(rs1, dc, "DANH SÁCH LOẠI TÀI KHOẢN", 0);// view code 0 la danh sach tai koan ke toan la can viet them lenh
+            //var rs1 = from loaitks in dc.tbl_loaitks
+            //          select new
+            //          {
+            //          Mã_loại_tài_khoản =    loaitks.idloaitk,
+            //          Tên_mã_loại_tài_khoản =    loaitks.name,
+            //          ID = loaitks.id
+            //          };
 
-               viewtbl.Show();
+            var rs1 =  Model.loaitaikhoanketoan.danhsachloaitaikhoan(dc);
+            Viewtable viewtbl = new Viewtable(rs1, dc, "DANH SÁCH LOẠI TÀI KHOẢN", 1);// danh sach loại tài khoản kế toán
+
+            viewtbl.Show();
+
+
         }
 
         private void button11_Click(object sender, EventArgs e)
@@ -937,9 +941,9 @@ namespace BEEACCOUNT.View
                           Mã_tài_khoản = dschitiet.matkchitiet,
                           Tên_tài_khoản = dschitiet.tenchitiet,
                           Mã_chi_tiết = dschitiet.machitiet,
-                        ID = dschitiet.id
+                          ID = dschitiet.id
                       };
-            Viewtable viewtbl = new Viewtable(rs1, dc, "DANH SÁCH MÃ CHI TIẾT TÀI KHOẢN", 1);// view code 1 la danh sách mã tài khoản
+            Viewtable viewtbl = new Viewtable(rs1, dc, "DANH SÁCH MÃ CHI TIẾT TÀI KHOẢN", 2);// view code 2 mo so chi tiet tai khoan
 
             viewtbl.Show();
         }

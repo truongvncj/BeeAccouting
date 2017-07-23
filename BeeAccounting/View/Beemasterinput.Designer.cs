@@ -76,9 +76,10 @@
             // 
             // btbeginmaster
             // 
-            this.btbeginmaster.Location = new System.Drawing.Point(10, 13);
+            this.btbeginmaster.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btbeginmaster.Location = new System.Drawing.Point(15, 13);
             this.btbeginmaster.Name = "btbeginmaster";
-            this.btbeginmaster.Size = new System.Drawing.Size(164, 25);
+            this.btbeginmaster.Size = new System.Drawing.Size(159, 25);
             this.btbeginmaster.TabIndex = 3;
             this.btbeginmaster.Text = "Edit Begin Mater";
             this.btbeginmaster.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -220,9 +221,10 @@
             // 
             // btbegindetail
             // 
-            this.btbegindetail.Location = new System.Drawing.Point(10, 44);
+            this.btbegindetail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btbegindetail.Location = new System.Drawing.Point(15, 44);
             this.btbegindetail.Name = "btbegindetail";
-            this.btbegindetail.Size = new System.Drawing.Size(164, 25);
+            this.btbegindetail.Size = new System.Drawing.Size(159, 25);
             this.btbegindetail.TabIndex = 21;
             this.btbegindetail.Text = "Edit Contract Detail ";
             this.btbegindetail.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -231,9 +233,10 @@
             // 
             // btbeginupdatefil
             // 
-            this.btbeginupdatefil.Location = new System.Drawing.Point(10, 114);
+            this.btbeginupdatefil.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btbeginupdatefil.Location = new System.Drawing.Point(15, 114);
             this.btbeginupdatefil.Name = "btbeginupdatefil";
-            this.btbeginupdatefil.Size = new System.Drawing.Size(164, 25);
+            this.btbeginupdatefil.Size = new System.Drawing.Size(159, 25);
             this.btbeginupdatefil.TabIndex = 22;
             this.btbeginupdatefil.Text = "Update Contract  inf";
             this.btbeginupdatefil.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -243,9 +246,10 @@
             // btconvertbegin
             // 
             this.btconvertbegin.Enabled = false;
-            this.btconvertbegin.Location = new System.Drawing.Point(10, 75);
+            this.btconvertbegin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btconvertbegin.Location = new System.Drawing.Point(15, 75);
             this.btconvertbegin.Name = "btconvertbegin";
-            this.btconvertbegin.Size = new System.Drawing.Size(164, 25);
+            this.btconvertbegin.Size = new System.Drawing.Size(159, 25);
             this.btconvertbegin.TabIndex = 23;
             this.btconvertbegin.Text = "Convert  Begin Contract ";
             this.btconvertbegin.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -283,9 +287,10 @@
             // 
             // button17
             // 
-            this.button17.Location = new System.Drawing.Point(10, 246);
+            this.button17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button17.Location = new System.Drawing.Point(15, 246);
             this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(164, 23);
+            this.button17.Size = new System.Drawing.Size(159, 23);
             this.button17.TabIndex = 29;
             this.button17.Text = "Authourise View Contract Type ";
             this.button17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -294,9 +299,10 @@
             // 
             // button16
             // 
-            this.button16.Location = new System.Drawing.Point(10, 216);
+            this.button16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button16.Location = new System.Drawing.Point(15, 216);
             this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(164, 23);
+            this.button16.Size = new System.Drawing.Size(159, 23);
             this.button16.TabIndex = 28;
             this.button16.Text = "Authourise View Region ";
             this.button16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -305,9 +311,10 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(10, 177);
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Location = new System.Drawing.Point(15, 177);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(164, 23);
+            this.button4.Size = new System.Drawing.Size(159, 23);
             this.button4.TabIndex = 27;
             this.button4.Text = "List all contract detail";
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -316,9 +323,10 @@
             // 
             // button11
             // 
-            this.button11.Location = new System.Drawing.Point(10, 146);
+            this.button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button11.Location = new System.Drawing.Point(15, 146);
             this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(164, 23);
+            this.button11.Size = new System.Drawing.Size(159, 23);
             this.button11.TabIndex = 26;
             this.button11.Text = "List all contract master ";
             this.button11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -328,9 +336,10 @@
             // button8
             // 
             this.button8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button8.Location = new System.Drawing.Point(476, 141);
+            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.Location = new System.Drawing.Point(481, 141);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(201, 23);
+            this.button8.Size = new System.Drawing.Size(196, 23);
             this.button8.TabIndex = 24;
             this.button8.Text = "Danh sách tài khoản kế toán";
             this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -340,9 +349,10 @@
             // button3
             // 
             this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.Location = new System.Drawing.Point(476, 106);
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(481, 106);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(201, 23);
+            this.button3.Size = new System.Drawing.Size(196, 23);
             this.button3.TabIndex = 26;
             this.button3.Text = "Danh sách loại tài khoản kế toán";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -402,9 +412,10 @@
             // button7
             // 
             this.button7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button7.Location = new System.Drawing.Point(477, 170);
+            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.Location = new System.Drawing.Point(482, 170);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(200, 25);
+            this.button7.Size = new System.Drawing.Size(195, 25);
             this.button7.TabIndex = 61;
             this.button7.Text = "Mở sổ chi tiết tài khoản";
             this.button7.UseVisualStyleBackColor = true;

@@ -143,268 +143,268 @@ namespace BEEACCOUNT
         }
         //-- get string dâttaable
         // Create a new DataTable for every Worksheet
-        public static DataTable GetDataFromExcel2(string filePath)
-        {
-            DataTable table = new DataTable();
-            table.Columns.Add("PriceList", typeof(string));
-            table.Columns.Add("Material", typeof(string));
-            table.Columns.Add("MaterialNAme", typeof(string));
-            table.Columns.Add("Amount", typeof(double));
+        //public static DataTable GetDataFromExcel2(string filePath)
+        //{
+        //    DataTable table = new DataTable();
+        //    table.Columns.Add("PriceList", typeof(string));
+        //    table.Columns.Add("Material", typeof(string));
+        //    table.Columns.Add("MaterialNAme", typeof(string));
+        //    table.Columns.Add("Amount", typeof(double));
 
-            table.Columns.Add("Unit", typeof(string));
-            table.Columns.Add("UoM", typeof(string));
+        //    table.Columns.Add("Unit", typeof(string));
+        //    table.Columns.Add("UoM", typeof(string));
 
-            table.Columns.Add("Valid_From", typeof(DateTime));
-            table.Columns.Add("Valid_to", typeof(DateTime));
+        //    table.Columns.Add("Valid_From", typeof(DateTime));
+        //    table.Columns.Add("Valid_to", typeof(DateTime));
          
          
          
             
-            //... add as many columns as your excel file has!!
+        //    //... add as many columns as your excel file has!!
 
-            string connString = SetConnectionString(filePath);
-            cExcel.Worksheet worksheet = GetworksheetObject(filePath);
+        //    string connString = SetConnectionString(filePath);
+        //    cExcel.Worksheet worksheet = GetworksheetObject(filePath);
 
-            string  Pricelist = "";
-            int columpricelist = 0;
-            int columpmaterial = 0;
-            int columname = 0;
-            int columpamount = 0;
-            int columunit = 0;
-            int columUoM = 0;
-            int columValid_From = 0;
-            int columValid_to = 0;
-            int headindex =0;
-            for (int rowid = 0; rowid < worksheet.Rows.Count; rowid++)
-            {
-                headindex = 1;
-                for (int columid = 0; columid <= 30; columid++)
-                  {
+        //    string  Pricelist = "";
+        //    int columpricelist = 0;
+        //    int columpmaterial = 0;
+        //    int columname = 0;
+        //    int columpamount = 0;
+        //    int columunit = 0;
+        //    int columUoM = 0;
+        //    int columValid_From = 0;
+        //    int columValid_to = 0;
+        //    int headindex =0;
+        //    for (int rowid = 0; rowid < worksheet.Rows.Count; rowid++)
+        //    {
+        //        headindex = 1;
+        //        for (int columid = 0; columid <= 30; columid++)
+        //          {
                
-                    string value = Utils.GetValueOfCellInExcel(worksheet, rowid, columid);
+        //            string value = Utils.GetValueOfCellInExcel(worksheet, rowid, columid);
 
-                    if (value != null)
-                    {
+        //            if (value != null)
+        //            {
 
-                        #region setcolum
-                        if (value.Trim() == "CnTy")
-                        {
-                            columpricelist = columid;
-                            headindex = 0;
-                        }
+        //                #region setcolum
+        //                if (value.Trim() == "CnTy")
+        //                {
+        //                    columpricelist = columid;
+        //                    headindex = 0;
+        //                }
 
-                        if (value.Trim() == "Material")
-                        {
-                            if (columname ==0)
-                            {
-                                columpmaterial = columid;
-                                headindex = 0;
-                            }
+        //                if (value.Trim() == "Material")
+        //                {
+        //                    if (columname ==0)
+        //                    {
+        //                        columpmaterial = columid;
+        //                        headindex = 0;
+        //                    }
                       
-                        }
+        //                }
 
 
-                        if (value.Trim() == "Material")
-                        {
-                            if (columpmaterial != 0)
-                            {
-                                columname = columid;
-                                headindex = 0;
-                            }
+        //                if (value.Trim() == "Material")
+        //                {
+        //                    if (columpmaterial != 0)
+        //                    {
+        //                        columname = columid;
+        //                        headindex = 0;
+        //                    }
 
                          
-                        }
+        //                }
 
 
-                        if (value.Trim() == "Amount")
-                        {
-                            columpamount = columid;
-                            headindex = 0;
-                        }
-                        if (value.Trim() == "Unit")
-                        {
-                            columunit = columid;
-                            headindex = 0;
-                        }
+        //                if (value.Trim() == "Amount")
+        //                {
+        //                    columpamount = columid;
+        //                    headindex = 0;
+        //                }
+        //                if (value.Trim() == "Unit")
+        //                {
+        //                    columunit = columid;
+        //                    headindex = 0;
+        //                }
 
-                        if (value.Trim() == "UoM")
-                        {
-                            columUoM = columid;
-                            headindex = 0;
-                        }
+        //                if (value.Trim() == "UoM")
+        //                {
+        //                    columUoM = columid;
+        //                    headindex = 0;
+        //                }
 
-                        if (value.Trim() == "Valid From")
-                        {
-                            columValid_From = columid;
-                            headindex = 0;
-                        }
+        //                if (value.Trim() == "Valid From")
+        //                {
+        //                    columValid_From = columid;
+        //                    headindex = 0;
+        //                }
 
-                        if (value.Trim() == "Valid to")
-                        {
-                            columValid_to = columid;
-                            headindex = 0;
-                        }
+        //                if (value.Trim() == "Valid to")
+        //                {
+        //                    columValid_to = columid;
+        //                    headindex = 0;
+        //                }
 
-                        #endregion
+        //                #endregion
 
-                        #region setvalue of pricelist
-                         string     valuepricelist =     Utils.GetValueOfCellInExcel(worksheet, rowid, columpricelist);
-                        if (headindex!=0 && valuepricelist != "" && valuepricelist != "YPR0")
-                        {
-                            Pricelist = value;
+        //                #region setvalue of pricelist
+        //                 string     valuepricelist =     Utils.GetValueOfCellInExcel(worksheet, rowid, columpricelist);
+        //                if (headindex!=0 && valuepricelist != "" && valuepricelist != "YPR0")
+        //                {
+        //                    Pricelist = value;
 
 
-                        }
+        //                }
 
-                        if (headindex != 0 && value != "" && valuepricelist == "YPR0")
-                        {
-                            DataRow dr = table.NewRow();
-                            dr["PriceList"] = Pricelist;
-                            dr["Material"] = Utils.GetValueOfCellInExcel(worksheet, rowid, columpmaterial); 
-                            dr["MaterialNAme"] = Utils.GetValueOfCellInExcel(worksheet, rowid, columname); 
-                            dr["Amount"] = Utils.GetValueOfCellInExcel(worksheet, rowid, columpamount);
-                            dr["Unit"] = Utils.GetValueOfCellInExcel(worksheet, rowid, columunit);
-                            dr["UoM"] = Utils.GetValueOfCellInExcel(worksheet, rowid, columUoM);
-                            dr["Valid_From"] = Utils.GetValueOfCellInExcel(worksheet, rowid, columValid_From);
-                            dr["Valid_to"] = Utils.GetValueOfCellInExcel(worksheet, rowid, columValid_to);
+        //                if (headindex != 0 && value != "" && valuepricelist == "YPR0")
+        //                {
+        //                    DataRow dr = table.NewRow();
+        //                    dr["PriceList"] = Pricelist;
+        //                    dr["Material"] = Utils.GetValueOfCellInExcel(worksheet, rowid, columpmaterial); 
+        //                    dr["MaterialNAme"] = Utils.GetValueOfCellInExcel(worksheet, rowid, columname); 
+        //                    dr["Amount"] = Utils.GetValueOfCellInExcel(worksheet, rowid, columpamount);
+        //                    dr["Unit"] = Utils.GetValueOfCellInExcel(worksheet, rowid, columunit);
+        //                    dr["UoM"] = Utils.GetValueOfCellInExcel(worksheet, rowid, columUoM);
+        //                    dr["Valid_From"] = Utils.GetValueOfCellInExcel(worksheet, rowid, columValid_From);
+        //                    dr["Valid_to"] = Utils.GetValueOfCellInExcel(worksheet, rowid, columValid_to);
 
                             
                           
-                            table.Rows.Add(dr);
+        //                    table.Rows.Add(dr);
 
 
 
-                        }
+        //                }
 
 
 
-                        #endregion
+        //                #endregion
 
 
 
 
 
-                    }
+        //            }
 
 
 
-                    // copy vao server
+        //            // copy vao server
 
 
 
-                }
+        //        }
 
-            }
+        //    }
 
         
            
 
 
-            return table;
-        }
+        //    return table;
+        //}
 
 
-        public static DataTable GetDataFromExcel3(string fileName)
-        {
-            //        private DataTable GetExcelTable(string fileName, string sheetName)
-            //  {
-            // sheetName = sheetName.Replace(".", "#");
-            string sConnection = SetConnectionString(fileName);
-             string sSheetName = GetworksheetObject(fileName).Name;
-            //     string strSelect = string.Format("select * from [{0}$]", sheetName);
+     //   public static DataTable GetDataFromExcel3(string fileName)
+     //   {
+     //       //        private DataTable GetExcelTable(string fileName, string sheetName)
+     //       //  {
+     //       // sheetName = sheetName.Replace(".", "#");
+     //       string sConnection = SetConnectionString(fileName);
+     //        string sSheetName = GetworksheetObject(fileName).Name;
+     //       //     string strSelect = string.Format("select * from [{0}$]", sheetName);
 
-            DataTable table = new DataTable();
-            //table.Columns.Add("PriceList", typeof(string));
-            //table.Columns.Add("Material", typeof(string));
-            //table.Columns.Add("MaterialNAme", typeof(string));
-            //table.Columns.Add("Amount", typeof(double));
+     //       DataTable table = new DataTable();
+     //       //table.Columns.Add("PriceList", typeof(string));
+     //       //table.Columns.Add("Material", typeof(string));
+     //       //table.Columns.Add("MaterialNAme", typeof(string));
+     //       //table.Columns.Add("Amount", typeof(double));
 
-            //table.Columns.Add("Unit", typeof(string));
-            //table.Columns.Add("UoM", typeof(string));
+     //       //table.Columns.Add("Unit", typeof(string));
+     //       //table.Columns.Add("UoM", typeof(string));
 
-            //table.Columns.Add("Valid_From", typeof(DateTime));
-            //table.Columns.Add("Valid_to", typeof(DateTime));
+     //       //table.Columns.Add("Valid_From", typeof(DateTime));
+     //       //table.Columns.Add("Valid_to", typeof(DateTime));
 
-            cExcel.Application ExcelObj = new cExcel.Application();
+     //       cExcel.Application ExcelObj = new cExcel.Application();
 
             
-            OleDbCommand oleExcelCommand = default(OleDbCommand);
-            OleDbDataReader oleExcelReader = default(OleDbDataReader);
-            OleDbConnection oleExcelConnection = default(OleDbConnection);
+     //       OleDbCommand oleExcelCommand = default(OleDbCommand);
+     //       OleDbDataReader oleExcelReader = default(OleDbDataReader);
+     //       OleDbConnection oleExcelConnection = default(OleDbConnection);
 
-        //    sConnection = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\\Test.xls;Extended Properties=\"Excel 12.0;HDR=No;IMEX=1\"";
+     //   //    sConnection = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\\Test.xls;Extended Properties=\"Excel 12.0;HDR=No;IMEX=1\"";
 
-            oleExcelConnection = new OleDbConnection(sConnection);
-            oleExcelConnection.Open();
+     //       oleExcelConnection = new OleDbConnection(sConnection);
+     //       oleExcelConnection.Open();
 
-     //       dtTablesList = oleExcelConnection.GetSchema("Tables");
+     ////       dtTablesList = oleExcelConnection.GetSchema("Tables");
 
-            //if (table.Rows.Count > 0)
-            //{
-            //    sSheetName = table.Rows[0]["TABLE_NAME"].ToString();
-            //}
+     //       //if (table.Rows.Count > 0)
+     //       //{
+     //       //    sSheetName = table.Rows[0]["TABLE_NAME"].ToString();
+     //       //}
 
-            table.Clear();
-            table.Dispose();
+     //       table.Clear();
+     //       table.Dispose();
 
 
-            if (!string.IsNullOrEmpty(sSheetName))
-            {
-                oleExcelCommand = oleExcelConnection.CreateCommand();
-                oleExcelCommand.CommandText = "Select * From [" + sSheetName + "]";
-                oleExcelCommand.CommandType = CommandType.Text;
-                oleExcelReader = oleExcelCommand.ExecuteReader();
-            //    nowputRow = 0;
+     //       if (!string.IsNullOrEmpty(sSheetName))
+     //       {
+     //           oleExcelCommand = oleExcelConnection.CreateCommand();
+     //           oleExcelCommand.CommandText = "Select * From [" + sSheetName + "]";
+     //           oleExcelCommand.CommandType = CommandType.Text;
+     //           oleExcelReader = oleExcelCommand.ExecuteReader();
+     //       //    nowputRow = 0;
 
-                while (oleExcelReader.Read())
-                {
+     //           while (oleExcelReader.Read())
+     //           {
 
                   
-                    for (int i = 0; i < oleExcelReader.FieldCount; i++)
-                    {
-                        if (oleExcelReader[i] != DBNull.Value )
-                        {
+     //               for (int i = 0; i < oleExcelReader.FieldCount; i++)
+     //               {
+     //                   if (oleExcelReader[i] != DBNull.Value )
+     //                   {
 
-                 //           dr[i.ToString()] = (oleExcelReader[i]).ToString();
-                        }
-                        else
-                     {
-               //             dr[i.ToString()] = "";
-                        }
+     //            //           dr[i.ToString()] = (oleExcelReader[i]).ToString();
+     //                   }
+     //                   else
+     //                {
+     //          //             dr[i.ToString()] = "";
+     //                   }
                     
-                    }
+     //               }
 
 
-                    DataRow dr = table.NewRow();
-                    //dr["Material"] = Utils.GetValueOfCellInExcel(worksheet, rowid, columpmaterial);
-                    //dr["MaterialNAme"] = Utils.GetValueOfCellInExcel(worksheet, rowid, columname);
-                    //dr["Amount"] = Utils.GetValueOfCellInExcel(worksheet, rowid, columpamount);
-                    //dr["Unit"] = Utils.GetValueOfCellInExcel(worksheet, rowid, columunit);
-                    //dr["UoM"] = Utils.GetValueOfCellInExcel(worksheet, rowid, columUoM);
-                    //dr["Valid_From"] = Utils.GetValueOfCellInExcel(worksheet, rowid, columValid_From);
-                    //dr["Valid_to"] = Utils.GetValueOfCellInExcel(worksheet, rowid, columValid_to);
-
-
-
-                    table.Rows.Add(dr);
+     //               DataRow dr = table.NewRow();
+     //               //dr["Material"] = Utils.GetValueOfCellInExcel(worksheet, rowid, columpmaterial);
+     //               //dr["MaterialNAme"] = Utils.GetValueOfCellInExcel(worksheet, rowid, columname);
+     //               //dr["Amount"] = Utils.GetValueOfCellInExcel(worksheet, rowid, columpamount);
+     //               //dr["Unit"] = Utils.GetValueOfCellInExcel(worksheet, rowid, columunit);
+     //               //dr["UoM"] = Utils.GetValueOfCellInExcel(worksheet, rowid, columUoM);
+     //               //dr["Valid_From"] = Utils.GetValueOfCellInExcel(worksheet, rowid, columValid_From);
+     //               //dr["Valid_to"] = Utils.GetValueOfCellInExcel(worksheet, rowid, columValid_to);
 
 
 
+     //               table.Rows.Add(dr);
 
 
-                }
-                oleExcelReader.Close();
-            }
-            oleExcelConnection.Close();
 
-            ExcelObj.Quit();
 
-            //releaseObject(xlWorkSheet);
-            //releaseObject(xlWorkBook);
-            //releaseObject.(ExcelObj);
 
-            return table;
-        }
+     //           }
+     //           oleExcelReader.Close();
+     //       }
+     //       oleExcelConnection.Close();
+
+     //       ExcelObj.Quit();
+
+     //       //releaseObject(xlWorkSheet);
+     //       //releaseObject(xlWorkBook);
+     //       //releaseObject.(ExcelObj);
+
+     //       return table;
+     //   }
 
 
         // public static DataTable GetDataFromExcel(string filePath)
@@ -440,21 +440,21 @@ namespace BEEACCOUNT
 
 
 
-        //getstring datatable
-        public static string SetConnectionString(string fileName)
-    {
-        string ConnectionStringTemplate;
-        if (fileName.Contains(".xlsx"))
-        {
-            ConnectionStringTemplate = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + fileName + ";" + "Extended Properties=Excel 12.0;";
-        }
-        else
-        {
-            ConnectionStringTemplate = "Provider=Microsoft.Jet.OLEDB.4.0; Data Source= " + fileName + ";" + "Extended Properties=Excel 8.0;";
-        }
+    //    //getstring datatable
+    //    public static string SetConnectionString(string fileName)
+    //{
+    //    //string ConnectionStringTemplate;
+    //    //if (fileName.Contains(".xlsx"))
+    //    //{
+    //    //    ConnectionStringTemplate = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + fileName + ";" + "Extended Properties=Excel 12.0;";
+    //    //}
+    //    //else
+    //    //{
+    //    //    ConnectionStringTemplate = "Provider=Microsoft.Jet.OLEDB.4.0; Data Source= " + fileName + ";" + "Extended Properties=Excel 8.0;";
+    //    //}
 
-        return ConnectionStringTemplate;
-    }
+    //    //return ConnectionStringTemplate;
+    //}
 
   
 
