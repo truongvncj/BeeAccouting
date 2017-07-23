@@ -921,5 +921,23 @@ namespace BEEACCOUNT.View
         {
             this.pictureBox2.Image = global::BEEACCOUNT.Properties.Resources.exit;
         }
+
+        private void button7_Click_2(object sender, EventArgs e)
+        {
+            string connection_string = Utils.getConnectionstr();
+
+            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+            var rs1 = from dschitiet in dc.tbl_machitiettks
+                      select new
+                      {
+                          Mã_tài_khoản = dschitiet.matkchitiet,
+                          Tên_tài_khoản = dschitiet.tenchitiet,
+                          Mã_chi_tiết = dschitiet.machitiet,
+                        ID = dschitiet.id
+                      };
+            Viewtable viewtbl = new Viewtable(rs1, dc, "DANH SÁCH MÃ CHI TIẾT TÀI KHOẢN", 1);// view code 1 la danh sách mã tài khoản
+
+            viewtbl.Show();
+        }
     }
 }

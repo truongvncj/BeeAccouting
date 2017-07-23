@@ -39,7 +39,6 @@ namespace BEEACCOUNT.View
             this.button1 = new System.Windows.Forms.Button();
             this.formlabel = new System.Windows.Forms.Label();
             this.lb_seach = new System.Windows.Forms.Label();
-            this.bt_addtomaster = new System.Windows.Forms.Button();
             this.statussum = new System.Windows.Forms.Label();
             this.lb_totalrecord = new System.Windows.Forms.Label();
             this.Pl_endview = new System.Windows.Forms.Panel();
@@ -69,7 +68,6 @@ namespace BEEACCOUNT.View
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.formlabel);
             this.panel1.Controls.Add(this.lb_seach);
-            this.panel1.Controls.Add(this.bt_addtomaster);
             this.panel1.Controls.Add(this.statussum);
             this.panel1.Controls.Add(this.lb_totalrecord);
             this.panel1.Controls.Add(this.Pl_endview);
@@ -137,16 +135,17 @@ namespace BEEACCOUNT.View
             this.button1.TabIndex = 4;
             this.button1.Text = "Thêm mới";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // formlabel
             // 
             this.formlabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.formlabel.AutoSize = true;
             this.formlabel.BackColor = System.Drawing.Color.Transparent;
-            this.formlabel.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.formlabel.Location = new System.Drawing.Point(495, 5);
+            this.formlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.formlabel.Location = new System.Drawing.Point(495, 4);
             this.formlabel.Name = "formlabel";
-            this.formlabel.Size = new System.Drawing.Size(156, 20);
+            this.formlabel.Size = new System.Drawing.Size(236, 24);
             this.formlabel.TabIndex = 8;
             this.formlabel.Text = "VIEW TABLE REPORTS";
             // 
@@ -163,17 +162,6 @@ namespace BEEACCOUNT.View
             this.lb_seach.TabIndex = 6;
             this.lb_seach.Text = "F3: Seach Code";
             this.lb_seach.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // bt_addtomaster
-            // 
-            this.bt_addtomaster.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.bt_addtomaster.Location = new System.Drawing.Point(1113, 448);
-            this.bt_addtomaster.Name = "bt_addtomaster";
-            this.bt_addtomaster.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.bt_addtomaster.Size = new System.Drawing.Size(108, 19);
-            this.bt_addtomaster.TabIndex = 4;
-            this.bt_addtomaster.Text = "Upload Sales Data";
-            this.bt_addtomaster.UseVisualStyleBackColor = true;
             // 
             // statussum
             // 
@@ -336,6 +324,7 @@ namespace BEEACCOUNT.View
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.dataGridView1.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dataGridView1.Location = new System.Drawing.Point(3, 57);
@@ -389,7 +378,6 @@ namespace BEEACCOUNT.View
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lb_bilingqtt;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button bt_addtomaster;
         private System.Windows.Forms.Label Status;
         private System.Windows.Forms.Label lb_uc;
         private System.Windows.Forms.Label label4;

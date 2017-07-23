@@ -258,14 +258,14 @@ namespace BEEACCOUNT.View
             this.rs = rs;
             this.lb_seach.Text = "F3 TÌM KIẾM";
             //      this.bt_sendinggroup.Visible = false;
-            this.lb_seach.Visible = false;
+       //     this.lb_seach.Visible = false;
             this.Pl_endview.Visible = false;
          //   gboxUnpaid.Visible = false; // an nhom field upaid
 
             this.formlabel.Text = fornname;
 
-            bt_addtomaster.Visible = false;
-            this.bt_addtomaster.Visible = false;
+       //     bt_addtomaster.Visible = false;
+       //     this.bt_addtomaster.Visible = false;
 
             this.lb_totalrecord.Text = dataGridView1.RowCount.ToString("#,#", CultureInfo.InvariantCulture);// ;//String.Format("{0:0,0}", k33q); 
                                                                                                             //  this.lb_totalrecord.ForeColor = Color.Chocolate;
@@ -504,6 +504,28 @@ namespace BEEACCOUNT.View
 
 
              ctrex.exportexceldatagridtofile(this.rs, this.db, this.Text);
+
+
+
+
+        }
+
+        private void bt_addtomaster_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (this.viewcode ==1)  // viewcode ==1 la danh sách mã chi tiết tài khoản
+            {
+
+            
+
+
+            }
+
+
 
 
 

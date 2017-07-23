@@ -136,7 +136,7 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Server Name";
             // 
-            // Serversetup
+            // BeeServersetup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -145,7 +145,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Serversetup";
+            this.Name = "BeeServersetup";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Server Setup";
             this.Deactivate += new System.EventHandler(this.Serversetup_Deactivate);
