@@ -172,7 +172,7 @@
     <Type Name="tbl_machitiettk">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="tenchitiet" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="matkchitiet" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="matk" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="machitiet" Type="System.Int32" DbType="Int" CanBeNull="true" />
     </Type>
   </Table>

@@ -3762,7 +3762,7 @@ namespace BEEACCOUNT
 		
 		private string _tenchitiet;
 		
-		private string _matkchitiet;
+		private string _matk;
 		
 		private System.Nullable<int> _machitiet;
 		
@@ -3774,8 +3774,8 @@ namespace BEEACCOUNT
     partial void OnidChanged();
     partial void OntenchitietChanging(string value);
     partial void OntenchitietChanged();
-    partial void OnmatkchitietChanging(string value);
-    partial void OnmatkchitietChanged();
+    partial void OnmatkChanging(string value);
+    partial void OnmatkChanged();
     partial void OnmachitietChanging(System.Nullable<int> value);
     partial void OnmachitietChanged();
     #endregion
@@ -3825,22 +3825,22 @@ namespace BEEACCOUNT
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_matkchitiet", DbType="NVarChar(50)")]
-		public string matkchitiet
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_matk", DbType="NVarChar(50)")]
+		public string matk
 		{
 			get
 			{
-				return this._matkchitiet;
+				return this._matk;
 			}
 			set
 			{
-				if ((this._matkchitiet != value))
+				if ((this._matk != value))
 				{
-					this.OnmatkchitietChanging(value);
+					this.OnmatkChanging(value);
 					this.SendPropertyChanging();
-					this._matkchitiet = value;
-					this.SendPropertyChanged("matkchitiet");
-					this.OnmatkchitietChanged();
+					this._matk = value;
+					this.SendPropertyChanged("matk");
+					this.OnmatkChanged();
 				}
 			}
 		}

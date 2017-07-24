@@ -336,6 +336,17 @@ namespace BEEACCOUNT.View
 
             }
 
+            if (this.viewcode == 2)  // viewcode ==2  lA DANH SACH  chi tiết tài khoản
+            {
+
+                Model.Danhsachtkchitiet.themmoichitiettaikhoan();
+                var rs = Model.Danhsachtkchitiet.danhsachtaikhoanchitiet(this.db);
+
+                dataGridView1.DataSource = rs;
+
+
+
+            }
 
 
 
