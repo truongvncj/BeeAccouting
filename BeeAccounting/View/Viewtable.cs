@@ -476,27 +476,27 @@ namespace BEEACCOUNT.View
 
                 if (this.viewcode == 2)
                 {
-                    //  int idtk = 0;
+                    int idtk = 0;
                     try
                     {
-                        int id = (int)this.dataGridView1.Rows[this.dataGridView1.CurrentCell.RowIndex].Cells["ID"].Value;
+                    idtk = (int)this.dataGridView1.Rows[this.dataGridView1.CurrentCell.RowIndex].Cells["ID"].Value;
 
-                        Model.Danhsachtkchitiet.suachitiettaikhoan(id);
-                        var rs1 = Model.Danhsachtkchitiet.danhsachtaikhoanchitiet(this.db);
-
-                        dataGridView1.DataSource = rs1;
-                    //    MessageBox.Show(id.ToString(),"Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                   
 
                     }
                     catch (Exception)
                     {
 
-                        MessageBox.Show("Bạn phải chọn một tài khoản  !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Bạn phải chọn một tài khoản 11 !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
                     }
 
+                Model.Danhsachtkchitiet.suachitiettaikhoan(idtk);
+                var rs1 = Model.Danhsachtkchitiet.danhsachtaikhoanchitiet(this.db);
 
-                }
+                dataGridView1.DataSource = rs1;
+               // MessageBox.Show(id.ToString(), "Thông báo 111", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
 
                 #endregion

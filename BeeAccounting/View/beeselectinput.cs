@@ -14,7 +14,7 @@ namespace BEEACCOUNT.View
 
         public string valuetext ;
         public bool kq;
-        public string field;
+        public string value;
         public class ComboboxItem
         {
             public string Text { get; set; }
@@ -65,15 +65,17 @@ namespace BEEACCOUNT.View
 
             if (cbselect != null && cbselect.SelectedValue != null)  // update prograne -- cai nay 
             {
-                this.valuetext = (cbselect.SelectedItem as ComboboxItem).Value.ToString();
-                this.field = this.label1.Text;
+                this.value = (cbselect.SelectedItem as ComboboxItem).Value.ToString();
+                this.valuetext = (cbselect.SelectedItem as ComboboxItem).Text.ToString();
                 this.kq = true;
                 this.Hide();
 
             }
             else
             {
-                MessageBox.Show("Please select a value !","Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                this.kq = false;
+              //  MessageBox.Show("Please select a value !","Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
 

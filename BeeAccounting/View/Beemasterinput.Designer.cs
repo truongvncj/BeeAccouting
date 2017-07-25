@@ -279,7 +279,7 @@
             this.begin.Controls.Add(this.btbeginmaster);
             this.begin.Controls.Add(this.btconvertbegin);
             this.begin.Controls.Add(this.btbeginupdatefil);
-            this.begin.Location = new System.Drawing.Point(503, 201);
+            this.begin.Location = new System.Drawing.Point(503, 230);
             this.begin.Name = "begin";
             this.begin.Size = new System.Drawing.Size(179, 292);
             this.begin.TabIndex = 25;
@@ -337,9 +337,9 @@
             // 
             this.button8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(481, 141);
+            this.button8.Location = new System.Drawing.Point(481, 156);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(196, 23);
+            this.button8.Size = new System.Drawing.Size(196, 28);
             this.button8.TabIndex = 24;
             this.button8.Text = "Danh sách tài khoản kế toán";
             this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -350,9 +350,9 @@
             // 
             this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(481, 106);
+            this.button3.Location = new System.Drawing.Point(481, 122);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(196, 23);
+            this.button3.Size = new System.Drawing.Size(196, 28);
             this.button3.TabIndex = 26;
             this.button3.Text = "Danh sách loại tài khoản kế toán";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -413,9 +413,9 @@
             // 
             this.button7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(482, 170);
+            this.button7.Location = new System.Drawing.Point(482, 190);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(195, 25);
+            this.button7.Size = new System.Drawing.Size(195, 27);
             this.button7.TabIndex = 61;
             this.button7.Text = "Mở sổ chi tiết tài khoản";
             this.button7.UseVisualStyleBackColor = true;

@@ -46,7 +46,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(204, 33);
+            this.button1.Location = new System.Drawing.Point(437, 33);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(82, 23);
             this.button1.TabIndex = 2;
@@ -67,14 +67,14 @@
             this.cbselect.FormattingEnabled = true;
             this.cbselect.Location = new System.Drawing.Point(12, 35);
             this.cbselect.Name = "cbselect";
-            this.cbselect.Size = new System.Drawing.Size(173, 21);
+            this.cbselect.Size = new System.Drawing.Size(381, 21);
             this.cbselect.TabIndex = 4;
             // 
             // beeselectinput
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(298, 90);
+            this.ClientSize = new System.Drawing.Size(531, 90);
             this.Controls.Add(this.cbselect);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button1);
