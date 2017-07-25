@@ -18,7 +18,7 @@ namespace BEEACCOUNT.View
         public string matk { get; set; }
 
         public bool chon { get; set; }
-
+        public int id { get; set; }
         public int machitiet { get; set; }
         public string tenchitiet { get; set; }
 
@@ -36,11 +36,11 @@ namespace BEEACCOUNT.View
         }
 
 
-        public Beemosochitiettaikhoan(int manghiepvu, string matk) // manghiepvu = 1 xóa; int = 2 sửa ; int = 3 tao mới; int = 4 vừa sửa+ xóa
+        public Beemosochitiettaikhoan(int manghiepvu, string matk, int id) // manghiepvu = 1 xóa; int = 2 sửa ; int = 3 tao mới; int = 4 vừa sửa+ xóa
         {
             InitializeComponent();
             this.matk = matk;
-
+            this.id = id;
             chon = false;
 
             string connection_string = Utils.getConnectionstr();
@@ -102,6 +102,103 @@ namespace BEEACCOUNT.View
             }
 
 
+            #region ma nghiep vu 1
+
+
+            if (manghiepvu == 1) // tạo mới
+            {
+                this.btupdate.Visible = false;
+                this.btxoa.Visible = false;
+
+
+
+
+
+            }
+
+            #endregion ma nghiep vu 1
+
+
+
+            #region ma nghiep vu 2 sửa xóa
+
+
+
+
+
+            if (manghiepvu == 2) // xóa + xóa
+            {
+
+                this.bt_taomoi.Visible = false;
+
+
+
+                var machitiet = (from tkctiet in dc.tbl_machitiettks
+                                 where tkctiet.id == this.id
+                                 select tkctiet).FirstOrDefault();
+
+
+                if (machitiet != null)
+                {
+                    #region  select lại
+
+                    if (matk != "")  // select mataikhoan
+                    {
+
+
+                        ComboboxItem value = new ComboboxItem();
+                        //  cbtkno.SelectedValue = matk.Trim();
+                        value = null;
+                        foreach (var item in cbtkno.Items)
+                        {
+                            if (machitiet.matk == (item as ComboboxItem).Value.ToString())
+                            {
+                                value = (ComboboxItem)item;
+                            }
+                        }
+
+                        if (value != null)
+                        {
+                            cbtkno.SelectedIndex = cbtkno.Items.IndexOf(value);
+                        }
+
+
+
+
+
+                    }
+
+
+
+
+                    #endregion
+
+
+                    txtmachitiet.Text = machitiet.machitiet.ToString();
+
+                    txttenchitettaikhoan.Text = machitiet.tenchitiet.ToString();
+                    txtghichu.Text = machitiet.ghichu.ToString();
+
+
+
+
+
+                }
+                else
+                {
+                    MessageBox.Show("Bạn phải chọn một chi tiết tài khoản để sửa ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+
+
+
+
+            }
+
+            #endregion ma nghiep vu 2 
+
+
 
             #region load detail detail of code
 
@@ -131,35 +228,6 @@ namespace BEEACCOUNT.View
 
 
             #endregion
-
-
-
-            if (manghiepvu == 1) // tạo mới
-            {
-                this.btupdate.Visible = false;
-                this.btxoa.Visible = false;
-
-
-
-
-
-            }
-            if (manghiepvu == 4) // xóa + xóa
-            {
-
-                //      this.txtcode.Text = matk;
-                //    txtcode.Enabled = false;
-
-
-
-
-
-
-
-
-            }
-
-
 
 
 
@@ -351,6 +419,9 @@ namespace BEEACCOUNT.View
         private void btxoa_Click(object sender, EventArgs e)
         {
 
+
+
+
             string connection_string = Utils.getConnectionstr();
             LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
 
@@ -392,65 +463,11 @@ namespace BEEACCOUNT.View
 
 
 
-            if (matk != "")
-            {
-                chon = true;
-                string connection_string = Utils.getConnectionstr();
-                // string urs = Utils.getusername();
-                //  var db = new LinqtoSQLDataContext(connection_string);
-                LinqtoSQLDataContext db = new LinqtoSQLDataContext(connection_string);
-
-                tbl_dstaikhoan tk = new tbl_dstaikhoan();
+            View.Beemosochitiettaikhoan loaitkform = new View.Beemosochitiettaikhoan(2, "", 0); // 1 la nghiep vu them moi
+            loaitkform.ShowDialog();
 
 
-                //    MeasureItemEventArgs.re
-                var rs = (from tbl_dstaikhoan in db.tbl_dstaikhoans
-                          where tbl_dstaikhoan.matk == matk
-                          //  orderby tbl_dstaikhoan.matk
-                          select tbl_dstaikhoan).FirstOrDefault();
-
-
-                if (rs != null)
-                {
-                    rs.matk = matk;
-
-
-
-
-
-                    db.SubmitChanges();
-                    this.Close();
-                }
-                //tk.matk = matk;
-                //tk.tentk = tentk;
-                //tk.loaitkid = loaitk;
-                //tk.captk = captk;
-                //tk.matktren = tkcaptren;
-
-
-                //db.tbl_dstaikhoans.InsertOnSubmit(tk);
-                //var rs3 = from tbl_dstaikhoan in db.tbl_dstaikhoans
-                //          orderby tbl_dstaikhoan.matk
-
-                //          select tbl_dstaikhoan;
-
-                //grviewlisttk.DataSource = rs3;
-
-                //this.grviewlisttk.Columns["matk"].HeaderText = "Mã tài khoản";
-                //this.grviewlisttk.Columns["tentk"].HeaderText = "Tên tài khoản";
-                //this.grviewlisttk.Columns["loaitkid"].HeaderText = "Loại tài khoản";
-                //this.grviewlisttk.Columns["matktren"].HeaderText = "Mã tài khoản cấp trên";
-
-
-
-                //grviewlisttk.DataSource = rs;
-
-
-            }
-
-
-
-
+            bool chon = loaitkform.chon;
 
 
 
@@ -488,6 +505,7 @@ namespace BEEACCOUNT.View
                          Mã_tài_khoản = dschitiet.matk,
                          Tên_tài_khoản_chi_tiết = dschitiet.tenchitiet,
                          Mã_chi_tiết = dschitiet.machitiet,
+                         Ghi_chú = dschitiet.ghichu,
                          ID = dschitiet.id
                      };
             dataGridView1.DataSource = rs;
@@ -519,16 +537,16 @@ namespace BEEACCOUNT.View
 
 
 
-             
+
                 #region ma chi tiet tai khoa
 
 
 
                 var rs = (from dschitiet in db.tbl_machitiettks
-                          where dschitiet.machitiet == machitiet &&
-                                 dschitiet.matk == (cbtkno.SelectedItem as ComboboxItem).Value.ToString()
+                          where dschitiet.machitiet == int.Parse(txtmachitiet.Text) &&
+                                 dschitiet.matk.Trim() == (cbtkno.SelectedItem as ComboboxItem).Value.ToString().Trim()
                           select dschitiet).FirstOrDefault();
-
+                //   MessageBox.Show(rs.machitiet.ToString());
                 if (rs == null)
                 {
 
@@ -565,7 +583,7 @@ namespace BEEACCOUNT.View
 
                 tkchitiet.tenchitiet = txttenchitettaikhoan.Text;
 
-                 taikhoanchon = txttenchitettaikhoan.Text;
+                taikhoanchon = txttenchitettaikhoan.Text;
             }
             else
             {
@@ -579,10 +597,10 @@ namespace BEEACCOUNT.View
 
 
             #region  ten tai khoan chi tiet
-            if ((cbtkno.SelectedItem as ComboboxItem).Value !=null )
+            if ((cbtkno.SelectedItem as ComboboxItem).Value != null)
             {
                 tkchitiet.matk = (cbtkno.SelectedItem as ComboboxItem).Value.ToString();
-
+                tkchitiet.ghichu = txtghichu.Text;
             }
             else
             {
@@ -602,17 +620,19 @@ namespace BEEACCOUNT.View
             db.SubmitChanges();
 
             txttenchitettaikhoan.Text = "";
-            txtmachitiet.Text ="";
+            txtmachitiet.Text = "";
+            txtghichu.Text = "";
 
             var rs1 = from dschitiet in db.tbl_machitiettks
-                     where dschitiet.matk.Trim() == (cbtkno.SelectedItem as ComboboxItem).Value.ToString()
+                      where dschitiet.matk.Trim() == (cbtkno.SelectedItem as ComboboxItem).Value.ToString()
                       select new
-                     {
-                         Mã_tài_khoản = dschitiet.matk,
-                         Tên_tài_khoản_chi_tiết = dschitiet.tenchitiet,
-                         Mã_chi_tiết = dschitiet.machitiet,
-                         ID = dschitiet.id
-                     };
+                      {
+                          Mã_tài_khoản = dschitiet.matk,
+                          Tên_tài_khoản_chi_tiết = dschitiet.tenchitiet,
+                          Mã_chi_tiết = dschitiet.machitiet,
+                          Ghi_chú = dschitiet.ghichu,
+                          ID = dschitiet.id
+                      };
 
 
 
@@ -629,6 +649,10 @@ namespace BEEACCOUNT.View
 
 
         }
+
+
+
+
     }
 
 

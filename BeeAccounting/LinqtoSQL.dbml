@@ -174,6 +174,7 @@
       <Column Name="tenchitiet" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="matk" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="machitiet" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ghichu" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.tbl_Socai" Member="tbl_Socais">

@@ -202,38 +202,38 @@ namespace BEEACCOUNT.View
         {
             // if (viewcode == 2)// nuew la bàng salsetemp update
 
-            if ((viewcode == 2) && e.KeyCode == Keys.F3)
-            {
+            //if ((viewcode == 2) && e.KeyCode == Keys.F3)
+            //{
 
 
 
 
 
-                FormCollection fc = System.Windows.Forms.Application.OpenForms;
+            //    FormCollection fc = System.Windows.Forms.Application.OpenForms;
 
-                bool kq = false;
-                foreach (Form frm in fc)
-                {
-                    if (frm.Text == "tblsales")
-
-
-                    {
-                        kq = true;
-                        frm.Focus();
-
-                    }
-                }
-
-                if (!kq)
-                {
-                    Seachcode sheaching = new Seachcode(this, "tblsales");
-                    sheaching.Show();
-                }
+            //    bool kq = false;
+            //    foreach (Form frm in fc)
+            //    {
+            //        if (frm.Text == "tblsales")
 
 
+            //        {
+            //            kq = true;
+            //            frm.Focus();
+
+            //        }
+            //    }
+
+            //    if (!kq)
+            //    {
+            //        Seachcode sheaching = new Seachcode(this, "tblsales");
+            //        sheaching.Show();
+            //    }
 
 
-            }
+
+
+            //}
 
 
         }
@@ -465,13 +465,44 @@ namespace BEEACCOUNT.View
 
 
                 }
-
+            }
                 #endregion loai tai khoan ke toan
 
 
 
 
-            }
+                #region vói vidcode == 2  la danh shach chi tiêt stai khoan
+
+
+                if (this.viewcode == 2)
+                {
+                    //  int idtk = 0;
+                    try
+                    {
+                        int id = (int)this.dataGridView1.Rows[this.dataGridView1.CurrentCell.RowIndex].Cells["ID"].Value;
+
+                        Model.Danhsachtkchitiet.suachitiettaikhoan(id);
+                        var rs1 = Model.Danhsachtkchitiet.danhsachtaikhoanchitiet(this.db);
+
+                        dataGridView1.DataSource = rs1;
+                    //    MessageBox.Show(id.ToString(),"Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    }
+                    catch (Exception)
+                    {
+
+                        MessageBox.Show("Bạn phải chọn một tài khoản  !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+
+
+                }
+
+
+                #endregion
+
+
+            
 
         }
     }

@@ -3766,6 +3766,8 @@ namespace BEEACCOUNT
 		
 		private System.Nullable<int> _machitiet;
 		
+		private string _ghichu;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -3778,6 +3780,8 @@ namespace BEEACCOUNT
     partial void OnmatkChanged();
     partial void OnmachitietChanging(System.Nullable<int> value);
     partial void OnmachitietChanged();
+    partial void OnghichuChanging(string value);
+    partial void OnghichuChanged();
     #endregion
 		
 		public tbl_machitiettk()
@@ -3861,6 +3865,26 @@ namespace BEEACCOUNT
 					this._machitiet = value;
 					this.SendPropertyChanged("machitiet");
 					this.OnmachitietChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ghichu", DbType="NVarChar(225)")]
+		public string ghichu
+		{
+			get
+			{
+				return this._ghichu;
+			}
+			set
+			{
+				if ((this._ghichu != value))
+				{
+					this.OnghichuChanging(value);
+					this.SendPropertyChanging();
+					this._ghichu = value;
+					this.SendPropertyChanged("ghichu");
+					this.OnghichuChanged();
 				}
 			}
 		}

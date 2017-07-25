@@ -26,6 +26,7 @@ namespace BEEACCOUNT.Model
                           Mã_tài_khoản = dschitiet.matk,
                           Tên_tài_khoản_chi_tiết = dschitiet.tenchitiet,
                           Mã_chi_tiết = dschitiet.machitiet,
+                          Ghi_chú = dschitiet.ghichu,
                           ID = dschitiet.id
                       };
 
@@ -47,7 +48,7 @@ namespace BEEACCOUNT.Model
           //  View.Beemosochitiettaikhoan loaitkform = new View.Beemosochitiettaikhoan(1, ""); // 1 la nghiep vu them moi
 
 
-            View.Beemosochitiettaikhoan loaitkform = new View.Beemosochitiettaikhoan(1, ""); // 1 la nghiep vu them moi
+            View.Beemosochitiettaikhoan loaitkform = new View.Beemosochitiettaikhoan(1, "",0); // 1 la nghiep vu them moi
             loaitkform.ShowDialog();
 
 
@@ -80,7 +81,45 @@ namespace BEEACCOUNT.Model
 
         }
 
+        //    
+        public static void suachitiettaikhoan(int idchitiet)
+        {
 
+            //  View.Beemosochitiettaikhoan loaitkform = new View.Beemosochitiettaikhoan(1, ""); // 1 la nghiep vu them moi
+
+
+            View.Beemosochitiettaikhoan loaitkform = new View.Beemosochitiettaikhoan(2, "", idchitiet); // 2 la nghiep vu sua
+            loaitkform.ShowDialog();
+
+
+            bool chon = loaitkform.chon;
+            //   string tenloaitk = loaitkform.tenloaitk;
+            //   int maloaitk = loaitkform.maloaitk;
+            //if (chon)
+            //{
+            //    string connection_string = Utils.getConnectionstr();
+            //    LinqtoSQLDataContext db = new LinqtoSQLDataContext(connection_string);
+
+            //    tbl_loaitk tk = new tbl_loaitk();
+
+            //    tk.name = tenloaitk;
+            //    tk.idloaitk = maloaitk;
+
+
+            //    db.tbl_loaitks.InsertOnSubmit(tk);
+            //    db.SubmitChanges();
+
+
+
+
+            //}
+
+
+
+
+
+
+        }
 
     }
 }
