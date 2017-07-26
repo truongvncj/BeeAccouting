@@ -95,3 +95,5 @@ D:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.BeePhieuThu.
 D:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.beeselectinput.resources
 D:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.Beemosochitiettaikhoan.resources
 D:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.Beeloaitaikhoan.resources
+D:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.Beechooseslect.resources
+D:\Product\BeeAccouting\BeeAccounting\bin\x86\Debug\Reports\Phieuthu.rdlc

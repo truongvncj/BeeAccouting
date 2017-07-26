@@ -4,6 +4,10 @@
 
     partial class DataSet1
     {
+        partial class PhieuthuRPTDataTable
+        {
+        }
+
         partial class tbl_KAdetailprogrRptDataTable
         {
 

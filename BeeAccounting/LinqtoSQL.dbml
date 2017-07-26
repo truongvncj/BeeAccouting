@@ -1,5 +1,29 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="BEE" Class="LinqtoSQLDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
   <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-Q6VJ0TS\SQLEXPRESS;Initial Catalog=BEE;Persist Security Info=True;User ID=sa" SettingsObjectName="BEEACCOUNT.Properties.Settings" SettingsPropertyName="BEEConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.tbl_congty" Member="tbl_congties">
+    <Type Name="tbl_congty">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="tengiamdoc" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="diachicoty" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="tencongty" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="Masothue" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="chedoketoanapdung" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="tenketoantruong" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_Temp" Member="tbl_Temps">
+    <Type Name="tbl_Temp">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Version" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RegionCode" Type="System.String" DbType="NChar(225)" CanBeNull="true" />
+      <Column Name="username" Type="System.String" DbType="NChar(225)" CanBeNull="true" />
+      <Column Name="password" Type="System.String" DbType="NChar(225)" CanBeNull="true" />
+      <Column Name="userright" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="note" Type="System.String" DbType="NChar(225)" CanBeNull="true" />
+      <Column Name="inputcontract" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
   <Table Name="dbo.tbl_ctkhachhang" Member="tbl_ctkhachhangs">
     <Type Name="tbl_ctkhachhang">
       <Column Name="Matk" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
@@ -19,35 +43,6 @@
       <Column Name="Sochitiet" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
       <Column Name="Nghiepvuso" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-    </Type>
-  </Table>
-  <Table Name="dbo.tbl_Temp" Member="tbl_Temps">
-    <Type Name="tbl_Temp">
-      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="Version" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="RegionCode" Type="System.String" DbType="NChar(225)" CanBeNull="true" />
-      <Column Name="username" Type="System.String" DbType="NChar(225)" CanBeNull="true" />
-      <Column Name="password" Type="System.String" DbType="NChar(225)" CanBeNull="true" />
-      <Column Name="userright" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="note" Type="System.String" DbType="NChar(225)" CanBeNull="true" />
-      <Column Name="inputcontract" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
-      <Column Name="inputcontractconfirm" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
-      <Column Name="inputcontractfinalcontrol" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
-      <Column Name="paymentdisplay" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
-      <Column Name="paymentcreate" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
-      <Column Name="saleupdate" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
-      <Column Name="saleview" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
-      <Column Name="saledeleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
-      <Column Name="salechange" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
-      <Column Name="reports" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
-      <Column Name="masterdata" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
-      <Column Name="masterbegin" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
-      <Column Name="userssetup" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
-      <Column Name="pricingcheckview" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
-      <Column Name="pricingcheckupdate" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
-      <Column Name="masterdatafuction" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
-      <Column Name="changeitem" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
-      <Column Name="btaddnewItem" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
     </Type>
   </Table>
   <Table Name="dbo.tbl_ctnganhang" Member="tbl_ctnganhangs">

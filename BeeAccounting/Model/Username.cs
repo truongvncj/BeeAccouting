@@ -61,34 +61,7 @@ namespace BEEACCOUNT.Model
 
                 Version = (int)rs.Version;
                 inputcontract = rs.inputcontract;
-                inputcontractconfirm = rs.inputcontractconfirm;
-                paymentdisplay = rs.paymentdisplay;
-                paymentcreate = rs.paymentcreate;
-                saleupdate = rs.saleupdate;
-                saleview = rs.saleview;
-
-                saledeleted = rs.saledeleted;
-                salechange = rs.salechange;
-
-                reports = rs.reports;
-                masterdata = rs.masterdata;
-
-                masterbegin = rs.masterbegin;
-
-                userssetup = rs.userssetup;
-                pricingcheckview = rs.pricingcheckview;
-
-                pricingcheckupdate = rs.pricingcheckupdate;
-                //    inputcontract =
-
-                inputcontractfinalcontrol = rs.inputcontractfinalcontrol;
-
-
-
-                masterdatafuction = rs.masterdatafuction;
-
-                changeitem = rs.changeitem;
-                btaddnewItem = rs.btaddnewItem;
+              
             }
             else
             {

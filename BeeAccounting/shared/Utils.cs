@@ -136,6 +136,29 @@ namespace BEEACCOUNT
             }
           
         }
+        public static string getname()
+        {
+            string username = Utils.getusername();
+            string connection_string = Utils.getConnectionstr();
+            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+            var rs = (from tbl_Temp in dc.tbl_Temps
+                      where tbl_Temp.username == username
+
+                      select tbl_Temp.name).FirstOrDefault();
+            if (rs == null)
+            {
+                return "";
+            }
+            else
+            {
+
+                return rs.ToString();
+            }
+
+        }
+
+
 
 
         public static string getConnectionstr()

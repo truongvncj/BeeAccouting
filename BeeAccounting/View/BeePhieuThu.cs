@@ -11,7 +11,7 @@ namespace BEEACCOUNT.View
 {
     public partial class BeePhieuThu : Form
     {
-
+        public int sophieuthu { get; set; }
         public string tkno { get; set; }
         public int tknochitiet { get; set; }
         public string tkco { get; set; }
@@ -254,8 +254,8 @@ namespace BEEACCOUNT.View
             if (e.KeyChar == (char)Keys.Enter)
             {
                 e.Handled = true;
-                cbtkno.Focus();
-
+                datepickngayphieu.Focus();
+              //  datepickngayphieu
                 //    string valueinput = cb_customerka.Text;
 
                 //    string connection_string = Utils.getConnectionstr();
@@ -303,7 +303,7 @@ namespace BEEACCOUNT.View
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)  // new phieu 
         {
 
 
@@ -333,6 +333,7 @@ namespace BEEACCOUNT.View
             if (Utils.IsValidnumber(cbsophieu.Text))
             {
                 soquy.Sochungtu = int.Parse(cbsophieu.Text.Trim());
+                this.sophieuthu = int.Parse(cbsophieu.Text.Trim());
             }
             else
             {
@@ -475,6 +476,26 @@ namespace BEEACCOUNT.View
 
             #endregion add new phieu thu
 
+            #region  list black phiếu
+
+            cbsophieu.Text = "";
+            cbtennguoinop.Text = "";
+            cbdiachi.Text = "";
+            cbdiengiai.Text = "";
+            cbsotien.Text = "";
+            cbsochungtugoc.Text = "";
+
+            lbtenchitietno.Text = "";
+            lbtenchitietco.Text = "";
+            cbtkno.SelectedIndex = -1;
+            cbtaikhoanco.SelectedIndex = -1;
+
+            datepickngayphieu.Focus();
+
+
+
+            #endregion
+
             #region load list phieu thu
             var Listphieuthu = from listpt in dc.tbl_SoQuys
                                where listpt.Machungtu == "PT" // mã 8 là tiền mặt
@@ -491,15 +512,15 @@ namespace BEEACCOUNT.View
                                    Địa_chỉ = listpt.Diachinguoinhannop,
                                    Username = listpt.Username,
                                    Ngày_nhập_liệu = listpt.Ngayghiso,
-                                   id = listpt.id
+                                   ID = listpt.id
 
                                };
 
             dataGridViewListphieuthu.DataSource = Listphieuthu;
             #endregion
 
-
-
+            
+                 MessageBox.Show("Số phiếu vừa tạo: " + this.sophieuthu , "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void dataGridViewListphieuthu_Paint(object sender, PaintEventArgs e)
@@ -704,6 +725,29 @@ namespace BEEACCOUNT.View
         private void cbtaikhoanco_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            #region  list black phiếu
+
+            cbsophieu.Text = "";
+            cbtennguoinop.Text = "";
+            cbdiachi.Text = "";
+            cbdiengiai.Text = "";
+            cbsotien.Text = "";
+            cbsochungtugoc.Text = "";
+
+            lbtenchitietno.Text = "";
+            lbtenchitietco.Text = "";
+            cbtkno.SelectedIndex = -1;
+            cbtaikhoanco.SelectedIndex = -1;
+
+            datepickngayphieu.Focus();
+
+
+
+            #endregion
         }
     }
 }

@@ -162,6 +162,12 @@
     <Compile Include="View\BeePhieuThu.Designer.cs">
       <DependentUpon>BeePhieuThu.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Beechooseslect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Beechooseslect.Designer.cs">
+      <DependentUpon>Beechooseslect.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Beestoreinput.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -357,10 +363,12 @@
     <Compile Include="View\Viewtable.Designer.cs">
       <DependentUpon>Viewtable.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Reports\Phieuthu.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\Paymentrequest.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\Socai_NCC.rdlc" />
     <EmbeddedResource Include="View\Beeloaitaikhoan.resx">
       <DependentUpon>Beeloaitaikhoan.cs</DependentUpon>
     </EmbeddedResource>
@@ -375,6 +383,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\BeePhieuThu.resx">
       <DependentUpon>BeePhieuThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Beechooseslect.resx">
+      <DependentUpon>Beechooseslect.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Beestoreinput.resx">
       <DependentUpon>Beestoreinput.cs</DependentUpon>

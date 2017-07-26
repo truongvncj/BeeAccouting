@@ -84,7 +84,7 @@
             this.MinimizeBox = false;
             this.Name = "beeselectinput";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Input";
+            this.Text = "Nhập liệu";
             this.Load += new System.EventHandler(this.valueinput_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
