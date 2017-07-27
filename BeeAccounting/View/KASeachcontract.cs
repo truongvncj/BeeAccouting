@@ -75,7 +75,7 @@ namespace BEEACCOUNT.View
 
                 if (tablename == "KASeachcontract")
                 {
-                   // Fromviewable.ReloadKASeachcontract(this.sendingcode.Text, this.sendingcontract.Text, this.sendingname.Text, this.txtvat.Text);
+                  //  Fromviewable.ReloadKASeachcontract(this.sendingcode.Text, this.sendingcontract.Text, this.sendingname.Text, this.txtvat.Text);
                 }
 
 

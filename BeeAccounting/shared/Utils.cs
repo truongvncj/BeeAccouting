@@ -22,11 +22,90 @@ namespace BEEACCOUNT
     {
 
 
-        public static string ChuyenSo(string number)
+        // public static string ChuyenSo(string number)
+        public static string ChuyenSo(decimal total)  //đọc đc 18 số vd: 999999999999999999
         {
-          
-
-            return "tamda";
+            {
+                try
+                {
+                    string rs = "";
+                    total = Math.Round(total, 0);
+                    string[] ch = { "không", "một", "hai", "ba", "bốn", "năm", "sáu", "bảy", "tám", "chín" };
+                    string[] rch = { "lẻ", "mốt", "", "", "", "lăm" };
+                    string[] u = { "", "mươi", "trăm", "ngàn", "", "", "triệu", "", "", "tỷ", "", "", "ngàn", "", "", "triệu" };
+                    string nstr = total.ToString();
+                    int[] n = new int[nstr.Length];
+                    int len = n.Length;
+                    for (int i = 0; i < len; i++)
+                    {
+                        n[len - 1 - i] = Convert.ToInt32(nstr.Substring(i, 1));
+                    }
+                    for (int i = len - 1; i >= 0; i--)
+                    {
+                        if (i % 3 == 2)// số 0 ở hàng trăm
+                        {
+                            if (n[i] == 0 && n[i - 1] == 0 && n[i - 2] == 0) continue;//nếu cả 3 số là 0 thì bỏ qua không đọc
+                        }
+                        else if (i % 3 == 1) // số ở hàng chục
+                        {
+                            if (n[i] == 0)
+                            {
+                                if (n[i - 1] == 0) { continue; }// nếu hàng chục và hàng đơn vị đều là 0 thì bỏ qua.
+                                else
+                                {
+                                    rs += " " + rch[n[i]]; continue;// hàng chục là 0 thì bỏ qua, đọc số hàng đơn vị
+                                }
+                            }
+                            if (n[i] == 1)//nếu số hàng chục là 1 thì đọc là mười
+                            {
+                                rs += " mười"; continue;
+                            }
+                        }
+                        else if (i != len - 1)// số ở hàng đơn vị (không phải là số đầu tiên)
+                        {
+                            if (n[i] == 0)// số hàng đơn vị là 0 thì chỉ đọc đơn vị
+                            {
+                                if (i + 2 <= len - 1 && n[i + 2] == 0 && n[i + 1] == 0) continue;
+                                rs += " " + (i % 3 == 0 ? u[i] : u[i % 3]);
+                                continue;
+                            }
+                            if (n[i] == 1)// nếu là 1 thì tùy vào số hàng chục mà đọc: 0,1: một / còn lại: mốt
+                            {
+                                rs += " " + ((n[i + 1] == 1 || n[i + 1] == 0) ? ch[n[i]] : rch[n[i]]);
+                                rs += " " + (i % 3 == 0 ? u[i] : u[i % 3]);
+                                continue;
+                            }
+                            if (n[i] == 5) // cách đọc số 5
+                            {
+                                if (n[i + 1] != 0) //nếu số hàng chục khác 0 thì đọc số 5 là lăm
+                                {
+                                    rs += " " + rch[n[i]];// đọc số 
+                                    rs += " " + (i % 3 == 0 ? u[i] : u[i % 3]);// đọc đơn vị
+                                    continue;
+                                }
+                            }
+                        }
+                        rs += (rs == "" ? " " : ", ") + ch[n[i]];// đọc số
+                        rs += " " + (i % 3 == 0 ? u[i] : u[i % 3]);// đọc đơn vị
+                    }
+                    if (rs[rs.Length - 1] != ' ')
+                        rs += " đồng.";
+                    else
+                        rs += "đồng.";
+                    if (rs.Length > 2)
+                    {
+                        string rs1 = rs.Substring(0, 2);
+                        rs1 = rs1.ToUpper();
+                        rs = rs.Substring(2);
+                        rs = rs1 + rs;
+                    }
+                    return rs.Trim().Replace("lẻ,", "lẻ").Replace("mươi,", "mươi").Replace("trăm,", "trăm").Replace("mười,", "mười");
+                }
+                catch
+                {
+                    return "Số bạn nhập vào quá lớn";
+                }
+            }
         }
 
         public static bool ChangeColumnDataType(DataTable table, string columnname, Type newtype)
@@ -79,7 +158,7 @@ namespace BEEACCOUNT
         ////    return rs;
         //}
 
-        public static  string getusername()
+        public static string getusername()
         {
             String current = System.IO.Directory.GetCurrentDirectory();
 
@@ -95,18 +174,18 @@ namespace BEEACCOUNT
 
                 {
                     string[] parts = line.Split(';');
-                    if (parts.Count() >=4)
+                    if (parts.Count() >= 4)
                     {
-                         st4 = parts[3].Trim();
+                        st4 = parts[3].Trim();
                     }
                     else
                     {
-                         st4 = "";
-                    }   
-             //       string st1 = parts[0].Trim();
-             //       string st2 = parts[1].Trim();
-             //  string st3 = parts[2].Trim();
-                 
+                        st4 = "";
+                    }
+                    //       string st1 = parts[0].Trim();
+                    //       string st2 = parts[1].Trim();
+                    //  string st3 = parts[2].Trim();
+
 
                     string username = st4;
                     return username;
@@ -126,7 +205,7 @@ namespace BEEACCOUNT
 
         public static int getrightnumber()
         {
-         string username =    Utils.getusername();
+            string username = Utils.getusername();
             string connection_string = Utils.getConnectionstr();
             LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
 
@@ -134,7 +213,7 @@ namespace BEEACCOUNT
                       where tbl_Temp.username == username
 
                       select tbl_Temp.userright).FirstOrDefault();
-            if (rs==null)
+            if (rs == null)
             {
                 return 0;
             }
@@ -143,7 +222,7 @@ namespace BEEACCOUNT
 
                 return rs.Value;
             }
-          
+
         }
         public static string getname()
         {
@@ -344,7 +423,7 @@ namespace BEEACCOUNT
                 rng.Value2 = value;
                 return true;
             }
-            catch (Exception   )
+            catch (Exception)
             {
                 //  MessageBox.Show(ex.ToString());
                 return false;
@@ -368,7 +447,7 @@ namespace BEEACCOUNT
                     return "";
                 }
             }
-            catch (Exception )
+            catch (Exception)
             {
                 //MessageBox.Show(ex.ToString());
                 return null;
@@ -556,12 +635,12 @@ namespace BEEACCOUNT
 
 
             DateTime result_date;//= DateTime.Now;
-          //   get_data = "";
-         //   if (excelDate != "")
-           // {
-            //    string get_data = excelDate;
-          //  }
-         
+                                 //   get_data = "";
+                                 //   if (excelDate != "")
+                                 // {
+                                 //    string get_data = excelDate;
+                                 //  }
+
             #region // lấy format hệ thống , kiểm tra xem ngày ở số i; tháng ở bản j ; năm ở bản k byte
 
 
@@ -693,7 +772,7 @@ namespace BEEACCOUNT
 
 
                 return result_date;
-                
+
 
             }
             else
@@ -701,7 +780,7 @@ namespace BEEACCOUNT
 
                 if (Utils.IsValidnumber(get_data))
                 {
-                     result_date = DateTime.FromOADate(double.Parse(get_data));
+                    result_date = DateTime.FromOADate(double.Parse(get_data));
                     return result_date;
                 }
                 //else
@@ -710,11 +789,11 @@ namespace BEEACCOUNT
                 //}
                 ////     MessageBox.Show("Lỗi format ngày tháng !");
 
-               result_date = DateTime.ParseExact("01/01/0001", "dd/MM/yyyy", provider);
-              
+                result_date = DateTime.ParseExact("01/01/0001", "dd/MM/yyyy", provider);
+
             }
 
-           return result_date;
+            return result_date;
 
         }
 
@@ -746,7 +825,7 @@ namespace BEEACCOUNT
                     return false;
                 }
             }
-            catch (Exception  )
+            catch (Exception)
             {
                 //  MessageBox.Show(ex.ToString());
                 return false;
