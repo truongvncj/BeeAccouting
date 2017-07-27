@@ -105,6 +105,7 @@
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
     </Compile>
+    <Compile Include="Model\Congty.cs" />
     <Compile Include="Model\Danhsachtkchitiet.cs" />
     <Compile Include="Model\loaitaikhoanketoan.cs" />
     <Compile Include="Model\Salesinput_ctrl.cs" />

@@ -20,6 +20,15 @@ namespace BEEACCOUNT
 {
     class Utils
     {
+
+
+        public static string ChuyenSo(string number)
+        {
+          
+
+            return "tamda";
+        }
+
         public static bool ChangeColumnDataType(DataTable table, string columnname, Type newtype)
         {
             if (table.Columns.Contains(columnname) == false)
@@ -143,7 +152,7 @@ namespace BEEACCOUNT
             LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
 
             var rs = (from tbl_Temp in dc.tbl_Temps
-                      where tbl_Temp.username == username
+                      where tbl_Temp.username.Trim() == username.Trim()
 
                       select tbl_Temp.name).FirstOrDefault();
             if (rs == null)

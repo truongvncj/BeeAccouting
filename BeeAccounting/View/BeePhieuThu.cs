@@ -52,7 +52,7 @@ namespace BEEACCOUNT.View
             //  this.lbmachitietco.Visible = false;
             this.lbtenchitietco.Visible = false;
             this.lbtenchitietno.Visible = false;
-       //     this.lbmaso.Visible = false;
+            //     this.lbmaso.Visible = false;
 
             #region load tk nợ
 
@@ -255,7 +255,7 @@ namespace BEEACCOUNT.View
             {
                 e.Handled = true;
                 datepickngayphieu.Focus();
-              //  datepickngayphieu
+                //  datepickngayphieu
                 //    string valueinput = cb_customerka.Text;
 
                 //    string connection_string = Utils.getConnectionstr();
@@ -519,8 +519,8 @@ namespace BEEACCOUNT.View
             dataGridViewListphieuthu.DataSource = Listphieuthu;
             #endregion
 
-            
-                 MessageBox.Show("Số phiếu vừa tạo: " + this.sophieuthu , "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            MessageBox.Show("Số phiếu vừa tạo: " + this.sophieuthu, "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void dataGridViewListphieuthu_Paint(object sender, PaintEventArgs e)
@@ -748,6 +748,65 @@ namespace BEEACCOUNT.View
 
 
             #endregion
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+
+
+            string connection_string = Utils.getConnectionstr();
+            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+            var phieuthu = from tbl_SoQuy in dc.tbl_SoQuys
+                           where tbl_SoQuy.id == 38
+                           select new
+                           {
+
+                               tencongty = Model.Congty.getnamecongty(),
+                               diachicongty = Model.Congty.getdiachicongty(),
+                               masothue = Model.Congty.getmasothuecongty(),
+                               tengiamdoc = Model.Congty.gettengiamdoccongty(),
+                               tenketoantruong = Model.Congty.gettenketoantruongcongty(),
+
+                               sophieuthu = tbl_SoQuy.Sochungtu,
+                               ngaychungtu = tbl_SoQuy.Ngayctu,
+                               nguoinoptien = tbl_SoQuy.Nguoinopnhantien,
+                               nguoilapphieu = Utils.getname(),
+                               diachinguoinop = tbl_SoQuy.Diachinguoinhannop,
+                               lydothu = tbl_SoQuy.Diengiai,
+                               sotien = tbl_SoQuy.PsNo,
+                               sotienbangchu = Utils.ChuyenSo(tbl_SoQuy.PsNo.ToString()),
+                               sochungtugoc = tbl_SoQuy.Chungtugockemtheo,
+                               username = Utils.getusername(),
+
+
+                           };
+
+            this.dataGridViewListphieuthu.DataSource = phieuthu;
+
+            #region  view reports payment request  
+
+            //Control_ac ctrac = new Control_ac();
+
+            //var rs1 = ctrac.KArptdataset1(dc);
+            //var rs2 = ctrac.KArptdataset2(dc);
+
+
+
+            if (phieuthu.Count() == 1)
+            {
+
+                Utils ut = new Utils();
+                var dataset1 = ut.ToDataTable(dc, phieuthu);
+
+                Reportsview rpt = new Reportsview(dataset1, null, "Phieuthu.rdlc");
+                rpt.ShowDialog();
+
+            }
+
+            #endregion view reports payment request  // 
+
         }
     }
 }

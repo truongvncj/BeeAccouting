@@ -13,23 +13,23 @@ namespace BEEACCOUNT.View
 {
     public partial class Reportsview : Form
     {
-        public DataTable tbl1 { get; set; }
-        public int BatchNo { get; set; }
+        public DataTable tbl2 { get; set; }
+   //     public int BatchNo { get; set; }
 
-        public int subid { get; set; }
-        public string contractno { get; set; }
-        public View.CreatenewContract formcreatCtract { get; set; }
+      //  public int subid { get; set; }
+     //   public string contractno { get; set; }
+     //   public View.CreatenewContract formcreatCtract { get; set; }
         //    formcreatCtract
-        public Reportsview(DataTable tbl1, DataTable tbl2, string rptname , int BatchNo,  string contractno, View.CreatenewContract formcreatCtract) //IQueryable rs
+        public Reportsview(DataTable tbl1, DataTable tbl2, string rptname ) //IQueryable rs  // tble 1 la gốc, tbk2 là báo cáo phụ theo datasset2
         {
             InitializeComponent();
 
-            this.tbl1 = tbl1;
+            this.tbl2 = tbl2;
 
-            this.BatchNo = BatchNo;
+    //        this.BatchNo = BatchNo;
         //    this.subid = subid;
-            this.contractno = contractno;
-            this.formcreatCtract = formcreatCtract;
+     //       this.contractno = contractno;
+         //   this.formcreatCtract = formcreatCtract;
 
 
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "BEEACCOUNT.Reports."+ rptname + "";
@@ -39,12 +39,17 @@ namespace BEEACCOUNT.View
 
 
            ReportDataSource datasource = new ReportDataSource("DataSet1", tbl1);
-           ReportDataSource datasource2 = new ReportDataSource("DataSet2", tbl2);
 
             this.reportViewer1.LocalReport.DataSources.Clear();
-
             this.reportViewer1.LocalReport.DataSources.Add(datasource);
-          this.reportViewer1.LocalReport.DataSources.Add(datasource2);
+
+
+            if (tbl2 != null)
+            {
+                ReportDataSource datasource2 = new ReportDataSource("DataSet2", tbl2);
+                this.reportViewer1.LocalReport.DataSources.Add(datasource2);
+            }
+
 
             this.reportViewer1.LocalReport.SubreportProcessing += new SubreportProcessingEventHandler(LocalReport_SubreportProcessing );
 
@@ -62,9 +67,9 @@ namespace BEEACCOUNT.View
 
             #region kiểm tra printed  OK
 
-            string connection_string = Utils.getConnectionstr();
+          //  string connection_string = Utils.getConnectionstr();
 
-            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+         //   LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
 
 
             //var rschangepritcheck = (from tbl_kacontractsdetailpayment in dc.tbl_kacontractsdetailpayments
@@ -115,12 +120,14 @@ namespace BEEACCOUNT.View
         private void LocalReport_SubreportProcessing(object sender, SubreportProcessingEventArgs e)
         {
 
-           var custGroupid = double.Parse(e.Parameters["custGroupid"].Values.First());
-         //   var subSource = ((List<Cus>)mainSource.Value).Single(o => o.OrderID == orderId).Suppliers;
+            //    var custGroupid = double.Parse(e.Parameters["custGroupid"].Values.First());
+            //   var subSource = ((List<Cus>)mainSource.Value).Single(o => o.OrderID == orderId).Suppliers;
 
-            e.DataSources.Add(new ReportDataSource("DataSet1", tbl1));
+            if (tbl2 != null)
+            {
+                e.DataSources.Add(new ReportDataSource("DataSet2", tbl2));
 
-
+            }
 
             //  throw new NotImplementedException();
         }
