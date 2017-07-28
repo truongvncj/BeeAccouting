@@ -169,6 +169,12 @@
     <Compile Include="View\Beechooseslect.Designer.cs">
       <DependentUpon>Beechooseslect.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\BeeHtoansocaidoiungphieuthu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\BeeHtoansocaidoiungphieuthu.Designer.cs">
+      <DependentUpon>BeeHtoansocaidoiungphieuthu.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Beestoreinput.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -393,6 +399,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Beechooseslect.resx">
       <DependentUpon>Beechooseslect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\BeeHtoansocaidoiungphieuthu.resx">
+      <DependentUpon>BeeHtoansocaidoiungphieuthu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Beestoreinput.resx">
       <DependentUpon>Beestoreinput.cs</DependentUpon>

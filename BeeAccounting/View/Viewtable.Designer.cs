@@ -73,7 +73,7 @@ namespace BEEACCOUNT.View
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Location = new System.Drawing.Point(4, -2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1338, 471);
+            this.panel1.Size = new System.Drawing.Size(1338, 482);
             this.panel1.TabIndex = 0;
             // 
             // panel2
@@ -84,7 +84,7 @@ namespace BEEACCOUNT.View
             this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.bt_exporttoex);
             this.panel2.Controls.Add(this.button1);
-            this.panel2.Location = new System.Drawing.Point(0, 28);
+            this.panel2.Location = new System.Drawing.Point(0, 26);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1332, 28);
             this.panel2.TabIndex = 45;
@@ -143,7 +143,7 @@ namespace BEEACCOUNT.View
             this.lb_seach.AutoSize = true;
             this.lb_seach.Font = new System.Drawing.Font("Microsoft JhengHei Light", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
             this.lb_seach.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.lb_seach.Location = new System.Drawing.Point(1012, 453);
+            this.lb_seach.Location = new System.Drawing.Point(1012, 464);
             this.lb_seach.Name = "lb_seach";
             this.lb_seach.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.lb_seach.Size = new System.Drawing.Size(90, 15);
@@ -155,7 +155,7 @@ namespace BEEACCOUNT.View
             // 
             this.statussum.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.statussum.AutoSize = true;
-            this.statussum.Location = new System.Drawing.Point(0, 452);
+            this.statussum.Location = new System.Drawing.Point(0, 463);
             this.statussum.Name = "statussum";
             this.statussum.Size = new System.Drawing.Size(70, 13);
             this.statussum.TabIndex = 1;
@@ -167,7 +167,7 @@ namespace BEEACCOUNT.View
             this.lb_totalrecord.AutoSize = true;
             this.lb_totalrecord.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_totalrecord.ForeColor = System.Drawing.Color.Red;
-            this.lb_totalrecord.Location = new System.Drawing.Point(67, 453);
+            this.lb_totalrecord.Location = new System.Drawing.Point(67, 464);
             this.lb_totalrecord.Name = "lb_totalrecord";
             this.lb_totalrecord.Size = new System.Drawing.Size(13, 14);
             this.lb_totalrecord.TabIndex = 2;
@@ -189,7 +189,7 @@ namespace BEEACCOUNT.View
             this.Pl_endview.Controls.Add(this.lb_bilingqtt);
             this.Pl_endview.Controls.Add(this.label1);
             this.Pl_endview.ForeColor = System.Drawing.Color.Black;
-            this.Pl_endview.Location = new System.Drawing.Point(154, 450);
+            this.Pl_endview.Location = new System.Drawing.Point(154, 461);
             this.Pl_endview.Name = "Pl_endview";
             this.Pl_endview.Size = new System.Drawing.Size(852, 19);
             this.Pl_endview.TabIndex = 1;
@@ -314,11 +314,11 @@ namespace BEEACCOUNT.View
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 57);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 57);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.dataGridView1.Size = new System.Drawing.Size(1332, 386);
+            this.dataGridView1.Size = new System.Drawing.Size(1335, 397);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.VirtualMode = true;
             this.dataGridView1.Paint += new System.Windows.Forms.PaintEventHandler(this.dataGridView1_Paint);

@@ -98,3 +98,4 @@ D:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.Beeloaitaikh
 D:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.Beechooseslect.resources
 D:\Product\BeeAccouting\BeeAccounting\bin\x86\Debug\Reports\Phieuthu.rdlc
 D:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.BeeSeachtwofield.resources
+D:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.BeeHtoansocaidoiungphieuthu.resources

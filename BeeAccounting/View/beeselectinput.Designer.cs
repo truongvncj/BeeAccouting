@@ -69,6 +69,7 @@
             this.cbselect.Name = "cbselect";
             this.cbselect.Size = new System.Drawing.Size(381, 21);
             this.cbselect.TabIndex = 4;
+            this.cbselect.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbselect_KeyPress);
             // 
             // beeselectinput
             // 
