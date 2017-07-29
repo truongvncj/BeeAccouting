@@ -54,11 +54,22 @@ namespace BEEACCOUNT.View
 
                 text02.Focus();
 
-                //   if (tablename == "KASeachcontract")
-                //   {
-                ////       Fromviewable.ReloadKASeachcontract(this.sendingcode.Text, this.sendingcontract.Text, this.sendingname.Text, this.txtvat.Text);
-                //   }
 
+                this.kq1 = text01.Text;
+                this.kq2 = text02.Text;
+                this.kq3 = txt03.Text;
+                this.click = true;
+                // text01.Focus();
+
+
+
+                //  if (true)
+                // {
+
+                // }
+
+
+                this.phieuthu.reloadseachview(this.kq1, this.kq2, this.kq3);
 
 
             }
@@ -73,10 +84,21 @@ namespace BEEACCOUNT.View
 
                 txt03.Focus();
 
-                //if (tablename == "KASeachcontract")
-                //{
-                //   // Fromviewable.ReloadKASeachcontract(this.sendingcode.Text, this.sendingcontract.Text, this.sendingname.Text, this.txtvat.Text);
-                //}
+                this.kq1 = text01.Text;
+                this.kq2 = text02.Text;
+                this.kq3 = txt03.Text;
+                this.click = true;
+                // text01.Focus();
+
+
+
+                //  if (true)
+                // {
+
+                // }
+
+
+                this.phieuthu.reloadseachview(this.kq1, this.kq2, this.kq3);
 
 
 
@@ -90,13 +112,22 @@ namespace BEEACCOUNT.View
 
 
              this.text01.Focus();
-              //  this.text02.Focus();
-                
-                //if (tablename == "KASeachcontract")
-                //{
-                //  //  Fromviewable.ReloadKASeachcontract(this.sendingcode.Text, this.sendingcontract.Text, this.sendingname.Text, this.txtvat.Text);
-                //}
 
+                this.kq1 = text01.Text;
+                this.kq2 = text02.Text;
+                this.kq3 = txt03.Text;
+                this.click = true;
+                // text01.Focus();
+
+
+
+                //  if (true)
+                // {
+
+                // }
+
+
+                this.phieuthu.reloadseachview(this.kq1, this.kq2, this.kq3);
 
 
             }
@@ -123,22 +154,6 @@ namespace BEEACCOUNT.View
         private void bt_timkiem_Click(object sender, EventArgs e)
         {
 
-
-            this.kq1 = text01.Text;
-            this.kq2 = text02.Text;
-            this.kq3 = txt03.Text;
-            this.click = true;
-            // text01.Focus();
-
-
-
-            //  if (true)
-            // {
-
-            // }
-
-
-            this.phieuthu.reloadseachview(this.kq1, this.kq2, this.kq3);
 
 
 

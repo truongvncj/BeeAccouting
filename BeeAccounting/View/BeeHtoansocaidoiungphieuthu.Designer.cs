@@ -35,6 +35,12 @@
             this.txttongtien = new System.Windows.Forms.TextBox();
             this.bt_themvao = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.datepickngayphieu = new System.Windows.Forms.DateTimePicker();
+            this.txtkyhieuctu = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtsochungtu = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtsotien = new System.Windows.Forms.TextBox();
             this.txtdiachi = new System.Windows.Forms.TextBox();
@@ -42,12 +48,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.lbtenchitiet = new System.Windows.Forms.Label();
             this.cbtkco = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtsochungtu = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtkyhieuctu = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.datepickngayphieu = new System.Windows.Forms.DateTimePicker();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -93,11 +93,11 @@
             // 
             // bt_themvao
             // 
-            this.bt_themvao.Location = new System.Drawing.Point(323, 366);
+            this.bt_themvao.Location = new System.Drawing.Point(344, 360);
             this.bt_themvao.Name = "bt_themvao";
-            this.bt_themvao.Size = new System.Drawing.Size(128, 23);
+            this.bt_themvao.Size = new System.Drawing.Size(107, 23);
             this.bt_themvao.TabIndex = 7;
-            this.bt_themvao.Text = "Thêm vào  (CTRL +  A )";
+            this.bt_themvao.Text = "Thêm (CTRL +  A )";
             this.bt_themvao.UseVisualStyleBackColor = true;
             // 
             // groupBox1
@@ -121,6 +121,67 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = " --";
+            // 
+            // datepickngayphieu
+            // 
+            this.datepickngayphieu.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.datepickngayphieu.CustomFormat = "dd.MM.yyyy";
+            this.datepickngayphieu.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.datepickngayphieu.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.datepickngayphieu.Location = new System.Drawing.Point(127, 169);
+            this.datepickngayphieu.Name = "datepickngayphieu";
+            this.datepickngayphieu.Size = new System.Drawing.Size(119, 24);
+            this.datepickngayphieu.TabIndex = 4;
+            this.datepickngayphieu.Value = new System.DateTime(2017, 7, 18, 0, 0, 0, 0);
+            this.datepickngayphieu.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.datepickngayphieu_KeyPress);
+            // 
+            // txtkyhieuctu
+            // 
+            this.txtkyhieuctu.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtkyhieuctu.Location = new System.Drawing.Point(128, 199);
+            this.txtkyhieuctu.Name = "txtkyhieuctu";
+            this.txtkyhieuctu.Size = new System.Drawing.Size(207, 24);
+            this.txtkyhieuctu.TabIndex = 5;
+            this.txtkyhieuctu.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtkyhieuctu_KeyPress);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(6, 202);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(56, 18);
+            this.label7.TabIndex = 44;
+            this.label7.Text = "Ký hiệu";
+            // 
+            // txtsochungtu
+            // 
+            this.txtsochungtu.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtsochungtu.Location = new System.Drawing.Point(127, 229);
+            this.txtsochungtu.Name = "txtsochungtu";
+            this.txtsochungtu.Size = new System.Drawing.Size(207, 24);
+            this.txtsochungtu.TabIndex = 6;
+            this.txtsochungtu.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtsochungtu_KeyPress);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(5, 232);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(87, 18);
+            this.label5.TabIndex = 42;
+            this.label5.Text = "Số chứng từ";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(6, 169);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(102, 18);
+            this.label4.TabIndex = 40;
+            this.label4.Text = "Ngày chứng từ";
             // 
             // label1
             // 
@@ -193,67 +254,6 @@
             this.cbtkco.Size = new System.Drawing.Size(317, 24);
             this.cbtkco.TabIndex = 0;
             this.cbtkco.SelectionChangeCommitted += new System.EventHandler(this.cbtkco_SelectionChangeCommitted);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(6, 169);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(102, 18);
-            this.label4.TabIndex = 40;
-            this.label4.Text = "Ngày chứng từ";
-            // 
-            // txtsochungtu
-            // 
-            this.txtsochungtu.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtsochungtu.Location = new System.Drawing.Point(127, 229);
-            this.txtsochungtu.Name = "txtsochungtu";
-            this.txtsochungtu.Size = new System.Drawing.Size(207, 24);
-            this.txtsochungtu.TabIndex = 6;
-            this.txtsochungtu.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtsochungtu_KeyPress);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(5, 232);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(87, 18);
-            this.label5.TabIndex = 42;
-            this.label5.Text = "Số chứng từ";
-            // 
-            // txtkyhieuctu
-            // 
-            this.txtkyhieuctu.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtkyhieuctu.Location = new System.Drawing.Point(128, 199);
-            this.txtkyhieuctu.Name = "txtkyhieuctu";
-            this.txtkyhieuctu.Size = new System.Drawing.Size(207, 24);
-            this.txtkyhieuctu.TabIndex = 5;
-            this.txtkyhieuctu.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtkyhieuctu_KeyPress);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(6, 202);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(56, 18);
-            this.label7.TabIndex = 44;
-            this.label7.Text = "Ký hiệu";
-            // 
-            // datepickngayphieu
-            // 
-            this.datepickngayphieu.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.datepickngayphieu.CustomFormat = "dd.MM.yyyy";
-            this.datepickngayphieu.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.datepickngayphieu.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.datepickngayphieu.Location = new System.Drawing.Point(127, 169);
-            this.datepickngayphieu.Name = "datepickngayphieu";
-            this.datepickngayphieu.Size = new System.Drawing.Size(119, 24);
-            this.datepickngayphieu.TabIndex = 4;
-            this.datepickngayphieu.Value = new System.DateTime(2017, 7, 18, 0, 0, 0, 0);
-            this.datepickngayphieu.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.datepickngayphieu_KeyPress);
             // 
             // BeeHtoansocaidoiungphieuthu
             // 
