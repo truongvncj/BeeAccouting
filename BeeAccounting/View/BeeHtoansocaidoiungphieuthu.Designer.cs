@@ -93,11 +93,11 @@
             // 
             // bt_themvao
             // 
-            this.bt_themvao.Location = new System.Drawing.Point(344, 360);
+            this.bt_themvao.Location = new System.Drawing.Point(348, 360);
             this.bt_themvao.Name = "bt_themvao";
-            this.bt_themvao.Size = new System.Drawing.Size(107, 23);
+            this.bt_themvao.Size = new System.Drawing.Size(103, 23);
             this.bt_themvao.TabIndex = 7;
-            this.bt_themvao.Text = "Thêm (CTRL +  A )";
+            this.bt_themvao.Text = "Thêm ";
             this.bt_themvao.UseVisualStyleBackColor = true;
             // 
             // groupBox1

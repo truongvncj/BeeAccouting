@@ -454,6 +454,8 @@ namespace BEEACCOUNT
 		
 		private string _tkco;
 		
+		private string _quyenso;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -494,6 +496,8 @@ namespace BEEACCOUNT
     partial void OntknoChanged();
     partial void OntkcoChanging(string value);
     partial void OntkcoChanged();
+    partial void OnquyensoChanging(string value);
+    partial void OnquyensoChanged();
     #endregion
 		
 		public tblRpt_PhieuThu()
@@ -857,6 +861,26 @@ namespace BEEACCOUNT
 					this._tkco = value;
 					this.SendPropertyChanged("tkco");
 					this.OntkcoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_quyenso", DbType="NVarChar(10)")]
+		public string quyenso
+		{
+			get
+			{
+				return this._quyenso;
+			}
+			set
+			{
+				if ((this._quyenso != value))
+				{
+					this.OnquyensoChanging(value);
+					this.SendPropertyChanging();
+					this._quyenso = value;
+					this.SendPropertyChanged("quyenso");
+					this.OnquyensoChanged();
 				}
 			}
 		}
@@ -4460,6 +4484,8 @@ namespace BEEACCOUNT
 		
 		private int _id;
 		
+		private string _quyenso;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -4502,6 +4528,8 @@ namespace BEEACCOUNT
     partial void OnUsernameChanged();
     partial void OnidChanging(int value);
     partial void OnidChanged();
+    partial void OnquyensoChanging(string value);
+    partial void OnquyensoChanged();
     #endregion
 		
 		public tbl_SoQuy()
@@ -4885,6 +4913,26 @@ namespace BEEACCOUNT
 					this._id = value;
 					this.SendPropertyChanged("id");
 					this.OnidChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_quyenso", DbType="NVarChar(10)")]
+		public string quyenso
+		{
+			get
+			{
+				return this._quyenso;
+			}
+			set
+			{
+				if ((this._quyenso != value))
+				{
+					this.OnquyensoChanging(value);
+					this.SendPropertyChanging();
+					this._quyenso = value;
+					this.SendPropertyChanged("quyenso");
+					this.OnquyensoChanged();
 				}
 			}
 		}

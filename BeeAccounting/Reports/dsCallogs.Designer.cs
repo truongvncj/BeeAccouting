@@ -7479,6 +7479,8 @@ namespace BEEACCOUNT.Reports {
             
             private global::System.Data.DataColumn columntkco;
             
+            private global::System.Data.DataColumn columnquyenso;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public PhieuthuRPTDataTable() {
@@ -7650,6 +7652,14 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn quyensoColumn {
+                get {
+                    return this.columnquyenso;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -7702,7 +7712,8 @@ namespace BEEACCOUNT.Reports {
                         string tengiamdoc, 
                         string tenketoantruong, 
                         string tkno, 
-                        string tkco) {
+                        string tkco, 
+                        string quyenso) {
                 PhieuthuRPTRow rowPhieuthuRPTRow = ((PhieuthuRPTRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         tencongty,
@@ -7721,7 +7732,8 @@ namespace BEEACCOUNT.Reports {
                         tengiamdoc,
                         tenketoantruong,
                         tkno,
-                        tkco};
+                        tkco,
+                        quyenso};
                 rowPhieuthuRPTRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowPhieuthuRPTRow);
                 return rowPhieuthuRPTRow;
@@ -7761,6 +7773,7 @@ namespace BEEACCOUNT.Reports {
                 this.columntenketoantruong = base.Columns["tenketoantruong"];
                 this.columntkno = base.Columns["tkno"];
                 this.columntkco = base.Columns["tkco"];
+                this.columnquyenso = base.Columns["quyenso"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7800,6 +7813,8 @@ namespace BEEACCOUNT.Reports {
                 base.Columns.Add(this.columntkno);
                 this.columntkco = new global::System.Data.DataColumn("tkco", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columntkco);
+                this.columnquyenso = new global::System.Data.DataColumn("quyenso", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnquyenso);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -14657,6 +14672,22 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string quyenso {
+                get {
+                    try {
+                        return ((string)(this[this.tablePhieuthuRPT.quyensoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'quyenso\' in table \'PhieuthuRPT\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePhieuthuRPT.quyensoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IstencongtyNull() {
                 return this.IsNull(this.tablePhieuthuRPT.tencongtyColumn);
             }
@@ -14857,6 +14888,18 @@ namespace BEEACCOUNT.Reports {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SettkcoNull() {
                 this[this.tablePhieuthuRPT.tkcoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsquyensoNull() {
+                return this.IsNull(this.tablePhieuthuRPT.quyensoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetquyensoNull() {
+                this[this.tablePhieuthuRPT.quyensoColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -15592,7 +15635,7 @@ SELECT customernameGRoup, customername, address, phone, code, region, sumAmountf
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-      //      this._connection.ConnectionString = global::BEEACCOUNT.Properties.Settings.Default.POSMConnectionString1;
+   //         this._connection.ConnectionString = global::BEEACCOUNT.Properties.Settings.Default.POSMConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -16309,7 +16352,7 @@ SELECT TourID, TourName, Days, Nights, Image, Description, Price FROM tours WHER
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-       //     this._connection.ConnectionString = global::BEEACCOUNT.Properties.Settings.Default.POSMConnectionString1;
+     //       this._connection.ConnectionString = global::BEEACCOUNT.Properties.Settings.Default.POSMConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -17038,7 +17081,7 @@ SELECT Assignment, [Posting Date], [Document Type], [Document Number], [Document
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-     //       this._connection.ConnectionString = global::BEEACCOUNT.Properties.Settings.Default.POSMConnectionString1;
+         //   this._connection.ConnectionString = global::BEEACCOUNT.Properties.Settings.Default.POSMConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -18489,7 +18532,7 @@ SELECT Account, Assignment, [Posting Date], [Document Type], [Document Number], 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-    //        this._connection.ConnectionString = global::BEEACCOUNT.Properties.Settings.Default.POSMConnectionString1;
+     //       this._connection.ConnectionString = global::BEEACCOUNT.Properties.Settings.Default.POSMConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -19585,7 +19628,7 @@ SELECT Account, Assignment, [Posting Date], [Document Type], [Document Number], 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-     //       this._connection.ConnectionString = global::BEEACCOUNT.Properties.Settings.Default.POSMConnectionString1;
+    //        this._connection.ConnectionString = global::BEEACCOUNT.Properties.Settings.Default.POSMConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -19891,7 +19934,7 @@ SELECT Customercode, SOrg, Rg, SOff, Plnt, SDst, id, CustomerGRp FROM tblCusARle
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-       //     this._connection.ConnectionString = global::BEEACCOUNT.Properties.Settings.Default.POSMConnectionString1;
+     //       this._connection.ConnectionString = global::BEEACCOUNT.Properties.Settings.Default.POSMConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -20709,7 +20752,7 @@ SELECT Customer, SOrg, [Name 1], [House num & Street], [Street 4], City, Rg, [Te
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-       //     this._connection.ConnectionString = global::BEEACCOUNT.Properties.Settings.Default.POSMConnectionString1;
+   //         this._connection.ConnectionString = global::BEEACCOUNT.Properties.Settings.Default.POSMConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -22321,7 +22364,7 @@ SELECT Fbl5nID, Account, Assignment, [Posting Date], [Document Type], [Document 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-       //     this._connection.ConnectionString = global::BEEACCOUNT.Properties.Settings.Default.POSMConnectionString1;
+     //       this._connection.ConnectionString = global::BEEACCOUNT.Properties.Settings.Default.POSMConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -23597,7 +23640,7 @@ SELECT Fbl5nID, Account, Assignment, [Posting Date], [Document Type], [Document 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-       //     this._connection.ConnectionString = global::BEEACCOUNT.Properties.Settings.Default.POSMConnectionString1;
+        //    this._connection.ConnectionString = global::BEEACCOUNT.Properties.Settings.Default.POSMConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -25327,7 +25370,7 @@ SELECT ID, [Invoice Registration Number], [Invoice Number], [SAP Delivery Number
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-      //      this._connection.ConnectionString = global::BEEACCOUNT.Properties.Settings.Default.POSMConnectionString1;
+    //       this._connection.ConnectionString = global::BEEACCOUNT.Properties.Settings.Default.POSMConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -25866,7 +25909,7 @@ SELECT TourDetailID, TourID, TourName, Days, Place, Detail, Vehice FROM TourDeta
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-        //    this._connection.ConnectionString = global::BEEACCOUNT.Properties.Settings.Default.POSMConnectionString1;
+         //   this._connection.ConnectionString = global::BEEACCOUNT.Properties.Settings.Default.POSMConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

@@ -440,7 +440,7 @@
         <Top>1.94715in</Top>
         <Left>0.09636in</Left>
         <Height>0.25in</Height>
-        <Width>0.83334in</Width>
+        <Width>1.02559in</Width>
         <ZIndex>9</ZIndex>
         <Style>
           <Border>
@@ -484,9 +484,9 @@
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
         <Top>1.96104in</Top>
-        <Left>0.98525in</Left>
+        <Left>1.2092in</Left>
         <Height>0.25in</Height>
-        <Width>6.3778in</Width>
+        <Width>6.15385in</Width>
         <ZIndex>10</ZIndex>
         <Style>
           <Border>
@@ -522,7 +522,7 @@
         <Top>2.19715in</Top>
         <Left>0.09496in</Left>
         <Height>0.25in</Height>
-        <Width>0.83334in</Width>
+        <Width>1.02699in</Width>
         <ZIndex>11</ZIndex>
         <Style>
           <Border>
@@ -566,9 +566,9 @@
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
         <Top>2.22354in</Top>
-        <Left>0.98385in</Left>
+        <Left>1.2092in</Left>
         <Height>0.25in</Height>
-        <Width>6.3792in</Width>
+        <Width>6.15385in</Width>
         <ZIndex>12</ZIndex>
         <Style>
           <Border>
@@ -612,10 +612,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>2.47354in</Top>
+        <Top>2.46104in</Top>
         <Left>0.09496in</Left>
         <Height>0.25in</Height>
-        <Width>0.83334in</Width>
+        <Width>1.02699in</Width>
         <ZIndex>13</ZIndex>
         <Style>
           <Border>
@@ -651,9 +651,9 @@
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
         <Top>2.47493in</Top>
-        <Left>0.98385in</Left>
+        <Left>1.2092in</Left>
         <Height>0.25in</Height>
-        <Width>1.42709in</Width>
+        <Width>1.60174in</Width>
         <ZIndex>14</ZIndex>
         <Style>
           <Border>
@@ -687,8 +687,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>2.47354in</Top>
-        <Left>2.48039in</Left>
+        <Top>2.48187in</Top>
+        <Left>2.86692in</Left>
         <Height>0.25in</Height>
         <Width>0.83334in</Width>
         <ZIndex>15</ZIndex>
@@ -727,7 +727,7 @@
         <Top>3.24298in</Top>
         <Left>0.09496in</Left>
         <Height>0.25in</Height>
-        <Width>0.83334in</Width>
+        <Width>1.02699in</Width>
         <ZIndex>16</ZIndex>
         <Style>
           <Border>
@@ -798,9 +798,9 @@
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
         <Top>3.24437in</Top>
-        <Left>0.98525in</Left>
+        <Left>1.2092in</Left>
         <Height>0.25in</Height>
-        <Width>1.4257in</Width>
+        <Width>1.20175in</Width>
         <ZIndex>18</ZIndex>
         <Style>
           <Border>
@@ -836,9 +836,9 @@
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
         <Top>2.74576in</Top>
-        <Left>0.50239in</Left>
+        <Left>1.2092in</Left>
         <Height>0.42777in</Height>
-        <Width>6.86066in</Width>
+        <Width>6.15385in</Width>
         <ZIndex>19</ZIndex>
         <Style>
           <Border>
@@ -1985,7 +1985,7 @@
         <Top>7.33036in</Top>
         <Left>0.11198in</Left>
         <Height>0.25in</Height>
-        <Width>0.83334in</Width>
+        <Width>1.00997in</Width>
         <ZIndex>46</ZIndex>
         <Style>
           <Border>
@@ -2029,9 +2029,9 @@
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
         <Top>7.34426in</Top>
-        <Left>1.00087in</Left>
+        <Left>1.2092in</Left>
         <Height>0.25in</Height>
-        <Width>6.41214in</Width>
+        <Width>6.20381in</Width>
         <ZIndex>47</ZIndex>
         <Style>
           <Border>
@@ -2064,10 +2064,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>7.58036in</Top>
+        <Top>7.60536in</Top>
         <Left>0.11058in</Left>
         <Height>0.25in</Height>
-        <Width>0.83334in</Width>
+        <Width>1.01137in</Width>
         <ZIndex>48</ZIndex>
         <Style>
           <Border>
@@ -2111,9 +2111,9 @@
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
         <Top>7.60676in</Top>
-        <Left>0.99947in</Left>
+        <Left>1.2092in</Left>
         <Height>0.25in</Height>
-        <Width>6.41354in</Width>
+        <Width>6.20381in</Width>
         <ZIndex>49</ZIndex>
         <Style>
           <Border>
@@ -2157,10 +2157,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>7.85676in</Top>
+        <Top>7.88176in</Top>
         <Left>0.11058in</Left>
         <Height>0.25in</Height>
-        <Width>0.83334in</Width>
+        <Width>1.01137in</Width>
         <ZIndex>50</ZIndex>
         <Style>
           <Border>
@@ -2196,9 +2196,9 @@
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
         <Top>7.85814in</Top>
-        <Left>0.99947in</Left>
+        <Left>1.2092in</Left>
         <Height>0.25in</Height>
-        <Width>1.42709in</Width>
+        <Width>1.21736in</Width>
         <ZIndex>51</ZIndex>
         <Style>
           <Border>
@@ -2272,7 +2272,7 @@
         <Top>8.6762in</Top>
         <Left>0.09808in</Left>
         <Height>0.25in</Height>
-        <Width>0.83334in</Width>
+        <Width>1.02387in</Width>
         <ZIndex>53</ZIndex>
         <Style>
           <Border>
@@ -2343,9 +2343,9 @@
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
         <Top>8.67758in</Top>
-        <Left>0.98837in</Left>
+        <Left>1.2092in</Left>
         <Height>0.25in</Height>
-        <Width>1.4257in</Width>
+        <Width>1.20487in</Width>
         <ZIndex>55</ZIndex>
         <Style>
           <Border>
@@ -2381,9 +2381,9 @@
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
         <Top>8.15815in</Top>
-        <Left>0.51801in</Left>
+        <Left>1.2092in</Left>
         <Height>0.47429in</Height>
-        <Width>6.9325in</Width>
+        <Width>6.24131in</Width>
         <ZIndex>56</ZIndex>
         <Style>
           <Border>
@@ -3302,7 +3302,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=Fields!tkno.Value</Value>
+                <Value>=Fields!quyenso.Value</Value>
                 <Style>
                   <FontStyle>Normal</FontStyle>
                   <FontFamily>Times New Roman</FontFamily>
@@ -3554,7 +3554,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=Fields!tkno.Value</Value>
+                <Value>=Fields!quyenso.Value</Value>
                 <Style>
                   <FontStyle>Normal</FontStyle>
                   <FontFamily>Times New Roman</FontFamily>
@@ -3581,6 +3581,80 @@
           <PaddingLeft>2pt</PaddingLeft>
           <PaddingRight>2pt</PaddingRight>
           <PaddingTop>2pt</PaddingTop>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox39">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Viết bằng chữ:</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontFamily>Times New Roman</FontFamily>
+                  <FontSize>11pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox2</rd:DefaultName>
+        <Top>2.72771in</Top>
+        <Left>0.08028in</Left>
+        <Height>0.25in</Height>
+        <Width>1.04167in</Width>
+        <ZIndex>87</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox77">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Viết bằng chữ:</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontFamily>Times New Roman</FontFamily>
+                  <FontSize>11pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox2</rd:DefaultName>
+        <Top>8.15258in</Top>
+        <Left>0.09263in</Left>
+        <Height>0.25in</Height>
+        <Width>1.02932in</Width>
+        <ZIndex>88</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
     </ReportItems>
@@ -3686,6 +3760,10 @@
         </Field>
         <Field Name="tkco">
           <DataField>tkco</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="quyenso">
+          <DataField>quyenso</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>

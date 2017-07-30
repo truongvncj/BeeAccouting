@@ -29,12 +29,15 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BeePhieuThu));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lb_machitietno = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.lbtenchitietno = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtquyenso = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.txtsochungtugoc = new System.Windows.Forms.TextBox();
             this.cbtkno = new System.Windows.Forms.ComboBox();
@@ -65,10 +68,7 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.dataGridViewListphieuthu = new System.Windows.Forms.DataGridView();
-            this.label4 = new System.Windows.Forms.Label();
             this.dataGridViewTkCo = new System.Windows.Forms.DataGridView();
-            this.label14 = new System.Windows.Forms.Label();
-            this.lb_machitietno = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -88,7 +88,7 @@
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.textBox2);
             this.panel1.Controls.Add(this.lbtenchitietno);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.txtquyenso);
             this.panel1.Controls.Add(this.label13);
             this.panel1.Controls.Add(this.txtsochungtugoc);
             this.panel1.Controls.Add(this.cbtkno);
@@ -114,6 +114,38 @@
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // lb_machitietno
+            // 
+            this.lb_machitietno.AutoSize = true;
+            this.lb_machitietno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_machitietno.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lb_machitietno.Location = new System.Drawing.Point(126, 322);
+            this.lb_machitietno.Name = "lb_machitietno";
+            this.lb_machitietno.Size = new System.Drawing.Size(40, 16);
+            this.lb_machitietno.TabIndex = 61;
+            this.lb_machitietno.Text = "Mã ct";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(341, 349);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(105, 16);
+            this.label14.TabIndex = 60;
+            this.label14.Text = "(Thêm:  Ctrl + N )";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(14, 345);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(53, 18);
+            this.label4.TabIndex = 59;
+            this.label4.Text = "Tk Có:";
+            // 
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -134,13 +166,14 @@
             this.lbtenchitietno.TabIndex = 11;
             this.lbtenchitietno.Text = "Chi tiết 1";
             // 
-            // textBox1
+            // txtquyenso
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(130, 87);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(118, 24);
-            this.textBox1.TabIndex = 27;
+            this.txtquyenso.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtquyenso.Location = new System.Drawing.Point(130, 87);
+            this.txtquyenso.Name = "txtquyenso";
+            this.txtquyenso.Size = new System.Drawing.Size(118, 24);
+            this.txtquyenso.TabIndex = 27;
+            this.txtquyenso.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtquyenso_KeyPress);
             // 
             // label13
             // 
@@ -353,7 +386,7 @@
             // button6
             // 
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.button6.Location = new System.Drawing.Point(25, 3);
+            this.button6.Location = new System.Drawing.Point(10, 4);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(113, 25);
             this.button6.TabIndex = 57;
@@ -404,7 +437,7 @@
             // btsua
             // 
             this.btsua.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btsua.Location = new System.Drawing.Point(269, 3);
+            this.btsua.Location = new System.Drawing.Point(256, 4);
             this.btsua.Name = "btsua";
             this.btsua.Size = new System.Drawing.Size(113, 25);
             this.btsua.TabIndex = 1;
@@ -416,7 +449,7 @@
             // btluu
             // 
             this.btluu.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btluu.Location = new System.Drawing.Point(148, 3);
+            this.btluu.Location = new System.Drawing.Point(132, 4);
             this.btluu.Name = "btluu";
             this.btluu.Size = new System.Drawing.Size(113, 25);
             this.btluu.TabIndex = 0;
@@ -465,22 +498,22 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewListphieuthu.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridViewListphieuthu.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewListphieuthu.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewListphieuthu.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewListphieuthu.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewListphieuthu.DefaultCellStyle = dataGridViewCellStyle10;
             this.dataGridViewListphieuthu.Location = new System.Drawing.Point(3, 30);
             this.dataGridViewListphieuthu.Name = "dataGridViewListphieuthu";
             this.dataGridViewListphieuthu.Size = new System.Drawing.Size(646, 337);
@@ -488,16 +521,6 @@
             this.dataGridViewListphieuthu.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewListphieuthu_CellClick);
             this.dataGridViewListphieuthu.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewListphieuthu_CellContentClick);
             this.dataGridViewListphieuthu.Paint += new System.Windows.Forms.PaintEventHandler(this.dataGridViewListphieuthu_Paint);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(14, 345);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(53, 18);
-            this.label4.TabIndex = 59;
-            this.label4.Text = "Tk Có:";
             // 
             // dataGridViewTkCo
             // 
@@ -511,30 +534,11 @@
             this.dataGridViewTkCo.Name = "dataGridViewTkCo";
             this.dataGridViewTkCo.Size = new System.Drawing.Size(1268, 254);
             this.dataGridViewTkCo.TabIndex = 3;
+            this.dataGridViewTkCo.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewTkCo_CellEndEdit);
+            this.dataGridViewTkCo.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewTkCo_CellValueChanged);
             this.dataGridViewTkCo.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.dataGridViewTkCo_EditingControlShowing);
             this.dataGridViewTkCo.Paint += new System.Windows.Forms.PaintEventHandler(this.dataGridViewTkCo_Paint);
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(341, 349);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(105, 16);
-            this.label14.TabIndex = 60;
-            this.label14.Text = "(Thêm:  Ctrl + N )";
-            // 
-            // lb_machitietno
-            // 
-            this.lb_machitietno.AutoSize = true;
-            this.lb_machitietno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_machitietno.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lb_machitietno.Location = new System.Drawing.Point(126, 322);
-            this.lb_machitietno.Name = "lb_machitietno";
-            this.lb_machitietno.Size = new System.Drawing.Size(40, 16);
-            this.lb_machitietno.TabIndex = 61;
-            this.lb_machitietno.Text = "Mã ct";
+            this.dataGridViewTkCo.Leave += new System.EventHandler(this.dataGridViewTkCo_Leave);
             // 
             // BeePhieuThu
             // 
@@ -596,7 +600,7 @@
         private System.Windows.Forms.TextBox txtdiengiai;
         private System.Windows.Forms.TextBox txtsotien;
         private System.Windows.Forms.TextBox txtsochungtugoc;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtquyenso;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label4;

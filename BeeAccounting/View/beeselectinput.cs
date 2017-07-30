@@ -68,7 +68,7 @@ namespace BEEACCOUNT.View
                 this.value = (cbselect.SelectedItem as ComboboxItem).Value.ToString();
                 this.valuetext = (cbselect.SelectedItem as ComboboxItem).Text.ToString();
                 this.kq = true;
-                this.Hide();
+                this.Close();
 
             }
             else

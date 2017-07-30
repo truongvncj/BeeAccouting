@@ -85,7 +85,8 @@ namespace BEEACCOUNT
                                 }
                             }
                         }
-                        rs += (rs == "" ? " " : ", ") + ch[n[i]];// đọc số
+                    //    rs += (rs == "" ? " " : ", ") + ch[n[i]];// đọc số
+                        rs += (rs == "" ? " " : " ") + ch[n[i]];// đọc số
                         rs += " " + (i % 3 == 0 ? u[i] : u[i % 3]);// đọc đơn vị
                     }
                     if (rs[rs.Length - 1] != ' ')
