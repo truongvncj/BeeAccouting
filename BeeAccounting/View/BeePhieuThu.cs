@@ -277,11 +277,14 @@ namespace BEEACCOUNT.View
             dataGridViewTkCo.Columns["Mã_chi_tiết"].Width = 100;
             dataGridViewTkCo.Columns["Mã_chi_tiết"].SortMode = DataGridViewColumnSortMode.NotSortable;
             dataGridViewTkCo.Columns["Mã_chi_tiết"].ReadOnly = true;
+            dataGridViewTkCo.Columns["Mã_chi_tiết"].DefaultCellStyle.BackColor = Color.LightGray;
 
             dataGridViewTkCo.Columns["Tên_chi_tiết"].DisplayIndex = 2;
             dataGridViewTkCo.Columns["Tên_chi_tiết"].Width = 200;
             dataGridViewTkCo.Columns["Tên_chi_tiết"].SortMode = DataGridViewColumnSortMode.NotSortable;
             dataGridViewTkCo.Columns["Tên_chi_tiết"].ReadOnly = true;
+            dataGridViewTkCo.Columns["Tên_chi_tiết"].DefaultCellStyle.BackColor = Color.LightGray;
+
 
             dataGridViewTkCo.Columns["Số_tiền"].DisplayIndex = 3;
             dataGridViewTkCo.Columns["Số_tiền"].Width = 100;
@@ -572,7 +575,16 @@ namespace BEEACCOUNT.View
                 return;
             }
 
-
+            if (txttaikhoanco.Text != null)
+            {
+                soquy.TKdoiung = txttaikhoanco.Text.ToString();
+            }
+            else
+            {
+                MessageBox.Show("Bạn chưa hạch toán tài khoản", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                dataGridViewTkCo.Focus();
+                return;
+            }
 
 
             //     if (Utils.IsValidnumber(lbmachitetno.Text))
@@ -1008,6 +1020,9 @@ namespace BEEACCOUNT.View
 
             cbtkno.SelectedIndex = -1;
 
+            lb_machitietno.Text = "";
+            lbtenchitietno.Text = "";
+            txttaikhoanco.Text = "";
 
             datepickngayphieu.Focus();
 
@@ -1714,6 +1729,49 @@ namespace BEEACCOUNT.View
                 }
 
 
+                #region  view lai cac tk có
+
+                String tkcotext = "";
+                int dem = 0;
+                for (int idrow = 0; idrow < dataGridViewTkCo.RowCount - 1; idrow++)
+                {
+
+
+
+                
+
+               //     tbl_kacontractsdatadetail newdetailContract = new tbl_kacontractsdatadetail();
+               // //    newdetailContract.Customercode = newcontract.Customer;//double.Parse(cb_customerka.Text);// (cbm.SelectedItem as ComboboxItem).Value.ToString();
+                ///    newdetailContract.CustomerType = newcontract.CustomerType;
+
+                    if ((String)dataGridViewTkCo.Rows[idrow].Cells["Tk_Có"].Value != null)
+                    {
+                        dem = dem + 1;
+                        if (dem >1)
+                        {
+
+                            tkcotext += ";" + dataGridViewTkCo.Rows[idrow].Cells["Tk_Có"].Value.ToString().Trim(); // chính la program
+
+                        }
+                        else
+                        {
+                            tkcotext +=  dataGridViewTkCo.Rows[idrow].Cells["Tk_Có"].Value.ToString().Trim(); // chính la program
+
+                        }
+
+                    }
+                   
+
+
+
+                    
+                }
+
+                txttaikhoanco.Text = tkcotext;
+
+
+                    #endregion
+
 
 
 
@@ -1723,10 +1781,65 @@ namespace BEEACCOUNT.View
             }
 
 
-        }
+            }
 
         private void dataGridViewTkCo_Leave(object sender, EventArgs e)
         {
+
+        }
+
+        private void dataGridViewTkCo_CellErrorTextChanged(object sender, DataGridViewCellEventArgs e)
+        {
+
+
+        }
+
+        private void dataGridViewTkCo_DataError(object sender, DataGridViewDataErrorEventArgs anError)
+        {
+            
+        }
+
+        private void dataGridViewTkCo_DataError_1(object sender, DataGridViewDataErrorEventArgs anError)
+        {
+
+
+         
+            String errortext = "Lỗi dữ liệu nhập vào ";
+
+
+            if (anError.Context == DataGridViewDataErrorContexts.Commit)
+            {
+                errortext = "Dữ liệu nhập vào không phù hợp";
+            }
+            if (anError.Context == DataGridViewDataErrorContexts.CurrentCellChange)
+            {
+                errortext = "Lỗi khi sửa dữ liệu ô";
+            }
+            if (anError.Context == DataGridViewDataErrorContexts.Parsing)
+            {
+                errortext = "Lỗi khi chuyển kiểu dữ liệu";
+            }
+            if (anError.Context == DataGridViewDataErrorContexts.LeaveControl)
+            {
+                errortext = "Lỗi khi chuyển ô ";
+            }
+            if (anError.Context == DataGridViewDataErrorContexts.Formatting)
+            {
+                errortext = "Loại dữ liệu nhập vào không đúng";
+            }
+
+
+            MessageBox.Show("Lỗi :" + errortext, "Thông báo",  MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            if ((anError.Exception) is ConstraintException)
+            {
+                DataGridView view = (DataGridView)sender;
+                view.Rows[anError.RowIndex].ErrorText = "";
+                view.Rows[anError.RowIndex].Cells[anError.ColumnIndex].ErrorText = "";
+
+                anError.ThrowException = false;
+            }
+
 
         }
     }

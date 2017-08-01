@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BeePhieuThu));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lb_machitietno = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txttaikhoanco = new System.Windows.Forms.TextBox();
             this.lbtenchitietno = new System.Windows.Forms.Label();
             this.txtquyenso = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -86,7 +86,7 @@
             this.panel1.Controls.Add(this.lb_machitietno);
             this.panel1.Controls.Add(this.label14);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.txttaikhoanco);
             this.panel1.Controls.Add(this.lbtenchitietno);
             this.panel1.Controls.Add(this.txtquyenso);
             this.panel1.Controls.Add(this.label13);
@@ -146,14 +146,14 @@
             this.label4.TabIndex = 59;
             this.label4.Text = "Tk Có:";
             // 
-            // textBox2
+            // txttaikhoanco
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(130, 343);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(206, 24);
-            this.textBox2.TabIndex = 29;
+            this.txttaikhoanco.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txttaikhoanco.Location = new System.Drawing.Point(130, 343);
+            this.txttaikhoanco.Name = "txttaikhoanco";
+            this.txttaikhoanco.ReadOnly = true;
+            this.txttaikhoanco.Size = new System.Drawing.Size(206, 24);
+            this.txttaikhoanco.TabIndex = 29;
             // 
             // lbtenchitietno
             // 
@@ -498,22 +498,22 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewListphieuthu.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridViewListphieuthu.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewListphieuthu.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewListphieuthu.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewListphieuthu.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewListphieuthu.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewListphieuthu.Location = new System.Drawing.Point(3, 30);
             this.dataGridViewListphieuthu.Name = "dataGridViewListphieuthu";
             this.dataGridViewListphieuthu.Size = new System.Drawing.Size(646, 337);
@@ -535,7 +535,9 @@
             this.dataGridViewTkCo.Size = new System.Drawing.Size(1268, 254);
             this.dataGridViewTkCo.TabIndex = 3;
             this.dataGridViewTkCo.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewTkCo_CellEndEdit);
+            this.dataGridViewTkCo.CellErrorTextChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewTkCo_CellErrorTextChanged);
             this.dataGridViewTkCo.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewTkCo_CellValueChanged);
+            this.dataGridViewTkCo.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dataGridViewTkCo_DataError_1);
             this.dataGridViewTkCo.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.dataGridViewTkCo_EditingControlShowing);
             this.dataGridViewTkCo.Paint += new System.Windows.Forms.PaintEventHandler(this.dataGridViewTkCo_Paint);
             this.dataGridViewTkCo.Leave += new System.EventHandler(this.dataGridViewTkCo_Leave);
@@ -602,7 +604,7 @@
         private System.Windows.Forms.TextBox txtsochungtugoc;
         private System.Windows.Forms.TextBox txtquyenso;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txttaikhoanco;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView dataGridViewTkCo;
         private System.Windows.Forms.Label label14;
