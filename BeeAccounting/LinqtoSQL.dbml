@@ -193,13 +193,14 @@
       <Column Name="Ngayctu" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="manghiepvu" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
       <Column Name="nghiepvuso" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="machitiettk" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="username" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
       <Column Name="TkNo" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
       <Column Name="TkCo" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
       <Column Name="MaCTietTKCo" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="MaCTietTKNo" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Kyhieuctu" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Soctu" Type="System.Int32" DbType="Int" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.tbl_SoQuy" Member="tbl_SoQuys">

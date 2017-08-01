@@ -768,7 +768,7 @@ namespace BEEACCOUNT.View
             for (int idrow = 0; idrow < dataGridViewTkCo.RowCount - 1; idrow++)
             {
 
-                if ((string)dataGridViewTkCo.Rows[idrow].Cells["Tk_Có"].Value != null)
+                if ((string)dataGridViewTkCo.Rows[idrow].Cells["Tk_Có"].Value != "")
                 {
 
                     tbl_Socai socai = new tbl_Socai();
@@ -777,9 +777,39 @@ namespace BEEACCOUNT.View
 
 
                     socai.TkCo = dataGridViewTkCo.Rows[idrow].Cells["Tk_Có"].Value.ToString().Trim();
-                    if (dataGridViewTkCo.Rows[idrow].Cells["Mã_chi_tiết"].Value != null)
+                    if ((string)dataGridViewTkCo.Rows[idrow].Cells["Mã_chi_tiết"].Value != "")
                     {
                         socai.MaCTietTKCo = int.Parse(dataGridViewTkCo.Rows[idrow].Cells["Mã_chi_tiết"].Value.ToString());
+
+                    }
+
+                    if ((string)dataGridViewTkCo.Rows[idrow].Cells["Ký_hiêu"].Value != "")
+                    {
+                        socai.Kyhieuctu = dataGridViewTkCo.Rows[idrow].Cells["Ký_hiêu"].Value.ToString();
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Bạn chua nhập ký hiệu chứng từ", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        //dataGridViewTkCo.Rows[idrow].Cells["Ký_hiêu"].
+                        return;
+                    }
+
+                    if ((string)dataGridViewTkCo.Rows[idrow].Cells["Số_chứng_từ"].Value != "")
+                    {
+                        socai.Soctu = int.Parse(dataGridViewTkCo.Rows[idrow].Cells["Số_chứng_từ"].Value.ToString());
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Bạn chua nhập số chứng từ", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        //dataGridViewTkCo.Rows[idrow].Cells["Ký_hiêu"].
+                        return;
+                    }
+
+                    if ((string)dataGridViewTkCo.Rows[idrow].Cells["Ký_hiêu"].Value != "")
+                    {
+                        socai.Kyhieuctu = dataGridViewTkCo.Rows[idrow].Cells["Ký_hiêu"].Value.ToString();
 
                     }
 
@@ -805,7 +835,7 @@ namespace BEEACCOUNT.View
 
 
 
-                    if (dataGridViewTkCo.Rows[idrow].Cells["Số_tiền"].Value != null)
+                    if (dataGridViewTkCo.Rows[idrow].Cells["Số_tiền"].Value != DBNull.Value)
                     {
                         socai.PsCo = double.Parse(dataGridViewTkCo.Rows[idrow].Cells["Số_tiền"].Value.ToString());
                         socai.PsNo = double.Parse(dataGridViewTkCo.Rows[idrow].Cells["Số_tiền"].Value.ToString());
