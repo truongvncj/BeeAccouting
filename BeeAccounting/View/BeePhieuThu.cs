@@ -33,39 +33,12 @@ namespace BEEACCOUNT.View
             }
         }
 
-        public void reloadseachview(string labe1, string labe2, string labe3)
+        public void reloadseachview(string nguoinop, string diachi, string noidung)
         {
-            string connection_string = Utils.getConnectionstr();
-            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
 
 
 
-            var Listphieuthu = from listpt in dc.tbl_SoQuys
-                               where listpt.Machungtu == "PT"    // mã 8 là tiền mặt
-                                                                 //     ((int)tbl_KaCustomer.Customer).ToString().Contains(valueinput)
-                      && listpt.Nguoinopnhantien.Contains(labe1)
-                      && listpt.Diachinguoinhannop.Contains(labe2)
-                      && listpt.Diengiai.Contains(labe3)
-                               select new
-                               {
-
-                                   Ngày_chứng_từ = listpt.Ngayctu,
-                                   Số_chứng_từ = listpt.Sochungtu,
-                                   TK_Nợ = listpt.TKtienmat,
-                                   TK_Có = listpt.TKdoiung,
-                                   Số_Tiền = listpt.PsNo,
-                                   Diễn_Giải = listpt.Diengiai,
-                                   Người_nộp_tiền = listpt.Nguoinopnhantien,
-                                   Địa_chỉ_người_nộp_tiền = listpt.Diachinguoinhannop,
-                                   User_name = listpt.Username,
-                                   Ngày_nhập_liệu = listpt.Ngayghiso,
-                                   ID = listpt.id
-
-                               };
-
-
-
-            dataGridViewListphieuthu.DataSource = Listphieuthu;
+            dataGridViewListphieuthu.DataSource = Model.Phieuthuchi.reloadseachview("PT", nguoinop, diachi, noidung);
 
 
         }
@@ -325,28 +298,7 @@ namespace BEEACCOUNT.View
 
 
 
-            #region load list phieu thu
-            var Listphieuthu = from listpt in dc.tbl_SoQuys
-                               where listpt.Machungtu == "PT" // mã 8 là tiền mặt
-                               select new
-                               {
-
-                                   Ngày_chứng_từ = listpt.Ngayctu,
-                                   Số_chứng_từ = listpt.Sochungtu,
-                                   TK_Nợ = listpt.TKtienmat,
-                                   TK_Có = listpt.TKdoiung,
-                                   Số_Tiền = listpt.PsNo,
-                                   Diễn_Giải = listpt.Diengiai,
-                                   Người_nộp_tiền = listpt.Nguoinopnhantien,
-                                   Địa_chỉ_người_nộp_tiền = listpt.Diachinguoinhannop,
-                                   User_name = listpt.Username,
-                                   Ngày_nhập_liệu = listpt.Ngayghiso,
-                                   ID = listpt.id
-
-                               };
-
-            dataGridViewListphieuthu.DataSource = Listphieuthu;
-            #endregion
+            dataGridViewListphieuthu.DataSource = Model.Phieuthuchi.LisDanhSachphieuthuchi("PT");
 
             #endregion load datanew
 
@@ -577,7 +529,16 @@ namespace BEEACCOUNT.View
 
             if (txttaikhoanco.Text != null)
             {
-                soquy.TKdoiung = txttaikhoanco.Text.ToString();
+
+                if (txttaikhoanco.Text.Length > 225)
+                {
+                    soquy.TKdoiung = txttaikhoanco.Text.ToString().Substring(225);
+                }
+                else
+                {
+                    soquy.TKdoiung = txttaikhoanco.Text.ToString();
+                }
+
             }
             else
             {
@@ -799,6 +760,168 @@ namespace BEEACCOUNT.View
 
             #endregion add new phieu thu
 
+
+            #region  ghi vao so cai
+
+            string tkcotext = "";
+            // int dem = 0;
+            for (int idrow = 0; idrow < dataGridViewTkCo.RowCount - 1; idrow++)
+            {
+
+                if ((string)dataGridViewTkCo.Rows[idrow].Cells["Tk_Có"].Value != null)
+                {
+
+                    tbl_Socai socai = new tbl_Socai();
+
+                    //  //  string username, string tkno, string tkco, float psno, float psco, string diengiai, string manghiepvu, int sochunngtu, DateTime ngaychungtu, DateTime ngayghiso
+
+
+                    socai.TkCo = dataGridViewTkCo.Rows[idrow].Cells["Tk_Có"].Value.ToString().Trim();
+                    if (dataGridViewTkCo.Rows[idrow].Cells["Mã_chi_tiết"].Value != null)
+                    {
+                        socai.MaCTietTKCo = int.Parse(dataGridViewTkCo.Rows[idrow].Cells["Mã_chi_tiết"].Value.ToString());
+
+                    }
+
+                    if (cbtkno.SelectedItem != null)
+                    {
+                        socai.TkNo = (cbtkno.SelectedItem as ComboboxItem).Value.ToString();
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Bạn chua định khoản tài khoản tiền mặt", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        dataGridViewTkCo.Focus();
+                        return;
+                    }
+
+
+
+
+                    if (lb_machitietno.Text != null)
+                    {
+                        socai.MaCTietTKNo = int.Parse(lb_machitietno.Text.ToString());
+                    }
+
+
+
+                    if (dataGridViewTkCo.Rows[idrow].Cells["Số_tiền"].Value != null)
+                    {
+                        socai.PsCo = double.Parse(dataGridViewTkCo.Rows[idrow].Cells["Số_tiền"].Value.ToString());
+                        socai.PsNo = double.Parse(dataGridViewTkCo.Rows[idrow].Cells["Số_tiền"].Value.ToString());
+                    }
+                    else
+                    {
+                        MessageBox.Show("Bạn chua nhập số tiền", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        dataGridViewTkCo.Focus();
+                        return;
+                    }
+
+                    socai.Diengiai = dataGridViewTkCo.Rows[idrow].Cells["Diễn_giải"].Value.ToString();
+                    socai.manghiepvu = "PT";
+                    socai.nghiepvuso = int.Parse(txtsophieu.Text.ToString());
+
+                   
+                    if (dataGridViewTkCo.Rows[idrow].Cells["Ngày_chứng_từ"].Value != null)
+                    {
+                        socai.Ngayctu = (DateTime)dataGridViewTkCo.Rows[idrow].Cells["Ngày_chứng_từ"].Value;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Bạn chua nhập ngày chứng từ", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        dataGridViewTkCo.Focus();
+                        return;
+                    }
+
+                    socai.Ngayghiso = DateTime.Today;
+                    socai.username = Utils.getusername();
+
+                    // ghi no tai kkhoan tien mat
+
+                    // ghi co/ no vao so cai tai khoan so cai
+                    Model.Taikhoanketoan.ghisocaitk(socai);
+
+
+                    //dataGridViewTkCo.Columns["Tk_Có"].DisplayIndex = 0;
+                    //dataGridViewTkCo.Columns["Tk_Có"].Width = 100;
+                    //dataGridViewTkCo.Columns["Tk_Có"].SortMode = DataGridViewColumnSortMode.NotSortable;
+
+                    //dataGridViewTkCo.Columns["Mã_chi_tiết"].DisplayIndex = 1;
+                    //dataGridViewTkCo.Columns["Mã_chi_tiết"].Width = 100;
+                    //dataGridViewTkCo.Columns["Mã_chi_tiết"].SortMode = DataGridViewColumnSortMode.NotSortable;
+                    //dataGridViewTkCo.Columns["Mã_chi_tiết"].ReadOnly = true;
+                    //dataGridViewTkCo.Columns["Mã_chi_tiết"].DefaultCellStyle.BackColor = Color.LightGray;
+
+                    //dataGridViewTkCo.Columns["Tên_chi_tiết"].DisplayIndex = 2;
+                    //dataGridViewTkCo.Columns["Tên_chi_tiết"].Width = 200;
+                    //dataGridViewTkCo.Columns["Tên_chi_tiết"].SortMode = DataGridViewColumnSortMode.NotSortable;
+                    //dataGridViewTkCo.Columns["Tên_chi_tiết"].ReadOnly = true;
+                    //dataGridViewTkCo.Columns["Tên_chi_tiết"].DefaultCellStyle.BackColor = Color.LightGray;
+
+
+                    //dataGridViewTkCo.Columns["Số_tiền"].DisplayIndex = 3;
+                    //dataGridViewTkCo.Columns["Số_tiền"].Width = 100;
+                    //dataGridViewTkCo.Columns["Số_tiền"].SortMode = DataGridViewColumnSortMode.NotSortable;
+                    //dataGridViewTkCo.Columns["Số_tiền"].DefaultCellStyle.Format = "N0";
+
+
+                    //dataGridViewTkCo.Columns["Diễn_giải"].DisplayIndex = 4;
+                    //dataGridViewTkCo.Columns["Diễn_giải"].Width = 300;
+                    //dataGridViewTkCo.Columns["Diễn_giải"].SortMode = DataGridViewColumnSortMode.NotSortable;
+
+
+                    //dataGridViewTkCo.Columns["Ký_hiêu"].DisplayIndex = 5;
+                    //dataGridViewTkCo.Columns["Ký_hiêu"].Width = 100;
+                    //dataGridViewTkCo.Columns["Ký_hiêu"].SortMode = DataGridViewColumnSortMode.NotSortable;
+
+
+                    //dataGridViewTkCo.Columns["Ngày_chứng_từ"].DisplayIndex = 6;
+                    //dataGridViewTkCo.Columns["Ngày_chứng_từ"].Width = 100;
+                    //dataGridViewTkCo.Columns["Ngày_chứng_từ"].SortMode = DataGridViewColumnSortMode.NotSortable;
+
+
+                    //dataGridViewTkCo.Columns["Số_chứng_từ"].DisplayIndex = 7;
+                    //dataGridViewTkCo.Columns["Số_chứng_từ"].Width = 200;
+                    //dataGridViewTkCo.Columns["Số_chứng_từ"].SortMode = DataGridViewColumnSortMode.NotSortable;
+
+
+
+
+
+
+
+                    //dem = dem + 1;
+                    //if (dem > 1)
+                    //{
+
+                    //    tkcotext += ";" + dataGridViewTkCo.Rows[idrow].Cells["Tk_Có"].Value.ToString().Trim(); // chính la program
+
+                    //}
+                    //else
+                    //{
+                    //    tkcotext += dataGridViewTkCo.Rows[idrow].Cells["Tk_Có"].Value.ToString().Trim(); // chính la program
+
+                    //}
+
+                }
+
+
+
+
+
+            }
+
+            txttaikhoanco.Text = tkcotext;
+
+
+            #endregion
+
+
+
+
+            MessageBox.Show("Số phiếu vừa lưu: " + this.sophieuthu, "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
             #region  list black phiếu
             btsua.Enabled = false;
 
@@ -820,31 +943,8 @@ namespace BEEACCOUNT.View
 
             #endregion
 
-            #region load list phieu thu
-            var Listphieuthu = from listpt in dc.tbl_SoQuys
-                               where listpt.Machungtu == "PT" // mã 8 là tiền mặt
-                               select new
-                               {
+            dataGridViewListphieuthu.DataSource = Model.Phieuthuchi.LisDanhSachphieuthuchi("PT");
 
-                                   Ngày_chứng_từ = listpt.Ngayctu,
-                                   Số_chứng_từ = "PT-" + listpt.Sochungtu,
-                                   TK_Nợ = listpt.TKtienmat,
-                                   TK_Có = listpt.TKdoiung,
-                                   Số_Tiền = listpt.PsNo,
-                                   Diễn_Giải = listpt.Diengiai,
-                                   Người_nộp = listpt.Nguoinopnhantien,
-                                   Địa_chỉ = listpt.Diachinguoinhannop,
-                                   Username = listpt.Username,
-                                   Ngày_nhập_liệu = listpt.Ngayghiso,
-                                   ID = listpt.id
-
-                               };
-
-            dataGridViewListphieuthu.DataSource = Listphieuthu;
-            #endregion
-
-
-            MessageBox.Show("Số phiếu vừa lưu: " + this.sophieuthu, "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void dataGridViewListphieuthu_Paint(object sender, PaintEventArgs e)
@@ -1611,7 +1711,7 @@ namespace BEEACCOUNT.View
             currentCell = this.dataGridViewTkCo.CurrentCell;
 
 
-            if (currentCell.Value != null && currentCell.ColumnIndex ==1) // cot 1 la ve ma tai khoan
+            if (currentCell.Value != null && currentCell.ColumnIndex == 1) // cot 1 la ve ma tai khoan
             {
 
                 #region điền thông tin code ma chi tiet luon
@@ -1738,16 +1838,16 @@ namespace BEEACCOUNT.View
 
 
 
-                
 
-               //     tbl_kacontractsdatadetail newdetailContract = new tbl_kacontractsdatadetail();
-               // //    newdetailContract.Customercode = newcontract.Customer;//double.Parse(cb_customerka.Text);// (cbm.SelectedItem as ComboboxItem).Value.ToString();
-                ///    newdetailContract.CustomerType = newcontract.CustomerType;
+
+                    //     tbl_kacontractsdatadetail newdetailContract = new tbl_kacontractsdatadetail();
+                    // //    newdetailContract.Customercode = newcontract.Customer;//double.Parse(cb_customerka.Text);// (cbm.SelectedItem as ComboboxItem).Value.ToString();
+                    ///    newdetailContract.CustomerType = newcontract.CustomerType;
 
                     if ((String)dataGridViewTkCo.Rows[idrow].Cells["Tk_Có"].Value != null)
                     {
                         dem = dem + 1;
-                        if (dem >1)
+                        if (dem > 1)
                         {
 
                             tkcotext += ";" + dataGridViewTkCo.Rows[idrow].Cells["Tk_Có"].Value.ToString().Trim(); // chính la program
@@ -1755,22 +1855,22 @@ namespace BEEACCOUNT.View
                         }
                         else
                         {
-                            tkcotext +=  dataGridViewTkCo.Rows[idrow].Cells["Tk_Có"].Value.ToString().Trim(); // chính la program
+                            tkcotext += dataGridViewTkCo.Rows[idrow].Cells["Tk_Có"].Value.ToString().Trim(); // chính la program
 
                         }
 
                     }
-                   
 
 
 
-                    
+
+
                 }
 
                 txttaikhoanco.Text = tkcotext;
 
 
-                    #endregion
+                #endregion
 
 
 
@@ -1781,7 +1881,7 @@ namespace BEEACCOUNT.View
             }
 
 
-            }
+        }
 
         private void dataGridViewTkCo_Leave(object sender, EventArgs e)
         {
@@ -1796,14 +1896,14 @@ namespace BEEACCOUNT.View
 
         private void dataGridViewTkCo_DataError(object sender, DataGridViewDataErrorEventArgs anError)
         {
-            
+
         }
 
         private void dataGridViewTkCo_DataError_1(object sender, DataGridViewDataErrorEventArgs anError)
         {
 
 
-         
+
             String errortext = "Lỗi dữ liệu nhập vào ";
 
 
@@ -1829,7 +1929,7 @@ namespace BEEACCOUNT.View
             }
 
 
-            MessageBox.Show("Lỗi :" + errortext, "Thông báo",  MessageBoxButtons.OK, MessageBoxIcon.Error);
+            MessageBox.Show("Lỗi :" + errortext, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             if ((anError.Exception) is ConstraintException)
             {

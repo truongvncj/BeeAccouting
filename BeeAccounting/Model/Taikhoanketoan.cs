@@ -109,5 +109,34 @@ namespace BEEACCOUNT.Model
 
 
         }
+
+
+
+        public static void ghisocaitk(tbl_Socai socai)
+        {
+            //  string username, string tkno, string tkco, float psno, float psco, string diengiai, string manghiepvu, int sochunngtu, DateTime ngaychungtu, DateTime ngayghiso
+
+            string connection_string = Utils.getConnectionstr();
+            LinqtoSQLDataContext db = new LinqtoSQLDataContext(connection_string);
+
+            tbl_Socai socaips = new tbl_Socai();
+
+            socaips.TkCo = socai.TkCo;
+            socaips.MaCTietTKCo = socai.MaCTietTKCo;
+            socaips.MaCTietTKNo = socai.MaCTietTKNo;
+
+            socaips.TkNo = socai.TkNo;
+            socaips.PsCo = socai.PsCo;
+            socaips.PsNo = socai.PsNo;
+            socaips.Diengiai = socai.Diengiai;
+            socaips.manghiepvu = socai.manghiepvu;
+            socaips.nghiepvuso = socai.nghiepvuso;
+            socaips.Ngayctu = socai.Ngayctu;
+            socaips.Ngayghiso = socai.Ngayghiso;
+            socaips.username = socai.username;
+
+            db.tbl_Socais.InsertOnSubmit(socaips);
+            db.SubmitChanges();
+        }
     }
 }

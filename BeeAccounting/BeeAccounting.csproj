@@ -108,6 +108,7 @@
     <Compile Include="Model\Congty.cs" />
     <Compile Include="Model\Danhsachtkchitiet.cs" />
     <Compile Include="Model\loaitaikhoanketoan.cs" />
+    <Compile Include="Model\Phieuthuchi.cs" />
     <Compile Include="Model\Salesinput_ctrl.cs" />
     <Compile Include="Model\customerinput_ctrl.cs" />
     <Compile Include="Model\fuctionprog.cs" />
