@@ -48,6 +48,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.lbtenchitiet = new System.Windows.Forms.Label();
             this.cbtkco = new System.Windows.Forms.ComboBox();
+            this.tbmachitiet = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -99,9 +100,11 @@
             this.bt_themvao.TabIndex = 7;
             this.bt_themvao.Text = "Thêm ";
             this.bt_themvao.UseVisualStyleBackColor = true;
+            this.bt_themvao.Click += new System.EventHandler(this.bt_themvao_Click);
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.tbmachitiet);
             this.groupBox1.Controls.Add(this.datepickngayphieu);
             this.groupBox1.Controls.Add(this.txtkyhieuctu);
             this.groupBox1.Controls.Add(this.label7);
@@ -237,11 +240,11 @@
             this.lbtenchitiet.AutoSize = true;
             this.lbtenchitiet.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbtenchitiet.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lbtenchitiet.Location = new System.Drawing.Point(124, 56);
+            this.lbtenchitiet.Location = new System.Drawing.Point(171, 56);
             this.lbtenchitiet.Name = "lbtenchitiet";
-            this.lbtenchitiet.Size = new System.Drawing.Size(11, 16);
+            this.lbtenchitiet.Size = new System.Drawing.Size(72, 16);
             this.lbtenchitiet.TabIndex = 34;
-            this.lbtenchitiet.Text = " ";
+            this.lbtenchitiet.Text = "Ten chi tiet";
             // 
             // cbtkco
             // 
@@ -254,6 +257,17 @@
             this.cbtkco.Size = new System.Drawing.Size(317, 24);
             this.cbtkco.TabIndex = 0;
             this.cbtkco.SelectionChangeCommitted += new System.EventHandler(this.cbtkco_SelectionChangeCommitted);
+            // 
+            // tbmachitiet
+            // 
+            this.tbmachitiet.AutoSize = true;
+            this.tbmachitiet.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbmachitiet.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.tbmachitiet.Location = new System.Drawing.Point(125, 56);
+            this.tbmachitiet.Name = "tbmachitiet";
+            this.tbmachitiet.Size = new System.Drawing.Size(40, 16);
+            this.tbmachitiet.TabIndex = 62;
+            this.tbmachitiet.Text = "Mã ct";
             // 
             // BeeHtoansocaidoiungphieuthu
             // 
@@ -301,5 +315,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DateTimePicker datepickngayphieu;
+        private System.Windows.Forms.Label tbmachitiet;
     }
 }

@@ -201,6 +201,8 @@
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="Kyhieuctu" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="Soctu" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tenchitietCo" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="tenchitietNo" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.tbl_SoQuy" Member="tbl_SoQuys">

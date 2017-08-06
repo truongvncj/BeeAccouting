@@ -33,6 +33,197 @@ namespace BEEACCOUNT.View
             }
         }
 
+
+        public void add_detailGridviewTkCo(tbl_Socai socaitemp)
+        {
+
+
+            //dataGridViewTkCo.Columns["Tk_Có"].DisplayIndex = 0;
+            //dataGridViewTkCo.Columns["Tk_Có"].Width = 100;
+            //dataGridViewTkCo.Columns["Tk_Có"].SortMode = DataGridViewColumnSortMode.NotSortable;
+
+            //dataGridViewTkCo.Columns["Mã_chi_tiết"].DisplayIndex = 1;
+            //dataGridViewTkCo.Columns["Mã_chi_tiết"].Width = 100;
+            //dataGridViewTkCo.Columns["Mã_chi_tiết"].SortMode = DataGridViewColumnSortMode.NotSortable;
+            //dataGridViewTkCo.Columns["Mã_chi_tiết"].ReadOnly = true;
+            //dataGridViewTkCo.Columns["Mã_chi_tiết"].DefaultCellStyle.BackColor = Color.LightGray;
+
+            //dataGridViewTkCo.Columns["Tên_chi_tiết"].DisplayIndex = 2;
+            //dataGridViewTkCo.Columns["Tên_chi_tiết"].Width = 200;
+            //dataGridViewTkCo.Columns["Tên_chi_tiết"].SortMode = DataGridViewColumnSortMode.NotSortable;
+            //dataGridViewTkCo.Columns["Tên_chi_tiết"].ReadOnly = true;
+            //dataGridViewTkCo.Columns["Tên_chi_tiết"].DefaultCellStyle.BackColor = Color.LightGray;
+
+
+            //dataGridViewTkCo.Columns["Số_tiền"].DisplayIndex = 3;
+            //dataGridViewTkCo.Columns["Số_tiền"].Width = 100;
+            //dataGridViewTkCo.Columns["Số_tiền"].SortMode = DataGridViewColumnSortMode.NotSortable;
+            //dataGridViewTkCo.Columns["Số_tiền"].DefaultCellStyle.Format = "N0";
+
+
+            //dataGridViewTkCo.Columns["Diễn_giải"].DisplayIndex = 4;
+            //dataGridViewTkCo.Columns["Diễn_giải"].Width = 300;
+            //dataGridViewTkCo.Columns["Diễn_giải"].SortMode = DataGridViewColumnSortMode.NotSortable;
+
+
+            //dataGridViewTkCo.Columns["Ký_hiêu"].DisplayIndex = 5;
+            //dataGridViewTkCo.Columns["Ký_hiêu"].Width = 100;
+            //dataGridViewTkCo.Columns["Ký_hiêu"].SortMode = DataGridViewColumnSortMode.NotSortable;
+
+
+            //dataGridViewTkCo.Columns["Ngày_chứng_từ"].DisplayIndex = 6;
+            //dataGridViewTkCo.Columns["Ngày_chứng_từ"].Width = 100;
+            //dataGridViewTkCo.Columns["Ngày_chứng_từ"].SortMode = DataGridViewColumnSortMode.NotSortable;
+
+
+            //dataGridViewTkCo.Columns["Số_chứng_từ"].DisplayIndex = 7;
+            //dataGridViewTkCo.Columns["Số_chứng_từ"].Width = 200;
+            //dataGridViewTkCo.Columns["Số_chứng_từ"].SortMode = DataGridViewColumnSortMode.NotSortable;
+            //DataTable dt = dataGridView1.DataSource as DataTable;
+            //  /-------------------
+            //            1
+            //down vote
+
+
+
+            //After adding a new row, you have to set the row index in boundary of row count. You have to do these steps.
+
+            //    First, add row in DataGridView:
+
+            //            dataGridView1.Rows.Add();
+
+            //            Second, set new row index to count - 1:
+
+            //    int RowIndex = dataGridView1.RowCount - 1;
+
+            //            Then at last, set the controls values in it:
+
+            //            DataGridViewRow R = dataGridView1.Rows[RowIndex];
+            //            R.Cells["YourName"].Value = tbName.Text;
+
+            //            And if your datagrid's source is datattable you have to add row in that table.Give new values to the newly added row in data table and at last rebind the datagrid with updated datatable.
+
+            //    DataRow row = dt.NewRow();
+            //            row["columnname"] = tbName.Text.toString();
+            //            dt.Rows.Add(row);
+            //            dt.AcceptChanges();
+
+            //            dataGridView1.DataSource = dt;
+            //            dataGridView1.DataBind();
+
+            //            Check if you have set the index o
+            string connection_string = Utils.getConnectionstr();
+            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+
+            //---------------
+
+            //    DataTable dataTable = (DataTable)dataGridViewTkCo.DataSource;
+            //    DataRow drToAdd = dataTable.NewRow();
+
+            ////    drToAdd["Tk_Có"] = socaitemp.TkCo;
+            //    drToAdd["Diễn_giải"] = socaitemp.Diengiai;
+            //    drToAdd["Số_chứng_từ"] = socaitemp.Soctu;
+            //    drToAdd["Ký_hiêu"] = socaitemp.Kyhieuctu;
+            //    drToAdd["Số_tiền"] = socaitemp.PsCo;
+            //    drToAdd["Mã_chi_tiết"] = socaitemp.MaCTietTKCo;
+            //    drToAdd["Tên_chi_tiết"] = socaitemp.tenchitietCo;
+
+
+            //    dataTable.Rows.Add(drToAdd);
+            //    dataTable.AcceptChanges();
+            //    ComboBox cbm;
+            //    DataGridViewCell currentCell;
+            //    currentCell = this.dataGridViewTkCo.CurrentCell;
+
+            // //   int i = currentCell.RowIndex;
+            //    int i = dataTable.Rows.Count;
+
+            //    //      List<ComboboxItem> cblis = (ComboboxItem)dataGridViewTkCo.Rows[i].Cells["Tk_Có"].Value;
+
+            //    ComboboxItem cbitem = new ComboboxItem();
+            //    cbitem.Value = socaitemp.TkCo;
+            //    cbitem.Text = socaitemp.TkCo;
+            //    string SelectedItem = cbitem.Value.ToString();
+
+
+
+            //    dataGridViewTkCo.Rows[i].Cells["Tk_Có"].Value = SelectedItem;
+            //    dataGridViewTkCo.Rows[i].Cells["Ngày_chứng_từ"].Value = socaitemp.Ngayctu;
+            //    //  private DateTimePicker cellDateTimePicker = new DateTimePicker();
+            //    // DateTimePicker[] sp = new DateTimePicker[100];
+            //    void EndEdit()
+            //{
+         //   dataGridViewTkCo.Controls.Clear();
+            var row = (DataGridViewRow)dataGridViewTkCo.RowTemplate.Clone();
+            row.CreateCells(dataGridViewTkCo, socaitemp.tenchitietCo, socaitemp.MaCTietTKCo);
+            dataGridViewTkCo.Rows.Add(row);
+
+
+            //dataGridViewTkCo.Rows.Add();
+
+            //            Second, set new row index to count - 1:
+
+       //     int RowIndex = dataGridViewTkCo.RowCount - 1;
+
+        //    Then at last, set the controls values in it:
+
+        //    DataGridViewRow R = dataGridViewTkCo.Rows[RowIndex];
+       //     R.Cells["Ngày_chứng_từ"].Value = socaitemp.Ngayctu;
+
+
+
+            //        if (cbm != null)
+            //        {
+            //            if (cbm.SelectedItem != null)
+            //            {
+            //                string SelectedItem = (cbm.SelectedItem as ComboboxItem).Value.ToString();// (cbm.SelectedItem as ComboboxItem).Value.ToString();
+
+            //                // int i = dataGridProgramdetail.CurrentRow.Index;
+            //                int i = currentCell.RowIndex;
+            //                string colname = this.dataGridViewTkCo.Columns[this.dataGridViewTkCo.CurrentCell.ColumnIndex].Name;
+
+            //                dataGridViewTkCo.Rows[i].Cells[colname].Value = SelectedItem;
+
+
+
+
+            //                //      MessageBox.Show(dataGridProgramdetail.Rows[i].Cells["Program"].Value.ToString());
+
+            //            }
+
+
+
+
+
+            //        }
+
+
+            //        //}
+            //    }
+            //private void dataGridViewTkCo_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
+            //{
+            //    if (e.Control is ComboBox)
+            //    {
+
+            //        cbm = (ComboBox)e.Control;
+
+            //        if (cbm != null)
+            //        {
+            //            cbm.SelectedIndexChanged += new EventHandler(cbm_SelectedIndexChanged);
+            //        }
+
+
+            //        currentCell = this.dataGridViewTkCo.CurrentCell;
+
+
+
+            //    }
+            //}
+
+
+        }
+
         public void reloadseachview(string nguoinop, string diachi, string noidung)
         {
 
@@ -192,28 +383,81 @@ namespace BEEACCOUNT.View
             dt.Columns.Add(new DataColumn("Ký_hiêu", typeof(string)));
             dt.Columns.Add(new DataColumn("Số_chứng_từ", typeof(int)));
 
+           // dt.Columns.Add(new DataColumn("Tk_Có", typeof(string))); //adding column for combobox
+   //         dt.Columns.Add(new DataColumn("Ngày_chứng_từ", typeof(DateTimePicker))); //adding column for combobox
+
+
+       //     #region comboud box value
+       //     DataGridViewComboBoxColumn cmb = new DataGridViewComboBoxColumn();
+       //     cmb.HeaderText = "Tk_Có";
+       //     cmb.Name = "Tk_Có";
+       //     //   cmb.MaxDropDownItems = 300;
+       //     var rs = from tbl_dstaikhoan in dc.tbl_dstaikhoans
+       //              orderby tbl_dstaikhoan.matk
+       //              select tbl_dstaikhoan;
+       //     foreach (var item in rs)
+       //     {
+       //         ComboboxItem cb = new ComboboxItem();
+       //         cb.Value = item.matk.Trim();
+       //         cb.Text = item.matk.Trim() + ": " + item.tentk;
+       //         cmb.Items.Add(cb);
+       //     }
+       ////     cmb.Items.Add("real");
+       //  //   cmb.Items.Add("sham");
+       //     cmb.DataPropertyName = "Tk_Có"; //Bound value to the datasource
+       //     cmb.DropDownWidth = 300;
+
+       //     dataGridViewTkCo.Columns.Add(cmb);
+       // //    dataGridView1.DataSource = dtCards;
+
+
+
+         //   #endregion
+
+
+            #region example compound box
+            //DataTable dtCards;
+            //dtCards = new DataTable();
+            //dtCards.Columns.Add("printedString");
+            //dtCards.Columns.Add("comboboxValue", typeof(String)); //adding column for combobox
+            //dtCards.Rows.Add("1", "real");
+            //dtCards.Rows.Add("2", "real");
+            //dtCards.Rows.Add("3", "real");
+            //dtCards.Rows.Add("4", "real");
+
+
+            //DataGridViewComboBoxColumn cmb = new DataGridViewComboBoxColumn();
+            //cmb.HeaderText = "Select Data";
+            //cmb.Name = "cmb";
+            //cmb.MaxDropDownItems = 2;
+            //cmb.Items.Add("real");
+            //cmb.Items.Add("sham");
+            //cmb.DataPropertyName = "comboboxValue"; //Bound value to the datasource
+
+            //dataGridView1.Columns.Add(cmb);
+            //dataGridView1.DataSource = dtCards;
+
+            #endregion
+            //         dt.Columns.Add(new DataColumn("Tk_Có", typeof(List<ComboboxItem>)));
 
 
             dataGridViewTkCo.DataSource = dt;
 
+
             DGV_DateTimePicker.DateTimePickerColumn col = new DGV_DateTimePicker.DateTimePickerColumn();
             col.HeaderText = "Ngày chứng từ";
             col.Name = "Ngày_chứng_từ";
+       //     col.DataPropertyName = "Ngày_chứng_từ";
             dataGridViewTkCo.Columns.Add(col);
 
 
             //    dataGridViewTkCo.Columns.Remove("Tk_Có");
 
-            #region  //    bindDataToDataGridViewComboPrograme();
+            #region  //    bindDataToDataGridViewComboPrograme(); Tk_Có
 
             DataGridViewComboBoxColumn cmbdgv = new DataGridViewComboBoxColumn();
 
-            //  dataGridProgramdetail.Columns["Program"].
-            // List<String> itemCodeList = new List<String>();
-            //     string connection_string = Utils.getConnectionstr();
 
-            //     LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
-            //  CombomCollection = null;
             List<ComboboxItem> CombomCollection = new List<ComboboxItem>();
             var rs = from tbl_dstaikhoan in dc.tbl_dstaikhoans
                      orderby tbl_dstaikhoan.matk
@@ -233,6 +477,8 @@ namespace BEEACCOUNT.View
             cmbdgv.DisplayMember = "Text";
             cmbdgv.Width = 100;
             cmbdgv.DropDownWidth = 300;
+       //    cmbdgv.DataPropertyName = "Tk_Có"; //Bound value to the datasource
+
 
             dataGridViewTkCo.Columns.Add(cmbdgv);
 
@@ -242,11 +488,13 @@ namespace BEEACCOUNT.View
 
             #endregion binddata
 
+
+
             dataGridViewTkCo.Columns["Tk_Có"].DisplayIndex = 0;
             dataGridViewTkCo.Columns["Tk_Có"].Width = 100;
             dataGridViewTkCo.Columns["Tk_Có"].SortMode = DataGridViewColumnSortMode.NotSortable;
-
-            dataGridViewTkCo.Columns["Mã_chi_tiết"].DisplayIndex = 1;
+            
+           dataGridViewTkCo.Columns["Mã_chi_tiết"].DisplayIndex = 1;
             dataGridViewTkCo.Columns["Mã_chi_tiết"].Width = 100;
             dataGridViewTkCo.Columns["Mã_chi_tiết"].SortMode = DataGridViewColumnSortMode.NotSortable;
             dataGridViewTkCo.Columns["Mã_chi_tiết"].ReadOnly = true;
@@ -783,7 +1031,7 @@ namespace BEEACCOUNT.View
 
                     }
 
-                    if ((string)dataGridViewTkCo.Rows[idrow].Cells["Ký_hiêu"].Value != "")
+                    if (dataGridViewTkCo.Rows[idrow].Cells["Ký_hiêu"].Value != null)
                     {
                         socai.Kyhieuctu = dataGridViewTkCo.Rows[idrow].Cells["Ký_hiêu"].Value.ToString();
 
@@ -795,7 +1043,7 @@ namespace BEEACCOUNT.View
                         return;
                     }
 
-                    if ((string)dataGridViewTkCo.Rows[idrow].Cells["Số_chứng_từ"].Value != "")
+                    if (dataGridViewTkCo.Rows[idrow].Cells["Số_chứng_từ"].Value != null)
                     {
                         socai.Soctu = int.Parse(dataGridViewTkCo.Rows[idrow].Cells["Số_chứng_từ"].Value.ToString());
 
@@ -1934,41 +2182,41 @@ namespace BEEACCOUNT.View
 
 
 
-            String errortext = "Lỗi dữ liệu nhập vào ";
+            //String errortext = "Lỗi dữ liệu nhập vào ";
 
 
-            if (anError.Context == DataGridViewDataErrorContexts.Commit)
-            {
-                errortext = "Dữ liệu nhập vào không phù hợp";
-            }
-            if (anError.Context == DataGridViewDataErrorContexts.CurrentCellChange)
-            {
-                errortext = "Lỗi khi sửa dữ liệu ô";
-            }
-            if (anError.Context == DataGridViewDataErrorContexts.Parsing)
-            {
-                errortext = "Lỗi khi chuyển kiểu dữ liệu";
-            }
-            if (anError.Context == DataGridViewDataErrorContexts.LeaveControl)
-            {
-                errortext = "Lỗi khi chuyển ô ";
-            }
-            if (anError.Context == DataGridViewDataErrorContexts.Formatting)
-            {
-                errortext = "Loại dữ liệu nhập vào không đúng";
-            }
+            //if (anError.Context == DataGridViewDataErrorContexts.Commit)
+            //{
+            //    errortext = "Dữ liệu nhập vào không phù hợp";
+            //}
+            //if (anError.Context == DataGridViewDataErrorContexts.CurrentCellChange)
+            //{
+            //    errortext = "Lỗi khi sửa dữ liệu ô";
+            //}
+            //if (anError.Context == DataGridViewDataErrorContexts.Parsing)
+            //{
+            //    errortext = "Lỗi khi chuyển kiểu dữ liệu";
+            //}
+            //if (anError.Context == DataGridViewDataErrorContexts.LeaveControl)
+            //{
+            //    errortext = "Lỗi khi chuyển ô ";
+            //}
+            //if (anError.Context == DataGridViewDataErrorContexts.Formatting)
+            //{
+            //    errortext = "Loại dữ liệu nhập vào không đúng";
+            //}
 
 
-            MessageBox.Show("Lỗi :" + errortext, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //MessageBox.Show("Lỗi :" + errortext, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-            if ((anError.Exception) is ConstraintException)
-            {
-                DataGridView view = (DataGridView)sender;
-                view.Rows[anError.RowIndex].ErrorText = "";
-                view.Rows[anError.RowIndex].Cells[anError.ColumnIndex].ErrorText = "";
+            //if ((anError.Exception) is ConstraintException)
+            //{
+            //    DataGridView view = (DataGridView)sender;
+            //    view.Rows[anError.RowIndex].ErrorText = "";
+            //    view.Rows[anError.RowIndex].Cells[anError.ColumnIndex].ErrorText = "";
 
-                anError.ThrowException = false;
-            }
+            //    anError.ThrowException = false;
+            //}
 
 
         }

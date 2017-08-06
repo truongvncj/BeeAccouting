@@ -39,7 +39,7 @@ namespace BEEACCOUNT.View
 
             txtSoconlai.Text = (double.Parse(phieuthu.pssotienno.ToString()) - double.Parse(phieuthu.pssotienco.ToString())).ToString();
             lbtenchitiet.Visible = false;
-
+            tbmachitiet.Text = "";
             //this.lb02.Text = labe2;
             //this.lb03.Text = labe3;
             this.click = false;
@@ -207,9 +207,9 @@ namespace BEEACCOUNT.View
 
                         lbtenchitiet.Visible = true;
                         this.tkcochitiet = int.Parse(selecdetail.value.ToString());
-                    
-                        
-                        //     lbmachitietco.Text = machitiet;
+
+
+                        tbmachitiet.Text = machitiet;
                         lbtenchitiet.Text = namechitiet;
                     }
 
@@ -339,6 +339,125 @@ namespace BEEACCOUNT.View
             //{
             //    txtsotien.Text = "";
             //}
+
+        }
+
+        private void bt_themvao_Click(object sender, EventArgs e)
+        {
+            string connection_string = Utils.getConnectionstr();
+
+            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+
+            tbl_Socai socaitemp = new tbl_Socai();
+
+
+
+            if (Utils.IsValidnumber(txtsotien.Text))
+            {
+                socaitemp.PsCo = double.Parse(txtsotien.Text.Trim());
+            }
+            else
+            {
+                MessageBox.Show("Số tiền gõ vào phải là số !", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtsotien.Focus();
+                return;
+            }
+
+            //if (this.cb_channel.SelectedItem != null)
+            if (cbtkco.SelectedItem != null)
+            {
+                socaitemp.TkCo = (cbtkco.SelectedItem as ComboboxItem).Value.ToString();
+            }
+            else
+            {
+                MessageBox.Show("Bạn chưa chọn tài khoản", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                cbtkco.Focus();
+                return;
+            }
+
+            // txtdiachi
+
+            if (txtdiachi.Text != "")
+            {
+                socaitemp.Diengiai = txtdiachi.Text;
+            }
+            else
+            {
+                MessageBox.Show("Bạn chưa gõ diễn giải", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtdiachi.Focus();
+                return;
+            }
+            //datepickngayphieu
+
+            socaitemp.Ngayctu = datepickngayphieu.Value;
+
+            //     txtkyhieuctu
+            if (txtkyhieuctu.Text != "")
+            {
+                socaitemp.Kyhieuctu = txtkyhieuctu.Text;
+            }
+            //else
+            //{
+            //    MessageBox.Show("Bạn chưa gõ Tên chi tiét", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //    txtkyhieuctu.Focus();
+            //    return;
+            //}
+
+            //lbtenchitiet
+            if (lbtenchitiet.Text != "")
+            {
+                socaitemp.tenchitietCo = lbtenchitiet.Text;
+            }
+            //else
+            //{
+            //    MessageBox.Show("Bạn chưa gõ mã chi tiết", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //    txtkyhieuctu.Focus();
+            //    return;
+            //}
+
+
+            // tbmachitiet
+
+            if (tbmachitiet.Text != "")
+            {
+                socaitemp.MaCTietTKCo = int.Parse(tbmachitiet.Text.ToString());
+            }
+            else
+            {
+                MessageBox.Show("Bạn chưa gõ ký hiệu chứng từ", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtkyhieuctu.Focus();
+                return;
+            }
+
+
+
+            //   txtsochungtu
+
+
+            if (Utils.IsValidnumber(txtsochungtu.Text))
+            {
+                socaitemp.Soctu = int.Parse(txtsochungtu.Text.Trim());
+            }
+            else
+            {
+                MessageBox.Show("Kiểm tra lại số chứng từ", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtsochungtu.Focus();
+                return;
+            }
+
+
+
+
+           this.phieuthu.add_detailGridviewTkCo(socaitemp);
+
+
+
+
+
+
+
+
 
         }
     }

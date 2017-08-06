@@ -4034,6 +4034,10 @@ namespace BEEACCOUNT
 		
 		private System.Nullable<int> _Soctu;
 		
+		private string _tenchitietCo;
+		
+		private string _tenchitietNo;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -4072,6 +4076,10 @@ namespace BEEACCOUNT
     partial void OnKyhieuctuChanged();
     partial void OnSoctuChanging(System.Nullable<int> value);
     partial void OnSoctuChanged();
+    partial void OntenchitietCoChanging(string value);
+    partial void OntenchitietCoChanged();
+    partial void OntenchitietNoChanging(string value);
+    partial void OntenchitietNoChanged();
     #endregion
 		
 		public tbl_Socai()
@@ -4415,6 +4423,46 @@ namespace BEEACCOUNT
 					this._Soctu = value;
 					this.SendPropertyChanged("Soctu");
 					this.OnSoctuChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tenchitietCo", DbType="NVarChar(225)")]
+		public string tenchitietCo
+		{
+			get
+			{
+				return this._tenchitietCo;
+			}
+			set
+			{
+				if ((this._tenchitietCo != value))
+				{
+					this.OntenchitietCoChanging(value);
+					this.SendPropertyChanging();
+					this._tenchitietCo = value;
+					this.SendPropertyChanged("tenchitietCo");
+					this.OntenchitietCoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tenchitietNo", DbType="NVarChar(225)")]
+		public string tenchitietNo
+		{
+			get
+			{
+				return this._tenchitietNo;
+			}
+			set
+			{
+				if ((this._tenchitietNo != value))
+				{
+					this.OntenchitietNoChanging(value);
+					this.SendPropertyChanging();
+					this._tenchitietNo = value;
+					this.SendPropertyChanged("tenchitietNo");
+					this.OntenchitietNoChanged();
 				}
 			}
 		}
