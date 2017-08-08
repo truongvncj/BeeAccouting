@@ -138,20 +138,80 @@ namespace BEEACCOUNT.View
             dataTable.AcceptChanges();
 
 
-      ////      int RowIndex = dataGridViewTkCo.RowCount - 1;
-         //   DataGridViewComboBoxCell cell = (DataGridViewComboBoxCell)dataGridViewTkCo.Rows[RowIndex].Cells["Tk_Có"];
 
-        
+            int i = dataTable.Rows.Count;
+
+            //   DataGridViewComboBoxCell comboBoxCell = (DataGridViewComboBoxCell)(dataGridViewTkCo.Rows[i].Cells["Tk_Có"]);
+
+            //      DataGridViewComboBoxCell comboBoxCell = (DataGridViewComboBoxCell)(dataGridViewTkCo.Rows[1].Cells["Tk_Có"]);
+
+
+            //   comboBoxCell.Value = socaitemp.TkCo;
+            //        dataGridViewTkCo.Rows[i].Cells["Tk_Có"].Value = comboBoxCell.Items[3].ToString();
+            //// DataGridViewComboBoxCell cell = (DataGridViewComboBoxCell)dataGridViewTkCo.Rows[RowIndex].Cells["Tk_Có"];
+            // DataGridViewComboBoxCell cb = (DataGridViewComboBoxCell)dataGridViewTkCo.Rows[i].Cells["Tk_Có"];
+            // DataGridViewCell dgvc = (DataGridViewCell)dataGridViewTkCo.Rows[i].Cells["Tk_Có"];
+
+            // cb.Value = dgvc.Value;
+
+            //if (cb.Value == null)
+            //{
+            //    // do stuff
+            //    cb.Value = dgvc.it
+            //    cb.DisplayMember = "3";
+
+            //    dataGridViewTkCo.Invalidate();
+            //}
+
+            // int i = dataGridProgramdetail.CurrentRow.Index;
+            //int i = currentCell.RowIndex;
+            //string colname = this.dataGridViewTkCo.Columns[this.dataGridViewTkCo.CurrentCell.ColumnIndex].Name;
+
+            //            dataGridViewTkCo.Rows[i].Cells[colname].Value = SelectedItem;
+
+            //  int i = drToAdd.
+
+
+
+            //foreach (DataGridViewRow row in dataGridViewTkCo.Rows)
+            //{
+            //    DataGridViewComboBoxCell comboBoxCell = (DataGridViewComboBoxCell)(row.Cells["Tk_Có"]);
+
+
+            //    comboBoxCell.Value = socaitemp.TkCo;
+
+            //    comboBoxCell.ValueMember = comboBoxCell.Items[3].ToString();
+            //    //   dataGridViewTkCo.Rows[i].Cells[colname].Value = SelectedItem;
+
+            //    //  row.Cells["Tk_Có"]. = comboBoxCell.Items[3];
+
+            //    //    comboBoxCell.DisplayMember = comboBoxCell.Items[3].ToString();
+
+            //}
+            ////      int RowIndex = dataGridViewTkCo.RowCount - 1;
+            //   DataGridViewComboBoxCell cell = (DataGridViewComboBoxCell)dataGridViewTkCo.Rows[RowIndex].Cells["Tk_Có"];
+
+
             //    cell.DisplayMember = socaitemp.TkCo;
 
-         //   DataGridViewCell dgvc = (DataGridViewCell)dataGridViewTkCo.Rows[RowIndex].Cells["Tk_Có"];
-         //   dgvc.Value = cell.Items[3];
+            //   DataGridViewCell dgvc = (DataGridViewCell)dataGridViewTkCo.Rows[RowIndex].Cells["Tk_Có"];
+            //   dgvc.Value = cell.Items[3];
 
             //  dataGridView1.Rows[0].Cells[2].Value = "1";
             //    DataGridViewRow R = dataGridViewTkCo.Rows[RowIndex];
             //  R.Cells["Tk_Có"].Value = socaitemp.TkCo;
 
             //    R.Cells["Tk_Có"]. = socaitemp.TkCo;
+
+            //  string SelectedItem = (cbm.SelectedItem as ComboboxItem).Value.ToString();// (cbm.SelectedItem as ComboboxItem).Value.ToString();
+
+            // int i = dataGridProgramdetail.CurrentRow.Index;
+            //int i = currentCell.RowIndex;
+            //string colname = this.dataGridViewTkCo.Columns[this.dataGridViewTkCo.CurrentCell.ColumnIndex].Name;
+
+            //dataGridViewTkCo.Rows[i].Cells[colname].Value = SelectedItem;
+
+
 
 
 
@@ -2153,6 +2213,78 @@ namespace BEEACCOUNT.View
             //}
 
 
+        }
+
+        private void dataGridViewTkCo_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
+        {
+            int i = e.RowIndex;
+            DataGridView view = (DataGridView)sender;
+
+            for (int b = 0; b < view.ColumnCount; b++)
+            {
+               // string colname = dataGridViewTkCo.Columns[b].Name;
+                string colname = view.Columns[b].Name;
+                //   dataGridViewTkCo.Rows[i].Cells[colname].Value = colname;
+                view.Rows[i].Cells[colname].Value = colname;
+                //  view.Columns[b].Name;
+            }
+
+        
+         //   dataGridViewTkCo.Rows[e.RowIndex].Cells[0].Value = "xxx";
+          //  DataGridView view = (DataGridView)sender;
+          //  view.Rows[i].Cells[1].Value = "tesst";// view.Rows[i].Cells["tkCohide"].Value.ToString();
+         //   view.Rows[i].Value = "tesst";// view.Rows[i].Cells["tkCohide"].Value.ToString();
+
+            //   if ((String)dataGridViewTkCo.Rows[e.RowIndex].Cells["Tk_Có"].Value == null)
+            //   {
+
+            //    }
+
+            //      string SelectedItem = (cbm.SelectedItem as ComboboxItem).Value.ToString();// (cbm.SelectedItem as ComboboxItem).Value.ToString();
+
+
+            //if (dataGridViewTkCo.Rows[i].Cells[1].Value == null && dataGridViewTkCo.Rows[i].Cells["tkCohide"].Value != null)
+            //{
+
+            //    //     string colname = this.dataGridViewTkCo.Columns[this.dataGridViewTkCo.CurrentCell.ColumnIndex].Name;
+
+            //    dataGridViewTkCo.Rows[i].Cells[1].Value = dataGridViewTkCo.Rows[i].Cells["tkCohide"].Value;
+
+
+            //}
+
+            // int i = dataGridProgramdetail.CurrentRow.Index;
+
+
+
+            //    (String)dataGridViewTkCo.Rows[e.RowIndex].Cells["Tk_Có"]. != null
+
+            // tkCohide
+
+            //string SelectedItem = (cbm.SelectedItem as ComboboxItem).Value.ToString();// (cbm.SelectedItem as ComboboxItem).Value.ToString();
+
+            //           // int i = dataGridProgramdetail.CurrentRow.Index;
+            //           int i = currentCell.RowIndex;
+            //           string colname = this.dataGridViewTkCo.Columns[this.dataGridViewTkCo.CurrentCell.ColumnIndex].Name;
+
+            //           dataGridViewTkCo.Rows[i].Cells[colname].Value = SelectedItem;
+
+            //  if (e.RowIndex is ComboBox)
+            //  {
+
+            //     cbm = (ComboBox)e.Control;
+
+            //     if (cbm != null)
+            //    {
+            //   cbm.SelectedIndexChanged += new EventHandler(cbm_SelectedIndexChanged);
+            //    }
+
+
+            //currentCell = this.dataGridViewTkCo.CurrentCell;
+
+
+
+            //   }
         }
     }
 }
