@@ -121,7 +121,7 @@ namespace BEEACCOUNT.View
             DataTable dataTable = (DataTable)dataGridViewTkCo.DataSource;
             DataRow drToAdd = dataTable.NewRow();
 
-            //    drToAdd["Tk_Có"] = socaitemp.TkCo;
+        //    drToAdd["Tk_Có"] = socaitemp.TkCo;
             drToAdd["Diễn_giải"] = socaitemp.Diengiai;
             drToAdd["Số_chứng_từ"] = socaitemp.Soctu;
             drToAdd["Ký_hiêu"] = socaitemp.Kyhieuctu;
@@ -139,9 +139,15 @@ namespace BEEACCOUNT.View
 
 
 
-            int i = dataTable.Rows.Count;
+           int i = dataTable.Rows.Count-1;
+         //   int i = dataGridViewTkCo.RowCount -1;
+            //DataGridViewComboBoxCell comboBoxCell = (DataGridViewComboBoxCell)(dataGridViewTkCo.Rows[i].Cells["Tk_Có"]);
 
-            //   DataGridViewComboBoxCell comboBoxCell = (DataGridViewComboBoxCell)(dataGridViewTkCo.Rows[i].Cells["Tk_Có"]);
+            //List<ComboboxItem> CombomCollection = new List<ComboboxItem>();
+
+            //comboBoxCell.DisplayMember = "Text";
+
+
 
             //      DataGridViewComboBoxCell comboBoxCell = (DataGridViewComboBoxCell)(dataGridViewTkCo.Rows[1].Cells["Tk_Có"]);
 
@@ -149,15 +155,20 @@ namespace BEEACCOUNT.View
             //   comboBoxCell.Value = socaitemp.TkCo;
             //        dataGridViewTkCo.Rows[i].Cells["Tk_Có"].Value = comboBoxCell.Items[3].ToString();
             //// DataGridViewComboBoxCell cell = (DataGridViewComboBoxCell)dataGridViewTkCo.Rows[RowIndex].Cells["Tk_Có"];
-            // DataGridViewComboBoxCell cb = (DataGridViewComboBoxCell)dataGridViewTkCo.Rows[i].Cells["Tk_Có"];
-            // DataGridViewCell dgvc = (DataGridViewCell)dataGridViewTkCo.Rows[i].Cells["Tk_Có"];
+            DataGridViewComboBoxCell cb = (DataGridViewComboBoxCell)dataGridViewTkCo.Rows[i].Cells["Tk_Có"];
+            DataGridViewCell dgvc = (DataGridViewCell)dataGridViewTkCo.Rows[i].Cells["Tk_Có"];
+            ComboboxItem cbx = (ComboboxItem)cb.Items[3];
 
-            // cb.Value = dgvc.Value;
+            dataGridViewTkCo.Rows[i].Cells["Tk_Có"].Value = cbx.Value;
+           // dataGridViewTkCo.Invalidate();
+           
+
+            //cb.Value = dgvc.Value;
 
             //if (cb.Value == null)
             //{
             //    // do stuff
-            //    cb.Value = dgvc.it
+            //    cb.Value = "21212";
             //    cb.DisplayMember = "3";
 
             //    dataGridViewTkCo.Invalidate();
@@ -480,6 +491,8 @@ namespace BEEACCOUNT.View
 
 
             #endregion binddata
+
+
             //    dataGridViewTkCo.Columns["tkCohide"].Visible = false;
             //    dataGridViewTkCo.Columns["ngayctuhide"].Visible = false;
 
@@ -2217,17 +2230,17 @@ namespace BEEACCOUNT.View
 
         private void dataGridViewTkCo_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
         {
-            int i = e.RowIndex;
-            DataGridView view = (DataGridView)sender;
+            //int i = e.RowIndex;
+            //DataGridView view = (DataGridView)sender;
 
-            for (int b = 0; b < view.ColumnCount; b++)
-            {
-               // string colname = dataGridViewTkCo.Columns[b].Name;
-                string colname = view.Columns[b].Name;
-                //   dataGridViewTkCo.Rows[i].Cells[colname].Value = colname;
-                view.Rows[i].Cells[colname].Value = colname;
-                //  view.Columns[b].Name;
-            }
+            //for (int b = 0; b < view.ColumnCount; b++)
+            //{
+            //   // string colname = dataGridViewTkCo.Columns[b].Name;
+            //    string colname = view.Columns[b].Name;
+            //    //   dataGridViewTkCo.Rows[i].Cells[colname].Value = colname;
+            // //   view.Rows[i].Cells[colname].Value = colname;
+            //    //  view.Columns[b].Name;
+            //}
 
         
          //   dataGridViewTkCo.Rows[e.RowIndex].Cells[0].Value = "xxx";
