@@ -33,7 +33,7 @@ namespace BEEACCOUNT.View
             InitializeComponent();
 
             this.label1.Text = headcolumname;
-
+          
             //List<ComboboxItem> CombomCollection = new List<ComboboxItem>();
             //var rs = from tbl_Kafuctionlist in db.tbl_Kafuctionlists
             //         where tbl_Kafuctionlist.Code != "DIS"

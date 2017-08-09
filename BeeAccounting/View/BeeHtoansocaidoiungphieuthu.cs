@@ -40,6 +40,7 @@ namespace BEEACCOUNT.View
             txtSoconlai.Text = (double.Parse(phieuthu.pssotienno.ToString()) - double.Parse(phieuthu.pssotienco.ToString())).ToString();
             lbtenchitiet.Visible = false;
             tbmachitiet.Text = "";
+            lbtenchitiet.Text = "";
             //this.lb02.Text = labe2;
             //this.lb03.Text = labe3;
             this.click = false;
@@ -173,7 +174,8 @@ namespace BEEACCOUNT.View
 
 
 
-            if (detail.loaichitiet == true) // là co theo doi chi tiết
+       if (detail.loaichitiet == true) // là co theo doi chi tiết
+
             {
 
                 List<beeselectinput.ComboboxItem> listcb = new List<beeselectinput.ComboboxItem>();
@@ -216,8 +218,7 @@ namespace BEEACCOUNT.View
                 }
                 else
                 {
-                 //   this.tknochitiet = -1;// int.Parse(selecdetail.value.ToString());
-                                          //     lbmachitietco.Text = machitiet;
+                    tbmachitiet.Text = "";
                     lbtenchitiet.Text = "";//namechitiet;
                 }
                 //  selecdetail.Text;
@@ -225,8 +226,7 @@ namespace BEEACCOUNT.View
             }
             else
             {
-              //  this.tknochitiet = -1;// int.Parse(selecdetail.value.ToString());
-                                      //     lbmachitietco.Text = machitiet;
+                tbmachitiet.Text = "";
                 lbtenchitiet.Text = "";//namechitiet;
             }
 
@@ -423,13 +423,7 @@ namespace BEEACCOUNT.View
             {
                 socaitemp.MaCTietTKCo = int.Parse(tbmachitiet.Text.ToString());
             }
-            else
-            {
-                MessageBox.Show("Bạn chưa gõ ký hiệu chứng từ", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtkyhieuctu.Focus();
-                return;
-            }
-
+         
 
 
             //   txtsochungtu

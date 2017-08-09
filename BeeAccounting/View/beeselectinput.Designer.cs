@@ -49,7 +49,7 @@
             this.button1.Location = new System.Drawing.Point(437, 33);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(82, 23);
-            this.button1.TabIndex = 2;
+            this.button1.TabIndex = 1;
             this.button1.Text = "OK";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -68,7 +68,7 @@
             this.cbselect.Location = new System.Drawing.Point(12, 35);
             this.cbselect.Name = "cbselect";
             this.cbselect.Size = new System.Drawing.Size(381, 21);
-            this.cbselect.TabIndex = 4;
+            this.cbselect.TabIndex = 0;
             this.cbselect.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbselect_KeyPress);
             // 
             // beeselectinput

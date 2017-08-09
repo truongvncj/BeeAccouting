@@ -4534,6 +4534,8 @@ namespace BEEACCOUNT
 		
 		private string _TKdoiung;
 		
+		private string _TenchitietTM;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -4578,6 +4580,8 @@ namespace BEEACCOUNT
     partial void OnquyensoChanged();
     partial void OnTKdoiungChanging(string value);
     partial void OnTKdoiungChanged();
+    partial void OnTenchitietTMChanging(string value);
+    partial void OnTenchitietTMChanged();
     #endregion
 		
 		public tbl_SoQuy()
@@ -4981,6 +4985,26 @@ namespace BEEACCOUNT
 					this._TKdoiung = value;
 					this.SendPropertyChanged("TKdoiung");
 					this.OnTKdoiungChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenchitietTM", DbType="NVarChar(225)")]
+		public string TenchitietTM
+		{
+			get
+			{
+				return this._TenchitietTM;
+			}
+			set
+			{
+				if ((this._TenchitietTM != value))
+				{
+					this.OnTenchitietTMChanging(value);
+					this.SendPropertyChanging();
+					this._TenchitietTM = value;
+					this.SendPropertyChanged("TenchitietTM");
+					this.OnTenchitietTMChanged();
 				}
 			}
 		}
