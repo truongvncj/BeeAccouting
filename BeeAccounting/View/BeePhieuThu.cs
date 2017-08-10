@@ -693,11 +693,16 @@ namespace BEEACCOUNT.View
 
             //     if (Utils.IsValidnumber(lbmachitetno.Text))
             //    {
-            soquy.ChitietTM = this.tknochitiet;
 
-            if (lbtenchitietno.Text != "")
+         //   if (this.tknochitiet != -1)
+           // {
+           //     soquy.ChitietTM = this.tknochitiet;
+           // }
+         
+
+            if (lb_machitietno.Text != "")
             {
-                soquy.TenchitietTM = this.lbtenchitietno.ToString();
+                soquy.ChitietTM = int.Parse(lb_machitietno.Text.ToString());
             }
 
 
@@ -1121,12 +1126,12 @@ namespace BEEACCOUNT.View
             txtsochungtugoc.Text = "";
 
             lbtenchitietno.Text = "";
-
+            lb_machitietno.Text = "";
             cbtkno.SelectedIndex = -1;
-
+            txtquyenso.Text = "";
 
             datepickngayphieu.Focus();
-
+            dataGridViewTkCo.DataSource = null;
 
 
             #endregion
