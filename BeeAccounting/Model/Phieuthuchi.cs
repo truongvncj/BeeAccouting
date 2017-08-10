@@ -169,8 +169,8 @@ namespace BEEACCOUNT.Model
             #endregion binddata
 
 
-            //    dataGridViewTkCo.Columns["tkCohide"].Visible = false;
-            //    dataGridViewTkCo.Columns["ngayctuhide"].Visible = false;
+               dataGridViewTkCo.Columns["tkCohide"].Visible = false;
+             dataGridViewTkCo.Columns["ngayctuhide"].Visible = false;
 
             dataGridViewTkCo.Columns["Tk_Có"].DisplayIndex = 0;
             dataGridViewTkCo.Columns["Tk_Có"].Width = 100;
