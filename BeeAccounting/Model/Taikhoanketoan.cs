@@ -134,6 +134,11 @@ namespace BEEACCOUNT.Model
             socaips.Ngayctu = socai.Ngayctu;
             socaips.Ngayghiso = socai.Ngayghiso;
             socaips.username = socai.username;
+            socaips.Soctu = socai.Soctu;
+
+            socaips.Kyhieuctu = socai.Kyhieuctu;
+           // socaips.Soctu = socai.Soctu;
+           // socaips.Soctu = socai.Soctu;
 
             db.tbl_Socais.InsertOnSubmit(socaips);
             db.SubmitChanges();
