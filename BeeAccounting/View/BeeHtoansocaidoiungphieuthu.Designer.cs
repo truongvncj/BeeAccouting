@@ -29,12 +29,13 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BeeHtoansocaidoiungphieuthu));
-            this.txtSoconlai = new System.Windows.Forms.TextBox();
+            this.txtChenlech = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txttongtien = new System.Windows.Forms.TextBox();
+            this.txtTongno = new System.Windows.Forms.TextBox();
             this.bt_themvao = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.tbmachitiet = new System.Windows.Forms.Label();
             this.datepickngayphieu = new System.Windows.Forms.DateTimePicker();
             this.txtkyhieuctu = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -48,29 +49,30 @@
             this.label6 = new System.Windows.Forms.Label();
             this.lbtenchitiet = new System.Windows.Forms.Label();
             this.cbtkco = new System.Windows.Forms.ComboBox();
-            this.tbmachitiet = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtTongco = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // txtSoconlai
+            // txtChenlech
             // 
-            this.txtSoconlai.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSoconlai.Location = new System.Drawing.Point(134, 31);
-            this.txtSoconlai.Name = "txtSoconlai";
-            this.txtSoconlai.ReadOnly = true;
-            this.txtSoconlai.Size = new System.Drawing.Size(207, 24);
-            this.txtSoconlai.TabIndex = 31;
-            this.txtSoconlai.TabStop = false;
+            this.txtChenlech.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtChenlech.Location = new System.Drawing.Point(134, 62);
+            this.txtChenlech.Name = "txtChenlech";
+            this.txtChenlech.ReadOnly = true;
+            this.txtChenlech.Size = new System.Drawing.Size(208, 24);
+            this.txtChenlech.TabIndex = 31;
+            this.txtChenlech.TabStop = false;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(13, 35);
+            this.label2.Location = new System.Drawing.Point(13, 65);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(74, 18);
+            this.label2.Size = new System.Drawing.Size(82, 18);
             this.label2.TabIndex = 33;
-            this.label2.Text = "Số còn lại";
+            this.label2.Text = "Chênh lệch";
             // 
             // label3
             // 
@@ -78,23 +80,23 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(12, 9);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(69, 18);
+            this.label3.Size = new System.Drawing.Size(66, 18);
             this.label3.TabIndex = 35;
-            this.label3.Text = "Tổng tiền";
+            this.label3.Text = "Tổng Nợ";
             // 
-            // txttongtien
+            // txtTongno
             // 
-            this.txttongtien.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txttongtien.Location = new System.Drawing.Point(134, 5);
-            this.txttongtien.Name = "txttongtien";
-            this.txttongtien.ReadOnly = true;
-            this.txttongtien.Size = new System.Drawing.Size(245, 24);
-            this.txttongtien.TabIndex = 34;
-            this.txttongtien.TabStop = false;
+            this.txtTongno.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTongno.Location = new System.Drawing.Point(134, 6);
+            this.txtTongno.Name = "txtTongno";
+            this.txtTongno.ReadOnly = true;
+            this.txtTongno.Size = new System.Drawing.Size(208, 24);
+            this.txtTongno.TabIndex = 34;
+            this.txtTongno.TabStop = false;
             // 
             // bt_themvao
             // 
-            this.bt_themvao.Location = new System.Drawing.Point(348, 360);
+            this.bt_themvao.Location = new System.Drawing.Point(348, 383);
             this.bt_themvao.Name = "bt_themvao";
             this.bt_themvao.Size = new System.Drawing.Size(103, 23);
             this.bt_themvao.TabIndex = 7;
@@ -118,12 +120,23 @@
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.lbtenchitiet);
             this.groupBox1.Controls.Add(this.cbtkco);
-            this.groupBox1.Location = new System.Drawing.Point(7, 61);
+            this.groupBox1.Location = new System.Drawing.Point(7, 87);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(534, 280);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = " --";
+            // 
+            // tbmachitiet
+            // 
+            this.tbmachitiet.AutoSize = true;
+            this.tbmachitiet.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbmachitiet.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.tbmachitiet.Location = new System.Drawing.Point(125, 56);
+            this.tbmachitiet.Name = "tbmachitiet";
+            this.tbmachitiet.Size = new System.Drawing.Size(40, 16);
+            this.tbmachitiet.TabIndex = 62;
+            this.tbmachitiet.Text = "Mã ct";
             // 
             // datepickngayphieu
             // 
@@ -258,35 +271,46 @@
             this.cbtkco.TabIndex = 0;
             this.cbtkco.SelectionChangeCommitted += new System.EventHandler(this.cbtkco_SelectionChangeCommitted);
             // 
-            // tbmachitiet
+            // label9
             // 
-            this.tbmachitiet.AutoSize = true;
-            this.tbmachitiet.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbmachitiet.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.tbmachitiet.Location = new System.Drawing.Point(125, 56);
-            this.tbmachitiet.Name = "tbmachitiet";
-            this.tbmachitiet.Size = new System.Drawing.Size(40, 16);
-            this.tbmachitiet.TabIndex = 62;
-            this.tbmachitiet.Text = "Mã ct";
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(12, 36);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(66, 18);
+            this.label9.TabIndex = 37;
+            this.label9.Text = "Tổng Có";
+            // 
+            // txtTongco
+            // 
+            this.txtTongco.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTongco.Location = new System.Drawing.Point(134, 33);
+            this.txtTongco.Name = "txtTongco";
+            this.txtTongco.ReadOnly = true;
+            this.txtTongco.Size = new System.Drawing.Size(208, 24);
+            this.txtTongco.TabIndex = 36;
+            this.txtTongco.TabStop = false;
             // 
             // BeeHtoansocaidoiungphieuthu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(560, 418);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.txtTongco);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.bt_themvao);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txttongtien);
+            this.Controls.Add(this.txtTongno);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtSoconlai);
+            this.Controls.Add(this.txtChenlech);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "BeeHtoansocaidoiungphieuthu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hạch toán kế toán";
-            this.Deactivate += new System.EventHandler(this.Seachcode_Deactivate);
+            this.Deactivate += new System.EventHandler(this.BeeHtoansocaidoiungphieuthu_Deactivate);
             this.Load += new System.EventHandler(this.BeeHtoansocaidoiungphieuthu_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -296,10 +320,10 @@
         }
 
         #endregion
-        private System.Windows.Forms.TextBox txtSoconlai;
+        private System.Windows.Forms.TextBox txtChenlech;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txttongtien;
+        private System.Windows.Forms.TextBox txtTongno;
         private System.Windows.Forms.Button bt_themvao;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label1;
@@ -316,5 +340,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DateTimePicker datepickngayphieu;
         private System.Windows.Forms.Label tbmachitiet;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txtTongco;
     }
 }

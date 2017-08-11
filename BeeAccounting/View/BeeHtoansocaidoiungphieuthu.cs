@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
@@ -14,7 +15,7 @@ namespace BEEACCOUNT.View
 
         View.BeePhieuThu phieuthu;
         public int tkcochitiet { get; set; }
-        public bool  click { get; set; }
+        public bool click { get; set; }
 
         public class ComboboxItem
         {
@@ -27,22 +28,46 @@ namespace BEEACCOUNT.View
             }
         }
 
+        public double pssotienno { get; set; }
+        public double pssotienco { get; set; }
 
-        public BeeHtoansocaidoiungphieuthu( View.BeePhieuThu phieuthu, string labe1, string labe2, string labe3)
+        public BeeHtoansocaidoiungphieuthu(View.BeePhieuThu phieuthu, string labe1, string labe2, string labe3)
         {
 
-          
-         
+
+
 
             InitializeComponent();
-            txttongtien.Text = phieuthu.pssotienno;
+            //if (phieuthu.pssotienno =="")
+            //{
+            //    phieuthu.pssotienno = "0";
+            //}
+            //if (phieuthu.pssotienco == "")
+            //{
+            //    phieuthu.pssotienco = "0";
+            //}
+            txtTongno.Text = phieuthu.pssotienno.ToString("#,#", CultureInfo.InvariantCulture);
+            txtTongco.Text = phieuthu.pssotienco.ToString("#,#", CultureInfo.InvariantCulture);
+            this.pssotienco = phieuthu.pssotienco;
+            this.pssotienno = phieuthu.pssotienno;
 
-            txtSoconlai.Text = (double.Parse(phieuthu.pssotienno.ToString()) - double.Parse(phieuthu.pssotienco.ToString())).ToString();
-            lbtenchitiet.Visible = false;
+            txtChenlech.Text = (this.pssotienno - this.pssotienco).ToString("#,#", CultureInfo.InvariantCulture);
+
+            #region clearr to new
+
+            cbtkco.SelectedIndex = -1;
             tbmachitiet.Text = "";
             lbtenchitiet.Text = "";
-            //this.lb02.Text = labe2;
-            //this.lb03.Text = labe3;
+            txtsotien.Text = "";
+            txtdiachi.Text = "";
+            txtkyhieuctu.Text = "";
+            txtsochungtu.Text = "";
+
+            #endregion
+
+
+
+
             this.click = false;
             this.phieuthu = phieuthu;
 
@@ -80,7 +105,7 @@ namespace BEEACCOUNT.View
 
         private void Seachcode_Deactivate(object sender, EventArgs e)
         {
-        //    this.Close();
+             //   this.Close();
         }
 
 
@@ -110,28 +135,28 @@ namespace BEEACCOUNT.View
 
         private void sendingname_KeyPress(object sender, KeyPressEventArgs e)
         {
-          
+
         }
 
         private void txtvat_KeyPress(object sender, KeyPressEventArgs e)
         {
-         //   if (e.KeyChar == (char)Keys.Enter)
-         //   {
+            //   if (e.KeyChar == (char)Keys.Enter)
+            //   {
 
 
-         //       this.text01.Focus();
+            //       this.text01.Focus();
 
-         ////       if (tablename == "KASeachcontract")
-         ////       {
-         //////           Fromviewable.ReloadKASeachcontract(this.sendingcode.Text, this.sendingcontract.Text, this.sendingname.Text, this.txtvat.Text);
-         ////       }
+            ////       if (tablename == "KASeachcontract")
+            ////       {
+            //////           Fromviewable.ReloadKASeachcontract(this.sendingcode.Text, this.sendingcontract.Text, this.sendingname.Text, this.txtvat.Text);
+            ////       }
 
 
 
-         //   }
+            //   }
         }
 
-       
+
         private void bt_timkiem_KeyPress(object sender, KeyPressEventArgs e)
         {
             //if (e.KeyChar == (char)Keys.Enter)
@@ -174,7 +199,7 @@ namespace BEEACCOUNT.View
 
 
 
-       if (detail.loaichitiet == true) // là co theo doi chi tiết
+            if (detail.loaichitiet == true) // là co theo doi chi tiết
 
             {
 
@@ -214,6 +239,10 @@ namespace BEEACCOUNT.View
                         tbmachitiet.Text = machitiet;
                         lbtenchitiet.Text = namechitiet;
                     }
+                    else
+                    {
+                        cbtkco.SelectedIndex = -1;
+                    }
 
                 }
                 else
@@ -233,7 +262,7 @@ namespace BEEACCOUNT.View
 
             txtsotien.Focus();
 
-              
+
 
 
         }
@@ -351,7 +380,17 @@ namespace BEEACCOUNT.View
 
             tbl_Socai socaitemp = new tbl_Socai();
 
-
+            //if (this.cb_channel.SelectedItem != null)
+            if (cbtkco.SelectedItem != null)
+            {
+                socaitemp.TkCo = (cbtkco.SelectedItem as ComboboxItem).Value.ToString();
+            }
+            else
+            {
+                MessageBox.Show("Bạn chưa chọn tài khoản", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                cbtkco.Focus();
+                return;
+            }
 
             if (Utils.IsValidnumber(txtsotien.Text))
             {
@@ -364,17 +403,7 @@ namespace BEEACCOUNT.View
                 return;
             }
 
-            //if (this.cb_channel.SelectedItem != null)
-            if (cbtkco.SelectedItem != null)
-            {
-                socaitemp.TkCo = (cbtkco.SelectedItem as ComboboxItem).Value.ToString();
-            }
-            else
-            {
-                MessageBox.Show("Bạn chưa chọn tài khoản", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                cbtkco.Focus();
-                return;
-            }
+
 
             // txtdiachi
 
@@ -423,7 +452,7 @@ namespace BEEACCOUNT.View
             {
                 socaitemp.MaCTietTKCo = int.Parse(tbmachitiet.Text.ToString());
             }
-         
+
 
 
             //   txtsochungtu
@@ -443,16 +472,36 @@ namespace BEEACCOUNT.View
 
 
 
-           this.phieuthu.add_detailGridviewTkCo(socaitemp);
+            this.phieuthu.add_detailGridviewTkCo(socaitemp);
+
+            txtTongco.Text = phieuthu.pssotienco.ToString("#,#", CultureInfo.InvariantCulture);
+            this.pssotienco = phieuthu.pssotienco;
+            this.pssotienno = phieuthu.pssotienno;
+
+            txtChenlech.Text = (this.pssotienno - this.pssotienco).ToString("#,#", CultureInfo.InvariantCulture);
+
+            #region clearr to new
+
+            cbtkco.SelectedIndex = -1;
+            tbmachitiet.Text = "";
+            lbtenchitiet.Text = "";
+            txtsotien.Text = "";
+            txtdiachi.Text = "";
+            txtkyhieuctu.Text = "";
+            txtsochungtu.Text = "";
+
+            #endregion
 
 
 
 
 
 
+        }
 
-
-
+        private void BeeHtoansocaidoiungphieuthu_Deactivate(object sender, EventArgs e)
+        {
+           // this.Close();
         }
     }
 }

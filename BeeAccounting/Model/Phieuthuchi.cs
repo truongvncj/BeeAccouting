@@ -227,7 +227,7 @@ namespace BEEACCOUNT.Model
 
         }
 
-        public static void reloaddetailtaikhoanco(DataGridView dataGridViewTkCo, View.BeePhieuThu phieuthu,string taikhoanno, int sochungtu)
+        public static void reloaddetailtaikhoanco(DataGridView dataGridViewTkCo, View.BeePhieuThu phieuthu,string taikhoanno, int sophieuthu)
         {
 
 
@@ -240,8 +240,8 @@ namespace BEEACCOUNT.Model
             var socailist = from tbl_Socai in dc.tbl_Socais
                             where tbl_Socai.TkNo.Trim() == taikhoanno.Trim()
                      && tbl_Socai.manghiepvu == "PT"
-                    && tbl_Socai.Soctu == sochungtu
-                     select tbl_Socai;
+                    && tbl_Socai.nghiepvuso == sophieuthu
+                            select tbl_Socai;
 
 
             foreach (tbl_Socai socai in socailist)

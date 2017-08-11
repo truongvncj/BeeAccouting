@@ -124,6 +124,8 @@ namespace BEEACCOUNT.Model
             socaips.TkCo = socai.TkCo;
             socaips.MaCTietTKCo = socai.MaCTietTKCo;
             socaips.MaCTietTKNo = socai.MaCTietTKNo;
+            socaips.tenchitietNo = socai.tenchitietNo;
+            socaips.tenchitietCo = socai.tenchitietCo;
 
             socaips.TkNo = socai.TkNo;
             socaips.PsCo = socai.PsCo;
@@ -131,14 +133,17 @@ namespace BEEACCOUNT.Model
             socaips.Diengiai = socai.Diengiai;
             socaips.manghiepvu = socai.manghiepvu;
             socaips.nghiepvuso = socai.nghiepvuso;
-            socaips.Ngayctu = socai.Ngayctu;
+      
             socaips.Ngayghiso = socai.Ngayghiso;
             socaips.username = socai.username;
-            socaips.Soctu = socai.Soctu;
+       
 
             socaips.Kyhieuctu = socai.Kyhieuctu;
-           // socaips.Soctu = socai.Soctu;
-           // socaips.Soctu = socai.Soctu;
+            socaips.Ngayctu = socai.Ngayctu;
+            socaips.Soctu = socai.Soctu;
+
+            // socaips.Soctu = socai.Soctu;
+            // socaips.Soctu = socai.Soctu;
 
             db.tbl_Socais.InsertOnSubmit(socaips);
             db.SubmitChanges();
