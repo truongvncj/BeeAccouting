@@ -473,7 +473,7 @@ namespace BEEACCOUNT.View
 
 
 
-            this.phieuchi.add_detailGridviewTkCo(socaitemp);
+            this.phieuchi.add_detailGridviewTkNoPhieuchi(socaitemp);
 
             txtTongco.Text = phieuchi.pssotienco.ToString("#,#", CultureInfo.InvariantCulture);
             this.pssotienco = phieuchi.pssotienco;

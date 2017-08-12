@@ -143,8 +143,8 @@ namespace BEEACCOUNT.View
             int i = dataTable.Rows.Count - 1;
             //   int i = dataGridViewTkCo.RowCount -1;
 
-            DataGridViewComboBoxCell cb = (DataGridViewComboBoxCell)dataGridViewTkCo.Rows[i].Cells["Tk_Có"];
-            DataGridViewCell dgvc = (DataGridViewCell)dataGridViewTkCo.Rows[i].Cells["Tk_Có"];
+            DataGridViewComboBoxCell cb = (DataGridViewComboBoxCell)dataGridViewTkCo.Rows[i].Cells["Tk_Nợ"];
+            DataGridViewCell dgvc = (DataGridViewCell)dataGridViewTkCo.Rows[i].Cells["Tk_Nợ"];
 
             #region tim item comboboc
 
@@ -154,7 +154,7 @@ namespace BEEACCOUNT.View
                 if (item.Value.ToString().Trim() == socaitemp.TkCo.ToString().Trim())
                 {
 
-                    dataGridViewTkCo.Rows[i].Cells["Tk_Có"].Value = item.Value;
+                    dataGridViewTkCo.Rows[i].Cells["Tk_Nợ"].Value = item.Value;
                 }
 
             }
