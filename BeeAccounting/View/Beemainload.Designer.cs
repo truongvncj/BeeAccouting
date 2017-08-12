@@ -67,6 +67,7 @@
             this.button13.TabStop = false;
             this.button13.Text = "Phiếu chi tiền";
             this.button13.UseVisualStyleBackColor = true;
+            this.button13.Click += new System.EventHandler(this.button13_Click_1);
             // 
             // button10
             // 

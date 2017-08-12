@@ -99,3 +99,5 @@ D:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.Beechoosesle
 D:\Product\BeeAccouting\BeeAccounting\bin\x86\Debug\Reports\Phieuthu.rdlc
 D:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.BeeSeachtwofield.resources
 D:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.BeeHtoansocaidoiungphieuthu.resources
+D:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.BeePhieuchi.resources
+D:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.BeeHtoansocaiphieuchi.resources

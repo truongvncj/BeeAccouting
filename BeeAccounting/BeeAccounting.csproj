@@ -135,6 +135,12 @@
     <Compile Include="shared\ExtractToDataTableOptions.cs" />
     <Compile Include="shared\LinQToExcel.cs" />
     <Compile Include="shared\StringExtensions.cs" />
+    <Compile Include="View\BeeHtoansocaiphieuchi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\BeeHtoansocaiphieuchi.Designer.cs">
+      <DependentUpon>BeeHtoansocaiphieuchi.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Beeloaitaikhoan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -158,6 +164,12 @@
     </Compile>
     <Compile Include="View\BeeAccountsetup.Designer.cs">
       <DependentUpon>BeeAccountsetup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\BeePhieuchi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\BeePhieuchi.Designer.cs">
+      <DependentUpon>BeePhieuchi.cs</DependentUpon>
     </Compile>
     <Compile Include="View\BeePhieuThu.cs">
       <SubType>Form</SubType>
@@ -384,6 +396,9 @@
     <EmbeddedResource Include="Reports\Paymentrequest.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\BeeHtoansocaiphieuchi.resx">
+      <DependentUpon>BeeHtoansocaiphieuchi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Beeloaitaikhoan.resx">
       <DependentUpon>Beeloaitaikhoan.cs</DependentUpon>
     </EmbeddedResource>
@@ -395,6 +410,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\BeeAccountsetup.resx">
       <DependentUpon>BeeAccountsetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\BeePhieuchi.resx">
+      <DependentUpon>BeePhieuchi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\BeePhieuThu.resx">
       <DependentUpon>BeePhieuThu.cs</DependentUpon>

@@ -260,6 +260,38 @@ namespace BEEACCOUNT.Model
 
         }
 
+        public static void reloaddetailtaikhoannophieuchi(DataGridView dataGridViewTkCo, View.BeePhieuchi phieuchi, string taikhoanco, int sophieuthu)
+        {
+
+
+
+
+            string connection_string = Utils.getConnectionstr();
+            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+
+            var socailist = from tbl_Socai in dc.tbl_Socais
+                            where tbl_Socai.TkNo.Trim() == taikhoanco.Trim()
+                     && tbl_Socai.manghiepvu == "PC"
+                    && tbl_Socai.nghiepvuso == sophieuthu
+                            select tbl_Socai;
+
+
+            foreach (tbl_Socai socai in socailist)
+            {
+                //   MessageBox.Show(socai.Diengiai, "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                phieuchi.add_detailGridviewTkCo(socai);
+
+
+
+            }
+
+
+
+            //  return dataGridViewTkCo;
+
+
+        }
 
 
     }

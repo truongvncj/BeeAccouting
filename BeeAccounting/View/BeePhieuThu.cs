@@ -934,10 +934,19 @@ namespace BEEACCOUNT.View
 
 
                             socai.TkCo = dataGridViewTkCo.Rows[idrow].Cells["Tk_Có"].Value.ToString().Trim();
-                            if (dataGridViewTkCo.Rows[idrow].Cells["Mã_chi_tiết"].Value != DBNull.Value)///zcxzv
+                            if (dataGridViewTkCo.Rows[idrow].Cells["Mã_chi_tiết"].Value != DBNull.Value )///zcxzv
                             {
-                                dsfasdf
-                                socai.MaCTietTKCo = int.Parse(dataGridViewTkCo.Rows[idrow].Cells["Mã_chi_tiết"].Value.ToString());
+
+
+                                if (Utils.IsValidnumber((string)dataGridViewTkCo.Rows[idrow].Cells["Mã_chi_tiết"].Value ))
+                                {
+                                    socai.MaCTietTKCo = int.Parse(dataGridViewTkCo.Rows[idrow].Cells["Mã_chi_tiết"].Value.ToString());
+                                }
+                                else
+                                {
+                                    socai.MaCTietTKCo = null;
+                                }
+                             
 
                             }
                             if (dataGridViewTkCo.Rows[idrow].Cells["Tên_chi_tiết"].Value != DBNull.Value)
@@ -981,7 +990,15 @@ namespace BEEACCOUNT.View
 
                             if (lb_machitietno.Text != "")
                             {
-                                socai.MaCTietTKNo = int.Parse(lb_machitietno.Text.ToString());
+                                if (Utils.IsValidnumber(lb_machitietno.Text.ToString()))
+                                {
+                                    socai.MaCTietTKNo = int.Parse(lb_machitietno.Text.ToString());
+                                }
+                                else
+                                {
+                                    socai.MaCTietTKNo = null;
+                                }
+                               
                             }
 
 

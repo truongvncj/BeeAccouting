@@ -822,5 +822,21 @@ namespace BEEACCOUNT.View
         {
 
         }
+
+        private void button13_Click_1(object sender, EventArgs e)
+        {
+            //  Main.clearpannel();
+
+            main1.clearpannel();
+
+
+            View.BeePhieuchi accsup = new BeePhieuchi(main1);
+            main1.clearpannelload(accsup);
+            //    accsup.TopLevel = false;
+            //  accsup.AutoScroll = true;
+            //    panelmain.Controls.Add(accsup);
+            //    accsup.Show();
+
+        }
     }
 }

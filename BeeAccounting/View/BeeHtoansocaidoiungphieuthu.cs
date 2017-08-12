@@ -12,7 +12,7 @@ namespace BEEACCOUNT.View
 {
     public partial class BeeHtoansocaidoiungphieuthu : Form
     {
-
+    //    View.BeePhieuThu phieuchi;
         View.BeePhieuThu phieuthu;
         public int tkcochitiet { get; set; }
         public bool click { get; set; }
@@ -101,6 +101,7 @@ namespace BEEACCOUNT.View
 
         }
 
+  
 
 
         private void Seachcode_Deactivate(object sender, EventArgs e)
