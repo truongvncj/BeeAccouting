@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BeeHtoansocaidoiungphieuthu));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BeeHtoansocaiphieuchi));
             this.txtChenlech = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -48,7 +48,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.lbtenchitiet = new System.Windows.Forms.Label();
-            this.cbtkco = new System.Windows.Forms.ComboBox();
+            this.cbtkno = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtTongco = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
@@ -119,7 +119,7 @@
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.lbtenchitiet);
-            this.groupBox1.Controls.Add(this.cbtkco);
+            this.groupBox1.Controls.Add(this.cbtkno);
             this.groupBox1.Location = new System.Drawing.Point(7, 87);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(534, 280);
@@ -207,7 +207,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(53, 18);
             this.label1.TabIndex = 39;
-            this.label1.Text = "Tk Có:";
+            this.label1.Text = "Tk Nợ:";
             // 
             // txtsotien
             // 
@@ -259,17 +259,17 @@
             this.lbtenchitiet.TabIndex = 34;
             this.lbtenchitiet.Text = "Ten chi tiet";
             // 
-            // cbtkco
+            // cbtkno
             // 
-            this.cbtkco.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbtkco.DropDownWidth = 350;
-            this.cbtkco.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbtkco.FormattingEnabled = true;
-            this.cbtkco.Location = new System.Drawing.Point(127, 29);
-            this.cbtkco.Name = "cbtkco";
-            this.cbtkco.Size = new System.Drawing.Size(317, 24);
-            this.cbtkco.TabIndex = 0;
-            this.cbtkco.SelectionChangeCommitted += new System.EventHandler(this.cbtkco_SelectionChangeCommitted);
+            this.cbtkno.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbtkno.DropDownWidth = 350;
+            this.cbtkno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbtkno.FormattingEnabled = true;
+            this.cbtkno.Location = new System.Drawing.Point(127, 29);
+            this.cbtkno.Name = "cbtkno";
+            this.cbtkno.Size = new System.Drawing.Size(317, 24);
+            this.cbtkno.TabIndex = 0;
+            this.cbtkno.SelectionChangeCommitted += new System.EventHandler(this.cbtkco_SelectionChangeCommitted);
             // 
             // label9
             // 
@@ -291,7 +291,7 @@
             this.txtTongco.TabIndex = 36;
             this.txtTongco.TabStop = false;
             // 
-            // BeeHtoansocaidoiungphieuthu
+            // BeeHtoansocaiphieuchi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -307,9 +307,9 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "BeeHtoansocaidoiungphieuthu";
+            this.Name = "BeeHtoansocaiphieuchi";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Hạch toán kế toán";
+            this.Text = "Hạch toán kế toán phiếu chi";
             this.Deactivate += new System.EventHandler(this.BeeHtoansocaidoiungphieuthu_Deactivate);
             this.Load += new System.EventHandler(this.BeeHtoansocaidoiungphieuthu_Load);
             this.groupBox1.ResumeLayout(false);
@@ -332,7 +332,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label lbtenchitiet;
-        private System.Windows.Forms.ComboBox cbtkco;
+        private System.Windows.Forms.ComboBox cbtkno;
         private System.Windows.Forms.TextBox txtkyhieuctu;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtsochungtu;

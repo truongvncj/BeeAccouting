@@ -55,7 +55,7 @@ namespace BEEACCOUNT.View
 
             #region clearr to new
 
-            cbtkco.SelectedIndex = -1;
+            cbtkno.SelectedIndex = -1;
             tbmachitiet.Text = "";
             lbtenchitiet.Text = "";
             txtsotien.Text = "";
@@ -79,7 +79,7 @@ namespace BEEACCOUNT.View
             LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
 
             var rs1 = from tk in dc.tbl_dstaikhoans
-                      where tk.loaitkid == 5 || tk.loaitkid == 9 || tk.loaitkid == 7  // 5.nguon von;  7 phai tra; 9. tam ung
+                     // where tk.loaitkid == 5 || tk.loaitkid == 9 || tk.loaitkid == 7  // 5.nguon von;  7 phai tra; 9. tam ung
                       select tk;
 
             //      string drowdownshow = "";
@@ -89,7 +89,7 @@ namespace BEEACCOUNT.View
                 ComboboxItem cb = new ComboboxItem();
                 cb.Value = item.matk;
                 cb.Text = item.matk + ":" + item.tentk;
-                this.cbtkco.Items.Add(cb); // CombomCollection.Add(cb);
+                this.cbtkno.Items.Add(cb); // CombomCollection.Add(cb);
 
             }
 
@@ -186,7 +186,7 @@ namespace BEEACCOUNT.View
         {
             lbtenchitiet.Visible = true;
 
-            string taikhoan = (cbtkco.SelectedItem as ComboboxItem).Value.ToString();
+            string taikhoan = (cbtkno.SelectedItem as ComboboxItem).Value.ToString();
             //     this.matk = taikhoan;
 
 
@@ -242,7 +242,7 @@ namespace BEEACCOUNT.View
                     }
                     else
                     {
-                        cbtkco.SelectedIndex = -1;
+                        cbtkno.SelectedIndex = -1;
                     }
 
                 }
@@ -382,14 +382,14 @@ namespace BEEACCOUNT.View
             tbl_Socai socaitemp = new tbl_Socai();
 
             //if (this.cb_channel.SelectedItem != null)
-            if (cbtkco.SelectedItem != null)
+            if (cbtkno.SelectedItem != null)
             {
-                socaitemp.TkCo = (cbtkco.SelectedItem as ComboboxItem).Value.ToString();
+                socaitemp.TkCo = (cbtkno.SelectedItem as ComboboxItem).Value.ToString();
             }
             else
             {
                 MessageBox.Show("Bạn chưa chọn tài khoản", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                cbtkco.Focus();
+                cbtkno.Focus();
                 return;
             }
 
@@ -483,7 +483,7 @@ namespace BEEACCOUNT.View
 
             #region clearr to new
 
-            cbtkco.SelectedIndex = -1;
+            cbtkno.SelectedIndex = -1;
             tbmachitiet.Text = "";
             lbtenchitiet.Text = "";
             txtsotien.Text = "";
