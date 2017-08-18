@@ -4,6 +4,10 @@
 
     partial class DataSet1
     {
+        partial class RptdetailSoQuyDataTable
+        {
+        }
+
         partial class PhieuthuRPTDataTable
         {
         }

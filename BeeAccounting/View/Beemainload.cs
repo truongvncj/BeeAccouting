@@ -838,5 +838,26 @@ namespace BEEACCOUNT.View
             //    accsup.Show();
 
         }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            string connection_string = Utils.getConnectionstr();
+            string urs = Utils.getusername();
+            //  var db = new LinqtoSQLDataContext(connection_string);
+            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+            var rsphieuchi = from tblRpt_PhieuThu in dc.tblRpt_PhieuThus
+                             where tblRpt_PhieuThu.username == urs
+                             select tblRpt_PhieuThu;
+
+
+            Utils ut = new Utils();
+            var dataset1 = ut.ToDataTable(dc, rsphieuchi);
+
+            var dataset2 = ut.ToDataTable(dc, rsphieuchi);
+
+            Reportsview rpt = new Reportsview(dataset1, dataset2, "Soquy.rdlc");
+            rpt.ShowDialog();
+        }
     }
 }
