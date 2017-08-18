@@ -40,6 +40,7 @@
             this.pkfromdate = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.pk_todate = new System.Windows.Forms.DateTimePicker();
+            this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // bt_thuchien
@@ -50,7 +51,6 @@
             this.bt_thuchien.TabIndex = 3;
             this.bt_thuchien.Text = "Make";
             this.bt_thuchien.UseVisualStyleBackColor = true;
-      //      this.bt_thuchien.Click += new System.EventHandler(this.bt_thuchien_Click);
             // 
             // bl_priod
             // 
@@ -175,11 +175,21 @@
             this.pk_todate.Size = new System.Drawing.Size(122, 21);
             this.pk_todate.TabIndex = 16;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(131, 121);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(68, 15);
+            this.label6.TabIndex = 18;
+            this.label6.Text = "From Code";
+            // 
             // kaPriodmake
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(330, 256);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.pk_todate);
             this.Controls.Add(this.label4);
@@ -215,5 +225,6 @@
         private System.Windows.Forms.DateTimePicker pkfromdate;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DateTimePicker pk_todate;
+        private System.Windows.Forms.Label label6;
     }
 }

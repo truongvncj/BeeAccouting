@@ -846,6 +846,46 @@ namespace BEEACCOUNT.View
             //  var db = new LinqtoSQLDataContext(connection_string);
             LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
 
+
+            #region  chọn sổ quỹ chi tiết
+
+           
+                FormCollection fc = System.Windows.Forms.Application.OpenForms;
+
+                bool kq = false;
+                foreach (Form frm in fc)
+                {
+                    ///  KAcontractlisting
+                    ///    if (frm.Text == "CreatenewContract")
+                    if (frm.Text == "Chọn tài khoản")
+                    {
+                        kq = true;
+                        frm.Focus();
+
+                    }
+                }
+
+                if (!kq)
+                {
+
+
+
+                    View.Beeselecttk Beeselecttk = new View.Beeselecttk();
+                    Beeselecttk.ShowDialog();
+
+
+
+                }
+
+
+
+
+
+
+            #endregion
+
+            #region showreport
+
             var rsphieuchi = from tblRpt_PhieuThu in dc.tblRpt_PhieuThus
                              where tblRpt_PhieuThu.username == urs
                              select tblRpt_PhieuThu;
@@ -858,6 +898,9 @@ namespace BEEACCOUNT.View
 
             Reportsview rpt = new Reportsview(dataset1, dataset2, "Soquy.rdlc");
             rpt.ShowDialog();
+
+
+            #endregion showreports
         }
     }
 }
