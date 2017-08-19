@@ -65,10 +65,11 @@
             this.pkfromdate.CustomFormat = "dd.MM.yyyy";
             this.pkfromdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pkfromdate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.pkfromdate.Location = new System.Drawing.Point(139, 99);
+            this.pkfromdate.Location = new System.Drawing.Point(168, 105);
             this.pkfromdate.Name = "pkfromdate";
             this.pkfromdate.Size = new System.Drawing.Size(122, 24);
-            this.pkfromdate.TabIndex = 14;
+            this.pkfromdate.TabIndex = 1;
+            this.pkfromdate.Value = new System.DateTime(2017, 8, 19, 6, 29, 10, 0);
             this.pkfromdate.ValueChanged += new System.EventHandler(this.pkfromdate_ValueChanged);
             // 
             // label5
@@ -86,10 +87,11 @@
             this.pk_todate.CustomFormat = "dd.MM.yyyy";
             this.pk_todate.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pk_todate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.pk_todate.Location = new System.Drawing.Point(139, 130);
+            this.pk_todate.Location = new System.Drawing.Point(168, 136);
             this.pk_todate.Name = "pk_todate";
             this.pk_todate.Size = new System.Drawing.Size(122, 24);
-            this.pk_todate.TabIndex = 16;
+            this.pk_todate.TabIndex = 2;
+            this.pk_todate.Value = new System.DateTime(2017, 8, 19, 6, 29, 34, 0);
             // 
             // lb_machitietno
             // 
@@ -122,7 +124,7 @@
             this.cbtk.Location = new System.Drawing.Point(139, 33);
             this.cbtk.Name = "cbtk";
             this.cbtk.Size = new System.Drawing.Size(207, 26);
-            this.cbtk.TabIndex = 63;
+            this.cbtk.TabIndex = 0;
             this.cbtk.SelectionChangeCommitted += new System.EventHandler(this.cbtk_SelectionChangeCommitted);
             // 
             // label3

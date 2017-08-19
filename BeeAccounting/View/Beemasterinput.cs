@@ -20,15 +20,7 @@ namespace BEEACCOUNT.View
 
             Model.Username used = new Username();
 
-            if (used.masterbegin)
-            {
-                begin.Enabled = true;
-            }
-            else
-            {
-                begin.Enabled = false;
-            }
-
+      
             //  masterdatafuction
 
             if (used.masterdatafuction)
@@ -950,6 +942,12 @@ namespace BEEACCOUNT.View
             viewtbl.Show();
 
 
+        }
+
+        private void button4_Click_2(object sender, EventArgs e)
+        {
+            View.BeeThongtindoanhnghiep doanhnghiep = new BeeThongtindoanhnghiep();
+            doanhnghiep.ShowDialog();
         }
     }
 }

@@ -219,6 +219,12 @@
     <Compile Include="View\Beeselecttk.Designer.cs">
       <DependentUpon>Beeselecttk.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\BeeThongtindoanhnghiep.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\BeeThongtindoanhnghiep.Designer.cs">
+      <DependentUpon>BeeThongtindoanhnghiep.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\PosmCreateTK.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -450,6 +456,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Beeselecttk.resx">
       <DependentUpon>Beeselecttk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\BeeThongtindoanhnghiep.resx">
+      <DependentUpon>BeeThongtindoanhnghiep.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\PosmCreateTK.resx">
       <DependentUpon>PosmCreateTK.cs</DependentUpon>

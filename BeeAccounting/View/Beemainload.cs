@@ -55,7 +55,7 @@ namespace BEEACCOUNT.View
         {
 
         }
-        
+
         private void button6_Click(object sender, EventArgs e)
         {
             //Product prd = new Product();
@@ -122,7 +122,7 @@ namespace BEEACCOUNT.View
             string connection_string = Utils.getConnectionstr();
 
             LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
-            
+
             //var typeff = typeof(tbl_kacontractbegindata);
 
             //VInputchange inputcdata = new VInputchange("", "LIST MASTER DATA CONTRACTS ", dc, "tbl_kacontractbegindata", "tbl_kacontractbegindata", typeff, typeff, "id", "id", "");
@@ -222,7 +222,7 @@ namespace BEEACCOUNT.View
             LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
 
 
-       //     var typeff = typeof(tbl_Kafuctionlist);
+            //     var typeff = typeof(tbl_Kafuctionlist);
             //switch (kq1)
             //{
 
@@ -239,8 +239,8 @@ namespace BEEACCOUNT.View
 
 
 
-        //    VInputchange inputcdata = new VInputchange("", "LIST PROGRAM FUCTIONS ", dc, "tbl_Kafuctionlist", "tbl_Kafuctionlist", typeff, typeff, "id", "id", "");
-    //        inputcdata.Show();
+            //    VInputchange inputcdata = new VInputchange("", "LIST PROGRAM FUCTIONS ", dc, "tbl_Kafuctionlist", "tbl_Kafuctionlist", typeff, typeff, "id", "id", "");
+            //        inputcdata.Show();
 
 
 
@@ -281,7 +281,7 @@ namespace BEEACCOUNT.View
             LinqtoSQLDataContext db = new LinqtoSQLDataContext(connection_string);
             //    tbl_karegion
 
-        //    var typeff = typeof(tbl_kaPrdgrp);
+            //    var typeff = typeof(tbl_kaPrdgrp);
 
 
 
@@ -310,8 +310,8 @@ namespace BEEACCOUNT.View
 
 
 
-         //   VInputchange inputcdata = new VInputchange("", "LIST PRODUCT GROUP", db, "tbl_kaPrdgrp", "tbl_kaPrdgrp", typeff, typeff, "id", "id", "");
-          //  inputcdata.Show();
+            //   VInputchange inputcdata = new VInputchange("", "LIST PRODUCT GROUP", db, "tbl_kaPrdgrp", "tbl_kaPrdgrp", typeff, typeff, "id", "id", "");
+            //  inputcdata.Show();
 
         }
 
@@ -325,7 +325,7 @@ namespace BEEACCOUNT.View
             LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
 
 
-        //    var typeff = typeof(tbl_kaprogramlist);
+            //    var typeff = typeof(tbl_kaprogramlist);
             //switch (kq1)
             //{
 
@@ -342,8 +342,8 @@ namespace BEEACCOUNT.View
 
 
 
-       //     VInputchange inputcdata = new VInputchange("", "LIST PROGRAM LIST ", dc, "tbl_kaprogramlist", "tbl_kaprogramlist", typeff, typeff, "id", "id", "");
-      //      inputcdata.Show();
+            //     VInputchange inputcdata = new VInputchange("", "LIST PROGRAM LIST ", dc, "tbl_kaprogramlist", "tbl_kaprogramlist", typeff, typeff, "id", "id", "");
+            //      inputcdata.Show();
 
 
 
@@ -398,7 +398,7 @@ namespace BEEACCOUNT.View
             LinqtoSQLDataContext db = new LinqtoSQLDataContext(connection_string);
             //    tbl_karegion
 
-         //   var typeff = typeof(tbl_karegion);
+            //   var typeff = typeof(tbl_karegion);
 
 
 
@@ -427,8 +427,8 @@ namespace BEEACCOUNT.View
 
 
 
-         //   VInputchange inputcdata = new VInputchange("", "LIST REGION", db, "tbl_karegion", "tbl_karegion", typeff, typeff, "id", "id", "");
-          //  inputcdata.Show();
+            //   VInputchange inputcdata = new VInputchange("", "LIST REGION", db, "tbl_karegion", "tbl_karegion", typeff, typeff, "id", "id", "");
+            //  inputcdata.Show();
         }
 
         private void button10_Click(object sender, EventArgs e)
@@ -439,7 +439,7 @@ namespace BEEACCOUNT.View
             LinqtoSQLDataContext db = new LinqtoSQLDataContext(connection_string);
             //    tbl_karegion
 
-      //      var typeff = typeof(tbl_kacurrency);
+            //      var typeff = typeof(tbl_kacurrency);
 
 
 
@@ -447,8 +447,8 @@ namespace BEEACCOUNT.View
 
 
 
-        //    VInputchange inputcdata = new VInputchange("", "LIST CURRENCY", db, "tbl_kacurrency", "tbl_kacurrency", typeff, typeff, "id", "id", "");
-        //    inputcdata.Show();
+            //    VInputchange inputcdata = new VInputchange("", "LIST CURRENCY", db, "tbl_kacurrency", "tbl_kacurrency", typeff, typeff, "id", "id", "");
+            //    inputcdata.Show();
         }
 
         private void KAmasterinput_Load(object sender, EventArgs e)
@@ -464,9 +464,9 @@ namespace BEEACCOUNT.View
             LinqtoSQLDataContext db = new LinqtoSQLDataContext(connection_string);
             //    tbl_karegion
 
-        //    var typeff = typeof(tbl_kacontracttype);
-         //   VInputchange inputcdata = new VInputchange("", "LIST CONTRACT TYPE", db, "tbl_kacontracttype", "tbl_kacontracttype", typeff, typeff, "id", "id", "");
-        //    inputcdata.Show();
+            //    var typeff = typeof(tbl_kacontracttype);
+            //   VInputchange inputcdata = new VInputchange("", "LIST CONTRACT TYPE", db, "tbl_kacontracttype", "tbl_kacontracttype", typeff, typeff, "id", "id", "");
+            //    inputcdata.Show();
         }
 
         private void button13_Click(object sender, EventArgs e)
@@ -477,9 +477,9 @@ namespace BEEACCOUNT.View
             LinqtoSQLDataContext db = new LinqtoSQLDataContext(connection_string);
             //    tbl_karegion
 
-       //     var typeff = typeof(tbl_PaymentTerm);
-       //     VInputchange inputcdata = new VInputchange("", "LIST PAYMENT TERM", db, "tbl_PaymentTerm", "tbl_PaymentTerm", typeff, typeff, "id", "id", "");
-       //     inputcdata.Show();
+            //     var typeff = typeof(tbl_PaymentTerm);
+            //     VInputchange inputcdata = new VInputchange("", "LIST PAYMENT TERM", db, "tbl_PaymentTerm", "tbl_PaymentTerm", typeff, typeff, "id", "id", "");
+            //     inputcdata.Show();
         }
 
         private void button14_Click(object sender, EventArgs e)
@@ -490,9 +490,9 @@ namespace BEEACCOUNT.View
             LinqtoSQLDataContext db = new LinqtoSQLDataContext(connection_string);
             //    tbl_karegion
 
-        //    var typeff = typeof(tbl_kaChannel);
-       //     VInputchange inputcdata = new VInputchange("", "LIST CHANNEL", db, "tbl_kaChannel", "tbl_kaChannel", typeff, typeff, "id", "id", "");
-        //    inputcdata.Show();
+            //    var typeff = typeof(tbl_kaChannel);
+            //     VInputchange inputcdata = new VInputchange("", "LIST CHANNEL", db, "tbl_kaChannel", "tbl_kaChannel", typeff, typeff, "id", "id", "");
+            //    inputcdata.Show();
         }
 
         private void groupBox2_Enter(object sender, EventArgs e)
@@ -517,9 +517,9 @@ namespace BEEACCOUNT.View
             LinqtoSQLDataContext db = new LinqtoSQLDataContext(connection_string);
             //    tbl_karegion
 
-        //    var typeff = typeof(tbl_Kapriod);
-       //     VInputchange inputcdata = new VInputchange("", "LIST PRIOD", db, "tbl_Kapriod", "tbl_Kapriod", typeff, typeff, "id", "id", "");
-           // inputcdata.Show();
+            //    var typeff = typeof(tbl_Kapriod);
+            //     VInputchange inputcdata = new VInputchange("", "LIST PRIOD", db, "tbl_Kapriod", "tbl_Kapriod", typeff, typeff, "id", "id", "");
+            // inputcdata.Show();
 
 
 
@@ -533,10 +533,10 @@ namespace BEEACCOUNT.View
 
             LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
 
-     //       var typeff = typeof(tbl_kacontractsdatadetail);
+            //       var typeff = typeof(tbl_kacontractsdatadetail);
 
-      //      VInputchange inputcdata = new VInputchange("", "LIST DATA CONTRACTS DETAIL ", dc, "tbl_kacontractsdatadetail", "tbl_kacontractsdatadetail", typeff, typeff, "id", "id", "");
-        //    inputcdata.Show();
+            //      VInputchange inputcdata = new VInputchange("", "LIST DATA CONTRACTS DETAIL ", dc, "tbl_kacontractsdatadetail", "tbl_kacontractsdatadetail", typeff, typeff, "id", "id", "");
+            //    inputcdata.Show();
 
 
             //#region
@@ -634,7 +634,7 @@ namespace BEEACCOUNT.View
                 //      cmd1.Parameters.Add("@name", SqlDbType.VarChar).Value = userupdate;
                 cmd1.CommandTimeout = 0;
                 rdr1 = cmd1.ExecuteReader();
-                
+
                 MessageBox.Show("Fill name done !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
@@ -657,7 +657,7 @@ namespace BEEACCOUNT.View
 
 
             //     Control.Control_ac.DeleteALLConvertContract();
-        //    Control.Control_ac.ConvertALLBeginMasterCont();
+            //    Control.Control_ac.ConvertALLBeginMasterCont();
 
         }
         private void button18_Click(object sender, EventArgs e)
@@ -678,7 +678,7 @@ namespace BEEACCOUNT.View
             //    Thread.Sleep(1999);
             //    t2.Abort();
 
-                
+
             //}
 
 
@@ -693,9 +693,9 @@ namespace BEEACCOUNT.View
 
             LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
             // tbl_kaPrcingreportsTem
-         //   var typeff = typeof(tbl_KAlistpricefunction);
-      //      VInputchange inputcdata = new VInputchange("", "LIST CONDITION TYPE TO CONVER FUCTION AND PROMOTION ", dc, "tbl_KAlistpricefunction", "tbl_KAlistpricefunction", typeff, typeff, "id", "id", "");
-         //   inputcdata.Show();
+            //   var typeff = typeof(tbl_KAlistpricefunction);
+            //      VInputchange inputcdata = new VInputchange("", "LIST CONDITION TYPE TO CONVER FUCTION AND PROMOTION ", dc, "tbl_KAlistpricefunction", "tbl_KAlistpricefunction", typeff, typeff, "id", "id", "");
+            //   inputcdata.Show();
 
 
 
@@ -713,14 +713,14 @@ namespace BEEACCOUNT.View
             string connection_string = Utils.getConnectionstr();
 
             LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
-       //     var rscustemp2 = from tbl_kacontractdata in dc.tbl_kacontractdatas
-                                 //     where tbl_kacontractdata.Consts == "ALV"
+            //     var rscustemp2 = from tbl_kacontractdata in dc.tbl_kacontractdatas
+            //     where tbl_kacontractdata.Consts == "ALV"
 
 
-      //                       select tbl_kacontractdata;
-     //       Viewtable viewtbl = new Viewtable(rscustemp2, dc, "List All Contract Master ", 3);// view code 1 la can viet them lenh
+            //                       select tbl_kacontractdata;
+            //       Viewtable viewtbl = new Viewtable(rscustemp2, dc, "List All Contract Master ", 3);// view code 1 la can viet them lenh
 
-       //     viewtbl.Show();
+            //     viewtbl.Show();
         }
 
         private void button4_Click_1(object sender, EventArgs e)
@@ -728,13 +728,13 @@ namespace BEEACCOUNT.View
             string connection_string = Utils.getConnectionstr();
 
             LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
-       //     var rscustemp2 = from tbl_kacontractsdatadetail in dc.tbl_kacontractsdatadetails
-                                 //      where tbl_kacontractsdatadetail.Constatus == "ALV"
+            //     var rscustemp2 = from tbl_kacontractsdatadetail in dc.tbl_kacontractsdatadetails
+            //      where tbl_kacontractsdatadetail.Constatus == "ALV"
 
-        //                     select tbl_kacontractsdatadetail;
-       //     Viewtable viewtbl = new Viewtable(rscustemp2, dc, "List All Contract Detail", 3);// view code 1 la can viet them lenh
+            //                     select tbl_kacontractsdatadetail;
+            //     Viewtable viewtbl = new Viewtable(rscustemp2, dc, "List All Contract Detail", 3);// view code 1 la can viet them lenh
 
-    //        viewtbl.Show();
+            //        viewtbl.Show();
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -742,13 +742,13 @@ namespace BEEACCOUNT.View
             string connection_string = Utils.getConnectionstr();
 
             LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
-          //  var rscustemp2 = from tbl_kacontractbegindata in dc.tbl_kacontractbegindatas
+            //  var rscustemp2 = from tbl_kacontractbegindata in dc.tbl_kacontractbegindatas
 
 
-          //                   select tbl_kacontractbegindata;
-       //     Viewtable viewtbl = new Viewtable(rscustemp2, dc, "List Begin Master Contract", 3);// view code 1 la can viet them lenh
+            //                   select tbl_kacontractbegindata;
+            //     Viewtable viewtbl = new Viewtable(rscustemp2, dc, "List Begin Master Contract", 3);// view code 1 la can viet them lenh
 
-          //  viewtbl.Show();
+            //  viewtbl.Show();
         }
 
         private void button7_Click_1(object sender, EventArgs e)
@@ -756,13 +756,13 @@ namespace BEEACCOUNT.View
             string connection_string = Utils.getConnectionstr();
 
             LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
-     //       var rscustemp2 = from tbl_kacontractbegindatadetail in dc.tbl_kacontractbegindatadetails
+            //       var rscustemp2 = from tbl_kacontractbegindatadetail in dc.tbl_kacontractbegindatadetails
 
 
             //                 select tbl_kacontractbegindatadetail;
-   //         Viewtable viewtbl = new Viewtable(rscustemp2, dc, "List Detail Master Contract ", 3);// view code 1 la can viet them lenh
+            //         Viewtable viewtbl = new Viewtable(rscustemp2, dc, "List Detail Master Contract ", 3);// view code 1 la can viet them lenh
 
-    //        viewtbl.Show();
+            //        viewtbl.Show();
         }
 
         private void button16_Click_1(object sender, EventArgs e)
@@ -773,9 +773,9 @@ namespace BEEACCOUNT.View
             LinqtoSQLDataContext db = new LinqtoSQLDataContext(connection_string);
             //    tbl_karegion
 
-      //      var typeff = typeof(Tka_RegionRight);
-       //     VInputchange inputcdata = new VInputchange("", "LIST EDIT REGION VIEW RIGHT", db, "Tka_RegionRight", "Tka_RegionRight", typeff, typeff, "id", "id", "");
-  //          inputcdata.Show();
+            //      var typeff = typeof(Tka_RegionRight);
+            //     VInputchange inputcdata = new VInputchange("", "LIST EDIT REGION VIEW RIGHT", db, "Tka_RegionRight", "Tka_RegionRight", typeff, typeff, "id", "id", "");
+            //          inputcdata.Show();
         }
 
         private void button17_Click_1(object sender, EventArgs e)
@@ -786,9 +786,9 @@ namespace BEEACCOUNT.View
             LinqtoSQLDataContext db = new LinqtoSQLDataContext(connection_string);
             //    tbl_karegion
 
-    //        var typeff = typeof(Tka_RightContracttypeview);
-      //      VInputchange inputcdata = new VInputchange("", "LIST CONTRACT TYPE VIEW RIGHT", db, "Tka_RightContracttypeview", "Tka_RightContracttypeview", typeff, typeff, "id", "id", "");
-  //          inputcdata.Show();
+            //        var typeff = typeof(Tka_RightContracttypeview);
+            //      VInputchange inputcdata = new VInputchange("", "LIST CONTRACT TYPE VIEW RIGHT", db, "Tka_RightContracttypeview", "Tka_RightContracttypeview", typeff, typeff, "id", "id", "");
+            //          inputcdata.Show();
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -810,10 +810,10 @@ namespace BEEACCOUNT.View
 
             View.BeePhieuThu accsup = new BeePhieuThu(main1);
             main1.clearpannelload(accsup);
-        //    accsup.TopLevel = false;
-        //  accsup.AutoScroll = true;
-        //    panelmain.Controls.Add(accsup);
-        //    accsup.Show();
+            //    accsup.TopLevel = false;
+            //  accsup.AutoScroll = true;
+            //    panelmain.Controls.Add(accsup);
+            //    accsup.Show();
 
 
         }
@@ -846,37 +846,108 @@ namespace BEEACCOUNT.View
             //  var db = new LinqtoSQLDataContext(connection_string);
             LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
 
-
+      
             #region  chọn sổ quỹ chi tiết
 
-           
-                FormCollection fc = System.Windows.Forms.Application.OpenForms;
 
-                bool kq = false;
-                foreach (Form frm in fc)
+            FormCollection fc = System.Windows.Forms.Application.OpenForms;
+            bool chon;
+            bool kq = false;
+            foreach (Form frm in fc)
+            {
+                ///  KAcontractlisting
+                ///    if (frm.Text == "CreatenewContract")
+                if (frm.Text == "Chọn tài khoản")
                 {
-                    ///  KAcontractlisting
-                    ///    if (frm.Text == "CreatenewContract")
-                    if (frm.Text == "Chọn tài khoản")
-                    {
-                        kq = true;
-                        frm.Focus();
-
-                    }
-                }
-
-                if (!kq)
-                {
-
-
-
-                    View.Beeselecttk Beeselecttk = new View.Beeselecttk();
-                    Beeselecttk.ShowDialog();
-
-
+                    kq = true;
+                    frm.Focus();
 
                 }
+            }
 
+            if (!kq)
+            {
+
+
+
+                View.Beeselecttk Beeselecttk = new View.Beeselecttk();
+                Beeselecttk.ShowDialog();
+
+                 chon = Beeselecttk.chon;
+                DateTime fromdate = Beeselecttk.fromdate;
+                DateTime todate = Beeselecttk.todate;
+
+                string mataikhoan = Beeselecttk.mataikhoan;
+                string tentaikhoan = Beeselecttk.tentaikhoan;
+                int machitiettaikhoan = Beeselecttk.machitiettaikhoan;
+                string tentaikhoanchitiet = Beeselecttk.tentaikhoanchitiet;
+
+
+                if (chon)
+                {
+
+                    #region showreport
+// xoa data cũ
+                    string username = Utils.getusername();
+
+                    var listRptdetailSoQuy = from RptdetailSoQuy in dc.RptdetailSoQuys
+                                      where RptdetailSoQuy.username == username
+                                      select RptdetailSoQuy;
+
+                    dc.RptdetailSoQuys.DeleteAllOnSubmit(listRptdetailSoQuy);
+                    dc.SubmitChanges();
+
+
+                    var listRPtsoQuy = from RPtsoQuy in dc.RPtsoQuys
+                                             where RPtsoQuy.username == username
+                                             select RPtsoQuy;
+
+                    dc.RPtsoQuys.DeleteAllOnSubmit(listRPtsoQuy);
+                    dc.SubmitChanges();
+
+                    RptdetailSoQuy detailSoquy = new RptdetailSoQuy();
+                    // update data mới   RPtsoQuy
+
+                    
+                    RPtsoQuy headSoquy = new RPtsoQuy();
+
+                    headSoquy.tencongty = Model.Congty.getnamecongty();
+                    headSoquy.username = username;
+                    headSoquy.diachicongty = Model.Congty.getdiachicongty();
+                    headSoquy.masothue = Model.Congty.getmasothuecongty();
+
+                    dc.RPtsoQuys.InsertOnSubmit(headSoquy);
+                    dc.SubmitChanges();
+
+
+
+                    var headerquy = from RPtsoQuy in dc.RPtsoQuys
+                                    where RPtsoQuy.username == username
+                                    select RPtsoQuy;
+
+
+                    Utils ut = new Utils();
+                    var dataset1 = ut.ToDataTable(dc, headerquy);
+
+
+                    var rsphieuchi = from tblRpt_PhieuThu in dc.tblRpt_PhieuThus
+                                     where tblRpt_PhieuThu.username == urs
+                                     select tblRpt_PhieuThu;
+
+
+             
+                    var dataset2 = ut.ToDataTable(dc, rsphieuchi);
+
+                    Reportsview rpt = new Reportsview(dataset1, dataset2, "Soquy.rdlc");
+                    rpt.ShowDialog();
+
+
+                    #endregion showreports
+
+                }
+
+
+            }
 
 
 
@@ -884,23 +955,10 @@ namespace BEEACCOUNT.View
 
             #endregion
 
-            #region showreport
-
-            var rsphieuchi = from tblRpt_PhieuThu in dc.tblRpt_PhieuThus
-                             where tblRpt_PhieuThu.username == urs
-                             select tblRpt_PhieuThu;
 
 
-            Utils ut = new Utils();
-            var dataset1 = ut.ToDataTable(dc, rsphieuchi);
-
-            var dataset2 = ut.ToDataTable(dc, rsphieuchi);
-
-            Reportsview rpt = new Reportsview(dataset1, dataset2, "Soquy.rdlc");
-            rpt.ShowDialog();
 
 
-            #endregion showreports
         }
     }
 }

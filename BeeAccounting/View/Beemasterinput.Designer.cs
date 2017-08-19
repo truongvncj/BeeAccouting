@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Beestorereciept));
             this.btcustomer = new System.Windows.Forms.Button();
-            this.btbeginmaster = new System.Windows.Forms.Button();
             this.btfuctionofprogram = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.btprograme = new System.Windows.Forms.Button();
@@ -43,22 +42,14 @@
             this.button14 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button15 = new System.Windows.Forms.Button();
-            this.btbegindetail = new System.Windows.Forms.Button();
-            this.btbeginupdatefil = new System.Windows.Forms.Button();
-            this.btconvertbegin = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.begin = new System.Windows.Forms.GroupBox();
-            this.button17 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.masterdatafuction = new System.Windows.Forms.GroupBox();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button7 = new System.Windows.Forms.Button();
-            this.begin.SuspendLayout();
             this.masterdatafuction.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -73,18 +64,6 @@
             this.btcustomer.Text = "Edit Customer list";
             this.btcustomer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btcustomer.UseVisualStyleBackColor = true;
-            // 
-            // btbeginmaster
-            // 
-            this.btbeginmaster.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btbeginmaster.Location = new System.Drawing.Point(15, 13);
-            this.btbeginmaster.Name = "btbeginmaster";
-            this.btbeginmaster.Size = new System.Drawing.Size(159, 25);
-            this.btbeginmaster.TabIndex = 3;
-            this.btbeginmaster.Text = "Edit Begin Mater";
-            this.btbeginmaster.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btbeginmaster.UseVisualStyleBackColor = true;
-            this.btbeginmaster.Click += new System.EventHandler(this.button3_Click);
             // 
             // btfuctionofprogram
             // 
@@ -219,44 +198,6 @@
             this.button15.UseVisualStyleBackColor = true;
             this.button15.Click += new System.EventHandler(this.button15_Click);
             // 
-            // btbegindetail
-            // 
-            this.btbegindetail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btbegindetail.Location = new System.Drawing.Point(15, 44);
-            this.btbegindetail.Name = "btbegindetail";
-            this.btbegindetail.Size = new System.Drawing.Size(159, 25);
-            this.btbegindetail.TabIndex = 21;
-            this.btbegindetail.Text = "Edit Contract Detail ";
-            this.btbegindetail.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btbegindetail.UseVisualStyleBackColor = true;
-            this.btbegindetail.Click += new System.EventHandler(this.button16_Click);
-            // 
-            // btbeginupdatefil
-            // 
-            this.btbeginupdatefil.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btbeginupdatefil.Location = new System.Drawing.Point(15, 114);
-            this.btbeginupdatefil.Name = "btbeginupdatefil";
-            this.btbeginupdatefil.Size = new System.Drawing.Size(159, 25);
-            this.btbeginupdatefil.TabIndex = 22;
-            this.btbeginupdatefil.Text = "Update Contract  inf";
-            this.btbeginupdatefil.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btbeginupdatefil.UseVisualStyleBackColor = true;
-            this.btbeginupdatefil.Click += new System.EventHandler(this.button17_Click);
-            // 
-            // btconvertbegin
-            // 
-            this.btconvertbegin.Enabled = false;
-            this.btconvertbegin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btconvertbegin.Location = new System.Drawing.Point(15, 75);
-            this.btconvertbegin.Name = "btconvertbegin";
-            this.btconvertbegin.Size = new System.Drawing.Size(159, 25);
-            this.btconvertbegin.TabIndex = 23;
-            this.btconvertbegin.Text = "Convert  Begin Contract ";
-            this.btconvertbegin.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btconvertbegin.UseVisualStyleBackColor = false;
-            this.btconvertbegin.Visible = false;
-            this.btconvertbegin.Click += new System.EventHandler(this.button18_Click);
-            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(8, 262);
@@ -267,71 +208,6 @@
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
-            // 
-            // begin
-            // 
-            this.begin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.begin.Controls.Add(this.button17);
-            this.begin.Controls.Add(this.button16);
-            this.begin.Controls.Add(this.button4);
-            this.begin.Controls.Add(this.button11);
-            this.begin.Controls.Add(this.btbegindetail);
-            this.begin.Controls.Add(this.btbeginmaster);
-            this.begin.Controls.Add(this.btconvertbegin);
-            this.begin.Controls.Add(this.btbeginupdatefil);
-            this.begin.Location = new System.Drawing.Point(503, 230);
-            this.begin.Name = "begin";
-            this.begin.Size = new System.Drawing.Size(179, 292);
-            this.begin.TabIndex = 25;
-            this.begin.TabStop = false;
-            // 
-            // button17
-            // 
-            this.button17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button17.Location = new System.Drawing.Point(15, 246);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(159, 23);
-            this.button17.TabIndex = 29;
-            this.button17.Text = "Authourise View Contract Type ";
-            this.button17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button17.UseVisualStyleBackColor = true;
-            this.button17.Click += new System.EventHandler(this.button17_Click_1);
-            // 
-            // button16
-            // 
-            this.button16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button16.Location = new System.Drawing.Point(15, 216);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(159, 23);
-            this.button16.TabIndex = 28;
-            this.button16.Text = "Authourise View Region ";
-            this.button16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button16.UseVisualStyleBackColor = true;
-            this.button16.Click += new System.EventHandler(this.button16_Click_1);
-            // 
-            // button4
-            // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(15, 177);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(159, 23);
-            this.button4.TabIndex = 27;
-            this.button4.Text = "List all contract detail";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click_1);
-            // 
-            // button11
-            // 
-            this.button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button11.Location = new System.Drawing.Point(15, 146);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(159, 23);
-            this.button11.TabIndex = 26;
-            this.button11.Text = "List all contract master ";
-            this.button11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button11.UseVisualStyleBackColor = true;
-            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // button8
             // 
@@ -378,6 +254,30 @@
             this.masterdatafuction.TabIndex = 27;
             this.masterdatafuction.TabStop = false;
             // 
+            // button7
+            // 
+            this.button7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.Location = new System.Drawing.Point(481, 190);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(196, 27);
+            this.button7.TabIndex = 61;
+            this.button7.Text = "Mở sổ chi tiết tài khoản";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click_2);
+            // 
+            // button4
+            // 
+            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Location = new System.Drawing.Point(481, 243);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(196, 27);
+            this.button4.TabIndex = 62;
+            this.button4.Text = "Thông tin doanh nghiệp";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click_2);
+            // 
             // pictureBox2
             // 
             this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -409,28 +309,16 @@
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
             // 
-            // button7
-            // 
-            this.button7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(482, 190);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(195, 27);
-            this.button7.TabIndex = 61;
-            this.button7.Text = "Mở sổ chi tiết tài khoản";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click_2);
-            // 
             // Beestorereciept
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(707, 551);
             this.ControlBox = false;
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.masterdatafuction);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.begin);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.button5);
@@ -448,7 +336,6 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Deactivate += new System.EventHandler(this.KAmasterinput_Deactivate);
             this.Load += new System.EventHandler(this.KAmasterinput_Load);
-            this.begin.ResumeLayout(false);
             this.masterdatafuction.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -461,7 +348,6 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btcustomer;
-        private System.Windows.Forms.Button btbeginmaster;
         private System.Windows.Forms.Button btfuctionofprogram;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button btprograme;
@@ -474,19 +360,12 @@
         private System.Windows.Forms.Button button14;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button15;
-        private System.Windows.Forms.Button btbegindetail;
-        private System.Windows.Forms.Button btbeginupdatefil;
-        private System.Windows.Forms.Button btconvertbegin;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.GroupBox begin;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.GroupBox masterdatafuction;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button17;
-        private System.Windows.Forms.Button button16;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button4;
     }
 }

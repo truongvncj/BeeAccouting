@@ -69,20 +69,20 @@ namespace BEEACCOUNT.View
 
 
 
-          //  priod = null;
+            //  priod = null;
         }
 
         private void cb_year_SelectedValueChanged(object sender, EventArgs e)
         {
-          //  bl_priod.Text = StringExtensions.Right(cb_year.Text,2) + cb_month.Text ;
+            //  bl_priod.Text = StringExtensions.Right(cb_year.Text,2) + cb_month.Text ;
         }
 
         private void cb_month_SelectedValueChanged(object sender, EventArgs e)
         {
-      //      bl_priod.Text = StringExtensions.Right(cb_year.Text, 2) + cb_month.Text;
+            //      bl_priod.Text = StringExtensions.Right(cb_year.Text, 2) + cb_month.Text;
         }
 
-   
+
         private void bl_priod_Click(object sender, EventArgs e)
         {
 
@@ -166,9 +166,9 @@ namespace BEEACCOUNT.View
                             string namechitiet = selecdetail.valuetext;
                             //     lbmachitietco.Visible = true;
 
-                         ////   lbtenchitietno.Visible = true;
-                         //   lb_machitietno.Visible = true;
-                       //     this.tknochitiet = int.Parse(selecdetail.value.ToString());
+                            ////   lbtenchitietno.Visible = true;
+                            //   lb_machitietno.Visible = true;
+                            //     this.tknochitiet = int.Parse(selecdetail.value.ToString());
                             //     lbmachitietco.Text = machitiet;
                             lbtenchitietno.Text = namechitiet;
                             lb_machitietno.Text = machitiet;
@@ -182,8 +182,8 @@ namespace BEEACCOUNT.View
                     }
                     else
                     {
-                       // this.tknochitiet = -1;// int.Parse(selecdetail.value.ToString());
-                                              //     lbmachitietco.Text = machitiet;
+                        // this.tknochitiet = -1;// int.Parse(selecdetail.value.ToString());
+                        //     lbmachitietco.Text = machitiet;
                         lbtenchitietno.Text = "";//namechitiet;
                         lb_machitietno.Text = "";
                     }
@@ -192,8 +192,8 @@ namespace BEEACCOUNT.View
                 }
                 else
                 {
-                   // this.tknochitiet = -1;// int.Parse(selecdetail.value.ToString());
-                                          //     lbmachitietco.Text = machitiet;
+                    // this.tknochitiet = -1;// int.Parse(selecdetail.value.ToString());
+                    //     lbmachitietco.Text = machitiet;
                     lbtenchitietno.Text = "";//namechitiet;
                     lb_machitietno.Text = "";
                 }
@@ -204,8 +204,8 @@ namespace BEEACCOUNT.View
             }
             else
             {
-               // this.tknochitiet = -1;// int.Parse(selecdetail.value.ToString());
-                                      //     lbmachitietco.Text = machitiet;
+                // this.tknochitiet = -1;// int.Parse(selecdetail.value.ToString());
+                //     lbmachitietco.Text = machitiet;
                 lbtenchitietno.Text = "";//namechitiet;
                 lb_machitietno.Text = "";
             }
@@ -214,15 +214,46 @@ namespace BEEACCOUNT.View
 
         private void bt_thuchien_Click(object sender, EventArgs e)
         {
+            if (cbtk.SelectedItem != null)
+            {
+                mataikhoan = (cbtk.SelectedItem as ComboboxItem).Value.ToString();
+                tentaikhoanchitiet = (cbtk.SelectedItem as ComboboxItem).Text.ToString();
+            }
+            else
+            {
+                MessageBox.Show("Bạn chưa chọn tài khoản", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                chon = false;
+                return;
+            }
+
+            if (pkfromdate.Value <= pk_todate.Value)
+            {
+                fromdate = pkfromdate.Value;
+                todate = pk_todate.Value;
 
 
+            }
+            else
+            {
+                MessageBox.Show("Từ ngày phải nhỏ hơn đến ngày ", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                chon = false;
+                return;
+            }
 
+            if (Utils.IsValidnumber(lb_machitietno.Text))
+            {
+                machitiettaikhoan = int.Parse(lb_machitietno.Text.Trim());
+                tentaikhoanchitiet = lbtenchitietno.Text.Trim();
+            }
 
 
 
             chon = true;
-
-            this.Close();
+            if (chon == true)
+            {
+                this.Close();
+            }
+        
 
 
 
