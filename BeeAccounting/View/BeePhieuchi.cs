@@ -148,7 +148,7 @@ namespace BEEACCOUNT.View
 
             #region tim item comboboc
 
-            foreach (ComboboxItem item in (List<ComboboxItem>)cb.DataSource)
+            foreach (View.BeePhieuThu.ComboboxItem item in (List<View.BeePhieuThu.ComboboxItem>)cb.DataSource)
             {
 
                 if (item.Value.ToString().Trim() == socaitemp.TkCo.ToString().Trim())
@@ -516,10 +516,10 @@ namespace BEEACCOUNT.View
 
 
             bool checkdinhkhoanno = true;
-            #region  check từng dong sổ tk NỢ
+            #region  check từng dong sổ tk Có
             for (int idrow = 0; idrow < dataGridViewTkNo.RowCount - 1; idrow++) // 'dataGridViewTkNo'
             {
-                if (dataGridViewTkNo.Rows[idrow].Cells["Tk_Nợ"].Value != DBNull.Value)
+                if (dataGridViewTkNo.Rows[idrow].Cells["Tk_Có"].Value != DBNull.Value)
                 {
 
 
@@ -1380,7 +1380,7 @@ namespace BEEACCOUNT.View
 
             #endregion
 
-            dataGridViewTkNo = Model.Phieuthuchi.reloadnewdetailtaikhoanco(dataGridViewTkNo);
+            dataGridViewTkNo = Model.Phieuthuchi.reloadnewdetailtaikhoanNo(dataGridViewTkNo);
 
         }
 
