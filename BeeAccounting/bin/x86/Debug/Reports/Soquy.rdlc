@@ -367,6 +367,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                   <FontFamily>Times New Roman</FontFamily>
                   <FontSize>11pt</FontSize>
                   <FontWeight>Normal</FontWeight>
+                  <Format>dd/MM/yyyy</Format>
                   <TextDecoration>None</TextDecoration>
                   <Color>#000000</Color>
                 </Style>
@@ -439,6 +440,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                   <FontFamily>Times New Roman</FontFamily>
                   <FontSize>11pt</FontSize>
                   <FontWeight>Normal</FontWeight>
+                  <Format>dd/MM/yyyy</Format>
                   <TextDecoration>None</TextDecoration>
                   <Color>#000000</Color>
                 </Style>
@@ -523,7 +525,9 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!nodauky.Value</Value>
-                              <Style />
+                              <Style>
+                                <Format>#,0;(#,0)</Format>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -574,7 +578,9 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!codauky.Value</Value>
-                              <Style />
+                              <Style>
+                                <Format>#,0;(#,0)</Format>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -630,7 +636,9 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!psno.Value</Value>
-                              <Style />
+                              <Style>
+                                <Format>#,0;(#,0)</Format>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -681,7 +689,9 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!psco.Value</Value>
-                              <Style />
+                              <Style>
+                                <Format>#,0;(#,0)</Format>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -737,7 +747,9 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!cocuoiky.Value</Value>
-                              <Style />
+                              <Style>
+                                <Format>#,0;(#,0)</Format>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -788,7 +800,9 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!cocuoiky.Value</Value>
-                              <Style />
+                              <Style>
+                                <Format>#,0;(#,0)</Format>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -2301,6 +2315,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                               <Value>=Fields!nodauky.Value</Value>
                               <Style>
                                 <FontWeight>Bold</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                                 <TextDecoration>Underline</TextDecoration>
                               </Style>
                             </TextRun>

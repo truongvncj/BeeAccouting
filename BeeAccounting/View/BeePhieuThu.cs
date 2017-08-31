@@ -243,7 +243,7 @@ namespace BEEACCOUNT.View
 
             dataGridViewTkCo = Model.Phieuthuchi.reloadnewdetailtaikhoanco(dataGridViewTkCo);
 
-            dataGridViewListphieuthu.DataSource = Model.Phieuthuchi.LisDanhSachphieuthuchi("PT");
+            dataGridViewListphieuthu.DataSource = Model.Phieuthuchi.LisDanhSachphieuthu("PT");
 
             #endregion load datanew
 
@@ -1108,7 +1108,7 @@ namespace BEEACCOUNT.View
             #endregion
             dataGridViewTkCo = Model.Phieuthuchi.reloadnewdetailtaikhoanco(dataGridViewTkCo);
 
-            dataGridViewListphieuthu.DataSource = Model.Phieuthuchi.LisDanhSachphieuthuchi("PT");
+            dataGridViewListphieuthu.DataSource = Model.Phieuthuchi.LisDanhSachphieuthu("PT");
 
         }
 

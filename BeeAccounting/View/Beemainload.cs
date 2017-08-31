@@ -915,6 +915,33 @@ namespace BEEACCOUNT.View
                     headSoquy.username = username;
                     headSoquy.diachicongty = Model.Congty.getdiachicongty();
                     headSoquy.masothue = Model.Congty.getmasothuecongty();
+                    headSoquy.tungay = fromdate;
+                    headSoquy.denngay = todate;
+                    headSoquy.codauky = (from tbl_SoQuy in dc.tbl_SoQuys
+                                         where tbl_SoQuy.Ngayghiso < fromdate
+                                         select tbl_SoQuy.PsCo).Sum().GetValueOrDefault(0);
+
+
+                          
+                    headSoquy.nodauky = (from tbl_SoQuy in dc.tbl_SoQuys
+                                                where tbl_SoQuy.Ngayghiso < fromdate
+                                                select tbl_SoQuy.PsNo).Sum().GetValueOrDefault(0);
+                    headSoquy.psco = (from tbl_SoQuy in dc.tbl_SoQuys
+                                      where tbl_SoQuy.Ngayghiso >= fromdate && tbl_SoQuy.Ngayghiso <= todate
+                                      select tbl_SoQuy.PsCo).Sum();
+
+                    headSoquy.psno = (from tbl_SoQuy in dc.tbl_SoQuys
+                                      where tbl_SoQuy.Ngayghiso >= fromdate && tbl_SoQuy.Ngayghiso <= todate
+                                      select tbl_SoQuy.PsNo).Sum();
+
+
+                //    headSoquy.cocuoiky
+                 //   headSoquy.nocuoiky
+                         
+                       
+
+
+
 
                     dc.RPtsoQuys.InsertOnSubmit(headSoquy);
                     dc.SubmitChanges();
@@ -930,6 +957,9 @@ namespace BEEACCOUNT.View
                     var dataset1 = ut.ToDataTable(dc, headerquy);
 
 
+
+
+
                     var rsphieuchi = from tblRpt_PhieuThu in dc.tblRpt_PhieuThus
                                      where tblRpt_PhieuThu.username == urs
                                      select tblRpt_PhieuThu;
@@ -939,6 +969,9 @@ namespace BEEACCOUNT.View
                     var dataset2 = ut.ToDataTable(dc, rsphieuchi);
 
                     Reportsview rpt = new Reportsview(dataset1, dataset2, "Soquy.rdlc");
+
+
+
                     rpt.ShowDialog();
 
 

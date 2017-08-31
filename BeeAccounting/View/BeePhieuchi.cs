@@ -148,7 +148,7 @@ namespace BEEACCOUNT.View
 
             #region tim item comboboc
 
-            foreach (View.BeePhieuThu.ComboboxItem item in (List<View.BeePhieuThu.ComboboxItem>)cb.DataSource)
+            foreach (ComboboxItem item in (List<ComboboxItem>)cb.DataSource)
             {
 
                 if (item.Value.ToString().Trim() == socaitemp.TkCo.ToString().Trim())
@@ -312,7 +312,7 @@ namespace BEEACCOUNT.View
 
             dataGridViewTkNo = Model.Phieuthuchi.reloadnewdetailtaikhoanNo(dataGridViewTkNo);
 
-            dataGridViewListphieuchi.DataSource = Model.Phieuthuchi.LisDanhSachphieuthuchi("PC");
+            dataGridViewListphieuchi.DataSource = Model.Phieuthuchi.LisDanhSachphieuchi("PC");
 
             #endregion load datanew
 
@@ -519,7 +519,7 @@ namespace BEEACCOUNT.View
             #region  check từng dong sổ tk Có
             for (int idrow = 0; idrow < dataGridViewTkNo.RowCount - 1; idrow++) // 'dataGridViewTkNo'
             {
-                if (dataGridViewTkNo.Rows[idrow].Cells["Tk_Có"].Value != DBNull.Value)
+                if (dataGridViewTkNo.Rows[idrow].Cells["Tk_Nợ"].Value != DBNull.Value)
                 {
 
 
@@ -599,11 +599,11 @@ namespace BEEACCOUNT.View
 
 
 
-                soquy.PsCo = 0;
+                soquy.PsNo = 0;
 
                 if (Utils.IsValidnumber(txtsotien.Text.Replace(",", "")))
                 {
-                    soquy.PsNo = double.Parse(txtsotien.Text.Replace(",", "").Trim());
+                    soquy.PsCo = double.Parse(txtsotien.Text.Replace(",", "").Trim());
                 }
                 else
                 {
@@ -968,7 +968,7 @@ namespace BEEACCOUNT.View
 
                         phieuchange.Nguoinopnhantien = soquy.Nguoinopnhantien;
                         phieuchange.PsNo = soquy.PsNo;
-
+                        phieuchange.PsCo = soquy.PsCo;
 
                         phieuchange.TKdoiung = soquy.TKdoiung;
                         phieuchange.TKtienmat = soquy.TKtienmat;
@@ -1177,7 +1177,7 @@ namespace BEEACCOUNT.View
             #endregion
             dataGridViewTkNo = Model.Phieuthuchi.reloadnewdetailtaikhoanNo(dataGridViewTkNo);
 
-            dataGridViewListphieuchi.DataSource = Model.Phieuthuchi.LisDanhSachphieuthuchi("PC");
+            dataGridViewListphieuchi.DataSource = Model.Phieuthuchi.LisDanhSachphieuchi("PC");
 
         }
 
@@ -1417,7 +1417,7 @@ namespace BEEACCOUNT.View
                                 //    nguoilapphieu = Utils.getname(),
                                 diachinguoinop = tbl_SoQuy.Diachinguoinhannop,
                                 lydothu = tbl_SoQuy.Diengiai,
-                                sotien = tbl_SoQuy.PsNo,
+                                sotien = tbl_SoQuy.PsCo,
                                 //   sotienbangchu = Utils.ChuyenSo(tbl_SoQuy.PsNo.ToString()),
                                 sochungtugoc = tbl_SoQuy.Chungtugockemtheo,
                                 //    username = Utils.getusername(),
