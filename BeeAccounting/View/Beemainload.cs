@@ -918,27 +918,28 @@ namespace BEEACCOUNT.View
                     headSoquy.tungay = fromdate;
                     headSoquy.denngay = todate;
                     headSoquy.codauky = (from tbl_SoQuy in dc.tbl_SoQuys
-                                         where tbl_SoQuy.Ngayghiso < fromdate
+                                         where tbl_SoQuy.Ngayctu < fromdate
                                          select tbl_SoQuy.PsCo).Sum().GetValueOrDefault(0);
 
 
                           
                     headSoquy.nodauky = (from tbl_SoQuy in dc.tbl_SoQuys
-                                                where tbl_SoQuy.Ngayghiso < fromdate
+                                                where tbl_SoQuy.Ngayctu < fromdate
                                                 select tbl_SoQuy.PsNo).Sum().GetValueOrDefault(0);
                     headSoquy.psco = (from tbl_SoQuy in dc.tbl_SoQuys
-                                      where tbl_SoQuy.Ngayghiso >= fromdate && tbl_SoQuy.Ngayghiso <= todate
+                                      where tbl_SoQuy.Ngayctu >= fromdate && tbl_SoQuy.Ngayctu <= todate
                                       select tbl_SoQuy.PsCo).Sum();
 
                     headSoquy.psno = (from tbl_SoQuy in dc.tbl_SoQuys
-                                      where tbl_SoQuy.Ngayghiso >= fromdate && tbl_SoQuy.Ngayghiso <= todate
+                                      where tbl_SoQuy.Ngayctu >= fromdate && tbl_SoQuy.Ngayctu <= todate
                                       select tbl_SoQuy.PsNo).Sum();
 
 
-                //    headSoquy.cocuoiky
-                 //   headSoquy.nocuoiky
-                         
-                       
+                    headSoquy.nocuoiky = headSoquy.nodauky + headSoquy.psno;
+
+                    headSoquy.cocuoiky = headSoquy.codauky + headSoquy.psco;
+
+
 
 
 

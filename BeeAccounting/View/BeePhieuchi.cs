@@ -1547,7 +1547,7 @@ namespace BEEACCOUNT.View
                                     //    nguoilapphieu = Utils.getname(),
                                     diachinguoinop = tbl_SoQuy.Diachinguoinhannop,
                                     lydothu = tbl_SoQuy.Diengiai,
-                                    sotien = tbl_SoQuy.PsNo,
+                                    sotien = tbl_SoQuy.PsCo,
                                     //   sotienbangchu = Utils.ChuyenSo(tbl_SoQuy.PsNo.ToString()),
                                     sochungtugoc = tbl_SoQuy.Chungtugockemtheo,
                                     //    username = Utils.getusername(),
