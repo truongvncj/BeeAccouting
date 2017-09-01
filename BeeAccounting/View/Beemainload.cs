@@ -940,7 +940,7 @@ namespace BEEACCOUNT.View
                     headSoquy.cocuoiky = headSoquy.codauky + headSoquy.psco;
 
 
-
+                    double daukysave = (double)headSoquy.nodauky - (double)headSoquy.codauky;
 
 
 
@@ -957,17 +957,68 @@ namespace BEEACCOUNT.View
                     Utils ut = new Utils();
                     var dataset1 = ut.ToDataTable(dc, headerquy);
 
+                    //-----------------------
+
+
+
+                    //  RptdetailSoQuy
+           //        RptdetailSoQuy q = new RptdetailSoQuy();
+
+                    var detairpt = from tbl_SoQuy in dc.tbl_SoQuys
+                                //   where tbl_SoQuy.Ngayctu >= fromdate && tbl_SoQuy.Ngayctu <= todate
+                                   select new
+                                   {
+                                       diengiai = tbl_SoQuy.Diengiai,
+
+                                       username = urs,
+
+
+                                       machungtuchi = tbl_SoQuy.Machungtu =="PC"
+                                       ? tbl_SoQuy.Machungtu + " " + tbl_SoQuy.Sochungtu.ToString().Trim()
+                                       : "",
+
+                                       machungtuthu = tbl_SoQuy.Machungtu == "PT"
+                                       ? tbl_SoQuy.Machungtu + " " + tbl_SoQuy.Sochungtu.ToString().Trim()
+                                       : "",
+
+                                       
+
+                                       //machungtuchi = tbl_SoQuy.Machungtu + " " + tbl_SoQuy.Sochungtu.ToString().Trim(),
+                                       //machungtuthu = tbl_SoQuy.Machungtu + " " + tbl_SoQuy.Sochungtu.ToString().Trim(),
+
+                                       
+
+
+                                       Ngaychungtu = tbl_SoQuy.Ngayctu,
+                                       psco = tbl_SoQuy.PsCo,
+                                       psno = tbl_SoQuy.PsNo,
+                                   //    ton = daukysave + tbl_SoQuy.PsNo - tbl_SoQuy.PsCo,
+                                  //     daukysave = daukysave + tbl_SoQuy.PsNo - tbl_SoQuy.PsCo,
+
+                                       taikhoandoiung = tbl_SoQuy.TKdoiung,
+                                      
+                                     
 
 
 
 
-                    var rsphieuchi = from tblRpt_PhieuThu in dc.tblRpt_PhieuThus
-                                     where tblRpt_PhieuThu.username == urs
-                                     select tblRpt_PhieuThu;
+                                   };
+
+
+
+                    //var rsphieuchi = from RptdetailSoQuy in dc.RptdetailSoQuys
+                    //                 where RptdetailSoQuy.username == urs
+                    //                 select RptdetailSoQuy;
 
 
              
-                    var dataset2 = ut.ToDataTable(dc, rsphieuchi);
+                    var dataset2 = ut.ToDataTable(dc, detairpt);
+
+                
+
+
+
+
 
                     Reportsview rpt = new Reportsview(dataset1, dataset2, "Soquy.rdlc");
 
