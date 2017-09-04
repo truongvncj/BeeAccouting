@@ -215,6 +215,8 @@
       <Column Name="matk" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="machitiet" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="ghichu" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="nodk" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="codk" Type="System.Double" DbType="Float" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.tbl_Socai" Member="tbl_Socais">

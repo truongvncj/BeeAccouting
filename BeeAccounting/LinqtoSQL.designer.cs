@@ -4598,6 +4598,10 @@ namespace BEEACCOUNT
 		
 		private string _ghichu;
 		
+		private System.Nullable<double> _nodk;
+		
+		private System.Nullable<double> _codk;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -4612,6 +4616,10 @@ namespace BEEACCOUNT
     partial void OnmachitietChanged();
     partial void OnghichuChanging(string value);
     partial void OnghichuChanged();
+    partial void OnnodkChanging(System.Nullable<double> value);
+    partial void OnnodkChanged();
+    partial void OncodkChanging(System.Nullable<double> value);
+    partial void OncodkChanged();
     #endregion
 		
 		public tbl_machitiettk()
@@ -4715,6 +4723,46 @@ namespace BEEACCOUNT
 					this._ghichu = value;
 					this.SendPropertyChanged("ghichu");
 					this.OnghichuChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_nodk", DbType="Float")]
+		public System.Nullable<double> nodk
+		{
+			get
+			{
+				return this._nodk;
+			}
+			set
+			{
+				if ((this._nodk != value))
+				{
+					this.OnnodkChanging(value);
+					this.SendPropertyChanging();
+					this._nodk = value;
+					this.SendPropertyChanged("nodk");
+					this.OnnodkChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_codk", DbType="Float")]
+		public System.Nullable<double> codk
+		{
+			get
+			{
+				return this._codk;
+			}
+			set
+			{
+				if ((this._codk != value))
+				{
+					this.OncodkChanging(value);
+					this.SendPropertyChanging();
+					this._codk = value;
+					this.SendPropertyChanged("codk");
+					this.OncodkChanged();
 				}
 			}
 		}

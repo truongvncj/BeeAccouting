@@ -1570,7 +1570,7 @@
         <Top>5.10791in</Top>
         <Left>1.44149in</Left>
         <Height>0.25in</Height>
-        <Width>1.43028in</Width>
+        <Width>1.55528in</Width>
         <ZIndex>37</ZIndex>
         <Style>
           <Border>
@@ -1656,10 +1656,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>5.96946in</Top>
+        <Top>5.76114in</Top>
         <Left>0.11198in</Left>
-        <Height>0.52778in</Height>
-        <Width>2.77995in</Width>
+        <Height>0.18958in</Height>
+        <Width>4.48032in</Width>
         <ZIndex>39</ZIndex>
         <Style>
           <Border>
@@ -1707,8 +1707,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>5.74725in</Top>
-        <Left>0.09948in</Left>
+        <Top>5.97849in</Top>
+        <Left>0.09263in</Left>
         <Height>0.20277in</Height>
         <Width>2.29896in</Width>
         <ZIndex>40</ZIndex>

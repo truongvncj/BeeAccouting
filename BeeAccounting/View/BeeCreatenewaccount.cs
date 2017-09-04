@@ -154,6 +154,9 @@ namespace BEEACCOUNT.View
 
                     this.cbtkmother.Text = rs1.matktren;
                     this.checkbookchitiet.Checked = rs1.loaichitiet;
+                    txtCodauky.Text = rs1.codk.ToString();
+                    txtNodauky.Text = rs1.nodk.ToString();
+
 
                 }
 

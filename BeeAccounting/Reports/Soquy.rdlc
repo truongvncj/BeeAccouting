@@ -263,13 +263,15 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                 </Style>
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>1.18554in</Top>
-        <Left>4.19701in</Left>
-        <Height>0.20058in</Height>
+        <Top>1.1999in</Top>
+        <Left>4.17201in</Left>
+        <Height>0.16969in</Height>
         <Width>3.34498in</Width>
         <ZIndex>6</ZIndex>
         <Style>
@@ -303,7 +305,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>1.39875in</Top>
+        <Top>1.41125in</Top>
         <Left>3.37213in</Left>
         <Height>0.22222in</Height>
         <Width>0.75625in</Width>
@@ -336,12 +338,14 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                 </Style>
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>1.39737in</Top>
-        <Left>4.19782in</Left>
+        <Top>1.42237in</Top>
+        <Left>4.17282in</Left>
         <Height>0.22222in</Height>
         <Width>0.99486in</Width>
         <ZIndex>8</ZIndex>
@@ -376,7 +380,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>1.64875in</Top>
+        <Top>1.66125in</Top>
         <Left>3.37213in</Left>
         <Height>0.22222in</Height>
         <Width>0.75625in</Width>
@@ -409,12 +413,14 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                 </Style>
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>1.64737in</Top>
-        <Left>4.19782in</Left>
+        <Top>1.67237in</Top>
+        <Left>4.17282in</Left>
         <Height>0.22222in</Height>
         <Width>0.99486in</Width>
         <ZIndex>10</ZIndex>
@@ -1768,7 +1774,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
         <Top>5.34141cm</Top>
         <Left>0.28576cm</Left>
         <Height>1.8cm</Height>
-        <Width>27.86201cm</Width>
+        <Width>27.86203cm</Width>
         <ZIndex>12</ZIndex>
         <Style>
           <Border>
@@ -2085,7 +2091,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
         <Top>8.34494cm</Top>
         <Left>0.28743cm</Left>
         <Height>0.6cm</Height>
-        <Width>27.86034cm</Width>
+        <Width>27.86036cm</Width>
         <ZIndex>13</ZIndex>
         <Style>
           <Border>
@@ -2654,7 +2660,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
         <Top>7.14494cm</Top>
         <Left>0.28576cm</Left>
         <Height>1.2cm</Height>
-        <Width>27.86762cm</Width>
+        <Width>27.86764cm</Width>
         <ZIndex>14</ZIndex>
         <Style>
           <Border>
@@ -2715,13 +2721,15 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                 </Style>
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
         <Top>0.97167in</Top>
-        <Left>4.18532in</Left>
-        <Height>0.22222in</Height>
+        <Left>4.16032in</Left>
+        <Height>0.21156in</Height>
         <Width>3.34498in</Width>
         <ZIndex>16</ZIndex>
         <Style>

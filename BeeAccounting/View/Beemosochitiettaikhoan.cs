@@ -39,6 +39,8 @@ namespace BEEACCOUNT.View
                          Tên_tài_khoản_chi_tiết = dschitiet.tenchitiet,
                          Mã_chi_tiết = dschitiet.machitiet,
                          Ghi_chú = dschitiet.ghichu,
+                         Nợ_đầu_kỳ = dschitiet.nodk,
+                         Có_đầu_kỳ = dschitiet.codk,
                          ID = dschitiet.id
                      };
             // this.dataGridView1.DataSource = rs;
@@ -117,7 +119,6 @@ namespace BEEACCOUNT.View
                 {
                     cbtkno.SelectedIndex = cbtkno.Items.IndexOf(value);
                 }
-
 
 
 
@@ -210,6 +211,10 @@ namespace BEEACCOUNT.View
                     {
                         txtghichu.Text = machitiet.ghichu.ToString();
                     }
+
+                    txtNodauky.Text = machitiet.nodk.ToString();
+
+                    txtCodauky.Text = machitiet.codk.ToString();
 
 
 
@@ -497,6 +502,14 @@ namespace BEEACCOUNT.View
                             }
 
 
+                            if (chitietma.codk != null)
+                            {
+                                txtCodauky.Text = chitietma.codk.ToString();
+                            }
+                            if (chitietma.nodk != null)
+                            {
+                                txtNodauky.Text = chitietma.nodk.ToString();
+                            }
 
 
 
@@ -542,87 +555,70 @@ namespace BEEACCOUNT.View
             if (tkchitiet != null)
             {
 
-                // tkchitiet.machitiet =
-
-            //    #region ma chi tiet tai khoa
 
 
-            //    if (Utils.IsValidnumber(txtmachitiet.Text.ToString()))
-            //    {
 
-               
-            //    var rs = (from dschitiet in db.tbl_machitiettks
-            //              where dschitiet.machitiet == int.Parse(txtmachitiet.Text) &&
-            //                     dschitiet.matk.Trim() == (cbtkno.SelectedItem as ComboboxItem).Value.ToString().Trim()
-            //              select dschitiet).FirstOrDefault();
-            //    //   MessageBox.Show(rs.machitiet.ToString());
-            //    if (rs == null)
-            //    {
-
-
-            //        tkchitiet.machitiet = int.Parse(txtmachitiet.Text.ToString());
-
-
-            //    }
-            //    else
-            //    {
-            //        MessageBox.Show("Mã chi tiết bị lặp cần xem lại ", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
-            //        txtmachitiet.Focus();
-            //        return;
-            //    }
-
-
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Mã tài chi tiết tài khoản phải là số ", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //    txtmachitiet.Focus();
-            //    return;
-            //}
-
-
-        
-
-            //#endregion ma chi tiet tai khoan
-
-
-            #region  ten chi tiet 
-            if (txttenchitettaikhoan.Text != null && txttenchitettaikhoan.Text != "")
-            {
+                #region  ten chi tiet 
+                if (txttenchitettaikhoan.Text != null && txttenchitettaikhoan.Text != "")
+                {
 
                     tkchitiet.tenchitiet = txttenchitettaikhoan.Text;
 
-              //  taikhoanchon = txttenchitettaikhoan.Text;
-            }
-            else
-            {
-                MessageBox.Show("Bạn chưa nhập tên tài khoản chi tiết ", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txttenchitettaikhoan.Focus();
-                return;
-            }
+                    //  taikhoanchon = txttenchitettaikhoan.Text;
+                }
+                else
+                {
+                    MessageBox.Show("Bạn chưa nhập tên tài khoản chi tiết ", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txttenchitettaikhoan.Focus();
+                    return;
+                }
 
-            #endregion ten chi tiet ma chi tiet
+                #endregion ten chi tiet ma chi tiet
 
 
 
-            #region  ten tai khoan chi tiet
-            if ((cbtkno.SelectedItem as ComboboxItem).Value != null)
-            {
+                #region  ten tai khoan chi tiet
+                if ((cbtkno.SelectedItem as ComboboxItem).Value != null)
+                {
                     tkchitiet.matk = (cbtkno.SelectedItem as ComboboxItem).Value.ToString();
                     tkchitiet.ghichu = txtghichu.Text;
-            }
-            else
-            {
-                MessageBox.Show("Bạn chưa chọn tài khoản theo dõi chi tiết", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                cbtkno.Focus();
-                return;
-            }
+                }
+                else
+                {
+                    MessageBox.Show("Bạn chưa chọn tài khoản theo dõi chi tiết", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    cbtkno.Focus();
+                    return;
+                }
 
 
 
 
                 #endregion
+
+
+
+
+                if (Utils.IsValidnumber(txtNodauky.Text))
+                {
+                    tkchitiet.nodk = float.Parse(txtNodauky.Text);
+                }
+                else
+                {
+                    MessageBox.Show("Bạn kiểm tra lại số dư nợ đầu kỳ ", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+
+                }
+
+                if (Utils.IsValidnumber(txtCodauky.Text))
+                {
+                    tkchitiet.codk = float.Parse(txtCodauky.Text);
+                }
+                else
+                {
+                    MessageBox.Show("Bạn kiểm tra lại số dư nợ đầu kỳ ", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+
+                }
 
                 db.SubmitChanges();
 
@@ -630,19 +626,19 @@ namespace BEEACCOUNT.View
                 dataGridView1.DataSource = rs3;
 
 
+            }
+
+            //View.Beemosochitiettaikhoan loaitkform = new View.Beemosochitiettaikhoan(2, "", 0); // 1 la nghiep vu them moi
+            //loaitkform.ShowDialog();
+
+
+            //bool chon = loaitkform.chon;
+
+
+
+
+
         }
-
-        //View.Beemosochitiettaikhoan loaitkform = new View.Beemosochitiettaikhoan(2, "", 0); // 1 la nghiep vu them moi
-        //loaitkform.ShowDialog();
-
-
-        //bool chon = loaitkform.chon;
-
-
-
-
-
-    }
 
         private void dataGridView1_Paint(object sender, PaintEventArgs e)
         {
@@ -764,7 +760,7 @@ namespace BEEACCOUNT.View
 
 
 
-            #region ma chi tiet tai khoa
+                #region ma chi tiet tai khoa
 
 
 
@@ -840,7 +836,27 @@ namespace BEEACCOUNT.View
 
             #endregion
 
+            if (Utils.IsValidnumber(txtNodauky.Text))
+            {
+                tkchitiet.nodk = float.Parse(txtNodauky.Text);
+            }
+            else
+            {
+                MessageBox.Show("Bạn kiểm tra lại số dư nợ đầu kỳ ", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
 
+            }
+
+            if (Utils.IsValidnumber(txtCodauky.Text))
+            {
+                tkchitiet.codk = float.Parse(txtCodauky.Text);
+            }
+            else
+            {
+                MessageBox.Show("Bạn kiểm tra lại số dư nợ đầu kỳ ", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+
+            }
 
             #region  insernew
 
@@ -920,6 +936,25 @@ namespace BEEACCOUNT.View
 
 
 
+                    if (machitiet.codk != null)
+                    {
+                        txtCodauky.Text = machitiet.codk.ToString();
+                    }
+                    else
+                    {
+                        txtCodauky.Text = "0";
+                    }
+
+                    if (machitiet.nodk != null)
+                    {
+                        txtNodauky.Text = machitiet.nodk.ToString();
+                    }
+                    else
+                    {
+                        txtNodauky.Text = "0";
+                    }
+
+
 
 
 
@@ -935,6 +970,11 @@ namespace BEEACCOUNT.View
 
             }
 
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
 
         }
     }

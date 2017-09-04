@@ -27,6 +27,8 @@ namespace BEEACCOUNT.Model
                           Tên_tài_khoản_chi_tiết = dschitiet.tenchitiet,
                           Mã_chi_tiết = dschitiet.machitiet,
                           Ghi_chú = dschitiet.ghichu,
+                          Nợ_đầu_kỳ = dschitiet.nodk,
+                          Có_đầu_kỳ = dschitiet.codk,
                           ID = dschitiet.id
                       };
 

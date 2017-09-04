@@ -846,7 +846,7 @@ namespace BEEACCOUNT.View
             //  var db = new LinqtoSQLDataContext(connection_string);
             LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
 
-      
+
             #region  chọn sổ quỹ chi tiết
 
 
@@ -873,7 +873,7 @@ namespace BEEACCOUNT.View
                 View.Beeselecttk Beeselecttk = new View.Beeselecttk();
                 Beeselecttk.ShowDialog();
 
-                 chon = Beeselecttk.chon;
+                chon = Beeselecttk.chon;
                 DateTime fromdate = Beeselecttk.fromdate;
                 DateTime todate = Beeselecttk.todate;
 
@@ -887,20 +887,20 @@ namespace BEEACCOUNT.View
                 {
 
                     #region showreport
-// xoa data cũ
+                    // xoa data cũ
                     string username = Utils.getusername();
 
                     var listRptdetailSoQuy = from RptdetailSoQuy in dc.RptdetailSoQuys
-                                      where RptdetailSoQuy.username == username
-                                      select RptdetailSoQuy;
+                                             where RptdetailSoQuy.username == username
+                                             select RptdetailSoQuy;
 
                     dc.RptdetailSoQuys.DeleteAllOnSubmit(listRptdetailSoQuy);
                     dc.SubmitChanges();
 
 
                     var listRPtsoQuy = from RPtsoQuy in dc.RPtsoQuys
-                                             where RPtsoQuy.username == username
-                                             select RPtsoQuy;
+                                       where RPtsoQuy.username == username
+                                       select RPtsoQuy;
 
                     dc.RPtsoQuys.DeleteAllOnSubmit(listRPtsoQuy);
                     dc.SubmitChanges();
@@ -908,7 +908,7 @@ namespace BEEACCOUNT.View
                     RptdetailSoQuy detailSoquy = new RptdetailSoQuy();
                     // update data mới   RPtsoQuy
 
-                    
+
                     RPtsoQuy headSoquy = new RPtsoQuy();
 
 
@@ -920,19 +920,57 @@ namespace BEEACCOUNT.View
                     headSoquy.masothue = Model.Congty.getmasothuecongty();
                     headSoquy.tungay = fromdate;
                     headSoquy.denngay = todate;
-                    headSoquy.codauky = (from tbl_SoQuy in dc.tbl_SoQuys
-                                         where tbl_SoQuy.Ngayctu < fromdate
-                                         && tbl_SoQuy.TKtienmat.Trim() == mataikhoan
-                                         && tbl_SoQuy.ChitietTM == machitiettaikhoan
-                                         select tbl_SoQuy.PsCo).Sum().GetValueOrDefault(0);
+
+                    if (machitiettaikhoan != 0)
+                    {
+
+                        headSoquy.codauky = (from tbl_SoQuy in dc.tbl_SoQuys
+                                             where tbl_SoQuy.Ngayctu < fromdate
+                                             && tbl_SoQuy.TKtienmat.Trim() == mataikhoan
+                                             && tbl_SoQuy.ChitietTM == machitiettaikhoan
+                                             select tbl_SoQuy.PsCo).Sum().GetValueOrDefault(0) + (from tbl_machitiettk in dc.tbl_machitiettks
+                                                                                                  where tbl_machitiettk.machitiet == machitiettaikhoan
+                                                                                                  && tbl_machitiettk.matk == mataikhoan
+                                                                                                  select tbl_machitiettk.codk).FirstOrDefault();
+
+                        headSoquy.nodauky = (from tbl_SoQuy in dc.tbl_SoQuys
+                                             where tbl_SoQuy.Ngayctu < fromdate
+                                                  && tbl_SoQuy.TKtienmat.Trim() == mataikhoan
+                                      && tbl_SoQuy.ChitietTM == machitiettaikhoan
+                                             select tbl_SoQuy.PsNo).Sum().GetValueOrDefault(0) + (from tbl_machitiettk in dc.tbl_machitiettks
+                                                                                                  where tbl_machitiettk.machitiet == machitiettaikhoan
+                                                                                                  && tbl_machitiettk.matk == mataikhoan
+                                                                                                  select tbl_machitiettk.nodk).FirstOrDefault();
+
+                    }
+                    else
+                    {
+
+                        headSoquy.codauky = (from tbl_SoQuy in dc.tbl_SoQuys
+                                             where tbl_SoQuy.Ngayctu < fromdate
+                                             && tbl_SoQuy.TKtienmat.Trim() == mataikhoan
+                                             && tbl_SoQuy.ChitietTM == machitiettaikhoan
+                                             select tbl_SoQuy.PsCo).Sum().GetValueOrDefault(0) + (from tbl_dstaikhoan in dc.tbl_dstaikhoans
+                                                                                                  where tbl_dstaikhoan.matk == mataikhoan
+                                                                                                  select tbl_dstaikhoan.codk).FirstOrDefault();
+
+                        headSoquy.nodauky = (from tbl_SoQuy in dc.tbl_SoQuys
+                                             where tbl_SoQuy.Ngayctu < fromdate
+                                                  && tbl_SoQuy.TKtienmat.Trim() == mataikhoan
+                                      && tbl_SoQuy.ChitietTM == machitiettaikhoan
+                                             select tbl_SoQuy.PsNo).Sum().GetValueOrDefault(0) + (from tbl_dstaikhoan in dc.tbl_dstaikhoans
+                                                                                                  where tbl_dstaikhoan.matk == mataikhoan
+                                                                                                  select tbl_dstaikhoan.nodk).FirstOrDefault();
 
 
-                          
-                    headSoquy.nodauky = (from tbl_SoQuy in dc.tbl_SoQuys
-                                                where tbl_SoQuy.Ngayctu < fromdate
-                                                     && tbl_SoQuy.TKtienmat.Trim() == mataikhoan
-                                         && tbl_SoQuy.ChitietTM == machitiettaikhoan
-                                         select tbl_SoQuy.PsNo).Sum().GetValueOrDefault(0);
+
+                    }
+
+
+
+
+
+
                     headSoquy.psco = (from tbl_SoQuy in dc.tbl_SoQuys
                                       where tbl_SoQuy.Ngayctu >= fromdate && tbl_SoQuy.Ngayctu <= todate
                                            && tbl_SoQuy.TKtienmat.Trim() == mataikhoan
@@ -976,7 +1014,7 @@ namespace BEEACCOUNT.View
                     //        RptdetailSoQuy q = new RptdetailSoQuy();
                     //   machitiettaikhoan
 
-             //       MessageBox.Show(machitiettaikhoan.ToString(), "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //       MessageBox.Show(machitiettaikhoan.ToString(), "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
                     var detairpt = from tbl_SoQuy in dc.tbl_SoQuys
@@ -984,7 +1022,7 @@ namespace BEEACCOUNT.View
                                         && tbl_SoQuy.TKtienmat.Trim() == mataikhoan
                                          && tbl_SoQuy.ChitietTM == machitiettaikhoan
                                    orderby tbl_SoQuy.Ngayctu
-                                select   tbl_SoQuy;
+                                   select tbl_SoQuy;
 
                     foreach (var item in detairpt)
                     {
@@ -1070,12 +1108,12 @@ namespace BEEACCOUNT.View
                     var rptdetail = from RptdetailSoQuy in dc.RptdetailSoQuys
                                     where RptdetailSoQuy.username == username
                                     orderby RptdetailSoQuy.Ngaychungtu
-                                    
-                                   select RptdetailSoQuy;
+
+                                    select RptdetailSoQuy;
 
                     var dataset2 = ut.ToDataTable(dc, rptdetail);
 
-                
+
 
 
 
