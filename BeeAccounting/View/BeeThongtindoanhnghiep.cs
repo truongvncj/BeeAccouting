@@ -14,7 +14,7 @@ namespace BEEACCOUNT.View
 
     public partial class BeeThongtindoanhnghiep : Form
     {
-     
+
         public class ComboboxItem
         {
             public string Text { get; set; }
@@ -39,18 +39,30 @@ namespace BEEACCOUNT.View
             //        tbl_congty cty = new tbl_congty();
 
             var cty = (from ctyi in dc.tbl_congties
-                      select ctyi).FirstOrDefault();
+                       select ctyi).FirstOrDefault();
             if (cty != null)
             {
                 txtten.Text = cty.tencongty;
+
+                txtdiachi.Text = cty.diachicoty;
+                txtmasothue.Text = cty.Masothue;
+                txttengiamdoc.Text = cty.tengiamdoc;
+                txttenketoantruong.Text = cty.tenketoantruong;
+                //txtmasothue.Text = cty.Masothue;
+                //txtmasothue.Text = cty.Masothue;
+                //txtmasothue.Text = cty.Masothue;
+
+
+
+
             }
-         
+
 
 
 
         }
 
-    
+
         private void txt_vendor_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Enter)
@@ -147,7 +159,7 @@ namespace BEEACCOUNT.View
 
         }
 
-    
+
         private void txt_paymentamount_TextChanged(object sender, EventArgs e)
         {
 
@@ -172,7 +184,7 @@ namespace BEEACCOUNT.View
         }
 
 
-   
+
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -190,6 +202,32 @@ namespace BEEACCOUNT.View
 
         private void groupBox4_Enter(object sender, EventArgs e)
         {
+
+        }
+
+        private void btchangecontractitem_Click(object sender, EventArgs e)
+        {
+
+            string connection_string = Utils.getConnectionstr();
+
+            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+            //   tbl_congty cty = new tbl_congty();
+            //        tbl_congty cty = new tbl_congty();
+
+            var cty = (from ctyi in dc.tbl_congties
+                       select ctyi).FirstOrDefault();
+
+            cty.tencongty = txtten.Text;
+
+            cty.diachicoty = txtdiachi.Text;
+            cty.Masothue = txtmasothue.Text;
+            cty.tengiamdoc = txttengiamdoc.Text;
+            cty.tenketoantruong = txttenketoantruong.Text;
+
+
+            dc.SubmitChanges();
+            MessageBox.Show("OK, Done !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
     }

@@ -163,8 +163,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>0.86055in</Top>
-        <Left>4.56978in</Left>
+        <Top>0.64874in</Top>
+        <Left>3.37213in</Left>
         <Height>0.30208in</Height>
         <Width>2.09563in</Width>
         <ZIndex>3</ZIndex>
@@ -199,8 +199,8 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>0.2975in</Top>
-        <Left>8.26039in</Left>
+        <Top>0.29194in</Top>
+        <Left>8.32289in</Left>
         <Height>0.36111in</Height>
         <Width>2.75891in</Width>
         <ZIndex>4</ZIndex>
@@ -231,8 +231,8 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>0.07375in</Top>
-        <Left>9.9026in</Left>
+        <Top>0.06819in</Top>
+        <Left>9.97763in</Left>
         <Height>0.20139in</Height>
         <Width>1.10417in</Width>
         <ZIndex>5</ZIndex>
@@ -246,44 +246,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Textbox Name="Textbox88">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>Loại quỹ:</Value>
-                <Style>
-                  <FontStyle>Normal</FontStyle>
-                  <FontFamily>Times New Roman</FontFamily>
-                  <FontSize>11pt</FontSize>
-                  <FontWeight>Normal</FontWeight>
-                  <TextDecoration>None</TextDecoration>
-                  <Color>#000000</Color>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>1.20845in</Top>
-        <Left>4.78212in</Left>
-        <Height>0.22222in</Height>
-        <Width>0.69502in</Width>
-        <ZIndex>6</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-        </Style>
-      </Textbox>
       <Textbox Name="Textbox89">
-        <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
@@ -304,11 +267,11 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>1.20707in</Top>
-        <Left>5.50781in</Left>
-        <Height>0.22222in</Height>
-        <Width>0.99486in</Width>
-        <ZIndex>7</ZIndex>
+        <Top>1.18554in</Top>
+        <Left>4.20951in</Left>
+        <Height>0.20058in</Height>
+        <Width>3.34498in</Width>
+        <ZIndex>6</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -340,11 +303,11 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>1.44734in</Top>
-        <Left>4.77274in</Left>
+        <Top>1.39875in</Top>
+        <Left>3.37213in</Left>
         <Height>0.22222in</Height>
-        <Width>0.69502in</Width>
-        <ZIndex>8</ZIndex>
+        <Width>0.82002in</Width>
+        <ZIndex>7</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -377,11 +340,11 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>1.44596in</Top>
-        <Left>5.49843in</Left>
+        <Top>1.39737in</Top>
+        <Left>4.22282in</Left>
         <Height>0.22222in</Height>
         <Width>0.99486in</Width>
-        <ZIndex>9</ZIndex>
+        <ZIndex>8</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -413,11 +376,11 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>1.69734in</Top>
-        <Left>4.77274in</Left>
+        <Top>1.64875in</Top>
+        <Left>3.37213in</Left>
         <Height>0.22222in</Height>
-        <Width>0.69502in</Width>
-        <ZIndex>10</ZIndex>
+        <Width>0.82002in</Width>
+        <ZIndex>9</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -450,11 +413,11 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>1.69596in</Top>
-        <Left>5.49843in</Left>
+        <Top>1.64737in</Top>
+        <Left>4.22282in</Left>
         <Height>0.22222in</Height>
         <Width>0.99486in</Width>
-        <ZIndex>11</ZIndex>
+        <ZIndex>10</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -1082,11 +1045,11 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
-        <Top>2.70966cm</Top>
-        <Left>20.5134cm</Left>
+        <Top>2.51124cm</Top>
+        <Left>20.64777cm</Left>
         <Height>2.4cm</Height>
         <Width>7.5cm</Width>
-        <ZIndex>12</ZIndex>
+        <ZIndex>11</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -1097,28 +1060,28 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>2.21424cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>2.50599cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.31956cm</Width>
+              <Width>2.4717cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>9.16607cm</Width>
+              <Width>9.16141cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.9693cm</Width>
+              <Width>2.12144cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.63568cm</Width>
+              <Width>2.78782cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.2076cm</Width>
+              <Width>3.35974cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.42943cm</Width>
+              <Width>3.23969cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -1805,8 +1768,8 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
         <Top>5.34141cm</Top>
         <Left>0.28576cm</Left>
         <Height>1.8cm</Height>
-        <Width>27.72764cm</Width>
-        <ZIndex>13</ZIndex>
+        <Width>27.86201cm</Width>
+        <ZIndex>12</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -1817,28 +1780,28 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>2.21424cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>2.50038cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.31957cm</Width>
+              <Width>2.47171cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>9.16439cm</Width>
+              <Width>9.16534cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.9693cm</Width>
+              <Width>2.12144cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.63569cm</Width>
+              <Width>2.78783cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.2076cm</Width>
+              <Width>3.35974cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.42943cm</Width>
+              <Width>3.23968cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -2067,7 +2030,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!nocuoiky.Value</Value>
+                              <Value>=Fields!nocuoiky.Value -Fields!cocuoiky.Value</Value>
                               <Style>
                                 <FontWeight>Bold</FontWeight>
                                 <Format>#,0;(#,0);''</Format>
@@ -2119,11 +2082,11 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
-        <Top>11.92034cm</Top>
-        <Left>0.15734cm</Left>
+        <Top>8.34494cm</Top>
+        <Left>0.28743cm</Left>
         <Height>0.6cm</Height>
-        <Width>27.72598cm</Width>
-        <ZIndex>14</ZIndex>
+        <Width>27.86034cm</Width>
+        <ZIndex>13</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -2134,25 +2097,28 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>2.21424cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.31957cm</Width>
+              <Width>2.50599cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>9.16439cm</Width>
+              <Width>2.4717cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.9693cm</Width>
+              <Width>9.16141cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.63567cm</Width>
+              <Width>2.12144cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.20762cm</Width>
+              <Width>2.78783cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.43112cm</Width>
+              <Width>3.36534cm</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>3.23969cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -2161,7 +2127,39 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="machungtuthu1">
+                    <Textbox Name="Ngaychungtu">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!Ngaychungtu.Value</Value>
+                              <Style>
+                                <Format>dd/MM/yyyy</Format>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Ngaychungtu</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="machungtuthu">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -2175,7 +2173,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>machungtuthu1</rd:DefaultName>
+                      <rd:DefaultName>machungtuthu</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -2191,7 +2189,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="machungtuchi1">
+                    <Textbox Name="machungtuchi">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -2205,7 +2203,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>machungtuchi1</rd:DefaultName>
+                      <rd:DefaultName>machungtuchi</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -2221,7 +2219,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="diengiai1">
+                    <Textbox Name="diengiai">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -2235,7 +2233,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>diengiai1</rd:DefaultName>
+                      <rd:DefaultName>diengiai</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -2251,7 +2249,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="taikhoandoiung1">
+                    <Textbox Name="taikhoandoiung">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -2265,7 +2263,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>taikhoandoiung1</rd:DefaultName>
+                      <rd:DefaultName>taikhoandoiung</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -2281,7 +2279,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="psno2">
+                    <Textbox Name="psno1">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -2297,7 +2295,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>psno2</rd:DefaultName>
+                      <rd:DefaultName>psno1</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -2313,7 +2311,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="psco3">
+                    <Textbox Name="psco1">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -2329,7 +2327,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>psco3</rd:DefaultName>
+                      <rd:DefaultName>psco1</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -2353,7 +2351,9 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!ton.Value</Value>
-                              <Style />
+                              <Style>
+                                <Format>#,0;(#,0);''</Format>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -2380,7 +2380,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox33">
+                    <Textbox Name="Textbox30">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -2389,6 +2389,98 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                             <TextRun>
                               <Value />
                               <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox30</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox31">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value />
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox31</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox32">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value />
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox32</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox33">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>TỔNG CỘNG PHÁT SINH</Value>
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -2440,41 +2532,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox35">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>TỔNG CỘNG PHÁT SINH</Value>
-                              <Style>
-                                <FontWeight>Bold</FontWeight>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>Textbox35</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Color>LightGrey</Color>
-                          <Style>Solid</Style>
-                        </Border>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                    <ColSpan>2</ColSpan>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell />
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="psno1">
+                    <Textbox Name="psno2">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -2482,13 +2540,15 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                           <TextRuns>
                             <TextRun>
                               <Value>=sum(Fields!psno.Value)</Value>
-                              <Style />
+                              <Style>
+                                <Format>#,0;(#,0);''</Format>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>psno1</rd:DefaultName>
+                      <rd:DefaultName>psno2</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -2504,7 +2564,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="psco1">
+                    <Textbox Name="psco2">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -2512,13 +2572,15 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                           <TextRuns>
                             <TextRun>
                               <Value>=sum(Fields!psco.Value)</Value>
-                              <Style />
+                              <Style>
+                                <Format>#,0;(#,0);''</Format>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>psco1</rd:DefaultName>
+                      <rd:DefaultName>psco2</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -2534,7 +2596,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox39">
+                    <Textbox Name="Textbox37">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -2548,7 +2610,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox39</rd:DefaultName>
+                      <rd:DefaultName>Textbox37</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -2575,108 +2637,104 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
             <TablixMember />
             <TablixMember />
             <TablixMember />
+            <TablixMember />
           </TablixMembers>
         </TablixColumnHierarchy>
         <TablixRowHierarchy>
           <TablixMembers>
             <TablixMember>
-              <Group Name="Ngaychungtu">
-                <GroupExpressions>
-                  <GroupExpression>=Fields!Ngaychungtu.Value</GroupExpression>
-                </GroupExpressions>
-              </Group>
-              <SortExpressions>
-                <SortExpression>
-                  <Value>=Fields!Ngaychungtu.Value</Value>
-                </SortExpression>
-              </SortExpressions>
-              <TablixHeader>
-                <Size>2.5cm</Size>
-                <CellContents>
-                  <Textbox Name="Ngaychungtu1">
-                    <CanGrow>true</CanGrow>
-                    <KeepTogether>true</KeepTogether>
-                    <Paragraphs>
-                      <Paragraph>
-                        <TextRuns>
-                          <TextRun>
-                            <Value>=Fields!Ngaychungtu.Value</Value>
-                            <Style>
-                              <Format>dd/MM/yyyy</Format>
-                            </Style>
-                          </TextRun>
-                        </TextRuns>
-                        <Style />
-                      </Paragraph>
-                    </Paragraphs>
-                    <rd:DefaultName>Ngaychungtu1</rd:DefaultName>
-                    <Style>
-                      <Border>
-                        <Color>LightGrey</Color>
-                        <Style>Solid</Style>
-                      </Border>
-                      <PaddingLeft>2pt</PaddingLeft>
-                      <PaddingRight>2pt</PaddingRight>
-                      <PaddingTop>2pt</PaddingTop>
-                      <PaddingBottom>2pt</PaddingBottom>
-                    </Style>
-                  </Textbox>
-                </CellContents>
-              </TablixHeader>
-              <TablixMembers>
-                <TablixMember />
-              </TablixMembers>
+              <Group Name="Details1" />
             </TablixMember>
             <TablixMember>
-              <TablixHeader>
-                <Size>2.5cm</Size>
-                <CellContents>
-                  <Textbox Name="Textbox32">
-                    <CanGrow>true</CanGrow>
-                    <KeepTogether>true</KeepTogether>
-                    <Paragraphs>
-                      <Paragraph>
-                        <TextRuns>
-                          <TextRun>
-                            <Value />
-                            <Style />
-                          </TextRun>
-                        </TextRuns>
-                        <Style />
-                      </Paragraph>
-                    </Paragraphs>
-                    <rd:DefaultName>Textbox32</rd:DefaultName>
-                    <Style>
-                      <Border>
-                        <Color>LightGrey</Color>
-                        <Style>Solid</Style>
-                      </Border>
-                      <PaddingLeft>2pt</PaddingLeft>
-                      <PaddingRight>2pt</PaddingRight>
-                      <PaddingTop>2pt</PaddingTop>
-                      <PaddingBottom>2pt</PaddingBottom>
-                    </Style>
-                  </Textbox>
-                </CellContents>
-              </TablixHeader>
               <KeepWithGroup>Before</KeepWithGroup>
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSet2</DataSetName>
-        <Top>9.54912cm</Top>
-        <Left>0.15736cm</Left>
+        <Top>7.14494cm</Top>
+        <Left>0.28576cm</Left>
         <Height>1.2cm</Height>
-        <Width>27.72767cm</Width>
-        <ZIndex>15</ZIndex>
+        <Width>27.86762cm</Width>
+        <ZIndex>14</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
           </Border>
         </Style>
       </Tablix>
+      <Textbox Name="Textbox90">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Tài khoản:</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontFamily>Times New Roman</FontFamily>
+                  <FontSize>11pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox2</rd:DefaultName>
+        <Top>0.97305in</Top>
+        <Left>3.36044in</Left>
+        <Height>0.22222in</Height>
+        <Width>0.76794in</Width>
+        <ZIndex>15</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox91">
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!taikhoan.Value, "DataSet1")</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontFamily>Times New Roman</FontFamily>
+                  <FontSize>11pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox2</rd:DefaultName>
+        <Top>0.97167in</Top>
+        <Left>4.19782in</Left>
+        <Height>0.22222in</Height>
+        <Width>3.34498in</Width>
+        <ZIndex>16</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+      </Textbox>
     </ReportItems>
-    <Height>13.39503cm</Height>
+    <Height>9.21461cm</Height>
     <Style>
       <Border>
         <Color>White</Color>
@@ -2684,7 +2742,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
       </Border>
     </Style>
   </Body>
-  <Width>28.25155cm</Width>
+  <Width>28.43882cm</Width>
   <Page>
     <PageFooter>
       <Height>0.77639cm</Height>
@@ -2706,8 +2764,8 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox1</rd:DefaultName>
-          <Top>0.10583cm</Top>
-          <Left>25.38503cm</Left>
+          <Top>0cm</Top>
+          <Left>0cm</Left>
           <Height>0.6cm</Height>
           <Width>2.5cm</Width>
           <Style>
@@ -2799,6 +2857,10 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
         </Field>
         <Field Name="diachicongty">
           <DataField>diachicongty</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="taikhoan">
+          <DataField>taikhoan</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>

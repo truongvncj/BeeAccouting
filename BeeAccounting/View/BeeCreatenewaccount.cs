@@ -24,6 +24,9 @@ namespace BEEACCOUNT.View
         public int captk { get; set; }
         public string tkcaptren { get; set; }
 
+        public float nodauky { get; set; }
+        public float codauky { get; set; }
+
 
         public class ComboboxItem
         {
@@ -280,114 +283,6 @@ namespace BEEACCOUNT.View
             }
         }
 
-        private void txt_chananame_KeyPress(object sender, KeyPressEventArgs e)
-        {
-
-            //if (e.KeyChar == (char)Keys.Enter)
-            //{
-
-
-            //    txt_houseno.Focus();
-
-
-            //}
-        }
-
-        private void txt_houseno_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            //if (e.KeyChar == (char)Keys.Enter)
-            //{
-
-
-            //    txt_district.Focus();
-
-
-            //}
-        }
-
-        private void txt_district_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar == (char)Keys.Enter)
-            {
-
-
-                //    txt_provicen.Focus();
-
-
-            }
-        }
-
-        private void txt_provicen_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar == (char)Keys.Enter)
-            {
-
-
-                //         txt_description.Focus();
-
-
-            }
-        }
-
-        private void txt_description_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar == (char)Keys.Enter)
-            {
-
-                //    vatno.Focus();
-                //txtcode.Focus();
-
-
-            }
-        }
-
-        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox2_CheckedChanged(object sender, EventArgs e)///groupced
-        {
-            //if (cbgroup.Checked == true)
-            //{
-            //    cbsfa.Checked = false;
-            //    cbsapcode.Checked = false;
-            //}
-
-        }
-
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)// safcdeo
-        {
-
-
-            //cbgroup.Checked = !cbsfa.Checked;
-            //cbsapcode.Checked = !cbsfa.Checked;
-
-
-        }
-
-        private void checkBox3_CheckStateChanged(object sender, EventArgs e)// scapcode
-        {
-            //if (cbsapcode.Checked == true)
-            //{
-            //    cbgroup.Checked = false;
-            //    cbsfa.Checked = false;
-            //}
-
-        }
-
-        private void vatno_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            //if (e.KeyChar == (char)Keys.Enter)
-            //{
-
-            //   // vatno.Focus();
-            // txtcode.Focus();
-
-
-            //}
-        }
-
         private void button5_Click(object sender, EventArgs e)
         {
 
@@ -403,6 +298,29 @@ namespace BEEACCOUNT.View
             {
                 MessageBox.Show("Bạn chưa chọn loại tài khoản", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
+            }
+
+
+            if (Utils.IsValidnumber(txtNodauky.Text))
+            {
+                nodauky = float.Parse(txtNodauky.Text);
+            }
+            else
+            {
+                MessageBox.Show("Bạn kiểm tra lại số dư nợ đầu kỳ ", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+
+            }
+
+            if (Utils.IsValidnumber(txtCodauky.Text))
+            {
+                codauky = float.Parse(txtCodauky.Text);
+            }
+            else
+            {
+                MessageBox.Show("Bạn kiểm tra lại số dư có đầu kỳ ", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+
             }
 
 
@@ -595,6 +513,27 @@ namespace BEEACCOUNT.View
                 return;
             }
 
+            if (Utils.IsValidnumber(txtNodauky.Text))
+            {
+                nodauky = float.Parse(txtNodauky.Text);
+            }
+            else
+            {
+                MessageBox.Show("Bạn kiểm tra lại số dư nợ đầu kỳ ", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+
+            }
+
+            if (Utils.IsValidnumber(txtCodauky.Text))
+            {
+                codauky = float.Parse(txtCodauky.Text);
+            }
+            else
+            {
+                MessageBox.Show("Bạn kiểm tra lại số dư có đầu kỳ ", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+
+            }
 
 
             if (this.cbtkmother.SelectedItem != null && this.cbtkmother.SelectedItem.ToString().Trim() != "0")
@@ -664,6 +603,9 @@ namespace BEEACCOUNT.View
                     rs.loaitkid = loaitk;
                     rs.captk = captk;
                     rs.matktren = tkcaptren;
+                    rs.nodk = nodauky;
+                    rs.codk = codauky;
+               
                     if (checkbookchitiet.Checked == true)
                     {
                         rs.loaichitiet = true;

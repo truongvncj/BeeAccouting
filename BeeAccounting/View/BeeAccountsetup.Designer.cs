@@ -149,7 +149,7 @@
             this.Text = "Posmmasterinput";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Deactivate += new System.EventHandler(this.KAmasterinput_Deactivate);
-            this.Load += new System.EventHandler(this.KAmasterinput_Load);
+        //    this.Load += new System.EventHandler(this.KAmasterinput_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grviewlisttk)).EndInit();

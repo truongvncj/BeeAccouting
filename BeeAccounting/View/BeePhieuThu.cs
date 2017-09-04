@@ -582,7 +582,11 @@ namespace BEEACCOUNT.View
                 {
                     soquy.ChitietTM = int.Parse(lb_machitietno.Text.ToString());
                 }
+                else
+                {
 
+                    soquy.ChitietTM = 0;
+                }
 
                 if (lbtenchitietno.Text != "")
                 {
@@ -760,6 +764,13 @@ namespace BEEACCOUNT.View
                                 socai.MaCTietTKCo = int.Parse(dataGridViewTkCo.Rows[idrow].Cells["Mã_chi_tiết"].Value.ToString());
 
                             }
+                            else
+                            {
+                                socai.MaCTietTKCo = 0;
+                            }
+
+
+
                             if (dataGridViewTkCo.Rows[idrow].Cells["Tên_chi_tiết"].Value != DBNull.Value)
                             {
 

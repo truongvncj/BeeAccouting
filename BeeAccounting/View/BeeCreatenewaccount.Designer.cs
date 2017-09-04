@@ -45,11 +45,19 @@
             this.txt_nametk = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
+            this.txtNodauky = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtCodauky = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.txtCodauky);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.txtNodauky);
+            this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.checkbookchitiet);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.btupdate);
@@ -67,7 +75,7 @@
             this.panel1.Controls.Add(this.label21);
             this.panel1.Location = new System.Drawing.Point(5, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(604, 297);
+            this.panel1.Size = new System.Drawing.Size(604, 407);
             this.panel1.TabIndex = 0;
             // 
             // checkbookchitiet
@@ -98,7 +106,7 @@
             this.btupdate.BackColor = System.Drawing.Color.Transparent;
             this.btupdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btupdate.ForeColor = System.Drawing.Color.Red;
-            this.btupdate.Location = new System.Drawing.Point(344, 260);
+            this.btupdate.Location = new System.Drawing.Point(344, 370);
             this.btupdate.Name = "btupdate";
             this.btupdate.Size = new System.Drawing.Size(94, 21);
             this.btupdate.TabIndex = 6;
@@ -112,7 +120,7 @@
             this.btxoa.BackColor = System.Drawing.Color.Transparent;
             this.btxoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btxoa.ForeColor = System.Drawing.Color.Red;
-            this.btxoa.Location = new System.Drawing.Point(207, 260);
+            this.btxoa.Location = new System.Drawing.Point(207, 370);
             this.btxoa.Name = "btxoa";
             this.btxoa.Size = new System.Drawing.Size(94, 21);
             this.btxoa.TabIndex = 6;
@@ -192,7 +200,7 @@
             this.btnew.BackColor = System.Drawing.Color.Transparent;
             this.btnew.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnew.ForeColor = System.Drawing.Color.Red;
-            this.btnew.Location = new System.Drawing.Point(444, 260);
+            this.btnew.Location = new System.Drawing.Point(444, 370);
             this.btnew.Name = "btnew";
             this.btnew.Size = new System.Drawing.Size(94, 21);
             this.btnew.TabIndex = 8;
@@ -242,11 +250,53 @@
             this.label21.TabIndex = 49;
             this.label21.Text = "Tên tài khoản";
             // 
+            // txtNodauky
+            // 
+            this.txtNodauky.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNodauky.Location = new System.Drawing.Point(169, 242);
+            this.txtNodauky.Name = "txtNodauky";
+            this.txtNodauky.Size = new System.Drawing.Size(213, 20);
+            this.txtNodauky.TabIndex = 60;
+            this.txtNodauky.Text = "0";
+            // 
+            // label5
+            // 
+            this.label5.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label5.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(13, 241);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(125, 20);
+            this.label5.TabIndex = 61;
+            this.label5.Text = "Số dư Nợ đầu kỳ";
+            // 
+            // txtCodauky
+            // 
+            this.txtCodauky.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCodauky.Location = new System.Drawing.Point(169, 280);
+            this.txtCodauky.Name = "txtCodauky";
+            this.txtCodauky.Size = new System.Drawing.Size(213, 20);
+            this.txtCodauky.TabIndex = 62;
+            this.txtCodauky.Text = "0";
+            // 
+            // label6
+            // 
+            this.label6.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label6.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(13, 279);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(125, 20);
+            this.label6.TabIndex = 63;
+            this.label6.Text = "Số dư có đầu kỳ";
+            // 
             // BeeCreatenewaccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(621, 312);
+            this.ClientSize = new System.Drawing.Size(621, 422);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -279,5 +329,9 @@
         private System.Windows.Forms.Button btxoa;
         private System.Windows.Forms.CheckBox checkbookchitiet;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtCodauky;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtNodauky;
+        private System.Windows.Forms.Label label5;
     }
 }

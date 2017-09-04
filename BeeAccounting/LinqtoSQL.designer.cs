@@ -1034,6 +1034,8 @@ namespace BEEACCOUNT
 		
 		private string _username;
 		
+		private string _taikhoan;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -1066,6 +1068,8 @@ namespace BEEACCOUNT
     partial void OnidChanged();
     partial void OnusernameChanging(string value);
     partial void OnusernameChanged();
+    partial void OntaikhoanChanging(string value);
+    partial void OntaikhoanChanged();
     #endregion
 		
 		public RPtsoQuy()
@@ -1349,6 +1353,26 @@ namespace BEEACCOUNT
 					this._username = value;
 					this.SendPropertyChanged("username");
 					this.OnusernameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_taikhoan", DbType="NVarChar(50)")]
+		public string taikhoan
+		{
+			get
+			{
+				return this._taikhoan;
+			}
+			set
+			{
+				if ((this._taikhoan != value))
+				{
+					this.OntaikhoanChanging(value);
+					this.SendPropertyChanging();
+					this._taikhoan = value;
+					this.SendPropertyChanged("taikhoan");
+					this.OntaikhoanChanged();
 				}
 			}
 		}

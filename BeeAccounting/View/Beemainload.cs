@@ -617,39 +617,39 @@ namespace BEEACCOUNT.View
 
         }
 
-        private void button17_Click(object sender, EventArgs e)
-        {
-            string connection_string = Utils.getConnectionstr();
-            //     LinqtoSQLDataContext db = new LinqtoSQLDataContext(connection_string);
-            //   LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
-            SqlConnection conn2 = null;
-            SqlDataReader rdr1 = null;
-            try
-            {
+        //private void button17_Click(object sender, EventArgs e)
+        //{
+        //    string connection_string = Utils.getConnectionstr();
+        //    //     LinqtoSQLDataContext db = new LinqtoSQLDataContext(connection_string);
+        //    //   LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+        //    SqlConnection conn2 = null;
+        //    SqlDataReader rdr1 = null;
+        //    try
+        //    {
 
-                conn2 = new SqlConnection(connection_string);
-                conn2.Open();
-                SqlCommand cmd1 = new SqlCommand("KaFillfullnameofmasterContractbyCustomerName", conn2);
-                cmd1.CommandType = CommandType.StoredProcedure;
-                //      cmd1.Parameters.Add("@name", SqlDbType.VarChar).Value = userupdate;
-                cmd1.CommandTimeout = 0;
-                rdr1 = cmd1.ExecuteReader();
+        //        conn2 = new SqlConnection(connection_string);
+        //        conn2.Open();
+        //        SqlCommand cmd1 = new SqlCommand("KaFillfullnameofmasterContractbyCustomerName", conn2);
+        //        cmd1.CommandType = CommandType.StoredProcedure;
+        //        //      cmd1.Parameters.Add("@name", SqlDbType.VarChar).Value = userupdate;
+        //        cmd1.CommandTimeout = 0;
+        //        rdr1 = cmd1.ExecuteReader();
 
-                MessageBox.Show("Fill name done !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        //        MessageBox.Show("Fill name done !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            }
-            finally
-            {
-                if (conn2 != null)
-                {
-                    conn2.Close();
-                }
-                if (rdr1 != null)
-                {
-                    rdr1.Close();
-                }
-            }
-        }
+        //    }
+        //    finally
+        //    {
+        //        if (conn2 != null)
+        //        {
+        //            conn2.Close();
+        //        }
+        //        if (rdr1 != null)
+        //        {
+        //            rdr1.Close();
+        //        }
+        //    }
+        //}
 
 
         public void converttonew()
@@ -911,6 +911,9 @@ namespace BEEACCOUNT.View
                     
                     RPtsoQuy headSoquy = new RPtsoQuy();
 
+
+                    headSoquy.taikhoan = tentaikhoan.Trim(); //mataikhoan.Trim() + "-" + 
+                    headSoquy.loaiquy = tentaikhoanchitiet;
                     headSoquy.tencongty = Model.Congty.getnamecongty();
                     headSoquy.username = username;
                     headSoquy.diachicongty = Model.Congty.getdiachicongty();
@@ -919,19 +922,27 @@ namespace BEEACCOUNT.View
                     headSoquy.denngay = todate;
                     headSoquy.codauky = (from tbl_SoQuy in dc.tbl_SoQuys
                                          where tbl_SoQuy.Ngayctu < fromdate
+                                         && tbl_SoQuy.TKtienmat.Trim() == mataikhoan
+                                         && tbl_SoQuy.ChitietTM == machitiettaikhoan
                                          select tbl_SoQuy.PsCo).Sum().GetValueOrDefault(0);
 
 
                           
                     headSoquy.nodauky = (from tbl_SoQuy in dc.tbl_SoQuys
                                                 where tbl_SoQuy.Ngayctu < fromdate
-                                                select tbl_SoQuy.PsNo).Sum().GetValueOrDefault(0);
+                                                     && tbl_SoQuy.TKtienmat.Trim() == mataikhoan
+                                         && tbl_SoQuy.ChitietTM == machitiettaikhoan
+                                         select tbl_SoQuy.PsNo).Sum().GetValueOrDefault(0);
                     headSoquy.psco = (from tbl_SoQuy in dc.tbl_SoQuys
                                       where tbl_SoQuy.Ngayctu >= fromdate && tbl_SoQuy.Ngayctu <= todate
+                                           && tbl_SoQuy.TKtienmat.Trim() == mataikhoan
+                                         && tbl_SoQuy.ChitietTM == machitiettaikhoan
                                       select tbl_SoQuy.PsCo).Sum();
 
                     headSoquy.psno = (from tbl_SoQuy in dc.tbl_SoQuys
                                       where tbl_SoQuy.Ngayctu >= fromdate && tbl_SoQuy.Ngayctu <= todate
+                                           && tbl_SoQuy.TKtienmat.Trim() == mataikhoan
+                                         && tbl_SoQuy.ChitietTM == machitiettaikhoan
                                       select tbl_SoQuy.PsNo).Sum();
 
 
@@ -962,57 +973,107 @@ namespace BEEACCOUNT.View
 
 
                     //  RptdetailSoQuy
-           //        RptdetailSoQuy q = new RptdetailSoQuy();
+                    //        RptdetailSoQuy q = new RptdetailSoQuy();
+                    //   machitiettaikhoan
+
+             //       MessageBox.Show(machitiettaikhoan.ToString(), "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
 
                     var detairpt = from tbl_SoQuy in dc.tbl_SoQuys
-                                //   where tbl_SoQuy.Ngayctu >= fromdate && tbl_SoQuy.Ngayctu <= todate
-                                   select new
-                                   {
-                                       diengiai = tbl_SoQuy.Diengiai,
+                                   where tbl_SoQuy.Ngayctu >= fromdate && tbl_SoQuy.Ngayctu <= todate
+                                        && tbl_SoQuy.TKtienmat.Trim() == mataikhoan
+                                         && tbl_SoQuy.ChitietTM == machitiettaikhoan
+                                   orderby tbl_SoQuy.Ngayctu
+                                select   tbl_SoQuy;
 
-                                       username = urs,
+                    foreach (var item in detairpt)
+                    {
+                        RptdetailSoQuy q = new RptdetailSoQuy();
+                        q.diengiai = item.Diengiai;
 
+                        if (item.Machungtu == "PC")
+                        {
+                            q.machungtuchi = item.Machungtu + " " + item.Sochungtu.ToString().Trim();
+                            q.machungtuthu = "";
+                        }
+                        else
+                        {
+                            q.machungtuthu = item.Machungtu + " " + item.Sochungtu.ToString().Trim();
+                            q.machungtuchi = "";
+                        }
 
-                                       machungtuchi = tbl_SoQuy.Machungtu =="PC"
-                                       ? tbl_SoQuy.Machungtu + " " + tbl_SoQuy.Sochungtu.ToString().Trim()
-                                       : "",
+                        q.username = username;
+                        q.Ngaychungtu = item.Ngayctu;
+                        q.psco = item.PsCo;
+                        q.psno = item.PsNo;
+                        q.taikhoandoiung = item.TKdoiung;
+                        q.ton = daukysave + item.PsNo - item.PsCo;
+                        daukysave = daukysave + (double)item.PsNo - (double)item.PsCo;
 
-                                       machungtuthu = tbl_SoQuy.Machungtu == "PT"
-                                       ? tbl_SoQuy.Machungtu + " " + tbl_SoQuy.Sochungtu.ToString().Trim()
-                                       : "",
-
-                                       
-
-                                       //machungtuchi = tbl_SoQuy.Machungtu + " " + tbl_SoQuy.Sochungtu.ToString().Trim(),
-                                       //machungtuthu = tbl_SoQuy.Machungtu + " " + tbl_SoQuy.Sochungtu.ToString().Trim(),
-
-                                       
-
-
-                                       Ngaychungtu = tbl_SoQuy.Ngayctu,
-                                       psco = tbl_SoQuy.PsCo,
-                                       psno = tbl_SoQuy.PsNo,
-                                   //    ton = daukysave + tbl_SoQuy.PsNo - tbl_SoQuy.PsCo,
-                                  //     daukysave = daukysave + tbl_SoQuy.PsNo - tbl_SoQuy.PsCo,
-
-                                       taikhoandoiung = tbl_SoQuy.TKdoiung,
-                                      
-                                     
-
+                        dc.RptdetailSoQuys.InsertOnSubmit(q);
+                        dc.SubmitChanges();
 
 
+                    }
+                    //   let ton1 = daukysave + tbl_SoQuy.PsNo - tbl_SoQuy.PsCo
+                    //   where tbl_SoQuy.Ngayctu >= fromdate && tbl_SoQuy.Ngayctu <= todate
+                    //select new
+                    //{
+                    // diengiai = tbl_SoQuy,
 
-                                   };
+                    //username = urs,
+
+
+                    //machungtuchi = tbl_SoQuy.Machungtu == "PC"
+                    //? tbl_SoQuy.Machungtu + " " + tbl_SoQuy.Sochungtu.ToString().Trim()
+                    //: "",
+
+                    //machungtuthu = tbl_SoQuy.Machungtu == "PT"
+                    //? tbl_SoQuy.Machungtu + " " + tbl_SoQuy.Sochungtu.ToString().Trim()
+                    //: "",
 
 
 
+                    //machungtuchi = tbl_SoQuy.Machungtu + " " + tbl_SoQuy.Sochungtu.ToString().Trim(),
+                    //machungtuthu = tbl_SoQuy.Machungtu + " " + tbl_SoQuy.Sochungtu.ToString().Trim(),
+
+
+
+
+                    //    Ngaychungtu = tbl_SoQuy.Ngayctu,
+                    //   psco = tbl_SoQuy.PsCo,
+                    //  psno = tbl_SoQuy.PsNo,
+
+                    ////  daukysave = daukysave + tbl_SoQuy.PsNo - tbl_SoQuy.PsCo,
+
+                    //  taikhoandoiung = tbl_SoQuy.TKdoiung,
+
+
+
+
+
+
+                    //           };
+
+                    //   daukysave
+                    //foreach (var item in detairpt)
+                    //{
+
+                    //    daukysave = daukysave + (double)item.ton;
+                    //    item.ton = daukysave;
+
+                    //}
                     //var rsphieuchi = from RptdetailSoQuy in dc.RptdetailSoQuys
                     //                 where RptdetailSoQuy.username == urs
                     //                 select RptdetailSoQuy;
 
+                    var rptdetail = from RptdetailSoQuy in dc.RptdetailSoQuys
+                                    where RptdetailSoQuy.username == username
+                                    orderby RptdetailSoQuy.Ngaychungtu
+                                    
+                                   select RptdetailSoQuy;
 
-             
-                    var dataset2 = ut.ToDataTable(dc, detairpt);
+                    var dataset2 = ut.ToDataTable(dc, rptdetail);
 
                 
 

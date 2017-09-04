@@ -2005,6 +2005,8 @@ namespace BEEACCOUNT.Reports {
             
             private global::System.Data.DataColumn columndiachicongty;
             
+            private global::System.Data.DataColumn columntaikhoan;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public RPtsoQuyDataTable() {
@@ -2136,6 +2138,14 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn taikhoanColumn {
+                get {
+                    return this.columntaikhoan;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -2171,7 +2181,7 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public RPtsoQuyRow AddRPtsoQuyRow(string loaiquy, System.DateTime tungay, System.DateTime denngay, string nodauky, string codauky, string psno, string psco, string cocuoiky, string nocuoiky, string tencongty, string masothue, string diachicongty) {
+            public RPtsoQuyRow AddRPtsoQuyRow(string loaiquy, System.DateTime tungay, System.DateTime denngay, string nodauky, string codauky, string psno, string psco, string cocuoiky, string nocuoiky, string tencongty, string masothue, string diachicongty, string taikhoan) {
                 RPtsoQuyRow rowRPtsoQuyRow = ((RPtsoQuyRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         loaiquy,
@@ -2185,7 +2195,8 @@ namespace BEEACCOUNT.Reports {
                         nocuoiky,
                         tencongty,
                         masothue,
-                        diachicongty};
+                        diachicongty,
+                        taikhoan};
                 rowRPtsoQuyRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowRPtsoQuyRow);
                 return rowRPtsoQuyRow;
@@ -2220,6 +2231,7 @@ namespace BEEACCOUNT.Reports {
                 this.columntencongty = base.Columns["tencongty"];
                 this.columnmasothue = base.Columns["masothue"];
                 this.columndiachicongty = base.Columns["diachicongty"];
+                this.columntaikhoan = base.Columns["taikhoan"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2249,6 +2261,8 @@ namespace BEEACCOUNT.Reports {
                 base.Columns.Add(this.columnmasothue);
                 this.columndiachicongty = new global::System.Data.DataColumn("diachicongty", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndiachicongty);
+                this.columntaikhoan = new global::System.Data.DataColumn("taikhoan", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columntaikhoan);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4610,6 +4624,22 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string taikhoan {
+                get {
+                    try {
+                        return ((string)(this[this.tableRPtsoQuy.taikhoanColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'taikhoan\' in table \'RPtsoQuy\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableRPtsoQuy.taikhoanColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsloaiquyNull() {
                 return this.IsNull(this.tableRPtsoQuy.loaiquyColumn);
             }
@@ -4750,6 +4780,18 @@ namespace BEEACCOUNT.Reports {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetdiachicongtyNull() {
                 this[this.tableRPtsoQuy.diachicongtyColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IstaikhoanNull() {
+                return this.IsNull(this.tableRPtsoQuy.taikhoanColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SettaikhoanNull() {
+                this[this.tableRPtsoQuy.taikhoanColumn] = global::System.Convert.DBNull;
             }
         }
         

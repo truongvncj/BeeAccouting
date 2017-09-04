@@ -53,6 +53,7 @@
       <Column Name="diachicongty" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="username" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="taikhoan" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.tbl_congty" Member="tbl_congties">

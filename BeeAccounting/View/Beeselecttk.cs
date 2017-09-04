@@ -36,7 +36,8 @@ namespace BEEACCOUNT.View
 
             lb_machitietno.Text = "";
             lbtenchitietno.Text = "";
-
+            this.tentaikhoan = "";
+            this.tentaikhoanchitiet = "";
 
             chon = false;
 
@@ -216,8 +217,9 @@ namespace BEEACCOUNT.View
         {
             if (cbtk.SelectedItem != null)
             {
-                mataikhoan = (cbtk.SelectedItem as ComboboxItem).Value.ToString();
-                tentaikhoanchitiet = (cbtk.SelectedItem as ComboboxItem).Text.ToString();
+               this.mataikhoan = (cbtk.SelectedItem as ComboboxItem).Value.ToString();
+                this.tentaikhoan = (cbtk.SelectedItem as ComboboxItem).Text.ToString();
+            //    tentaikhoanchitiet = (cbtk.SelectedItem as ComboboxItem).Text.ToString();
             }
             else
             {
@@ -242,10 +244,14 @@ namespace BEEACCOUNT.View
 
             if (Utils.IsValidnumber(lb_machitietno.Text))
             {
-                machitiettaikhoan = int.Parse(lb_machitietno.Text.Trim());
-                tentaikhoanchitiet = lbtenchitietno.Text.Trim();
+               
+                    this.machitiettaikhoan = int.Parse(lb_machitietno.Text.Trim());
+                    this.tentaikhoanchitiet = lbtenchitietno.Text.Trim();
+             
+             
             }
-
+         
+        
 
 
             chon = true;

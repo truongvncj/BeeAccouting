@@ -195,6 +195,7 @@
             this.btchangecontractitem.TabIndex = 101;
             this.btchangecontractitem.Text = "Lưu";
             this.btchangecontractitem.UseVisualStyleBackColor = false;
+            this.btchangecontractitem.Click += new System.EventHandler(this.btchangecontractitem_Click);
             // 
             // BeeThongtindoanhnghiep
             // 
