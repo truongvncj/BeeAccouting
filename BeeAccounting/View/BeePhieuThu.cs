@@ -2157,6 +2157,7 @@ namespace BEEACCOUNT.View
                             }
                             else
                             {
+                                dataGridViewTkCo.Rows[i].Cells["Tk_Có"].Value = "";
                                 dataGridViewTkCo.Rows[i].Cells["Mã_chi_tiết"].Value = "";
                                 dataGridViewTkCo.Rows[i].Cells["Tên_chi_tiết"].Value = "";
                             }

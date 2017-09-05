@@ -1,11 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="BEE" Class="LinqtoSQLDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
   <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-Q6VJ0TS\SQLEXPRESS;Initial Catalog=BEE;Persist Security Info=True;User ID=sa" SettingsObjectName="BEEACCOUNT.Properties.Settings" SettingsPropertyName="BEEConnectionString" Provider="System.Data.SqlClient" />
-  <Table Name="dbo.RptdetailSoQuy" Member="RptdetailSoQuys">
-    <Type Name="RptdetailSoQuy">
+  <Table Name="dbo.RptdetailSoCai" Member="RptdetailSoCais">
+    <Type Name="RptdetailSoCai">
       <Column Name="username" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="Ngaychungtu" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="machungtuthu" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
-      <Column Name="machungtuchi" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="machungtu" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
       <Column Name="diengiai" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
       <Column Name="taikhoandoiung" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="psco" Type="System.Double" DbType="Float" CanBeNull="true" />
@@ -35,6 +34,38 @@
       <Column Name="tkno" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
       <Column Name="quyenso" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
       <Column Name="tkco" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RptdetailSoQuy" Member="RptdetailSoQuys">
+    <Type Name="RptdetailSoQuy">
+      <Column Name="username" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Ngaychungtu" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="machungtuthu" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="machungtuchi" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="diengiai" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="taikhoandoiung" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="psco" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="psno" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ton" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RPtheadSocai" Member="RPtheadSocais">
+    <Type Name="RPtheadSocai">
+      <Column Name="tungay" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="denngay" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="nodauky" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="codauky" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="psno" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="psco" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="cocuoiky" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="nocuoiky" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="tencongty" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="masothue" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="diachicongty" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="username" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="taikhoan" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.RPtsoQuy" Member="RPtsoQuys">

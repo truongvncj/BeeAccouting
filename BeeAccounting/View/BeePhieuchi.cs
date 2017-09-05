@@ -2223,6 +2223,7 @@ namespace BEEACCOUNT.View
                             }
                             else
                             {
+                                dataGridViewTkNo.Rows[i].Cells["Tk_Nợ"].Value = "";
                                 dataGridViewTkNo.Rows[i].Cells["Mã_chi_tiết"].Value = "";
                                 dataGridViewTkNo.Rows[i].Cells["Tên_chi_tiết"].Value = "";
                             }

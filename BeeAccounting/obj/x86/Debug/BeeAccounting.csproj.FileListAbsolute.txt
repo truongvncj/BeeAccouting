@@ -105,3 +105,5 @@ D:\Product\BeeAccouting\BeeAccounting\bin\x86\Debug\Reports\Phieuchi.rdlc
 D:\Product\BeeAccouting\BeeAccounting\bin\x86\Debug\Reports\Soquy.rdlc
 D:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.Beeselecttk.resources
 D:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.BeeThongtindoanhnghiep.resources
+D:\Product\BeeAccouting\BeeAccounting\bin\x86\Debug\Reports\SoCai.rdlc
+D:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.BeeselecSocai.resources
