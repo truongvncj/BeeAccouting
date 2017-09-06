@@ -57,11 +57,16 @@ namespace BEEACCOUNT.View
             drToAdd["Diễn_giải"] = socaitemp.Diengiai;
             drToAdd["Số_chứng_từ"] = socaitemp.Soctu;
             drToAdd["Ký_hiêu"] = socaitemp.Kyhieuctu;
-            drToAdd["Số_tiền"] = socaitemp.PsCo;
+
+            if (socaitemp.PSCo != null)
+            {
+                drToAdd["Số_tiền"] = socaitemp.PSCo;
+            }
+       
             drToAdd["Mã_chi_tiết"] = socaitemp.MaCTietTKCo;
             drToAdd["Tên_chi_tiết"] = socaitemp.tenchitietCo;
 
-            drToAdd["tkNohide"] = socaitemp.TkCo;
+            drToAdd["tkNohide"] = socaitemp.TkSoCai;
 
 
             drToAdd["ngayctuhide"] = socaitemp.Ngayctu;
@@ -82,7 +87,7 @@ namespace BEEACCOUNT.View
             foreach (ComboboxItem item in (List<ComboboxItem>)cb.DataSource)
             {
 
-                if (item.Value.ToString().Trim() == socaitemp.TkCo.ToString().Trim())
+                if (item.Value.ToString().Trim() == socaitemp.TkSoCai.ToString().Trim())
                 {
 
                     dataGridViewTkNo.Rows[i].Cells["Tk_Nợ"].Value = item.Value;
@@ -126,11 +131,11 @@ namespace BEEACCOUNT.View
             drToAdd["Diễn_giải"] = socaitemp.Diengiai;
             drToAdd["Số_chứng_từ"] = socaitemp.Soctu;
             drToAdd["Ký_hiêu"] = socaitemp.Kyhieuctu;
-            drToAdd["Số_tiền"] = socaitemp.PsCo;
+            drToAdd["Số_tiền"] = socaitemp.PSCo;
             drToAdd["Mã_chi_tiết"] = socaitemp.MaCTietTKCo;
             drToAdd["Tên_chi_tiết"] = socaitemp.tenchitietCo;
 
-            drToAdd["tkNohide"] = socaitemp.TkCo;
+            drToAdd["tkNohide"] = socaitemp.TkSoCai;
 
 
             drToAdd["ngayctuhide"] = socaitemp.Ngayctu;
@@ -151,7 +156,7 @@ namespace BEEACCOUNT.View
             foreach (ComboboxItem item in (List<ComboboxItem>)cb.DataSource)
             {
 
-                if (item.Value.ToString().Trim() == socaitemp.TkCo.ToString().Trim())
+                if (item.Value.ToString().Trim() == socaitemp.TkSoCai.ToString().Trim())
                 {
 
                     dataGridViewTkNo.Rows[i].Cells["Tk_Nợ"].Value = item.Value;
@@ -825,7 +830,8 @@ namespace BEEACCOUNT.View
                             //  //  string username, string tkno, string tkco, float psno, float psco, string diengiai, string manghiepvu, int sochunngtu, DateTime ngaychungtu, DateTime ngayghiso
 
 
-                            socai.TkNo = dataGridViewTkNo.Rows[idrow].Cells["Tk_Nợ"].Value.ToString().Trim();
+                            socai.TkDoiung = dataGridViewTkNo.Rows[idrow].Cells["Tk_Nợ"].Value.ToString().Trim();
+
                             if (dataGridViewTkNo.Rows[idrow].Cells["Mã_chi_tiết"].Value != DBNull.Value)
                             {
 
@@ -863,7 +869,7 @@ namespace BEEACCOUNT.View
 
                             if (cbtkno.SelectedItem != null)
                             {
-                                socai.TkCo = (cbtkno.SelectedItem as ComboboxItem).Value.ToString();
+                                socai.TkSoCai = (cbtkno.SelectedItem as ComboboxItem).Value.ToString();
 
                             }
                             else
@@ -885,8 +891,8 @@ namespace BEEACCOUNT.View
 
                             if (dataGridViewTkNo.Rows[idrow].Cells["Số_tiền"].Value != DBNull.Value)
                             {
-                                socai.PsCo = double.Parse(dataGridViewTkNo.Rows[idrow].Cells["Số_tiền"].Value.ToString());
-                                socai.PsNo = double.Parse(dataGridViewTkNo.Rows[idrow].Cells["Số_tiền"].Value.ToString());
+                                socai.PSCo = double.Parse(dataGridViewTkNo.Rows[idrow].Cells["Số_tiền"].Value.ToString());
+                                socai.PSNo = 0;
                             }
                             else
                             {
@@ -931,6 +937,12 @@ namespace BEEACCOUNT.View
 
                             Model.Taikhoanketoan.ghisocaitk(socai);
 
+                            socai.TkSoCai = dataGridViewTkNo.Rows[idrow].Cells["Tk_Nợ"].Value.ToString().Trim();
+                            socai.TkDoiung = (cbtkno.SelectedItem as ComboboxItem).Value.ToString();
+                            socai.PSCo = 0;
+                            socai.PSNo = double.Parse(dataGridViewTkNo.Rows[idrow].Cells["Số_tiền"].Value.ToString());
+
+                            Model.Taikhoanketoan.ghisocaitk(socai);
 
 
                         }
@@ -1010,7 +1022,7 @@ namespace BEEACCOUNT.View
                             //  //  string username, string tkno, string tkco, float psno, float psco, string diengiai, string manghiepvu, int sochunngtu, DateTime ngaychungtu, DateTime ngayghiso
 
 
-                            socai.TkCo = dataGridViewTkNo.Rows[idrow].Cells["Tk_Nợ"].Value.ToString().Trim();
+                            socai.TkDoiung = dataGridViewTkNo.Rows[idrow].Cells["Tk_Nợ"].Value.ToString().Trim();
                             if (dataGridViewTkNo.Rows[idrow].Cells["Mã_chi_tiết"].Value != DBNull.Value )///zcxzv
                             {
 
@@ -1052,7 +1064,7 @@ namespace BEEACCOUNT.View
 
                             if (cbtkno.SelectedItem != null)
                             {
-                                socai.TkNo = (cbtkno.SelectedItem as ComboboxItem).Value.ToString();
+                                socai.TkSoCai = (cbtkno.SelectedItem as ComboboxItem).Value.ToString();
 
                             }
                             else
@@ -1082,8 +1094,8 @@ namespace BEEACCOUNT.View
 
                             if (dataGridViewTkNo.Rows[idrow].Cells["Số_tiền"].Value != DBNull.Value)
                             {
-                                socai.PsCo = double.Parse(dataGridViewTkNo.Rows[idrow].Cells["Số_tiền"].Value.ToString());
-                                socai.PsNo = double.Parse(dataGridViewTkNo.Rows[idrow].Cells["Số_tiền"].Value.ToString());
+                                socai.PSCo = double.Parse(dataGridViewTkNo.Rows[idrow].Cells["Số_tiền"].Value.ToString());
+                                socai.PSNo = 0;
                             }
                             else
                             {
@@ -1125,6 +1137,16 @@ namespace BEEACCOUNT.View
 
                             // ghi co/ no vao so cai tai khoan so cai
 
+
+                            Model.Taikhoanketoan.ghisocaitk(socai);
+
+
+                            Model.Taikhoanketoan.ghisocaitk(socai);
+
+                            socai.TkSoCai = dataGridViewTkNo.Rows[idrow].Cells["Tk_Nợ"].Value.ToString().Trim();
+                            socai.TkDoiung = (cbtkno.SelectedItem as ComboboxItem).Value.ToString();
+                            socai.PSCo = 0;
+                            socai.PSNo = double.Parse(dataGridViewTkNo.Rows[idrow].Cells["Số_tiền"].Value.ToString());
 
                             Model.Taikhoanketoan.ghisocaitk(socai);
 

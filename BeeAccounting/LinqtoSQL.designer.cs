@@ -5444,14 +5444,6 @@ namespace BEEACCOUNT
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
-		private System.Nullable<double> _PsNo;
-		
-		private System.Nullable<double> _PsCo;
-		
-		private System.Nullable<double> _SoduDk;
-		
-		private System.Nullable<double> _SoduCk;
-		
 		private string _Diengiai;
 		
 		private System.Nullable<System.DateTime> _Ngayghiso;
@@ -5464,9 +5456,9 @@ namespace BEEACCOUNT
 		
 		private string _username;
 		
-		private string _TkNo;
+		private string _TkSoCai;
 		
-		private string _TkCo;
+		private string _TkDoiung;
 		
 		private System.Nullable<int> _MaCTietTKCo;
 		
@@ -5482,18 +5474,14 @@ namespace BEEACCOUNT
 		
 		private string _tenchitietNo;
 		
+		private System.Nullable<double> _PSNo;
+		
+		private System.Nullable<double> _PSCo;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
-    partial void OnPsNoChanging(System.Nullable<double> value);
-    partial void OnPsNoChanged();
-    partial void OnPsCoChanging(System.Nullable<double> value);
-    partial void OnPsCoChanged();
-    partial void OnSoduDkChanging(System.Nullable<double> value);
-    partial void OnSoduDkChanged();
-    partial void OnSoduCkChanging(System.Nullable<double> value);
-    partial void OnSoduCkChanged();
     partial void OnDiengiaiChanging(string value);
     partial void OnDiengiaiChanged();
     partial void OnNgayghisoChanging(System.Nullable<System.DateTime> value);
@@ -5506,10 +5494,10 @@ namespace BEEACCOUNT
     partial void OnnghiepvusoChanged();
     partial void OnusernameChanging(string value);
     partial void OnusernameChanged();
-    partial void OnTkNoChanging(string value);
-    partial void OnTkNoChanged();
-    partial void OnTkCoChanging(string value);
-    partial void OnTkCoChanged();
+    partial void OnTkSoCaiChanging(string value);
+    partial void OnTkSoCaiChanged();
+    partial void OnTkDoiungChanging(string value);
+    partial void OnTkDoiungChanged();
     partial void OnMaCTietTKCoChanging(System.Nullable<int> value);
     partial void OnMaCTietTKCoChanged();
     partial void OnMaCTietTKNoChanging(System.Nullable<int> value);
@@ -5524,91 +5512,15 @@ namespace BEEACCOUNT
     partial void OntenchitietCoChanged();
     partial void OntenchitietNoChanging(string value);
     partial void OntenchitietNoChanged();
+    partial void OnPSNoChanging(System.Nullable<double> value);
+    partial void OnPSNoChanged();
+    partial void OnPSCoChanging(System.Nullable<double> value);
+    partial void OnPSCoChanged();
     #endregion
 		
 		public tbl_Socai()
 		{
 			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PsNo", DbType="Float")]
-		public System.Nullable<double> PsNo
-		{
-			get
-			{
-				return this._PsNo;
-			}
-			set
-			{
-				if ((this._PsNo != value))
-				{
-					this.OnPsNoChanging(value);
-					this.SendPropertyChanging();
-					this._PsNo = value;
-					this.SendPropertyChanged("PsNo");
-					this.OnPsNoChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PsCo", DbType="Float")]
-		public System.Nullable<double> PsCo
-		{
-			get
-			{
-				return this._PsCo;
-			}
-			set
-			{
-				if ((this._PsCo != value))
-				{
-					this.OnPsCoChanging(value);
-					this.SendPropertyChanging();
-					this._PsCo = value;
-					this.SendPropertyChanged("PsCo");
-					this.OnPsCoChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SoduDk", DbType="Float")]
-		public System.Nullable<double> SoduDk
-		{
-			get
-			{
-				return this._SoduDk;
-			}
-			set
-			{
-				if ((this._SoduDk != value))
-				{
-					this.OnSoduDkChanging(value);
-					this.SendPropertyChanging();
-					this._SoduDk = value;
-					this.SendPropertyChanged("SoduDk");
-					this.OnSoduDkChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SoduCk", DbType="Float")]
-		public System.Nullable<double> SoduCk
-		{
-			get
-			{
-				return this._SoduCk;
-			}
-			set
-			{
-				if ((this._SoduCk != value))
-				{
-					this.OnSoduCkChanging(value);
-					this.SendPropertyChanging();
-					this._SoduCk = value;
-					this.SendPropertyChanged("SoduCk");
-					this.OnSoduCkChanged();
-				}
-			}
 		}
 		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Diengiai", DbType="NChar(225)")]
@@ -5731,42 +5643,42 @@ namespace BEEACCOUNT
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TkNo", DbType="NVarChar(10)")]
-		public string TkNo
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TkSoCai", DbType="NVarChar(10)")]
+		public string TkSoCai
 		{
 			get
 			{
-				return this._TkNo;
+				return this._TkSoCai;
 			}
 			set
 			{
-				if ((this._TkNo != value))
+				if ((this._TkSoCai != value))
 				{
-					this.OnTkNoChanging(value);
+					this.OnTkSoCaiChanging(value);
 					this.SendPropertyChanging();
-					this._TkNo = value;
-					this.SendPropertyChanged("TkNo");
-					this.OnTkNoChanged();
+					this._TkSoCai = value;
+					this.SendPropertyChanged("TkSoCai");
+					this.OnTkSoCaiChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TkCo", DbType="NVarChar(10)")]
-		public string TkCo
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TkDoiung", DbType="NVarChar(10)")]
+		public string TkDoiung
 		{
 			get
 			{
-				return this._TkCo;
+				return this._TkDoiung;
 			}
 			set
 			{
-				if ((this._TkCo != value))
+				if ((this._TkDoiung != value))
 				{
-					this.OnTkCoChanging(value);
+					this.OnTkDoiungChanging(value);
 					this.SendPropertyChanging();
-					this._TkCo = value;
-					this.SendPropertyChanged("TkCo");
-					this.OnTkCoChanged();
+					this._TkDoiung = value;
+					this.SendPropertyChanged("TkDoiung");
+					this.OnTkDoiungChanged();
 				}
 			}
 		}
@@ -5907,6 +5819,46 @@ namespace BEEACCOUNT
 					this._tenchitietNo = value;
 					this.SendPropertyChanged("tenchitietNo");
 					this.OntenchitietNoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PSNo", DbType="Float")]
+		public System.Nullable<double> PSNo
+		{
+			get
+			{
+				return this._PSNo;
+			}
+			set
+			{
+				if ((this._PSNo != value))
+				{
+					this.OnPSNoChanging(value);
+					this.SendPropertyChanging();
+					this._PSNo = value;
+					this.SendPropertyChanged("PSNo");
+					this.OnPSNoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PSCo", DbType="Float")]
+		public System.Nullable<double> PSCo
+		{
+			get
+			{
+				return this._PSCo;
+			}
+			set
+			{
+				if ((this._PSCo != value))
+				{
+					this.OnPSCoChanging(value);
+					this.SendPropertyChanging();
+					this._PSCo = value;
+					this.SendPropertyChanged("PSCo");
+					this.OnPSCoChanged();
 				}
 			}
 		}
