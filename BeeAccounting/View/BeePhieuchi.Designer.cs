@@ -578,7 +578,7 @@
             this.dataGridViewTkNo.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dataGridViewTkCo_DataError_1);
             this.dataGridViewTkNo.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.dataGridViewTkCo_EditingControlShowing);
             this.dataGridViewTkNo.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dataGridViewTkCo_RowsAdded);
-            this.dataGridViewTkNo.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.dataGridViewTkCo_RowsRemoved);
+            this.dataGridViewTkNo.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.dataGridViewTkNo_RowsRemoved);
             this.dataGridViewTkNo.Paint += new System.Windows.Forms.PaintEventHandler(this.dataGridViewTkCo_Paint);
             this.dataGridViewTkNo.Leave += new System.EventHandler(this.dataGridViewTkCo_Leave);
             // 
