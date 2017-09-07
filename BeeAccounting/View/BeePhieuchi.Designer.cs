@@ -65,7 +65,7 @@
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button3 = new System.Windows.Forms.Button();
+            this.tbXoa = new System.Windows.Forms.Button();
             this.btsua = new System.Windows.Forms.Button();
             this.btluu = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -380,7 +380,7 @@
             this.panel2.Controls.Add(this.button6);
             this.panel2.Controls.Add(this.button5);
             this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Controls.Add(this.button3);
+            this.panel2.Controls.Add(this.tbXoa);
             this.panel2.Controls.Add(this.btsua);
             this.panel2.Controls.Add(this.btluu);
             this.panel2.Location = new System.Drawing.Point(4, 0);
@@ -426,18 +426,18 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // button3
+            // tbXoa
             // 
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.button3.ForeColor = System.Drawing.Color.Red;
-            this.button3.Location = new System.Drawing.Point(403, 4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(113, 25);
-            this.button3.TabIndex = 2;
-            this.button3.TabStop = false;
-            this.button3.Text = "Xóa";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.tbXoa.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.tbXoa.ForeColor = System.Drawing.Color.Red;
+            this.tbXoa.Location = new System.Drawing.Point(403, 4);
+            this.tbXoa.Name = "tbXoa";
+            this.tbXoa.Size = new System.Drawing.Size(113, 25);
+            this.tbXoa.TabIndex = 2;
+            this.tbXoa.TabStop = false;
+            this.tbXoa.Text = "Xóa";
+            this.tbXoa.UseVisualStyleBackColor = true;
+            this.tbXoa.Click += new System.EventHandler(this.tbxoa_Click);
             // 
             // btsua
             // 
@@ -666,7 +666,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lbtenchitietno;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button tbXoa;
         private System.Windows.Forms.Button btsua;
         private System.Windows.Forms.Button btluu;
         private System.Windows.Forms.Panel panel3;

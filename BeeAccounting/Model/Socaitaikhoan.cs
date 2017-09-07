@@ -35,7 +35,7 @@ namespace BEEACCOUNT.Model
         
           
 
-        public static void ghibuttoan(string matk, string manghiepvu, string sochungtu) // vd phieu thu nghiep vu là phieu thu: PT,
+        public static void ghibuttoannotk(string matk, string manghiepvu, string sochungtu) // vd phieu thu nghiep vu là phieu thu: PT,
         {
 
 

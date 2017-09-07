@@ -941,9 +941,13 @@ namespace BEEACCOUNT.View
                             socai.MaCTietTKCo = int.Parse(lb_machitietno.Text.ToString());
                             //   socai.MaCTietTKNo = int.Parse(dataGridViewTkNo.Rows[idrow].Cells["Tên_chi_tiết"].Value.ToString());
 
-                            if (Utils.IsValidnumber((string)dataGridViewTkNo.Rows[idrow].Cells["Mã_chi_tiết"].Value))
+                            if (dataGridViewTkNo.Rows[idrow].Cells["Mã_chi_tiết"].Value != DBNull.Value )
                             {
-                                socai.MaCTietTKNo = int.Parse(dataGridViewTkNo.Rows[idrow].Cells["Mã_chi_tiết"].Value.ToString());
+                                if ( Utils.IsValidnumber((string)dataGridViewTkNo.Rows[idrow].Cells["Mã_chi_tiết"].Value))
+                                {
+                                    socai.MaCTietTKNo = int.Parse(dataGridViewTkNo.Rows[idrow].Cells["Mã_chi_tiết"].Value.ToString());
+                                }
+                              
                             }
                             else
                             {
@@ -1721,7 +1725,7 @@ namespace BEEACCOUNT.View
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void tbxoa_Click(object sender, EventArgs e)
         {
             string connection_string = Utils.getConnectionstr();
             LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
