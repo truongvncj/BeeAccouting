@@ -123,15 +123,15 @@ namespace BEEACCOUNT.Model
 
             tbl_Socai socaips = new tbl_Socai();
 
-            socaips.TkSoCai = socai.TkSoCai;
+            socaips.TkNo = socai.TkNo;
             socaips.MaCTietTKCo = socai.MaCTietTKCo;
             socaips.MaCTietTKNo = socai.MaCTietTKNo;
             socaips.tenchitietNo = socai.tenchitietNo;
             socaips.tenchitietCo = socai.tenchitietCo;
 
-            socaips.TkDoiung = socai.TkDoiung;
-            socaips.PSCo = socai.PSCo;
-            socaips.PSNo = socai.PSNo;
+            socaips.TkCo = socai.TkCo;
+            socaips.PsCo = socai.PsCo;
+            socaips.PsNo = socai.PsNo;
             socaips.Diengiai = socai.Diengiai;
             socaips.manghiepvu = socai.manghiepvu;
             socaips.nghiepvuso = socai.nghiepvuso;

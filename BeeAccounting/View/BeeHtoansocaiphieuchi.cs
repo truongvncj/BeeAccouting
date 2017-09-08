@@ -384,7 +384,7 @@ namespace BEEACCOUNT.View
             //if (this.cb_channel.SelectedItem != null)
             if (cbtkno.SelectedItem != null)
             {
-                socaitemp.TkSoCai = (cbtkno.SelectedItem as ComboboxItem).Value.ToString();
+                socaitemp.TkNo = (cbtkno.SelectedItem as ComboboxItem).Value.ToString();
             }
             else
             {
@@ -395,7 +395,7 @@ namespace BEEACCOUNT.View
 
             if (Utils.IsValidnumber(txtsotien.Text))
             {
-                socaitemp.PSCo = double.Parse(txtsotien.Text.Trim());
+                socaitemp.PsCo = double.Parse(txtsotien.Text.Trim());
             }
             else
             {

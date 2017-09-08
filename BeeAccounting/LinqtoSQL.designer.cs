@@ -5456,9 +5456,9 @@ namespace BEEACCOUNT
 		
 		private string _username;
 		
-		private string _TkSoCai;
+		private string _TkNo;
 		
-		private string _TkDoiung;
+		private string _TkCo;
 		
 		private System.Nullable<int> _MaCTietTKCo;
 		
@@ -5474,9 +5474,9 @@ namespace BEEACCOUNT
 		
 		private string _tenchitietNo;
 		
-		private System.Nullable<double> _PSNo;
+		private System.Nullable<double> _PsNo;
 		
-		private System.Nullable<double> _PSCo;
+		private System.Nullable<double> _PsCo;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -5494,10 +5494,10 @@ namespace BEEACCOUNT
     partial void OnnghiepvusoChanged();
     partial void OnusernameChanging(string value);
     partial void OnusernameChanged();
-    partial void OnTkSoCaiChanging(string value);
-    partial void OnTkSoCaiChanged();
-    partial void OnTkDoiungChanging(string value);
-    partial void OnTkDoiungChanged();
+    partial void OnTkNoChanging(string value);
+    partial void OnTkNoChanged();
+    partial void OnTkCoChanging(string value);
+    partial void OnTkCoChanged();
     partial void OnMaCTietTKCoChanging(System.Nullable<int> value);
     partial void OnMaCTietTKCoChanged();
     partial void OnMaCTietTKNoChanging(System.Nullable<int> value);
@@ -5512,10 +5512,10 @@ namespace BEEACCOUNT
     partial void OntenchitietCoChanged();
     partial void OntenchitietNoChanging(string value);
     partial void OntenchitietNoChanged();
-    partial void OnPSNoChanging(System.Nullable<double> value);
-    partial void OnPSNoChanged();
-    partial void OnPSCoChanging(System.Nullable<double> value);
-    partial void OnPSCoChanged();
+    partial void OnPsNoChanging(System.Nullable<double> value);
+    partial void OnPsNoChanged();
+    partial void OnPsCoChanging(System.Nullable<double> value);
+    partial void OnPsCoChanged();
     #endregion
 		
 		public tbl_Socai()
@@ -5643,42 +5643,42 @@ namespace BEEACCOUNT
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TkSoCai", DbType="NVarChar(10)")]
-		public string TkSoCai
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TkNo", DbType="NVarChar(10)")]
+		public string TkNo
 		{
 			get
 			{
-				return this._TkSoCai;
+				return this._TkNo;
 			}
 			set
 			{
-				if ((this._TkSoCai != value))
+				if ((this._TkNo != value))
 				{
-					this.OnTkSoCaiChanging(value);
+					this.OnTkNoChanging(value);
 					this.SendPropertyChanging();
-					this._TkSoCai = value;
-					this.SendPropertyChanged("TkSoCai");
-					this.OnTkSoCaiChanged();
+					this._TkNo = value;
+					this.SendPropertyChanged("TkNo");
+					this.OnTkNoChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TkDoiung", DbType="NVarChar(10)")]
-		public string TkDoiung
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TkCo", DbType="NVarChar(10)")]
+		public string TkCo
 		{
 			get
 			{
-				return this._TkDoiung;
+				return this._TkCo;
 			}
 			set
 			{
-				if ((this._TkDoiung != value))
+				if ((this._TkCo != value))
 				{
-					this.OnTkDoiungChanging(value);
+					this.OnTkCoChanging(value);
 					this.SendPropertyChanging();
-					this._TkDoiung = value;
-					this.SendPropertyChanged("TkDoiung");
-					this.OnTkDoiungChanged();
+					this._TkCo = value;
+					this.SendPropertyChanged("TkCo");
+					this.OnTkCoChanged();
 				}
 			}
 		}
@@ -5823,42 +5823,42 @@ namespace BEEACCOUNT
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PSNo", DbType="Float")]
-		public System.Nullable<double> PSNo
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PsNo", DbType="Float")]
+		public System.Nullable<double> PsNo
 		{
 			get
 			{
-				return this._PSNo;
+				return this._PsNo;
 			}
 			set
 			{
-				if ((this._PSNo != value))
+				if ((this._PsNo != value))
 				{
-					this.OnPSNoChanging(value);
+					this.OnPsNoChanging(value);
 					this.SendPropertyChanging();
-					this._PSNo = value;
-					this.SendPropertyChanged("PSNo");
-					this.OnPSNoChanged();
+					this._PsNo = value;
+					this.SendPropertyChanged("PsNo");
+					this.OnPsNoChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PSCo", DbType="Float")]
-		public System.Nullable<double> PSCo
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PsCo", DbType="Float")]
+		public System.Nullable<double> PsCo
 		{
 			get
 			{
-				return this._PSCo;
+				return this._PsCo;
 			}
 			set
 			{
-				if ((this._PSCo != value))
+				if ((this._PsCo != value))
 				{
-					this.OnPSCoChanging(value);
+					this.OnPsCoChanging(value);
 					this.SendPropertyChanging();
-					this._PSCo = value;
-					this.SendPropertyChanged("PSCo");
-					this.OnPSCoChanged();
+					this._PsCo = value;
+					this.SendPropertyChanged("PsCo");
+					this.OnPsCoChanged();
 				}
 			}
 		}

@@ -41,7 +41,7 @@
             this.txtquyenso = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.txtsochungtugoc = new System.Windows.Forms.TextBox();
-            this.cbtkno = new System.Windows.Forms.ComboBox();
+            this.cbtkco = new System.Windows.Forms.ComboBox();
             this.txtsotien = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtdiengiai = new System.Windows.Forms.TextBox();
@@ -93,7 +93,7 @@
             this.panel1.Controls.Add(this.txtquyenso);
             this.panel1.Controls.Add(this.label13);
             this.panel1.Controls.Add(this.txtsochungtugoc);
-            this.panel1.Controls.Add(this.cbtkno);
+            this.panel1.Controls.Add(this.cbtkco);
             this.panel1.Controls.Add(this.txtsotien);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.txtdiengiai);
@@ -167,18 +167,18 @@
             this.txtsochungtugoc.TextChanged += new System.EventHandler(this.txtsochungtugoc_TextChanged);
             this.txtsochungtugoc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtsochungtugoc_KeyPress);
             // 
-            // cbtkno
+            // cbtkco
             // 
-            this.cbtkno.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbtkno.DropDownWidth = 350;
-            this.cbtkno.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbtkno.FormattingEnabled = true;
-            this.cbtkno.Location = new System.Drawing.Point(129, 319);
-            this.cbtkno.Name = "cbtkno";
-            this.cbtkno.Size = new System.Drawing.Size(207, 26);
-            this.cbtkno.TabIndex = 8;
-            this.cbtkno.SelectionChangeCommitted += new System.EventHandler(this.cbtkno_SelectionChangeCommitted);
-            this.cbtkno.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbtkno_KeyPress);
+            this.cbtkco.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbtkco.DropDownWidth = 350;
+            this.cbtkco.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbtkco.FormattingEnabled = true;
+            this.cbtkco.Location = new System.Drawing.Point(129, 319);
+            this.cbtkco.Name = "cbtkco";
+            this.cbtkco.Size = new System.Drawing.Size(207, 26);
+            this.cbtkco.TabIndex = 8;
+            this.cbtkco.SelectionChangeCommitted += new System.EventHandler(this.cbtkno_SelectionChangeCommitted);
+            this.cbtkco.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbtkno_KeyPress);
             // 
             // txtsotien
             // 
@@ -657,7 +657,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox cbtkno;
+        private System.Windows.Forms.ComboBox cbtkco;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;

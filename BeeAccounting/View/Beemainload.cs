@@ -1230,16 +1230,16 @@ namespace BEEACCOUNT.View
 
                     headSocai.codauky = (from tbl_Socai in dc.tbl_Socais
                                          where tbl_Socai.Ngayctu < fromdate
-                                         && tbl_Socai.TkSoCai.Trim() == mataikhoan
-                                         select tbl_Socai.PSCo).Sum().GetValueOrDefault(0) + (from tbl_dstaikhoan in dc.tbl_dstaikhoans
+                                         && tbl_Socai.TkCo.Trim() == mataikhoan
+                                         select tbl_Socai.PsCo).Sum().GetValueOrDefault(0) + (from tbl_dstaikhoan in dc.tbl_dstaikhoans
                                                                                               where tbl_dstaikhoan.matk == mataikhoan
                                                                                               select tbl_dstaikhoan.codk).FirstOrDefault();
 
                     headSocai.nodauky = (from tbl_Socai in dc.tbl_Socais
                                          where tbl_Socai.Ngayctu < fromdate
-                                              && tbl_Socai.TkSoCai.Trim() == mataikhoan
+                                              && tbl_Socai.TkNo.Trim() == mataikhoan
                                          //  && tbl_SoQuy.ChitietTM == machitiettaikhoan
-                                         select tbl_Socai.PSNo).Sum().GetValueOrDefault(0) + (from tbl_dstaikhoan in dc.tbl_dstaikhoans
+                                         select tbl_Socai.PsNo).Sum().GetValueOrDefault(0) + (from tbl_dstaikhoan in dc.tbl_dstaikhoans
                                                                                               where tbl_dstaikhoan.matk == mataikhoan
                                                                                               select tbl_dstaikhoan.nodk).FirstOrDefault();
 
@@ -1251,15 +1251,15 @@ namespace BEEACCOUNT.View
 
                     headSocai.psco = (from tbl_Socai in dc.tbl_Socais
                                       where tbl_Socai.Ngayctu >= fromdate && tbl_Socai.Ngayctu <= todate
-                                           && tbl_Socai.TkSoCai.Trim() == mataikhoan
+                                           && tbl_Socai.TkCo.Trim() == mataikhoan
                                       //   && tbl_SoQuy.ChitietTM == machitiettaikhoan
-                                      select tbl_Socai.PSCo).Sum().GetValueOrDefault(0);
+                                      select tbl_Socai.PsCo).Sum().GetValueOrDefault(0);
 
                     headSocai.psno = (from tbl_Socai in dc.tbl_Socais
                                       where tbl_Socai.Ngayctu >= fromdate && tbl_Socai.Ngayctu <= todate
-                                           && tbl_Socai.TkSoCai.Trim() == mataikhoan
+                                           && tbl_Socai.TkNo.Trim() == mataikhoan
                                       //    && tbl_SoQuy.ChitietTM == machitiettaikhoan
-                                      select tbl_Socai.PSNo).Sum().GetValueOrDefault(0);
+                                      select tbl_Socai.PsNo).Sum().GetValueOrDefault(0);
 
 
                     headSocai.nocuoiky = headSocai.nodauky + headSocai.psno;
@@ -1297,7 +1297,7 @@ namespace BEEACCOUNT.View
 
                     var detairpt = from tbl_Socai in dc.tbl_Socais
                                    where tbl_Socai.Ngayctu >= fromdate && tbl_Socai.Ngayctu <= todate
-                                        && tbl_Socai.TkSoCai.Trim() == mataikhoan
+                                        && tbl_Socai.TkCo.Trim() == mataikhoan
                                                orderby tbl_Socai.Ngayctu
                                    select tbl_Socai;
 
@@ -1316,13 +1316,48 @@ namespace BEEACCOUNT.View
                         q.Ngaychungtu = item.Ngayctu;
                       
                    
-                            q.taikhoandoiung = item.TkDoiung.Trim();
-                            q.psno = item.PSNo;
-                            q.psco = item.PSCo;
+                            q.taikhoandoiung = item.TkNo.Trim();
+                        q.psno = 0;
+                        q.psco = item.PsCo;
 
 
-                        q.ton = daukysave + item.PSNo - item.PSCo;
-                        daukysave = daukysave + (double)item.PSNo - (double)item.PSCo;
+                 //       q.ton = daukysave + item.PSNo - item.PSCo;
+                //        daukysave = daukysave + (double)item.PSNo - (double)item.PSCo;
+
+                        dc.RptdetailSoCais.InsertOnSubmit(q);
+                        dc.SubmitChanges();
+
+
+                    }
+
+                    var detairptno = from tbl_Socai in dc.tbl_Socais
+                                   where tbl_Socai.Ngayctu >= fromdate && tbl_Socai.Ngayctu <= todate
+                                        && tbl_Socai.TkNo.Trim() == mataikhoan
+                                   orderby tbl_Socai.Ngayctu
+                                   select tbl_Socai;
+
+                    foreach (var item in detairptno)
+                    {
+                        RptdetailSoCai q = new RptdetailSoCai();
+                        if (item.Diengiai != "")
+                        {
+                            q.diengiai = item.Diengiai.Trim();
+                        }
+
+                        q.machungtu = item.manghiepvu + " " + item.nghiepvuso;
+
+
+                        q.username = username;
+                        q.Ngaychungtu = item.Ngayctu;
+
+
+                        q.taikhoandoiung = item.TkCo.Trim();
+                        q.psno = item.PsNo;
+                        q.psco = 0;
+
+
+                        //       q.ton = daukysave + item.PSNo - item.PSCo;
+                        //        daukysave = daukysave + (double)item.PSNo - (double)item.PSCo;
 
                         dc.RptdetailSoCais.InsertOnSubmit(q);
                         dc.SubmitChanges();
@@ -1331,11 +1366,24 @@ namespace BEEACCOUNT.View
                     }
 
 
+
+
+
+
                     var rptdetail = from RptdetailSocai in dc.RptdetailSoCais
                                     where RptdetailSocai.username == username
                                     orderby RptdetailSocai.Ngaychungtu
 
                                     select RptdetailSocai;
+
+
+                    foreach (var item in rptdetail)
+                    {
+
+                               item.ton = daukysave + item.psno - item.psco;
+                                daukysave = daukysave + (double)item.psno - (double)item.psco;
+
+                    }
 
                     var dataset2 = ut.ToDataTable(dc, rptdetail);
 

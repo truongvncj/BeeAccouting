@@ -408,7 +408,7 @@ namespace BEEACCOUNT.Model
 
 
             var socailist = from tbl_Socai in dc.tbl_Socais
-                            where tbl_Socai.TkSoCai.Trim() == taikhoanno.Trim()
+                            where tbl_Socai.TkCo.Trim() == taikhoanno.Trim()
                      && tbl_Socai.manghiepvu == "PT"
                     && tbl_Socai.nghiepvuso == sophieuthu
                             select tbl_Socai;
@@ -441,7 +441,7 @@ namespace BEEACCOUNT.Model
 
 
             var socailist = from tbl_Socai in dc.tbl_Socais
-                            where tbl_Socai.TkSoCai.Trim() == taikhoanNo.Trim()
+                            where tbl_Socai.TkNo.Trim() == taikhoanNo.Trim()
                      && tbl_Socai.manghiepvu == "PC"
                     && tbl_Socai.nghiepvuso == sophieuchi
                             select tbl_Socai;
