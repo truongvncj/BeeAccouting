@@ -5904,12 +5904,6 @@ namespace BEEACCOUNT
 		
 		private System.Nullable<double> _PsCo;
 		
-		private System.Nullable<double> _SoduDk;
-		
-		private System.Nullable<double> _SoduCk;
-		
-		private System.Nullable<double> _Sodu;
-		
 		private string _Diengiai;
 		
 		private System.Nullable<int> _Chitietdoiung;
@@ -5950,12 +5944,6 @@ namespace BEEACCOUNT
     partial void OnPsNoChanged();
     partial void OnPsCoChanging(System.Nullable<double> value);
     partial void OnPsCoChanged();
-    partial void OnSoduDkChanging(System.Nullable<double> value);
-    partial void OnSoduDkChanged();
-    partial void OnSoduCkChanging(System.Nullable<double> value);
-    partial void OnSoduCkChanged();
-    partial void OnSoduChanging(System.Nullable<double> value);
-    partial void OnSoduChanged();
     partial void OnDiengiaiChanging(string value);
     partial void OnDiengiaiChanged();
     partial void OnChitietdoiungChanging(System.Nullable<int> value);
@@ -6121,66 +6109,6 @@ namespace BEEACCOUNT
 					this._PsCo = value;
 					this.SendPropertyChanged("PsCo");
 					this.OnPsCoChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SoduDk", DbType="Float")]
-		public System.Nullable<double> SoduDk
-		{
-			get
-			{
-				return this._SoduDk;
-			}
-			set
-			{
-				if ((this._SoduDk != value))
-				{
-					this.OnSoduDkChanging(value);
-					this.SendPropertyChanging();
-					this._SoduDk = value;
-					this.SendPropertyChanged("SoduDk");
-					this.OnSoduDkChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SoduCk", DbType="Float")]
-		public System.Nullable<double> SoduCk
-		{
-			get
-			{
-				return this._SoduCk;
-			}
-			set
-			{
-				if ((this._SoduCk != value))
-				{
-					this.OnSoduCkChanging(value);
-					this.SendPropertyChanging();
-					this._SoduCk = value;
-					this.SendPropertyChanged("SoduCk");
-					this.OnSoduCkChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Sodu", DbType="Float")]
-		public System.Nullable<double> Sodu
-		{
-			get
-			{
-				return this._Sodu;
-			}
-			set
-			{
-				if ((this._Sodu != value))
-				{
-					this.OnSoduChanging(value);
-					this.SendPropertyChanging();
-					this._Sodu = value;
-					this.SendPropertyChanged("Sodu");
-					this.OnSoduChanged();
 				}
 			}
 		}

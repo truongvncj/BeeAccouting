@@ -280,9 +280,6 @@
       <Column Name="Machungtu" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
       <Column Name="PsNo" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Column Name="PsCo" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="SoduDk" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="SoduCk" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="Sodu" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Column Name="Diengiai" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
       <Column Name="Chitietdoiung" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="Nguoinopnhantien" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
