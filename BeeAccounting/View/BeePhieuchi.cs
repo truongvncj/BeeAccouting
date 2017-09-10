@@ -37,7 +37,7 @@ namespace BEEACCOUNT.View
         }
 
 
-        public void add_detailGridviewTkNo(tbl_Socai socaitemp)
+        public void add_detailGridviewTkNophieuchi(tbl_Socai socaitemp)
         {
 
 
@@ -103,7 +103,7 @@ namespace BEEACCOUNT.View
             //     dataGridViewTkCo.Rows[i].Cells["Tk_Có"].Value = cbx.Value;
             if (Utils.IsValidnumber(txtsotienno.Text))
             {
-                this.pssotienco = double.Parse(txtsotienno.Text);
+                this.pssotienno = double.Parse(txtsotienno.Text);
 
             }
 
@@ -111,7 +111,7 @@ namespace BEEACCOUNT.View
 
         }
 
-        public void add_detailGridviewTkNoPhieuchi(tbl_Socai socaitemp)
+        public void add_detailGridviewTkCoPhieuchi(tbl_Socai socaitemp)
         {
 
 
@@ -131,11 +131,11 @@ namespace BEEACCOUNT.View
             drToAdd["Diễn_giải"] = socaitemp.Diengiai;
             drToAdd["Số_chứng_từ"] = socaitemp.Soctu;
             drToAdd["Ký_hiêu"] = socaitemp.Kyhieuctu;
-            drToAdd["Số_tiền"] = socaitemp.PsCo;
+            drToAdd["Số_tiền"] = socaitemp.PsNo;
             drToAdd["Mã_chi_tiết"] = socaitemp.MaCTietTKCo;
             drToAdd["Tên_chi_tiết"] = socaitemp.tenchitietCo;
 
-            drToAdd["tkNohide"] = socaitemp.TkNo;
+            drToAdd["tkCohide"] = socaitemp.TkNo;
 
 
             drToAdd["ngayctuhide"] = socaitemp.Ngayctu;
@@ -148,8 +148,8 @@ namespace BEEACCOUNT.View
             int i = dataTable.Rows.Count - 1;
             //   int i = dataGridViewTkCo.RowCount -1;
 
-            DataGridViewComboBoxCell cb = (DataGridViewComboBoxCell)dataGridViewTkNo.Rows[i].Cells["Tk_Nợ"];
-            DataGridViewCell dgvc = (DataGridViewCell)dataGridViewTkNo.Rows[i].Cells["Tk_Nợ"];
+            DataGridViewComboBoxCell cb = (DataGridViewComboBoxCell)dataGridViewTkNo.Rows[i].Cells["Tk_Có"];
+            DataGridViewCell dgvc = (DataGridViewCell)dataGridViewTkNo.Rows[i].Cells["Tk_Có"];
 
             #region tim item comboboc
 
@@ -159,7 +159,7 @@ namespace BEEACCOUNT.View
                 if (item.Value.ToString().Trim() == socaitemp.TkNo.ToString().Trim())
                 {
 
-                    dataGridViewTkNo.Rows[i].Cells["Tk_Nợ"].Value = item.Value;
+                    dataGridViewTkNo.Rows[i].Cells["Tk_Có"].Value = item.Value;
                 }
 
             }
@@ -172,8 +172,8 @@ namespace BEEACCOUNT.View
             //     dataGridViewTkCo.Rows[i].Cells["Tk_Có"].Value = cbx.Value;
             if (Utils.IsValidnumber(txtsotienno.Text))
             {
-                this.pssotienco = double.Parse(txtsotienno.Text);
-
+                this.pssotienno = double.Parse(txtsotienno.Text);
+               
             }
 
 

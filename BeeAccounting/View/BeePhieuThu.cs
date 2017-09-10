@@ -37,7 +37,7 @@ namespace BEEACCOUNT.View
         }
 
 
-        public void add_detailGridviewTkCo(tbl_Socai socaitemp)
+        public void add_detailGridviewTkCophieuthu(tbl_Socai socaitemp)
         {
 
 
@@ -78,7 +78,7 @@ namespace BEEACCOUNT.View
 
             int i = dataTable.Rows.Count - 1;
             //   int i = dataGridViewTkCo.RowCount -1;
-
+            
             DataGridViewComboBoxCell cb = (DataGridViewComboBoxCell)dataGridViewTkCo.Rows[i].Cells["Tk_Có"];
             DataGridViewCell dgvc = (DataGridViewCell)dataGridViewTkCo.Rows[i].Cells["Tk_Có"];
 
@@ -764,6 +764,7 @@ namespace BEEACCOUNT.View
 
 
                             socai.TkCo = dataGridViewTkCo.Rows[idrow].Cells["Tk_Có"].Value.ToString().Trim();
+
                             if (dataGridViewTkCo.Rows[idrow].Cells["Mã_chi_tiết"].Value != DBNull.Value)
                             {
 
@@ -803,7 +804,7 @@ namespace BEEACCOUNT.View
 
                             if (cbtkno.SelectedItem != null)
                             {
-                                socai.TkCo = (cbtkno.SelectedItem as ComboboxItem).Value.ToString();
+                                socai.TkNo = (cbtkno.SelectedItem as ComboboxItem).Value.ToString();
 
                             }
                             else
@@ -819,6 +820,13 @@ namespace BEEACCOUNT.View
                             if (lb_machitietno.Text != "")
                             {
                                 socai.MaCTietTKNo = int.Parse(lb_machitietno.Text.ToString());
+                              
+                            }
+
+                            if (lbtenchitietno.Text != "")
+                            {
+                                socai.tenchitietNo = lbtenchitietno.Text.ToString().Trim();
+
                             }
 
 
@@ -951,6 +959,7 @@ namespace BEEACCOUNT.View
 
 
                             socai.TkCo = dataGridViewTkCo.Rows[idrow].Cells["Tk_Có"].Value.ToString().Trim();
+
                             if (dataGridViewTkCo.Rows[idrow].Cells["Mã_chi_tiết"].Value != DBNull.Value )///zcxzv
                             {
 
@@ -992,7 +1001,7 @@ namespace BEEACCOUNT.View
 
                             if (cbtkno.SelectedItem != null)
                             {
-                                socai.TkCo = (cbtkno.SelectedItem as ComboboxItem).Value.ToString();
+                                socai.TkNo = (cbtkno.SelectedItem as ComboboxItem).Value.ToString();
 
                             }
                             else
@@ -1588,7 +1597,7 @@ namespace BEEACCOUNT.View
 
                     this.statusphieuthu = 3;// View
                     Model.Phieuthuchi.reloadnewdetailtaikhoanco(dataGridViewTkCo);
-                    Model.Phieuthuchi.reloaddetailtaikhoanco(this.dataGridViewTkCo, this, phieuthu.tkno.Trim(), phieuthu.sophieuthu);
+                    Model.Phieuthuchi.reloaddetailtaikhoancophieuthu(this.dataGridViewTkCo, this, phieuthu.tkno.Trim(), phieuthu.sophieuthu);
                     btluu.Visible = false;
 
                 }

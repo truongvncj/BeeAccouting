@@ -384,7 +384,7 @@ namespace BEEACCOUNT.View
             //if (this.cb_channel.SelectedItem != null)
             if (cbtkco.SelectedItem != null)
             {
-                socaitemp.TkNo = (cbtkco.SelectedItem as ComboboxItem).Value.ToString();
+                socaitemp.TkCo = (cbtkco.SelectedItem as ComboboxItem).Value.ToString();
             }
             else
             {
@@ -473,7 +473,7 @@ namespace BEEACCOUNT.View
 
 
 
-            this.phieuthu.add_detailGridviewTkCo(socaitemp);
+            this.phieuthu.add_detailGridviewTkCophieuthu(socaitemp);
 
             txtTongco.Text = phieuthu.pssotienco.ToString("#,#", CultureInfo.InvariantCulture);
             this.pssotienco = phieuthu.pssotienco;

@@ -395,7 +395,7 @@ namespace BEEACCOUNT.View
 
             if (Utils.IsValidnumber(txtsotien.Text))
             {
-                socaitemp.PsCo = double.Parse(txtsotien.Text.Trim());
+                socaitemp.PsNo = double.Parse(txtsotien.Text.Trim());
             }
             else
             {
@@ -473,7 +473,7 @@ namespace BEEACCOUNT.View
 
 
 
-            this.phieuchi.add_detailGridviewTkNoPhieuchi(socaitemp);
+            this.phieuchi.add_detailGridviewTkNophieuchi(socaitemp);
 
             txtTongco.Text = phieuchi.pssotienco.ToString("#,#", CultureInfo.InvariantCulture);
             this.pssotienco = phieuchi.pssotienco;

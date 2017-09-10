@@ -397,40 +397,7 @@ namespace BEEACCOUNT.Model
         }
 
 
-        public static void reloaddetailtaikhoanco(DataGridView dataGridViewTkCo, View.BeePhieuThu phieuthu,string taikhoanno, int sophieuthu)
-        {
-
-
-
-
-               string connection_string = Utils.getConnectionstr();
-              LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
-
-
-            var socailist = from tbl_Socai in dc.tbl_Socais
-                            where tbl_Socai.TkCo.Trim() == taikhoanno.Trim()
-                     && tbl_Socai.manghiepvu == "PT"
-                    && tbl_Socai.nghiepvuso == sophieuthu
-                            select tbl_Socai;
-
-
-            foreach (tbl_Socai socai in socailist)
-            {
-             //   MessageBox.Show(socai.Diengiai, "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                phieuthu.add_detailGridviewTkCo(socai);
-
-
-
-            }
-
-
-
-          //  return dataGridViewTkCo;
-
-
-        }
-
-        public static void reloaddetailtaikhoannophieuchi(DataGridView dataGridViewTkNo, View.BeePhieuchi phieuchi, string taikhoanNo, int sophieuchi)
+        public static void reloaddetailtaikhoancophieuthu(DataGridView dataGridViewTkCo, View.BeePhieuThu phieuthu, string taikhoantienmatNo, int sophieuthu)
         {
 
 
@@ -441,21 +408,59 @@ namespace BEEACCOUNT.Model
 
 
             var socailist = from tbl_Socai in dc.tbl_Socais
-                            where tbl_Socai.TkNo.Trim() == taikhoanNo.Trim()
+                            where tbl_Socai.TkNo.Trim() == taikhoantienmatNo.Trim()
+                     && tbl_Socai.manghiepvu == "PT"
+                    && tbl_Socai.nghiepvuso == sophieuthu
+                            select tbl_Socai;
+
+            if (socailist.Count() > 0)
+            {
+                foreach (tbl_Socai socai in socailist)
+                {
+                    //   MessageBox.Show(socai.Diengiai, "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    phieuthu.add_detailGridviewTkCophieuthu(socai);
+
+
+
+                }
+            }
+
+
+
+
+            //  return dataGridViewTkCo;
+
+
+        }
+
+        public static void reloaddetailtaikhoannophieuchi(DataGridView dataGridViewTkNo, View.BeePhieuchi phieuchi, string taikhoantienmatco, int sophieuchi)
+        {
+
+
+
+
+            string connection_string = Utils.getConnectionstr();
+            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+
+            var socailist = from tbl_Socai in dc.tbl_Socais
+                            where tbl_Socai.TkCo.Trim() == taikhoantienmatco.Trim()
                      && tbl_Socai.manghiepvu == "PC"
                     && tbl_Socai.nghiepvuso == sophieuchi
                             select tbl_Socai;
 
 
-            foreach (tbl_Socai socai in socailist)
+            if (socailist.Count() > 0)
             {
-                //   MessageBox.Show(socai.Diengiai, "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                phieuchi.add_detailGridviewTkNo(socai);
+                foreach (tbl_Socai socai in socailist)
+                {
+                    //   MessageBox.Show(socai.Diengiai, "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    phieuchi.add_detailGridviewTkNophieuchi(socai);
 
 
 
+                }
             }
-
 
 
             //  return dataGridViewTkCo;
