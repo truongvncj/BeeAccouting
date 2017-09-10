@@ -30,7 +30,7 @@ namespace BEEACCOUNT.View
                 return Text;
             }
         }
-        public Beeselecttk()
+        public Beeselecttk(string loaitaikhoan)
         {
             InitializeComponent();
 
@@ -46,12 +46,32 @@ namespace BEEACCOUNT.View
 
             #region load tk tmat
 
-
             var rs2 = from tk in dc.tbl_dstaikhoans
-                      where tk.loaitkid == 8 // mã 8 là tiền mặt
+                  //    where tk.loaitkid == 8 // mã 8 là tiền mặt
                       select tk;
 
-            //      string drowdownshow = "";
+            if (loaitaikhoan =="tienmat")
+            {
+            rs2 = from tk in dc.tbl_dstaikhoans
+                          where tk.loaitkid == 8 // mã 8 là tiền mặt
+                          select tk;
+
+            }
+
+            if (loaitaikhoan == "chitiet")
+            {
+                rs2 = from tk in dc.tbl_dstaikhoans
+                      where tk.loaichitiet == true // mã 8 là tiền mặt
+                      select tk;
+
+            }
+            
+
+
+
+
+
+
 
             foreach (var item in rs2)
             {

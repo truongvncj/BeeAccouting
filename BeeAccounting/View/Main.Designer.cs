@@ -139,7 +139,7 @@
             this.systemToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(6, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(158, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(250, 24);
             this.menuStrip1.TabIndex = 20;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -172,12 +172,14 @@
             this.báoCáoNhậpXuấtTồnToolStripMenuItem.Name = "báoCáoNhậpXuấtTồnToolStripMenuItem";
             this.báoCáoNhậpXuấtTồnToolStripMenuItem.Size = new System.Drawing.Size(240, 22);
             this.báoCáoNhậpXuấtTồnToolStripMenuItem.Text = "Sổ cái tài khoản";
+            this.báoCáoNhậpXuấtTồnToolStripMenuItem.Click += new System.EventHandler(this.báoCáoNhậpXuấtTồnToolStripMenuItem_Click);
             // 
             // báoCáoGiaoHàngHàngTrênĐườngToolStripMenuItem
             // 
             this.báoCáoGiaoHàngHàngTrênĐườngToolStripMenuItem.Name = "báoCáoGiaoHàngHàngTrênĐườngToolStripMenuItem";
             this.báoCáoGiaoHàngHàngTrênĐườngToolStripMenuItem.Size = new System.Drawing.Size(240, 22);
             this.báoCáoGiaoHàngHàngTrênĐườngToolStripMenuItem.Text = "Sổ chi tiết tài khản";
+            this.báoCáoGiaoHàngHàngTrênĐườngToolStripMenuItem.Click += new System.EventHandler(this.báoCáoGiaoHàngHàngTrênĐườngToolStripMenuItem_Click);
             // 
             // toolStripSeparator11
             // 
@@ -189,6 +191,7 @@
             this.inputMinuteTransferPOSMTicketToMKTToolStripMenuItem.Name = "inputMinuteTransferPOSMTicketToMKTToolStripMenuItem";
             this.inputMinuteTransferPOSMTicketToMKTToolStripMenuItem.Size = new System.Drawing.Size(240, 22);
             this.inputMinuteTransferPOSMTicketToMKTToolStripMenuItem.Text = "Sổ quỹ";
+            this.inputMinuteTransferPOSMTicketToMKTToolStripMenuItem.Click += new System.EventHandler(this.inputMinuteTransferPOSMTicketToMKTToolStripMenuItem_Click);
             // 
             // listOfPOSMTicketToolStripMenuItem
             // 

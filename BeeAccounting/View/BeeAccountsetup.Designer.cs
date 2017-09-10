@@ -47,7 +47,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial Unicode MS", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(249, 76);
+            this.label1.Location = new System.Drawing.Point(326, 28);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(290, 24);
             this.label1.TabIndex = 0;
@@ -60,7 +60,7 @@
             this.pictureBox2.ErrorImage = global::BEEACCOUNT.Properties.Resources.exit;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.InitialImage")));
-            this.pictureBox2.Location = new System.Drawing.Point(916, 42);
+            this.pictureBox2.Location = new System.Drawing.Point(916, 12);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(98, 51);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -75,9 +75,9 @@
             this.pictureBox1.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.ErrorImage")));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(25, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(249, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(146, 88);
+            this.pictureBox1.Size = new System.Drawing.Size(71, 49);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
@@ -91,7 +91,7 @@
             this.grviewlisttk.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grviewlisttk.Location = new System.Drawing.Point(237, 11);
             this.grviewlisttk.Name = "grviewlisttk";
-            this.grviewlisttk.Size = new System.Drawing.Size(782, 460);
+            this.grviewlisttk.Size = new System.Drawing.Size(782, 526);
             this.grviewlisttk.TabIndex = 56;
             this.grviewlisttk.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grviewlisttk_CellContentClick);
             this.grviewlisttk.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.grviewlisttk_CellMouseDoubleClick);
@@ -115,9 +115,9 @@
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.grviewlisttk);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Location = new System.Drawing.Point(12, 135);
+            this.panel1.Location = new System.Drawing.Point(12, 69);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1022, 478);
+            this.panel1.Size = new System.Drawing.Size(1022, 544);
             this.panel1.TabIndex = 59;
             // 
             // button3
@@ -149,7 +149,6 @@
             this.Text = "Posmmasterinput";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Deactivate += new System.EventHandler(this.KAmasterinput_Deactivate);
-        //    this.Load += new System.EventHandler(this.KAmasterinput_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grviewlisttk)).EndInit();
