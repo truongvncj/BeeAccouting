@@ -614,9 +614,8 @@ namespace BEEACCOUNT.View
                         if (this.statusphieuthu == 1 || (this.statusphieuthu == 2) && this.sophieuthu != int.Parse(txtsophieu.Text.Trim()))
                         {
                             var sophieuthu = (from tbl_SoQuy in dc.tbl_SoQuys
-                                              where (tbl_SoQuy.Sochungtu == int.Parse(txtsophieu.Text.ToString()))
-                                              //  && (tbl_SoQuy.TKtienmat == this.tkno)
-                                              // && (tbl_SoQuy.ChitietTM == this.tknochitiet)
+                                              where (tbl_SoQuy.Sochungtu == int.Parse(txtsophieu.Text.ToString())
+                                                && (tbl_SoQuy.quyenso.Trim() == txtquyenso.Text.ToString().Trim()))
                                               select tbl_SoQuy).FirstOrDefault();
 
                             if (sophieuthu != null)

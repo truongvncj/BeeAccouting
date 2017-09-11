@@ -105,6 +105,7 @@ namespace BEEACCOUNT.View
             {
                 this.pssotienno = double.Parse(txtsotienno.Text);
 
+
             }
 
 
@@ -681,8 +682,8 @@ namespace BEEACCOUNT.View
                         if (this.statusphieuchi == 1 || (this.statusphieuchi == 2) && this.sophieuchi != int.Parse(txtsophieu.Text.Trim()))
                         {
                             var sophieuthu = (from tbl_SoQuy in dc.tbl_SoQuys
-                                              where (tbl_SoQuy.Sochungtu == int.Parse(txtsophieu.Text.ToString()))
-                                              //  && (tbl_SoQuy.TKtienmat == this.tkno)
+                                              where (tbl_SoQuy.Sochungtu == int.Parse(txtsophieu.Text.ToString())
+                                                && (tbl_SoQuy.quyenso.Trim() == txtquyenso.Text.ToString().Trim()))
                                               // && (tbl_SoQuy.ChitietTM == this.tknochitiet)
                                               select tbl_SoQuy).FirstOrDefault();
 

@@ -36,6 +36,8 @@
             this.button14 = new System.Windows.Forms.Button();
             this.button15 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.button17 = new System.Windows.Forms.Button();
+            this.button16 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -48,8 +50,6 @@
             this.button7 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
-            this.button17 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -136,6 +136,27 @@
             this.groupBox3.TabIndex = 41;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Sổ kế toán";
+            // 
+            // button17
+            // 
+            this.button17.Location = new System.Drawing.Point(13, 250);
+            this.button17.Name = "button17";
+            this.button17.Size = new System.Drawing.Size(157, 22);
+            this.button17.TabIndex = 18;
+            this.button17.TabStop = false;
+            this.button17.Text = "Bảng cân đối  phát sinh";
+            this.button17.UseVisualStyleBackColor = true;
+            // 
+            // button16
+            // 
+            this.button16.Location = new System.Drawing.Point(13, 206);
+            this.button16.Name = "button16";
+            this.button16.Size = new System.Drawing.Size(157, 22);
+            this.button16.TabIndex = 17;
+            this.button16.TabStop = false;
+            this.button16.Text = "Sổ nhật ký chung";
+            this.button16.UseVisualStyleBackColor = true;
+            this.button16.Click += new System.EventHandler(this.button16_Click_2);
             // 
             // button4
             // 
@@ -265,26 +286,6 @@
             this.button6.TabStop = false;
             this.button6.Text = "Danh sách xe";
             this.button6.UseVisualStyleBackColor = true;
-            // 
-            // button16
-            // 
-            this.button16.Location = new System.Drawing.Point(13, 206);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(157, 22);
-            this.button16.TabIndex = 17;
-            this.button16.TabStop = false;
-            this.button16.Text = "Sổ nhật ký chung";
-            this.button16.UseVisualStyleBackColor = true;
-            // 
-            // button17
-            // 
-            this.button17.Location = new System.Drawing.Point(13, 250);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(157, 22);
-            this.button17.TabIndex = 18;
-            this.button17.TabStop = false;
-            this.button17.Text = "Bảng cân đối  phát sinh";
-            this.button17.UseVisualStyleBackColor = true;
             // 
             // Beemainload
             // 

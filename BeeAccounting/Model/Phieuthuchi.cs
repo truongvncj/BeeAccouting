@@ -35,6 +35,7 @@ namespace BEEACCOUNT.Model
                                {
 
                                    Ngày_chứng_từ = listpt.Ngayctu,
+                                   Quyển_số = listpt.quyenso,
                                    Số_chứng_từ = listpt.Sochungtu,
                                    TK_Nợ = listpt.TKtienmat,
                                    TK_Có = listpt.TKdoiung,
@@ -63,6 +64,7 @@ namespace BEEACCOUNT.Model
                                {
 
                                    Ngày_chứng_từ = listpt.Ngayctu,
+                                   Quyển_số = listpt.quyenso,
                                    Số_chứng_từ = listpt.Sochungtu,
                                    TK_Nợ = listpt.TKtienmat,
                                    TK_Có = listpt.TKdoiung,
