@@ -47,7 +47,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial Unicode MS", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(326, 28);
+            this.label1.Location = new System.Drawing.Point(111, 26);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(290, 24);
             this.label1.TabIndex = 0;
@@ -60,7 +60,7 @@
             this.pictureBox2.ErrorImage = global::BEEACCOUNT.Properties.Resources.exit;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.InitialImage")));
-            this.pictureBox2.Location = new System.Drawing.Point(916, 12);
+            this.pictureBox2.Location = new System.Drawing.Point(933, 12);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(98, 51);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -75,7 +75,7 @@
             this.pictureBox1.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.ErrorImage")));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(249, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(25, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(71, 49);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -89,9 +89,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.grviewlisttk.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grviewlisttk.Location = new System.Drawing.Point(237, 11);
+            this.grviewlisttk.Location = new System.Drawing.Point(13, 31);
             this.grviewlisttk.Name = "grviewlisttk";
-            this.grviewlisttk.Size = new System.Drawing.Size(782, 526);
+            this.grviewlisttk.Size = new System.Drawing.Size(1006, 506);
             this.grviewlisttk.TabIndex = 56;
             this.grviewlisttk.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grviewlisttk_CellContentClick);
             this.grviewlisttk.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.grviewlisttk_CellMouseDoubleClick);
@@ -99,9 +99,9 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(13, 18);
+            this.button1.Location = new System.Drawing.Point(13, 3);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(146, 29);
+            this.button1.Size = new System.Drawing.Size(115, 24);
             this.button1.TabIndex = 57;
             this.button1.Text = "Tạo  mới tài khoản";
             this.button1.UseVisualStyleBackColor = true;
@@ -122,9 +122,9 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(13, 74);
+            this.button3.Location = new System.Drawing.Point(134, 4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(146, 29);
+            this.button3.Size = new System.Drawing.Size(113, 22);
             this.button3.TabIndex = 59;
             this.button3.Text = "Thiết lập tài khoản";
             this.button3.UseVisualStyleBackColor = true;

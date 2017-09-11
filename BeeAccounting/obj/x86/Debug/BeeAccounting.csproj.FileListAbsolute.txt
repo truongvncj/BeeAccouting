@@ -108,3 +108,4 @@ D:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.BeeThongtind
 D:\Product\BeeAccouting\BeeAccounting\bin\x86\Debug\Reports\SoCai.rdlc
 D:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.BeeselecSocai.resources
 D:\Product\BeeAccouting\BeeAccounting\bin\x86\Debug\Reports\Sochitetsocai.rdlc
+D:\Product\BeeAccouting\BeeAccounting\bin\x86\Debug\Reports\Sonhatkychung.rdlc

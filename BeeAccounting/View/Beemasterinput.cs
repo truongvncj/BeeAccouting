@@ -23,15 +23,7 @@ namespace BEEACCOUNT.View
       
             //  masterdatafuction
 
-            if (used.masterdatafuction)
-            {
-                masterdatafuction.Enabled = true;
-            }
-            else
-            {
-                masterdatafuction.Enabled = false;
-            }
-
+     
 
         }
 
