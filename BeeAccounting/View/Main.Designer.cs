@@ -64,6 +64,7 @@
             this.hêThôngTaiKhoanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dfasfToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ádfasdfToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -147,6 +148,7 @@
             // 
             this.fINToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.báoCáoNhậpXuấtTồnToolStripMenuItem,
+            this.toolStripMenuItem1,
             this.báoCáoGiaoHàngHàngTrênĐườngToolStripMenuItem,
             this.toolStripSeparator11,
             this.inputMinuteTransferPOSMTicketToMKTToolStripMenuItem,
@@ -232,7 +234,8 @@
             // 
             this.sôNhâtKyToolStripMenuItem.Name = "sôNhâtKyToolStripMenuItem";
             this.sôNhâtKyToolStripMenuItem.Size = new System.Drawing.Size(240, 22);
-            this.sôNhâtKyToolStripMenuItem.Text = "Sổ nhật ký";
+            this.sôNhâtKyToolStripMenuItem.Text = "Sổ nhật ký chung";
+            this.sôNhâtKyToolStripMenuItem.Click += new System.EventHandler(this.sôNhâtKyToolStripMenuItem_Click);
             // 
             // toolStripSeparator14
             // 
@@ -256,6 +259,7 @@
             this.banCânĐôiTaiKhoanPhatSinhToolStripMenuItem.Name = "banCânĐôiTaiKhoanPhatSinhToolStripMenuItem";
             this.banCânĐôiTaiKhoanPhatSinhToolStripMenuItem.Size = new System.Drawing.Size(240, 22);
             this.banCânĐôiTaiKhoanPhatSinhToolStripMenuItem.Text = "Bản cân đối tài khoản phát sinh";
+            this.banCânĐôiTaiKhoanPhatSinhToolStripMenuItem.Click += new System.EventHandler(this.banCânĐôiTaiKhoanPhatSinhToolStripMenuItem_Click);
             // 
             // baoCaoTaiChinhToolStripMenuItem
             // 
@@ -314,6 +318,13 @@
             this.ádfasdfToolStripMenuItem.Text = "Thiết lập hệ thống";
             this.ádfasdfToolStripMenuItem.Click += new System.EventHandler(this.ádfasdfToolStripMenuItem_Click);
             // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(240, 22);
+            this.toolStripMenuItem1.Text = "Sổ tổng hợp tài khoản chi tiết";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click_1);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -367,6 +378,7 @@
         private ToolStripMenuItem baoCaoTaiChinhToolStripMenuItem;
         private ToolStripSeparator toolStripSeparator1;
         private ToolStripMenuItem hêThôngTaiKhoanToolStripMenuItem;
+        private ToolStripMenuItem toolStripMenuItem1;
     }
 }
 

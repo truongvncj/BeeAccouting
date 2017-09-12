@@ -126,8 +126,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>0.60708in</Top>
-        <Left>0.0991in</Left>
+        <Top>0.59319in</Top>
+        <Left>0.1125in</Left>
         <Height>0.19583in</Height>
         <Width>2.4677in</Width>
         <ZIndex>2</ZIndex>
@@ -440,7 +440,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Stt</Value>
+                              <Value />
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -465,14 +465,14 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox16">
+                    <Textbox Name="Textbox22">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Mã chi tiết</Value>
+                              <Value />
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -481,7 +481,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox16</rd:DefaultName>
+                      <rd:DefaultName>Textbox22</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -497,14 +497,14 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox289">
+                    <Textbox Name="Textbox19">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Tên chi tiết</Value>
+                              <Value />
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -513,7 +513,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox289</rd:DefaultName>
+                      <rd:DefaultName>Textbox19</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -658,6 +658,21 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <BottomBorder>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </BottomBorder>
+                        <LeftBorder>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </LeftBorder>
+                        <RightBorder>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </RightBorder>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -668,7 +683,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox17">
+                    <Textbox Name="Textbox23">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -684,23 +699,38 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox17</rd:DefaultName>
+                      <rd:DefaultName>Textbox23</rd:DefaultName>
                       <Style>
                         <Border>
-                          <Color>LightGrey</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                         </Border>
+                        <BottomBorder>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </BottomBorder>
+                        <LeftBorder>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </LeftBorder>
+                        <RightBorder>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </RightBorder>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox302">
+                    <Textbox Name="Textbox20">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -711,16 +741,13 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style>
-                            <TextAlign>Center</TextAlign>
-                          </Style>
+                          <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox302</rd:DefaultName>
+                      <rd:DefaultName>Textbox20</rd:DefaultName>
                       <Style>
                         <Border>
-                          <Color>LightGrey</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                         </Border>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -964,7 +991,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
               <Width>1.29166cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.4717cm</Width>
+              <Width>2.50378cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>9.1693cm</Width>
@@ -1092,7 +1119,9 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!Nodk.Value</Value>
-                              <Style />
+                              <Style>
+                                <Format>#,0;(#,0);''</Format>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -1122,7 +1151,9 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!Codk.Value</Value>
-                              <Style />
+                              <Style>
+                                <Format>#,0;(#,0);''</Format>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -1216,7 +1247,9 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!Nock.Value</Value>
-                              <Style />
+                              <Style>
+                                <Format>#,0;(#,0);''</Format>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -1377,6 +1410,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                               <Value>=sum(Fields!Nodk.Value)</Value>
                               <Style>
                                 <FontWeight>Bold</FontWeight>
+                                <Format>#,0;(#,0);'0'</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -1409,6 +1443,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                               <Value>=Fields!Codk.Value</Value>
                               <Style>
                                 <FontWeight>Bold</FontWeight>
+                                <Format>#,0;(#,0);'0'</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -1441,7 +1476,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                               <Value>=Fields!Psno.Value</Value>
                               <Style>
                                 <FontWeight>Bold</FontWeight>
-                                <Format>#,0;(#,0);''</Format>
+                                <Format>#,0;(#,0);'0'</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -1474,7 +1509,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                               <Value>=Fields!Psco.Value</Value>
                               <Style>
                                 <FontWeight>Bold</FontWeight>
-                                <Format>#,0;(#,0);''</Format>
+                                <Format>#,0;(#,0);'0'</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -1507,6 +1542,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                               <Value>=Fields!Nock.Value</Value>
                               <Style>
                                 <FontWeight>Bold</FontWeight>
+                                <Format>#,0;(#,0);'0'</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -1539,6 +1575,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                               <Value>=Fields!Cock.Value</Value>
                               <Style>
                                 <FontWeight>Bold</FontWeight>
+                                <Format>#,0;(#,0);'0'</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -1590,7 +1627,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
         <Top>5.27169cm</Top>
         <Left>0.28576cm</Left>
         <Height>1.2cm</Height>
-        <Width>27.86202cm</Width>
+        <Width>27.8941cm</Width>
         <ZIndex>11</ZIndex>
         <Style>
           <Border>
@@ -1669,6 +1706,99 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
           <PaddingLeft>2pt</PaddingLeft>
           <PaddingRight>2pt</PaddingRight>
           <PaddingTop>2pt</PaddingTop>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox10">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Tên chi tiết</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox10</rd:DefaultName>
+        <Top>4.30652cm</Top>
+        <Left>4.09498cm</Left>
+        <Height>0.79583cm</Height>
+        <Width>9.03093cm</Width>
+        <ZIndex>14</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <BackgroundColor>White</BackgroundColor>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox11">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Mã chi tiết</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox11</rd:DefaultName>
+        <Top>4.27477cm</Top>
+        <Left>1.62328cm</Left>
+        <Height>0.85933cm</Height>
+        <Width>2.33059cm</Width>
+        <ZIndex>15</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <BackgroundColor>White</BackgroundColor>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox14">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>  Stt</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox14</rd:DefaultName>
+        <Top>4.30652cm</Top>
+        <Left>0.31751cm</Left>
+        <Height>0.82406cm</Height>
+        <Width>1.19288cm</Width>
+        <ZIndex>16</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <BackgroundColor>White</BackgroundColor>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
     </ReportItems>
