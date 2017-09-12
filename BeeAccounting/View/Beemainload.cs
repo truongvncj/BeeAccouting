@@ -1175,7 +1175,7 @@ namespace BEEACCOUNT.View
 
 
 
-                View.BeeselecSocai BeeselecSocai = new View.BeeselecSocai();
+                View.BeeselecSocai BeeselecSocai = new View.BeeselecSocai("socai");
                 BeeselecSocai.ShowDialog();
 
                 chon = BeeselecSocai.chon;
@@ -1694,7 +1694,7 @@ namespace BEEACCOUNT.View
 
 
             FormCollection fc = System.Windows.Forms.Application.OpenForms;
-          bool chon;
+            bool chon;
             string yearchon;
             bool kq = false;
             foreach (Form frm in fc)
@@ -1731,15 +1731,15 @@ namespace BEEACCOUNT.View
 
                     var detailrptNKc = from P in dc.RptdetaiNKCs
                                        where P.username == username
-                                             select P;
+                                       select P;
 
                     dc.RptdetaiNKCs.DeleteAllOnSubmit(detailrptNKc);
                     dc.SubmitChanges();
 
 
                     var headrptnkc = from p in dc.RPtheadNKCs
-                                       where p.username == username
-                                       select p;
+                                     where p.username == username
+                                     select p;
 
                     dc.RPtheadNKCs.DeleteAllOnSubmit(headrptnkc);
                     dc.SubmitChanges();
@@ -1773,8 +1773,8 @@ namespace BEEACCOUNT.View
 
 
                     var headNKC = from p in dc.RPtheadNKCs
-                                    where p.username == username
-                                    select p;
+                                  where p.username == username
+                                  select p;
 
 
                     Utils ut = new Utils();
@@ -1817,9 +1817,9 @@ namespace BEEACCOUNT.View
                         dc.SubmitChanges();
 
                         RptdetaiNKC q2 = new RptdetaiNKC();
-                     
 
-               //         RptdetaiNKC q = new RptdetaiNKC();
+
+                        //         RptdetaiNKC q = new RptdetaiNKC();
                         if (item.Diengiai != "")
                         {
                             q2.diengiai = item.Diengiai.Trim();
@@ -1842,7 +1842,7 @@ namespace BEEACCOUNT.View
 
 
 
-                 
+
 
                     }
 
@@ -1858,10 +1858,10 @@ namespace BEEACCOUNT.View
                                     select p;
 
 
-                 
+
                     var dataset2 = ut.ToDataTable(dc, rptdetail);
 
-                    
+
 
                     Reportsview rpt = new Reportsview(dataset1, dataset2, "Sonhatkychung.rdlc");
 
@@ -1888,6 +1888,156 @@ namespace BEEACCOUNT.View
             }
 
 
+
+        }
+
+        private void button3_Click_2(object sender, EventArgs e)
+        {
+            string connection_string = Utils.getConnectionstr();
+            string username = Utils.getusername();
+            //  var db = new LinqtoSQLDataContext(connection_string);
+            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+
+            #region  chọn sổ quỹ chi tiết
+
+
+            FormCollection fc = System.Windows.Forms.Application.OpenForms;
+            bool chon;
+            bool kq = false;
+            foreach (Form frm in fc)
+            {
+
+                if (frm.Text == "Chọn tài khoản")
+                {
+                    kq = true;
+                    frm.Focus();
+
+                }
+            }
+
+            if (!kq)
+            {
+
+
+                View.BeeselecSocai BeeselecSocai = new View.BeeselecSocai("chitiet");
+                BeeselecSocai.ShowDialog();
+
+                chon = BeeselecSocai.chon;
+                DateTime fromdate = BeeselecSocai.fromdate;
+                DateTime todate = BeeselecSocai.todate;
+
+                string mataikhoan = BeeselecSocai.mataikhoan;
+                string tentaikhoan = BeeselecSocai.tentaikhoan;
+
+
+
+                if (chon)
+                {
+                    #region showreport
+                    // xoa data cũ
+                    //    string username = Utils.getusername();
+
+                    var listRptthchitiet = from p in dc.RptdetaiTHchitiets
+                                           where p.username == username
+                                           select p;
+
+                    dc.RptdetaiTHchitiets.DeleteAllOnSubmit(listRptthchitiet);
+                    dc.SubmitChanges();
+
+
+                    var listrptheadchitiet = from p in dc.RPtheadTHchitiets
+                                             where p.username == username
+                                             select p;
+
+                    dc.RPtheadTHchitiets.DeleteAllOnSubmit(listrptheadchitiet);
+                    dc.SubmitChanges();
+
+
+                    // update data mới   RPtsoQuy
+
+
+                    RPtheadTHchitiet headTHchitiet = new RPtheadTHchitiet();
+
+
+                    headTHchitiet.taikhoan = tentaikhoan.Trim(); //mataikhoan.Trim() + "-" + 
+                    headTHchitiet.tencongty = Model.Congty.getnamecongty();
+                    headTHchitiet.username = username;
+                    headTHchitiet.diachicongty = Model.Congty.getdiachicongty();
+                    headTHchitiet.masothue = Model.Congty.getmasothuecongty();
+                    headTHchitiet.tungay = fromdate;
+                    headTHchitiet.denngay = todate;
+
+
+
+                    dc.RPtheadTHchitiets.InsertOnSubmit(headTHchitiet);
+                    dc.SubmitChanges();
+
+
+
+                    var header = from p in dc.RPtheadTHchitiets
+                                 where p.username == username
+                                 select p;
+
+
+                    Utils ut = new Utils();
+                    var dataset1 = ut.ToDataTable(dc, header);
+
+                    var machitiet = from p in dc.tbl_machitiettks
+                                    where p.matk == mataikhoan
+                                    select p;
+
+                    if (machitiet.Count() > 0)
+                    {
+                        foreach (var item in machitiet)
+                        {
+
+
+
+
+
+                        }
+
+
+                    }
+
+
+
+
+                    var rptdetail = from p in dc.RptdetaiTHchitiets
+                                    where p.username == username
+                                    orderby p.stt
+
+                                    select p;
+
+
+
+                    var dataset2 = ut.ToDataTable(dc, rptdetail);
+
+
+
+                    Reportsview rpt = new Reportsview(dataset1, dataset2, "Sotonghopchitiet.rdlc");
+
+
+
+                    rpt.ShowDialog();
+
+
+                    #endregion showreports
+
+
+
+
+                }
+
+
+            }
+
+
+
+
+
+            #endregion
 
         }
     }

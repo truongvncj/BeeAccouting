@@ -30,7 +30,7 @@ namespace BEEACCOUNT.View
                 return Text;
             }
         }
-        public BeeselecSocai()
+        public BeeselecSocai(string loaitaikhoan)
         {
             InitializeComponent();
 
@@ -44,11 +44,18 @@ namespace BEEACCOUNT.View
             LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
 
             #region load socai
-
-
             var rs2 = from tk in dc.tbl_dstaikhoans
-                   //   where tk.loaitkid == 8 // mã 8 là tiền mặt
+                    //  where tk.loaichitiet == true // mã 8 là tiền mặt
                       select tk;
+
+
+            if (loaitaikhoan == "chitiet")
+            {
+                 rs2 = from tk in dc.tbl_dstaikhoans
+                             where tk.loaichitiet == true // mã 8 là tiền mặt
+                          select tk;
+
+            }
 
             //      string drowdownshow = "";
 

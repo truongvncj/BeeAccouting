@@ -1049,7 +1049,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>0.58677cm</Height>
+              <Height>0.63185cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -1121,6 +1121,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                   <CellContents>
                     <Textbox Name="Textbox291">
                       <CanGrow>true</CanGrow>
+                      <CanShrink>true</CanShrink>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
@@ -1186,7 +1187,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.58677cm</Height>
+              <Height>0.63185cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -1403,7 +1404,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
         <DataSetName>DataSet1</DataSetName>
         <Top>5.34141cm</Top>
         <Left>0.28576cm</Left>
-        <Height>1.17354cm</Height>
+        <Height>1.2637cm</Height>
         <Width>27.86201cm</Width>
         <ZIndex>11</ZIndex>
         <Style>
@@ -1422,7 +1423,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
               <Width>2.95255cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>12.16498cm</Width>
+              <Width>12.19702cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>1.99641cm</Width>
@@ -1650,10 +1651,10 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
-        <Top>7.68673cm</Top>
-        <Left>0.29137cm</Left>
+        <Top>7.77865cm</Top>
+        <Left>0.30049cm</Left>
         <Height>0.57354cm</Height>
-        <Width>27.84074cm</Width>
+        <Width>27.87278cm</Width>
         <ZIndex>12</ZIndex>
         <Style>
           <Border>
@@ -1665,22 +1666,22 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>2.68276cm</Width>
+              <Width>2.67709cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.94643cm</Width>
+              <Width>2.94076cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>12.17191cm</Width>
+              <Width>12.16624cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.0002cm</Width>
+              <Width>1.99453cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.73879cm</Width>
+              <Width>3.73312cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>4.30509cm</Width>
+              <Width>4.29942cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -2097,10 +2098,10 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSet2</DataSetName>
-        <Top>6.51319cm</Top>
-        <Left>0.29137cm</Left>
+        <Top>6.60511cm</Top>
+        <Left>0.30839cm</Left>
         <Height>1.17354cm</Height>
-        <Width>27.84518cm</Width>
+        <Width>27.81116cm</Width>
         <ZIndex>13</ZIndex>
         <Style>
           <Border>
@@ -2182,7 +2183,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
         </Style>
       </Textbox>
     </ReportItems>
-    <Height>8.34148cm</Height>
+    <Height>8.35219cm</Height>
     <Style>
       <Border>
         <Color>White</Color>
@@ -2190,7 +2191,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
       </Border>
     </Style>
   </Body>
-  <Width>28.14779cm</Width>
+  <Width>28.21616cm</Width>
   <Page>
     <PageFooter>
       <Height>0.6cm</Height>

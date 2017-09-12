@@ -51,14 +51,14 @@
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.button20 = new System.Windows.Forms.Button();
             this.button18 = new System.Windows.Forms.Button();
             this.button19 = new System.Windows.Forms.Button();
-            this.button20 = new System.Windows.Forms.Button();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.button24 = new System.Windows.Forms.Button();
             this.button21 = new System.Windows.Forms.Button();
             this.button22 = new System.Windows.Forms.Button();
             this.button23 = new System.Windows.Forms.Button();
-            this.button24 = new System.Windows.Forms.Button();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.button25 = new System.Windows.Forms.Button();
             this.button26 = new System.Windows.Forms.Button();
@@ -203,6 +203,7 @@
             this.button3.TabStop = false;
             this.button3.Text = "Sổ tổng hợp theo tài khoản";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click_2);
             // 
             // button1
             // 
@@ -325,6 +326,16 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Mua hàng";
             // 
+            // button20
+            // 
+            this.button20.Location = new System.Drawing.Point(9, 122);
+            this.button20.Name = "button20";
+            this.button20.Size = new System.Drawing.Size(166, 22);
+            this.button20.TabIndex = 15;
+            this.button20.TabStop = false;
+            this.button20.Text = "Phiếu nhập hàng theo đơn hàng";
+            this.button20.UseVisualStyleBackColor = true;
+            // 
             // button18
             // 
             this.button18.Location = new System.Drawing.Point(6, 72);
@@ -345,16 +356,6 @@
             this.button19.Text = "Đề nghị mua hàng";
             this.button19.UseVisualStyleBackColor = true;
             // 
-            // button20
-            // 
-            this.button20.Location = new System.Drawing.Point(9, 122);
-            this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(166, 22);
-            this.button20.TabIndex = 15;
-            this.button20.TabStop = false;
-            this.button20.Text = "Phiếu nhập hàng theo đơn hàng";
-            this.button20.UseVisualStyleBackColor = true;
-            // 
             // groupBox6
             // 
             this.groupBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -368,6 +369,16 @@
             this.groupBox6.TabIndex = 43;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Bán hàng";
+            // 
+            // button24
+            // 
+            this.button24.Location = new System.Drawing.Point(6, 159);
+            this.button24.Name = "button24";
+            this.button24.Size = new System.Drawing.Size(166, 22);
+            this.button24.TabIndex = 16;
+            this.button24.TabStop = false;
+            this.button24.Text = "Xác nhận kết quả giao hàng";
+            this.button24.UseVisualStyleBackColor = true;
             // 
             // button21
             // 
@@ -398,16 +409,6 @@
             this.button23.TabStop = false;
             this.button23.Text = "Đơn hàng bán";
             this.button23.UseVisualStyleBackColor = true;
-            // 
-            // button24
-            // 
-            this.button24.Location = new System.Drawing.Point(6, 159);
-            this.button24.Name = "button24";
-            this.button24.Size = new System.Drawing.Size(166, 22);
-            this.button24.TabIndex = 16;
-            this.button24.TabStop = false;
-            this.button24.Text = "Xác nhận kết quả giao hàng";
-            this.button24.UseVisualStyleBackColor = true;
             // 
             // groupBox7
             // 

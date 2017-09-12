@@ -2897,7 +2897,7 @@ namespace BEEACCOUNT.View
 
 
 
-                View.BeeselecSocai BeeselecSocai = new View.BeeselecSocai();
+                View.BeeselecSocai BeeselecSocai = new View.BeeselecSocai("socai");
                 BeeselecSocai.ShowDialog();
 
                 chon = BeeselecSocai.chon;
