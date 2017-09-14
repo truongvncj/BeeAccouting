@@ -61,8 +61,8 @@ namespace BEEACCOUNT.View
            // this.reportViewer1.ZoomMode = ZoomMode.Percent;
            // this.reportViewer1.ZoomPercent = 100;
             this.reportViewer1.ZoomMode = ZoomMode.PageWidth;
-            this.reportViewer1.ShowExportButton = false;
-            this.reportViewer1.ShowPageNavigationControls = false;
+            this.reportViewer1.ShowExportButton = true;
+            this.reportViewer1.ShowPageNavigationControls = true;
 
 
             #region kiểm tra printed  OK

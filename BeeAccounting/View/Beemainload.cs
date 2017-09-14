@@ -879,5 +879,18 @@ namespace BEEACCOUNT.View
         {
             Model.Soketoan.bangcandoiphatsinhtaikhoan();
         }
+
+        private void button32_Click(object sender, EventArgs e)
+        {
+            string connection_string = Utils.getConnectionstr();
+
+            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+      
+            var rs1 = Model.Nhacungcap.danhsachNhacungcap(dc);
+            Viewtable viewtbl = new Viewtable(rs1, dc, "DANH SÁCH NHÀ CUNG CẤP", 5);// mã 5 là danh sach nha cung cap
+
+            viewtbl.Show();
+
+        }
     }
 }

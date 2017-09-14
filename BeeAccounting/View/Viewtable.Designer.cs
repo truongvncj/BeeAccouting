@@ -321,6 +321,8 @@ namespace BEEACCOUNT.View
             this.dataGridView1.Size = new System.Drawing.Size(1335, 397);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.VirtualMode = true;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.Paint += new System.Windows.Forms.PaintEventHandler(this.dataGridView1_Paint);
             // 
             // Viewtable

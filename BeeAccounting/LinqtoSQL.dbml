@@ -1,21 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="BEE" Class="LinqtoSQLDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
   <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-Q6VJ0TS\SQLEXPRESS;Initial Catalog=BEE;Persist Security Info=True;User ID=sa" SettingsObjectName="BEEACCOUNT.Properties.Settings" SettingsPropertyName="BEEConnectionString" Provider="System.Data.SqlClient" />
-  <Table Name="dbo.RptdetaiCDPS" Member="RptdetaiCDPs">
-    <Type Name="RptdetaiCDP">
-      <Column Name="username" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="tentk" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
-      <Column Name="Nodk" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="Codk" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="Psno" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="Psco" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="Cock" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="Nock" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="matk" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.tblRpt_PhieuThu" Member="tblRpt_PhieuThus">
-    <Type Name="tblRpt_PhieuThu">
+  <Table Name="dbo.Rpt_PhieuThu" Member="Rpt_PhieuThus">
+    <Type Name="Rpt_PhieuThu">
       <Column Name="tencongty" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
       <Column Name="diachicongty" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
       <Column Name="masothue" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
@@ -35,6 +21,33 @@
       <Column Name="tkno" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
       <Column Name="quyenso" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
       <Column Name="tkco" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_Temp" Member="tbl_Temps">
+    <Type Name="tbl_Temp">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Version" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RegionCode" Type="System.String" DbType="NChar(225)" CanBeNull="true" />
+      <Column Name="username" Type="System.String" DbType="NChar(225)" CanBeNull="true" />
+      <Column Name="password" Type="System.String" DbType="NChar(225)" CanBeNull="true" />
+      <Column Name="userright" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="note" Type="System.String" DbType="NChar(225)" CanBeNull="true" />
+      <Column Name="inputcontract" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RptdetaiCDPS" Member="RptdetaiCDPs">
+    <Type Name="RptdetaiCDP">
+      <Column Name="username" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="tentk" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="Nodk" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Codk" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Psno" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Psco" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Cock" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Nock" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="matk" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.RptdetailSoCai" Member="RptdetailSoCais">
@@ -213,90 +226,6 @@
       <Column Name="tenketoantruong" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
     </Type>
   </Table>
-  <Table Name="dbo.tbl_ctkhachhang" Member="tbl_ctkhachhangs">
-    <Type Name="tbl_ctkhachhang">
-      <Column Name="Matk" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
-      <Column Name="NameTk" Type="System.String" DbType="NChar(50)" CanBeNull="true" />
-      <Column Name="No" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="Co" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="SoduDk" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="SoduCk" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="SoduHT" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="Diengiai" Type="System.String" DbType="NChar(225)" CanBeNull="true" />
-      <Column Name="SophuTK" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
-      <Column Name="Sophu" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
-      <Column Name="Ghichu" Type="System.String" DbType="NChar(225)" CanBeNull="true" />
-      <Column Name="Ngayghiso" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="Ngayctu" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="SochitietTK" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
-      <Column Name="Sochitiet" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
-      <Column Name="Nghiepvuso" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-    </Type>
-  </Table>
-  <Table Name="dbo.tbl_ctnganhang" Member="tbl_ctnganhangs">
-    <Type Name="tbl_ctnganhang">
-      <Column Name="Matk" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
-      <Column Name="NameTk" Type="System.String" DbType="NChar(50)" CanBeNull="true" />
-      <Column Name="No" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="Co" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="SoduDk" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="SoduCk" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="SoduHT" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="Diengiai" Type="System.String" DbType="NChar(225)" CanBeNull="true" />
-      <Column Name="SophuTK" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
-      <Column Name="Sophu" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
-      <Column Name="Ghichu" Type="System.String" DbType="NChar(225)" CanBeNull="true" />
-      <Column Name="Ngayghiso" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="Ngayctu" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="SochitietTK" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
-      <Column Name="Sochitiet" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
-      <Column Name="Nghiepvuso" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-    </Type>
-  </Table>
-  <Table Name="dbo.tbl_ctnhacungcap" Member="tbl_ctnhacungcaps">
-    <Type Name="tbl_ctnhacungcap">
-      <Column Name="Matk" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
-      <Column Name="NameTk" Type="System.String" DbType="NChar(50)" CanBeNull="true" />
-      <Column Name="No" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="Co" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="SoduDk" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="SoduCk" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="SoduHT" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="Diengiai" Type="System.String" DbType="NChar(225)" CanBeNull="true" />
-      <Column Name="SophuTK" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
-      <Column Name="Sophu" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
-      <Column Name="Ghichu" Type="System.String" DbType="NChar(225)" CanBeNull="true" />
-      <Column Name="Ngayghiso" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="Ngayctu" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="SochitietTK" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
-      <Column Name="Sochitiet" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
-      <Column Name="Nghiepvuso" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-    </Type>
-  </Table>
-  <Table Name="dbo.tbl_cttamung" Member="tbl_cttamungs">
-    <Type Name="tbl_cttamung">
-      <Column Name="Matk" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
-      <Column Name="NameTk" Type="System.String" DbType="NChar(50)" CanBeNull="true" />
-      <Column Name="No" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="Co" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="SoduDk" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="SoduCk" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="SoduHT" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="Diengiai" Type="System.String" DbType="NChar(225)" CanBeNull="true" />
-      <Column Name="SophuTK" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
-      <Column Name="Sophu" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
-      <Column Name="Ghichu" Type="System.String" DbType="NChar(225)" CanBeNull="true" />
-      <Column Name="Ngayghiso" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="Ngayctu" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="SochitietTK" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
-      <Column Name="Sochitiet" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
-      <Column Name="Nghiepvuso" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-    </Type>
-  </Table>
   <Table Name="dbo.tbl_Customer" Member="tbl_Customers">
     <Type Name="tbl_Customer">
       <Column Name="Customer" Type="System.Double" DbType="Float" CanBeNull="true" />
@@ -332,6 +261,46 @@
       <Column Name="SapCode" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
       <Column Name="indirectCode" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
       <Column Name="SALORG_CTR" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_danhsachkhachang" Member="tbl_danhsachkhachangs">
+    <Type Name="tbl_danhsachkhachang">
+      <Column Name="makhachhang" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="tenkhachhang" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="sonha" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="duongpho" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="huyenquan" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="thanhpho" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="dienthoai" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="masothue" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="sotaikhoannganhang" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="tennganhang" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="ghichunganhnghe" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="nguoidaidien" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="quocgia" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="usertao" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ngaytao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_danhsachnhacungcap" Member="tbl_danhsachnhacungcaps">
+    <Type Name="tbl_danhsachnhacungcap">
+      <Column Name="maNcc" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="tenNcc" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="sonha" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="duongpho" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="huyenquan" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="thanhpho" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="dienthoai" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="masothue" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="sotaikhoannganhang" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="tennganhang" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="ghichunganhnghe" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="nguoidaidien" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="quocgia" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="usertao" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ngaytao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.tbl_dstaikhoan" Member="tbl_dstaikhoans">
@@ -406,19 +375,6 @@
       <Column Name="quyenso" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
       <Column Name="TKdoiung" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
       <Column Name="TenchitietTM" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.tbl_Temp" Member="tbl_Temps">
-    <Type Name="tbl_Temp">
-      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="Version" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="RegionCode" Type="System.String" DbType="NChar(225)" CanBeNull="true" />
-      <Column Name="username" Type="System.String" DbType="NChar(225)" CanBeNull="true" />
-      <Column Name="password" Type="System.String" DbType="NChar(225)" CanBeNull="true" />
-      <Column Name="userright" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="note" Type="System.String" DbType="NChar(225)" CanBeNull="true" />
-      <Column Name="inputcontract" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
-      <Column Name="name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
     </Type>
   </Table>
 </Database>

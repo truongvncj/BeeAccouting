@@ -1348,11 +1348,11 @@ namespace BEEACCOUNT.View
             string connection_string = Utils.getConnectionstr();
             LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
 
-            var rptpthu = from phieuthud in dc.tblRpt_PhieuThus
+            var rptpthu = from phieuthud in dc.Rpt_PhieuThus
                           where phieuthud.username == username
                           select phieuthud;
 
-            dc.tblRpt_PhieuThus.DeleteAllOnSubmit(rptpthu);
+            dc.Rpt_PhieuThus.DeleteAllOnSubmit(rptpthu);
             dc.SubmitChanges();
 
 
@@ -1401,7 +1401,7 @@ namespace BEEACCOUNT.View
 
                 #region  insert vao rpt phieu thu
 
-                tblRpt_PhieuThu pt = new tblRpt_PhieuThu();
+                Rpt_PhieuThu pt = new Rpt_PhieuThu();
                 pt.tencongty = Model.Congty.getnamecongty();
                 pt.diachicongty = Model.Congty.getdiachicongty();
                 pt.masothue = Model.Congty.getmasothuecongty();
@@ -1421,11 +1421,11 @@ namespace BEEACCOUNT.View
                 pt.tkco = phieuthu.tkco;
                 pt.quyenso = phieuthu.quyenso;
 
-                dc.tblRpt_PhieuThus.InsertOnSubmit(pt);
+                dc.Rpt_PhieuThus.InsertOnSubmit(pt);
                 dc.SubmitChanges();
                 #endregion
 
-                var rsphieuthu = from tblRpt_PhieuThu in dc.tblRpt_PhieuThus
+                var rsphieuthu = from tblRpt_PhieuThu in dc.Rpt_PhieuThus
                                  where tblRpt_PhieuThu.username == username
                                  select tblRpt_PhieuThu;
 

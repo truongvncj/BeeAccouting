@@ -308,28 +308,49 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                 <TablixCell />
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox289">
+                    <Textbox Name="Textbox5">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Diễn giải</Value>
+                              <Value xml:space="preserve">                                              </Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style>
-                            <TextAlign>Center</TextAlign>
-                          </Style>
+                          <Style />
+                        </Paragraph>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>                                         Diễn giải</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox289</rd:DefaultName>
+                      <rd:DefaultName>Textbox5</rd:DefaultName>
                       <Style>
                         <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <TopBorder>
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
-                        </Border>
+                          <Width>1pt</Width>
+                        </TopBorder>
+                        <LeftBorder>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </LeftBorder>
+                        <RightBorder>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </RightBorder>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -347,7 +368,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>  Số hiệu</Value>
+                              <Value>   Số hiệu</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -371,10 +392,20 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                           <Style>None</Style>
                         </Border>
                         <TopBorder>
-                          <Color>Gray</Color>
+                          <Color>LightGrey</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </TopBorder>
+                        <LeftBorder>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </LeftBorder>
+                        <RightBorder>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </RightBorder>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -507,9 +538,23 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                       <rd:DefaultName>Textbox302</rd:DefaultName>
                       <Style>
                         <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <BottomBorder>
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
-                        </Border>
+                          <Width>1pt</Width>
+                        </BottomBorder>
+                        <LeftBorder>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </LeftBorder>
+                        <RightBorder>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </RightBorder>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>

@@ -112,3 +112,4 @@ D:\Product\BeeAccouting\BeeAccounting\bin\x86\Debug\Reports\Sonhatkychung.rdlc
 D:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.Beeyearsellect.resources
 D:\Product\BeeAccouting\BeeAccounting\bin\x86\Debug\Reports\Sotonghopchitiet.rdlc
 D:\Product\BeeAccouting\BeeAccounting\bin\x86\Debug\Reports\Socandoitkphatsinh.rdlc
+D:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.BeeNCCnewaccount.resources

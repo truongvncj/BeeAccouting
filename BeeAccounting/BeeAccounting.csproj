@@ -117,6 +117,7 @@
     <Compile Include="Model\programlist.cs" />
     <Compile Include="Model\Product.cs" />
     <Compile Include="Model\Socaitaikhoan.cs" />
+    <Compile Include="Model\Nhacungcap.cs" />
     <Compile Include="Model\Taikhoanketoan.cs" />
     <Compile Include="Model\Username.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -136,6 +137,12 @@
     <Compile Include="shared\ExtractToDataTableOptions.cs" />
     <Compile Include="shared\LinQToExcel.cs" />
     <Compile Include="shared\StringExtensions.cs" />
+    <Compile Include="View\BeeNCCnewaccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\BeeNCCnewaccount.Designer.cs">
+      <DependentUpon>BeeNCCnewaccount.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\BeeHtoansocaiphieuchi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -441,6 +448,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\Paymentrequest.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\BeeNCCnewaccount.resx">
+      <DependentUpon>BeeNCCnewaccount.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\BeeHtoansocaiphieuchi.resx">
       <DependentUpon>BeeHtoansocaiphieuchi.cs</DependentUpon>

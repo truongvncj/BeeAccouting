@@ -348,6 +348,17 @@ namespace BEEACCOUNT.View
 
             }
 
+            if (this.viewcode == 5)  // viewcode ==5  lA DANH SACH  nhà cung ứng
+            {
+
+                Model.Nhacungcap.themmoiNCC();
+                var rs = Model.Nhacungcap.danhsachNhacungcap(this.db);
+
+                dataGridView1.DataSource = rs;
+
+
+
+            }
 
 
 
@@ -414,7 +425,7 @@ namespace BEEACCOUNT.View
             #endregion viewcode = 1 dnah muc tai khoan ke toan
 
 
-            #region loai tai khoan ke toan voi viewcode ==0
+            #region viewcode =1 loai tai khoan ke toan 
             if (this.viewcode == 1)
             {
 
@@ -466,43 +477,103 @@ namespace BEEACCOUNT.View
 
                 }
             }
-                #endregion loai tai khoan ke toan
+            #endregion loai tai khoan ke toan
 
 
 
+            #region vói vidcode == 2  la danh shach chi tiêt stai khoan
 
-                #region vói vidcode == 2  la danh shach chi tiêt stai khoan
 
-
-                if (this.viewcode == 2)
+            if (this.viewcode == 2)
+            {
+                int idtk = 0;
+                try
                 {
-                    int idtk = 0;
-                    try
-                    {
                     idtk = (int)this.dataGridView1.Rows[this.dataGridView1.CurrentCell.RowIndex].Cells["ID"].Value;
 
-                   
 
-                    }
-                    catch (Exception)
-                    {
 
-                        MessageBox.Show("Bạn phải chọn một tài khoản 11 !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return;
-                    }
+                }
+                catch (Exception)
+                {
+
+                    MessageBox.Show("Bạn phải chọn một tài khoản 11 !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
 
                 Model.Danhsachtkchitiet.suachitiettaikhoan(idtk);
                 var rs1 = Model.Danhsachtkchitiet.danhsachtaikhoanchitiet(this.db);
 
                 dataGridView1.DataSource = rs1;
-               // MessageBox.Show(id.ToString(), "Thông báo 111", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                // MessageBox.Show(id.ToString(), "Thông báo 111", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
 
-                #endregion
+            #endregion
+
+            #region viewcode =5 danh sach nhà cung cấp
+            if (this.viewcode == 5)
+            {
+                int idtk = 0;
+                try
+                {
+                    idtk = (int)this.dataGridView1.Rows[this.dataGridView1.CurrentCell.RowIndex].Cells["ID"].Value;
 
 
-            
+
+                }
+                catch (Exception)
+                {
+
+                    MessageBox.Show("Bạn phải chọn mã nhà cung cấp !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                Model.Nhacungcap.suathongtinNCC(idtk);
+                var rs = Model.Nhacungcap.danhsachNhacungcap(this.db);
+
+                dataGridView1.DataSource = rs;
+
+
+
+            }
+            #endregion
+
+
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+
+            #region viewcode =5 danh sach nhà cung cấp
+            if (this.viewcode == 5)
+            {
+                if (this.dataGridView1.Rows[this.dataGridView1.CurrentCell.RowIndex].Cells["ID"].Value != DBNull.Value)
+                {
+
+
+                    int idtk = (int)this.dataGridView1.Rows[this.dataGridView1.CurrentCell.RowIndex].Cells["ID"].Value;
+
+
+                    View.BeeNCCnewaccount p = new BeeNCCnewaccount(4, idtk);  // 4 là vua sua vua xóa
+
+                    p.ShowDialog();
+                }
+
+
+            }
+
+
+
+            #endregion
+
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
 
         }
     }
