@@ -2902,6 +2902,11 @@ namespace BEEACCOUNT.View
         {
             Model.Soketoan.bangcandoiphatsinhtaikhoan();
         }
+
+        private void pHẦNHÀNHKẾTOÁNToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
 
