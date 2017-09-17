@@ -892,5 +892,68 @@ namespace BEEACCOUNT.View
             viewtbl.Show();
 
         }
+
+        private void btsanhsachkhohang_Click(object sender, EventArgs e)
+        {
+            string connection_string = Utils.getConnectionstr();
+
+            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+            var rs1 = Model.Khohang.Danhsachkho(dc);
+            Viewtable viewtbl = new Viewtable(rs1, dc, "DANH SÁCH KHO HÀNG", 4);// mã 4 là danh sách kho
+
+            viewtbl.Show();
+        }
+
+        private void btdanhsachnhomsanpham_Click(object sender, EventArgs e)
+        {
+
+            string connection_string = Utils.getConnectionstr();
+
+            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+            var rs1 = Model.Khohang.danhsachnhomsanpham(dc);
+            Viewtable viewtbl = new Viewtable(rs1, dc, "DANH SÁCH NHÓM SẢN PHẨM", 6);// mã 6 là danh sách nhóm sản phẩm
+
+            viewtbl.Show();
+
+
+
+
+
+
+        }
+
+        private void btdanhsachsanpham_Click(object sender, EventArgs e)
+        {
+
+            string connection_string = Utils.getConnectionstr();
+
+            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+            var rs1 = Model.Khohang.danhsachsanpham(dc);
+            Viewtable viewtbl = new Viewtable(rs1, dc, "DANH SÁCH SẢN PHẨM", 7);// mã 7 là danh sách nhóm sản phẩm
+
+            viewtbl.Show();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        }
     }
 }

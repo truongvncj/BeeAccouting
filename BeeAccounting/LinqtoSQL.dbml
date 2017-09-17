@@ -316,6 +316,46 @@
       <Column Name="codk" Type="System.Double" DbType="Float" CanBeNull="true" />
     </Type>
   </Table>
+  <Table Name="dbo.tbl_kho_dichvu" Member="tbl_kho_dichvus">
+    <Type Name="tbl_kho_dichvu">
+      <Column Name="madv" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="tendv" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="mavach" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="donvi" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="idmanhomsp" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="ghichu" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_kho_nhomsanpham" Member="tbl_kho_nhomsanphams">
+    <Type Name="tbl_kho_nhomsanpham">
+      <Column Name="manhomsanpham" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="tennhomsanpham" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_kho_sanpham" Member="tbl_kho_sanphams">
+    <Type Name="tbl_kho_sanpham">
+      <Column Name="masp" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="tensp" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="mavach" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="donvi" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="trongluong" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="khoiluong" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="idmanhomsp" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="ghichu" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_khohang" Member="tbl_khohangs">
+    <Type Name="tbl_khohang">
+      <Column Name="tenkho" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="makho" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="diachikho" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ghichu" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
   <Table Name="dbo.tbl_loaitk" Member="tbl_loaitks">
     <Type Name="tbl_loaitk">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />

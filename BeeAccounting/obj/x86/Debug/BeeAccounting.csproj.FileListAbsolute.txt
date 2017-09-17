@@ -113,3 +113,6 @@ D:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.Beeyearselle
 D:\Product\BeeAccouting\BeeAccounting\bin\x86\Debug\Reports\Sotonghopchitiet.rdlc
 D:\Product\BeeAccouting\BeeAccounting\bin\x86\Debug\Reports\Socandoitkphatsinh.rdlc
 D:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.BeeNCCnewaccount.resources
+D:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.BeeDanhsachkho.resources
+D:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.BeeDanhsachnhomsanpham.resources
+D:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.BeeDanhsachsanpham.resources

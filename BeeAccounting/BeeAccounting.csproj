@@ -105,6 +105,7 @@
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
     </Compile>
+    <Compile Include="Model\Khohang.cs" />
     <Compile Include="Model\Soketoan.cs" />
     <Compile Include="Model\Congty.cs" />
     <Compile Include="Model\Danhsachtkchitiet.cs" />
@@ -137,6 +138,24 @@
     <Compile Include="shared\ExtractToDataTableOptions.cs" />
     <Compile Include="shared\LinQToExcel.cs" />
     <Compile Include="shared\StringExtensions.cs" />
+    <Compile Include="View\BeeDanhsachsanpham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\BeeDanhsachsanpham.Designer.cs">
+      <DependentUpon>BeeDanhsachsanpham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\BeeDanhsachnhomsanpham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\BeeDanhsachnhomsanpham.Designer.cs">
+      <DependentUpon>BeeDanhsachnhomsanpham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\BeeDanhsachkho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\BeeDanhsachkho.Designer.cs">
+      <DependentUpon>BeeDanhsachkho.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\BeeNCCnewaccount.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -449,6 +468,15 @@
     <EmbeddedResource Include="Reports\Paymentrequest.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\BeeDanhsachsanpham.resx">
+      <DependentUpon>BeeDanhsachsanpham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\BeeDanhsachnhomsanpham.resx">
+      <DependentUpon>BeeDanhsachnhomsanpham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\BeeDanhsachkho.resx">
+      <DependentUpon>BeeDanhsachkho.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\BeeNCCnewaccount.resx">
       <DependentUpon>BeeNCCnewaccount.cs</DependentUpon>
     </EmbeddedResource>
@@ -643,6 +671,7 @@
     <None Include="Resources\exit.png" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="BEEACCOUNT\" />
     <Folder Include="Properties\DataSources\" />
   </ItemGroup>
   <ItemGroup>
