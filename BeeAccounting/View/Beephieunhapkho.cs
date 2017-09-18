@@ -288,7 +288,7 @@ namespace BEEACCOUNT.View
 
 
             #region load datenew
-            this.datepickngayphieu.Value = DateTime.Today.Date;
+            this.txtdate.Value = DateTime.Today.Date;
 
             this.lbtenchitietno.Text = "";
             lb_machitietno.Text = "";
@@ -345,7 +345,7 @@ namespace BEEACCOUNT.View
             {
                 //  cbsophieu.
                 e.Handled = true;
-                txttennguoinhan.Focus();
+                txtendnguoigiao.Focus();
 
                 //    string valueinput = cb_customerka.Text;
 
@@ -411,7 +411,7 @@ namespace BEEACCOUNT.View
             if (e.KeyChar == (char)Keys.Enter)
             {
                 e.Handled = true;
-                txtdiengiai.Focus();
+                txtnoidung.Focus();
 
 
             }
@@ -432,20 +432,20 @@ namespace BEEACCOUNT.View
         private void cbsotien_KeyPress(object sender, KeyPressEventArgs e)
         {
 
-            if (e.KeyChar == (char)Keys.Enter)
-            {
-                e.Handled = true;
-                txtsochungtugoc.Focus();
+            //if (e.KeyChar == (char)Keys.Enter)
+            //{
+            //    e.Handled = true;
+            //    txtsochungtugoc.Focus();
 
-                //    string valueinput = cb_customerka.Text;
+            //    //    string valueinput = cb_customerka.Text;
 
-                //    string connection_string = Utils.getConnectionstr();
-                //    LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+            //    //    string connection_string = Utils.getConnectionstr();
+            //    //    LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
 
-                //    string username = Utils.getusername();
+            //    //    string username = Utils.getusername();
 
 
-            }
+            //}
 
         }
 
@@ -455,7 +455,7 @@ namespace BEEACCOUNT.View
             if (e.KeyChar == (char)Keys.Enter)
             {
                 e.Handled = true;
-                datepickngayphieu.Focus();
+                txtdate.Focus();
                 //  datepickngayphieu
                 //    string valueinput = cb_customerka.Text;
 
@@ -1185,18 +1185,18 @@ namespace BEEACCOUNT.View
             btsua.Enabled = false;
 
             txtsophieu.Text = "";
-            txttennguoinhan.Text = "";
+            txtendnguoigiao.Text = "";
             txtdiachi.Text = "";
-            txtdiengiai.Text = "";
+            txtnoidung.Text = "";
        //     txtsotien.Text = "";
-            txtsochungtugoc.Text = "";
+         //   txtsochungtugoc.Text = "";
 
             lbtenchitietno.Text = "";
             lb_machitietno.Text = "";
             cbtkco.SelectedIndex = -1;
         //    txtquyenso.Text = "";
 
-            datepickngayphieu.Focus();
+            txtdate.Focus();
 
 
             #endregion
@@ -1367,14 +1367,14 @@ namespace BEEACCOUNT.View
         private void button6_Click(object sender, EventArgs e)
         {
             #region  list black phiếu
-            datepickngayphieu.Enabled = true;
+            txtdate.Enabled = true;
         //    txtquyenso.Enabled = true;
             txtsophieu.Enabled = true;
-            txttennguoinhan.Enabled = true;
+            txtendnguoigiao.Enabled = true;
             txtdiachi.Enabled = true;
-            txtdiengiai.Enabled = true;
+            txtnoidung.Enabled = true;
         //    txtsotien.Enabled = true;
-            txtsochungtugoc.Enabled = true;
+           // txtsochungtugoc.Enabled = true;
             btluu.Visible = true;
             btluu.Enabled = true;
             //    cbtaikhoanco.Enabled = true;
@@ -1382,11 +1382,11 @@ namespace BEEACCOUNT.View
             btsua.Enabled = false;
 
             txtsophieu.Text = "";
-            txttennguoinhan.Text = "";
+            txtendnguoigiao.Text = "";
             txtdiachi.Text = "";
-            txtdiengiai.Text = "";
+            txtnoidung.Text = "";
         //    txtsotien.Text = "";
-            txtsochungtugoc.Text = "";
+         /////   txtsochungtugoc.Text = "";
     //        txtquyenso.Text = "";
             lbtenchitietno.Text = "";
 
@@ -1396,7 +1396,7 @@ namespace BEEACCOUNT.View
             lbtenchitietno.Text = "";
             txttaikhoanno.Text = "";
 
-            datepickngayphieu.Focus();
+            txtdate.Focus();
 
 
             this.phieuchiid = -1;
@@ -1589,17 +1589,17 @@ namespace BEEACCOUNT.View
 
                 if (phieuchi != null)
                 {
-                    datepickngayphieu.Value = phieuchi.ngaychungtu;
+                    txtdate.Value = phieuchi.ngaychungtu;
                     txtsophieu.Text = phieuchi.sophieuthu.ToString();
-                    txttennguoinhan.Text = phieuchi.nguoinoptien;
+                    txtendnguoigiao.Text = phieuchi.nguoinoptien;
                     txtdiachi.Text = phieuchi.diachinguoinop;
-                    txtdiengiai.Text = phieuchi.lydothu;
+                    txtnoidung.Text = phieuchi.lydothu;
              //       txtsotien.Text = double.Parse(phieuchi.sotien.ToString()).ToString("#,#", CultureInfo.InvariantCulture);
                     //txtValueSotienNo.Text = phieuthu.sotien.ToString();
                     this.pssotienno = double.Parse(phieuchi.sotien.ToString());
 
 
-                    txtsochungtugoc.Text = phieuchi.sochungtugoc.ToString();
+              //    txtsochungtugoc.Text = phieuchi.sochungtugoc.ToString();
 
                     txttaikhoanno.Text = phieuchi.taikhoandoiung;
                     if (phieuchi.machitietno != null)
@@ -1645,13 +1645,13 @@ namespace BEEACCOUNT.View
                     //}
 
 
-                    datepickngayphieu.Enabled = false;
+                    txtdate.Enabled = false;
                     txtsophieu.Enabled = false;
-                    txttennguoinhan.Enabled = false;
+                    txtendnguoigiao.Enabled = false;
                     txtdiachi.Enabled = false;
-                    txtdiengiai.Enabled = false;
+                    txtnoidung.Enabled = false;
               //      txtsotien.Enabled = false;
-                    txtsochungtugoc.Enabled = false;
+               //     txtsochungtugoc.Enabled = false;
 
                     btsua.Enabled = true;
                //     txtquyenso.Enabled = false;
@@ -1756,7 +1756,7 @@ namespace BEEACCOUNT.View
             btluu.Visible = true;
 
 
-            datepickngayphieu.Enabled = true;
+            txtdate.Enabled = true;
 
 
             txtsophieu.Enabled = true;
@@ -1769,11 +1769,11 @@ namespace BEEACCOUNT.View
 
          //   txtquyenso.Enabled = true;
 
-            txttennguoinhan.Enabled = true;
+            txtendnguoigiao.Enabled = true;
             txtdiachi.Enabled = true;
-            txtdiengiai.Enabled = true;
+            txtnoidung.Enabled = true;
        //     txtsotien.Enabled = true;
-            txtsochungtugoc.Enabled = true;
+        //    txtsochungtugoc.Enabled = true;
             btluu.Enabled = true;
 
             //   cbtaikhoanco.Enabled = true;
@@ -1789,7 +1789,7 @@ namespace BEEACCOUNT.View
             {
                 //  cbsophieu.
                 e.Handled = true;
-                txttennguoinhan.Focus();
+                txtendnguoigiao.Focus();
 
                 //    string valueinput = cb_customerka.Text;
 
@@ -1827,7 +1827,7 @@ namespace BEEACCOUNT.View
             {
                 //  cbsophieu.
                 e.Handled = true;
-                txtdiengiai.Focus();
+                txtnoidung.Focus();
 
                 //    string valueinput = cb_customerka.Text;
 
@@ -1861,21 +1861,21 @@ namespace BEEACCOUNT.View
 
         private void txtsotien_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar == (char)Keys.Enter)
-            {
-                //  cbsophieu.
-                e.Handled = true;
-                txtsochungtugoc.Focus();
+         //   if (e.KeyChar == (char)Keys.Enter)
+         //   {
+         //       //  cbsophieu.
+         //       e.Handled = true;
+         ////       txtsochungtugoc.Focus();
 
-                //    string valueinput = cb_customerka.Text;
+         //       //    string valueinput = cb_customerka.Text;
 
-                //    string connection_string = Utils.getConnectionstr();
-                //    LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+         //       //    string connection_string = Utils.getConnectionstr();
+         //       //    LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
 
-                //    string username = Utils.getusername();
+         //       //    string username = Utils.getusername();
 
 
-            }
+         //   }
         }
 
         private void txtsochungtugoc_KeyPress(object sender, KeyPressEventArgs e)

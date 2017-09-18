@@ -955,5 +955,22 @@ namespace BEEACCOUNT.View
 
 
         }
+
+        private void button42_Click(object sender, EventArgs e)
+        {
+            //  Main.clearpannel();
+
+            main1.clearpannel();
+
+
+            View.Beephieunhapkho accsup = new Beephieunhapkho(main1);
+            main1.clearpannelload(accsup);
+            //    accsup.TopLevel = false;
+            //  accsup.AutoScroll = true;
+            //    panelmain.Controls.Add(accsup);
+            //    accsup.Show();
+
+
+        }
     }
 }

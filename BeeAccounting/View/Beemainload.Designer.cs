@@ -716,6 +716,7 @@
             this.button42.TabStop = false;
             this.button42.Text = "Phiếu nhập kho";
             this.button42.UseVisualStyleBackColor = false;
+            this.button42.Click += new System.EventHandler(this.button42_Click);
             // 
             // Beemainload
             // 
