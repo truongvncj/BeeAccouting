@@ -192,6 +192,12 @@
     <Compile Include="View\BeeAccountsetup.Designer.cs">
       <DependentUpon>BeeAccountsetup.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Beephieunhapkho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Beephieunhapkho.Designer.cs">
+      <DependentUpon>Beephieunhapkho.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\BeePhieuchi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -494,6 +500,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\BeeAccountsetup.resx">
       <DependentUpon>BeeAccountsetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Beephieunhapkho.resx">
+      <DependentUpon>Beephieunhapkho.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\BeePhieuchi.resx">
       <DependentUpon>BeePhieuchi.cs</DependentUpon>
