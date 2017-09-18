@@ -190,9 +190,14 @@ namespace BEEACCOUNT.Model
             //  throw new NotImplementedException();
         }
 
+        public static void suasanpham(int idtk)
+        {
 
+            View.BeeDanhsachsanpham p = new BeeDanhsachsanpham(4, idtk);  // 3 là thêm ới/ 4 là sửa xóa
+                                                                        //  View.BeeDanhsachkho p = new View.BeeDanhsachkho
+            p.ShowDialog();
 
-
-
+            //  throw new NotImplementedException();
+        }
     }
 }

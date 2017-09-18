@@ -351,7 +351,7 @@ namespace BEEACCOUNT.View
 
 
             #region  // viewcode ==2  lA DANH SACH  chi tiết tài khoản
-            if (this.viewcode == 2)  
+            if (this.viewcode == 2)
             {
 
                 Model.Danhsachtkchitiet.themmoichitiettaikhoan();
@@ -366,7 +366,7 @@ namespace BEEACCOUNT.View
 
 
             #region  // viewcode ==4  lA DANH SACH  kho hàng
-            if (this.viewcode == 4) 
+            if (this.viewcode == 4)
             {
 
                 Model.Khohang.themmoikhohang();
@@ -673,6 +673,36 @@ namespace BEEACCOUNT.View
             #endregion
 
 
+
+            #region viewcode =7 danh sach  sản phẩm
+            if (this.viewcode == 7)
+            {
+                int idtk = 0;
+                try
+                {
+                    idtk = (int)this.dataGridView1.Rows[this.dataGridView1.CurrentCell.RowIndex].Cells["ID"].Value;
+
+
+
+                }
+                catch (Exception)
+                {
+
+                    MessageBox.Show("Bạn phải chọn sản phẩm !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                Model.Khohang.suasanpham(idtk);
+                var rs = Model.Khohang.danhsachsanpham(this.db);
+
+                dataGridView1.DataSource = rs;
+
+
+
+            }
+            #endregion
+
+
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -897,6 +927,36 @@ namespace BEEACCOUNT.View
 
                 Model.Khohang.suanhomsanpham(idtk);
                 var rs = Model.Khohang.danhsachnhomsanpham(this.db);
+
+                dataGridView1.DataSource = rs;
+
+
+
+            }
+            #endregion
+
+
+
+            #region viewcode =7 danh sach  sản phẩm
+            if (this.viewcode == 7)
+            {
+                int idtk = 0;
+                try
+                {
+                    idtk = (int)this.dataGridView1.Rows[this.dataGridView1.CurrentCell.RowIndex].Cells["ID"].Value;
+
+
+
+                }
+                catch (Exception)
+                {
+
+                    MessageBox.Show("Bạn phải chọn sản phẩm !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                Model.Khohang.suasanpham(idtk);
+                var rs = Model.Khohang.danhsachsanpham(this.db);
 
                 dataGridView1.DataSource = rs;
 

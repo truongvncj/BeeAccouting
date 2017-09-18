@@ -106,10 +106,29 @@ namespace BEEACCOUNT.View
                     txttensanpham.Text = item.tensp;
 
                     txtdonvi.Text = item.donvi;
-                    txttrongluong.Text = item.khoiluong.ToString();
+                    txttrongluong.Text = item.trongluong.ToString();
                     txtmavach.Text = item.mavach;
-                    txtnhomsanpham.Text = item.idmanhomsp;
+
                     txtghichu.Text = item.ghichu;
+                    txtkhoiluong.Text = item.khoiluong.ToString();
+
+                    foreach (var sp in txtnhomsanpham.Items)
+                    {
+
+                        if ((string)(sp as ComboboxItem).Value == item.idmanhomsp)
+                        {
+                            //      loaitk = (int)(cbloaitk.SelectedItem as ComboboxItem).Value;
+                            //     cmbEmployeeStatus.SelectedValue = cmbEmployeeStatus.Items.FindByText("text").Value;
+
+                            txtnhomsanpham.SelectedItem = sp;
+                            //      cbtkmother.(iten);
+
+                        }
+
+
+
+                    }
+
 
 
                 }
@@ -195,7 +214,28 @@ namespace BEEACCOUNT.View
             this.masanpham = this.txtmasanpham.Text;
             this.tensanpham = this.txttensanpham.Text;
 
-         
+
+            this.mavach = txtmavach.Text;
+            this.donvi = txtdonvi.Text;
+
+            if (Utils.IsValidnumber(txttrongluong.Text))
+            {
+                this.trongluong = float.Parse(txttrongluong.Text);
+            }
+
+
+            if (Utils.IsValidnumber(txtkhoiluong.Text))
+            {
+                this.khoiluong = float.Parse(txtkhoiluong.Text);
+
+            }
+
+            this.idnhomsanpham = (string)(txtnhomsanpham.SelectedItem as ComboboxItem).Value;// (cbm.SelectedItem as ComboboxItem).Value.ToString();
+
+
+            this.ghichu = txtghichu.Text;
+
+
 
 
 
@@ -232,7 +272,7 @@ namespace BEEACCOUNT.View
 
                     rs.idmanhomsp = this.idnhomsanpham;
 
-
+                    rs.mavach = this.mavach;
                     rs.donvi = this.donvi;
 
 
@@ -274,7 +314,7 @@ namespace BEEACCOUNT.View
                 MessageBox.Show("Bạn kiểm tra mã sản phẩm", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-
+            this.mavach = txtmavach.Text;
             this.masanpham = this.txtmasanpham.Text;
             this.tensanpham = this.txttensanpham.Text;
             this.donvi = txtdonvi.Text;
@@ -301,9 +341,16 @@ namespace BEEACCOUNT.View
                 return;
             }
 
+            if (txtnhomsanpham.SelectedIndex >= 0)
+            {
+                this.idnhomsanpham = (string)(txtnhomsanpham.SelectedItem as ComboboxItem).Value;
 
-
-
+            }
+            else
+            {
+                MessageBox.Show("Bạn chưa chọn nhóm của sản phẩm", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
 
 
@@ -322,6 +369,7 @@ namespace BEEACCOUNT.View
             p.idmanhomsp = this.idnhomsanpham;
             p.ghichu = this.ghichu;
             p.mavach = this.mavach;
+            p.donvi = this.donvi;
 
 
 

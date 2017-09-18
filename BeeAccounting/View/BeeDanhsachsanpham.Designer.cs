@@ -103,6 +103,7 @@
             // 
             // txtnhomsanpham
             // 
+            this.txtnhomsanpham.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.txtnhomsanpham.FormattingEnabled = true;
             this.txtnhomsanpham.Location = new System.Drawing.Point(175, 277);
             this.txtnhomsanpham.Name = "txtnhomsanpham";

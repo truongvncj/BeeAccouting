@@ -625,6 +625,7 @@
             // 
             // groupBox11
             // 
+            this.groupBox11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox11.Controls.Add(this.btdanhsachsanpham);
             this.groupBox11.Controls.Add(this.btdanhsachnhomsanpham);
             this.groupBox11.Controls.Add(this.btsanhsachkhohang);
@@ -632,7 +633,7 @@
             this.groupBox11.Controls.Add(this.button40);
             this.groupBox11.Controls.Add(this.button41);
             this.groupBox11.Controls.Add(this.button42);
-            this.groupBox11.Location = new System.Drawing.Point(661, 12);
+            this.groupBox11.Location = new System.Drawing.Point(706, 15);
             this.groupBox11.Name = "groupBox11";
             this.groupBox11.Size = new System.Drawing.Size(184, 318);
             this.groupBox11.TabIndex = 46;
