@@ -199,5 +199,41 @@ namespace BEEACCOUNT.Model
 
             //  throw new NotImplementedException();
         }
+
+        public static IQueryable danhsachphieunhapkho(LinqtoSQLDataContext dc)
+        {
+
+
+            LinqtoSQLDataContext db = dc;
+
+
+            var rs = from p in dc.tbl_kho_head_phieunhapkhos
+                    
+                     select new
+                     {
+
+                         Ngày_phiếu_nhập = p.ngayphieunhap,
+                         Mã_kho = p.makho,
+                         Số_phiếu = p.sophieu,
+                         Người_giao = p.nguoigiao,
+                         Địa_chỉ = p.diachibophan,
+                         Có_TK = p.cotk,
+                         Nợ_TK = p.notk,
+                         Tạo_bởi = p.createby,
+
+
+
+                         ID = p.id
+                     };
+
+
+
+
+
+            return rs;
+
+
+            // throw new NotImplementedException();
+        }
     }
 }

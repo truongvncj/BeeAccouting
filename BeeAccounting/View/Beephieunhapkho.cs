@@ -13,9 +13,9 @@ namespace BEEACCOUNT.View
 {
     public partial class Beephieunhapkho : Form
     {
-        public int statusphieuchi { get; set; } // mới  // 2 suawra // 3 display //
-        public int phieuchiid { get; set; }
-        public int sophieuchi { get; set; }
+        public int statuspnhapkho { get; set; } // mới  // 2 suawra // 3 display //
+        public int idphieunhapkho { get; set; }
+        public int sophieunhap { get; set; }
         public string tkno { get; set; }
         public int tknochitiet { get; set; }
         public string tkco { get; set; }
@@ -23,7 +23,7 @@ namespace BEEACCOUNT.View
         public double pssotienno { get; set; }
         public double pssotienco { get; set; }
 
-        public int maphieuchiOld { get; set; }
+     //   public int maphieuchiOld { get; set; }
         //    public DataGridView DataGridView1 { get; set; }
         public class ComboboxItem
         {
@@ -37,159 +37,159 @@ namespace BEEACCOUNT.View
         }
 
 
-        public void add_detailGridviewTkNophieuchi(tbl_Socai socaitemp)
-        {
+        //public void add_detailGridviewTkNophieuchi(tbl_Socai socaitemp)
+        //{
 
 
 
 
 
-            string connection_string = Utils.getConnectionstr();
-            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+        //    string connection_string = Utils.getConnectionstr();
+        //    LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
 
 
-            //---------------
+        //    //---------------
 
-            DataTable dataTable = (DataTable)dataGridViewTkNo.DataSource;
-            DataRow drToAdd = dataTable.NewRow();
+        //    DataTable dataTable = (DataTable)dataGridViewTkNo.DataSource;
+        //    DataRow drToAdd = dataTable.NewRow();
 
-            //    drToAdd["Tk_Có"] = socaitemp.TkCo;
-            drToAdd["Diễn_giải"] = socaitemp.Diengiai;
-            drToAdd["Số_chứng_từ"] = socaitemp.Soctu;
-            drToAdd["Ký_hiêu"] = socaitemp.Kyhieuctu;
+        //    //    drToAdd["Tk_Có"] = socaitemp.TkCo;
+        //    drToAdd["Diễn_giải"] = socaitemp.Diengiai;
+        //    drToAdd["Số_chứng_từ"] = socaitemp.Soctu;
+        //    drToAdd["Ký_hiêu"] = socaitemp.Kyhieuctu;
 
-            if (socaitemp.PsCo != null)
-            {
-                drToAdd["Số_tiền"] = socaitemp.PsCo;
-            }
+        //    if (socaitemp.PsCo != null)
+        //    {
+        //        drToAdd["Số_tiền"] = socaitemp.PsCo;
+        //    }
        
-            drToAdd["Mã_chi_tiết"] = socaitemp.MaCTietTKCo;
-            drToAdd["Tên_chi_tiết"] = socaitemp.tenchitietCo;
+        //    drToAdd["Mã_chi_tiết"] = socaitemp.MaCTietTKCo;
+        //    drToAdd["Tên_chi_tiết"] = socaitemp.tenchitietCo;
 
-            drToAdd["tkNohide"] = socaitemp.TkNo;
-
-
-            drToAdd["ngayctuhide"] = socaitemp.Ngayctu;
-
-            dataTable.Rows.Add(drToAdd);
-            dataTable.AcceptChanges();
+        //    drToAdd["tkNohide"] = socaitemp.TkNo;
 
 
+        //    drToAdd["ngayctuhide"] = socaitemp.Ngayctu;
 
-            int i = dataTable.Rows.Count - 1;
-            //   int i = dataGridViewTkCo.RowCount -1;
-
-            DataGridViewComboBoxCell cb = (DataGridViewComboBoxCell)dataGridViewTkNo.Rows[i].Cells["Tk_Nợ"];
-            DataGridViewCell dgvc = (DataGridViewCell)dataGridViewTkNo.Rows[i].Cells["Tk_Nợ"];
-
-            #region tim item comboboc
-
-            foreach (ComboboxItem item in (List<ComboboxItem>)cb.DataSource)
-            {
-
-                if (item.Value.ToString().Trim() == socaitemp.TkNo.ToString().Trim())
-                {
-
-                    dataGridViewTkNo.Rows[i].Cells["Tk_Nợ"].Value = item.Value;
-                }
-
-            }
-
-
-            #endregion tom item comboubox
-
-
-            //   ComboboxItem cbx = (ComboboxItem)cb.Items[3];
-            //     dataGridViewTkCo.Rows[i].Cells["Tk_Có"].Value = cbx.Value;
-            if (Utils.IsValidnumber(txtsotienno.Text))
-            {
-                this.pssotienno = double.Parse(txtsotienno.Text);
-
-
-            }
+        //    dataTable.Rows.Add(drToAdd);
+        //    dataTable.AcceptChanges();
 
 
 
-        }
+        //    int i = dataTable.Rows.Count - 1;
+        //    //   int i = dataGridViewTkCo.RowCount -1;
 
-        public void add_detailGridviewTkCoPhieuchi(tbl_Socai socaitemp)
-        {
+        //    DataGridViewComboBoxCell cb = (DataGridViewComboBoxCell)dataGridViewTkNo.Rows[i].Cells["Tk_Nợ"];
+        //    DataGridViewCell dgvc = (DataGridViewCell)dataGridViewTkNo.Rows[i].Cells["Tk_Nợ"];
 
+        //    #region tim item comboboc
 
+        //    foreach (ComboboxItem item in (List<ComboboxItem>)cb.DataSource)
+        //    {
 
+        //        if (item.Value.ToString().Trim() == socaitemp.TkNo.ToString().Trim())
+        //        {
 
+        //            dataGridViewTkNo.Rows[i].Cells["Tk_Nợ"].Value = item.Value;
+        //        }
 
-            string connection_string = Utils.getConnectionstr();
-            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
-
-
-            //---------------
-
-            DataTable dataTable = (DataTable)dataGridViewTkNo.DataSource;
-            DataRow drToAdd = dataTable.NewRow();
-
-            //    drToAdd["Tk_Có"] = socaitemp.TkCo;
-            drToAdd["Diễn_giải"] = socaitemp.Diengiai;
-            drToAdd["Số_chứng_từ"] = socaitemp.Soctu;
-            drToAdd["Ký_hiêu"] = socaitemp.Kyhieuctu;
-            drToAdd["Số_tiền"] = socaitemp.PsNo;
-            drToAdd["Mã_chi_tiết"] = socaitemp.MaCTietTKCo;
-            drToAdd["Tên_chi_tiết"] = socaitemp.tenchitietCo;
-
-            drToAdd["tkCohide"] = socaitemp.TkNo;
+        //    }
 
 
-            drToAdd["ngayctuhide"] = socaitemp.Ngayctu;
+        //    #endregion tom item comboubox
 
-            dataTable.Rows.Add(drToAdd);
-            dataTable.AcceptChanges();
+
+        //    //   ComboboxItem cbx = (ComboboxItem)cb.Items[3];
+        //    //     dataGridViewTkCo.Rows[i].Cells["Tk_Có"].Value = cbx.Value;
+        //    if (Utils.IsValidnumber(txtsotienno.Text))
+        //    {
+        //        this.pssotienno = double.Parse(txtsotienno.Text);
+
+
+        //    }
 
 
 
-            int i = dataTable.Rows.Count - 1;
-            //   int i = dataGridViewTkCo.RowCount -1;
+        //}
 
-            DataGridViewComboBoxCell cb = (DataGridViewComboBoxCell)dataGridViewTkNo.Rows[i].Cells["Tk_Có"];
-            DataGridViewCell dgvc = (DataGridViewCell)dataGridViewTkNo.Rows[i].Cells["Tk_Có"];
-
-            #region tim item comboboc
-
-            foreach (ComboboxItem item in (List<ComboboxItem>)cb.DataSource)
-            {
-
-                if (item.Value.ToString().Trim() == socaitemp.TkNo.ToString().Trim())
-                {
-
-                    dataGridViewTkNo.Rows[i].Cells["Tk_Có"].Value = item.Value;
-                }
-
-            }
+        //public void add_detailGridviewTkCoPhieuchi(tbl_Socai socaitemp)
+        //{
 
 
-            #endregion tom item comboubox
 
 
-            //   ComboboxItem cbx = (ComboboxItem)cb.Items[3];
-            //     dataGridViewTkCo.Rows[i].Cells["Tk_Có"].Value = cbx.Value;
-            if (Utils.IsValidnumber(txtsotienno.Text))
-            {
-                this.pssotienno = double.Parse(txtsotienno.Text);
+
+        //    string connection_string = Utils.getConnectionstr();
+        //    LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+
+        //    //---------------
+
+        //    DataTable dataTable = (DataTable)dataGridViewTkNo.DataSource;
+        //    DataRow drToAdd = dataTable.NewRow();
+
+        //    //    drToAdd["Tk_Có"] = socaitemp.TkCo;
+        //    drToAdd["Diễn_giải"] = socaitemp.Diengiai;
+        //    drToAdd["Số_chứng_từ"] = socaitemp.Soctu;
+        //    drToAdd["Ký_hiêu"] = socaitemp.Kyhieuctu;
+        //    drToAdd["Số_tiền"] = socaitemp.PsNo;
+        //    drToAdd["Mã_chi_tiết"] = socaitemp.MaCTietTKCo;
+        //    drToAdd["Tên_chi_tiết"] = socaitemp.tenchitietCo;
+
+        //    drToAdd["tkCohide"] = socaitemp.TkNo;
+
+
+        //    drToAdd["ngayctuhide"] = socaitemp.Ngayctu;
+
+        //    dataTable.Rows.Add(drToAdd);
+        //    dataTable.AcceptChanges();
+
+
+
+        //    int i = dataTable.Rows.Count - 1;
+        //    //   int i = dataGridViewTkCo.RowCount -1;
+
+        //    DataGridViewComboBoxCell cb = (DataGridViewComboBoxCell)dataGridViewTkNo.Rows[i].Cells["Tk_Có"];
+        //    DataGridViewCell dgvc = (DataGridViewCell)dataGridViewTkNo.Rows[i].Cells["Tk_Có"];
+
+        //    #region tim item comboboc
+
+        //    foreach (ComboboxItem item in (List<ComboboxItem>)cb.DataSource)
+        //    {
+
+        //        if (item.Value.ToString().Trim() == socaitemp.TkNo.ToString().Trim())
+        //        {
+
+        //            dataGridViewTkNo.Rows[i].Cells["Tk_Có"].Value = item.Value;
+        //        }
+
+        //    }
+
+
+        //    #endregion tom item comboubox
+
+
+        //    //   ComboboxItem cbx = (ComboboxItem)cb.Items[3];
+        //    //     dataGridViewTkCo.Rows[i].Cells["Tk_Có"].Value = cbx.Value;
+        //    if (Utils.IsValidnumber(txtsotienno.Text))
+        //    {
+        //        this.pssotienno = double.Parse(txtsotienno.Text);
                
-            }
+        //    }
 
 
 
-        }
+        //}
 
-        public void reloadseachview(string nguoinop, string diachi, string noidung)
-        {
-
-
-
-            dataGridViewListphieuchi.DataSource = Model.Phieuthuchi.reloadseachview("PC", nguoinop, diachi, noidung);
+        //public void reloadseachview(string nguoinop, string diachi, string noidung)
+        //{
 
 
-        }
+
+        //    dataGridViewListphieuchi.DataSource = Model.Phieuthuchi.reloadseachview("PC", nguoinop, diachi, noidung);
+
+
+        //}
 
 
 
@@ -278,7 +278,7 @@ namespace BEEACCOUNT.View
             this.pssotienco = 0;
             this.main1 = Main;
 
-            this.statusphieuchi = 1; // tạo mới
+            this.statuspnhapkho = 1; // tạo mới
 
             Model.Username used = new Model.Username();
             string connection_string = Utils.getConnectionstr();
@@ -298,7 +298,7 @@ namespace BEEACCOUNT.View
 
 
             var rs2 = from tk in dc.tbl_dstaikhoans
-                      where tk.loaitkid == 8 // mã 8 là tiền mặt
+                    //  where tk.loaitkid == 8 // mã 8 là tiền mặt
                       select tk;
 
             //      string drowdownshow = "";
@@ -316,9 +316,9 @@ namespace BEEACCOUNT.View
 
 
 
-            dataGridViewTkNo = Model.Phieuthuchi.reloadnewdetailtaikhoanNo(dataGridViewTkNo);
+            //    dataGridViewTkNo = Model.Phieuthuchi.reloadnewdetailtaikhoanNo(dataGridViewTkNo);
 
-            dataGridViewListphieuchi.DataSource = Model.Phieuthuchi.LisDanhSachphieuchi("PC");
+            dataGridViewListphieuchi.DataSource = Model.Khohang.danhsachphieunhapkho(dc);
 
             #endregion load datanew
 
@@ -1169,7 +1169,7 @@ namespace BEEACCOUNT.View
 
 
 
-                MessageBox.Show("Số phiếu vừa lưu: " + this.sophieuchi, "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Số phiếu vừa lưu: " + this.sophieunhap, "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
             }
@@ -1399,9 +1399,9 @@ namespace BEEACCOUNT.View
             txtdate.Focus();
 
 
-            this.phieuchiid = -1;
+            this.idphieunhapkho = -1;
 
-            this.statusphieuchi = 1; // tạo mới
+            this.statuspnhapkho = 1; // tạo mới
 
             #endregion
 
@@ -1426,7 +1426,7 @@ namespace BEEACCOUNT.View
 
 
             var phieuchi = (from tbl_SoQuy in dc.tbl_SoQuys
-                            where tbl_SoQuy.id == this.phieuchiid
+                            where tbl_SoQuy.id == this.idphieunhapkho
                             select new
                             {
 
@@ -1539,24 +1539,24 @@ namespace BEEACCOUNT.View
 
             try
             {
-                this.phieuchiid = (int)this.dataGridViewListphieuchi.Rows[this.dataGridViewListphieuchi.CurrentCell.RowIndex].Cells["ID"].Value;
+                this.idphieunhapkho = (int)this.dataGridViewListphieuchi.Rows[this.dataGridViewListphieuchi.CurrentCell.RowIndex].Cells["ID"].Value;
 
 
             }
             catch (Exception)
             {
 
-                this.phieuchiid = 0;
+                this.idphieunhapkho = 0;
             }
 
-            if (this.phieuchiid != 0)
+            if (this.idphieunhapkho != 0)
             {
 
 
 
                 #region view load form
                 var phieuchi = (from tbl_SoQuy in dc.tbl_SoQuys
-                                where tbl_SoQuy.id == this.phieuchiid
+                                where tbl_SoQuy.id == this.idphieunhapkho
                                 select new
                                 {
 
@@ -1663,7 +1663,7 @@ namespace BEEACCOUNT.View
 
 
 
-                    this.statusphieuchi = 3;// View
+                    this.statuspnhapkho = 3;// View
                     Model.Phieuthuchi.reloadnewdetailtaikhoanNo(dataGridViewTkNo);
             //        Model.Phieuthuchi.reloaddetailtaikhoannophieuchi(this.dataGridViewTkNo, this, phieuchi.tkno.Trim(), phieuchi.sophieuthu);
                     btluu.Visible = false;
@@ -1699,12 +1699,12 @@ namespace BEEACCOUNT.View
 
 
             var phieuthu = (from tbl_SoQuy in dc.tbl_SoQuys
-                            where tbl_SoQuy.id == this.phieuchiid
+                            where tbl_SoQuy.id == this.idphieunhapkho
                             select tbl_SoQuy).FirstOrDefault();
 
             if (phieuthu != null)
             {
-                this.sophieuchi = phieuthu.Sochungtu;
+                this.sophieunhap = phieuthu.Sochungtu;
 
                 dc.tbl_SoQuys.DeleteOnSubmit(phieuthu);
                 dc.SubmitChanges();
@@ -1712,7 +1712,7 @@ namespace BEEACCOUNT.View
 
                 Model.Socaitaikhoan.xoa("PC", phieuthu.Sochungtu);
 
-                MessageBox.Show("Đã xóa phiếu thu: " + this.sophieuchi, "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Đã xóa phiếu thu: " + this.sophieunhap, "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 //  Model.
                 #region load list phieu chi
                 var Listphieuthu = from listpt in dc.tbl_SoQuys
@@ -1751,7 +1751,7 @@ namespace BEEACCOUNT.View
         private void button2_Click(object sender, EventArgs e)
         {
 
-            this.statusphieuchi = 2;
+            this.statuspnhapkho = 2;
 
             btluu.Visible = true;
 
@@ -1762,8 +1762,8 @@ namespace BEEACCOUNT.View
             txtsophieu.Enabled = true;
             if (txtsophieu.Text != "")
             {
-                this.sophieuchi = int.Parse(txtsophieu.Text.ToString());
-                this.maphieuchiOld = int.Parse(txtsophieu.Text.ToString());
+                this.sophieunhap = int.Parse(txtsophieu.Text.ToString());
+          //      this.maphieuchiOld = int.Parse(txtsophieu.Text.ToString());
             }
 
 
@@ -1779,7 +1779,7 @@ namespace BEEACCOUNT.View
             //   cbtaikhoanco.Enabled = true;
             cbtkco.Enabled = true;
 
-            this.statusphieuchi = 2;
+            this.statuspnhapkho = 2;
 
         }
 
