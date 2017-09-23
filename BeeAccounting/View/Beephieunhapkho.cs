@@ -294,11 +294,11 @@ namespace BEEACCOUNT.View
             lb_machitietno.Text = "";
 
 
-            #region load tk tmat
+            #region load tk kho
 
 
             var rs2 = from tk in dc.tbl_dstaikhoans
-                    //  where tk.loaitkid == 8 // mã 8 là tiền mặt
+                      where tk.loaitkid == 12 // mã 12 là tài khoản kho
                       select tk;
 
             //      string drowdownshow = "";
@@ -315,8 +315,29 @@ namespace BEEACCOUNT.View
             #endregion load tk nợ
 
 
+            #region load tk tmat
 
-            //    dataGridViewTkNo = Model.Phieuthuchi.reloadnewdetailtaikhoanNo(dataGridViewTkNo);
+
+            var rs3 = from tk in dc.tbl_khohangs
+                          //  where tk.loaitkid == 8 // mã 8 là tiền mặt
+                      select tk;
+
+            //      string drowdownshow = "";
+
+            foreach (var item in rs3)
+            {
+                ComboboxItem cb = new ComboboxItem();
+                cb.Value = item.makho;
+                cb.Text = item.makho + ":" + item.tenkho;
+                this.txtcbkho.Items.Add(cb); // CombomCollection.Add(cb);
+
+            }
+
+            #endregion load tk nợ
+
+
+
+            dataGridViewdetailPNK = Model.Khohang.reloaddetailPNK(dataGridViewdetailPNK);
 
             dataGridViewListphieuchi.DataSource = Model.Khohang.danhsachphieunhapkho(dc);
 
@@ -523,13 +544,13 @@ namespace BEEACCOUNT.View
 
             bool checkdinhkhoanno = true;
             #region  check từng dong sổ tk Có
-            for (int idrow = 0; idrow < dataGridViewTkNo.RowCount - 1; idrow++) // 'dataGridViewTkNo'
+            for (int idrow = 0; idrow < dataGridViewdetailPNK.RowCount - 1; idrow++) // 'dataGridViewTkNo'
             {
-                if (dataGridViewTkNo.Rows[idrow].Cells["Tk_Nợ"].Value != DBNull.Value)
+                if (dataGridViewdetailPNK.Rows[idrow].Cells["Tk_Nợ"].Value != DBNull.Value)
                 {
 
 
-                    if (dataGridViewTkNo.Rows[idrow].Cells["Ký_hiêu"].Value == DBNull.Value)
+                    if (dataGridViewdetailPNK.Rows[idrow].Cells["Ký_hiêu"].Value == DBNull.Value)
                     {
 
                         MessageBox.Show("Bạn chua nhập ký hiệu chứng từ", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -547,7 +568,7 @@ namespace BEEACCOUNT.View
                     }
 
 
-                    if (dataGridViewTkNo.Rows[idrow].Cells["Số_tiền"].Value == DBNull.Value)
+                    if (dataGridViewdetailPNK.Rows[idrow].Cells["Số_tiền"].Value == DBNull.Value)
                     {
 
                         MessageBox.Show("Bạn chua nhập số tiền", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -556,7 +577,7 @@ namespace BEEACCOUNT.View
                     }
 
 
-                    if (dataGridViewTkNo.Rows[idrow].Cells["Số_chứng_từ"].Value == DBNull.Value)
+                    if (dataGridViewdetailPNK.Rows[idrow].Cells["Số_chứng_từ"].Value == DBNull.Value)
                     {
 
                         MessageBox.Show("Bạn chua nhập ngày chứng từ", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -564,7 +585,7 @@ namespace BEEACCOUNT.View
                         return;
                     }
 
-                    if (dataGridViewTkNo.Rows[idrow].Cells["Ngày_chứng_từ"].Value == null)
+                    if (dataGridViewdetailPNK.Rows[idrow].Cells["Ngày_chứng_từ"].Value == null)
                     {
 
                         MessageBox.Show("Bạn chua nhập ngày chứng từ", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -1200,7 +1221,7 @@ namespace BEEACCOUNT.View
 
 
             #endregion
-            dataGridViewTkNo = Model.Phieuthuchi.reloadnewdetailtaikhoanNo(dataGridViewTkNo);
+            dataGridViewdetailPNK = Model.Phieuthuchi.reloadnewdetailtaikhoanNo(dataGridViewdetailPNK);
 
             dataGridViewListphieuchi.DataSource = Model.Phieuthuchi.LisDanhSachphieuchi("PC");
 
@@ -1405,7 +1426,7 @@ namespace BEEACCOUNT.View
 
             #endregion
 
-            dataGridViewTkNo = Model.Phieuthuchi.reloadnewdetailtaikhoanNo(dataGridViewTkNo);
+            dataGridViewdetailPNK = Model.Phieuthuchi.reloadnewdetailtaikhoanNo(dataGridViewdetailPNK);
 
         }
 
@@ -1664,7 +1685,7 @@ namespace BEEACCOUNT.View
 
 
                     this.statuspnhapkho = 3;// View
-                    Model.Phieuthuchi.reloadnewdetailtaikhoanNo(dataGridViewTkNo);
+                    Model.Phieuthuchi.reloadnewdetailtaikhoanNo(dataGridViewdetailPNK);
             //        Model.Phieuthuchi.reloaddetailtaikhoannophieuchi(this.dataGridViewTkNo, this, phieuchi.tkno.Trim(), phieuchi.sophieuthu);
                     btluu.Visible = false;
 
@@ -1958,7 +1979,7 @@ namespace BEEACCOUNT.View
             //   Private Sub DataGridView1_Paint(ByVal sender As Object, ByVal e As System.Windows.Forms.PaintEventArgs) Handles DataGridView1.Paint
             //  For Each c As DataGridViewColumn In dataGridViewListphieuthu.Columns
 
-            foreach (var c in dataGridViewTkNo.Columns)
+            foreach (var c in dataGridViewdetailPNK.Columns)
             {
                 DataGridViewColumn clm = (DataGridViewColumn)c;
                 clm.HeaderText = clm.HeaderText.Replace("_", " ");
@@ -1993,9 +2014,9 @@ namespace BEEACCOUNT.View
 
                     // int i = dataGridProgramdetail.CurrentRow.Index;
                     int i = currentCell.RowIndex;
-                    string colname = this.dataGridViewTkNo.Columns[this.dataGridViewTkNo.CurrentCell.ColumnIndex].Name;
+                    string colname = this.dataGridViewdetailPNK.Columns[this.dataGridViewdetailPNK.CurrentCell.ColumnIndex].Name;
 
-                    dataGridViewTkNo.Rows[i].Cells[colname].Value = SelectedItem;
+                    dataGridViewdetailPNK.Rows[i].Cells[colname].Value = SelectedItem;
 
 
 
@@ -2022,7 +2043,7 @@ namespace BEEACCOUNT.View
                 }
 
 
-                currentCell = this.dataGridViewTkNo.CurrentCell;
+                currentCell = this.dataGridViewdetailPNK.CurrentCell;
 
 
 
@@ -2076,10 +2097,10 @@ namespace BEEACCOUNT.View
 
 
                 int dem = 0;
-                for (int idrow = 0; idrow < dataGridViewTkNo.RowCount - 1; idrow++)
+                for (int idrow = 0; idrow < dataGridViewdetailPNK.RowCount - 1; idrow++)
                 {
 
-                    if (dataGridViewTkNo.Rows[idrow].Cells["Tk_Nợ"].Value != null)
+                    if (dataGridViewdetailPNK.Rows[idrow].Cells["Tk_Nợ"].Value != null)
                     {
 
 
@@ -2088,12 +2109,12 @@ namespace BEEACCOUNT.View
                         if (dem > 1)
                         {
 
-                            tkcotext += ";" + dataGridViewTkNo.Rows[idrow].Cells["Tk_Nợ"].Value.ToString().Trim(); // chính la program
+                            tkcotext += ";" + dataGridViewdetailPNK.Rows[idrow].Cells["Tk_Nợ"].Value.ToString().Trim(); // chính la program
 
                         }
                         else
                         {
-                            tkcotext += dataGridViewTkNo.Rows[idrow].Cells["Tk_Nợ"].Value.ToString().Trim(); // chính la program
+                            tkcotext += dataGridViewdetailPNK.Rows[idrow].Cells["Tk_Nợ"].Value.ToString().Trim(); // chính la program
                                                                                                              //dataGridViewTkCo.Columns["Số_tiền"].DisplayIndex = 3;
 
 
@@ -2124,17 +2145,17 @@ namespace BEEACCOUNT.View
             double tongcong = 0;
 
 
-            for (int idrow = 0; idrow < dataGridViewTkNo.RowCount - 1; idrow++)
+            for (int idrow = 0; idrow < dataGridViewdetailPNK.RowCount - 1; idrow++)
             {
 
 
-                if (dataGridViewTkNo.Rows[idrow].Cells["Số_tiền"] != null)
+                if (dataGridViewdetailPNK.Rows[idrow].Cells["Số_tiền"] != null)
 
                 {
-                    if (Utils.IsValidnumber(dataGridViewTkNo.Rows[idrow].Cells["Số_tiền"].Value.ToString()))
+                    if (Utils.IsValidnumber(dataGridViewdetailPNK.Rows[idrow].Cells["Số_tiền"].Value.ToString()))
                     {
 
-                        tongcong += double.Parse(dataGridViewTkNo.Rows[idrow].Cells["Số_tiền"].Value.ToString());
+                        tongcong += double.Parse(dataGridViewdetailPNK.Rows[idrow].Cells["Số_tiền"].Value.ToString());
                     }
                 }
 
@@ -2233,16 +2254,16 @@ namespace BEEACCOUNT.View
                                 string machitiet = selecdetail.value;
                                 string namechitiet = selecdetail.valuetext;
 
-                                dataGridViewTkNo.Rows[i].Cells["Mã_chi_tiết"].Value = machitiet;
-                                dataGridViewTkNo.Rows[i].Cells["Tên_chi_tiết"].Value = namechitiet;
+                                dataGridViewdetailPNK.Rows[i].Cells["Mã_chi_tiết"].Value = machitiet;
+                                dataGridViewdetailPNK.Rows[i].Cells["Tên_chi_tiết"].Value = namechitiet;
 
 
                             }
                             else
                             {
-                                dataGridViewTkNo.Rows[i].Cells["Tk_Nợ"].Value = "";
-                                dataGridViewTkNo.Rows[i].Cells["Mã_chi_tiết"].Value = "";
-                                dataGridViewTkNo.Rows[i].Cells["Tên_chi_tiết"].Value = "";
+                                dataGridViewdetailPNK.Rows[i].Cells["Tk_Nợ"].Value = "";
+                                dataGridViewdetailPNK.Rows[i].Cells["Mã_chi_tiết"].Value = "";
+                                dataGridViewdetailPNK.Rows[i].Cells["Tên_chi_tiết"].Value = "";
                             }
 
 
@@ -2251,8 +2272,8 @@ namespace BEEACCOUNT.View
                         }
                         else
                         {
-                            dataGridViewTkNo.Rows[i].Cells["Mã_chi_tiết"].Value = "";
-                            dataGridViewTkNo.Rows[i].Cells["Tên_chi_tiết"].Value = "";
+                            dataGridViewdetailPNK.Rows[i].Cells["Mã_chi_tiết"].Value = "";
+                            dataGridViewdetailPNK.Rows[i].Cells["Tên_chi_tiết"].Value = "";
 
 
                         }
@@ -2264,8 +2285,8 @@ namespace BEEACCOUNT.View
 
                 else
                 {
-                    dataGridViewTkNo.Rows[i].Cells["Mã_chi_tiết"].Value = "";
-                    dataGridViewTkNo.Rows[i].Cells["Tên_chi_tiết"].Value = "";
+                    dataGridViewdetailPNK.Rows[i].Cells["Mã_chi_tiết"].Value = "";
+                    dataGridViewdetailPNK.Rows[i].Cells["Tên_chi_tiết"].Value = "";
 
 
                 }
@@ -2435,10 +2456,10 @@ namespace BEEACCOUNT.View
 
 
             int dem = 0;
-            for (int idrow = 0; idrow < dataGridViewTkNo.RowCount - 1; idrow++)
+            for (int idrow = 0; idrow < dataGridViewdetailPNK.RowCount - 1; idrow++)
             {
 
-                if (dataGridViewTkNo.Rows[idrow].Cells["Tk_Nợ"].Value != DBNull.Value)
+                if (dataGridViewdetailPNK.Rows[idrow].Cells["Tk_Nợ"].Value != DBNull.Value)
                 {
 
 
@@ -2447,12 +2468,12 @@ namespace BEEACCOUNT.View
                     if (dem > 1)
                     {
 
-                        tkcotext += ";" + dataGridViewTkNo.Rows[idrow].Cells["Tk_Nợ"].Value.ToString().Trim(); // chính la program
+                        tkcotext += ";" + dataGridViewdetailPNK.Rows[idrow].Cells["Tk_Nợ"].Value.ToString().Trim(); // chính la program
 
                     }
                     else
                     {
-                        tkcotext += dataGridViewTkNo.Rows[idrow].Cells["Tk_Nợ"].Value.ToString().Trim(); // chính la program
+                        tkcotext += dataGridViewdetailPNK.Rows[idrow].Cells["Tk_Nợ"].Value.ToString().Trim(); // chính la program
                                                                                                          //dataGridViewTkCo.Columns["Số_tiền"].DisplayIndex = 3;
 
 
@@ -2474,17 +2495,17 @@ namespace BEEACCOUNT.View
             double tongcong = 0;
 
 
-            for (int idrow = 0; idrow < dataGridViewTkNo.RowCount - 1; idrow++)
+            for (int idrow = 0; idrow < dataGridViewdetailPNK.RowCount - 1; idrow++)
             {
 
 
-                if (dataGridViewTkNo.Rows[idrow].Cells["Số_tiền"].Value != DBNull.Value)
+                if (dataGridViewdetailPNK.Rows[idrow].Cells["Số_tiền"].Value != DBNull.Value)
 
                 {
-                    if (Utils.IsValidnumber(dataGridViewTkNo.Rows[idrow].Cells["Số_tiền"].Value.ToString()))
+                    if (Utils.IsValidnumber(dataGridViewdetailPNK.Rows[idrow].Cells["Số_tiền"].Value.ToString()))
                     {
 
-                        tongcong += double.Parse(dataGridViewTkNo.Rows[idrow].Cells["Số_tiền"].Value.ToString());
+                        tongcong += double.Parse(dataGridViewdetailPNK.Rows[idrow].Cells["Số_tiền"].Value.ToString());
                     }
                 }
 
