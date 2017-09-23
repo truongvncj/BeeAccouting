@@ -33,5 +33,16 @@ namespace BEEACCOUNT.Properties {
                 return ((string)(this["BEEConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-8D4F853\\SQLEXPRESS;Initial Catalog=BEE;Persist Security Info=" +
+            "True;User ID=sa;Password=123123")]
+        public string BEEConnectionString1 {
+            get {
+                return ((string)(this["BEEConnectionString1"]));
+            }
+        }
     }
 }

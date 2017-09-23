@@ -64,7 +64,7 @@
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(210, 20);
             this.textBox4.TabIndex = 8;
-            this.textBox4.Text = "BEE ACCOUNTING";
+            this.textBox4.Text = "BEE";
             // 
             // label4
             // 
@@ -99,6 +99,7 @@
             this.textBox2.PasswordChar = '*';
             this.textBox2.Size = new System.Drawing.Size(210, 20);
             this.textBox2.TabIndex = 4;
+            this.textBox2.Text = "123123";
             // 
             // label2
             // 

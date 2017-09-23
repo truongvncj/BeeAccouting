@@ -2822,7 +2822,7 @@ namespace BEEACCOUNT.View
 
 
 
-            View.BeeAccountsetup accsup = new BeeAccountsetup();
+            View.BeeAccountsetup accsup = new BeeAccountsetup(this);
 
             accsup.TopLevel = false;
             accsup.AutoScroll = true;
@@ -2838,7 +2838,7 @@ namespace BEEACCOUNT.View
         private void button12_Click(object sender, EventArgs e)
         {
 
-            View.BeeAccountsetup accsup = new BeeAccountsetup();
+            View.BeeAccountsetup accsup = new BeeAccountsetup(this);
 
             accsup.TopLevel = false;
             accsup.AutoScroll = true;

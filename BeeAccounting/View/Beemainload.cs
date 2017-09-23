@@ -972,5 +972,88 @@ namespace BEEACCOUNT.View
 
 
         }
+
+        private void button53_Click(object sender, EventArgs e)
+        {
+
+            main1.clearpannel();
+
+            View.BeeAccountsetup accsup = new BeeAccountsetup(main1);
+            main1.clearpannelload(accsup);
+            //accsup.TopLevel = false;
+            //accsup.AutoScroll = true;
+            //panelmain.Controls.Add(accsup);
+            //accsup.Show();
+
+        }
+
+        private void button54_Click(object sender, EventArgs e)
+        {
+            string connection_string = Utils.getConnectionstr();
+
+            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+            //var rs1 = from loaitks in dc.tbl_loaitks
+            //          select new
+            //          {
+            //          Mã_loại_tài_khoản =    loaitks.idloaitk,
+            //          Tên_mã_loại_tài_khoản =    loaitks.name,
+            //          ID = loaitks.id
+            //          };
+
+            var rs1 = Model.loaitaikhoanketoan.danhsachloaitaikhoan(dc);
+            Viewtable viewtbl = new Viewtable(rs1, dc, "DANH SÁCH LOẠI TÀI KHOẢN", 1);// danh sach loại tài khoản kế toán
+
+            viewtbl.Show();
+        }
+
+        private void button52_Click(object sender, EventArgs e)
+        {
+            string connection_string = Utils.getConnectionstr();
+
+            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+            //var rs1 = from dstaikhoan in dc.tbl_dstaikhoans
+            //          select new
+            //          {
+            //              Mã_tài_khoản = dstaikhoan.matk,
+            //              Tên_tài_khoản = dstaikhoan.tentk,
+            //              Mã_tài_khoản_cấp_trên =dstaikhoan.matktren,
+            //              Cấp_tài_khoản = dstaikhoan.captk,
+            //              ID = dstaikhoan.id
+
+
+            //          };
+
+            var rs = Model.Taikhoanketoan.danhsachtaikhoan(dc);
+            Viewtable viewtbl = new Viewtable(rs, dc, "DANH SÁCH TÀI KHOẢN KẾ TOÁN", 0);// view code 0 la danh sach tai khoan ke toan
+
+            viewtbl.Show();
+        }
+
+        private void button51_Click(object sender, EventArgs e)
+        {
+            View.BeeThongtindoanhnghiep doanhnghiep = new BeeThongtindoanhnghiep();
+            doanhnghiep.ShowDialog();
+        }
+
+        private void button27_Click(object sender, EventArgs e)
+        {
+            string connection_string = Utils.getConnectionstr();
+
+            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+            //var rs1 = from dschitiet in dc.tbl_machitiettks
+            //          select new
+            //          {
+            //              Mã_tài_khoản = dschitiet.matk,
+            //              Tên_tài_khoản_chi_tiết = dschitiet.tenchitiet,
+            //              Mã_chi_tiết = dschitiet.machitiet,
+            //              ID = dschitiet.id
+            //          };
+
+            var rs1 = Model.Danhsachtkchitiet.danhsachtaikhoanchitiet(dc);
+
+            Viewtable viewtbl = new Viewtable(rs1, dc, "DANH SÁCH MÃ CHI TIẾT TÀI KHOẢN", 2);// view code 2 mo so chi tiet tai khoan
+            viewtbl.Show();
+
+        }
     }
 }

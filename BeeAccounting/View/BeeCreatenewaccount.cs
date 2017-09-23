@@ -77,7 +77,7 @@ namespace BEEACCOUNT.View
 
 
             }
-            this.cbloaitk.SelectedIndex = 0;
+            this.cbloaitk.SelectedIndex = -1;
 
 
             #endregion

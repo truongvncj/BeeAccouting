@@ -976,6 +976,11 @@ namespace BEEACCOUNT.View
 
 
         }
+
+        private void Viewtable_FormClosed(object sender, FormClosedEventArgs e)
+        {
+       
+        }
     }
 
 

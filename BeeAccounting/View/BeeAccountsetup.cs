@@ -14,7 +14,8 @@ namespace BEEACCOUNT.View
 {
     public partial class BeeAccountsetup : Form
     {
-        public BeeAccountsetup()
+        public View.Main main1;
+        public BeeAccountsetup(View.Main Main)
         {
             InitializeComponent();
 
@@ -26,7 +27,7 @@ namespace BEEACCOUNT.View
             //         select tbl_dstaikhoan;
             var rs = Model.Taikhoanketoan.danhsachtaikhoan(db);
             grviewlisttk.DataSource = rs;
-
+            this.main1 = Main;
 
 
         
@@ -80,6 +81,10 @@ namespace BEEACCOUNT.View
         private void pictureBox2_Click_1(object sender, EventArgs e)
         {
             this.Close();
+            main1.clearpannel();
+            View.Beemainload main = new Beemainload(main1);
+
+            main1.clearpannelload(main);
         }
 
         private void pictureBox2_MouseHover(object sender, EventArgs e)

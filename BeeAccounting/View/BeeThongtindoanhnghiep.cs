@@ -217,16 +217,33 @@ namespace BEEACCOUNT.View
 
             var cty = (from ctyi in dc.tbl_congties
                        select ctyi).FirstOrDefault();
+            if (cty != null)
+            {
+                cty.tencongty = txtten.Text;
 
-            cty.tencongty = txtten.Text;
-
-            cty.diachicoty = txtdiachi.Text;
-            cty.Masothue = txtmasothue.Text;
-            cty.tengiamdoc = txttengiamdoc.Text;
-            cty.tenketoantruong = txttenketoantruong.Text;
+                cty.diachicoty = txtdiachi.Text;
+                cty.Masothue = txtmasothue.Text;
+                cty.tengiamdoc = txttengiamdoc.Text;
+                cty.tenketoantruong = txttenketoantruong.Text;
 
 
-            dc.SubmitChanges();
+                dc.SubmitChanges();
+            }
+            else
+            {
+                tbl_congty p = new tbl_congty();
+                p.tencongty = txtten.Text;
+
+                p.diachicoty = txtdiachi.Text;
+                p.Masothue = txtmasothue.Text;
+                p.tengiamdoc = txttengiamdoc.Text;
+                p.tenketoantruong = txttenketoantruong.Text;
+                dc.tbl_congties.InsertOnSubmit(p);
+                dc.SubmitChanges();
+
+
+
+            }
             MessageBox.Show("OK, Done !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
