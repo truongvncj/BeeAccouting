@@ -116,15 +116,15 @@
             this.groupBox1.Controls.Add(this.button10);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(184, 126);
+            this.groupBox1.Size = new System.Drawing.Size(184, 85);
             this.groupBox1.TabIndex = 40;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tiền mặt";
             // 
             // button13
             // 
-            this.button13.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.button13.Location = new System.Drawing.Point(6, 72);
+            this.button13.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.button13.Location = new System.Drawing.Point(6, 50);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(157, 22);
             this.button13.TabIndex = 14;
@@ -135,8 +135,8 @@
             // 
             // button10
             // 
-            this.button10.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.button10.Location = new System.Drawing.Point(6, 32);
+            this.button10.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.button10.Location = new System.Drawing.Point(6, 22);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(157, 22);
             this.button10.TabIndex = 13;
@@ -221,7 +221,7 @@
             // button25
             // 
             this.button25.BackColor = System.Drawing.Color.Transparent;
-            this.button25.Location = new System.Drawing.Point(13, 313);
+            this.button25.Location = new System.Drawing.Point(13, 233);
             this.button25.Name = "button25";
             this.button25.Size = new System.Drawing.Size(157, 22);
             this.button25.TabIndex = 21;
@@ -232,7 +232,7 @@
             // button20
             // 
             this.button20.BackColor = System.Drawing.Color.Transparent;
-            this.button20.Location = new System.Drawing.Point(13, 276);
+            this.button20.Location = new System.Drawing.Point(13, 205);
             this.button20.Name = "button20";
             this.button20.Size = new System.Drawing.Size(157, 22);
             this.button20.TabIndex = 20;
@@ -253,8 +253,8 @@
             // 
             // button17
             // 
-            this.button17.BackColor = System.Drawing.Color.GhostWhite;
-            this.button17.Location = new System.Drawing.Point(13, 237);
+            this.button17.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.button17.Location = new System.Drawing.Point(13, 172);
             this.button17.Name = "button17";
             this.button17.Size = new System.Drawing.Size(157, 22);
             this.button17.TabIndex = 18;
@@ -265,8 +265,8 @@
             // 
             // button16
             // 
-            this.button16.BackColor = System.Drawing.Color.GhostWhite;
-            this.button16.Location = new System.Drawing.Point(13, 200);
+            this.button16.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.button16.Location = new System.Drawing.Point(13, 144);
             this.button16.Name = "button16";
             this.button16.Size = new System.Drawing.Size(157, 22);
             this.button16.TabIndex = 17;
@@ -277,8 +277,8 @@
             // 
             // button4
             // 
-            this.button4.BackColor = System.Drawing.Color.GhostWhite;
-            this.button4.Location = new System.Drawing.Point(13, 162);
+            this.button4.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.button4.Location = new System.Drawing.Point(13, 116);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(157, 22);
             this.button4.TabIndex = 16;
@@ -289,8 +289,8 @@
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.Color.GhostWhite;
-            this.button3.Location = new System.Drawing.Point(13, 121);
+            this.button3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.button3.Location = new System.Drawing.Point(13, 88);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(157, 22);
             this.button3.TabIndex = 15;
@@ -301,8 +301,8 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.GhostWhite;
-            this.button1.Location = new System.Drawing.Point(13, 72);
+            this.button1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.button1.Location = new System.Drawing.Point(13, 60);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(157, 22);
             this.button1.TabIndex = 14;
@@ -313,7 +313,7 @@
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.GhostWhite;
+            this.button2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.button2.Location = new System.Drawing.Point(13, 32);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(157, 22);
@@ -417,15 +417,15 @@
             this.groupBox5.Controls.Add(this.button19);
             this.groupBox5.Location = new System.Drawing.Point(12, 145);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(184, 154);
+            this.groupBox5.Size = new System.Drawing.Size(184, 128);
             this.groupBox5.TabIndex = 42;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Mua hàng";
             // 
             // button32
             // 
-            this.button32.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.button32.Location = new System.Drawing.Point(6, 104);
+            this.button32.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.button32.Location = new System.Drawing.Point(6, 88);
             this.button32.Name = "button32";
             this.button32.Size = new System.Drawing.Size(166, 24);
             this.button32.TabIndex = 16;
@@ -436,7 +436,7 @@
             // 
             // button18
             // 
-            this.button18.Location = new System.Drawing.Point(6, 72);
+            this.button18.Location = new System.Drawing.Point(6, 60);
             this.button18.Name = "button18";
             this.button18.Size = new System.Drawing.Size(166, 22);
             this.button18.TabIndex = 14;

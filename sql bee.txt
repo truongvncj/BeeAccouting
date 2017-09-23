@@ -1,0 +1,928 @@
+USE [BEE]
+GO
+
+/****** Object:  Table [dbo].[Rpt_PhieuThu]    Script Date: 9/23/2017 11:16:09 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Rpt_PhieuThu](
+	[tencongty] [nvarchar](225) NULL,
+	[diachicongty] [nvarchar](225) NULL,
+	[masothue] [nvarchar](225) NULL,
+	[tengiamdoc] [nvarchar](225) NULL,
+	[tenketoantruong] [nvarchar](225) NULL,
+	[sophieuthu] [int] NOT NULL,
+	[ngaychungtu] [datetime] NULL,
+	[nguoinoptien] [nvarchar](100) NULL,
+	[nguoilapphieu] [nvarchar](100) NULL,
+	[diachinguoinop] [nvarchar](225) NULL,
+	[lydothu] [nvarchar](225) NULL,
+	[sotien] [float] NULL,
+	[sotienbangchu] [nvarchar](225) NULL,
+	[sochungtugoc] [int] NOT NULL,
+	[username] [nvarchar](50) NULL,
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[tkno] [nvarchar](10) NULL,
+	[quyenso] [nvarchar](10) NULL,
+	[tkco] [nvarchar](225) NULL,
+ CONSTRAINT [PK_tblRpt_PhieuThu] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+------------------
+
+USE [BEE]
+GO
+
+/****** Object:  Table [dbo].[RptdetaiCDPS]    Script Date: 9/23/2017 11:19:14 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[RptdetaiCDPS](
+	[username] [nvarchar](50) NULL,
+	[tentk] [nvarchar](225) NULL,
+	[Nodk] [float] NULL,
+	[Codk] [float] NULL,
+	[Psno] [float] NULL,
+	[Psco] [float] NULL,
+	[Cock] [float] NULL,
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[Nock] [float] NULL,
+	[matk] [nvarchar](50) NULL,
+ CONSTRAINT [PK_RptdetaiCDPS] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+-------------
+USE [BEE]
+GO
+
+/****** Object:  Table [dbo].[RptdetailSoCai]    Script Date: 9/23/2017 11:19:26 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[RptdetailSoCai](
+	[username] [nvarchar](50) NULL,
+	[Ngaychungtu] [datetime] NULL,
+	[machungtu] [nvarchar](10) NOT NULL,
+	[diengiai] [nvarchar](225) NULL,
+	[taikhoandoiung] [nvarchar](50) NULL,
+	[psco] [float] NULL,
+	[psno] [float] NULL,
+	[ton] [float] NULL,
+	[id] [int] IDENTITY(1,1) NOT NULL,
+ CONSTRAINT [PK_RptdetailSoCai] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+------------
+USE [BEE]
+GO
+
+/****** Object:  Table [dbo].[RptdetailSocaichitiet]    Script Date: 9/23/2017 11:19:37 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[RptdetailSocaichitiet](
+	[username] [nvarchar](50) NULL,
+	[Ngaychungtu] [datetime] NULL,
+	[machungtu] [nvarchar](10) NOT NULL,
+	[diengiai] [nvarchar](225) NULL,
+	[taikhoandoiung] [nvarchar](50) NULL,
+	[psco] [float] NULL,
+	[psno] [float] NULL,
+	[ton] [float] NULL,
+	[id] [int] IDENTITY(1,1) NOT NULL,
+ CONSTRAINT [PK_RptdetailSocaichitiet] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+------------------------
+USE [BEE]
+GO
+
+/****** Object:  Table [dbo].[RptdetailSoQuy]    Script Date: 9/23/2017 11:19:51 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[RptdetailSoQuy](
+	[username] [nvarchar](50) NULL,
+	[Ngaychungtu] [datetime] NULL,
+	[machungtuthu] [nvarchar](10) NOT NULL,
+	[machungtuchi] [nvarchar](10) NULL,
+	[diengiai] [nvarchar](225) NULL,
+	[taikhoandoiung] [nvarchar](50) NULL,
+	[psco] [float] NULL,
+	[psno] [float] NULL,
+	[ton] [float] NULL,
+	[id] [int] IDENTITY(1,1) NOT NULL,
+ CONSTRAINT [PK_RptdetailSoQuy] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+--------------
+USE [BEE]
+GO
+
+/****** Object:  Table [dbo].[RptdetaiNKC]    Script Date: 9/23/2017 11:20:04 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[RptdetaiNKC](
+	[username] [nvarchar](50) NULL,
+	[Ngaychungtu] [datetime] NULL,
+	[machungtu] [nvarchar](10) NOT NULL,
+	[diengiai] [nvarchar](225) NULL,
+	[taikhoandoiung] [nvarchar](50) NULL,
+	[psco] [float] NULL,
+	[psno] [float] NULL,
+	[ton] [float] NULL,
+	[id] [int] IDENTITY(1,1) NOT NULL,
+ CONSTRAINT [PK_RptdetaiNKC] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+----------------
+USE [BEE]
+GO
+
+/****** Object:  Table [dbo].[RptdetaiTHchitiet]    Script Date: 9/23/2017 11:20:14 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[RptdetaiTHchitiet](
+	[username] [nvarchar](50) NULL,
+	[tenchitiet] [nvarchar](225) NULL,
+	[stt] [int] NULL,
+	[Nodk] [float] NULL,
+	[Codk] [float] NULL,
+	[Psno] [float] NULL,
+	[Psco] [float] NULL,
+	[Cock] [float] NULL,
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[Nock] [float] NULL,
+	[machitiet] [int] NULL,
+ CONSTRAINT [PK_RptdetaiTHchitiet] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+--------------
+USE [BEE]
+GO
+
+/****** Object:  Table [dbo].[RPtheadCDPS]    Script Date: 9/23/2017 11:20:25 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[RPtheadCDPS](
+	[tungay] [datetime] NULL,
+	[denngay] [datetime] NULL,
+	[giamdoc] [nvarchar](50) NULL,
+	[ketoantruong] [nvarchar](50) NULL,
+	[nguoighiso] [nvarchar](50) NULL,
+	[tencongty] [nvarchar](225) NULL,
+	[masothue] [nvarchar](50) NULL,
+	[diachicongty] [nvarchar](225) NULL,
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[username] [nvarchar](50) NULL,
+	[taikhoan] [nvarchar](50) NULL,
+ CONSTRAINT [PK_RPtheadCDPS] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+----------------
+USE [BEE]
+GO
+
+/****** Object:  Table [dbo].[RPtheadNKC]    Script Date: 9/23/2017 11:20:35 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[RPtheadNKC](
+	[nam] [nvarchar](4) NULL,
+	[giamdoc] [nvarchar](50) NULL,
+	[ketoantruong] [nvarchar](50) NULL,
+	[nguoighiso] [nvarchar](50) NULL,
+	[tencongty] [nvarchar](225) NULL,
+	[masothue] [nvarchar](50) NULL,
+	[diachicongty] [nvarchar](225) NULL,
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[username] [nvarchar](50) NULL,
+	[taikhoan] [nvarchar](50) NULL,
+ CONSTRAINT [PK_RPtheadNKC] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+-------------------
+USE [BEE]
+GO
+
+/****** Object:  Table [dbo].[RPtheadSocai]    Script Date: 9/23/2017 11:20:45 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[RPtheadSocai](
+	[tungay] [datetime] NULL,
+	[denngay] [datetime] NULL,
+	[nodauky] [float] NULL,
+	[codauky] [float] NULL,
+	[psno] [float] NULL,
+	[psco] [float] NULL,
+	[cocuoiky] [float] NULL,
+	[nocuoiky] [float] NULL,
+	[tencongty] [nvarchar](225) NULL,
+	[masothue] [nvarchar](50) NULL,
+	[diachicongty] [nvarchar](225) NULL,
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[username] [nvarchar](50) NULL,
+	[taikhoan] [nvarchar](50) NULL,
+ CONSTRAINT [PK_RPtheadSocai] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+------------------
+USE [BEE]
+GO
+
+/****** Object:  Table [dbo].[RPtheadSocaichitiet]    Script Date: 9/23/2017 11:20:54 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[RPtheadSocaichitiet](
+	[tungay] [datetime] NULL,
+	[denngay] [datetime] NULL,
+	[nodauky] [float] NULL,
+	[codauky] [float] NULL,
+	[psno] [float] NULL,
+	[psco] [float] NULL,
+	[cocuoiky] [float] NULL,
+	[nocuoiky] [float] NULL,
+	[tencongty] [nvarchar](225) NULL,
+	[masothue] [nvarchar](50) NULL,
+	[diachicongty] [nvarchar](225) NULL,
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[username] [nvarchar](50) NULL,
+	[taikhoan] [nvarchar](50) NULL,
+	[tenchitiettk] [nvarchar](225) NULL,
+ CONSTRAINT [PK_RPtheadSocaichitiet] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+-------------
+USE [BEE]
+GO
+
+/****** Object:  Table [dbo].[RPtheadTHchitiet]    Script Date: 9/23/2017 11:21:04 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[RPtheadTHchitiet](
+	[tencongty] [nvarchar](225) NULL,
+	[masothue] [nvarchar](50) NULL,
+	[diachicongty] [nvarchar](225) NULL,
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[username] [nvarchar](50) NULL,
+	[taikhoan] [nvarchar](50) NULL,
+	[tungay] [datetime] NULL,
+	[denngay] [datetime] NULL,
+ CONSTRAINT [PK_RPtheadTHchitiet] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+------------------
+USE [BEE]
+GO
+
+/****** Object:  Table [dbo].[RPtsoQuy]    Script Date: 9/23/2017 11:21:13 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[RPtsoQuy](
+	[loaiquy] [nvarchar](50) NULL,
+	[tungay] [datetime] NULL,
+	[denngay] [datetime] NULL,
+	[nodauky] [float] NULL,
+	[codauky] [float] NULL,
+	[psno] [float] NULL,
+	[psco] [float] NULL,
+	[cocuoiky] [float] NULL,
+	[nocuoiky] [float] NULL,
+	[tencongty] [nvarchar](225) NULL,
+	[masothue] [nvarchar](50) NULL,
+	[diachicongty] [nvarchar](225) NULL,
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[username] [nvarchar](50) NULL,
+	[taikhoan] [nvarchar](50) NULL,
+ CONSTRAINT [PK_RPtsoQuy] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+--------------------
+USE [BEE]
+GO
+
+/****** Object:  Table [dbo].[tbl_congty]    Script Date: 9/23/2017 11:21:23 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[tbl_congty](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[tengiamdoc] [nvarchar](50) NULL,
+	[diachicoty] [nvarchar](225) NULL,
+	[tencongty] [nvarchar](225) NULL,
+	[Masothue] [nvarchar](50) NULL,
+	[chedoketoanapdung] [nvarchar](225) NULL,
+	[tenketoantruong] [nvarchar](50) NULL,
+ CONSTRAINT [PK_congty] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+-----------------
+USE [BEE]
+GO
+
+/****** Object:  Table [dbo].[tbl_Customer]    Script Date: 9/23/2017 11:21:37 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[tbl_Customer](
+	[Customer] [float] NULL,
+	[SalesOrg] [nvarchar](10) NULL,
+	[FullNameN] [nvarchar](255) NULL,
+	[Street] [nvarchar](255) NULL,
+	[District] [nvarchar](255) NULL,
+	[City] [nvarchar](255) NULL,
+	[Region] [nvarchar](10) NULL,
+	[Telephone1] [nvarchar](50) NULL,
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[PaymentTerms] [nchar](10) NULL,
+	[PriceList] [nchar](10) NULL,
+	[KeyAcc] [nvarchar](50) NULL,
+	[SalesDistrict] [nvarchar](50) NULL,
+	[CreatedOn] [date] NULL,
+	[ReconciliationAcct] [nvarchar](50) NULL,
+	[VATregistrationNo] [nvarchar](50) NULL,
+	[CentralOrBlk] [nvarchar](50) NULL,
+	[OrBlk] [varchar](50) NULL,
+	[CTDescription] [nvarchar](225) NULL,
+	[KANAME] [nvarchar](225) NULL,
+	[UPDDAT] [date] NULL,
+	[CCDescription] [nvarchar](225) NULL,
+	[KAGROUP] [nvarchar](50) NULL,
+	[CHN] [nvarchar](50) NULL,
+	[BU] [nvarchar](50) NULL,
+	[Vendor] [nvarchar](50) NULL,
+	[Createdby] [nvarchar](50) NULL,
+	[Representative] [nvarchar](225) NULL,
+	[Grpcode] [bit] NOT NULL,
+	[SFAcode] [bit] NOT NULL,
+	[SapCode] [bit] NOT NULL,
+	[indirectCode] [bit] NOT NULL,
+	[SALORG_CTR] [nchar](10) NULL,
+ CONSTRAINT [PK_tblCustomer_1] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+ALTER TABLE [dbo].[tbl_Customer] ADD  CONSTRAINT [DF_tbl_KaCustomer_SapCode1]  DEFAULT ((0)) FOR [Grpcode]
+GO
+
+ALTER TABLE [dbo].[tbl_Customer] ADD  CONSTRAINT [DF_tbl_KaCustomer_SapCode2]  DEFAULT ((0)) FOR [SFAcode]
+GO
+
+ALTER TABLE [dbo].[tbl_Customer] ADD  CONSTRAINT [DF_tbl_KaCustomer_SapCode]  DEFAULT ((0)) FOR [SapCode]
+GO
+
+ALTER TABLE [dbo].[tbl_Customer] ADD  CONSTRAINT [DF_tbl_KaCustomer_SapCode1_1]  DEFAULT ((0)) FOR [indirectCode]
+GO
+
+----------------
+USE [BEE]
+GO
+
+/****** Object:  Table [dbo].[tbl_danhsachkhachang]    Script Date: 9/23/2017 11:21:47 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[tbl_danhsachkhachang](
+	[makhachhang] [nvarchar](50) NULL,
+	[tenkhachhang] [nvarchar](255) NULL,
+	[sonha] [nvarchar](255) NULL,
+	[duongpho] [nvarchar](255) NULL,
+	[huyenquan] [nvarchar](255) NULL,
+	[thanhpho] [nvarchar](10) NULL,
+	[dienthoai] [nvarchar](50) NULL,
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[masothue] [nvarchar](50) NULL,
+	[sotaikhoannganhang] [nvarchar](50) NULL,
+	[tennganhang] [nvarchar](225) NULL,
+	[ghichunganhnghe] [nvarchar](225) NULL,
+	[nguoidaidien] [nvarchar](225) NULL,
+	[quocgia] [nvarchar](10) NULL,
+	[usertao] [nvarchar](50) NULL,
+	[ngaytao] [datetime] NULL,
+ CONSTRAINT [PK_tbl_danhsachkhachang] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+-----------------
+USE [BEE]
+GO
+
+/****** Object:  Table [dbo].[tbl_danhsachnhacungcap]    Script Date: 9/23/2017 11:21:56 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[tbl_danhsachnhacungcap](
+	[maNcc] [nvarchar](50) NULL,
+	[tenNcc] [nvarchar](255) NULL,
+	[sonha] [nvarchar](255) NULL,
+	[duongpho] [nvarchar](255) NULL,
+	[huyenquan] [nvarchar](255) NULL,
+	[thanhpho] [nvarchar](10) NULL,
+	[dienthoai] [nvarchar](50) NULL,
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[masothue] [nvarchar](50) NULL,
+	[sotaikhoannganhang] [nvarchar](50) NULL,
+	[tennganhang] [nvarchar](225) NULL,
+	[ghichunganhnghe] [nvarchar](225) NULL,
+	[nguoidaidien] [nvarchar](225) NULL,
+	[quocgia] [nvarchar](10) NULL,
+	[usertao] [nvarchar](50) NULL,
+	[ngaytao] [datetime] NULL,
+ CONSTRAINT [PK_tbl_danhsachnhacungcap] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+----------------------
+USE [BEE]
+GO
+
+/****** Object:  Table [dbo].[tbl_dstaikhoan]    Script Date: 9/23/2017 11:22:05 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[tbl_dstaikhoan](
+	[matk] [nchar](10) NULL,
+	[tentk] [nchar](50) NULL,
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[captk] [int] NOT NULL CONSTRAINT [DF_tbl_dstaikhoan_captk]  DEFAULT ((1)),
+	[matktren] [nchar](10) NULL CONSTRAINT [DF_tbl_dstaikhoan_matktren]  DEFAULT ((0)),
+	[loaitkid] [int] NULL CONSTRAINT [DF_tbl_dstaikhoan_loaitkid]  DEFAULT ((4)),
+	[loaichitiet] [bit] NOT NULL CONSTRAINT [DF_tbl_dstaikhoan_loaichitiet]  DEFAULT ((0)),
+	[nodk] [float] NULL CONSTRAINT [DF_tbl_dstaikhoan_nodk]  DEFAULT ((0)),
+	[codk] [float] NULL CONSTRAINT [DF_tbl_dstaikhoan_codk]  DEFAULT ((0)),
+ CONSTRAINT [PK_tbl_dstaikhoan] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+-------------------
+USE [BEE]
+GO
+
+/****** Object:  Table [dbo].[tbl_kho_detail_phieunhapkho]    Script Date: 9/23/2017 11:22:14 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[tbl_kho_detail_phieunhapkho](
+	[sophieu] [int] NULL,
+	[makhang] [nvarchar](50) NULL,
+	[tenhang] [nvarchar](225) NULL,
+	[donvi] [nvarchar](10) NULL,
+	[soluongyeucau] [int] NULL,
+	[soluongnhap] [int] NULL,
+	[dongia] [float] NULL,
+	[thanhtien] [float] NULL,
+	[id] [int] IDENTITY(1,1) NOT NULL,
+ CONSTRAINT [PK_tbl_kho_detail_phieunhapkho] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+-----------------
+USE [BEE]
+GO
+
+/****** Object:  Table [dbo].[tbl_kho_dichvu]    Script Date: 9/23/2017 11:22:23 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[tbl_kho_dichvu](
+	[madv] [nvarchar](50) NULL,
+	[tendv] [nvarchar](225) NULL,
+	[mavach] [nvarchar](50) NULL,
+	[donvi] [nvarchar](10) NULL,
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[idmanhomsp] [nvarchar](10) NULL,
+	[ghichu] [nvarchar](225) NULL,
+ CONSTRAINT [PK_tbl_kho_dichvu] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+------------------
+USE [BEE]
+GO
+
+/****** Object:  Table [dbo].[tbl_kho_head_phieunhapkho]    Script Date: 9/23/2017 11:22:33 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[tbl_kho_head_phieunhapkho](
+	[ngayphieunhap] [datetime] NULL,
+	[sophieu] [int] NULL,
+	[nguoigiao] [nvarchar](50) NULL,
+	[diachibophan] [nvarchar](225) NULL,
+	[makho] [nvarchar](50) NULL,
+	[hoadondikhem] [nvarchar](50) NULL,
+	[notk] [nvarchar](50) NULL,
+	[cotk] [nvarchar](50) NULL,
+	[createby] [nvarchar](50) NULL,
+	[createdate] [datetime] NULL,
+	[id] [int] IDENTITY(1,1) NOT NULL,
+ CONSTRAINT [PK_tbl_kho_head_phieunhapkho] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+----------------
+USE [BEE]
+GO
+
+/****** Object:  Table [dbo].[tbl_kho_nhomsanpham]    Script Date: 9/23/2017 11:22:42 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[tbl_kho_nhomsanpham](
+	[manhomsanpham] [nchar](10) NULL,
+	[tennhomsanpham] [nvarchar](50) NULL,
+	[id] [int] IDENTITY(1,1) NOT NULL,
+ CONSTRAINT [PK_manhomsanpham] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+------------------
+USE [BEE]
+GO
+
+/****** Object:  Table [dbo].[tbl_kho_sanpham]    Script Date: 9/23/2017 11:22:51 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[tbl_kho_sanpham](
+	[masp] [nvarchar](50) NULL,
+	[tensp] [nvarchar](225) NULL,
+	[mavach] [nvarchar](50) NULL,
+	[donvi] [nvarchar](10) NULL,
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[trongluong] [float] NULL,
+	[khoiluong] [float] NULL,
+	[idmanhomsp] [nvarchar](10) NULL,
+	[ghichu] [nvarchar](225) NULL,
+ CONSTRAINT [PK_tbl_kho_sanpham] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+-----------------
+USE [BEE]
+GO
+
+/****** Object:  Table [dbo].[tbl_khohang]    Script Date: 9/23/2017 11:23:00 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[tbl_khohang](
+	[tenkho] [nvarchar](50) NULL,
+	[makho] [nvarchar](10) NULL,
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[diachikho] [nvarchar](50) NULL,
+	[ghichu] [nvarchar](50) NULL,
+ CONSTRAINT [PK_tbl_khohang] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+------------------
+USE [BEE]
+GO
+
+/****** Object:  Table [dbo].[tbl_loaitk]    Script Date: 9/23/2017 11:23:09 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[tbl_loaitk](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[name] [nchar](50) NULL,
+	[idloaitk] [int] NULL,
+ CONSTRAINT [PK_tbl_loaitk] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+----------------
+USE [BEE]
+GO
+
+/****** Object:  Table [dbo].[tbl_machitiettk]    Script Date: 9/23/2017 11:23:19 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[tbl_machitiettk](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[tenchitiet] [nvarchar](50) NULL,
+	[matk] [nvarchar](50) NULL,
+	[machitiet] [int] NULL,
+	[ghichu] [nvarchar](225) NULL,
+	[nodk] [float] NULL CONSTRAINT [DF_tbl_machitiettk_nodk]  DEFAULT ((0)),
+	[codk] [float] NULL CONSTRAINT [DF_tbl_machitiettk_codk]  DEFAULT ((0)),
+ CONSTRAINT [PK_tbl_machitiettk] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+--------------
+USE [BEE]
+GO
+
+/****** Object:  Table [dbo].[tbl_Socai]    Script Date: 9/23/2017 11:23:29 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[tbl_Socai](
+	[Diengiai] [nchar](225) NULL,
+	[Ngayghiso] [datetime] NULL,
+	[Ngayctu] [datetime] NULL,
+	[manghiepvu] [nvarchar](10) NULL,
+	[nghiepvuso] [int] NULL,
+	[username] [nvarchar](10) NULL,
+	[TkNo] [nvarchar](10) NULL,
+	[TkCo] [nvarchar](10) NULL,
+	[MaCTietTKCo] [int] NULL,
+	[MaCTietTKNo] [int] NULL,
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[Kyhieuctu] [nvarchar](50) NULL,
+	[Soctu] [int] NULL,
+	[tenchitietCo] [nvarchar](225) NULL,
+	[tenchitietNo] [nvarchar](225) NULL,
+	[PsNo] [float] NULL,
+	[PsCo] [float] NULL,
+ CONSTRAINT [PK_Socai] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+--------------
+USE [BEE]
+GO
+
+/****** Object:  Table [dbo].[tbl_SoQuy]    Script Date: 9/23/2017 11:23:39 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[tbl_SoQuy](
+	[TKtienmat] [nvarchar](10) NULL,
+	[ChitietTM] [int] NULL,
+	[Ngayctu] [datetime] NOT NULL,
+	[Sochungtu] [int] NOT NULL,
+	[Machungtu] [nvarchar](10) NULL,
+	[PsNo] [float] NULL,
+	[PsCo] [float] NULL,
+	[Diengiai] [nvarchar](225) NULL,
+	[Chitietdoiung] [int] NULL,
+	[Nguoinopnhantien] [nvarchar](100) NULL,
+	[Diachinguoinhannop] [nvarchar](225) NULL,
+	[Chungtugockemtheo] [int] NOT NULL,
+	[Ngayghiso] [datetime] NULL,
+	[Username] [nvarchar](50) NULL,
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[quyenso] [nvarchar](10) NULL,
+	[TKdoiung] [nvarchar](225) NULL,
+	[TenchitietTM] [nvarchar](225) NULL,
+ CONSTRAINT [PK_SoQuy2] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+----------------
+USE [BEE]
+GO
+
+/****** Object:  Table [dbo].[tbl_Temp]    Script Date: 9/23/2017 11:23:49 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[tbl_Temp](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[Version] [int] NULL,
+	[RegionCode] [nchar](225) NULL,
+	[username] [nchar](225) NULL,
+	[password] [nchar](225) NULL,
+	[userright] [int] NULL,
+	[note] [nchar](225) NULL,
+	[inputcontract] [bit] NOT NULL CONSTRAINT [DF_tbl_Temp_inputcontract]  DEFAULT ((0)),
+	[name] [nvarchar](50) NULL,
+ CONSTRAINT [PK_temp] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+
