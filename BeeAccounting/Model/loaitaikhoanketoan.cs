@@ -54,7 +54,7 @@ namespace BEEACCOUNT.Model
 
             bool chon = loaitkform.chon;
             string tenloaitk = loaitkform.tenloaitk;
-            int maloaitk = loaitkform.maloaitk;
+            string maloaitk = loaitkform.maloaitk;
             if (chon)
             {
                 string connection_string = Utils.getConnectionstr();

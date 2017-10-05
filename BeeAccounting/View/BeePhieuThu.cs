@@ -229,7 +229,7 @@ namespace BEEACCOUNT.View
 
 
             var rs2 = from tk in dc.tbl_dstaikhoans
-                      where tk.loaitkid == 8 // mã 8 là tiền mặt
+                      where tk.loaitkid == "tien" // mã 8 là tiền mặt
                       select tk;
 
             //      string drowdownshow = "";
@@ -1451,7 +1451,7 @@ namespace BEEACCOUNT.View
             //#region load tk nợ
             List<ComboboxItem> CombomCollection = new List<ComboboxItem>();
             var rs = from tbl_dstaikhoan in dc.tbl_dstaikhoans
-                     where tbl_dstaikhoan.loaitkid == 8 // tien mat la loai 8
+                     where tbl_dstaikhoan.loaitkid == "tien" // tien mat la loai 8
                      orderby tbl_dstaikhoan.matk
                      select tbl_dstaikhoan;
             foreach (var item in rs)

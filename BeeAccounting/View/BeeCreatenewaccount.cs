@@ -19,7 +19,7 @@ namespace BEEACCOUNT.View
         public string tentk { get; set; }
         public bool chon { get; set; }
         public bool tkchitiet { get; set; }
-        public int loaitk { get; set; }
+        public string loaitk { get; set; }
 
         public int captk { get; set; }
         public string tkcaptren { get; set; }
@@ -69,7 +69,7 @@ namespace BEEACCOUNT.View
 
                 ComboboxItem cb1 = new ComboboxItem();
                 cb1.Value = item.idloaitk;
-                cb1.Text = item.idloaitk + ": " + item.name;
+                cb1.Text = item.idloaitk.Trim() + ": " + item.name;
                 this.cbloaitk.Items.Add(cb1); // CombomCollection.Add(cb);
                                               //this.cb_customerka.se = cb_customerka.Items.Count+1;
 
@@ -147,7 +147,20 @@ namespace BEEACCOUNT.View
 
                     if (rs1.loaitkid != null)
                     {
-                        this.cbloaitk.SelectedIndex = (int)rs1.loaitkid - 1;
+                        foreach (var item in cbloaitk.Items)
+                        {
+                            if ((string)(item as ComboboxItem).Value == rs1.loaitkid)
+                            {
+                                this.cbloaitk.SelectedItem = item;
+                            }
+
+                        }
+
+
+
+
+
+                   
                     }
                     
                     this.txtcaptaikhoan.Text = rs1.captk.ToString();
@@ -294,7 +307,7 @@ namespace BEEACCOUNT.View
             {
                 //  newcontract.Channel = this.cb_channel.SelectedItem.ToString();
 
-                loaitk = (int)(cbloaitk.SelectedItem as ComboboxItem).Value;// (cbm.SelectedItem as ComboboxItem).Value.ToString();
+                loaitk = (string)(cbloaitk.SelectedItem as ComboboxItem).Value;// (cbm.SelectedItem as ComboboxItem).Value.ToString();
 
             }
             else
@@ -416,7 +429,7 @@ namespace BEEACCOUNT.View
              
 
 
-            if (matk != "" && tentk != "" && loaitk > 0)
+            if (matk != "" && tentk != "" && loaitk !="")
             {
                 chon = true;
                 this.Close();
@@ -507,7 +520,7 @@ namespace BEEACCOUNT.View
             {
                 //  newcontract.Channel = this.cb_channel.SelectedItem.ToString();
 
-                loaitk = (int)(cbloaitk.SelectedItem as ComboboxItem).Value;// (cbm.SelectedItem as ComboboxItem).Value.ToString();
+                loaitk = (String)(cbloaitk.SelectedItem as ComboboxItem).Value;// (cbm.SelectedItem as ComboboxItem).Value.ToString();
 
             }
             else
@@ -581,7 +594,7 @@ namespace BEEACCOUNT.View
 
 
 
-            if (matk != "" && tentk != "" && loaitk > 0)
+            if (matk != "" && tentk != "" && loaitk !="")
             {
                 chon = true;
                 string connection_string = Utils.getConnectionstr();

@@ -8454,7 +8454,7 @@ namespace BEEACCOUNT
 		
 		private string _matktren;
 		
-		private System.Nullable<int> _loaitkid;
+		private string _loaitkid;
 		
 		private bool _loaichitiet;
 		
@@ -8476,7 +8476,7 @@ namespace BEEACCOUNT
     partial void OncaptkChanged();
     partial void OnmatktrenChanging(string value);
     partial void OnmatktrenChanged();
-    partial void OnloaitkidChanging(System.Nullable<int> value);
+    partial void OnloaitkidChanging(string value);
     partial void OnloaitkidChanged();
     partial void OnloaichitietChanging(bool value);
     partial void OnloaichitietChanged();
@@ -8591,8 +8591,8 @@ namespace BEEACCOUNT
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_loaitkid", DbType="Int")]
-		public System.Nullable<int> loaitkid
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_loaitkid", DbType="NChar(50)")]
+		public string loaitkid
 		{
 			get
 			{
@@ -9986,7 +9986,7 @@ namespace BEEACCOUNT
 		
 		private string _name;
 		
-		private System.Nullable<int> _idloaitk;
+		private string _idloaitk;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -9996,7 +9996,7 @@ namespace BEEACCOUNT
     partial void OnidChanged();
     partial void OnnameChanging(string value);
     partial void OnnameChanged();
-    partial void OnidloaitkChanging(System.Nullable<int> value);
+    partial void OnidloaitkChanging(string value);
     partial void OnidloaitkChanged();
     #endregion
 		
@@ -10045,8 +10045,8 @@ namespace BEEACCOUNT
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idloaitk", DbType="Int")]
-		public System.Nullable<int> idloaitk
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idloaitk", DbType="NChar(50)")]
+		public string idloaitk
 		{
 			get
 			{

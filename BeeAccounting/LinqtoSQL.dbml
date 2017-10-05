@@ -394,7 +394,7 @@
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="captk" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="matktren" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
-      <Column Name="loaitkid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="loaitkid" Type="System.String" DbType="NChar(50)" CanBeNull="true" />
       <Column Name="loaichitiet" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
       <Column Name="nodk" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Column Name="codk" Type="System.Double" DbType="Float" CanBeNull="true" />
@@ -472,7 +472,7 @@
     <Type Name="tbl_loaitk">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="name" Type="System.String" DbType="NChar(50)" CanBeNull="true" />
-      <Column Name="idloaitk" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idloaitk" Type="System.String" DbType="NChar(50)" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.tbl_machitiettk" Member="tbl_machitiettks">

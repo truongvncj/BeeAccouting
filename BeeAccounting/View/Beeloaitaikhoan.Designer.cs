@@ -31,22 +31,22 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Beeloaitaikhoan));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.tbmaloaitk = new System.Windows.Forms.TextBox();
             this.bttaomoi = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.texttenloaitk = new System.Windows.Forms.TextBox();
             this.btupdate = new System.Windows.Forms.Button();
             this.btxoa = new System.Windows.Forms.Button();
+            this.cbmaloaitk = new System.Windows.Forms.ComboBox();
+            this.txttenloaitk = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.txttenloaitk);
+            this.panel1.Controls.Add(this.cbmaloaitk);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.tbmaloaitk);
             this.panel1.Controls.Add(this.bttaomoi);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.texttenloaitk);
             this.panel1.Controls.Add(this.btupdate);
             this.panel1.Controls.Add(this.btxoa);
             this.panel1.Location = new System.Drawing.Point(5, 3);
@@ -65,14 +65,6 @@
             this.label2.Size = new System.Drawing.Size(125, 20);
             this.label2.TabIndex = 56;
             this.label2.Text = "Mã loại tài khoản";
-            // 
-            // tbmaloaitk
-            // 
-            this.tbmaloaitk.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbmaloaitk.Location = new System.Drawing.Point(171, 57);
-            this.tbmaloaitk.Name = "tbmaloaitk";
-            this.tbmaloaitk.Size = new System.Drawing.Size(88, 26);
-            this.tbmaloaitk.TabIndex = 55;
             // 
             // bttaomoi
             // 
@@ -99,14 +91,6 @@
             this.label1.Size = new System.Drawing.Size(125, 20);
             this.label1.TabIndex = 52;
             this.label1.Text = "Tên loại tài khoản";
-            // 
-            // texttenloaitk
-            // 
-            this.texttenloaitk.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.texttenloaitk.Location = new System.Drawing.Point(171, 21);
-            this.texttenloaitk.Name = "texttenloaitk";
-            this.texttenloaitk.Size = new System.Drawing.Size(368, 26);
-            this.texttenloaitk.TabIndex = 51;
             // 
             // btupdate
             // 
@@ -136,6 +120,34 @@
             this.btxoa.UseVisualStyleBackColor = false;
             this.btxoa.Click += new System.EventHandler(this.btxoa_Click);
             // 
+            // cbmaloaitk
+            // 
+            this.cbmaloaitk.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbmaloaitk.FormattingEnabled = true;
+            this.cbmaloaitk.Items.AddRange(new object[] {
+            "tien",
+            "kho",
+            "taisan",
+            "nguonvon",
+            "doanhthu",
+            "chiphi",
+            "xacdinhkqkd",
+            "loinhuan",
+            "phaithu",
+            "phaichi",
+            "tamung"});
+            this.cbmaloaitk.Location = new System.Drawing.Point(171, 57);
+            this.cbmaloaitk.Name = "cbmaloaitk";
+            this.cbmaloaitk.Size = new System.Drawing.Size(214, 21);
+            this.cbmaloaitk.TabIndex = 58;
+            // 
+            // txttenloaitk
+            // 
+            this.txttenloaitk.Location = new System.Drawing.Point(171, 21);
+            this.txttenloaitk.Name = "txttenloaitk";
+            this.txttenloaitk.Size = new System.Drawing.Size(382, 20);
+            this.txttenloaitk.TabIndex = 59;
+            // 
             // Beeloaitaikhoan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -161,9 +173,9 @@
         private System.Windows.Forms.Button btupdate;
         private System.Windows.Forms.Button btxoa;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox texttenloaitk;
         private System.Windows.Forms.Button bttaomoi;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox tbmaloaitk;
+        private System.Windows.Forms.TextBox txttenloaitk;
+        private System.Windows.Forms.ComboBox cbmaloaitk;
     }
 }

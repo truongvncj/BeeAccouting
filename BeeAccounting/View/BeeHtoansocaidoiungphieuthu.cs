@@ -77,12 +77,25 @@ namespace BEEACCOUNT.View
 
             string connection_string = Utils.getConnectionstr();
             LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+            tbl_loaitk tkkt = new tbl_loaitk();
 
             var rs1 = from tk in dc.tbl_dstaikhoans
-                      where tk.loaitkid == 5 || tk.loaitkid == 9 || tk.loaitkid == 7  // 5.nguon von;  7 phai tra; 9. tam ung
+                      where tk.loaitkid == "nguonvon" || tk.loaitkid == "phaitra" || tk.loaitkid == "tamung"  // 5.nguon von;  7 phai tra; 9. tam ung
                       select tk;
 
             //      string drowdownshow = "";
+
+        //            tien
+        //kho
+        //taisan
+        //nguonvon
+        //doanhthu
+        //chiphi
+        //xacdinhkqkd
+        //loinhuan
+        //phaithu
+        //phaichi
+        //tamung
 
             foreach (var item in rs1)
             {

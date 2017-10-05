@@ -19,7 +19,7 @@ namespace BEEACCOUNT.View
 
         public bool chon { get; set; }
         public int id { get; set; }
-        public int maloaitk { get; set; }
+        public string maloaitk { get; set; }
         public string tenloaitk { get; set; }
 
 
@@ -70,12 +70,20 @@ namespace BEEACCOUNT.View
                            where loaitkketoan.id == id
                            select loaitkketoan).FirstOrDefault();
 
-               
 
 
-                    texttenloaitk.Text = rs1.name;
-                    tbmaloaitk.Text = rs1.idloaitk.ToString();
-                    this.id = id;
+
+                txttenloaitk.Text = rs1.name;
+
+                foreach (var item in cbmaloaitk.Items)
+                {
+                    if (item.ToString().Trim() == rs1.idloaitk.Trim())
+                    {
+                        cbmaloaitk.SelectedItem = item;
+                    }
+                }
+           //     cbmaloaitk.Text = rs1.idloaitk.ToString();
+                    this.id = rs1.id;
 
 
 
@@ -316,29 +324,31 @@ namespace BEEACCOUNT.View
 
             if (rs1 != null)
             {
+                //      txttenloaitk.Text = rs1.name;
+            //    cbmaloaitk.Text = rs1.idloaitk.ToString();
 
-                if (Utils.IsValidnumber(tbmaloaitk.Text.ToString()))
+                if (cbmaloaitk.Text.ToString()!= "")
                 {
-                    rs1.idloaitk = int.Parse(tbmaloaitk.Text.ToString());
+                    rs1.idloaitk = cbmaloaitk.Text.ToString();
 
                 }
                 else
                 {
                     chon = false;
-                    MessageBox.Show("Loại tài khoản phải là số ", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Phải chọn loại tài khoản", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
                     return;
                 }
 
-                if (texttenloaitk.Text != null && texttenloaitk.Text != "")
+                if (txttenloaitk.Text != null && txttenloaitk.Text != "")
                 {
-                    if (texttenloaitk.Text.ToString().Length > 225)
+                    if (txttenloaitk.Text.ToString().Length > 225)
                     {
-                        rs1.name = texttenloaitk.Text.ToString().Substring(225);
+                        rs1.name = txttenloaitk.Text.ToString().Substring(225);
                     }
                     else
                     {
-                        rs1.name = texttenloaitk.Text.ToString();
+                        rs1.name = txttenloaitk.Text.ToString();
                     }
 
                     chon = true;
@@ -411,7 +421,7 @@ namespace BEEACCOUNT.View
         private void bttaomoi_Click(object sender, EventArgs e)
         {
 
-            if (Utils.IsValidnumber(this.tbmaloaitk.Text.ToString()))
+            if (this.cbmaloaitk.Text.ToString() !="")
             {
 
 
@@ -421,32 +431,32 @@ namespace BEEACCOUNT.View
                 LinqtoSQLDataContext db = new LinqtoSQLDataContext(connection_string);
 
                 var rs1 = (from tbl_loaitkds in db.tbl_loaitks
-                           where tbl_loaitkds.idloaitk == int.Parse(tbmaloaitk.Text.ToString())
+                           where tbl_loaitkds.idloaitk == cbmaloaitk.Text.ToString()
                            select tbl_loaitkds.idloaitk).FirstOrDefault();
                 if (rs1 != null)
                 {
                     chon = false;
                     MessageBox.Show("Mã loại tài khoản bị lặp ", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    tbmaloaitk.Focus();
+                    cbmaloaitk.Focus();
                     return;
                 }
 
 
-                if (this.texttenloaitk.Text.ToString() != "" && this.texttenloaitk.Text.ToString() != null)
+                if (this.txttenloaitk.Text.ToString() != "" && this.txttenloaitk.Text.ToString() != null)
                 {
                     chon = true;
-                    this.maloaitk = int.Parse(tbmaloaitk.Text.ToString());
+                    this.maloaitk = cbmaloaitk.Text.ToString();
 
-                    if (texttenloaitk.Text.ToString().Length > 225)
+                    if (txttenloaitk.Text.ToString().Length > 225)
                     {
-                        this.tenloaitk = texttenloaitk.Text.ToString().Substring(225);
+                        this.tenloaitk = txttenloaitk.Text.ToString().Substring(225);
 
 
                     }
                     else
                     {
 
-                        this.tenloaitk = texttenloaitk.Text.ToString().Trim();
+                        this.tenloaitk = txttenloaitk.Text.ToString().Trim();
 
 
                     }
@@ -457,7 +467,7 @@ namespace BEEACCOUNT.View
                 else
                 {
                     chon = false;
-                    MessageBox.Show("Bạn chưa gõ tên loại tài khoản ", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Bạn chưa gõ tên loại tài khoản ", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
 
@@ -468,7 +478,7 @@ namespace BEEACCOUNT.View
             else
             {
                 chon = false;
-                MessageBox.Show("Mã loại tài khoản phải là số ", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Phải chọn mã tài khoản ", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 

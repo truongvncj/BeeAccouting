@@ -65,7 +65,7 @@ namespace BEEACCOUNT.Model
             string matk = createacc.matk;
             int captk = createacc.captk;
             string tkcaptren = createacc.tkcaptren;
-            int loaitk = createacc.loaitk;
+            string loaitk = createacc.loaitk;
 
 
 

@@ -297,8 +297,19 @@ namespace BEEACCOUNT.View
             #region load tk kho
 
 
+            //            tien
+            //kho
+            //taisan
+            //nguonvon
+            //doanhthu
+            //chiphi
+            //xacdinhkqkd
+            //loinhuan
+            //phaithu
+            //phaichi
+            //tamung
             var rs2 = from tk in dc.tbl_dstaikhoans
-                      where tk.loaitkid == 12 // mã 12 là tài khoản kho
+                      where tk.loaitkid == "kho" // mã 12 là tài khoản kho
                       select tk;
 
             //      string drowdownshow = "";
@@ -1541,7 +1552,7 @@ namespace BEEACCOUNT.View
             //#region load tk nợ
             List<ComboboxItem> CombomCollection = new List<ComboboxItem>();
             var rs = from tbl_dstaikhoan in dc.tbl_dstaikhoans
-                     where tbl_dstaikhoan.loaitkid == 8 // tien mat la loai 8
+                     where tbl_dstaikhoan.loaitkid == "tien" // tien mat la loai 8
                      orderby tbl_dstaikhoan.matk
                      select tbl_dstaikhoan;
             foreach (var item in rs)
