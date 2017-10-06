@@ -69,7 +69,7 @@ namespace BEEACCOUNT.View
 
                 ComboboxItem cb1 = new ComboboxItem();
                 cb1.Value = item.idloaitk;
-                cb1.Text = item.idloaitk.Trim() + ": " + item.name;
+                cb1.Text =  item.name; //item.idloaitk.Trim() + ": " +
                 this.cbloaitk.Items.Add(cb1); // CombomCollection.Add(cb);
                                               //this.cb_customerka.se = cb_customerka.Items.Count+1;
 
@@ -108,7 +108,7 @@ namespace BEEACCOUNT.View
 
                 ComboboxItem cb1 = new ComboboxItem();
                 cb1.Value = item.matk;
-                cb1.Text = item.matk.Trim() + ": " + item.tentk;
+                cb1.Text = item.matk.Trim() + ": " + item.tentk;   //
                 this.cbtkmother.Items.Add(cb1); // CombomCollection.Add(cb);
                                                 //this.cb_customerka.se = cb_customerka.Items.Count+1;
 
