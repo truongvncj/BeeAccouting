@@ -35,32 +35,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.lb_machitietno = new System.Windows.Forms.Label();
-            this.lbtenchitietno = new System.Windows.Forms.Label();
-            this.txtquyenso = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.txtsochungtugoc = new System.Windows.Forms.TextBox();
-            this.cbtkco = new System.Windows.Forms.ComboBox();
-            this.txtsotien = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtdiengiai = new System.Windows.Forms.TextBox();
-            this.txtdiachi = new System.Windows.Forms.TextBox();
-            this.txttennguoinhan = new System.Windows.Forms.TextBox();
-            this.txtsophieu = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.datepickngayphieu = new System.Windows.Forms.DateTimePicker();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txttaikhoanno = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -72,305 +46,44 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.dataGridViewListphieuchi = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.datepickngayphieu = new System.Windows.Forms.DateTimePicker();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtsophieu = new System.Windows.Forms.TextBox();
+            this.txttennguoinhan = new System.Windows.Forms.TextBox();
+            this.txtdiachi = new System.Windows.Forms.TextBox();
+            this.txtdiengiai = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtsotien = new System.Windows.Forms.TextBox();
+            this.cbtkco = new System.Windows.Forms.ComboBox();
+            this.txtsochungtugoc = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.txtquyenso = new System.Windows.Forms.TextBox();
+            this.lbtenchitietno = new System.Windows.Forms.Label();
+            this.lb_machitietno = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.txttaikhoanno = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.dataGridViewTkNo = new System.Windows.Forms.DataGridView();
             this.label15 = new System.Windows.Forms.Label();
             this.txtsotienno = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewListphieuchi)).BeginInit();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTkNo)).BeginInit();
             this.panel4.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.lb_machitietno);
-            this.panel1.Controls.Add(this.lbtenchitietno);
-            this.panel1.Controls.Add(this.txtquyenso);
-            this.panel1.Controls.Add(this.label13);
-            this.panel1.Controls.Add(this.txtsochungtugoc);
-            this.panel1.Controls.Add(this.cbtkco);
-            this.panel1.Controls.Add(this.txtsotien);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.txtdiengiai);
-            this.panel1.Controls.Add(this.txtdiachi);
-            this.panel1.Controls.Add(this.txttennguoinhan);
-            this.panel1.Controls.Add(this.txtsophieu);
-            this.panel1.Controls.Add(this.label11);
-            this.panel1.Controls.Add(this.label10);
-            this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.datepickngayphieu);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(4, 35);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(848, 384);
-            this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
-            // lb_machitietno
-            // 
-            this.lb_machitietno.AutoSize = true;
-            this.lb_machitietno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_machitietno.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lb_machitietno.Location = new System.Drawing.Point(127, 348);
-            this.lb_machitietno.Name = "lb_machitietno";
-            this.lb_machitietno.Size = new System.Drawing.Size(40, 16);
-            this.lb_machitietno.TabIndex = 61;
-            this.lb_machitietno.Text = "Mã ct";
-            // 
-            // lbtenchitietno
-            // 
-            this.lbtenchitietno.AutoSize = true;
-            this.lbtenchitietno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbtenchitietno.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lbtenchitietno.Location = new System.Drawing.Point(173, 348);
-            this.lbtenchitietno.Name = "lbtenchitietno";
-            this.lbtenchitietno.Size = new System.Drawing.Size(57, 16);
-            this.lbtenchitietno.TabIndex = 11;
-            this.lbtenchitietno.Text = "Chi tiết 1";
-            // 
-            // txtquyenso
-            // 
-            this.txtquyenso.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtquyenso.Location = new System.Drawing.Point(131, 91);
-            this.txtquyenso.Name = "txtquyenso";
-            this.txtquyenso.Size = new System.Drawing.Size(118, 24);
-            this.txtquyenso.TabIndex = 27;
-            this.txtquyenso.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtquyenso_KeyPress);
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(14, 94);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(76, 18);
-            this.label13.TabIndex = 26;
-            this.label13.Text = "Quyển số:";
-            // 
-            // txtsochungtugoc
-            // 
-            this.txtsochungtugoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtsochungtugoc.Location = new System.Drawing.Point(130, 286);
-            this.txtsochungtugoc.Name = "txtsochungtugoc";
-            this.txtsochungtugoc.Size = new System.Drawing.Size(99, 24);
-            this.txtsochungtugoc.TabIndex = 25;
-            this.txtsochungtugoc.TextChanged += new System.EventHandler(this.txtsochungtugoc_TextChanged);
-            this.txtsochungtugoc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtsochungtugoc_KeyPress);
-            // 
-            // cbtkco
-            // 
-            this.cbtkco.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbtkco.DropDownWidth = 350;
-            this.cbtkco.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbtkco.FormattingEnabled = true;
-            this.cbtkco.Location = new System.Drawing.Point(130, 319);
-            this.cbtkco.Name = "cbtkco";
-            this.cbtkco.Size = new System.Drawing.Size(207, 26);
-            this.cbtkco.TabIndex = 8;
-            this.cbtkco.SelectionChangeCommitted += new System.EventHandler(this.cbtkno_SelectionChangeCommitted);
-            this.cbtkco.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbtkno_KeyPress);
-            // 
-            // txtsotien
-            // 
-            this.txtsotien.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtsotien.Location = new System.Drawing.Point(130, 255);
-            this.txtsotien.Name = "txtsotien";
-            this.txtsotien.Size = new System.Drawing.Size(207, 24);
-            this.txtsotien.TabIndex = 24;
-            this.txtsotien.TextChanged += new System.EventHandler(this.txtsotien_TextChanged);
-            this.txtsotien.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtsotien_KeyPress);
-            this.txtsotien.Leave += new System.EventHandler(this.txtsotien_Leave);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(14, 327);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(53, 18);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Tk Có:";
-            // 
-            // txtdiengiai
-            // 
-            this.txtdiengiai.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtdiengiai.Location = new System.Drawing.Point(130, 220);
-            this.txtdiengiai.Name = "txtdiengiai";
-            this.txtdiengiai.Size = new System.Drawing.Size(358, 24);
-            this.txtdiengiai.TabIndex = 23;
-            this.txtdiengiai.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtdiengiai_KeyPress);
-            // 
-            // txtdiachi
-            // 
-            this.txtdiachi.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtdiachi.Location = new System.Drawing.Point(130, 185);
-            this.txtdiachi.Name = "txtdiachi";
-            this.txtdiachi.Size = new System.Drawing.Size(358, 24);
-            this.txtdiachi.TabIndex = 22;
-            this.txtdiachi.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtdiachi_KeyPress);
-            // 
-            // txttennguoinhan
-            // 
-            this.txttennguoinhan.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txttennguoinhan.Location = new System.Drawing.Point(130, 155);
-            this.txttennguoinhan.Name = "txttennguoinhan";
-            this.txttennguoinhan.Size = new System.Drawing.Size(271, 24);
-            this.txttennguoinhan.TabIndex = 21;
-            this.txttennguoinhan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txttennguoinop_KeyPress);
-            // 
-            // txtsophieu
-            // 
-            this.txtsophieu.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtsophieu.Location = new System.Drawing.Point(130, 124);
-            this.txtsophieu.Name = "txtsophieu";
-            this.txtsophieu.Size = new System.Drawing.Size(165, 24);
-            this.txtsophieu.TabIndex = 20;
-            this.txtsophieu.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtsophieu_KeyPress);
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(13, 125);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(70, 18);
-            this.label11.TabIndex = 19;
-            this.label11.Text = "Số phiếu:";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(235, 288);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(96, 18);
-            this.label10.TabIndex = 18;
-            this.label10.Text = "Chứng từ gốc";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(14, 291);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(76, 18);
-            this.label9.TabIndex = 16;
-            this.label9.Text = "Kèm theo:";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(14, 259);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(58, 18);
-            this.label8.TabIndex = 14;
-            this.label8.Text = "Số tiền:";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(14, 222);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(71, 18);
-            this.label7.TabIndex = 12;
-            this.label7.Text = "Lý do chi:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(13, 191);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(57, 18);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "Địa chỉ:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(12, 157);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(114, 18);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "Người nhận tiền:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 58);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(108, 18);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Ngày phiếu chi:";
-            // 
-            // datepickngayphieu
-            // 
-            this.datepickngayphieu.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.datepickngayphieu.CustomFormat = "dd.MM.yyyy";
-            this.datepickngayphieu.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.datepickngayphieu.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.datepickngayphieu.Location = new System.Drawing.Point(130, 55);
-            this.datepickngayphieu.Name = "datepickngayphieu";
-            this.datepickngayphieu.Size = new System.Drawing.Size(119, 24);
-            this.datepickngayphieu.TabIndex = 1;
-            this.datepickngayphieu.Value = new System.DateTime(2017, 7, 18, 0, 0, 0, 0);
-            this.datepickngayphieu.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.datepickngayphieu_KeyPress);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(250, 10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(140, 29);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "PHIẾU CHI";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.label14.Location = new System.Drawing.Point(558, 9);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(99, 15);
-            this.label14.TabIndex = 60;
-            this.label14.Text = "(Thêm:  Ctrl + N )";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(15, 9);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(53, 18);
-            this.label4.TabIndex = 59;
-            this.label4.Text = "Tk Nợ:";
-            // 
-            // txttaikhoanno
-            // 
-            this.txttaikhoanno.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txttaikhoanno.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txttaikhoanno.Location = new System.Drawing.Point(128, 6);
-            this.txttaikhoanno.Name = "txttaikhoanno";
-            this.txttaikhoanno.ReadOnly = true;
-            this.txttaikhoanno.Size = new System.Drawing.Size(181, 24);
-            this.txttaikhoanno.TabIndex = 29;
             // 
             // panel2
             // 
@@ -537,6 +250,293 @@
             this.dataGridViewListphieuchi.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewListphieuthu_CellContentClick);
             this.dataGridViewListphieuchi.Paint += new System.Windows.Forms.PaintEventHandler(this.dataGridViewListphieuthu_Paint);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(250, 10);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(140, 29);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "PHIẾU CHI";
+            // 
+            // datepickngayphieu
+            // 
+            this.datepickngayphieu.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.datepickngayphieu.CustomFormat = "dd.MM.yyyy";
+            this.datepickngayphieu.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.datepickngayphieu.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.datepickngayphieu.Location = new System.Drawing.Point(130, 55);
+            this.datepickngayphieu.Name = "datepickngayphieu";
+            this.datepickngayphieu.Size = new System.Drawing.Size(119, 24);
+            this.datepickngayphieu.TabIndex = 1;
+            this.datepickngayphieu.Value = new System.DateTime(2017, 7, 18, 0, 0, 0, 0);
+            this.datepickngayphieu.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.datepickngayphieu_KeyPress);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(12, 58);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(108, 18);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Ngày phiếu chi:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(12, 157);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(114, 18);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "Người nhận tiền:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(13, 191);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(57, 18);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "Địa chỉ:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(14, 222);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(71, 18);
+            this.label7.TabIndex = 12;
+            this.label7.Text = "Lý do chi:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(14, 259);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(58, 18);
+            this.label8.TabIndex = 14;
+            this.label8.Text = "Số tiền:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(14, 291);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(76, 18);
+            this.label9.TabIndex = 16;
+            this.label9.Text = "Kèm theo:";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(235, 288);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(96, 18);
+            this.label10.TabIndex = 18;
+            this.label10.Text = "Chứng từ gốc";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(13, 125);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(70, 18);
+            this.label11.TabIndex = 19;
+            this.label11.Text = "Số phiếu:";
+            // 
+            // txtsophieu
+            // 
+            this.txtsophieu.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtsophieu.Location = new System.Drawing.Point(130, 124);
+            this.txtsophieu.Name = "txtsophieu";
+            this.txtsophieu.Size = new System.Drawing.Size(165, 24);
+            this.txtsophieu.TabIndex = 20;
+            this.txtsophieu.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtsophieu_KeyPress);
+            // 
+            // txttennguoinhan
+            // 
+            this.txttennguoinhan.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txttennguoinhan.Location = new System.Drawing.Point(130, 155);
+            this.txttennguoinhan.Name = "txttennguoinhan";
+            this.txttennguoinhan.Size = new System.Drawing.Size(271, 24);
+            this.txttennguoinhan.TabIndex = 21;
+            this.txttennguoinhan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txttennguoinop_KeyPress);
+            // 
+            // txtdiachi
+            // 
+            this.txtdiachi.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtdiachi.Location = new System.Drawing.Point(130, 185);
+            this.txtdiachi.Name = "txtdiachi";
+            this.txtdiachi.Size = new System.Drawing.Size(358, 24);
+            this.txtdiachi.TabIndex = 22;
+            this.txtdiachi.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtdiachi_KeyPress);
+            // 
+            // txtdiengiai
+            // 
+            this.txtdiengiai.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtdiengiai.Location = new System.Drawing.Point(130, 220);
+            this.txtdiengiai.Name = "txtdiengiai";
+            this.txtdiengiai.Size = new System.Drawing.Size(358, 24);
+            this.txtdiengiai.TabIndex = 23;
+            this.txtdiengiai.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtdiengiai_KeyPress);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(14, 327);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(53, 18);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Tk Có:";
+            // 
+            // txtsotien
+            // 
+            this.txtsotien.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtsotien.Location = new System.Drawing.Point(130, 255);
+            this.txtsotien.Name = "txtsotien";
+            this.txtsotien.Size = new System.Drawing.Size(207, 24);
+            this.txtsotien.TabIndex = 24;
+            this.txtsotien.TextChanged += new System.EventHandler(this.txtsotien_TextChanged);
+            this.txtsotien.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtsotien_KeyPress);
+            this.txtsotien.Leave += new System.EventHandler(this.txtsotien_Leave);
+            // 
+            // cbtkco
+            // 
+            this.cbtkco.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbtkco.DropDownWidth = 350;
+            this.cbtkco.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbtkco.FormattingEnabled = true;
+            this.cbtkco.Location = new System.Drawing.Point(130, 319);
+            this.cbtkco.Name = "cbtkco";
+            this.cbtkco.Size = new System.Drawing.Size(207, 26);
+            this.cbtkco.TabIndex = 8;
+            this.cbtkco.SelectionChangeCommitted += new System.EventHandler(this.cbtkno_SelectionChangeCommitted);
+            this.cbtkco.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbtkno_KeyPress);
+            // 
+            // txtsochungtugoc
+            // 
+            this.txtsochungtugoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtsochungtugoc.Location = new System.Drawing.Point(130, 286);
+            this.txtsochungtugoc.Name = "txtsochungtugoc";
+            this.txtsochungtugoc.Size = new System.Drawing.Size(99, 24);
+            this.txtsochungtugoc.TabIndex = 25;
+            this.txtsochungtugoc.TextChanged += new System.EventHandler(this.txtsochungtugoc_TextChanged);
+            this.txtsochungtugoc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtsochungtugoc_KeyPress);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(14, 94);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(76, 18);
+            this.label13.TabIndex = 26;
+            this.label13.Text = "Quyển số:";
+            // 
+            // txtquyenso
+            // 
+            this.txtquyenso.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtquyenso.Location = new System.Drawing.Point(131, 91);
+            this.txtquyenso.Name = "txtquyenso";
+            this.txtquyenso.Size = new System.Drawing.Size(118, 24);
+            this.txtquyenso.TabIndex = 27;
+            this.txtquyenso.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtquyenso_KeyPress);
+            // 
+            // lbtenchitietno
+            // 
+            this.lbtenchitietno.AutoSize = true;
+            this.lbtenchitietno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbtenchitietno.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lbtenchitietno.Location = new System.Drawing.Point(173, 348);
+            this.lbtenchitietno.Name = "lbtenchitietno";
+            this.lbtenchitietno.Size = new System.Drawing.Size(57, 16);
+            this.lbtenchitietno.TabIndex = 11;
+            this.lbtenchitietno.Text = "Chi tiết 1";
+            // 
+            // lb_machitietno
+            // 
+            this.lb_machitietno.AutoSize = true;
+            this.lb_machitietno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_machitietno.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lb_machitietno.Location = new System.Drawing.Point(127, 348);
+            this.lb_machitietno.Name = "lb_machitietno";
+            this.lb_machitietno.Size = new System.Drawing.Size(40, 16);
+            this.lb_machitietno.TabIndex = 61;
+            this.lb_machitietno.Text = "Mã ct";
+            // 
+            // panel1
+            // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.lb_machitietno);
+            this.panel1.Controls.Add(this.lbtenchitietno);
+            this.panel1.Controls.Add(this.txtquyenso);
+            this.panel1.Controls.Add(this.label13);
+            this.panel1.Controls.Add(this.txtsochungtugoc);
+            this.panel1.Controls.Add(this.cbtkco);
+            this.panel1.Controls.Add(this.txtsotien);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.txtdiengiai);
+            this.panel1.Controls.Add(this.txtdiachi);
+            this.panel1.Controls.Add(this.txttennguoinhan);
+            this.panel1.Controls.Add(this.txtsophieu);
+            this.panel1.Controls.Add(this.label11);
+            this.panel1.Controls.Add(this.label10);
+            this.panel1.Controls.Add(this.label9);
+            this.panel1.Controls.Add(this.label8);
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.datepickngayphieu);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Location = new System.Drawing.Point(4, 35);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(848, 384);
+            this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // txttaikhoanno
+            // 
+            this.txttaikhoanno.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txttaikhoanno.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txttaikhoanno.Location = new System.Drawing.Point(128, 6);
+            this.txttaikhoanno.Name = "txttaikhoanno";
+            this.txttaikhoanno.ReadOnly = true;
+            this.txttaikhoanno.Size = new System.Drawing.Size(181, 24);
+            this.txttaikhoanno.TabIndex = 29;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(15, 9);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(53, 18);
+            this.label4.TabIndex = 59;
+            this.label4.Text = "Tk Nợ:";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.label14.Location = new System.Drawing.Point(558, 9);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(99, 15);
+            this.label14.TabIndex = 60;
+            this.label14.Text = "(Thêm:  Ctrl + N )";
+            // 
             // dataGridViewTkNo
             // 
             this.dataGridViewTkNo.AllowUserToResizeColumns = false;
@@ -635,13 +635,13 @@
             this.Name = "BeePhieuchi";
             this.Text = "BeePhieuThu";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewListphieuchi)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTkNo)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
@@ -650,21 +650,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox cbtkco;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DateTimePicker datepickngayphieu;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lbtenchitietno;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button tbXoa;
         private System.Windows.Forms.Button btsua;
@@ -676,19 +661,33 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DateTimePicker datepickngayphieu;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtsophieu;
         private System.Windows.Forms.TextBox txttennguoinhan;
         private System.Windows.Forms.TextBox txtdiachi;
         private System.Windows.Forms.TextBox txtdiengiai;
+        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtsotien;
+        private System.Windows.Forms.ComboBox cbtkco;
         private System.Windows.Forms.TextBox txtsochungtugoc;
-        private System.Windows.Forms.TextBox txtquyenso;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox txtquyenso;
+        private System.Windows.Forms.Label lbtenchitietno;
+        private System.Windows.Forms.Label lb_machitietno;
+        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox txttaikhoanno;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DataGridView dataGridViewTkNo;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label lb_machitietno;
+        private System.Windows.Forms.DataGridView dataGridViewTkNo;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox txtsotienno;
         private System.Windows.Forms.Panel panel4;
