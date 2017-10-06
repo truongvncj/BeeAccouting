@@ -36,12 +36,6 @@
             this.bt_themvao = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tbmachitiet = new System.Windows.Forms.Label();
-            this.datepickngayphieu = new System.Windows.Forms.DateTimePicker();
-            this.txtkyhieuctu = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtsochungtu = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtsotien = new System.Windows.Forms.TextBox();
             this.txtdiachi = new System.Windows.Forms.TextBox();
@@ -96,7 +90,7 @@
             // 
             // bt_themvao
             // 
-            this.bt_themvao.Location = new System.Drawing.Point(348, 383);
+            this.bt_themvao.Location = new System.Drawing.Point(348, 245);
             this.bt_themvao.Name = "bt_themvao";
             this.bt_themvao.Size = new System.Drawing.Size(103, 23);
             this.bt_themvao.TabIndex = 7;
@@ -107,12 +101,6 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.tbmachitiet);
-            this.groupBox1.Controls.Add(this.datepickngayphieu);
-            this.groupBox1.Controls.Add(this.txtkyhieuctu);
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.txtsochungtu);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.txtsotien);
             this.groupBox1.Controls.Add(this.txtdiachi);
@@ -122,7 +110,7 @@
             this.groupBox1.Controls.Add(this.cbtkno);
             this.groupBox1.Location = new System.Drawing.Point(7, 87);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(534, 280);
+            this.groupBox1.Size = new System.Drawing.Size(534, 152);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = " --";
@@ -137,67 +125,6 @@
             this.tbmachitiet.Size = new System.Drawing.Size(40, 16);
             this.tbmachitiet.TabIndex = 62;
             this.tbmachitiet.Text = "Mã ct";
-            // 
-            // datepickngayphieu
-            // 
-            this.datepickngayphieu.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.datepickngayphieu.CustomFormat = "dd.MM.yyyy";
-            this.datepickngayphieu.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.datepickngayphieu.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.datepickngayphieu.Location = new System.Drawing.Point(127, 169);
-            this.datepickngayphieu.Name = "datepickngayphieu";
-            this.datepickngayphieu.Size = new System.Drawing.Size(119, 24);
-            this.datepickngayphieu.TabIndex = 4;
-            this.datepickngayphieu.Value = new System.DateTime(2017, 7, 18, 0, 0, 0, 0);
-            this.datepickngayphieu.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.datepickngayphieu_KeyPress);
-            // 
-            // txtkyhieuctu
-            // 
-            this.txtkyhieuctu.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtkyhieuctu.Location = new System.Drawing.Point(128, 199);
-            this.txtkyhieuctu.Name = "txtkyhieuctu";
-            this.txtkyhieuctu.Size = new System.Drawing.Size(207, 24);
-            this.txtkyhieuctu.TabIndex = 5;
-            this.txtkyhieuctu.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtkyhieuctu_KeyPress);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(6, 202);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(56, 18);
-            this.label7.TabIndex = 44;
-            this.label7.Text = "Ký hiệu";
-            // 
-            // txtsochungtu
-            // 
-            this.txtsochungtu.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtsochungtu.Location = new System.Drawing.Point(127, 229);
-            this.txtsochungtu.Name = "txtsochungtu";
-            this.txtsochungtu.Size = new System.Drawing.Size(207, 24);
-            this.txtsochungtu.TabIndex = 6;
-            this.txtsochungtu.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtsochungtu_KeyPress);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(5, 232);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(87, 18);
-            this.label5.TabIndex = 42;
-            this.label5.Text = "Số chứng từ";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(6, 169);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(102, 18);
-            this.label4.TabIndex = 40;
-            this.label4.Text = "Ngày chứng từ";
             // 
             // label1
             // 
@@ -295,7 +222,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(560, 418);
+            this.ClientSize = new System.Drawing.Size(560, 282);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.txtTongco);
             this.Controls.Add(this.groupBox1);
@@ -333,12 +260,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label lbtenchitiet;
         private System.Windows.Forms.ComboBox cbtkno;
-        private System.Windows.Forms.TextBox txtkyhieuctu;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtsochungtu;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DateTimePicker datepickngayphieu;
         private System.Windows.Forms.Label tbmachitiet;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtTongco;

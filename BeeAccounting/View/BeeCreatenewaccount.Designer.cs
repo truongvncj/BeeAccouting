@@ -30,6 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BeeCreatenewaccount));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtCodauky = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtNodauky = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.checkbookchitiet = new System.Windows.Forms.CheckBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btupdate = new System.Windows.Forms.Button();
@@ -45,10 +49,6 @@
             this.txt_nametk = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
-            this.txtNodauky = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtCodauky = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -77,6 +77,48 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(604, 407);
             this.panel1.TabIndex = 0;
+            // 
+            // txtCodauky
+            // 
+            this.txtCodauky.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCodauky.Location = new System.Drawing.Point(169, 280);
+            this.txtCodauky.Name = "txtCodauky";
+            this.txtCodauky.Size = new System.Drawing.Size(213, 20);
+            this.txtCodauky.TabIndex = 62;
+            this.txtCodauky.Text = "0";
+            // 
+            // label6
+            // 
+            this.label6.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label6.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(13, 279);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(125, 20);
+            this.label6.TabIndex = 63;
+            this.label6.Text = "Số dư có đầu kỳ";
+            // 
+            // txtNodauky
+            // 
+            this.txtNodauky.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNodauky.Location = new System.Drawing.Point(169, 242);
+            this.txtNodauky.Name = "txtNodauky";
+            this.txtNodauky.Size = new System.Drawing.Size(213, 20);
+            this.txtNodauky.TabIndex = 60;
+            this.txtNodauky.Text = "0";
+            // 
+            // label5
+            // 
+            this.label5.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label5.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(13, 241);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(125, 20);
+            this.label5.TabIndex = 61;
+            this.label5.Text = "Số dư Nợ đầu kỳ";
             // 
             // checkbookchitiet
             // 
@@ -167,7 +209,7 @@
             this.txtcaptaikhoan.Name = "txtcaptaikhoan";
             this.txtcaptaikhoan.Size = new System.Drawing.Size(131, 20);
             this.txtcaptaikhoan.TabIndex = 53;
-            this.txtcaptaikhoan.Text = "4";
+            this.txtcaptaikhoan.Text = "1";
             this.txtcaptaikhoan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
             // 
             // label2
@@ -249,48 +291,6 @@
             this.label21.Size = new System.Drawing.Size(125, 20);
             this.label21.TabIndex = 49;
             this.label21.Text = "Tên tài khoản";
-            // 
-            // txtNodauky
-            // 
-            this.txtNodauky.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNodauky.Location = new System.Drawing.Point(169, 242);
-            this.txtNodauky.Name = "txtNodauky";
-            this.txtNodauky.Size = new System.Drawing.Size(213, 20);
-            this.txtNodauky.TabIndex = 60;
-            this.txtNodauky.Text = "0";
-            // 
-            // label5
-            // 
-            this.label5.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label5.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(13, 241);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(125, 20);
-            this.label5.TabIndex = 61;
-            this.label5.Text = "Số dư Nợ đầu kỳ";
-            // 
-            // txtCodauky
-            // 
-            this.txtCodauky.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodauky.Location = new System.Drawing.Point(169, 280);
-            this.txtCodauky.Name = "txtCodauky";
-            this.txtCodauky.Size = new System.Drawing.Size(213, 20);
-            this.txtCodauky.TabIndex = 62;
-            this.txtCodauky.Text = "0";
-            // 
-            // label6
-            // 
-            this.label6.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label6.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(13, 279);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(125, 20);
-            this.label6.TabIndex = 63;
-            this.label6.Text = "Số dư có đầu kỳ";
             // 
             // BeeCreatenewaccount
             // 

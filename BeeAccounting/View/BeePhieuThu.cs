@@ -55,8 +55,8 @@ namespace BEEACCOUNT.View
 
             //    drToAdd["Tk_Có"] = socaitemp.TkCo;
             drToAdd["Diễn_giải"] = socaitemp.Diengiai;
-            drToAdd["Số_chứng_từ"] = socaitemp.Soctu;
-            drToAdd["Ký_hiêu"] = socaitemp.Kyhieuctu;
+    //        drToAdd["Số_chứng_từ"] = socaitemp.Soctu;
+     //       drToAdd["Ký_hiêu"] = socaitemp.Kyhieuctu;
 
             if (socaitemp.PsCo != null)
             {
@@ -69,7 +69,7 @@ namespace BEEACCOUNT.View
             drToAdd["tkCohide"] = socaitemp.TkCo;
 
 
-            drToAdd["ngayctuhide"] = socaitemp.Ngayctu;
+      //      drToAdd["ngayctuhide"] = socaitemp.Ngayctu;
 
             dataTable.Rows.Add(drToAdd);
             dataTable.AcceptChanges();
@@ -460,13 +460,13 @@ namespace BEEACCOUNT.View
                 {
 
 
-                    if (dataGridViewTkCo.Rows[idrow].Cells["Ký_hiêu"].Value == DBNull.Value)
-                    {
+                    //if (dataGridViewTkCo.Rows[idrow].Cells["Ký_hiêu"].Value == DBNull.Value)
+                    //{
 
-                        MessageBox.Show("Bạn chua nhập ký hiệu chứng từ", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        checkdinhkhoanco = false;
-                        return;
-                    }
+                    //    MessageBox.Show("Bạn chua nhập ký hiệu chứng từ", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    //    checkdinhkhoanco = false;
+                    //    return;
+                    //}
 
 
                     if (cbtkno.SelectedItem == null)
@@ -487,21 +487,21 @@ namespace BEEACCOUNT.View
                     }
 
 
-                    if (dataGridViewTkCo.Rows[idrow].Cells["Số_chứng_từ"].Value == DBNull.Value)
-                    {
+                    //if (dataGridViewTkCo.Rows[idrow].Cells["Số_chứng_từ"].Value == DBNull.Value)
+                    //{
 
-                        MessageBox.Show("Bạn chua nhập ngày chứng từ", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        checkdinhkhoanco = false;
-                        return;
-                    }
+                    //    MessageBox.Show("Bạn chua nhập ngày chứng từ", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    //    checkdinhkhoanco = false;
+                    //    return;
+                    //}
 
-                    if (dataGridViewTkCo.Rows[idrow].Cells["Ngày_chứng_từ"].Value == null)
-                    {
+                    //if (dataGridViewTkCo.Rows[idrow].Cells["Ngày_chứng_từ"].Value == null)
+                    //{
 
-                        MessageBox.Show("Bạn chua nhập ngày chứng từ", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        checkdinhkhoanco = false;
-                        return;
-                    }
+                    //    MessageBox.Show("Bạn chua nhập ngày chứng từ", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    //    checkdinhkhoanco = false;
+                    //    return;
+                    //}
 
 
 
@@ -616,6 +616,7 @@ namespace BEEACCOUNT.View
                             var sophieuthu = (from tbl_SoQuy in dc.tbl_SoQuys
                                               where (tbl_SoQuy.Sochungtu == int.Parse(txtsophieu.Text.ToString())
                                                 && (tbl_SoQuy.quyenso.Trim() == txtquyenso.Text.ToString().Trim()))
+                                                   && (tbl_SoQuy.Machungtu == "PT")
                                               select tbl_SoQuy).FirstOrDefault();
 
                             if (sophieuthu != null)
@@ -786,17 +787,17 @@ namespace BEEACCOUNT.View
 
 
 
-                            if (dataGridViewTkCo.Rows[idrow].Cells["Ký_hiêu"].Value != DBNull.Value)
-                            {
-                                socai.Kyhieuctu = dataGridViewTkCo.Rows[idrow].Cells["Ký_hiêu"].Value.ToString();
+                            //if (dataGridViewTkCo.Rows[idrow].Cells["Ký_hiêu"].Value != DBNull.Value)
+                            //{
+                            //    socai.Kyhieuctu = dataGridViewTkCo.Rows[idrow].Cells["Ký_hiêu"].Value.ToString();
 
-                            }
-                            else
-                            {
-                                MessageBox.Show("Bạn chua nhập ký hiệu chứng từ", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                                //dataGridViewTkCo.Rows[idrow].Cells["Ký_hiêu"].
-                                return;
-                            }
+                            //}
+                            //else
+                            //{
+                            //    MessageBox.Show("Bạn chua nhập ký hiệu chứng từ", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            //    //dataGridViewTkCo.Rows[idrow].Cells["Ký_hiêu"].
+                            //    return;
+                            //}
 
 
 
@@ -846,27 +847,18 @@ namespace BEEACCOUNT.View
                             socai.manghiepvu = "PT";
                             socai.nghiepvuso = int.Parse(txtsophieu.Text.ToString());
 
-                            if (dataGridViewTkCo.Rows[idrow].Cells["Số_chứng_từ"].Value != DBNull.Value)
-                            {
-                                socai.Soctu = int.Parse(dataGridViewTkCo.Rows[idrow].Cells["Số_chứng_từ"].Value.ToString());
-                            }
-                            else
-                            {
-                                MessageBox.Show("Bạn chua nhập ngày chứng từ", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                                dataGridViewTkCo.Focus();
-                                return;
-                            }
+                        
 
-                            if (dataGridViewTkCo.Rows[idrow].Cells["Ngày_chứng_từ"].Value != null)
-                            {
-                                socai.Ngayctu = (DateTime)dataGridViewTkCo.Rows[idrow].Cells["Ngày_chứng_từ"].Value;
-                            }
-                            else
-                            {
-                                MessageBox.Show("Bạn chua nhập ngày chứng từ", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                                dataGridViewTkCo.Focus();
-                                return;
-                            }
+                            //if (dataGridViewTkCo.Rows[idrow].Cells["Ngày_chứng_từ"].Value != null)
+                            //{
+                            //    socai.Ngayctu = (DateTime)dataGridViewTkCo.Rows[idrow].Cells["Ngày_chứng_từ"].Value;
+                            //}
+                            //else
+                            //{
+                            //    MessageBox.Show("Bạn chua nhập ngày chứng từ", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            //    dataGridViewTkCo.Focus();
+                            //    return;
+                            //}
 
                             socai.Ngayghiso = DateTime.Today;
                             socai.username = Utils.getusername();
@@ -983,18 +975,6 @@ namespace BEEACCOUNT.View
 
 
 
-                            if (dataGridViewTkCo.Rows[idrow].Cells["Ký_hiêu"].Value != DBNull.Value)
-                            {
-                                socai.Kyhieuctu = dataGridViewTkCo.Rows[idrow].Cells["Ký_hiêu"].Value.ToString();
-
-                            }
-                            else
-                            {
-                                MessageBox.Show("Bạn chua nhập ký hiệu chứng từ", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                                //dataGridViewTkCo.Rows[idrow].Cells["Ký_hiêu"].
-                                return;
-                            }
-
 
 
 
@@ -1044,27 +1024,18 @@ namespace BEEACCOUNT.View
                             socai.manghiepvu = "PT";
                             socai.nghiepvuso = int.Parse(txtsophieu.Text.ToString());
 
-                            if (dataGridViewTkCo.Rows[idrow].Cells["Số_chứng_từ"].Value != DBNull.Value)
-                            {
-                                socai.Soctu = int.Parse(dataGridViewTkCo.Rows[idrow].Cells["Số_chứng_từ"].Value.ToString());
-                            }
-                            else
-                            {
-                                MessageBox.Show("Bạn chua nhập ngày chứng từ", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                                dataGridViewTkCo.Focus();
-                                return;
-                            }
+                        
 
-                            if (dataGridViewTkCo.Rows[idrow].Cells["Ngày_chứng_từ"].Value != null)
-                            {
-                                socai.Ngayctu = (DateTime)dataGridViewTkCo.Rows[idrow].Cells["Ngày_chứng_từ"].Value;
-                            }
-                            else
-                            {
-                                MessageBox.Show("Bạn chua nhập ngày chứng từ", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                                dataGridViewTkCo.Focus();
-                                return;
-                            }
+                            //if (dataGridViewTkCo.Rows[idrow].Cells["Ngày_chứng_từ"].Value != null)
+                            //{
+                            //    socai.Ngayctu = (DateTime)dataGridViewTkCo.Rows[idrow].Cells["Ngày_chứng_từ"].Value;
+                            //}
+                            //else
+                            //{
+                            //    MessageBox.Show("Bạn chua nhập ngày chứng từ", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            //    dataGridViewTkCo.Focus();
+                            //    return;
+                            //}
 
                             socai.Ngayghiso = DateTime.Today;
                             socai.username = Utils.getusername();

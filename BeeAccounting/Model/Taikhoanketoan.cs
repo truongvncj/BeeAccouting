@@ -66,7 +66,8 @@ namespace BEEACCOUNT.Model
             int captk = createacc.captk;
             string tkcaptren = createacc.tkcaptren;
             string loaitk = createacc.loaitk;
-
+            float nodk = createacc.nodauky;
+            float codk = createacc.codauky;
 
 
             if (chon)
@@ -84,6 +85,8 @@ namespace BEEACCOUNT.Model
                 tk.captk = captk;
                 tk.matktren = tkcaptren;
                 tk.loaichitiet = chitiettheodoi;
+                tk.nodk = nodk;
+                tk.codk = codk;
 
                 db.tbl_dstaikhoans.InsertOnSubmit(tk);
                 db.SubmitChanges();
@@ -140,9 +143,9 @@ namespace BEEACCOUNT.Model
             socaips.username = socai.username;
        
 
-            socaips.Kyhieuctu = socai.Kyhieuctu;
+        //    socaips.Kyhieuctu = socai.Kyhieuctu;
             socaips.Ngayctu = socai.Ngayctu;
-            socaips.Soctu = socai.Soctu;
+          //  socaips.Soctu = socai.Soctu;
 
             // socaips.Soctu = socai.Soctu;
             // socaips.Soctu = socai.Soctu;

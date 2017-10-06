@@ -10320,10 +10320,6 @@ namespace BEEACCOUNT
 		
 		private int _id;
 		
-		private string _Kyhieuctu;
-		
-		private System.Nullable<int> _Soctu;
-		
 		private string _tenchitietCo;
 		
 		private string _tenchitietNo;
@@ -10358,10 +10354,6 @@ namespace BEEACCOUNT
     partial void OnMaCTietTKNoChanged();
     partial void OnidChanging(int value);
     partial void OnidChanged();
-    partial void OnKyhieuctuChanging(string value);
-    partial void OnKyhieuctuChanged();
-    partial void OnSoctuChanging(System.Nullable<int> value);
-    partial void OnSoctuChanged();
     partial void OntenchitietCoChanging(string value);
     partial void OntenchitietCoChanged();
     partial void OntenchitietNoChanging(string value);
@@ -10593,46 +10585,6 @@ namespace BEEACCOUNT
 					this._id = value;
 					this.SendPropertyChanged("id");
 					this.OnidChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Kyhieuctu", DbType="NVarChar(50)")]
-		public string Kyhieuctu
-		{
-			get
-			{
-				return this._Kyhieuctu;
-			}
-			set
-			{
-				if ((this._Kyhieuctu != value))
-				{
-					this.OnKyhieuctuChanging(value);
-					this.SendPropertyChanging();
-					this._Kyhieuctu = value;
-					this.SendPropertyChanged("Kyhieuctu");
-					this.OnKyhieuctuChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Soctu", DbType="Int")]
-		public System.Nullable<int> Soctu
-		{
-			get
-			{
-				return this._Soctu;
-			}
-			set
-			{
-				if ((this._Soctu != value))
-				{
-					this.OnSoctuChanging(value);
-					this.SendPropertyChanging();
-					this._Soctu = value;
-					this.SendPropertyChanged("Soctu");
-					this.OnSoctuChanged();
 				}
 			}
 		}

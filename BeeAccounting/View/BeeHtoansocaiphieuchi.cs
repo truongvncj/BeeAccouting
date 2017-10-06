@@ -60,8 +60,8 @@ namespace BEEACCOUNT.View
             lbtenchitiet.Text = "";
             txtsotien.Text = "";
             txtdiachi.Text = "";
-            txtkyhieuctu.Text = "";
-            txtsochungtu.Text = "";
+      //      txtkyhieuctu.Text = "";
+       //     txtsochungtu.Text = "";
 
             #endregion
 
@@ -293,7 +293,7 @@ namespace BEEACCOUNT.View
             {
                 //  cbsophieu.
                 e.Handled = true;
-                datepickngayphieu.Focus();
+           //     datepickngayphieu.Focus();
 
                 //    string valueinput = cb_customerka.Text;
 
@@ -312,7 +312,7 @@ namespace BEEACCOUNT.View
             {
                 //  cbsophieu.
                 e.Handled = true;
-                txtkyhieuctu.Focus();
+        //        txtkyhieuctu.Focus();
 
                 //    string valueinput = cb_customerka.Text;
 
@@ -331,7 +331,7 @@ namespace BEEACCOUNT.View
             {
                 //  cbsophieu.
                 e.Handled = true;
-                txtsochungtu.Focus();
+           //     txtsochungtu.Focus();
 
                 //    string valueinput = cb_customerka.Text;
 
@@ -420,13 +420,13 @@ namespace BEEACCOUNT.View
             }
             //datepickngayphieu
 
-            socaitemp.Ngayctu = datepickngayphieu.Value;
+            //socaitemp.Ngayctu = datepickngayphieu.Value;
 
-            //     txtkyhieuctu
-            if (txtkyhieuctu.Text != "")
-            {
-                socaitemp.Kyhieuctu = txtkyhieuctu.Text;
-            }
+            ////     txtkyhieuctu
+            //if (txtkyhieuctu.Text != "")
+            //{
+            //    socaitemp.Kyhieuctu = txtkyhieuctu.Text;
+            //}
             //else
             //{
             //    MessageBox.Show("Bạn chưa gõ Tên chi tiét", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -459,16 +459,16 @@ namespace BEEACCOUNT.View
             //   txtsochungtu
 
 
-            if (Utils.IsValidnumber(txtsochungtu.Text))
-            {
-                socaitemp.Soctu = int.Parse(txtsochungtu.Text.Trim());
-            }
-            else
-            {
-                MessageBox.Show("Kiểm tra lại số chứng từ", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtsochungtu.Focus();
-                return;
-            }
+            //if (Utils.IsValidnumber(txtsochungtu.Text))
+            //{
+            //    socaitemp.Soctu = int.Parse(txtsochungtu.Text.Trim());
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Kiểm tra lại số chứng từ", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //    txtsochungtu.Focus();
+            //    return;
+            //}
 
 
 
@@ -488,9 +488,7 @@ namespace BEEACCOUNT.View
             lbtenchitiet.Text = "";
             txtsotien.Text = "";
             txtdiachi.Text = "";
-            txtkyhieuctu.Text = "";
-            txtsochungtu.Text = "";
-
+          
             #endregion
 
 

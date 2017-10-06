@@ -64,8 +64,7 @@ namespace BEEACCOUNT.Model
 
                 tk.name = tenloaitk;
                 tk.idloaitk = maloaitk;
-
-
+              
                 db.tbl_loaitks.InsertOnSubmit(tk);
                 db.SubmitChanges();
 

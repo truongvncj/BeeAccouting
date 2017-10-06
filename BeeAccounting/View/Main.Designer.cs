@@ -91,7 +91,7 @@
             this.panel1.Cursor = System.Windows.Forms.Cursors.Default;
             this.panel1.Location = new System.Drawing.Point(6, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1336, 645);
+            this.panel1.Size = new System.Drawing.Size(1336, 662);
             this.panel1.TabIndex = 20;
             // 
             // webBrowser1
@@ -103,7 +103,7 @@
             this.webBrowser1.Name = "webBrowser1";
             this.webBrowser1.ScriptErrorsSuppressed = true;
             this.webBrowser1.ScrollBarsEnabled = false;
-            this.webBrowser1.Size = new System.Drawing.Size(212, 635);
+            this.webBrowser1.Size = new System.Drawing.Size(212, 652);
             this.webBrowser1.TabIndex = 25;
             this.webBrowser1.Url = new System.Uri("https://sites.google.com/site/advcocacolagogle/", System.UriKind.Absolute);
             // 
@@ -112,7 +112,7 @@
             this.lbusername.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lbusername.AutoSize = true;
             this.lbusername.ForeColor = System.Drawing.Color.Red;
-            this.lbusername.Location = new System.Drawing.Point(67, 632);
+            this.lbusername.Location = new System.Drawing.Point(67, 649);
             this.lbusername.Name = "lbusername";
             this.lbusername.Size = new System.Drawing.Size(35, 13);
             this.lbusername.TabIndex = 24;
@@ -122,7 +122,7 @@
             // 
             this.lb_user.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lb_user.AutoSize = true;
-            this.lb_user.Location = new System.Drawing.Point(3, 632);
+            this.lb_user.Location = new System.Drawing.Point(3, 649);
             this.lb_user.Name = "lb_user";
             this.lb_user.Size = new System.Drawing.Size(58, 13);
             this.lb_user.TabIndex = 23;
@@ -138,7 +138,7 @@
             this.panelmain.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panelmain.Location = new System.Drawing.Point(6, 27);
             this.panelmain.Name = "panelmain";
-            this.panelmain.Size = new System.Drawing.Size(1106, 602);
+            this.panelmain.Size = new System.Drawing.Size(1106, 619);
             this.panelmain.TabIndex = 7;
             // 
             // menuStrip1
@@ -150,7 +150,7 @@
             this.systemToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(6, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(329, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(237, 24);
             this.menuStrip1.TabIndex = 20;
             this.menuStrip1.Text = "menuStrip1";
             // 

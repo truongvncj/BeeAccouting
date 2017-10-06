@@ -1029,22 +1029,22 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>2.68837cm</Width>
+              <Width>2.6846cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.94082cm</Width>
+              <Width>2.93705cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>12.17752cm</Width>
+              <Width>12.17375cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.00582cm</Width>
+              <Width>2.00205cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.73878cm</Width>
+              <Width>3.73501cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>4.3107cm</Width>
+              <Width>4.28835cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -1403,9 +1403,9 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
         <Top>5.34141cm</Top>
-        <Left>0.28576cm</Left>
+        <Left>0.30839cm</Left>
         <Height>1.2637cm</Height>
-        <Width>27.86201cm</Width>
+        <Width>27.8208cm</Width>
         <ZIndex>11</ZIndex>
         <Style>
           <Border>
@@ -1417,22 +1417,22 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>2.68357cm</Width>
+              <Width>2.66574cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.95255cm</Width>
+              <Width>2.95211cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>12.19702cm</Width>
+              <Width>12.15894cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.99641cm</Width>
+              <Width>2.01877cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>3.73566cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>4.30757cm</Width>
+              <Width>4.28958cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -1652,9 +1652,9 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
         <Top>7.77865cm</Top>
-        <Left>0.30049cm</Left>
+        <Left>0.30839cm</Left>
         <Height>0.57354cm</Height>
-        <Width>27.87278cm</Width>
+        <Width>27.8208cm</Width>
         <ZIndex>12</ZIndex>
         <Style>
           <Border>
@@ -1666,22 +1666,22 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>2.67709cm</Width>
+              <Width>2.68151cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.94076cm</Width>
+              <Width>2.94518cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>12.16624cm</Width>
+              <Width>12.16335cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.99453cm</Width>
+              <Width>2.01589cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.73312cm</Width>
+              <Width>3.73754cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>4.29942cm</Width>
+              <Width>4.30384cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -2101,7 +2101,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
         <Top>6.60511cm</Top>
         <Left>0.30839cm</Left>
         <Height>1.17354cm</Height>
-        <Width>27.81116cm</Width>
+        <Width>27.84729cm</Width>
         <ZIndex>13</ZIndex>
         <Style>
           <Border>
@@ -2191,7 +2191,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
       </Border>
     </Style>
   </Body>
-  <Width>28.21616cm</Width>
+  <Width>28.37491cm</Width>
   <Page>
     <PageFooter>
       <Height>0.6cm</Height>

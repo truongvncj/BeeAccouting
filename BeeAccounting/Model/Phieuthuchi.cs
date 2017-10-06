@@ -139,11 +139,11 @@ namespace BEEACCOUNT.Model
 
             //Threahold
             //      dt.Columns.Add(new DataColumn("Tk_Có", typeof(double)));
-            dt.Columns.Add(new DataColumn("Ký_hiêu", typeof(string)));
-            dt.Columns.Add(new DataColumn("Số_chứng_từ", typeof(int)));
+         //   dt.Columns.Add(new DataColumn("Ký_hiêu", typeof(string)));
+          //  dt.Columns.Add(new DataColumn("Số_chứng_từ", typeof(int)));
             dt.Columns.Add(new DataColumn("tkCohide", typeof(string))); //comnoxxon
 
-            dt.Columns.Add(new DataColumn("ngayctuhide", typeof(DateTime))); //adding column for combobox
+           // dt.Columns.Add(new DataColumn("ngayctuhide", typeof(DateTime))); //adding column for combobox
 
 
 
@@ -152,11 +152,11 @@ namespace BEEACCOUNT.Model
             dataGridViewTkCo.DataSource = dt;
 
 
-            DGV_DateTimePicker.DateTimePickerColumn col = new DGV_DateTimePicker.DateTimePickerColumn();
-            col.HeaderText = "Ngày chứng từ";
-            col.Name = "Ngày_chứng_từ";
-            col.DataPropertyName = "ngayctuhide";
-            dataGridViewTkCo.Columns.Add(col);
+            //DGV_DateTimePicker.DateTimePickerColumn col = new DGV_DateTimePicker.DateTimePickerColumn();
+            //col.HeaderText = "Ngày chứng từ";
+            //col.Name = "Ngày_chứng_từ";
+            //col.DataPropertyName = "ngayctuhide";
+            //dataGridViewTkCo.Columns.Add(col);
 
 
             //    dataGridViewTkCo.Columns.Remove("Tk_Có");
@@ -200,7 +200,7 @@ namespace BEEACCOUNT.Model
 
 
                dataGridViewTkCo.Columns["tkCohide"].Visible = false;
-             dataGridViewTkCo.Columns["ngayctuhide"].Visible = false;
+        //     dataGridViewTkCo.Columns["ngayctuhide"].Visible = false;
 
             dataGridViewTkCo.Columns["Tk_Có"].DisplayIndex = 0;
             dataGridViewTkCo.Columns["Tk_Có"].Width = 100;
@@ -230,19 +230,19 @@ namespace BEEACCOUNT.Model
             dataGridViewTkCo.Columns["Diễn_giải"].SortMode = DataGridViewColumnSortMode.NotSortable;
 
 
-            dataGridViewTkCo.Columns["Ký_hiêu"].DisplayIndex = 5;
-            dataGridViewTkCo.Columns["Ký_hiêu"].Width = 100;
-            dataGridViewTkCo.Columns["Ký_hiêu"].SortMode = DataGridViewColumnSortMode.NotSortable;
+            //dataGridViewTkCo.Columns["Ký_hiêu"].DisplayIndex = 5;
+            //dataGridViewTkCo.Columns["Ký_hiêu"].Width = 100;
+            //dataGridViewTkCo.Columns["Ký_hiêu"].SortMode = DataGridViewColumnSortMode.NotSortable;
 
 
-            dataGridViewTkCo.Columns["Ngày_chứng_từ"].DisplayIndex = 6;
-            dataGridViewTkCo.Columns["Ngày_chứng_từ"].Width = 100;
-            dataGridViewTkCo.Columns["Ngày_chứng_từ"].SortMode = DataGridViewColumnSortMode.NotSortable;
+            //dataGridViewTkCo.Columns["Ngày_chứng_từ"].DisplayIndex = 6;
+            //dataGridViewTkCo.Columns["Ngày_chứng_từ"].Width = 100;
+            //dataGridViewTkCo.Columns["Ngày_chứng_từ"].SortMode = DataGridViewColumnSortMode.NotSortable;
 
 
-            dataGridViewTkCo.Columns["Số_chứng_từ"].DisplayIndex = 7;
-            dataGridViewTkCo.Columns["Số_chứng_từ"].Width = 200;
-            dataGridViewTkCo.Columns["Số_chứng_từ"].SortMode = DataGridViewColumnSortMode.NotSortable;
+            //dataGridViewTkCo.Columns["Số_chứng_từ"].DisplayIndex = 7;
+            //dataGridViewTkCo.Columns["Số_chứng_từ"].Width = 200;
+            //dataGridViewTkCo.Columns["Số_chứng_từ"].SortMode = DataGridViewColumnSortMode.NotSortable;
 
 
 
@@ -279,11 +279,11 @@ namespace BEEACCOUNT.Model
 
             //Threahold
             //      dt.Columns.Add(new DataColumn("Tk_Có", typeof(double)));
-            dt.Columns.Add(new DataColumn("Ký_hiêu", typeof(string)));
-            dt.Columns.Add(new DataColumn("Số_chứng_từ", typeof(int)));
+      //      dt.Columns.Add(new DataColumn("Ký_hiêu", typeof(string)));
+        //    dt.Columns.Add(new DataColumn("Số_chứng_từ", typeof(int)));
             dt.Columns.Add(new DataColumn("tkNohide", typeof(string))); //comnoxxon
 
-            dt.Columns.Add(new DataColumn("ngayctuhide", typeof(DateTime))); //adding column for combobox
+          //  dt.Columns.Add(new DataColumn("ngayctuhide", typeof(DateTime))); //adding column for combobox
 
 
 
@@ -292,11 +292,11 @@ namespace BEEACCOUNT.Model
             dataGridViewTkNo.DataSource = dt;
 
 
-            DGV_DateTimePicker.DateTimePickerColumn col = new DGV_DateTimePicker.DateTimePickerColumn();
-            col.HeaderText = "Ngày chứng từ";
-            col.Name = "Ngày_chứng_từ";
-            col.DataPropertyName = "ngayctuhide";
-            dataGridViewTkNo.Columns.Add(col);
+            //DGV_DateTimePicker.DateTimePickerColumn col = new DGV_DateTimePicker.DateTimePickerColumn();
+            //col.HeaderText = "Ngày chứng từ";
+            //col.Name = "Ngày_chứng_từ";
+            //col.DataPropertyName = "ngayctuhide";
+            //dataGridViewTkNo.Columns.Add(col);
 
 
             //    dataGridViewTkCo.Columns.Remove("Tk_Có");
@@ -341,7 +341,7 @@ namespace BEEACCOUNT.Model
 
 
             dataGridViewTkNo.Columns["tkNohide"].Visible = false;
-            dataGridViewTkNo.Columns["ngayctuhide"].Visible = false;
+        //    dataGridViewTkNo.Columns["ngayctuhide"].Visible = false;
 
             dataGridViewTkNo.Columns["Tk_Nợ"].DisplayIndex = 0;
             dataGridViewTkNo.Columns["Tk_Nợ"].Width = 100;
@@ -371,19 +371,19 @@ namespace BEEACCOUNT.Model
             dataGridViewTkNo.Columns["Diễn_giải"].SortMode = DataGridViewColumnSortMode.NotSortable;
 
 
-            dataGridViewTkNo.Columns["Ký_hiêu"].DisplayIndex = 5;
-            dataGridViewTkNo.Columns["Ký_hiêu"].Width = 100;
-            dataGridViewTkNo.Columns["Ký_hiêu"].SortMode = DataGridViewColumnSortMode.NotSortable;
+            //dataGridViewTkNo.Columns["Ký_hiêu"].DisplayIndex = 5;
+            //dataGridViewTkNo.Columns["Ký_hiêu"].Width = 100;
+            //dataGridViewTkNo.Columns["Ký_hiêu"].SortMode = DataGridViewColumnSortMode.NotSortable;
 
 
-            dataGridViewTkNo.Columns["Ngày_chứng_từ"].DisplayIndex = 6;
-            dataGridViewTkNo.Columns["Ngày_chứng_từ"].Width = 100;
-            dataGridViewTkNo.Columns["Ngày_chứng_từ"].SortMode = DataGridViewColumnSortMode.NotSortable;
+            //dataGridViewTkNo.Columns["Ngày_chứng_từ"].DisplayIndex = 6;
+            //dataGridViewTkNo.Columns["Ngày_chứng_từ"].Width = 100;
+            //dataGridViewTkNo.Columns["Ngày_chứng_từ"].SortMode = DataGridViewColumnSortMode.NotSortable;
 
 
-            dataGridViewTkNo.Columns["Số_chứng_từ"].DisplayIndex = 7;
-            dataGridViewTkNo.Columns["Số_chứng_từ"].Width = 200;
-            dataGridViewTkNo.Columns["Số_chứng_từ"].SortMode = DataGridViewColumnSortMode.NotSortable;
+            //dataGridViewTkNo.Columns["Số_chứng_từ"].DisplayIndex = 7;
+            //dataGridViewTkNo.Columns["Số_chứng_từ"].Width = 200;
+            //dataGridViewTkNo.Columns["Số_chứng_từ"].SortMode = DataGridViewColumnSortMode.NotSortable;
 
 
 
