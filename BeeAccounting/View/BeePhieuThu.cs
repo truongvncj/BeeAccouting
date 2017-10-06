@@ -847,8 +847,8 @@ namespace BEEACCOUNT.View
                             socai.manghiepvu = "PT";
                             socai.nghiepvuso = int.Parse(txtsophieu.Text.ToString());
 
-                        
 
+                            socai.Ngayctu = datepickngayphieu.Value;
                             //if (dataGridViewTkCo.Rows[idrow].Cells["Ngày_chứng_từ"].Value != null)
                             //{
                             //    socai.Ngayctu = (DateTime)dataGridViewTkCo.Rows[idrow].Cells["Ngày_chứng_từ"].Value;
@@ -1024,7 +1024,7 @@ namespace BEEACCOUNT.View
                             socai.manghiepvu = "PT";
                             socai.nghiepvuso = int.Parse(txtsophieu.Text.ToString());
 
-                        
+
 
                             //if (dataGridViewTkCo.Rows[idrow].Cells["Ngày_chứng_từ"].Value != null)
                             //{
@@ -1036,7 +1036,7 @@ namespace BEEACCOUNT.View
                             //    dataGridViewTkCo.Focus();
                             //    return;
                             //}
-
+                            socai.Ngayctu = datepickngayphieu.Value;
                             socai.Ngayghiso = DateTime.Today;
                             socai.username = Utils.getusername();
 
