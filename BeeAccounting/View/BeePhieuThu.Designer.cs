@@ -573,6 +573,7 @@
             this.dataGridViewTkCo.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridViewTkCo.Size = new System.Drawing.Size(800, 280);
             this.dataGridViewTkCo.TabIndex = 3;
+            this.dataGridViewTkCo.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewTkCo_CellEndEdit);
             this.dataGridViewTkCo.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewTkCo_CellEndEdit);
             this.dataGridViewTkCo.CellErrorTextChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewTkCo_CellErrorTextChanged);
             this.dataGridViewTkCo.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewTkCo_CellValueChanged);
