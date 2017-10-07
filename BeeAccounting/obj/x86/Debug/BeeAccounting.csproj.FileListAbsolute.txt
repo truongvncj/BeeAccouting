@@ -143,7 +143,6 @@ E:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.Beeloaitaikh
 E:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.Beemosochitiettaikhoan.resources
 E:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.Beemainload.resources
 E:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.BeeAccountsetup.resources
-E:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.Beephieunhapkho.resources
 E:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.BeePhieuchi.resources
 E:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.BeePhieuThu.resources
 E:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.Beechooseslect.resources
@@ -189,3 +188,4 @@ E:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.Properties.Resour
 E:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BeeAccounting.csproj.GenerateResource.Cache
 E:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\RdlCompile.cache
 E:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\RdlCompile.compiled
+E:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.BeeKhophieunhap.resources

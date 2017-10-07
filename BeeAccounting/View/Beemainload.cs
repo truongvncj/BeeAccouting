@@ -963,7 +963,7 @@ namespace BEEACCOUNT.View
             main1.clearpannel();
 
 
-            View.Beephieunhapkho accsup = new Beephieunhapkho(main1);
+            View.BeeKhophieunhap accsup = new BeeKhophieunhap(main1);
             main1.clearpannelload(accsup);
             //    accsup.TopLevel = false;
             //  accsup.AutoScroll = true;
