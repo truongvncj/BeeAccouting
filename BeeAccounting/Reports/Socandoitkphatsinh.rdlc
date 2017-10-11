@@ -1311,7 +1311,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!Codk.Value</Value>
+                              <Value>=sum(Fields!Codk.Value)</Value>
                               <Style>
                                 <FontWeight>Bold</FontWeight>
                                 <Format>#,0;(#,0);'0'</Format>
@@ -1344,7 +1344,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!Psno.Value</Value>
+                              <Value>=sum(Fields!Psno.Value)</Value>
                               <Style>
                                 <FontWeight>Bold</FontWeight>
                                 <Format>#,0;(#,0);'0'</Format>
@@ -1377,7 +1377,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!Psco.Value</Value>
+                              <Value>=sum(Fields!Psco.Value)</Value>
                               <Style>
                                 <FontWeight>Bold</FontWeight>
                                 <Format>#,0;(#,0);'0'</Format>
@@ -1410,7 +1410,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!Nock.Value</Value>
+                              <Value>=sum(Fields!Nock.Value)</Value>
                               <Style>
                                 <FontWeight>Bold</FontWeight>
                                 <Format>#,0;(#,0);'0'</Format>
@@ -1443,7 +1443,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!Cock.Value</Value>
+                              <Value>=sum(Fields!Cock.Value)</Value>
                               <Style>
                                 <FontWeight>Bold</FontWeight>
                                 <Format>#,0;(#,0);'0'</Format>
@@ -1465,6 +1465,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
               </TablixCells>

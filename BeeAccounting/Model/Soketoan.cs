@@ -1329,7 +1329,7 @@ namespace BEEACCOUNT.Model
                     RPtheadCDP headCDPS = new RPtheadCDP();
 
                     DateTime fromdate = Utils.chageExceldatetoData("01/01/" + yearchon);
-                    DateTime todate = Utils.chageExceldatetoData("12/31/" + yearchon);
+                    DateTime todate = Utils.chageExceldatetoData("31/12/" + yearchon);
 
                     headCDPS.tencongty = Model.Congty.getnamecongty();
                     headCDPS.username = username;
