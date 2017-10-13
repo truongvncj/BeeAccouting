@@ -256,7 +256,7 @@ namespace BEEACCOUNT.Model
 
 
             //   dt.Columns.Add(new DataColumn("Ngày_chứng_từ", typeof(DGV_DateTimePicker.DateTimePickerCell)));
-            dt.Columns.Add(new DataColumn("Mã_sản_phẩm", typeof(string)));
+            dt.Columns.Add(new DataColumn("masanpham", typeof(string)));
             dt.Columns.Add(new DataColumn("Tên_sản_phẩm", typeof(string)));
 
             dt.Columns.Add(new DataColumn("Đơn_vị", typeof(string)));
@@ -266,7 +266,7 @@ namespace BEEACCOUNT.Model
             //      dt.Columns.Add(new DataColumn("Tk_Có", typeof(double)));
             dt.Columns.Add(new DataColumn("Đơn_giá", typeof(double)));
             dt.Columns.Add(new DataColumn("Thành_tiền", typeof(double)));
-            dt.Columns.Add(new DataColumn("tkidhide", typeof(string))); //comnoxxon
+       //     dt.Columns.Add(new DataColumn("tkidhide", typeof(string))); //comnoxxon
           //  dt.Columns.Add(new DataColumn("Tk_Có", typeof(double)));
             //    dt.Columns.Add(new DataColumn("ngayctuhide", typeof(DateTime))); //adding column for combobox
 
@@ -286,35 +286,35 @@ namespace BEEACCOUNT.Model
 
             //    dataGridViewTkCo.Columns.Remove("Tk_Có");
 
-            #region  //    bindDataToDataGridViewComboPrograme(); Tk_No
+            #region  //  mã sản phẩm
             string connection_string = Utils.getConnectionstr();
             LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
 
             DataGridViewComboBoxColumn cmbdgv = new DataGridViewComboBoxColumn();
 
 
-            List<View.BeePhieuchi.ComboboxItem> CombomCollection = new List<View.BeePhieuchi.ComboboxItem>();
+            List<View.BeeKhophieunhap.ComboboxItem> CombomCollection = new List<View.BeeKhophieunhap.ComboboxItem>();
 
-            //var rs = from tbl_dstaikhoan in dc.tbl_dstaikhoans
-                    
-            //         orderby tbl_dstaikhoan.matk
-            //         select tbl_dstaikhoan;
-            //foreach (var item in rs)
-            //{
-            //    View.BeePhieuchi.ComboboxItem cb = new View.BeePhieuchi.ComboboxItem();
-            //    cb.Value = item.matk.Trim();
-            //    cb.Text = item.matk.Trim() + ": " + item.tentk;
-            //    CombomCollection.Add(cb);
-            //}
+            var rs = from p in dc.tbl_kho_sanphams
 
-            //cmbdgv.DataSource = CombomCollection;
-            //cmbdgv.HeaderText = "Tk_Có";
-            //cmbdgv.Name = "Tk_Có";
-            //cmbdgv.ValueMember = "Value";
-            //cmbdgv.DisplayMember = "Text";
-            //cmbdgv.Width = 100;
-            //cmbdgv.DropDownWidth = 300;
-            //cmbdgv.DataPropertyName = "tkidhide"; //Bound value to the datasource
+                     orderby p.masp
+                     select p;
+            foreach (var item in rs)
+            {
+                View.BeeKhophieunhap.ComboboxItem cb = new View.BeeKhophieunhap.ComboboxItem();
+                cb.Value = item.masp;
+                cb.Text = item.masp.Trim() + ": " + item.tensp;
+                CombomCollection.Add(cb);
+            }
+
+            cmbdgv.DataSource = CombomCollection;
+            cmbdgv.HeaderText = "Mã_sản_phẩm";
+            cmbdgv.Name = "Mã_sản_phẩm";
+            cmbdgv.ValueMember = "Value";
+            cmbdgv.DisplayMember = "Text";
+            cmbdgv.Width = 300;
+            cmbdgv.DropDownWidth = 300;
+            cmbdgv.DataPropertyName = "masanpham"; //Bound value to the datasource
 
 
             dataGridViewdetailPNK.Columns.Add(cmbdgv);
@@ -327,7 +327,7 @@ namespace BEEACCOUNT.Model
 
 
         //    dataGridViewdetailPNK.Columns["Tk_Có"].Visible = false;
-           dataGridViewdetailPNK.Columns["tkidhide"].Visible = false;
+          // dataGridViewdetailPNK.Columns["masanpham"].Visible = false;
 
        //     dataGridViewdetailPNK.Columns["Tk_Nợ"].DisplayIndex = 0;
         //    dataGridViewdetailPNK.Columns["Tk_Nợ"].Width = 100;

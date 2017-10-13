@@ -831,7 +831,7 @@ namespace BEEACCOUNT.View
                     #region  ghi vao so cai
 
 
-                    string tkcotext = "";
+              //      string tkcotext = "";
                     // int dem = 0;
                     for (int idrow = 0; idrow < dataGridViewTkCo.RowCount - 1; idrow++)
                     {
@@ -1017,7 +1017,7 @@ namespace BEEACCOUNT.View
                     #region  ghi vao so cai
 
 
-                    string tkcotext = "";
+            //        string tkcotext = "";
                     // int dem = 0;
                     for (int idrow = 0; idrow < dataGridViewTkCo.RowCount - 1; idrow++)
                     {
@@ -1973,16 +1973,49 @@ namespace BEEACCOUNT.View
             {
                 if (cbm.SelectedItem != null)
                 {
-                    string SelectedItem = (cbm.SelectedItem as ComboboxItem).Value.ToString();// (cbm.SelectedItem as ComboboxItem).Value.ToString();
+                     string SelectedItem = (cbm.SelectedItem as ComboboxItem).Value.ToString();// (cbm.SelectedItem as ComboboxItem).Value.ToString();
+               
 
-                    // int i = dataGridProgramdetail.CurrentRow.Index;
-                    int i = currentCell.RowIndex;
+                   // int i = dataGridProgramdetail.CurrentRow.Index;
+                   int i = currentCell.RowIndex;
                     string colname = this.dataGridViewTkCo.Columns[this.dataGridViewTkCo.CurrentCell.ColumnIndex].Name;
+
+                    //   dataGridViewTkCo.Rows[i].Cells[colname].Value = SelectedItem;
 
                     dataGridViewTkCo.Rows[i].Cells[colname].Value = SelectedItem;
 
+                    string connection_string = Utils.getConnectionstr();
+                    LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
 
+          
+                    var sp = (from p in dc.tbl_kho_sanphams
+                             where p.masp == SelectedItem
+                             orderby p.masp
+                             select p).FirstOrDefault();
 
+                    if (sp != null)
+                    {
+                        dataGridViewTkCo.Rows[i].Cells["Tên_sản_phẩm"].Value = sp.tensp;
+                        dataGridViewTkCo.Rows[i].Cells["Đơn_vị"].Value = sp.donvi;
+                      
+                    }
+                    else
+                    {
+                        dataGridViewTkCo.Rows[i].Cells["Tên_sản_phẩm"].Value = "";
+                        dataGridViewTkCo.Rows[i].Cells["Đơn_vị"].Value = "";
+
+                    }
+
+                    //dt.Columns.Add(new DataColumn("masanpham", typeof(string)));
+                    //dt.Columns.Add(new DataColumn("Tên_sản_phẩm", typeof(string)));
+
+                    //dt.Columns.Add(new DataColumn("Đơn_vị", typeof(string)));
+                    //dt.Columns.Add(new DataColumn("Số_lượng_nhập", typeof(string)));
+
+                    ////Threahold
+                    ////      dt.Columns.Add(new DataColumn("Tk_Có", typeof(double)));
+                    //dt.Columns.Add(new DataColumn("Đơn_giá", typeof(double)));
+                    //dt.Columns.Add(new DataColumn("Thành_tiền", typeof(double)));
 
 
                 }
