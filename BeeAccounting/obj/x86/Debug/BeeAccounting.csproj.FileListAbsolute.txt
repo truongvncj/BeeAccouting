@@ -189,3 +189,4 @@ E:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BeeAccounting.csproj.Generat
 E:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\RdlCompile.cache
 E:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\RdlCompile.compiled
 E:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.BeeKhophieunhap.resources
+E:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.BeeHtdoiungphieunhapkho.resources

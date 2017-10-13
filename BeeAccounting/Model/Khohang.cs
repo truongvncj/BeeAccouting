@@ -211,8 +211,8 @@ namespace BEEACCOUNT.Model
             LinqtoSQLDataContext db = dc;
 
 
-            var rs = from p in dc.tbl_kho_head_phieunhapkhos
-                    
+            var rs = from p in dc.tbl_kho_phieunhap_heads
+
                      select new
                      {
 
@@ -240,7 +240,7 @@ namespace BEEACCOUNT.Model
             // throw new NotImplementedException();
         }
 
-        public static  DataGridView reloaddetailPNK(DataGridView dataGridViewdetailPNK)
+        public static  DataGridView reloaddetailnewPNK(DataGridView dataGridViewdetailPNK)
         {
 
 
@@ -295,26 +295,26 @@ namespace BEEACCOUNT.Model
 
             List<View.BeePhieuchi.ComboboxItem> CombomCollection = new List<View.BeePhieuchi.ComboboxItem>();
 
-            var rs = from tbl_dstaikhoan in dc.tbl_dstaikhoans
+            //var rs = from tbl_dstaikhoan in dc.tbl_dstaikhoans
                     
-                     orderby tbl_dstaikhoan.matk
-                     select tbl_dstaikhoan;
-            foreach (var item in rs)
-            {
-                View.BeePhieuchi.ComboboxItem cb = new View.BeePhieuchi.ComboboxItem();
-                cb.Value = item.matk.Trim();
-                cb.Text = item.matk.Trim() + ": " + item.tentk;
-                CombomCollection.Add(cb);
-            }
+            //         orderby tbl_dstaikhoan.matk
+            //         select tbl_dstaikhoan;
+            //foreach (var item in rs)
+            //{
+            //    View.BeePhieuchi.ComboboxItem cb = new View.BeePhieuchi.ComboboxItem();
+            //    cb.Value = item.matk.Trim();
+            //    cb.Text = item.matk.Trim() + ": " + item.tentk;
+            //    CombomCollection.Add(cb);
+            //}
 
-            cmbdgv.DataSource = CombomCollection;
-            cmbdgv.HeaderText = "Tk_Có";
-            cmbdgv.Name = "Tk_Có";
-            cmbdgv.ValueMember = "Value";
-            cmbdgv.DisplayMember = "Text";
-            cmbdgv.Width = 100;
-            cmbdgv.DropDownWidth = 300;
-            cmbdgv.DataPropertyName = "tkidhide"; //Bound value to the datasource
+            //cmbdgv.DataSource = CombomCollection;
+            //cmbdgv.HeaderText = "Tk_Có";
+            //cmbdgv.Name = "Tk_Có";
+            //cmbdgv.ValueMember = "Value";
+            //cmbdgv.DisplayMember = "Text";
+            //cmbdgv.Width = 100;
+            //cmbdgv.DropDownWidth = 300;
+            //cmbdgv.DataPropertyName = "tkidhide"; //Bound value to the datasource
 
 
             dataGridViewdetailPNK.Columns.Add(cmbdgv);
@@ -326,7 +326,7 @@ namespace BEEACCOUNT.Model
             #endregion binddata
 
 
-            dataGridViewdetailPNK.Columns["Tk_Có"].Visible = false;
+        //    dataGridViewdetailPNK.Columns["Tk_Có"].Visible = false;
            dataGridViewdetailPNK.Columns["tkidhide"].Visible = false;
 
        //     dataGridViewdetailPNK.Columns["Tk_Nợ"].DisplayIndex = 0;
