@@ -1326,7 +1326,8 @@ namespace BEEACCOUNT.View
 
         private void cbtaikhoanco_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+          
+            //    dataGridViewTkCo.Focus();
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -2502,6 +2503,123 @@ namespace BEEACCOUNT.View
 
         private void tabPage1_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void cbtkco_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            string taikhoan = (cbtkco.SelectedItem as ComboboxItem).Value.ToString();
+            //     this.matk = taikhoan;
+
+
+            string connection_string = Utils.getConnectionstr();
+            LinqtoSQLDataContext db = new LinqtoSQLDataContext(connection_string);
+
+
+            var detail = (from c in db.tbl_dstaikhoans
+                          where c.matk.Trim() == taikhoan.Trim()
+                          select c).FirstOrDefault();
+
+
+
+            if (detail.loaichitiet == true) // là co theo doi chi tiết
+            {
+
+                List<beeselectinput.ComboboxItem> listcb = new List<beeselectinput.ComboboxItem>();
+                var rs = from tbl_machitiettk in db.tbl_machitiettks
+                         where tbl_machitiettk.matk.Trim() == taikhoan.Trim()
+                         orderby tbl_machitiettk.machitiet
+                         select tbl_machitiettk;
+                if (rs.Count() > 0)
+                {
+
+
+                    foreach (var item2 in rs)
+                    {
+                        beeselectinput.ComboboxItem cb = new beeselectinput.ComboboxItem();
+                        cb.Value = item2.machitiet.ToString().Trim();
+                        cb.Text = item2.tenchitiet; //item2.machitiet.ToString().Trim() + ": " +
+                        listcb.Add(cb);
+                    }
+
+
+
+
+
+                    FormCollection fc = System.Windows.Forms.Application.OpenForms;
+
+                    bool kq = false;
+                    foreach (Form frm in fc)
+                    {
+                        if (frm.Text == "beeselectinput")
+
+
+                        {
+                            kq = true;
+                            frm.Focus();
+
+                        }
+                    }
+
+                    if (!kq)
+                    {
+                        //    View.BeeSeachtwofield sheaching = new BeeSeachtwofield(this, "Người nôp", "Địa chỉ", "Nội dung");
+                        //   sheaching.Show();
+
+
+                        View.beeselectinput selecdetail = new beeselectinput("Chọn chi tiết tài khoản ", listcb);
+
+                        selecdetail.ShowDialog();
+                        bool chon = selecdetail.kq;
+                        if (chon)
+                        {
+                            string machitiet = selecdetail.value;
+                            string namechitiet = selecdetail.valuetext;
+                            //     lbmachitietco.Visible = true;
+
+                            lbtenchitietno.Visible = true;
+                            lb_machitietno.Visible = true;
+                            this.tknochitiet = int.Parse(selecdetail.value.ToString());
+                            //     lbmachitietco.Text = machitiet;
+                            lbtenchitietno.Text = namechitiet;
+                            lb_machitietno.Text = machitiet;
+                        }
+                        else
+                        {
+
+                            cbtkco.SelectedIndex = -1;
+
+                        }
+                    }
+                    else
+                    {
+                        this.tknochitiet = -1;// int.Parse(selecdetail.value.ToString());
+                                              //     lbmachitietco.Text = machitiet;
+                        lbtenchitietno.Text = "";//namechitiet;
+                        lb_machitietno.Text = "";
+                    }
+                    //  selecdetail.Text;
+
+                }
+                else
+                {
+                    this.tknochitiet = -1;// int.Parse(selecdetail.value.ToString());
+                                          //     lbmachitietco.Text = machitiet;
+                    lbtenchitietno.Text = "";//namechitiet;
+                    lb_machitietno.Text = "";
+                }
+
+
+
+
+            }
+            else
+            {
+                this.tknochitiet = -1;// int.Parse(selecdetail.value.ToString());
+                                      //     lbmachitietco.Text = machitiet;
+                lbtenchitietno.Text = "";//namechitiet;
+                lb_machitietno.Text = "";
+            }
 
         }
     }

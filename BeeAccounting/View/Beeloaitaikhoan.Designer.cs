@@ -30,13 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Beeloaitaikhoan));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txttenloaitk = new System.Windows.Forms.TextBox();
+            this.cbmaloaitk = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.bttaomoi = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btupdate = new System.Windows.Forms.Button();
             this.btxoa = new System.Windows.Forms.Button();
-            this.cbmaloaitk = new System.Windows.Forms.ComboBox();
-            this.txttenloaitk = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,6 +53,34 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(604, 149);
             this.panel1.TabIndex = 0;
+            // 
+            // txttenloaitk
+            // 
+            this.txttenloaitk.Location = new System.Drawing.Point(171, 21);
+            this.txttenloaitk.Name = "txttenloaitk";
+            this.txttenloaitk.Size = new System.Drawing.Size(382, 20);
+            this.txttenloaitk.TabIndex = 59;
+            // 
+            // cbmaloaitk
+            // 
+            this.cbmaloaitk.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbmaloaitk.FormattingEnabled = true;
+            this.cbmaloaitk.Items.AddRange(new object[] {
+            "tien",
+            "kho",
+            "taisan",
+            "nguonvon",
+            "doanhthu",
+            "chiphi",
+            "xacdinhkqkd",
+            "loinhuan",
+            "phaithu",
+            "phaitra",
+            "tamung"});
+            this.cbmaloaitk.Location = new System.Drawing.Point(171, 57);
+            this.cbmaloaitk.Name = "cbmaloaitk";
+            this.cbmaloaitk.Size = new System.Drawing.Size(214, 21);
+            this.cbmaloaitk.TabIndex = 58;
             // 
             // label2
             // 
@@ -119,34 +147,6 @@
             this.btxoa.Text = "Xóa";
             this.btxoa.UseVisualStyleBackColor = false;
             this.btxoa.Click += new System.EventHandler(this.btxoa_Click);
-            // 
-            // cbmaloaitk
-            // 
-            this.cbmaloaitk.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbmaloaitk.FormattingEnabled = true;
-            this.cbmaloaitk.Items.AddRange(new object[] {
-            "tien",
-            "kho",
-            "taisan",
-            "nguonvon",
-            "doanhthu",
-            "chiphi",
-            "xacdinhkqkd",
-            "loinhuan",
-            "phaithu",
-            "phaichi",
-            "tamung"});
-            this.cbmaloaitk.Location = new System.Drawing.Point(171, 57);
-            this.cbmaloaitk.Name = "cbmaloaitk";
-            this.cbmaloaitk.Size = new System.Drawing.Size(214, 21);
-            this.cbmaloaitk.TabIndex = 58;
-            // 
-            // txttenloaitk
-            // 
-            this.txttenloaitk.Location = new System.Drawing.Point(171, 21);
-            this.txttenloaitk.Name = "txttenloaitk";
-            this.txttenloaitk.Size = new System.Drawing.Size(382, 20);
-            this.txttenloaitk.TabIndex = 59;
             // 
             // Beeloaitaikhoan
             // 

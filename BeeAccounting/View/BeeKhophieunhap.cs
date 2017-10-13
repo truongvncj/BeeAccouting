@@ -224,6 +224,9 @@ namespace BEEACCOUNT.View
             this.lbtenchitietno.Text = "";
             lb_machitietno.Text = "";
 
+            this.lbtenchitietco.Text = "";
+            lb_machitietco.Text = "";
+
 
             #region load tk nợ
 
@@ -255,6 +258,41 @@ namespace BEEACCOUNT.View
             }
 
             #endregion load tk nợ
+
+            //  cbtkco
+
+
+            #region load tk có
+
+            //            tien
+            //kho
+            //tamung
+            //xacdinhkqkd
+            //taisan
+            //nguonvon
+            //doanhthu
+            //chiphi
+            //loinhuan
+
+
+
+            var rs4 = from tk in dc.tbl_dstaikhoans
+                      where tk.loaitkid != "kho" && tk.loaitkid != "tien" && tk.loaitkid != "xacdinhkqkd" && tk.loaitkid != "chiphi" && tk.loaitkid != "loinhuan" && tk.loaitkid != "doanhthu"
+                      select tk;
+
+            //      string drowdownshow = "";
+
+            foreach (var item in rs4)
+            {
+                ComboboxItem cb = new ComboboxItem();
+                cb.Value = item.matk;
+                cb.Text = item.matk.Trim() + ": " + item.tentk;
+                this.cbtkco.Items.Add(cb); // CombomCollection.Add(cb);
+
+            }
+
+            #endregion load tk nợ
+
 
 
             #region load kho hàng
@@ -2467,6 +2505,145 @@ namespace BEEACCOUNT.View
 
 
             //}
+        }
+
+        private void cbtkco_SelectedIndexChanged(object sender, EventArgs e)
+        {
+        
+
+
+
+        }
+
+        private void cbtkco_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            //List<ComboboxItem> CombomCollection = new List<ComboboxItem>();
+            //var rs = from tbl_Kafuctionlist in db.tbl_Kafuctionlists
+            //         where tbl_Kafuctionlist.Code != "DIS"
+            //         orderby tbl_Kafuctionlist.Code
+            //         select tbl_Kafuctionlist;
+            //foreach (var item2 in rs)
+            //{
+            //    ComboboxItem cb = new ComboboxItem();
+            //    cb.Value = item2.Code.Trim();
+            //    cb.Text = item2.Code.Trim() + ": " + item2.Description.Trim() + "    || Example: " + item2.Example;
+            //    CombomCollection.Add(cb);
+            //}
+
+            string taikhoan = (cbtkco.SelectedItem as ComboboxItem).Value.ToString();
+            //     this.matk = taikhoan;
+
+
+            string connection_string = Utils.getConnectionstr();
+            LinqtoSQLDataContext db = new LinqtoSQLDataContext(connection_string);
+
+
+            var detail = (from c in db.tbl_dstaikhoans
+                          where c.matk.Trim() == taikhoan.Trim()
+                          select c).FirstOrDefault();
+
+
+
+            if (detail.loaichitiet == true) // là co theo doi chi tiết
+            {
+
+                List<beeselectinput.ComboboxItem> listcb = new List<beeselectinput.ComboboxItem>();
+                var rs = from tbl_machitiettk in db.tbl_machitiettks
+                         where tbl_machitiettk.matk.Trim() == taikhoan.Trim()
+                         orderby tbl_machitiettk.machitiet
+                         select tbl_machitiettk;
+                if (rs.Count() > 0)
+                {
+
+
+                    foreach (var item2 in rs)
+                    {
+                        beeselectinput.ComboboxItem cb = new beeselectinput.ComboboxItem();
+                        cb.Value = item2.machitiet.ToString().Trim();
+                        cb.Text = item2.tenchitiet; //item2.machitiet.ToString().Trim() + ": " +
+                        listcb.Add(cb);
+                    }
+
+
+
+
+
+                    FormCollection fc = System.Windows.Forms.Application.OpenForms;
+
+                    bool kq = false;
+                    foreach (Form frm in fc)
+                    {
+                        if (frm.Text == "beeselectinput")
+
+
+                        {
+                            kq = true;
+                            frm.Focus();
+
+                        }
+                    }
+
+                    if (!kq)
+                    {
+                        //    View.BeeSeachtwofield sheaching = new BeeSeachtwofield(this, "Người nôp", "Địa chỉ", "Nội dung");
+                        //   sheaching.Show();
+
+
+                        View.beeselectinput selecdetail = new beeselectinput("Chọn chi tiết tài khoản ", listcb);
+
+                        selecdetail.ShowDialog();
+                        bool chon = selecdetail.kq;
+                        if (chon)
+                        {
+                            string machitiet = selecdetail.value;
+                            string namechitiet = selecdetail.valuetext;
+                            //     lbmachitietco.Visible = true;
+
+                            lbtenchitietco.Visible = true;
+                            lb_machitietco.Visible = true;
+                            this.tknochitiet = int.Parse(selecdetail.value.ToString());
+                            //     lbmachitietco.Text = machitiet;
+                            lbtenchitietco.Text = namechitiet;
+                            lb_machitietco.Text = machitiet;
+                        }
+                        else
+                        {
+
+                            cbtkco.SelectedIndex = -1;
+
+                        }
+                    }
+                    else
+                    {
+                        this.tkcochitiet = -1;// int.Parse(selecdetail.value.ToString());
+                                              //     lbmachitietco.Text = machitiet;
+                        lbtenchitietco.Text = "";//namechitiet;
+                        lb_machitietco.Text = "";
+                    }
+                    //  selecdetail.Text;
+
+                }
+                else
+                {
+                    this.tkcochitiet = -1;// int.Parse(selecdetail.value.ToString());
+                                          //     lbmachitietco.Text = machitiet;
+                    lbtenchitietco.Text = "";//namechitiet;
+                    lb_machitietco.Text = "";
+                }
+
+
+
+
+            }
+            else
+            {
+                this.tkcochitiet = -1;// int.Parse(selecdetail.value.ToString());
+                                      //     lbmachitietco.Text = machitiet;
+                lbtenchitietco.Text = "";//namechitiet;
+                lb_machitietco.Text = "";
+            }
+
+            //    dataGridViewTkCo.Focus();
         }
     }
 }

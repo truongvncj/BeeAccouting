@@ -406,6 +406,8 @@
             this.cbtkco.Name = "cbtkco";
             this.cbtkco.Size = new System.Drawing.Size(207, 26);
             this.cbtkco.TabIndex = 8;
+            this.cbtkco.SelectedIndexChanged += new System.EventHandler(this.cbtaikhoanco_SelectedIndexChanged);
+            this.cbtkco.SelectionChangeCommitted += new System.EventHandler(this.cbtkco_SelectionChangeCommitted);
             this.cbtkco.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbtaikhoanco_KeyPress);
             // 
             // txtsotien
