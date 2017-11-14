@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="BEE" Class="LinqtoSQLDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=HAN-L-3PFF7H2;Initial Catalog=BEE;Persist Security Info=True;User ID=sa" SettingsObjectName="BEEACCOUNT.Properties.Settings" SettingsPropertyName="BEEConnectionString2" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-8D4F853\SQLEXPRESS;Initial Catalog=BEE;Persist Security Info=True;User ID=sa" SettingsObjectName="BEEACCOUNT.Properties.Settings" SettingsPropertyName="BEEConnectionString1" Provider="System.Data.SqlClient" />
   <Table Name="dbo.Rpt_PhieuThu" Member="Rpt_PhieuThus">
     <Type Name="Rpt_PhieuThu">
       <Column Name="tencongty" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
@@ -429,6 +429,7 @@
       <Column Name="phieuso" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="soluongyeucau" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Column Name="soluongnhap" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="subid" Type="System.Int32" DbType="Int" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.tbl_kho_phieunhap_head" Member="tbl_kho_phieunhap_heads">

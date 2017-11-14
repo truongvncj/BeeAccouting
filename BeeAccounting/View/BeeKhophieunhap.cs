@@ -13,9 +13,9 @@ namespace BEEACCOUNT.View
 {
     public partial class BeeKhophieunhap : Form
     {
-        public int statusphieuthu { get; set; } // mới  // 2 suawra // 3 display //
-        public int phieuthuid { get; set; }
-        public int sophieuthu { get; set; }
+        public int statusphieunhap { get; set; } // mới  // 2 suawra // 3 display //
+        public int phieunhapid { get; set; }
+        public string sophieunhap { get; set; }
         public string tkno { get; set; }
         public int tknochitiet { get; set; }
         public string tkco { get; set; }
@@ -49,13 +49,31 @@ namespace BEEACCOUNT.View
 
 
             //        //---------------
+            //dt.Columns.Add(new DataColumn("Tên_sản_phẩm", typeof(string)));
+
+            //dt.Columns.Add(new DataColumn("Đơn_vị", typeof(string)));
+            //dt.Columns.Add(new DataColumn("Số_lượng_nhập", typeof(string)));
+
+            ////Threahold
+            ////      dt.Columns.Add(new DataColumn("Tk_Có", typeof(double)));
+            //dt.Columns.Add(new DataColumn("Đơn_giá", typeof(double)));
+            //dt.Columns.Add(new DataColumn("Thành_tiền", typeof(double)));
+            ////    
+
+     
 
             DataTable dataTable = (DataTable)dataGridViewTkCo.DataSource;
             DataRow drToAdd = dataTable.NewRow();
 
-          //  drToAdd["mahang"] = sanpham.mahang;
+            //  drToAdd["mahang"] = sanpham.mahang;
             drToAdd["Số_lượng_nhập"] = sanpham.soluongnhap;
             drToAdd["Đơn_giá"] = sanpham.dongia;
+            drToAdd["Tên_sản_phẩm"] = sanpham.tenhang;
+
+            drToAdd["Đơn_vị"] = sanpham.donvi;
+
+            drToAdd["Thành_tiền"] = sanpham.thanhtien;
+
 
             //        if (socaitemp.PsCo != null)
             //        {
@@ -76,12 +94,13 @@ namespace BEEACCOUNT.View
 
 
             int i = dataTable.Rows.Count - 1;
+            //     dataGridViewTkCo.Rows[i].Cells["Đơn_giá"].EditedFormattedValue = true;
             //   int i = dataGridViewTkCo.RowCount -1;
             //dt.Columns.Add(new DataColumn("Tên_sản_phẩm", typeof(string)));
 
             //dt.Columns.Add(new DataColumn("Đơn_vị", typeof(string)));
             //dt.Columns.Add(new DataColumn("Số_lượng_nhập", typeof(string)));
-         //   cmbdgv.HeaderText = "Mã_sản_phẩm";
+            //   cmbdgv.HeaderText = "Mã_sản_phẩm";
             ////Threahold
             ////      dt.Columns.Add(new DataColumn("Tk_Có", typeof(double)));
             //dt.Columns.Add(new DataColumn("Đơn_giá", typeof(double)));
@@ -97,14 +116,16 @@ namespace BEEACCOUNT.View
                 {
 
                     dataGridViewTkCo.Rows[i].Cells["Mã_sản_phẩm"].Value = item.Value;
+                    //      cb.Selected = true;
+                    //  cb.inde = true;
                 }
 
 
             }
 
-      //      dataGridViewTkCo.Rows[i].Cells["Số_lượng_nhập"].Value = 
-
-             #endregion tom item comboubox
+            //      dataGridViewTkCo.Rows[i].Cells["Số_lượng_nhập"].Value = 
+            dataGridViewTkCo.Rows[i].Cells["Đơn_giá"].Selected = true;
+            #endregion tom item comboubox
 
 
             //        //   ComboboxItem cbx = (ComboboxItem)cb.Items[3];
@@ -124,7 +145,7 @@ namespace BEEACCOUNT.View
 
 
 
-         //   dataGridViewListphieuthu.DataSource = Model.Phieuthuchi.reloadseachview("PT", nguoinop, diachi, noidung);
+            //   dataGridViewListphieuthu.DataSource = Model.Phieuthuchi.reloadseachview("PT", nguoinop, diachi, noidung);
 
 
         }
@@ -159,8 +180,8 @@ namespace BEEACCOUNT.View
 
                 if (!kq)
                 {
-     //               View.BeeSeachtwofield sheaching = new BeeSeachtwofield(this, "Người nôp", "Địa chỉ", "Nội dung");
-       //             sheaching.Show();
+                    //               View.BeeSeachtwofield sheaching = new BeeSeachtwofield(this, "Người nôp", "Địa chỉ", "Nội dung");
+                    //             sheaching.Show();
                 }
 
 
@@ -193,7 +214,7 @@ namespace BEEACCOUNT.View
 
                 if (!kq)
                 {
-                   View.BeeHtdoiungphieunhapkho BeeHtdoiungphieunhapkho = new BeeHtdoiungphieunhapkho(this, "Địa chỉ", "", "");
+                    View.BeeHtdoiungphieunhapkho BeeHtdoiungphieunhapkho = new BeeHtdoiungphieunhapkho(this, "Địa chỉ", "", "");
                     BeeHtdoiungphieunhapkho.Show();
                 }
 
@@ -215,8 +236,8 @@ namespace BEEACCOUNT.View
             this.pssotienno = 0;
             this.pssotienco = 0;
             this.main1 = Main;
-
-            this.statusphieuthu = 1; // tạo mới
+            lbid.Text = "0";
+            this.statusphieunhap = 1; // tạo mới
 
             Model.Username used = new Model.Username();
             string connection_string = Utils.getConnectionstr();
@@ -317,7 +338,7 @@ namespace BEEACCOUNT.View
 
 
             var rs3 = from p in dc.tbl_khohangs
-                  //    where p.loaitkid == "kho" // mã 8 là tiền mặt
+                          //    where p.loaitkid == "kho" // mã 8 là tiền mặt
                       select p;
 
             //      string drowdownshow = "";
@@ -383,7 +404,7 @@ namespace BEEACCOUNT.View
             {
                 // datepickngayphieu.
                 e.Handled = true;
-           //     txtquyenso.Focus();
+                //     txtquyenso.Focus();
 
                 //    string valueinput = cb_customerka.Text;
 
@@ -441,7 +462,7 @@ namespace BEEACCOUNT.View
             if (e.KeyChar == (char)Keys.Enter)
             {
                 e.Handled = true;
-            //    txtsotien.Focus();
+                //    txtsotien.Focus();
 
 
 
@@ -454,7 +475,7 @@ namespace BEEACCOUNT.View
             if (e.KeyChar == (char)Keys.Enter)
             {
                 e.Handled = true;
-             //   txtsochungtugoc.Focus();
+                //   txtsochungtugoc.Focus();
 
                 //    string valueinput = cb_customerka.Text;
 
@@ -610,556 +631,556 @@ namespace BEEACCOUNT.View
             if (checkdinhkhoanco == true)
             {
 
-         //       #region add new phieu thu
+                //       #region add new phieu thu
 
 
-         //       string connection_string = Utils.getConnectionstr();
+                //       string connection_string = Utils.getConnectionstr();
 
-         //       LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+                //       LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
 
-         //       tbl_SoQuy soquy = new tbl_SoQuy();
+                //       tbl_SoQuy soquy = new tbl_SoQuy();
 
 
-         ////       soquy.quyenso = txtquyenso.Text.ToString();
+                ////       soquy.quyenso = txtquyenso.Text.ToString();
 
 
 
-         //       soquy.PsCo = 0;
+                //       soquy.PsCo = 0;
 
-         //       //if (Utils.IsValidnumber(txtsotien.Text.Replace(",", "")))
-         //       //{
-         //       //    soquy.PsNo = double.Parse(txtsotien.Text.Replace(",", "").Trim());
-         //       //}
-         //       //else
-         //       //{
-         //       //    MessageBox.Show("Số tiền gõ vào phải là số !", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-         //       //    txtsotien.Focus();
-         //       //    return;
-         //       //}
+                //       //if (Utils.IsValidnumber(txtsotien.Text.Replace(",", "")))
+                //       //{
+                //       //    soquy.PsNo = double.Parse(txtsotien.Text.Replace(",", "").Trim());
+                //       //}
+                //       //else
+                //       //{
+                //       //    MessageBox.Show("Số tiền gõ vào phải là số !", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //       //    txtsotien.Focus();
+                //       //    return;
+                //       //}
 
-         //       //if (this.cb_channel.SelectedItem != null)
-         //       if (cbtkno.SelectedItem != null)
-         //       {
-         //           soquy.TKtienmat = (cbtkno.SelectedItem as ComboboxItem).Value.ToString();
-         //       }
-         //       else
-         //       {
-         //           MessageBox.Show("Bạn chưa chọn tài khoản tiền mặt ", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-         //           cbtkno.Focus();
-         //           return;
-         //       }
+                //       //if (this.cb_channel.SelectedItem != null)
+                //       if (cbtkno.SelectedItem != null)
+                //       {
+                //           soquy.TKtienmat = (cbtkno.SelectedItem as ComboboxItem).Value.ToString();
+                //       }
+                //       else
+                //       {
+                //           MessageBox.Show("Bạn chưa chọn tài khoản tiền mặt ", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //           cbtkno.Focus();
+                //           return;
+                //       }
 
-         //       //if (txttaikhoanco.Text != null)
-         //       //{
+                //       //if (txttaikhoanco.Text != null)
+                //       //{
 
-         //       //    if (txttaikhoanco.Text.Length > 225)
-         //       //    {
-         //       //        soquy.TKdoiung = txttaikhoanco.Text.ToString().Substring(225);
-         //       //    }
-         //       //    else
-         //       //    {
-         //       //        soquy.TKdoiung = txttaikhoanco.Text.ToString();
-         //       //    }
+                //       //    if (txttaikhoanco.Text.Length > 225)
+                //       //    {
+                //       //        soquy.TKdoiung = txttaikhoanco.Text.ToString().Substring(225);
+                //       //    }
+                //       //    else
+                //       //    {
+                //       //        soquy.TKdoiung = txttaikhoanco.Text.ToString();
+                //       //    }
 
-         //       //}
-         //       //else
-         //       //{
-         //       //    MessageBox.Show("Bạn chưa hạch toán tài khoản", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-         //       //    dataGridViewTkCo.Focus();
-         //       //    return;
-         //       //}
+                //       //}
+                //       //else
+                //       //{
+                //       //    MessageBox.Show("Bạn chưa hạch toán tài khoản", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //       //    dataGridViewTkCo.Focus();
+                //       //    return;
+                //       //}
 
 
 
 
-         //       if (lb_machitietno.Text != "")
-         //       {
-         //           soquy.ChitietTM = int.Parse(lb_machitietno.Text.ToString());
-         //       }
-         //       else
-         //       {
+                //       if (lb_machitietno.Text != "")
+                //       {
+                //           soquy.ChitietTM = int.Parse(lb_machitietno.Text.ToString());
+                //       }
+                //       else
+                //       {
 
-         //           soquy.ChitietTM = 0;
-         //       }
+                //           soquy.ChitietTM = 0;
+                //       }
 
-         //       if (lbtenchitietno.Text != "")
-         //       {
-         //           soquy.TenchitietTM = lbtenchitietno.Text;
-         //       }
+                //       if (lbtenchitietno.Text != "")
+                //       {
+                //           soquy.TenchitietTM = lbtenchitietno.Text;
+                //       }
 
 
 
-         //       soquy.Chitietdoiung = this.tkcochitiet;
+                //       soquy.Chitietdoiung = this.tkcochitiet;
 
 
-         //       if (Utils.IsValidnumber(txtsophieu.Text)) //số phiếu thu phaair  lớn hơn 0 và không lặp
-         //       {
+                //       if (Utils.IsValidnumber(txtsophieu.Text)) //số phiếu thu phaair  lớn hơn 0 và không lặp
+                //       {
 
-         //           if (int.Parse(txtsophieu.Text.Trim()) > 0)
-         //           {
+                //           if (int.Parse(txtsophieu.Text.Trim()) > 0)
+                //           {
 
-         //               // không lặp
-         //               if (this.statusphieuthu == 1 || (this.statusphieuthu == 2) && this.sophieuthu != int.Parse(txtsophieu.Text.Trim()))
-         //               {
-         //                   var sophieuthu = (from tbl_SoQuy in dc.tbl_SoQuys
-         //                                     where (tbl_SoQuy.Sochungtu == int.Parse(txtsophieu.Text.ToString())
-         //                                       && (tbl_SoQuy.quyenso.Trim() == txtquyenso.Text.ToString().Trim()))
-         //                                          && (tbl_SoQuy.Machungtu == "PT")
-         //                                     select tbl_SoQuy).FirstOrDefault();
+                //               // không lặp
+                //               if (this.statusphieuthu == 1 || (this.statusphieuthu == 2) && this.sophieuthu != int.Parse(txtsophieu.Text.Trim()))
+                //               {
+                //                   var sophieuthu = (from tbl_SoQuy in dc.tbl_SoQuys
+                //                                     where (tbl_SoQuy.Sochungtu == int.Parse(txtsophieu.Text.ToString())
+                //                                       && (tbl_SoQuy.quyenso.Trim() == txtquyenso.Text.ToString().Trim()))
+                //                                          && (tbl_SoQuy.Machungtu == "PT")
+                //                                     select tbl_SoQuy).FirstOrDefault();
 
-         //                   if (sophieuthu != null)
-         //                   {
-         //                       MessageBox.Show("Số phiếu bị lặp, bạn xem lại số phiếu", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-         //                       txtsophieu.Focus();
-         //                       return;
-         //                   }
-         //                   else
-         //                   {
-
-         //                       soquy.Sochungtu = int.Parse(txtsophieu.Text.Trim());
-
-         //                   }
-         //               }
-         //               else
-         //               {
-         //                   soquy.Sochungtu = int.Parse(txtsophieu.Text.Trim());
-         //               }
-
-
-
-         //           }
-         //           else
-         //           {
-         //               MessageBox.Show("Số phiếu thu phải là số dương", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-         //               txtsophieu.Focus();
-         //               return;
-         //           }
-
-         //           this.sophieuthu = int.Parse(txtsophieu.Text.Trim());
-
-
-
-         //       }
-         //       else
-         //       {
-         //           MessageBox.Show("Số phiếu gõ vào phải là số !", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-         //           txtsophieu.Focus();
-         //           return;
-         //       }
-
-
-         //       soquy.Ngayctu = datepickngayphieu.Value;
-         //       //if (Utils.IsValidnumber(txtsochungtugoc.Text))
-         //       //{
-         //       //    soquy.Chungtugockemtheo = int.Parse(txtsochungtugoc.Text.Trim());
-         //       //}
-         //       //else
-         //       //{
-         //       //    MessageBox.Show("Số chứng từ gốc kèm theo phải là số", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-         //       //    txtsochungtugoc.Focus();
-         //       //    return;
-         //       //}
+                //                   if (sophieuthu != null)
+                //                   {
+                //                       MessageBox.Show("Số phiếu bị lặp, bạn xem lại số phiếu", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //                       txtsophieu.Focus();
+                //                       return;
+                //                   }
+                //                   else
+                //                   {
+
+                //                       soquy.Sochungtu = int.Parse(txtsophieu.Text.Trim());
+
+                //                   }
+                //               }
+                //               else
+                //               {
+                //                   soquy.Sochungtu = int.Parse(txtsophieu.Text.Trim());
+                //               }
+
+
+
+                //           }
+                //           else
+                //           {
+                //               MessageBox.Show("Số phiếu thu phải là số dương", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //               txtsophieu.Focus();
+                //               return;
+                //           }
+
+                //           this.sophieuthu = int.Parse(txtsophieu.Text.Trim());
+
+
+
+                //       }
+                //       else
+                //       {
+                //           MessageBox.Show("Số phiếu gõ vào phải là số !", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //           txtsophieu.Focus();
+                //           return;
+                //       }
+
+
+                //       soquy.Ngayctu = datepickngayphieu.Value;
+                //       //if (Utils.IsValidnumber(txtsochungtugoc.Text))
+                //       //{
+                //       //    soquy.Chungtugockemtheo = int.Parse(txtsochungtugoc.Text.Trim());
+                //       //}
+                //       //else
+                //       //{
+                //       //    MessageBox.Show("Số chứng từ gốc kèm theo phải là số", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //       //    txtsochungtugoc.Focus();
+                //       //    return;
+                //       //}
 
-         //       if (txtdiengiai.Text.Trim() != "")
-         //       {
+                //       if (txtdiengiai.Text.Trim() != "")
+                //       {
 
 
-         //           if (txtdiengiai.Text.Length > 225)
-         //           {
-         //               soquy.Diengiai = txtdiengiai.Text.Trim().Substring(225);
-         //           }
-         //           else
-         //           {
-         //               soquy.Diengiai = txtdiengiai.Text.Trim();
-         //           }
+                //           if (txtdiengiai.Text.Length > 225)
+                //           {
+                //               soquy.Diengiai = txtdiengiai.Text.Trim().Substring(225);
+                //           }
+                //           else
+                //           {
+                //               soquy.Diengiai = txtdiengiai.Text.Trim();
+                //           }
 
-         //       }
-         //       else
-         //       {
-         //           MessageBox.Show("Phải nhập diễn giải nội dung nộp tiền ", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-         //           txtdiengiai.Focus();
-         //           return;
-         //       }
+                //       }
+                //       else
+                //       {
+                //           MessageBox.Show("Phải nhập diễn giải nội dung nộp tiền ", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //           txtdiengiai.Focus();
+                //           return;
+                //       }
 
 
-         //       if (txttennguoinop.Text.Trim() != "")
-         //       {
+                //       if (txttennguoinop.Text.Trim() != "")
+                //       {
 
 
-         //           if (txttennguoinop.Text.Length > 100)
-         //           {
-         //               soquy.Nguoinopnhantien = txttennguoinop.Text.Trim().Substring(100);
-         //           }
-         //           else
-         //           {
-         //               soquy.Nguoinopnhantien = txttennguoinop.Text.Trim();
-         //           }
+                //           if (txttennguoinop.Text.Length > 100)
+                //           {
+                //               soquy.Nguoinopnhantien = txttennguoinop.Text.Trim().Substring(100);
+                //           }
+                //           else
+                //           {
+                //               soquy.Nguoinopnhantien = txttennguoinop.Text.Trim();
+                //           }
 
-         //       }
-         //       else
-         //       {
-         //           MessageBox.Show("Phải nhập tên người nộp tiền ", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-         //           txttennguoinop.Focus();
-         //           return;
-         //       }
+                //       }
+                //       else
+                //       {
+                //           MessageBox.Show("Phải nhập tên người nộp tiền ", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //           txttennguoinop.Focus();
+                //           return;
+                //       }
 
-         //       if (txtdiachi.Text.Trim() != "")
-         //       {
+                //       if (txtdiachi.Text.Trim() != "")
+                //       {
 
 
-         //           if (txtdiachi.Text.Length > 225)
-         //           {
-         //               soquy.Diachinguoinhannop = txtdiachi.Text.Trim().Substring(225);
-         //           }
-         //           else
-         //           {
-         //               soquy.Diachinguoinhannop = txtdiachi.Text.Trim();
-         //           }
+                //           if (txtdiachi.Text.Length > 225)
+                //           {
+                //               soquy.Diachinguoinhannop = txtdiachi.Text.Trim().Substring(225);
+                //           }
+                //           else
+                //           {
+                //               soquy.Diachinguoinhannop = txtdiachi.Text.Trim();
+                //           }
 
-         //       }
-         //       else
-         //       {
-         //           MessageBox.Show("Bạn chưa nhập địa chỉ ", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-         //           txtdiachi.Focus();
-         //           return;
-         //       }
-         //       soquy.Ngayghiso = DateTime.Today;
-         //       soquy.Username = Utils.getusername();
+                //       }
+                //       else
+                //       {
+                //           MessageBox.Show("Bạn chưa nhập địa chỉ ", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //           txtdiachi.Focus();
+                //           return;
+                //       }
+                //       soquy.Ngayghiso = DateTime.Today;
+                //       soquy.Username = Utils.getusername();
 
-         //       soquy.Machungtu = "PT";
+                //       soquy.Machungtu = "PT";
 
-         //       if (this.statusphieuthu == 1)// phieu thu mơi
-         //       {
+                //       if (this.statusphieuthu == 1)// phieu thu mơi
+                //       {
 
-         //           dc.tbl_SoQuys.InsertOnSubmit(soquy);
-         //           dc.SubmitChanges();
+                //           dc.tbl_SoQuys.InsertOnSubmit(soquy);
+                //           dc.SubmitChanges();
 
 
-         //           #region  ghi vao so cai
+                //           #region  ghi vao so cai
 
 
-         //     //      string tkcotext = "";
-         //           // int dem = 0;
-         //           for (int idrow = 0; idrow < dataGridViewTkCo.RowCount - 1; idrow++)
-         //           {
+                //     //      string tkcotext = "";
+                //           // int dem = 0;
+                //           for (int idrow = 0; idrow < dataGridViewTkCo.RowCount - 1; idrow++)
+                //           {
 
-         //               if (dataGridViewTkCo.Rows[idrow].Cells["Tk_Có"].Value != DBNull.Value && checkdinhkhoanco == true)
-         //               {
+                //               if (dataGridViewTkCo.Rows[idrow].Cells["Tk_Có"].Value != DBNull.Value && checkdinhkhoanco == true)
+                //               {
 
-         //                   tbl_Socai socai = new tbl_Socai();
+                //                   tbl_Socai socai = new tbl_Socai();
 
-         //                   //  //  string username, string tkno, string tkco, float psno, float psco, string diengiai, string manghiepvu, int sochunngtu, DateTime ngaychungtu, DateTime ngayghiso
+                //                   //  //  string username, string tkno, string tkco, float psno, float psco, string diengiai, string manghiepvu, int sochunngtu, DateTime ngaychungtu, DateTime ngayghiso
 
 
-         //                   socai.TkCo = dataGridViewTkCo.Rows[idrow].Cells["Tk_Có"].Value.ToString().Trim();
+                //                   socai.TkCo = dataGridViewTkCo.Rows[idrow].Cells["Tk_Có"].Value.ToString().Trim();
 
-         //                   if (dataGridViewTkCo.Rows[idrow].Cells["Mã_chi_tiết"].Value != DBNull.Value)
-         //                   {
+                //                   if (dataGridViewTkCo.Rows[idrow].Cells["Mã_chi_tiết"].Value != DBNull.Value)
+                //                   {
 
-         //                       socai.MaCTietTKCo = int.Parse(dataGridViewTkCo.Rows[idrow].Cells["Mã_chi_tiết"].Value.ToString());
+                //                       socai.MaCTietTKCo = int.Parse(dataGridViewTkCo.Rows[idrow].Cells["Mã_chi_tiết"].Value.ToString());
 
-         //                   }
-         //                   else
-         //                   {
-         //                       socai.MaCTietTKCo = 0;
-         //                   }
+                //                   }
+                //                   else
+                //                   {
+                //                       socai.MaCTietTKCo = 0;
+                //                   }
 
 
 
-         //                   if (dataGridViewTkCo.Rows[idrow].Cells["Tên_chi_tiết"].Value != DBNull.Value)
-         //                   {
+                //                   if (dataGridViewTkCo.Rows[idrow].Cells["Tên_chi_tiết"].Value != DBNull.Value)
+                //                   {
 
-         //                       socai.tenchitietCo = dataGridViewTkCo.Rows[idrow].Cells["Tên_chi_tiết"].Value.ToString();
+                //                       socai.tenchitietCo = dataGridViewTkCo.Rows[idrow].Cells["Tên_chi_tiết"].Value.ToString();
 
-         //                   }
+                //                   }
 
 
 
-         //                   //if (dataGridViewTkCo.Rows[idrow].Cells["Ký_hiêu"].Value != DBNull.Value)
-         //                   //{
-         //                   //    socai.Kyhieuctu = dataGridViewTkCo.Rows[idrow].Cells["Ký_hiêu"].Value.ToString();
+                //                   //if (dataGridViewTkCo.Rows[idrow].Cells["Ký_hiêu"].Value != DBNull.Value)
+                //                   //{
+                //                   //    socai.Kyhieuctu = dataGridViewTkCo.Rows[idrow].Cells["Ký_hiêu"].Value.ToString();
 
-         //                   //}
-         //                   //else
-         //                   //{
-         //                   //    MessageBox.Show("Bạn chua nhập ký hiệu chứng từ", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-         //                   //    //dataGridViewTkCo.Rows[idrow].Cells["Ký_hiêu"].
-         //                   //    return;
-         //                   //}
+                //                   //}
+                //                   //else
+                //                   //{
+                //                   //    MessageBox.Show("Bạn chua nhập ký hiệu chứng từ", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //                   //    //dataGridViewTkCo.Rows[idrow].Cells["Ký_hiêu"].
+                //                   //    return;
+                //                   //}
 
 
 
 
-         //                   if (cbtkno.SelectedItem != null)
-         //                   {
-         //                       socai.TkNo = (cbtkno.SelectedItem as ComboboxItem).Value.ToString();
+                //                   if (cbtkno.SelectedItem != null)
+                //                   {
+                //                       socai.TkNo = (cbtkno.SelectedItem as ComboboxItem).Value.ToString();
 
-         //                   }
-         //                   else
-         //                   {
-         //                       MessageBox.Show("Bạn chua định khoản tài khoản tiền mặt", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-         //                       dataGridViewTkCo.Focus();
-         //                       return;
-         //                   }
+                //                   }
+                //                   else
+                //                   {
+                //                       MessageBox.Show("Bạn chua định khoản tài khoản tiền mặt", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //                       dataGridViewTkCo.Focus();
+                //                       return;
+                //                   }
 
 
 
 
-         //                   if (lb_machitietno.Text != "")
-         //                   {
-         //                       socai.MaCTietTKNo = int.Parse(lb_machitietno.Text.ToString());
-                              
-         //                   }
+                //                   if (lb_machitietno.Text != "")
+                //                   {
+                //                       socai.MaCTietTKNo = int.Parse(lb_machitietno.Text.ToString());
 
-         //                   if (lbtenchitietno.Text != "")
-         //                   {
-         //                       socai.tenchitietNo = lbtenchitietno.Text.ToString().Trim();
+                //                   }
 
-         //                   }
+                //                   if (lbtenchitietno.Text != "")
+                //                   {
+                //                       socai.tenchitietNo = lbtenchitietno.Text.ToString().Trim();
 
+                //                   }
 
 
-         //                   if (dataGridViewTkCo.Rows[idrow].Cells["Số_tiền"].Value != DBNull.Value)
-         //                   {
-         //                       socai.PsCo = double.Parse(dataGridViewTkCo.Rows[idrow].Cells["Số_tiền"].Value.ToString());
-         //                       socai.PsNo = double.Parse(dataGridViewTkCo.Rows[idrow].Cells["Số_tiền"].Value.ToString());
-         //                   }
-         //                   else
-         //                   {
-         //                       MessageBox.Show("Bạn chua nhập số tiền", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-         //                       dataGridViewTkCo.Focus();
-         //                       return;
-         //                   }
 
-         //                   socai.Diengiai = dataGridViewTkCo.Rows[idrow].Cells["Diễn_giải"].Value.ToString();
-         //                   socai.manghiepvu = "PT";
-         //                   socai.nghiepvuso = int.Parse(txtsophieu.Text.ToString());
+                //                   if (dataGridViewTkCo.Rows[idrow].Cells["Số_tiền"].Value != DBNull.Value)
+                //                   {
+                //                       socai.PsCo = double.Parse(dataGridViewTkCo.Rows[idrow].Cells["Số_tiền"].Value.ToString());
+                //                       socai.PsNo = double.Parse(dataGridViewTkCo.Rows[idrow].Cells["Số_tiền"].Value.ToString());
+                //                   }
+                //                   else
+                //                   {
+                //                       MessageBox.Show("Bạn chua nhập số tiền", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //                       dataGridViewTkCo.Focus();
+                //                       return;
+                //                   }
 
+                //                   socai.Diengiai = dataGridViewTkCo.Rows[idrow].Cells["Diễn_giải"].Value.ToString();
+                //                   socai.manghiepvu = "PT";
+                //                   socai.nghiepvuso = int.Parse(txtsophieu.Text.ToString());
 
-         //                   socai.Ngayctu = datepickngayphieu.Value;
-         //                   //if (dataGridViewTkCo.Rows[idrow].Cells["Ngày_chứng_từ"].Value != null)
-         //                   //{
-         //                   //    socai.Ngayctu = (DateTime)dataGridViewTkCo.Rows[idrow].Cells["Ngày_chứng_từ"].Value;
-         //                   //}
-         //                   //else
-         //                   //{
-         //                   //    MessageBox.Show("Bạn chua nhập ngày chứng từ", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-         //                   //    dataGridViewTkCo.Focus();
-         //                   //    return;
-         //                   //}
 
-         //                   socai.Ngayghiso = DateTime.Today;
-         //                   socai.username = Utils.getusername();
+                //                   socai.Ngayctu = datepickngayphieu.Value;
+                //                   //if (dataGridViewTkCo.Rows[idrow].Cells["Ngày_chứng_từ"].Value != null)
+                //                   //{
+                //                   //    socai.Ngayctu = (DateTime)dataGridViewTkCo.Rows[idrow].Cells["Ngày_chứng_từ"].Value;
+                //                   //}
+                //                   //else
+                //                   //{
+                //                   //    MessageBox.Show("Bạn chua nhập ngày chứng từ", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //                   //    dataGridViewTkCo.Focus();
+                //                   //    return;
+                //                   //}
 
-         //                   // ghi no tai kkhoan tien mat
+                //                   socai.Ngayghiso = DateTime.Today;
+                //                   socai.username = Utils.getusername();
 
-         //                   // ghi co/ no vao so cai tai khoan so cai
+                //                   // ghi no tai kkhoan tien mat
 
+                //                   // ghi co/ no vao so cai tai khoan so cai
 
-         //                   Model.Taikhoanketoan.ghisocaitk(socai);
 
+                //                   Model.Taikhoanketoan.ghisocaitk(socai);
 
 
-         //               }
 
+                //               }
 
 
 
 
-         //           }
 
-         //    //       txttaikhoanco.Text = tkcotext;
+                //           }
 
+                //    //       txttaikhoanco.Text = tkcotext;
 
-         //           #endregion
 
+                //           #endregion
 
 
-         //       }
 
-         //       if (this.statusphieuthu == 2)
-         //       {
+                //       }
 
+                //       if (this.statusphieuthu == 2)
+                //       {
 
-         //           Model.Socaitaikhoan.xoa("PT", maphieuthuOld);
 
+                //           Model.Socaitaikhoan.xoa("PT", maphieuthuOld);
 
 
-         //           var phieuchange = (from tbl_SoQuy in dc.tbl_SoQuys
-         //                              where tbl_SoQuy.id == this.phieuthuid
-         //                              select tbl_SoQuy).FirstOrDefault();
 
-         //           if (phieuchange != null)
-         //           {
-         //               phieuchange.Machungtu = soquy.Machungtu;
-         //               phieuchange.Chitietdoiung = soquy.Chitietdoiung;
-         //               phieuchange.TenchitietTM = soquy.TenchitietTM;
-         //               phieuchange.ChitietTM = soquy.ChitietTM;
-         //               phieuchange.Chungtugockemtheo = soquy.Chungtugockemtheo;
-         //               phieuchange.Diachinguoinhannop = soquy.Diachinguoinhannop;
-         //               phieuchange.Diengiai = soquy.Diengiai;
-         //               phieuchange.Machungtu = soquy.Machungtu;
+                //           var phieuchange = (from tbl_SoQuy in dc.tbl_SoQuys
+                //                              where tbl_SoQuy.id == this.phieuthuid
+                //                              select tbl_SoQuy).FirstOrDefault();
 
+                //           if (phieuchange != null)
+                //           {
+                //               phieuchange.Machungtu = soquy.Machungtu;
+                //               phieuchange.Chitietdoiung = soquy.Chitietdoiung;
+                //               phieuchange.TenchitietTM = soquy.TenchitietTM;
+                //               phieuchange.ChitietTM = soquy.ChitietTM;
+                //               phieuchange.Chungtugockemtheo = soquy.Chungtugockemtheo;
+                //               phieuchange.Diachinguoinhannop = soquy.Diachinguoinhannop;
+                //               phieuchange.Diengiai = soquy.Diengiai;
+                //               phieuchange.Machungtu = soquy.Machungtu;
 
-         //               phieuchange.Nguoinopnhantien = soquy.Nguoinopnhantien;
-         //               phieuchange.PsNo = soquy.PsNo;
 
+                //               phieuchange.Nguoinopnhantien = soquy.Nguoinopnhantien;
+                //               phieuchange.PsNo = soquy.PsNo;
 
-         //               phieuchange.TKdoiung = soquy.TKdoiung;
-         //               phieuchange.TKtienmat = soquy.TKtienmat;
-         //               phieuchange.Username = soquy.Username;
-         //               phieuchange.quyenso = soquy.quyenso;
 
-         //               phieuchange.Sochungtu = soquy.Sochungtu;
-         //               phieuchange.Ngayctu = soquy.Ngayctu;
-         //               phieuchange.Ngayghiso = soquy.Ngayghiso;
+                //               phieuchange.TKdoiung = soquy.TKdoiung;
+                //               phieuchange.TKtienmat = soquy.TKtienmat;
+                //               phieuchange.Username = soquy.Username;
+                //               phieuchange.quyenso = soquy.quyenso;
 
+                //               phieuchange.Sochungtu = soquy.Sochungtu;
+                //               phieuchange.Ngayctu = soquy.Ngayctu;
+                //               phieuchange.Ngayghiso = soquy.Ngayghiso;
 
 
 
-         //               dc.SubmitChanges();
-         //           }
 
+                //               dc.SubmitChanges();
+                //           }
 
-         //           #region  ghi vao so cai
 
+                //           #region  ghi vao so cai
 
-         //   //        string tkcotext = "";
-         //           // int dem = 0;
-         //           for (int idrow = 0; idrow < dataGridViewTkCo.RowCount - 1; idrow++)
-         //           {
 
-         //               if (dataGridViewTkCo.Rows[idrow].Cells["Tk_Có"].Value != DBNull.Value && checkdinhkhoanco == true)
-         //               {
+                //   //        string tkcotext = "";
+                //           // int dem = 0;
+                //           for (int idrow = 0; idrow < dataGridViewTkCo.RowCount - 1; idrow++)
+                //           {
 
-         //                   tbl_Socai socai = new tbl_Socai();
+                //               if (dataGridViewTkCo.Rows[idrow].Cells["Tk_Có"].Value != DBNull.Value && checkdinhkhoanco == true)
+                //               {
 
-         //                   //  //  string username, string tkno, string tkco, float psno, float psco, string diengiai, string manghiepvu, int sochunngtu, DateTime ngaychungtu, DateTime ngayghiso
+                //                   tbl_Socai socai = new tbl_Socai();
 
+                //                   //  //  string username, string tkno, string tkco, float psno, float psco, string diengiai, string manghiepvu, int sochunngtu, DateTime ngaychungtu, DateTime ngayghiso
 
-         //                   socai.TkCo = dataGridViewTkCo.Rows[idrow].Cells["Tk_Có"].Value.ToString().Trim();
 
-         //                   if (dataGridViewTkCo.Rows[idrow].Cells["Mã_chi_tiết"].Value != DBNull.Value )///zcxzv
-         //                   {
+                //                   socai.TkCo = dataGridViewTkCo.Rows[idrow].Cells["Tk_Có"].Value.ToString().Trim();
 
+                //                   if (dataGridViewTkCo.Rows[idrow].Cells["Mã_chi_tiết"].Value != DBNull.Value )///zcxzv
+                //                   {
 
-         //                       if (Utils.IsValidnumber((string)dataGridViewTkCo.Rows[idrow].Cells["Mã_chi_tiết"].Value ))
-         //                       {
-         //                           socai.MaCTietTKCo = int.Parse(dataGridViewTkCo.Rows[idrow].Cells["Mã_chi_tiết"].Value.ToString());
-         //                       }
-         //                       else
-         //                       {
-         //                           socai.MaCTietTKCo = null;
-         //                       }
-                             
 
-         //                   }
-         //                   if (dataGridViewTkCo.Rows[idrow].Cells["Tên_chi_tiết"].Value != DBNull.Value)
-         //                   {
+                //                       if (Utils.IsValidnumber((string)dataGridViewTkCo.Rows[idrow].Cells["Mã_chi_tiết"].Value ))
+                //                       {
+                //                           socai.MaCTietTKCo = int.Parse(dataGridViewTkCo.Rows[idrow].Cells["Mã_chi_tiết"].Value.ToString());
+                //                       }
+                //                       else
+                //                       {
+                //                           socai.MaCTietTKCo = null;
+                //                       }
 
-         //                       socai.tenchitietCo = dataGridViewTkCo.Rows[idrow].Cells["Tên_chi_tiết"].Value.ToString();
 
-         //                   }
+                //                   }
+                //                   if (dataGridViewTkCo.Rows[idrow].Cells["Tên_chi_tiết"].Value != DBNull.Value)
+                //                   {
 
+                //                       socai.tenchitietCo = dataGridViewTkCo.Rows[idrow].Cells["Tên_chi_tiết"].Value.ToString();
 
+                //                   }
 
 
 
 
-         //                   if (cbtkno.SelectedItem != null)
-         //                   {
-         //                       socai.TkNo = (cbtkno.SelectedItem as ComboboxItem).Value.ToString();
 
-         //                   }
-         //                   else
-         //                   {
-         //                       MessageBox.Show("Bạn chua định khoản tài khoản tiền mặt", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-         //                       dataGridViewTkCo.Focus();
-         //                       return;
-         //                   }
 
+                //                   if (cbtkno.SelectedItem != null)
+                //                   {
+                //                       socai.TkNo = (cbtkno.SelectedItem as ComboboxItem).Value.ToString();
 
+                //                   }
+                //                   else
+                //                   {
+                //                       MessageBox.Show("Bạn chua định khoản tài khoản tiền mặt", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //                       dataGridViewTkCo.Focus();
+                //                       return;
+                //                   }
 
 
-         //                   if (lb_machitietno.Text != "")
-         //                   {
-         //                       if (Utils.IsValidnumber(lb_machitietno.Text.ToString()))
-         //                       {
-         //                           socai.MaCTietTKNo = int.Parse(lb_machitietno.Text.ToString());
-         //                       }
-         //                       else
-         //                       {
-         //                           socai.MaCTietTKNo = null;
-         //                       }
-                               
-         //                   }
 
 
+                //                   if (lb_machitietno.Text != "")
+                //                   {
+                //                       if (Utils.IsValidnumber(lb_machitietno.Text.ToString()))
+                //                       {
+                //                           socai.MaCTietTKNo = int.Parse(lb_machitietno.Text.ToString());
+                //                       }
+                //                       else
+                //                       {
+                //                           socai.MaCTietTKNo = null;
+                //                       }
 
-         //                   if (dataGridViewTkCo.Rows[idrow].Cells["Số_tiền"].Value != DBNull.Value)
-         //                   {
-         //                       socai.PsCo = double.Parse(dataGridViewTkCo.Rows[idrow].Cells["Số_tiền"].Value.ToString());
-         //                       socai.PsNo = double.Parse(dataGridViewTkCo.Rows[idrow].Cells["Số_tiền"].Value.ToString());
-         //                   }
-         //                   else
-         //                   {
-         //                       MessageBox.Show("Bạn chua nhập số tiền", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-         //                       dataGridViewTkCo.Focus();
-         //                       return;
-         //                   }
+                //                   }
 
-         //                   socai.Diengiai = dataGridViewTkCo.Rows[idrow].Cells["Diễn_giải"].Value.ToString();
-         //                   socai.manghiepvu = "PT";
-         //                   socai.nghiepvuso = int.Parse(txtsophieu.Text.ToString());
 
 
+                //                   if (dataGridViewTkCo.Rows[idrow].Cells["Số_tiền"].Value != DBNull.Value)
+                //                   {
+                //                       socai.PsCo = double.Parse(dataGridViewTkCo.Rows[idrow].Cells["Số_tiền"].Value.ToString());
+                //                       socai.PsNo = double.Parse(dataGridViewTkCo.Rows[idrow].Cells["Số_tiền"].Value.ToString());
+                //                   }
+                //                   else
+                //                   {
+                //                       MessageBox.Show("Bạn chua nhập số tiền", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //                       dataGridViewTkCo.Focus();
+                //                       return;
+                //                   }
 
-         //                   //if (dataGridViewTkCo.Rows[idrow].Cells["Ngày_chứng_từ"].Value != null)
-         //                   //{
-         //                   //    socai.Ngayctu = (DateTime)dataGridViewTkCo.Rows[idrow].Cells["Ngày_chứng_từ"].Value;
-         //                   //}
-         //                   //else
-         //                   //{
-         //                   //    MessageBox.Show("Bạn chua nhập ngày chứng từ", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-         //                   //    dataGridViewTkCo.Focus();
-         //                   //    return;
-         //                   //}
-         //                   socai.Ngayctu = datepickngayphieu.Value;
-         //                   socai.Ngayghiso = DateTime.Today;
-         //                   socai.username = Utils.getusername();
+                //                   socai.Diengiai = dataGridViewTkCo.Rows[idrow].Cells["Diễn_giải"].Value.ToString();
+                //                   socai.manghiepvu = "PT";
+                //                   socai.nghiepvuso = int.Parse(txtsophieu.Text.ToString());
 
-         //                   // ghi no tai kkhoan tien mat
 
-         //                   // ghi co/ no vao so cai tai khoan so cai
 
+                //                   //if (dataGridViewTkCo.Rows[idrow].Cells["Ngày_chứng_từ"].Value != null)
+                //                   //{
+                //                   //    socai.Ngayctu = (DateTime)dataGridViewTkCo.Rows[idrow].Cells["Ngày_chứng_từ"].Value;
+                //                   //}
+                //                   //else
+                //                   //{
+                //                   //    MessageBox.Show("Bạn chua nhập ngày chứng từ", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //                   //    dataGridViewTkCo.Focus();
+                //                   //    return;
+                //                   //}
+                //                   socai.Ngayctu = datepickngayphieu.Value;
+                //                   socai.Ngayghiso = DateTime.Today;
+                //                   socai.username = Utils.getusername();
 
-         //                   Model.Taikhoanketoan.ghisocaitk(socai);
+                //                   // ghi no tai kkhoan tien mat
 
+                //                   // ghi co/ no vao so cai tai khoan so cai
 
 
-         //               }
+                //                   Model.Taikhoanketoan.ghisocaitk(socai);
 
 
 
+                //               }
 
 
-         //           }
 
-         //     //      txttaikhoanco.Text = tkcotext;
 
 
-         //           #endregion
+                //           }
 
+                //     //      txttaikhoanco.Text = tkcotext;
 
-         //       }
 
+                //           #endregion
 
-         //       #endregion add new phieu thu
 
+                //       }
 
 
+                //       #endregion add new phieu thu
 
-                MessageBox.Show("Số phiếu vừa lưu: " + this.sophieuthu, "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+          
+
+                MessageBox.Show("Số phiếu vừa lưu: " + this.sophieunhap, "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
             }
@@ -1184,15 +1205,15 @@ namespace BEEACCOUNT.View
             lbtenchitietno.Text = "";
             lb_machitietno.Text = "";
             cbtkno.SelectedIndex = -1;
-      //      txtquyenso.Text = "";
+            //      txtquyenso.Text = "";
 
             datepickngayphieu.Focus();
 
 
             #endregion
-            dataGridViewTkCo = Model.Phieuthuchi.reloadnewdetailtaikhoanco(dataGridViewTkCo);
+            dataGridViewTkCo = Model.Khohang.reloaddetailnewPNK(dataGridViewTkCo);
 
-            dataGridViewListPNK.DataSource = Model.Phieuthuchi.LisDanhSachphieuthu("PT");
+         //   dataGridViewListPNK.DataSource = Model.Phieuthuchi.LisDanhSachphieuthu("PT");
 
         }
 
@@ -1358,13 +1379,13 @@ namespace BEEACCOUNT.View
         {
             #region  list black phiếu
             datepickngayphieu.Enabled = true;
-   //         txtquyenso.Enabled = true;
+            //         txtquyenso.Enabled = true;
             txtsophieu.Enabled = true;
             txttennguoinop.Enabled = true;
             txtdiachi.Enabled = true;
             txtdiengiai.Enabled = true;
             //txtsotien.Enabled = true;
-         //   txtsochungtugoc.Enabled = true;
+            //   txtsochungtugoc.Enabled = true;
             btluu.Visible = true;
             btluu.Enabled = true;
             //    cbtaikhoanco.Enabled = true;
@@ -1375,27 +1396,27 @@ namespace BEEACCOUNT.View
             txttennguoinop.Text = "";
             txtdiachi.Text = "";
             txtdiengiai.Text = "";
-       //     txtsotien.Text = "";
-       //     txtsochungtugoc.Text = "";
-       //     txtquyenso.Text = "";
+            //     txtsotien.Text = "";
+            //     txtsochungtugoc.Text = "";
+            //     txtquyenso.Text = "";
             lbtenchitietno.Text = "";
 
             cbtkno.SelectedIndex = -1;
 
             lb_machitietno.Text = "";
             lbtenchitietno.Text = "";
-        //    txttaikhoanco.Text = "";
+            //    txttaikhoanco.Text = "";
 
             datepickngayphieu.Focus();
 
 
-            this.phieuthuid = -1;
+            this.phieunhapid = -1;
 
-            this.statusphieuthu = 1; // tạo mới
+            this.statusphieunhap = 1; // tạo mới
 
             #endregion
-
-            dataGridViewTkCo = Model.Phieuthuchi.reloadnewdetailtaikhoanco(dataGridViewTkCo);
+            dataGridViewTkCo = Model.Khohang.reloaddetailnewPNK(dataGridViewTkCo);
+            //      dataGridViewTkCo = Model.Phieuthuchi.reloadnewdetailtaikhoanco(dataGridViewTkCo);
 
         }
 
@@ -1416,7 +1437,7 @@ namespace BEEACCOUNT.View
 
 
             var phieuthu = (from tbl_SoQuy in dc.tbl_SoQuys
-                            where tbl_SoQuy.id == this.phieuthuid
+                            where tbl_SoQuy.id == this.phieunhapid
                             select new
                             {
 
@@ -1529,24 +1550,24 @@ namespace BEEACCOUNT.View
 
             try
             {
-                this.phieuthuid = (int)this.dataGridViewListPNK.Rows[this.dataGridViewListPNK.CurrentCell.RowIndex].Cells["ID"].Value;
+                this.phieunhapid = (int)this.dataGridViewListPNK.Rows[this.dataGridViewListPNK.CurrentCell.RowIndex].Cells["ID"].Value;
 
 
             }
             catch (Exception)
             {
 
-                this.phieuthuid = 0;
+                this.phieunhapid = 0;
             }
 
-            if (this.phieuthuid != 0)
+            if (this.phieunhapid != 0)
             {
 
 
 
                 #region view load form
                 var phieuthu = (from tbl_SoQuy in dc.tbl_SoQuys
-                                where tbl_SoQuy.id == this.phieuthuid
+                                where tbl_SoQuy.id == this.phieunhapid
                                 select new
                                 {
 
@@ -1584,14 +1605,14 @@ namespace BEEACCOUNT.View
                     txttennguoinop.Text = phieuthu.nguoinoptien;
                     txtdiachi.Text = phieuthu.diachinguoinop;
                     txtdiengiai.Text = phieuthu.lydothu;
-            //        txtsotien.Text = double.Parse(phieuthu.sotien.ToString()).ToString("#,#", CultureInfo.InvariantCulture);
+                    //        txtsotien.Text = double.Parse(phieuthu.sotien.ToString()).ToString("#,#", CultureInfo.InvariantCulture);
                     //txtValueSotienNo.Text = phieuthu.sotien.ToString();
                     this.pssotienno = double.Parse(phieuthu.sotien.ToString());
 
 
-             //       txtsochungtugoc.Text = phieuthu.sochungtugoc.ToString();
+                    //       txtsochungtugoc.Text = phieuthu.sochungtugoc.ToString();
 
-          //          txttaikhoanco.Text = phieuthu.taikhoandoiung;
+                    //          txttaikhoanco.Text = phieuthu.taikhoandoiung;
 
                     if (phieuthu.machitietno != null)
                     {
@@ -1641,11 +1662,11 @@ namespace BEEACCOUNT.View
                     txttennguoinop.Enabled = false;
                     txtdiachi.Enabled = false;
                     txtdiengiai.Enabled = false;
-             //       txtsotien.Enabled = false;
-             //       txtsochungtugoc.Enabled = false;
+                    //       txtsotien.Enabled = false;
+                    //       txtsochungtugoc.Enabled = false;
 
                     btsua.Enabled = true;
-            //        txtquyenso.Enabled = false;
+                    //        txtquyenso.Enabled = false;
 
 
 
@@ -1654,9 +1675,9 @@ namespace BEEACCOUNT.View
 
 
 
-                    this.statusphieuthu = 3;// View
-              //      Model.Phieuthuchi.reloadnewdetailtaikhoanco(dataGridViewTkCo);
-            //        Model.Phieuthuchi.reloaddetailtaikhoancophieuthu(this.dataGridViewTkCo, this, phieuthu.tkno.Trim(), phieuthu.sophieuthu);
+                    this.statusphieunhap = 3;// View
+                                            //      Model.Phieuthuchi.reloadnewdetailtaikhoanco(dataGridViewTkCo);
+                                            //        Model.Phieuthuchi.reloaddetailtaikhoancophieuthu(this.dataGridViewTkCo, this, phieuthu.tkno.Trim(), phieuthu.sophieuthu);
                     btluu.Visible = false;
 
                 }
@@ -1685,47 +1706,60 @@ namespace BEEACCOUNT.View
 
         private void button3_Click(object sender, EventArgs e)
         {
+
+            // nút xóa
             string connection_string = Utils.getConnectionstr();
             LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
 
 
-            var phieuthu = (from tbl_SoQuy in dc.tbl_SoQuys
-                            where tbl_SoQuy.id == this.phieuthuid
-                            select tbl_SoQuy).FirstOrDefault();
+            var phieunhaphead = (from p in dc.tbl_kho_phieunhap_heads
+                                 where p.id == this.phieunhapid
+                                 select p).FirstOrDefault();
 
-            if (phieuthu != null)
+            if (phieunhaphead != null)
             {
-                this.sophieuthu = phieuthu.Sochungtu;
+                this.phieunhapid = phieunhaphead.id;
 
-                dc.tbl_SoQuys.DeleteOnSubmit(phieuthu);
+                dc.tbl_kho_phieunhap_heads.DeleteOnSubmit(phieunhaphead);
                 dc.SubmitChanges();
 
 
-                Model.Socaitaikhoan.xoa("PT", phieuthu.Sochungtu);
+                #region      // xóa đetail phiếu nhâp
 
-                MessageBox.Show("Đã xóa phiếu thu: " + this.sophieuthu, "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                var phieunhapdetail = from p in dc.tbl_kho_phieunhap_details
+                                      where p.subid == this.phieunhapid
+                                      select p;
+
+                if (phieunhapdetail.Count() > 0)
+                {
+                    dc.tbl_kho_phieunhap_details.DeleteAllOnSubmit(phieunhapdetail);
+                    dc.SubmitChanges();
+
+                }
+                #endregion     //    phieunhapdetail
+
+                #region // xóa sổ cái
+
+                //      Model.Socaitaikhoan.xoa("PT", phieunhapkho.Sochungtu);
+
+                #endregion                // xóa sổ cái nưa
+
+
+
+
+                // xóa detail
+
+
+                MessageBox.Show("Đã xóa phiếu: " + this.sophieunhap, "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
                 //  Model.
-                #region load list phieu thu
-                var Listphieuthu = from listpt in dc.tbl_SoQuys
-                                   where listpt.Machungtu == "PT" // mã 8 là tiền mặt
-                                   select new
-                                   {
+                #region load list listphieunhapkho
 
-                                       Ngày_chứng_từ = listpt.Ngayctu,
-                                       Số_chứng_từ = "PT-" + listpt.Sochungtu,
-                                       TK_Nợ = listpt.TKtienmat,
-                                       TK_Có = listpt.TKdoiung,
-                                       Số_Tiền = listpt.PsNo,
-                                       Diễn_Giải = listpt.Diengiai,
-                                       Người_nộp = listpt.Nguoinopnhantien,
-                                       Địa_chỉ = listpt.Diachinguoinhannop,
-                                       Username = listpt.Username,
-                                       Ngày_nhập_liệu = listpt.Ngayghiso,
-                                       ID = listpt.id
+                var listphieunhapkho = Model.Khohang.danhsachphieunhapkho(dc);
 
-                                   };
 
-                dataGridViewListPNK.DataSource = Listphieuthu;
+                dataGridViewListPNK.DataSource = listphieunhapkho;
                 #endregion
 
 
@@ -1742,7 +1776,7 @@ namespace BEEACCOUNT.View
         private void button2_Click(object sender, EventArgs e)
         {
 
-            this.statusphieuthu = 2;
+            this.statusphieunhap = 2;
 
             btluu.Visible = true;
 
@@ -1753,24 +1787,24 @@ namespace BEEACCOUNT.View
             txtsophieu.Enabled = true;
             if (txtsophieu.Text != "")
             {
-                this.sophieuthu = int.Parse(txtsophieu.Text.ToString());
+                this.sophieunhap = txtsophieu.Text.ToString();
                 this.maphieuthuOld = int.Parse(txtsophieu.Text.ToString());
             }
 
 
-          //  txtquyenso.Enabled = true;
+            //  txtquyenso.Enabled = true;
 
             txttennguoinop.Enabled = true;
             txtdiachi.Enabled = true;
             txtdiengiai.Enabled = true;
-        //    txtsotien.Enabled = true;
-        //    txtsochungtugoc.Enabled = true;
+            //    txtsotien.Enabled = true;
+            //    txtsochungtugoc.Enabled = true;
             btluu.Enabled = true;
 
             //   cbtaikhoanco.Enabled = true;
             cbtkno.Enabled = true;
 
-            this.statusphieuthu = 2;
+            this.statusphieunhap = 2;
 
         }
 
@@ -1837,7 +1871,7 @@ namespace BEEACCOUNT.View
             {
                 //  cbsophieu.
                 e.Handled = true;
-    //            txtsotien.Focus();
+                //            txtsotien.Focus();
 
                 //    string valueinput = cb_customerka.Text;
 
@@ -1856,7 +1890,7 @@ namespace BEEACCOUNT.View
             {
                 //  cbsophieu.
                 e.Handled = true;
-          //      txtsochungtugoc.Focus();
+                //      txtsochungtugoc.Focus();
 
                 //    string valueinput = cb_customerka.Text;
 
@@ -1909,8 +1943,8 @@ namespace BEEACCOUNT.View
 
             if (!kq)
             {
-            //    View.BeeHtoansocaidoiungphieuthu BeeHtoansocaidoiung = new BeeHtoansocaidoiungphieuthu(this, "Địa chỉ", "", "");
-    //            BeeHtoansocaidoiung.ShowDialog();
+                //    View.BeeHtoansocaidoiungphieuthu BeeHtoansocaidoiung = new BeeHtoansocaidoiungphieuthu(this, "Địa chỉ", "", "");
+                //            BeeHtoansocaidoiung.ShowDialog();
             }
 
 
@@ -1980,11 +2014,11 @@ namespace BEEACCOUNT.View
             {
                 if (cbm.SelectedItem != null)
                 {
-                     string SelectedItem = (cbm.SelectedItem as ComboboxItem).Value.ToString();// (cbm.SelectedItem as ComboboxItem).Value.ToString();
-               
+                    string SelectedItem = (cbm.SelectedItem as ComboboxItem).Value.ToString();// (cbm.SelectedItem as ComboboxItem).Value.ToString();
 
-                   // int i = dataGridProgramdetail.CurrentRow.Index;
-                   int i = currentCell.RowIndex;
+
+                    // int i = dataGridProgramdetail.CurrentRow.Index;
+                    int i = currentCell.RowIndex;
                     string colname = this.dataGridViewTkCo.Columns[this.dataGridViewTkCo.CurrentCell.ColumnIndex].Name;
 
                     //   dataGridViewTkCo.Rows[i].Cells[colname].Value = SelectedItem;
@@ -1994,17 +2028,17 @@ namespace BEEACCOUNT.View
                     string connection_string = Utils.getConnectionstr();
                     LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
 
-          
+
                     var sp = (from p in dc.tbl_kho_sanphams
-                             where p.masp == SelectedItem
-                             orderby p.masp
-                             select p).FirstOrDefault();
+                              where p.masp == SelectedItem
+                              orderby p.masp
+                              select p).FirstOrDefault();
 
                     if (sp != null)
                     {
                         dataGridViewTkCo.Rows[i].Cells["Tên_sản_phẩm"].Value = sp.tensp;
                         dataGridViewTkCo.Rows[i].Cells["Đơn_vị"].Value = sp.donvi;
-                      
+
                     }
                     else
                     {
@@ -2085,7 +2119,7 @@ namespace BEEACCOUNT.View
             int i = e.RowIndex;
             string colname = view.Columns[e.ColumnIndex].Name;
 
- 
+
 
             //       #region if la slect tai khoan co chi tiet
 
@@ -2153,7 +2187,7 @@ namespace BEEACCOUNT.View
             for (int idrow = 0; idrow < dataGridViewTkCo.RowCount - 1; idrow++)
             {
 
-             
+
                 if (dataGridViewTkCo.Rows[idrow].Cells["Thành_tiền"] != null)
 
                 {
@@ -2176,6 +2210,9 @@ namespace BEEACCOUNT.View
             this.pssotienco = tongcong;
             txtsotienco.Text = tongcong.ToString("#,#", CultureInfo.InvariantCulture);
             #endregion
+
+
+
             //  }
 
 
@@ -2468,46 +2505,46 @@ namespace BEEACCOUNT.View
         private void dataGridViewTkCo_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
         {
 
-     //       #region  view lai cac tk có
+            //       #region  view lai cac tk có
 
-     //       String tkcotext = "";
-
-
-     //       int dem = 0;
-     //       for (int idrow = 0; idrow < dataGridViewTkCo.RowCount - 1; idrow++)
-     //       {
-
-     //           if (dataGridViewTkCo.Rows[idrow].Cells["Tk_Có"].Value != DBNull.Value)
-     //           {
+            //       String tkcotext = "";
 
 
+            //       int dem = 0;
+            //       for (int idrow = 0; idrow < dataGridViewTkCo.RowCount - 1; idrow++)
+            //       {
 
-     //               dem = dem + 1;
-     //               if (dem > 1)
-     //               {
-
-     //                   tkcotext += ";" + dataGridViewTkCo.Rows[idrow].Cells["Tk_Có"].Value.ToString().Trim(); // chính la program
-
-     //               }
-     //               else
-     //               {
-     //                   tkcotext += dataGridViewTkCo.Rows[idrow].Cells["Tk_Có"].Value.ToString().Trim(); // chính la program
-     //                                                                                                    //dataGridViewTkCo.Columns["Số_tiền"].DisplayIndex = 3;
+            //           if (dataGridViewTkCo.Rows[idrow].Cells["Tk_Có"].Value != DBNull.Value)
+            //           {
 
 
-     //               }
+
+            //               dem = dem + 1;
+            //               if (dem > 1)
+            //               {
+
+            //                   tkcotext += ";" + dataGridViewTkCo.Rows[idrow].Cells["Tk_Có"].Value.ToString().Trim(); // chính la program
+
+            //               }
+            //               else
+            //               {
+            //                   tkcotext += dataGridViewTkCo.Rows[idrow].Cells["Tk_Có"].Value.ToString().Trim(); // chính la program
+            //                                                                                                    //dataGridViewTkCo.Columns["Số_tiền"].DisplayIndex = 3;
 
 
-     //           }
+            //               }
 
 
-     //       }
-
-     ////       txttaikhoanco.Text = tkcotext;
-     //       #endregion
+            //           }
 
 
-            #region  view số tiền
+            //       }
+
+            ////       txttaikhoanco.Text = tkcotext;
+            //       #endregion
+
+
+            #region  view lai số tiền
 
 
             double tongcong = 0;
@@ -2517,13 +2554,13 @@ namespace BEEACCOUNT.View
             {
 
 
-                if (dataGridViewTkCo.Rows[idrow].Cells["Số_tiền"].Value != DBNull.Value)
+                if (dataGridViewTkCo.Rows[idrow].Cells["Thành_tiền"] != null)
 
                 {
-                    if (Utils.IsValidnumber(dataGridViewTkCo.Rows[idrow].Cells["Số_tiền"].Value.ToString()))
+                    if (Utils.IsValidnumber(dataGridViewTkCo.Rows[idrow].Cells["Thành_tiền"].Value.ToString()))
                     {
 
-                        tongcong += double.Parse(dataGridViewTkCo.Rows[idrow].Cells["Số_tiền"].Value.ToString());
+                        tongcong += double.Parse(dataGridViewTkCo.Rows[idrow].Cells["Thành_tiền"].Value.ToString());
                     }
                 }
 
@@ -2564,7 +2601,7 @@ namespace BEEACCOUNT.View
 
         private void cbtkco_SelectedIndexChanged(object sender, EventArgs e)
         {
-        
+
 
 
 

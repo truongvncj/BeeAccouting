@@ -132,7 +132,7 @@ namespace BEEACCOUNT
     #endregion
 		
 		public LinqtoSQLDataContext() : 
-				base(global::BEEACCOUNT.Properties.Settings.Default.BEEConnectionString2, mappingSource)
+				base(global::BEEACCOUNT.Properties.Settings.Default.BEEConnectionString1, mappingSource)
 		{
 			OnCreated();
 		}
@@ -9032,6 +9032,8 @@ namespace BEEACCOUNT
 		
 		private System.Nullable<double> _soluongnhap;
 		
+		private System.Nullable<int> _subid;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -9054,6 +9056,8 @@ namespace BEEACCOUNT
     partial void OnsoluongyeucauChanged();
     partial void OnsoluongnhapChanging(System.Nullable<double> value);
     partial void OnsoluongnhapChanged();
+    partial void OnsubidChanging(System.Nullable<int> value);
+    partial void OnsubidChanged();
     #endregion
 		
 		public tbl_kho_phieunhap_detail()
@@ -9237,6 +9241,26 @@ namespace BEEACCOUNT
 					this._soluongnhap = value;
 					this.SendPropertyChanged("soluongnhap");
 					this.OnsoluongnhapChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_subid", DbType="Int")]
+		public System.Nullable<int> subid
+		{
+			get
+			{
+				return this._subid;
+			}
+			set
+			{
+				if ((this._subid != value))
+				{
+					this.OnsubidChanging(value);
+					this.SendPropertyChanging();
+					this._subid = value;
+					this.SendPropertyChanged("subid");
+					this.OnsubidChanged();
 				}
 			}
 		}
