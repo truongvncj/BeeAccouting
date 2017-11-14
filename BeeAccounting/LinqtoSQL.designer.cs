@@ -132,7 +132,7 @@ namespace BEEACCOUNT
     #endregion
 		
 		public LinqtoSQLDataContext() : 
-				base(global::BEEACCOUNT.Properties.Settings.Default.BEEConnectionString1, mappingSource)
+				base(global::BEEACCOUNT.Properties.Settings.Default.BEEConnectionString2, mappingSource)
 		{
 			OnCreated();
 		}
@@ -9014,17 +9014,11 @@ namespace BEEACCOUNT
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
-		private System.Nullable<int> _sophieu;
-		
-		private string _makhang;
+		private string _mahang;
 		
 		private string _tenhang;
 		
 		private string _donvi;
-		
-		private System.Nullable<int> _soluongyeucau;
-		
-		private System.Nullable<int> _soluongnhap;
 		
 		private System.Nullable<double> _dongia;
 		
@@ -9032,28 +9026,34 @@ namespace BEEACCOUNT
 		
 		private int _id;
 		
+		private string _phieuso;
+		
+		private System.Nullable<double> _soluongyeucau;
+		
+		private System.Nullable<double> _soluongnhap;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
-    partial void OnsophieuChanging(System.Nullable<int> value);
-    partial void OnsophieuChanged();
-    partial void OnmakhangChanging(string value);
-    partial void OnmakhangChanged();
+    partial void OnmahangChanging(string value);
+    partial void OnmahangChanged();
     partial void OntenhangChanging(string value);
     partial void OntenhangChanged();
     partial void OndonviChanging(string value);
     partial void OndonviChanged();
-    partial void OnsoluongyeucauChanging(System.Nullable<int> value);
-    partial void OnsoluongyeucauChanged();
-    partial void OnsoluongnhapChanging(System.Nullable<int> value);
-    partial void OnsoluongnhapChanged();
     partial void OndongiaChanging(System.Nullable<double> value);
     partial void OndongiaChanged();
     partial void OnthanhtienChanging(System.Nullable<double> value);
     partial void OnthanhtienChanged();
     partial void OnidChanging(int value);
     partial void OnidChanged();
+    partial void OnphieusoChanging(string value);
+    partial void OnphieusoChanged();
+    partial void OnsoluongyeucauChanging(System.Nullable<double> value);
+    partial void OnsoluongyeucauChanged();
+    partial void OnsoluongnhapChanging(System.Nullable<double> value);
+    partial void OnsoluongnhapChanged();
     #endregion
 		
 		public tbl_kho_phieunhap_detail()
@@ -9061,42 +9061,22 @@ namespace BEEACCOUNT
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_sophieu", DbType="Int")]
-		public System.Nullable<int> sophieu
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_mahang", DbType="NVarChar(50)")]
+		public string mahang
 		{
 			get
 			{
-				return this._sophieu;
+				return this._mahang;
 			}
 			set
 			{
-				if ((this._sophieu != value))
+				if ((this._mahang != value))
 				{
-					this.OnsophieuChanging(value);
+					this.OnmahangChanging(value);
 					this.SendPropertyChanging();
-					this._sophieu = value;
-					this.SendPropertyChanged("sophieu");
-					this.OnsophieuChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_makhang", DbType="NVarChar(50)")]
-		public string makhang
-		{
-			get
-			{
-				return this._makhang;
-			}
-			set
-			{
-				if ((this._makhang != value))
-				{
-					this.OnmakhangChanging(value);
-					this.SendPropertyChanging();
-					this._makhang = value;
-					this.SendPropertyChanged("makhang");
-					this.OnmakhangChanged();
+					this._mahang = value;
+					this.SendPropertyChanged("mahang");
+					this.OnmahangChanged();
 				}
 			}
 		}
@@ -9137,46 +9117,6 @@ namespace BEEACCOUNT
 					this._donvi = value;
 					this.SendPropertyChanged("donvi");
 					this.OndonviChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_soluongyeucau", DbType="Int")]
-		public System.Nullable<int> soluongyeucau
-		{
-			get
-			{
-				return this._soluongyeucau;
-			}
-			set
-			{
-				if ((this._soluongyeucau != value))
-				{
-					this.OnsoluongyeucauChanging(value);
-					this.SendPropertyChanging();
-					this._soluongyeucau = value;
-					this.SendPropertyChanged("soluongyeucau");
-					this.OnsoluongyeucauChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_soluongnhap", DbType="Int")]
-		public System.Nullable<int> soluongnhap
-		{
-			get
-			{
-				return this._soluongnhap;
-			}
-			set
-			{
-				if ((this._soluongnhap != value))
-				{
-					this.OnsoluongnhapChanging(value);
-					this.SendPropertyChanging();
-					this._soluongnhap = value;
-					this.SendPropertyChanged("soluongnhap");
-					this.OnsoluongnhapChanged();
 				}
 			}
 		}
@@ -9241,6 +9181,66 @@ namespace BEEACCOUNT
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_phieuso", DbType="NVarChar(50)")]
+		public string phieuso
+		{
+			get
+			{
+				return this._phieuso;
+			}
+			set
+			{
+				if ((this._phieuso != value))
+				{
+					this.OnphieusoChanging(value);
+					this.SendPropertyChanging();
+					this._phieuso = value;
+					this.SendPropertyChanged("phieuso");
+					this.OnphieusoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_soluongyeucau", DbType="Float")]
+		public System.Nullable<double> soluongyeucau
+		{
+			get
+			{
+				return this._soluongyeucau;
+			}
+			set
+			{
+				if ((this._soluongyeucau != value))
+				{
+					this.OnsoluongyeucauChanging(value);
+					this.SendPropertyChanging();
+					this._soluongyeucau = value;
+					this.SendPropertyChanged("soluongyeucau");
+					this.OnsoluongyeucauChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_soluongnhap", DbType="Float")]
+		public System.Nullable<double> soluongnhap
+		{
+			get
+			{
+				return this._soluongnhap;
+			}
+			set
+			{
+				if ((this._soluongnhap != value))
+				{
+					this.OnsoluongnhapChanging(value);
+					this.SendPropertyChanging();
+					this._soluongnhap = value;
+					this.SendPropertyChanged("soluongnhap");
+					this.OnsoluongnhapChanged();
+				}
+			}
+		}
+		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -9270,8 +9270,6 @@ namespace BEEACCOUNT
 		
 		private System.Nullable<System.DateTime> _ngayphieunhap;
 		
-		private System.Nullable<int> _sophieu;
-		
 		private string _nguoigiao;
 		
 		private string _diachibophan;
@@ -9290,14 +9288,14 @@ namespace BEEACCOUNT
 		
 		private int _id;
 		
+		private string _phieuso;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
     partial void OnngayphieunhapChanging(System.Nullable<System.DateTime> value);
     partial void OnngayphieunhapChanged();
-    partial void OnsophieuChanging(System.Nullable<int> value);
-    partial void OnsophieuChanged();
     partial void OnnguoigiaoChanging(string value);
     partial void OnnguoigiaoChanged();
     partial void OndiachibophanChanging(string value);
@@ -9316,6 +9314,8 @@ namespace BEEACCOUNT
     partial void OncreatedateChanged();
     partial void OnidChanging(int value);
     partial void OnidChanged();
+    partial void OnphieusoChanging(string value);
+    partial void OnphieusoChanged();
     #endregion
 		
 		public tbl_kho_phieunhap_head()
@@ -9339,26 +9339,6 @@ namespace BEEACCOUNT
 					this._ngayphieunhap = value;
 					this.SendPropertyChanged("ngayphieunhap");
 					this.OnngayphieunhapChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_sophieu", DbType="Int")]
-		public System.Nullable<int> sophieu
-		{
-			get
-			{
-				return this._sophieu;
-			}
-			set
-			{
-				if ((this._sophieu != value))
-				{
-					this.OnsophieuChanging(value);
-					this.SendPropertyChanging();
-					this._sophieu = value;
-					this.SendPropertyChanged("sophieu");
-					this.OnsophieuChanged();
 				}
 			}
 		}
@@ -9539,6 +9519,26 @@ namespace BEEACCOUNT
 					this._id = value;
 					this.SendPropertyChanged("id");
 					this.OnidChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_phieuso", DbType="NVarChar(50)")]
+		public string phieuso
+		{
+			get
+			{
+				return this._phieuso;
+			}
+			set
+			{
+				if ((this._phieuso != value))
+				{
+					this.OnphieusoChanging(value);
+					this.SendPropertyChanging();
+					this._phieuso = value;
+					this.SendPropertyChanged("phieuso");
+					this.OnphieusoChanged();
 				}
 			}
 		}

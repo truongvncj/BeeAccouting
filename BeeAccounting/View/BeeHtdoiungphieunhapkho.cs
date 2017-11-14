@@ -216,7 +216,7 @@ namespace BEEACCOUNT.View
             {
 
                 txttensanpham.Text = sp.tensp;
-                txtdonvi.Text = sp.donvi;
+                //txtdonvi.Text = sp.donvi;
                 
 
 
@@ -342,105 +342,50 @@ namespace BEEACCOUNT.View
             LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
 
 
-            tbl_Socai socaitemp = new tbl_Socai();
+            tbl_kho_phieunhap_detail sanpham = new tbl_kho_phieunhap_detail();
 
             //if (this.cb_channel.SelectedItem != null)
             if (cbmasanpham.SelectedItem != null)
             {
-                socaitemp.TkCo = (cbmasanpham.SelectedItem as ComboboxItem).Value.ToString();
+                sanpham.mahang = (cbmasanpham.SelectedItem as ComboboxItem).Value.ToString();
             }
             else
             {
-                MessageBox.Show("Bạn chưa chọn tài khoản", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Bạn chưa chọn mã sản phẩm", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 cbmasanpham.Focus();
                 return;
             }
 
-            //if (Utils.IsValidnumber(txtsotien.Text))
-            //{
-            //    socaitemp.PsCo = double.Parse(txtsotien.Text.Trim());
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Số tiền gõ vào phải là số !", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //    txtsotien.Focus();
-            //    return;
-            //}
+            if (Utils.IsValidnumber(txtsoluong.Text))
+            {
+                sanpham.soluongnhap = double.Parse(txtsoluong.Text.Trim());
+            }
+            else
+            {
+                MessageBox.Show("Số lượng phải là số !", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtsoluong.Focus();
+                return;
+            }
 
-
-
-            // txtdiachi
-
-            //if (txtdiachi.Text != "")
-            //{
-            //    socaitemp.Diengiai = txtdiachi.Text;
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Bạn chưa gõ diễn giải", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //    txtdiachi.Focus();
-            //    return;
-            //}
-            //datepickngayphieu
-
-       //     socaitemp.Ngayctu = datepickngayphieu.Value;
-
-            //     txtkyhieuctu
-      //      if (txtkyhieuctu.Text != "")
-      //      {
-      //          socaitemp.Kyhieuctu = txtkyhieuctu.Text;
-     //       }
-            //else
-            //{
-            //    MessageBox.Show("Bạn chưa gõ Tên chi tiét", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //    txtkyhieuctu.Focus();
-            //    return;
-            //}
-
-            ////lbtenchitiet
-            //if (lbtenchitiet.Text != "")
-            //{
-            //    socaitemp.tenchitietCo = lbtenchitiet.Text;
-            //}
-            ////else
-            ////{
-            //    MessageBox.Show("Bạn chưa gõ mã chi tiết", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //    txtkyhieuctu.Focus();
-            //    return;
-            //}
-
-
-            // tbmachitiet
-
-            //if (tbmachitiet.Text != "")
-            //{
-            //    socaitemp.MaCTietTKCo = int.Parse(tbmachitiet.Text.ToString());
-            //}
-
-
-
-            //   txtsochungtu
-
-
-       //     if (Utils.IsValidnumber(txtsochungtu.Text))
-      //      {
-      //          socaitemp.Soctu = int.Parse(txtsochungtu.Text.Trim());
-      //      }
-            //else
-            //{
-            //    MessageBox.Show("Kiểm tra lại số chứng từ", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //    txtsochungtu.Focus();
-            //    return;
-            //}
+            if (Utils.IsValidnumber(txtdongia.Text))
+            {
+                sanpham.dongia = double.Parse(txtdongia.Text.Trim());
+            }
+            else
+            {
+                MessageBox.Show("Đơn giá phải là số !", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtdongia.Focus();
+                return;
+            }
 
 
 
 
-            this.phieunhapkho.add_detailGridviewPNkho(socaitemp);
+            this.phieunhapkho.add_detailGridviewPNkho(sanpham);
 
      //       txtTongco.Text = phieunhapkho.pssotienco.ToString("#,#", CultureInfo.InvariantCulture);
-            this.pssotienco = phieunhapkho.pssotienco;
-            this.pssotienno = phieunhapkho.pssotienno;
+          //  this.pssotienco = phieunhapkho.pssotienco;
+    //        this.pssotienno = phieunhapkho.pssotienno;
 
       //      txtChenlech.Text = (this.pssotienno - this.pssotienco).ToString("#,#", CultureInfo.InvariantCulture);
 
@@ -466,6 +411,11 @@ namespace BEEACCOUNT.View
         private void BeeHtoansocaidoiungphieuthu_Deactivate(object sender, EventArgs e)
         {
            // this.Close();
+        }
+
+        private void bt_themvao_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

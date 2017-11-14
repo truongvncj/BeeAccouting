@@ -198,7 +198,7 @@ namespace BEEACCOUNT.Model
         {
 
             View.BeeDanhsachsanpham p = new BeeDanhsachsanpham(4, idtk);  // 3 là thêm ới/ 4 là sửa xóa
-                                                                        //  View.BeeDanhsachkho p = new View.BeeDanhsachkho
+                                                                          //  View.BeeDanhsachkho p = new View.BeeDanhsachkho
             p.ShowDialog();
 
             //  throw new NotImplementedException();
@@ -218,7 +218,7 @@ namespace BEEACCOUNT.Model
 
                          Ngày_phiếu_nhập = p.ngayphieunhap,
                          Mã_kho = p.makho,
-                         Số_phiếu = p.sophieu,
+                         Phiếu_số = p.phieuso,
                          Người_giao = p.nguoigiao,
                          Địa_chỉ = p.diachibophan,
                          Có_TK = p.cotk,
@@ -240,7 +240,7 @@ namespace BEEACCOUNT.Model
             // throw new NotImplementedException();
         }
 
-        public static  DataGridView reloaddetailnewPNK(DataGridView dataGridViewdetailPNK)
+        public static DataGridView reloaddetailnewPNK(DataGridView dataGridViewdetailPNK)
         {
 
 
@@ -266,8 +266,8 @@ namespace BEEACCOUNT.Model
             //      dt.Columns.Add(new DataColumn("Tk_Có", typeof(double)));
             dt.Columns.Add(new DataColumn("Đơn_giá", typeof(double)));
             dt.Columns.Add(new DataColumn("Thành_tiền", typeof(double)));
-       //     dt.Columns.Add(new DataColumn("tkidhide", typeof(string))); //comnoxxon
-          //  dt.Columns.Add(new DataColumn("Tk_Có", typeof(double)));
+            //     dt.Columns.Add(new DataColumn("tkidhide", typeof(string))); //comnoxxon
+            //  dt.Columns.Add(new DataColumn("Tk_Có", typeof(double)));
             //    dt.Columns.Add(new DataColumn("ngayctuhide", typeof(DateTime))); //adding column for combobox
 
 
@@ -325,13 +325,15 @@ namespace BEEACCOUNT.Model
 
             #endregion binddata
 
+            dataGridViewdetailPNK.Columns["masanpham"].Visible = false;
+            dataGridViewdetailPNK.Columns["Mã_sản_phẩm"].DisplayIndex = 0;
 
-        //    dataGridViewdetailPNK.Columns["Tk_Có"].Visible = false;
-          // dataGridViewdetailPNK.Columns["masanpham"].Visible = false;
+            //    dataGridViewdetailPNK.Columns["Tk_Có"].Visible = false;
+            // dataGridViewdetailPNK.Columns["masanpham"].Visible = false;
 
-       //     dataGridViewdetailPNK.Columns["Tk_Nợ"].DisplayIndex = 0;
-        //    dataGridViewdetailPNK.Columns["Tk_Nợ"].Width = 100;
-        //    dataGridViewdetailPNK.Columns["Tk_Nợ"].SortMode = DataGridViewColumnSortMode.NotSortable;
+            //     dataGridViewdetailPNK.Columns["Tk_Nợ"].DisplayIndex = 0;
+            //    dataGridViewdetailPNK.Columns["Tk_Nợ"].Width = 100;
+            //    dataGridViewdetailPNK.Columns["Tk_Nợ"].SortMode = DataGridViewColumnSortMode.NotSortable;
 
             //dataGridViewdetailPNK.Columns["Mã_chi_tiết"].DisplayIndex = 1;
             //dataGridViewdetailPNK.Columns["Mã_chi_tiết"].Width = 100;

@@ -22,7 +22,7 @@ namespace BEEACCOUNT.View
 
             String current = System.IO.Directory.GetCurrentDirectory();
 
-            string fileName = current + "\\Connectstring.txt";
+            string fileName = current + "\\String.txt";
 
             if (textBox1.Text != "" && textBox3.Text != "" && textBox2.Text != "")
             {
