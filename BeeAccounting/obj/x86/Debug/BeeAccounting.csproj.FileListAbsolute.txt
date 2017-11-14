@@ -260,3 +260,7 @@ D:\GitHub\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.Viewtable.res
 D:\GitHub\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.Main.resources
 D:\GitHub\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.Properties.Resources.resources
 D:\GitHub\BeeAccouting\BeeAccounting\obj\x86\Debug\BeeAccounting.csproj.GenerateResource.Cache
+D:\GitHub\BeeAccouting\BeeAccounting\bin\x86\Debug\Microsoft.ReportViewer.Common.dll
+D:\GitHub\BeeAccouting\BeeAccounting\bin\x86\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+D:\GitHub\BeeAccouting\BeeAccounting\bin\x86\Debug\Microsoft.ReportViewer.DataVisualization.dll
+D:\GitHub\BeeAccouting\BeeAccounting\bin\x86\Debug\Microsoft.SqlServer.Types.dll

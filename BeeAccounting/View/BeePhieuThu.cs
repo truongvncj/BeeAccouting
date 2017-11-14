@@ -765,7 +765,7 @@ namespace BEEACCOUNT.View
 
                             socai.TkCo = dataGridViewTkCo.Rows[idrow].Cells["Tk_Có"].Value.ToString().Trim();
 
-                            if (dataGridViewTkCo.Rows[idrow].Cells["Mã_chi_tiết"].Value != DBNull.Value)
+                            if (dataGridViewTkCo.Rows[idrow].Cells["Mã_chi_tiết"].Value != DBNull.Value && dataGridViewTkCo.Rows[idrow].Cells["Mã_chi_tiết"].Value !="")
                             {
 
                                 socai.MaCTietTKCo = int.Parse(dataGridViewTkCo.Rows[idrow].Cells["Mã_chi_tiết"].Value.ToString());

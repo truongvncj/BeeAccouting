@@ -391,13 +391,13 @@
             this.panel2.Controls.Add(this.btluu);
             this.panel2.Location = new System.Drawing.Point(4, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1099, 31);
+            this.panel2.Size = new System.Drawing.Size(1099, 45);
             this.panel2.TabIndex = 1;
             // 
             // button6
             // 
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.button6.Location = new System.Drawing.Point(3, 3);
+            this.button6.Location = new System.Drawing.Point(3, 10);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(63, 25);
             this.button6.TabIndex = 57;
@@ -409,7 +409,7 @@
             // button5
             // 
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.button5.Location = new System.Drawing.Point(359, 3);
+            this.button5.Location = new System.Drawing.Point(359, 10);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(63, 25);
             this.button5.TabIndex = 56;
@@ -426,7 +426,7 @@
             this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
             this.pictureBox1.Location = new System.Drawing.Point(998, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(82, 31);
+            this.pictureBox1.Size = new System.Drawing.Size(82, 45);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 55;
             this.pictureBox1.TabStop = false;
@@ -436,7 +436,7 @@
             // 
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.button3.ForeColor = System.Drawing.Color.Red;
-            this.button3.Location = new System.Drawing.Point(268, 3);
+            this.button3.Location = new System.Drawing.Point(268, 10);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(63, 25);
             this.button3.TabIndex = 2;
@@ -448,7 +448,7 @@
             // btsua
             // 
             this.btsua.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btsua.Location = new System.Drawing.Point(178, 3);
+            this.btsua.Location = new System.Drawing.Point(178, 10);
             this.btsua.Name = "btsua";
             this.btsua.Size = new System.Drawing.Size(63, 25);
             this.btsua.TabIndex = 1;
@@ -460,7 +460,7 @@
             // btluu
             // 
             this.btluu.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btluu.Location = new System.Drawing.Point(87, 3);
+            this.btluu.Location = new System.Drawing.Point(87, 10);
             this.btluu.Name = "btluu";
             this.btluu.Size = new System.Drawing.Size(63, 25);
             this.btluu.TabIndex = 0;
@@ -577,7 +577,7 @@
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewTkCo.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.dataGridViewTkCo.Size = new System.Drawing.Size(1059, 244);
+            this.dataGridViewTkCo.Size = new System.Drawing.Size(1059, 228);
             this.dataGridViewTkCo.TabIndex = 3;
             this.dataGridViewTkCo.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewTkCo_CellEndEdit);
             this.dataGridViewTkCo.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewTkCo_CellEndEdit);
@@ -624,17 +624,17 @@
             this.panel4.Controls.Add(this.txttaikhoanco);
             this.panel4.Location = new System.Drawing.Point(5, 274);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1073, 285);
+            this.panel4.Size = new System.Drawing.Size(1073, 269);
             this.panel4.TabIndex = 64;
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(4, 35);
+            this.tabControl1.Location = new System.Drawing.Point(4, 51);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1089, 610);
+            this.tabControl1.Size = new System.Drawing.Size(1089, 594);
             this.tabControl1.TabIndex = 65;
             // 
             // tabPage1
@@ -644,7 +644,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1081, 584);
+            this.tabPage1.Size = new System.Drawing.Size(1081, 568);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Nhập liệu";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -655,7 +655,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1261, 698);
+            this.tabPage2.Size = new System.Drawing.Size(1081, 584);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Danh sách phiếu";
             this.tabPage2.UseVisualStyleBackColor = true;
