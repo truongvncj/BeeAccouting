@@ -2408,5 +2408,12 @@ namespace BEEACCOUNT.View
 
             //    dataGridViewTkCo.Focus();
         }
+
+        private void dataGridViewListPNK_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+
+            tabControl1.SelectedTab = tabPage1;
+        }
     }
 }

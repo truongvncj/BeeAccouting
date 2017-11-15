@@ -1550,8 +1550,7 @@ namespace BEEACCOUNT.View
                     btsua.Enabled = true;
 
 
-                    tabControl1.SelectedTab = tabPage1;
-
+               
                     cbtkno.Enabled = false;
 
 
@@ -2414,6 +2413,12 @@ namespace BEEACCOUNT.View
 
 
             }
+        }
+
+        private void dataGridViewListphieuthu_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            tabControl1.SelectedTab = tabPage1;
+
         }
     }
 }

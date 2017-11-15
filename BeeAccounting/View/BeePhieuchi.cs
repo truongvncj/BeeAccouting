@@ -1614,7 +1614,7 @@ namespace BEEACCOUNT.View
 
 
                     cbtkco.Enabled = false;
-                    tabControl1.SelectedTab = tabPage1;
+            
 
                     this.statusphieuchi = 3;// View
                     Model.Phieuthuchi.reloadnewdetailtaikhoanNo(dataGridViewTkNo);
@@ -2595,6 +2595,11 @@ namespace BEEACCOUNT.View
                 lbmachitietco.Text = "";
             }
 
+        }
+
+        private void dataGridViewListphieuchi_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            tabControl1.SelectedTab = tabPage1;
         }
     }
 }
