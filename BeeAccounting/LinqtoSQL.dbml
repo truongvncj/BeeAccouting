@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="BEE" Class="LinqtoSQLDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-8D4F853\SQLEXPRESS;Initial Catalog=BEE;Persist Security Info=True;User ID=sa" SettingsObjectName="BEEACCOUNT.Properties.Settings" SettingsPropertyName="BEEConnectionString1" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=HAN-L-3PFF7H2;Initial Catalog=BEE;Persist Security Info=True;User ID=sa" SettingsObjectName="BEEACCOUNT.Properties.Settings" SettingsPropertyName="BEEConnectionString2" Provider="System.Data.SqlClient" />
   <Table Name="dbo.Rpt_PhieuThu" Member="Rpt_PhieuThus">
     <Type Name="Rpt_PhieuThu">
       <Column Name="tencongty" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
@@ -7,7 +7,6 @@
       <Column Name="masothue" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
       <Column Name="tengiamdoc" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
       <Column Name="tenketoantruong" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
-      <Column Name="sophieuthu" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="ngaychungtu" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="nguoinoptien" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
       <Column Name="nguoilapphieu" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
@@ -21,6 +20,7 @@
       <Column Name="tkno" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
       <Column Name="quyenso" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
       <Column Name="tkco" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="phieuthuso" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.tbl_Temp" Member="tbl_Temps">
@@ -445,6 +445,8 @@
       <Column Name="createdate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="phieuso" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MaCTietTKCo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MaCTietTKNo" Type="System.Int32" DbType="Int" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.tbl_kho_sanpham" Member="tbl_kho_sanphams">
@@ -493,7 +495,6 @@
       <Column Name="Ngayghiso" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="Ngayctu" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="manghiepvu" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
-      <Column Name="nghiepvuso" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="username" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
       <Column Name="TkNo" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
       <Column Name="TkCo" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
@@ -504,6 +505,7 @@
       <Column Name="tenchitietNo" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
       <Column Name="PsNo" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Column Name="PsCo" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Sohieuchungtu" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.tbl_SoQuy" Member="tbl_SoQuys">
@@ -511,7 +513,6 @@
       <Column Name="TKtienmat" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
       <Column Name="ChitietTM" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="Ngayctu" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
-      <Column Name="Sochungtu" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="Machungtu" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
       <Column Name="PsNo" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Column Name="PsCo" Type="System.Double" DbType="Float" CanBeNull="true" />
@@ -523,9 +524,9 @@
       <Column Name="Ngayghiso" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="Username" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="quyenso" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
       <Column Name="TKdoiung" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
       <Column Name="TenchitietTM" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="Sophieu" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
     </Type>
   </Table>
 </Database>

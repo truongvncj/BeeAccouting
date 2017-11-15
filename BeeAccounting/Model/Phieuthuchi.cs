@@ -35,8 +35,7 @@ namespace BEEACCOUNT.Model
                                {
 
                                    Ngày_chứng_từ = listpt.Ngayctu,
-                                   Quyển_số = listpt.quyenso,
-                                   Số_chứng_từ = listpt.Sochungtu,
+                                   Số_chứng_từ = listpt.Sophieu,
                                    TK_Nợ = listpt.TKtienmat,
                                    TK_Có = listpt.TKdoiung,
                                    Số_Tiền = listpt.PsNo,
@@ -64,8 +63,8 @@ namespace BEEACCOUNT.Model
                                {
 
                                    Ngày_chứng_từ = listpt.Ngayctu,
-                                   Quyển_số = listpt.quyenso,
-                                   Số_chứng_từ = listpt.Sochungtu,
+                               
+                                   Số_chứng_từ = listpt.Sophieu,
                                    TK_Nợ = listpt.TKtienmat,
                                    TK_Có = listpt.TKdoiung,
                                    Số_Tiền = listpt.PsCo,
@@ -100,7 +99,7 @@ namespace BEEACCOUNT.Model
                                {
 
                                    Ngày_chứng_từ = listpt.Ngayctu,
-                                   Số_chứng_từ = listpt.Sochungtu,
+                                   Số_chứng_từ = listpt.Sophieu,
                                    TK_Nợ = listpt.TKtienmat,
                                    TK_Có = listpt.TKdoiung,
                                    Số_Tiền = listpt.PsNo,
@@ -399,7 +398,7 @@ namespace BEEACCOUNT.Model
         }
 
 
-        public static void reloaddetailtaikhoancophieuthu(DataGridView dataGridViewTkCo, View.BeePhieuThu phieuthu, string taikhoantienmatNo, int sophieuthu)
+        public static void reloaddetailtaikhoancophieuthu(DataGridView dataGridViewTkCo, View.BeePhieuThu phieuthu, string taikhoantienmatNo, string Phieuthuso)
         {
 
 
@@ -412,7 +411,7 @@ namespace BEEACCOUNT.Model
             var socailist = from tbl_Socai in dc.tbl_Socais
                             where tbl_Socai.TkNo.Trim() == taikhoantienmatNo.Trim()
                      && tbl_Socai.manghiepvu == "PT"
-                    && tbl_Socai.nghiepvuso == sophieuthu
+                    && tbl_Socai.Sohieuchungtu == Phieuthuso
                             select tbl_Socai;
 
             if (socailist.Count() > 0)
@@ -435,7 +434,7 @@ namespace BEEACCOUNT.Model
 
         }
 
-        public static void reloaddetailtaikhoannophieuchi(DataGridView dataGridViewTkNo, View.BeePhieuchi phieuchi, string taikhoantienmatco, int sophieuchi)
+        public static void reloaddetailtaikhoannophieuchi(DataGridView dataGridViewTkNo, View.BeePhieuchi phieuchi, string taikhoantienmatco, string Phieuchiso)
         {
 
 
@@ -448,7 +447,7 @@ namespace BEEACCOUNT.Model
             var socailist = from tbl_Socai in dc.tbl_Socais
                             where tbl_Socai.TkCo.Trim() == taikhoantienmatco.Trim()
                      && tbl_Socai.manghiepvu == "PC"
-                    && tbl_Socai.nghiepvuso == sophieuchi
+                    && tbl_Socai.Sohieuchungtu == Phieuchiso
                             select tbl_Socai;
 
 

@@ -8,7 +8,7 @@ namespace BEEACCOUNT.Model
     class Socaitaikhoan
     {
 
-        public static void xoa(string manghiepvu, int sochungtu) // vd phieu thu nghiep vu là phieu thu: PT,
+        public static void xoa(string manghiepvu, string sohieuchungtu) // vd phieu thu nghiep vu là phieu thu: PT,
         {
             if ( manghiepvu !="")
             {
@@ -18,7 +18,7 @@ namespace BEEACCOUNT.Model
 
                 var rs = from tbl_Socai in dc.tbl_Socais
                          where tbl_Socai.manghiepvu == manghiepvu
-                         && tbl_Socai.nghiepvuso == sochungtu
+                         && tbl_Socai.Sohieuchungtu == sohieuchungtu
                          select tbl_Socai;
 
 

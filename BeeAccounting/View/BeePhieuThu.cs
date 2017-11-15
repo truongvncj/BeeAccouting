@@ -15,7 +15,7 @@ namespace BEEACCOUNT.View
     {
         public int statusphieuthu { get; set; } // mới  // 2 suawra // 3 display //
         public int phieuthuid { get; set; }
-        public int sophieuthu { get; set; }
+        public string phieuthuso { get; set; }
         public string tkno { get; set; }
         public int tknochitiet { get; set; }
         public string tkco { get; set; }
@@ -23,7 +23,7 @@ namespace BEEACCOUNT.View
         public double pssotienno { get; set; }
         public double pssotienco { get; set; }
 
-        public int maphieuthuOld { get; set; }
+        public string maphieuthuOld { get; set; }
         //    public DataGridView DataGridView1 { get; set; }
         public class ComboboxItem
         {
@@ -55,21 +55,21 @@ namespace BEEACCOUNT.View
 
             //    drToAdd["Tk_Có"] = socaitemp.TkCo;
             drToAdd["Diễn_giải"] = socaitemp.Diengiai;
-    //        drToAdd["Số_chứng_từ"] = socaitemp.Soctu;
-     //       drToAdd["Ký_hiêu"] = socaitemp.Kyhieuctu;
+            //        drToAdd["Số_chứng_từ"] = socaitemp.Soctu;
+            //       drToAdd["Ký_hiêu"] = socaitemp.Kyhieuctu;
 
             if (socaitemp.PsCo != null)
             {
                 drToAdd["Số_tiền"] = socaitemp.PsCo;
             }
-          
+
             drToAdd["Mã_chi_tiết"] = socaitemp.MaCTietTKCo;
             drToAdd["Tên_chi_tiết"] = socaitemp.tenchitietCo;
 
             drToAdd["tkCohide"] = socaitemp.TkCo;
 
 
-      //      drToAdd["ngayctuhide"] = socaitemp.Ngayctu;
+            //      drToAdd["ngayctuhide"] = socaitemp.Ngayctu;
 
             dataTable.Rows.Add(drToAdd);
             dataTable.AcceptChanges();
@@ -78,7 +78,7 @@ namespace BEEACCOUNT.View
 
             int i = dataTable.Rows.Count - 1;
             //   int i = dataGridViewTkCo.RowCount -1;
-            
+
             DataGridViewComboBoxCell cb = (DataGridViewComboBoxCell)dataGridViewTkCo.Rows[i].Cells["Tk_Có"];
             DataGridViewCell dgvc = (DataGridViewCell)dataGridViewTkCo.Rows[i].Cells["Tk_Có"];
 
@@ -88,11 +88,11 @@ namespace BEEACCOUNT.View
             {
 
                 if (item.Value.ToString().Trim() == socaitemp.TkCo.ToString().Trim())
-                    {
+                {
 
-                        dataGridViewTkCo.Rows[i].Cells["Tk_Có"].Value = item.Value;
-                    }
-               
+                    dataGridViewTkCo.Rows[i].Cells["Tk_Có"].Value = item.Value;
+                }
+
 
             }
 
@@ -295,7 +295,7 @@ namespace BEEACCOUNT.View
             {
                 // datepickngayphieu.
                 e.Handled = true;
-                txtquyenso.Focus();
+                txtsophieu.Focus();
 
                 //    string valueinput = cb_customerka.Text;
 
@@ -532,7 +532,7 @@ namespace BEEACCOUNT.View
                 tbl_SoQuy soquy = new tbl_SoQuy();
 
 
-                soquy.quyenso = txtquyenso.Text.ToString();
+                //   soquy.quyenso = txtquyenso.Text.ToString();
 
 
 
@@ -611,12 +611,11 @@ namespace BEEACCOUNT.View
                     {
 
                         // không lặp
-                        if (this.statusphieuthu == 1 || (this.statusphieuthu == 2) && this.sophieuthu != int.Parse(txtsophieu.Text.Trim()))
+                        if (this.statusphieuthu == 1 || (this.statusphieuthu == 2) && this.phieuthuso.Trim() != txtsophieu.Text.Trim())
                         {
                             var sophieuthu = (from tbl_SoQuy in dc.tbl_SoQuys
-                                              where (tbl_SoQuy.Sochungtu == int.Parse(txtsophieu.Text.ToString())
-                                                && (tbl_SoQuy.quyenso.Trim() == txtquyenso.Text.ToString().Trim()))
-                                                   && (tbl_SoQuy.Machungtu == "PT")
+                                              where (tbl_SoQuy.Sophieu.Trim() == txtsophieu.Text.ToString().Trim()
+                                                    && (tbl_SoQuy.Machungtu == "PT"))
                                               select tbl_SoQuy).FirstOrDefault();
 
                             if (sophieuthu != null)
@@ -628,13 +627,13 @@ namespace BEEACCOUNT.View
                             else
                             {
 
-                                soquy.Sochungtu = int.Parse(txtsophieu.Text.Trim());
+                                soquy.Sophieu = txtsophieu.Text.Trim();
 
                             }
                         }
                         else
                         {
-                            soquy.Sochungtu = int.Parse(txtsophieu.Text.Trim());
+                            soquy.Sophieu = txtsophieu.Text.Trim();
                         }
 
 
@@ -647,7 +646,7 @@ namespace BEEACCOUNT.View
                         return;
                     }
 
-                    this.sophieuthu = int.Parse(txtsophieu.Text.Trim());
+                    this.phieuthuso = txtsophieu.Text.Trim();
 
 
 
@@ -765,7 +764,7 @@ namespace BEEACCOUNT.View
 
                             socai.TkCo = dataGridViewTkCo.Rows[idrow].Cells["Tk_Có"].Value.ToString().Trim();
 
-                            if (dataGridViewTkCo.Rows[idrow].Cells["Mã_chi_tiết"].Value != DBNull.Value && dataGridViewTkCo.Rows[idrow].Cells["Mã_chi_tiết"].Value !="")
+                            if (dataGridViewTkCo.Rows[idrow].Cells["Mã_chi_tiết"].Value != DBNull.Value && (string)dataGridViewTkCo.Rows[idrow].Cells["Mã_chi_tiết"].Value != "")
                             {
 
                                 socai.MaCTietTKCo = int.Parse(dataGridViewTkCo.Rows[idrow].Cells["Mã_chi_tiết"].Value.ToString());
@@ -820,7 +819,7 @@ namespace BEEACCOUNT.View
                             if (lb_machitietno.Text != "")
                             {
                                 socai.MaCTietTKNo = int.Parse(lb_machitietno.Text.ToString());
-                              
+
                             }
 
                             if (lbtenchitietno.Text != "")
@@ -845,7 +844,7 @@ namespace BEEACCOUNT.View
 
                             socai.Diengiai = dataGridViewTkCo.Rows[idrow].Cells["Diễn_giải"].Value.ToString();
                             socai.manghiepvu = "PT";
-                            socai.nghiepvuso = int.Parse(txtsophieu.Text.ToString());
+                            socai.Sohieuchungtu = txtsophieu.Text.ToString().Trim();
 
 
                             socai.Ngayctu = datepickngayphieu.Value;
@@ -920,9 +919,9 @@ namespace BEEACCOUNT.View
                         phieuchange.TKdoiung = soquy.TKdoiung;
                         phieuchange.TKtienmat = soquy.TKtienmat;
                         phieuchange.Username = soquy.Username;
-                        phieuchange.quyenso = soquy.quyenso;
 
-                        phieuchange.Sochungtu = soquy.Sochungtu;
+
+                        phieuchange.Sophieu = soquy.Sophieu;
                         phieuchange.Ngayctu = soquy.Ngayctu;
                         phieuchange.Ngayghiso = soquy.Ngayghiso;
 
@@ -951,11 +950,11 @@ namespace BEEACCOUNT.View
 
                             socai.TkCo = dataGridViewTkCo.Rows[idrow].Cells["Tk_Có"].Value.ToString().Trim();
 
-                            if (dataGridViewTkCo.Rows[idrow].Cells["Mã_chi_tiết"].Value != DBNull.Value )///zcxzv
+                            if (dataGridViewTkCo.Rows[idrow].Cells["Mã_chi_tiết"].Value != DBNull.Value)///zcxzv
                             {
 
 
-                                if (Utils.IsValidnumber((string)dataGridViewTkCo.Rows[idrow].Cells["Mã_chi_tiết"].Value ))
+                                if (Utils.IsValidnumber((string)dataGridViewTkCo.Rows[idrow].Cells["Mã_chi_tiết"].Value))
                                 {
                                     socai.MaCTietTKCo = int.Parse(dataGridViewTkCo.Rows[idrow].Cells["Mã_chi_tiết"].Value.ToString());
                                 }
@@ -963,7 +962,7 @@ namespace BEEACCOUNT.View
                                 {
                                     socai.MaCTietTKCo = null;
                                 }
-                             
+
 
                             }
                             if (dataGridViewTkCo.Rows[idrow].Cells["Tên_chi_tiết"].Value != DBNull.Value)
@@ -1003,7 +1002,7 @@ namespace BEEACCOUNT.View
                                 {
                                     socai.MaCTietTKNo = null;
                                 }
-                               
+
                             }
 
 
@@ -1022,7 +1021,7 @@ namespace BEEACCOUNT.View
 
                             socai.Diengiai = dataGridViewTkCo.Rows[idrow].Cells["Diễn_giải"].Value.ToString();
                             socai.manghiepvu = "PT";
-                            socai.nghiepvuso = int.Parse(txtsophieu.Text.ToString());
+                            socai.Sohieuchungtu = txtsophieu.Text.ToString().Trim();
 
 
 
@@ -1071,7 +1070,7 @@ namespace BEEACCOUNT.View
 
 
 
-                MessageBox.Show("Số phiếu vừa lưu: " + this.sophieuthu, "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Số phiếu vừa lưu: " + this.phieuthuso, "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
             }
@@ -1096,7 +1095,6 @@ namespace BEEACCOUNT.View
             lbtenchitietno.Text = "";
             lb_machitietno.Text = "";
             cbtkno.SelectedIndex = -1;
-            txtquyenso.Text = "";
 
             datepickngayphieu.Focus();
 
@@ -1270,7 +1268,7 @@ namespace BEEACCOUNT.View
         {
             #region  list black phiếu
             datepickngayphieu.Enabled = true;
-            txtquyenso.Enabled = true;
+            // txtquyenso.Enabled = true;
             txtsophieu.Enabled = true;
             txttennguoinop.Enabled = true;
             txtdiachi.Enabled = true;
@@ -1289,7 +1287,7 @@ namespace BEEACCOUNT.View
             txtdiengiai.Text = "";
             txtsotien.Text = "";
             txtsochungtugoc.Text = "";
-            txtquyenso.Text = "";
+            //     txtquyenso.Text = "";
             lbtenchitietno.Text = "";
 
             cbtkno.SelectedIndex = -1;
@@ -1338,7 +1336,7 @@ namespace BEEACCOUNT.View
                                 //   tengiamdoc = Model.Congty.gettengiamdoccongty(),
                                 //    tenketoantruong = Model.Congty.gettenketoantruongcongty(),
 
-                                sophieuthu = tbl_SoQuy.Sochungtu,
+                                sophieuthu = tbl_SoQuy.Sophieu,
                                 ngaychungtu = tbl_SoQuy.Ngayctu,
                                 nguoinoptien = tbl_SoQuy.Nguoinopnhantien,
                                 //    nguoilapphieu = Utils.getname(),
@@ -1351,7 +1349,7 @@ namespace BEEACCOUNT.View
 
                                 tkno = tbl_SoQuy.TKtienmat,
                                 tkco = tbl_SoQuy.TKdoiung,
-                                quyenso = tbl_SoQuy.quyenso,
+                                //    quyenso = tbl_SoQuy.quyenso,
 
                             }).FirstOrDefault();
 
@@ -1378,7 +1376,7 @@ namespace BEEACCOUNT.View
                 pt.masothue = Model.Congty.getmasothuecongty();
                 pt.tengiamdoc = Model.Congty.gettengiamdoccongty();
                 pt.tenketoantruong = Model.Congty.gettenketoantruongcongty();
-                pt.sophieuthu = phieuthu.sophieuthu;
+                pt.phieuthuso = phieuthu.sophieuthu;
                 pt.ngaychungtu = phieuthu.ngaychungtu;
                 pt.nguoinoptien = phieuthu.nguoinoptien;
                 pt.nguoilapphieu = Utils.getname();
@@ -1390,7 +1388,7 @@ namespace BEEACCOUNT.View
                 pt.username = Utils.getusername();
                 pt.tkno = phieuthu.tkno;
                 pt.tkco = phieuthu.tkco;
-                pt.quyenso = phieuthu.quyenso;
+                //   pt.quyenso = phieuthu.quyenso;
 
                 dc.Rpt_PhieuThus.InsertOnSubmit(pt);
                 dc.SubmitChanges();
@@ -1468,7 +1466,7 @@ namespace BEEACCOUNT.View
                                     //   tengiamdoc = Model.Congty.gettengiamdoccongty(),
                                     //    tenketoantruong = Model.Congty.gettenketoantruongcongty(),
 
-                                    sophieuthu = tbl_SoQuy.Sochungtu,
+                                    sophieuthu = tbl_SoQuy.Sophieu,
                                     ngaychungtu = tbl_SoQuy.Ngayctu,
                                     nguoinoptien = tbl_SoQuy.Nguoinopnhantien,
                                     //    nguoilapphieu = Utils.getname(),
@@ -1479,7 +1477,7 @@ namespace BEEACCOUNT.View
                                     sochungtugoc = tbl_SoQuy.Chungtugockemtheo,
                                     //    username = Utils.getusername(),
 
-                                    quyenso = tbl_SoQuy.quyenso,
+                                    //    quyenso = tbl_SoQuy.quyenso,
                                     machitietno = tbl_SoQuy.ChitietTM,
                                     tentkchitiet = tbl_SoQuy.TenchitietTM,
                                     tkno = tbl_SoQuy.TKtienmat,
@@ -1537,14 +1535,7 @@ namespace BEEACCOUNT.View
 
 
 
-                    if (phieuthu.quyenso != null)
-                    {
-                        txtquyenso.Text = phieuthu.quyenso.ToString();
-                    }
-                    else
-                    {
-                        txtquyenso.Text = "";
-                    }
+
 
 
                     datepickngayphieu.Enabled = false;
@@ -1556,7 +1547,6 @@ namespace BEEACCOUNT.View
                     txtsochungtugoc.Enabled = false;
 
                     btsua.Enabled = true;
-                    txtquyenso.Enabled = false;
 
 
 
@@ -1606,15 +1596,15 @@ namespace BEEACCOUNT.View
 
             if (phieuthu != null)
             {
-                this.sophieuthu = phieuthu.Sochungtu;
+                this.phieuthuso = phieuthu.Sophieu;
 
                 dc.tbl_SoQuys.DeleteOnSubmit(phieuthu);
                 dc.SubmitChanges();
 
 
-                Model.Socaitaikhoan.xoa("PT", phieuthu.Sochungtu);
+                Model.Socaitaikhoan.xoa("PT", phieuthu.Sophieu);
 
-                MessageBox.Show("Đã xóa phiếu thu: " + this.sophieuthu, "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Đã xóa phiếu thu: " + this.phieuthuso, "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 //  Model.
                 #region load list phieu thu
                 var Listphieuthu = from listpt in dc.tbl_SoQuys
@@ -1623,7 +1613,7 @@ namespace BEEACCOUNT.View
                                    {
 
                                        Ngày_chứng_từ = listpt.Ngayctu,
-                                       Số_chứng_từ = "PT-" + listpt.Sochungtu,
+                                       Số_chứng_từ = "PT-" + listpt.Sophieu,
                                        TK_Nợ = listpt.TKtienmat,
                                        TK_Có = listpt.TKdoiung,
                                        Số_Tiền = listpt.PsNo,
@@ -1664,12 +1654,12 @@ namespace BEEACCOUNT.View
             txtsophieu.Enabled = true;
             if (txtsophieu.Text != "")
             {
-                this.sophieuthu = int.Parse(txtsophieu.Text.ToString());
-                this.maphieuthuOld = int.Parse(txtsophieu.Text.ToString());
+                this.phieuthuso = txtsophieu.Text.ToString().Trim();
+                this.maphieuthuOld = txtsophieu.Text.ToString().Trim();
             }
 
 
-            txtquyenso.Enabled = true;
+
 
             txttennguoinop.Enabled = true;
             txtdiachi.Enabled = true;

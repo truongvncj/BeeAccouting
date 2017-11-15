@@ -123,7 +123,7 @@ namespace BEEACCOUNT.Model
                             q.diengiai = item.Diengiai.Trim();
                         }
 
-                        q.machungtu = item.manghiepvu + " " + item.nghiepvuso;
+                        q.machungtu = item.manghiepvu + " " + item.Sohieuchungtu;
 
 
                         q.username = username;
@@ -150,7 +150,7 @@ namespace BEEACCOUNT.Model
                             q2.diengiai = item.Diengiai.Trim();
                         }
 
-                        q2.machungtu = item.manghiepvu + " " + item.nghiepvuso;
+                        q2.machungtu = item.manghiepvu + " " + item.Sohieuchungtu;
 
 
                         q2.username = username;
@@ -378,7 +378,7 @@ namespace BEEACCOUNT.Model
                             q.diengiai = item.Diengiai.Trim();
                         }
 
-                        q.machungtu = item.manghiepvu + " " + item.nghiepvuso;
+                        q.machungtu = item.manghiepvu + " " + item.Sohieuchungtu;
 
 
                         q.username = username;
@@ -413,7 +413,7 @@ namespace BEEACCOUNT.Model
                             q.diengiai = item.Diengiai.Trim();
                         }
 
-                        q.machungtu = item.manghiepvu + " " + item.nghiepvuso;
+                        q.machungtu = item.manghiepvu + " " + item.Sohieuchungtu;
 
 
                         q.username = username;
@@ -679,12 +679,12 @@ namespace BEEACCOUNT.Model
 
                         if (item.Machungtu == "PC")
                         {
-                            q.machungtuchi = item.Machungtu + " " + item.Sochungtu.ToString().Trim();
+                            q.machungtuchi = item.Machungtu + " " + item.Sophieu.Trim();
                             q.machungtuthu = "";
                         }
                         else
                         {
-                            q.machungtuthu = item.Machungtu + " " + item.Sochungtu.ToString().Trim();
+                            q.machungtuthu = item.Machungtu + " " + item.Sophieu.Trim();
                             q.machungtuchi = "";
                         }
 
@@ -948,7 +948,7 @@ namespace BEEACCOUNT.Model
                             q.diengiai = item.Diengiai.Trim();
                         }
 
-                        q.machungtu = item.manghiepvu + " " + item.nghiepvuso;
+                        q.machungtu = item.manghiepvu + " " + item.Sohieuchungtu;
 
 
                         q.username = username;
@@ -984,7 +984,7 @@ namespace BEEACCOUNT.Model
                             q.diengiai = item.Diengiai.Trim();
                         }
 
-                        q.machungtu = item.manghiepvu + " " + item.nghiepvuso;
+                        q.machungtu = item.manghiepvu + " " + item.Sohieuchungtu;
 
 
                         q.username = username;

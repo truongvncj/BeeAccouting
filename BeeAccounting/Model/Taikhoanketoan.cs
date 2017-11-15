@@ -137,7 +137,7 @@ namespace BEEACCOUNT.Model
             socaips.PsNo = socai.PsNo;
             socaips.Diengiai = socai.Diengiai;
             socaips.manghiepvu = socai.manghiepvu;
-            socaips.nghiepvuso = socai.nghiepvuso;
+            socaips.manghiepvu = socai.manghiepvu;
       
             socaips.Ngayghiso = socai.Ngayghiso;
             socaips.username = socai.username;

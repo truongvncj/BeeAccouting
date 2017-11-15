@@ -38,8 +38,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.lb_machitietno = new System.Windows.Forms.Label();
             this.lbtenchitietno = new System.Windows.Forms.Label();
-            this.txtquyenso = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
             this.txtsochungtugoc = new System.Windows.Forms.TextBox();
             this.cbtkno = new System.Windows.Forms.ComboBox();
             this.txtsotien = new System.Windows.Forms.TextBox();
@@ -96,8 +94,6 @@
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.lb_machitietno);
             this.panel1.Controls.Add(this.lbtenchitietno);
-            this.panel1.Controls.Add(this.txtquyenso);
-            this.panel1.Controls.Add(this.label13);
             this.panel1.Controls.Add(this.txtsochungtugoc);
             this.panel1.Controls.Add(this.cbtkno);
             this.panel1.Controls.Add(this.txtsotien);
@@ -143,25 +139,6 @@
             this.lbtenchitietno.Size = new System.Drawing.Size(57, 16);
             this.lbtenchitietno.TabIndex = 11;
             this.lbtenchitietno.Text = "Chi tiết 1";
-            // 
-            // txtquyenso
-            // 
-            this.txtquyenso.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtquyenso.Location = new System.Drawing.Point(403, 55);
-            this.txtquyenso.Name = "txtquyenso";
-            this.txtquyenso.Size = new System.Drawing.Size(118, 24);
-            this.txtquyenso.TabIndex = 27;
-            this.txtquyenso.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtquyenso_KeyPress);
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(325, 61);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(72, 18);
-            this.label13.TabIndex = 26;
-            this.label13.Text = "Quyển số";
             // 
             // txtsochungtugoc
             // 
@@ -237,7 +214,7 @@
             // txtsophieu
             // 
             this.txtsophieu.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtsophieu.Location = new System.Drawing.Point(644, 57);
+            this.txtsophieu.Location = new System.Drawing.Point(472, 53);
             this.txtsophieu.Name = "txtsophieu";
             this.txtsophieu.Size = new System.Drawing.Size(165, 24);
             this.txtsophieu.TabIndex = 20;
@@ -247,11 +224,11 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(572, 63);
+            this.label11.Location = new System.Drawing.Point(400, 57);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(66, 18);
             this.label11.TabIndex = 19;
-            this.label11.Text = "Số phiếu";
+            this.label11.Text = "Phiếu số";
             // 
             // label10
             // 
@@ -655,7 +632,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1081, 584);
+            this.tabPage2.Size = new System.Drawing.Size(1081, 568);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Danh sách phiếu";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -723,8 +700,6 @@
         private System.Windows.Forms.TextBox txtdiengiai;
         private System.Windows.Forms.TextBox txtsotien;
         private System.Windows.Forms.TextBox txtsochungtugoc;
-        private System.Windows.Forms.TextBox txtquyenso;
-        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox txttaikhoanco;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView dataGridViewTkCo;
