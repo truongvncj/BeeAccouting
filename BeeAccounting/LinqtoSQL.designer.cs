@@ -9318,6 +9318,10 @@ namespace BEEACCOUNT
 		
 		private System.Nullable<int> _MaCTietTKNo;
 		
+		private string _diengiai;
+		
+		private System.Nullable<double> _sotien;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -9348,6 +9352,10 @@ namespace BEEACCOUNT
     partial void OnMaCTietTKCoChanged();
     partial void OnMaCTietTKNoChanging(System.Nullable<int> value);
     partial void OnMaCTietTKNoChanged();
+    partial void OndiengiaiChanging(string value);
+    partial void OndiengiaiChanged();
+    partial void OnsotienChanging(System.Nullable<double> value);
+    partial void OnsotienChanged();
     #endregion
 		
 		public tbl_kho_phieunhap_head()
@@ -9611,6 +9619,46 @@ namespace BEEACCOUNT
 					this._MaCTietTKNo = value;
 					this.SendPropertyChanged("MaCTietTKNo");
 					this.OnMaCTietTKNoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_diengiai", DbType="NVarChar(225)")]
+		public string diengiai
+		{
+			get
+			{
+				return this._diengiai;
+			}
+			set
+			{
+				if ((this._diengiai != value))
+				{
+					this.OndiengiaiChanging(value);
+					this.SendPropertyChanging();
+					this._diengiai = value;
+					this.SendPropertyChanged("diengiai");
+					this.OndiengiaiChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_sotien", DbType="Float")]
+		public System.Nullable<double> sotien
+		{
+			get
+			{
+				return this._sotien;
+			}
+			set
+			{
+				if ((this._sotien != value))
+				{
+					this.OnsotienChanging(value);
+					this.SendPropertyChanging();
+					this._sotien = value;
+					this.SendPropertyChanged("sotien");
+					this.OnsotienChanged();
 				}
 			}
 		}

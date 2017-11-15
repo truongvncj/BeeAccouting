@@ -1196,10 +1196,10 @@ namespace BEEACCOUNT.View
 
             //#region load tk nợ
             List<ComboboxItem> CombomCollection = new List<ComboboxItem>();
-            var rs = from tbl_dstaikhoan in dc.tbl_dstaikhoans
-                     where tbl_dstaikhoan.loaitkid == "tien" // tien mat la loai 8
-                     orderby tbl_dstaikhoan.matk
-                     select tbl_dstaikhoan;
+            var rs = from p in dc.tbl_dstaikhoans
+                     where p.loaitkid == "kho" // tien mat la loai 8
+                     orderby p.matk
+                     select p;
             foreach (var item in rs)
             {
                 ComboboxItem cb = new ComboboxItem();
@@ -1210,7 +1210,7 @@ namespace BEEACCOUNT.View
 
             cbtkno.DataSource = CombomCollection;
 
-            //#endregion load tk nợ
+            //#endregion load tk nợ  cbtkco
 
 
 
@@ -1232,34 +1232,30 @@ namespace BEEACCOUNT.View
 
 
                 #region view load form
-                var phieuthu = (from tbl_SoQuy in dc.tbl_SoQuys
-                                where tbl_SoQuy.id == this.phieunhapid
+                var phieuthu = (from p in dc.tbl_kho_phieunhap_heads
+                                where p.id == this.phieunhapid
                                 select new
                                 {
 
-                                    //     tencongty = Model.Congty.getnamecongty(),
-                                    //     diachicongty = Model.Congty.getdiachicongty(),
-                                    ////     masothue = Model.Congty.getmasothuecongty(),
-                                    //   tengiamdoc = Model.Congty.gettengiamdoccongty(),
-                                    //    tenketoantruong = Model.Congty.gettenketoantruongcongty(),
+                               
 
-                                    sophieuthu = tbl_SoQuy.Sophieu,
-                                    ngaychungtu = tbl_SoQuy.Ngayctu,
-                                    nguoinoptien = tbl_SoQuy.Nguoinopnhantien,
+                                    sophieuthu = p.phieuso,
+                                    ngaychungtu = p.ngayphieunhap,
+                                    nguoigiao = p.nguoigiao,
                                     //    nguoilapphieu = Utils.getname(),
-                                    diachinguoinop = tbl_SoQuy.Diachinguoinhannop,
-                                    lydothu = tbl_SoQuy.Diengiai,
-                                    sotien = tbl_SoQuy.PsNo,
+                                    diachinguoinop = p.diachibophan,
+                                    diengiai = p.diengiai,
+                                    sotien = p.sotien,
                                     //   sotienbangchu = Utils.ChuyenSo(tbl_SoQuy.PsNo.ToString()),
-                                    sochungtugoc = tbl_SoQuy.Chungtugockemtheo,
+                                    sochungtugoc = p.hoadondikhem,
                                     //    username = Utils.getusername(),
 
                                
-                                    machitietno = tbl_SoQuy.ChitietTM,
-                                    tentkchitiet = tbl_SoQuy.TenchitietTM,
-                                    tkno = tbl_SoQuy.TKtienmat,
+                                    machitietno = p.MaCTietTKNo,
+                                //    tentkchitiet = p.,
+                              //      tkno = tbl_SoQuy.TKtienmat,
 
-                                    taikhoandoiung = tbl_SoQuy.TKdoiung,
+                          //          taikhoandoiung = p.t,
 
                                 }).FirstOrDefault();
 

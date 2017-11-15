@@ -447,6 +447,8 @@
       <Column Name="phieuso" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="MaCTietTKCo" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="MaCTietTKNo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="diengiai" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="sotien" Type="System.Double" DbType="Float" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.tbl_kho_sanpham" Member="tbl_kho_sanphams">
