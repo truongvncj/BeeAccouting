@@ -8,7 +8,7 @@
   <Shapes>
     <Shape ID="DesignTable:tbl_KapaymentrequestRpt" ZOrder="15" X="471" Y="-3" Height="257" Width="217" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="253" />
     <Shape ID="DesignTable:tbl_KAdetailprogrRpt" ZOrder="12" X="745" Y="13" Height="162" Width="189" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="158" />
-    <Shape ID="DesignTable:PhieuthuRPT" ZOrder="14" X="457" Y="267" Height="257" Width="150" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="253" />
+    <Shape ID="DesignTable:PhieuthuRPT" ZOrder="14" X="457" Y="267" Height="256" Width="150" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="252" />
     <Shape ID="DesignTable:RPtsoQuy" ZOrder="13" X="700" Y="197" Height="257" Width="150" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="253" />
     <Shape ID="DesignTable:RptdetailSoQuy" ZOrder="5" X="1003" Y="127" Height="181" Width="157" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="177" />
     <Shape ID="DesignTable:RPtheadSocai" ZOrder="11" X="234" Y="21" Height="238" Width="150" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="234" />

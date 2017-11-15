@@ -1208,7 +1208,7 @@ namespace BEEACCOUNT.View
                         {
                             string machitiet = selecdetail.value;
                             string namechitiet = selecdetail.valuetext;
-                            //     lbmachitietco.Visible = true;
+                              
 
                             lbtenchitietno.Visible = true;
                             lb_machitietno.Visible = true;
@@ -1388,6 +1388,7 @@ namespace BEEACCOUNT.View
                 pt.username = Utils.getusername();
                 pt.tkno = phieuthu.tkno;
                 pt.tkco = phieuthu.tkco;
+                pt.phieuthuso = phieuthu.sophieuthu;
                 //   pt.quyenso = phieuthu.quyenso;
 
                 dc.Rpt_PhieuThus.InsertOnSubmit(pt);
@@ -1549,7 +1550,7 @@ namespace BEEACCOUNT.View
                     btsua.Enabled = true;
 
 
-
+                    tabControl1.SelectedTab = tabPage1;
 
                     cbtkno.Enabled = false;
 

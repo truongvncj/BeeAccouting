@@ -143,7 +143,7 @@ namespace BEEACCOUNT.Model
             socaips.username = socai.username;
        
 
-        //    socaips.Kyhieuctu = socai.Kyhieuctu;
+            socaips.Sohieuchungtu = socai.Sohieuchungtu;
             socaips.Ngayctu = socai.Ngayctu;
           //  socaips.Soctu = socai.Soctu;
 

@@ -1834,7 +1834,7 @@ namespace BEEACCOUNT.Reports {
             
             private global::System.Data.DataColumn columnmasothue;
             
-            private global::System.Data.DataColumn columnsophieuthu;
+            private global::System.Data.DataColumn columnphieuthuso;
             
             private global::System.Data.DataColumn columnngaychungtu;
             
@@ -1861,8 +1861,6 @@ namespace BEEACCOUNT.Reports {
             private global::System.Data.DataColumn columntkno;
             
             private global::System.Data.DataColumn columntkco;
-            
-            private global::System.Data.DataColumn columnquyenso;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -1923,9 +1921,9 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn sophieuthuColumn {
+            public global::System.Data.DataColumn phieuthusoColumn {
                 get {
-                    return this.columnsophieuthu;
+                    return this.columnphieuthuso;
                 }
             }
             
@@ -2035,14 +2033,6 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn quyensoColumn {
-                get {
-                    return this.columnquyenso;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -2082,7 +2072,7 @@ namespace BEEACCOUNT.Reports {
                         string tencongty, 
                         string diachicongty, 
                         string masothue, 
-                        string sophieuthu, 
+                        string phieuthuso, 
                         string ngaychungtu, 
                         string nguoinoptien, 
                         string nguoilapphieu, 
@@ -2095,14 +2085,13 @@ namespace BEEACCOUNT.Reports {
                         string tengiamdoc, 
                         string tenketoantruong, 
                         string tkno, 
-                        string tkco, 
-                        string quyenso) {
+                        string tkco) {
                 PhieuthuRPTRow rowPhieuthuRPTRow = ((PhieuthuRPTRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         tencongty,
                         diachicongty,
                         masothue,
-                        sophieuthu,
+                        phieuthuso,
                         ngaychungtu,
                         nguoinoptien,
                         nguoilapphieu,
@@ -2115,8 +2104,7 @@ namespace BEEACCOUNT.Reports {
                         tengiamdoc,
                         tenketoantruong,
                         tkno,
-                        tkco,
-                        quyenso};
+                        tkco};
                 rowPhieuthuRPTRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowPhieuthuRPTRow);
                 return rowPhieuthuRPTRow;
@@ -2142,7 +2130,7 @@ namespace BEEACCOUNT.Reports {
                 this.columntencongty = base.Columns["tencongty"];
                 this.columndiachicongty = base.Columns["diachicongty"];
                 this.columnmasothue = base.Columns["masothue"];
-                this.columnsophieuthu = base.Columns["sophieuthu"];
+                this.columnphieuthuso = base.Columns["phieuthuso"];
                 this.columnngaychungtu = base.Columns["ngaychungtu"];
                 this.columnnguoinoptien = base.Columns["nguoinoptien"];
                 this.columnnguoilapphieu = base.Columns["nguoilapphieu"];
@@ -2156,7 +2144,6 @@ namespace BEEACCOUNT.Reports {
                 this.columntenketoantruong = base.Columns["tenketoantruong"];
                 this.columntkno = base.Columns["tkno"];
                 this.columntkco = base.Columns["tkco"];
-                this.columnquyenso = base.Columns["quyenso"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2168,8 +2155,8 @@ namespace BEEACCOUNT.Reports {
                 base.Columns.Add(this.columndiachicongty);
                 this.columnmasothue = new global::System.Data.DataColumn("masothue", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnmasothue);
-                this.columnsophieuthu = new global::System.Data.DataColumn("sophieuthu", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnsophieuthu);
+                this.columnphieuthuso = new global::System.Data.DataColumn("phieuthuso", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnphieuthuso);
                 this.columnngaychungtu = new global::System.Data.DataColumn("ngaychungtu", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnngaychungtu);
                 this.columnnguoinoptien = new global::System.Data.DataColumn("nguoinoptien", typeof(string), null, global::System.Data.MappingType.Element);
@@ -2196,8 +2183,6 @@ namespace BEEACCOUNT.Reports {
                 base.Columns.Add(this.columntkno);
                 this.columntkco = new global::System.Data.DataColumn("tkco", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columntkco);
-                this.columnquyenso = new global::System.Data.DataColumn("quyenso", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnquyenso);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7817,17 +7802,17 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string sophieuthu {
+            public string phieuthuso {
                 get {
                     try {
-                        return ((string)(this[this.tablePhieuthuRPT.sophieuthuColumn]));
+                        return ((string)(this[this.tablePhieuthuRPT.phieuthusoColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'sophieuthu\' in table \'PhieuthuRPT\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'phieuthuso\' in table \'PhieuthuRPT\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablePhieuthuRPT.sophieuthuColumn] = value;
+                    this[this.tablePhieuthuRPT.phieuthusoColumn] = value;
                 }
             }
             
@@ -8041,22 +8026,6 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string quyenso {
-                get {
-                    try {
-                        return ((string)(this[this.tablePhieuthuRPT.quyensoColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'quyenso\' in table \'PhieuthuRPT\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablePhieuthuRPT.quyensoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IstencongtyNull() {
                 return this.IsNull(this.tablePhieuthuRPT.tencongtyColumn);
             }
@@ -8093,14 +8062,14 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IssophieuthuNull() {
-                return this.IsNull(this.tablePhieuthuRPT.sophieuthuColumn);
+            public bool IsphieuthusoNull() {
+                return this.IsNull(this.tablePhieuthuRPT.phieuthusoColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetsophieuthuNull() {
-                this[this.tablePhieuthuRPT.sophieuthuColumn] = global::System.Convert.DBNull;
+            public void SetphieuthusoNull() {
+                this[this.tablePhieuthuRPT.phieuthusoColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8257,18 +8226,6 @@ namespace BEEACCOUNT.Reports {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SettkcoNull() {
                 this[this.tablePhieuthuRPT.tkcoColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsquyensoNull() {
-                return this.IsNull(this.tablePhieuthuRPT.quyensoColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetquyensoNull() {
-                this[this.tablePhieuthuRPT.quyensoColumn] = global::System.Convert.DBNull;
             }
         }
         

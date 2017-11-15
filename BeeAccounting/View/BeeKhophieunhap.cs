@@ -165,15 +165,16 @@ namespace BEEACCOUNT.View
             //     txtsotien.Text = "";
             //     txtsochungtugoc.Text = "";
             //     txtquyenso.Text = "";
-            lbtenchitietno.Text = "";
-
+   
             cbtkno.SelectedIndex = -1;
             cbtkco.SelectedIndex = -1;
             cbkhohang.SelectedIndex = -1;
-
+      
             lb_machitietno.Text = "";
             lbtenchitietno.Text = "";
             //    txttaikhoanco.Text = "";
+            lb_machitietco.Text = "";
+            lbtenchitietco.Text = "";
 
             txtsophieu.Focus();
 

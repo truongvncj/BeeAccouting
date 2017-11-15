@@ -132,7 +132,7 @@ namespace BEEACCOUNT
     #endregion
 		
 		public LinqtoSQLDataContext() : 
-				base(global::BEEACCOUNT.Properties.Settings.Default.BEEConnectionString2, mappingSource)
+				base(global::BEEACCOUNT.Properties.Settings.Default.BEEConnectionString1, mappingSource)
 		{
 			OnCreated();
 		}

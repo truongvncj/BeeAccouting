@@ -411,7 +411,7 @@ namespace BEEACCOUNT.Model
             var socailist = from tbl_Socai in dc.tbl_Socais
                             where tbl_Socai.TkNo.Trim() == taikhoantienmatNo.Trim()
                      && tbl_Socai.manghiepvu == "PT"
-                    && tbl_Socai.Sohieuchungtu == Phieuthuso
+                    && tbl_Socai.Sohieuchungtu.Trim() == Phieuthuso.Trim()
                             select tbl_Socai;
 
             if (socailist.Count() > 0)

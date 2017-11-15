@@ -52,10 +52,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txttaikhoanno = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lb_machitietno = new System.Windows.Forms.Label();
-            this.lbtenchitietno = new System.Windows.Forms.Label();
-            this.txtquyenso = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
+            this.lbmachitietco = new System.Windows.Forms.Label();
+            this.lbtenchitietco = new System.Windows.Forms.Label();
             this.txtsochungtugoc = new System.Windows.Forms.TextBox();
             this.cbtkco = new System.Windows.Forms.ComboBox();
             this.txtsotien = new System.Windows.Forms.TextBox();
@@ -216,9 +214,9 @@
             this.panel4.Controls.Add(this.label14);
             this.panel4.Controls.Add(this.label4);
             this.panel4.Controls.Add(this.txttaikhoanno);
-            this.panel4.Location = new System.Drawing.Point(0, 279);
+            this.panel4.Location = new System.Drawing.Point(0, 276);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1086, 262);
+            this.panel4.Size = new System.Drawing.Size(1086, 265);
             this.panel4.TabIndex = 67;
             // 
             // txtsotienno
@@ -275,7 +273,7 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewTkNo.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridViewTkNo.Size = new System.Drawing.Size(1072, 221);
+            this.dataGridViewTkNo.Size = new System.Drawing.Size(1072, 224);
             this.dataGridViewTkNo.TabIndex = 3;
             this.dataGridViewTkNo.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewTkCo_CellEndEdit);
             this.dataGridViewTkNo.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewTkCo_CellValueChanged);
@@ -319,10 +317,8 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.lb_machitietno);
-            this.panel1.Controls.Add(this.lbtenchitietno);
-            this.panel1.Controls.Add(this.txtquyenso);
-            this.panel1.Controls.Add(this.label13);
+            this.panel1.Controls.Add(this.lbmachitietco);
+            this.panel1.Controls.Add(this.lbtenchitietco);
             this.panel1.Controls.Add(this.txtsochungtugoc);
             this.panel1.Controls.Add(this.cbtkco);
             this.panel1.Controls.Add(this.txtsotien);
@@ -343,54 +339,35 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(-4, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1090, 270);
+            this.panel1.Size = new System.Drawing.Size(1090, 267);
             this.panel1.TabIndex = 65;
             // 
-            // lb_machitietno
+            // lbmachitietco
             // 
-            this.lb_machitietno.AutoSize = true;
-            this.lb_machitietno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_machitietno.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lb_machitietno.Location = new System.Drawing.Point(126, 236);
-            this.lb_machitietno.Name = "lb_machitietno";
-            this.lb_machitietno.Size = new System.Drawing.Size(40, 16);
-            this.lb_machitietno.TabIndex = 61;
-            this.lb_machitietno.Text = "Mã ct";
+            this.lbmachitietco.AutoSize = true;
+            this.lbmachitietco.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbmachitietco.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lbmachitietco.Location = new System.Drawing.Point(129, 246);
+            this.lbmachitietco.Name = "lbmachitietco";
+            this.lbmachitietco.Size = new System.Drawing.Size(40, 16);
+            this.lbmachitietco.TabIndex = 62;
+            this.lbmachitietco.Text = "Mã ct";
             // 
-            // lbtenchitietno
+            // lbtenchitietco
             // 
-            this.lbtenchitietno.AutoSize = true;
-            this.lbtenchitietno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbtenchitietno.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lbtenchitietno.Location = new System.Drawing.Point(172, 236);
-            this.lbtenchitietno.Name = "lbtenchitietno";
-            this.lbtenchitietno.Size = new System.Drawing.Size(57, 16);
-            this.lbtenchitietno.TabIndex = 11;
-            this.lbtenchitietno.Text = "Chi tiết 1";
-            // 
-            // txtquyenso
-            // 
-            this.txtquyenso.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtquyenso.Location = new System.Drawing.Point(474, 52);
-            this.txtquyenso.Name = "txtquyenso";
-            this.txtquyenso.Size = new System.Drawing.Size(118, 24);
-            this.txtquyenso.TabIndex = 27;
-            this.txtquyenso.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtquyenso_KeyPress);
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(392, 59);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(76, 18);
-            this.label13.TabIndex = 26;
-            this.label13.Text = "Quyển số:";
+            this.lbtenchitietco.AutoSize = true;
+            this.lbtenchitietco.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbtenchitietco.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lbtenchitietco.Location = new System.Drawing.Point(172, 246);
+            this.lbtenchitietco.Name = "lbtenchitietco";
+            this.lbtenchitietco.Size = new System.Drawing.Size(57, 16);
+            this.lbtenchitietco.TabIndex = 11;
+            this.lbtenchitietco.Text = "Chi tiết 1";
             // 
             // txtsochungtugoc
             // 
             this.txtsochungtugoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtsochungtugoc.Location = new System.Drawing.Point(687, 178);
+            this.txtsochungtugoc.Location = new System.Drawing.Point(687, 184);
             this.txtsochungtugoc.Name = "txtsochungtugoc";
             this.txtsochungtugoc.Size = new System.Drawing.Size(99, 24);
             this.txtsochungtugoc.TabIndex = 25;
@@ -402,7 +379,7 @@
             this.cbtkco.DropDownWidth = 350;
             this.cbtkco.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbtkco.FormattingEnabled = true;
-            this.cbtkco.Location = new System.Drawing.Point(129, 207);
+            this.cbtkco.Location = new System.Drawing.Point(126, 217);
             this.cbtkco.Name = "cbtkco";
             this.cbtkco.Size = new System.Drawing.Size(207, 26);
             this.cbtkco.TabIndex = 8;
@@ -413,7 +390,7 @@
             // txtsotien
             // 
             this.txtsotien.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtsotien.Location = new System.Drawing.Point(129, 177);
+            this.txtsotien.Location = new System.Drawing.Point(129, 187);
             this.txtsotien.Name = "txtsotien";
             this.txtsotien.Size = new System.Drawing.Size(207, 24);
             this.txtsotien.TabIndex = 24;
@@ -423,7 +400,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(13, 215);
+            this.label3.Location = new System.Drawing.Point(12, 225);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(53, 18);
             this.label3.TabIndex = 4;
@@ -432,7 +409,7 @@
             // txtdiengiai
             // 
             this.txtdiengiai.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtdiengiai.Location = new System.Drawing.Point(129, 146);
+            this.txtdiengiai.Location = new System.Drawing.Point(129, 156);
             this.txtdiengiai.Name = "txtdiengiai";
             this.txtdiengiai.Size = new System.Drawing.Size(551, 24);
             this.txtdiengiai.TabIndex = 23;
@@ -441,7 +418,7 @@
             // txtdiachi
             // 
             this.txtdiachi.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtdiachi.Location = new System.Drawing.Point(129, 116);
+            this.txtdiachi.Location = new System.Drawing.Point(129, 126);
             this.txtdiachi.Name = "txtdiachi";
             this.txtdiachi.Size = new System.Drawing.Size(358, 24);
             this.txtdiachi.TabIndex = 22;
@@ -450,7 +427,7 @@
             // txttennguoinhan
             // 
             this.txttennguoinhan.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txttennguoinhan.Location = new System.Drawing.Point(129, 87);
+            this.txttennguoinhan.Location = new System.Drawing.Point(129, 97);
             this.txttennguoinhan.Name = "txttennguoinhan";
             this.txttennguoinhan.Size = new System.Drawing.Size(271, 24);
             this.txttennguoinhan.TabIndex = 21;
@@ -459,9 +436,9 @@
             // txtsophieu
             // 
             this.txtsophieu.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtsophieu.Location = new System.Drawing.Point(687, 52);
+            this.txtsophieu.Location = new System.Drawing.Point(126, 33);
             this.txtsophieu.Name = "txtsophieu";
-            this.txtsophieu.Size = new System.Drawing.Size(165, 24);
+            this.txtsophieu.Size = new System.Drawing.Size(121, 24);
             this.txtsophieu.TabIndex = 20;
             this.txtsophieu.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtsophieu_KeyPress);
             // 
@@ -469,17 +446,17 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(611, 58);
+            this.label11.Location = new System.Drawing.Point(13, 39);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(70, 18);
             this.label11.TabIndex = 19;
-            this.label11.Text = "Số phiếu:";
+            this.label11.Text = "Phiếu số:";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(792, 182);
+            this.label10.Location = new System.Drawing.Point(792, 188);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(96, 18);
             this.label10.TabIndex = 18;
@@ -489,7 +466,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(605, 182);
+            this.label9.Location = new System.Drawing.Point(605, 188);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(76, 18);
             this.label9.TabIndex = 16;
@@ -499,7 +476,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(10, 184);
+            this.label8.Location = new System.Drawing.Point(10, 194);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(58, 18);
             this.label8.TabIndex = 14;
@@ -509,7 +486,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(10, 152);
+            this.label7.Location = new System.Drawing.Point(10, 162);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(71, 18);
             this.label7.TabIndex = 12;
@@ -519,7 +496,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(12, 123);
+            this.label6.Location = new System.Drawing.Point(12, 133);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(57, 18);
             this.label6.TabIndex = 9;
@@ -529,7 +506,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(11, 89);
+            this.label5.Location = new System.Drawing.Point(11, 99);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(114, 18);
             this.label5.TabIndex = 7;
@@ -539,7 +516,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 58);
+            this.label2.Location = new System.Drawing.Point(12, 68);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(108, 18);
             this.label2.TabIndex = 2;
@@ -551,7 +528,7 @@
             this.datepickngayphieu.CustomFormat = "dd.MM.yyyy";
             this.datepickngayphieu.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.datepickngayphieu.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.datepickngayphieu.Location = new System.Drawing.Point(130, 55);
+            this.datepickngayphieu.Location = new System.Drawing.Point(128, 66);
             this.datepickngayphieu.Name = "datepickngayphieu";
             this.datepickngayphieu.Size = new System.Drawing.Size(119, 24);
             this.datepickngayphieu.TabIndex = 1;
@@ -562,7 +539,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(393, 6);
+            this.label1.Location = new System.Drawing.Point(393, 4);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(140, 29);
             this.label1.TabIndex = 0;
@@ -574,7 +551,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1090, 584);
+            this.tabPage2.Size = new System.Drawing.Size(1090, 566);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Danh sách phiếu ";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -700,10 +677,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txttaikhoanno;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label lb_machitietno;
-        private System.Windows.Forms.Label lbtenchitietno;
-        private System.Windows.Forms.TextBox txtquyenso;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label lbtenchitietco;
         private System.Windows.Forms.TextBox txtsochungtugoc;
         private System.Windows.Forms.ComboBox cbtkco;
         private System.Windows.Forms.TextBox txtsotien;
@@ -727,5 +701,6 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.DataGridView dataGridViewListphieuchi;
+        private System.Windows.Forms.Label lbmachitietco;
     }
 }

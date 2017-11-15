@@ -185,24 +185,18 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Số: </Value>
+                <Value>Số phiếu: </Value>
                 <Style />
-              </TextRun>
-              <TextRun>
-                <Value>=Fields!sophieuthu.Value</Value>
-                <Style>
-                  <FontWeight>Bold</FontWeight>
-                </Style>
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>0.92514in</Top>
-        <Left>5.61826in</Left>
+        <Top>0.8425in</Top>
+        <Left>5.26674in</Left>
         <Height>0.22222in</Height>
-        <Width>1.51041in</Width>
+        <Width>0.70792in</Width>
         <ZIndex>4</ZIndex>
         <Style>
           <Border>
@@ -3137,8 +3131,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>1.18347in</Top>
-        <Left>5.42258in</Left>
+        <Top>1.13139in</Top>
+        <Left>5.608in</Left>
         <Height>0.22222in</Height>
         <Width>0.35416in</Width>
         <ZIndex>74</ZIndex>
@@ -3173,8 +3167,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>1.40569in</Top>
-        <Left>5.42258in</Left>
+        <Top>1.34319in</Top>
+        <Left>5.59758in</Left>
         <Height>0.26666in</Height>
         <Width>0.35416in</Width>
         <ZIndex>75</ZIndex>
@@ -3209,8 +3203,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>1.18347in</Top>
-        <Left>5.84619in</Left>
+        <Top>1.13139in</Top>
+        <Left>6.03161in</Left>
         <Height>0.22222in</Height>
         <Width>1.35748in</Width>
         <ZIndex>76</ZIndex>
@@ -3245,8 +3239,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>1.40569in</Top>
-        <Left>5.84619in</Left>
+        <Top>1.34319in</Top>
+        <Left>6.02119in</Left>
         <Height>0.26666in</Height>
         <Width>1.35748in</Width>
         <ZIndex>77</ZIndex>
@@ -3256,114 +3250,6 @@
           </Border>
           <PaddingLeft>2pt</PaddingLeft>
           <PaddingRight>2pt</PaddingRight>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="Textbox88">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>Quyển số:</Value>
-                <Style>
-                  <FontStyle>Normal</FontStyle>
-                  <FontFamily>Times New Roman</FontFamily>
-                  <FontSize>11pt</FontSize>
-                  <FontWeight>Normal</FontWeight>
-                  <TextDecoration>None</TextDecoration>
-                  <Color>#000000</Color>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>0.6668in</Top>
-        <Left>5.40812in</Left>
-        <Height>0.22222in</Height>
-        <Width>0.69502in</Width>
-        <ZIndex>78</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-        </Style>
-      </Textbox>
-      <Textbox Name="Textbox89">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>=Fields!quyenso.Value</Value>
-                <Style>
-                  <FontStyle>Normal</FontStyle>
-                  <FontFamily>Times New Roman</FontFamily>
-                  <FontSize>11pt</FontSize>
-                  <FontWeight>Normal</FontWeight>
-                  <TextDecoration>None</TextDecoration>
-                  <Color>#000000</Color>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>0.65292in</Top>
-        <Left>6.13381in</Left>
-        <Height>0.22222in</Height>
-        <Width>0.99486in</Width>
-        <ZIndex>79</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-        </Style>
-      </Textbox>
-      <Textbox Name="Textbox76">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>Số: </Value>
-                <Style />
-              </TextRun>
-              <TextRun>
-                <Value>=Fields!sophieuthu.Value</Value>
-                <Style>
-                  <FontWeight>Bold</FontWeight>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>6.31809in</Top>
-        <Left>5.64627in</Left>
-        <Height>0.22222in</Height>
-        <Width>1.51041in</Width>
-        <ZIndex>80</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
@@ -3389,11 +3275,11 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>6.58892in</Top>
-        <Left>5.51309in</Left>
+        <Top>6.416in</Top>
+        <Left>5.60684in</Left>
         <Height>0.22222in</Height>
         <Width>0.35416in</Width>
-        <ZIndex>81</ZIndex>
+        <ZIndex>78</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -3425,11 +3311,11 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>6.81114in</Top>
-        <Left>5.51309in</Left>
+        <Top>6.65697in</Top>
+        <Left>5.61101in</Left>
         <Height>0.26666in</Height>
         <Width>0.35416in</Width>
-        <ZIndex>82</ZIndex>
+        <ZIndex>79</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -3461,11 +3347,11 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>6.58892in</Top>
-        <Left>5.9367in</Left>
+        <Top>6.416in</Top>
+        <Left>6.03045in</Left>
         <Height>0.22222in</Height>
         <Width>1.35748in</Width>
-        <ZIndex>83</ZIndex>
+        <ZIndex>80</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -3497,11 +3383,11 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>6.81114in</Top>
-        <Left>5.9367in</Left>
+        <Top>6.64864in</Top>
+        <Left>5.9992in</Left>
         <Height>0.26666in</Height>
         <Width>1.35748in</Width>
-        <ZIndex>84</ZIndex>
+        <ZIndex>81</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -3509,78 +3395,6 @@
           <PaddingLeft>2pt</PaddingLeft>
           <PaddingRight>2pt</PaddingRight>
           <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="Textbox94">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>Quyển số:</Value>
-                <Style>
-                  <FontStyle>Normal</FontStyle>
-                  <FontFamily>Times New Roman</FontFamily>
-                  <FontSize>11pt</FontSize>
-                  <FontWeight>Normal</FontWeight>
-                  <TextDecoration>None</TextDecoration>
-                  <Color>#000000</Color>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>6.07225in</Top>
-        <Left>5.49863in</Left>
-        <Height>0.22222in</Height>
-        <Width>0.69502in</Width>
-        <ZIndex>85</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-        </Style>
-      </Textbox>
-      <Textbox Name="Textbox95">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>=Fields!quyenso.Value</Value>
-                <Style>
-                  <FontStyle>Normal</FontStyle>
-                  <FontFamily>Times New Roman</FontFamily>
-                  <FontSize>11pt</FontSize>
-                  <FontWeight>Normal</FontWeight>
-                  <TextDecoration>None</TextDecoration>
-                  <Color>#000000</Color>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>6.05837in</Top>
-        <Left>6.22432in</Left>
-        <Height>0.22222in</Height>
-        <Width>0.97935in</Width>
-        <ZIndex>86</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
         </Style>
       </Textbox>
       <Textbox Name="Textbox39">
@@ -3609,7 +3423,7 @@
         <Left>0.08028in</Left>
         <Height>0.25in</Height>
         <Width>1.04167in</Width>
-        <ZIndex>87</ZIndex>
+        <ZIndex>82</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -3646,7 +3460,7 @@
         <Left>0.09263in</Left>
         <Height>0.25in</Height>
         <Width>1.02932in</Width>
-        <ZIndex>88</ZIndex>
+        <ZIndex>83</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -3655,6 +3469,108 @@
           <PaddingRight>2pt</PaddingRight>
           <PaddingTop>2pt</PaddingTop>
           <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox88">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Fields!phieuthuso.Value</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontFamily>Times New Roman</FontFamily>
+                  <FontSize>11pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox2</rd:DefaultName>
+        <Top>0.8425in</Top>
+        <Left>6.03022in</Left>
+        <Height>0.22222in</Height>
+        <Width>1.35748in</Width>
+        <ZIndex>84</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox76">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Số phiếu: </Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox2</rd:DefaultName>
+        <Top>6.12363in</Top>
+        <Left>5.26559in</Left>
+        <Height>0.22222in</Height>
+        <Width>0.68708in</Width>
+        <ZIndex>85</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox89">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Fields!phieuthuso.Value</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontFamily>Times New Roman</FontFamily>
+                  <FontSize>11pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox2</rd:DefaultName>
+        <Top>6.12363in</Top>
+        <Left>6.00823in</Left>
+        <Height>0.22222in</Height>
+        <Width>1.35748in</Width>
+        <ZIndex>86</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
         </Style>
       </Textbox>
     </ReportItems>
@@ -3706,8 +3622,8 @@
           <DataField>masothue</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="sophieuthu">
-          <DataField>sophieuthu</DataField>
+        <Field Name="phieuthuso">
+          <DataField>phieuthuso</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="ngaychungtu">
@@ -3762,14 +3678,10 @@
           <DataField>tkco</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="quyenso">
-          <DataField>quyenso</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>DataSet1</rd:DataSetName>
-        <rd:SchemaPath>D:\Product\BeeAccouting\BeeAccounting\Reports\dsCallogs.xsd</rd:SchemaPath>
+        <rd:SchemaPath>E:\Product\BeeAccouting\BeeAccounting\Reports\dsCallogs.xsd</rd:SchemaPath>
         <rd:TableName>PhieuthuRPT</rd:TableName>
         <rd:TableAdapterFillMethod />
         <rd:TableAdapterGetDataMethod />
