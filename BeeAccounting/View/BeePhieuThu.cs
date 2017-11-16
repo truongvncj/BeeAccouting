@@ -2420,5 +2420,10 @@ namespace BEEACCOUNT.View
             tabControl1.SelectedTab = tabPage1;
 
         }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

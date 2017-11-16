@@ -132,7 +132,7 @@ namespace BEEACCOUNT
     #endregion
 		
 		public LinqtoSQLDataContext() : 
-				base(global::BEEACCOUNT.Properties.Settings.Default.BEEConnectionString1, mappingSource)
+				base(global::BEEACCOUNT.Properties.Settings.Default.BEEConnectionString2, mappingSource)
 		{
 			OnCreated();
 		}
@@ -9322,6 +9322,12 @@ namespace BEEACCOUNT
 		
 		private System.Nullable<double> _sotien;
 		
+		private string _TenCTietTKCo;
+		
+		private string _TenCTietTKNo;
+		
+		private string _tenkho;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -9356,6 +9362,12 @@ namespace BEEACCOUNT
     partial void OndiengiaiChanged();
     partial void OnsotienChanging(System.Nullable<double> value);
     partial void OnsotienChanged();
+    partial void OnTenCTietTKCoChanging(string value);
+    partial void OnTenCTietTKCoChanged();
+    partial void OnTenCTietTKNoChanging(string value);
+    partial void OnTenCTietTKNoChanged();
+    partial void OntenkhoChanging(string value);
+    partial void OntenkhoChanged();
     #endregion
 		
 		public tbl_kho_phieunhap_head()
@@ -9659,6 +9671,66 @@ namespace BEEACCOUNT
 					this._sotien = value;
 					this.SendPropertyChanged("sotien");
 					this.OnsotienChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenCTietTKCo", DbType="NVarChar(225)")]
+		public string TenCTietTKCo
+		{
+			get
+			{
+				return this._TenCTietTKCo;
+			}
+			set
+			{
+				if ((this._TenCTietTKCo != value))
+				{
+					this.OnTenCTietTKCoChanging(value);
+					this.SendPropertyChanging();
+					this._TenCTietTKCo = value;
+					this.SendPropertyChanged("TenCTietTKCo");
+					this.OnTenCTietTKCoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenCTietTKNo", DbType="NVarChar(225)")]
+		public string TenCTietTKNo
+		{
+			get
+			{
+				return this._TenCTietTKNo;
+			}
+			set
+			{
+				if ((this._TenCTietTKNo != value))
+				{
+					this.OnTenCTietTKNoChanging(value);
+					this.SendPropertyChanging();
+					this._TenCTietTKNo = value;
+					this.SendPropertyChanged("TenCTietTKNo");
+					this.OnTenCTietTKNoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tenkho", DbType="NVarChar(225)")]
+		public string tenkho
+		{
+			get
+			{
+				return this._tenkho;
+			}
+			set
+			{
+				if ((this._tenkho != value))
+				{
+					this.OntenkhoChanging(value);
+					this.SendPropertyChanging();
+					this._tenkho = value;
+					this.SendPropertyChanged("tenkho");
+					this.OntenkhoChanged();
 				}
 			}
 		}

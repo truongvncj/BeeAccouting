@@ -218,11 +218,21 @@ namespace BEEACCOUNT.Model
 
                          Ngày_phiếu_nhập = p.ngayphieunhap,
                          Mã_kho = p.makho,
+                         Tên_kho = p.tenkho,
                          Phiếu_số = p.phieuso,
                          Người_giao = p.nguoigiao,
                          Địa_chỉ = p.diachibophan,
+                         Diễn_giải = p.diengiai,
                          Có_TK = p.cotk,
+                         Chi_tiết_TK_Có = p.MaCTietTKCo,
+                         Tên_TK_chi_tiết_Có = p.TenCTietTKCo,
+
                          Nợ_TK = p.notk,
+                         Chi_tiết_TK_Nợ = p.MaCTietTKNo,
+                         Tên_TK_chi_tiết_Nợ = p.TenCTietTKNo,
+
+                         Số_tiền = p.sotien,
+
                          Tạo_bởi = p.createby,
 
 
