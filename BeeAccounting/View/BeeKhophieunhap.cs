@@ -307,7 +307,7 @@ namespace BEEACCOUNT.View
 
             #region load tk nợ
 
-            //            tien
+            //            tien  khacbiet   klabi    kabi
             //kho
             //tamung
             //xacdinhkqkd
@@ -341,7 +341,7 @@ namespace BEEACCOUNT.View
 
             #region load tk có
 
-           
+
 
 
             var rs4 = from tk in dc.tbl_dstaikhoans
@@ -1230,9 +1230,6 @@ namespace BEEACCOUNT.View
             cbtkco.DataSource = cbcolectiontkco;
             #endregion tai khoan co
 
-
-
-
             try
             {
                 this.phieunhapid = (int)this.dataGridViewListPNK.Rows[this.dataGridViewListPNK.CurrentCell.RowIndex].Cells["ID"].Value;
@@ -1257,7 +1254,7 @@ namespace BEEACCOUNT.View
 
 
 
-                                     sophieuthu = p.phieuso,
+                                     Phieuso = p.phieuso,
                                      ngaychungtu = p.ngayphieunhap,
                                      nguoigiao = p.nguoigiao,
                                      //    nguoilapphieu = Utils.getname(),
@@ -1287,7 +1284,7 @@ namespace BEEACCOUNT.View
                 if (phieunhap != null)
                 {
                     datepickngayphieu.Value = (DateTime)phieunhap.ngaychungtu;
-                    txtsophieu.Text = phieunhap.sophieuthu.ToString();
+                    txtsophieu.Text = phieunhap.Phieuso.ToString();
                     txttennguoigiao.Text = phieunhap.nguoigiao;
                     txtdiachi.Text = phieunhap.diachibophan;
                     txtdiengiai.Text = phieunhap.diengiai;
@@ -1350,7 +1347,7 @@ namespace BEEACCOUNT.View
                     txtdiengiai.Enabled = false;
 
                     btsua.Enabled = true;
-
+                    cbkhohang.Enabled = false;
                     cbtkno.Enabled = false;
                     cbtkco.Enabled = false;
 
@@ -1362,12 +1359,46 @@ namespace BEEACCOUNT.View
                 }
 
 
+                dataGridViewTkCo = Model.Khohang.reloaddetailnewPNK(dataGridViewTkCo);
+
+                #region adđ detail san phẩm
+                //     add_detailGridviewPNkho(tbl_kho_phieunhap_detail sanpham)
+
+
+                var lisdetailphieunhap = from p in dc.tbl_kho_phieunhap_details
+                                         where p.phieuso == phieunhap.Phieuso
+                                         select p;
+
+                if (lisdetailphieunhap.Count() >= 0)
+                {
+                    foreach (var item in lisdetailphieunhap)
+                    {
+
+
+                        add_detailGridviewPNkho(item);
+
+
+
+                    }
+
+
+
+
+                }
+
+                //     MessageBox.Show("SDádSDA", lisdetailphieunhap.Count().ToString());
+
+
+                #endregion
 
                 #endregion view load form
 
+                //   dataGridViewTkCo.DataSource = null;
 
 
             }
+
+
 
 
         }
@@ -1403,7 +1434,7 @@ namespace BEEACCOUNT.View
                 #region      // xóa đetail phiếu nhâp
 
                 var phieunhapdetail = from p in dc.tbl_kho_phieunhap_details
-                                      where p.subid == this.phieunhapid
+                                      where p.phieuso.Trim() == phieunhaphead.phieuso.Trim()
                                       select p;
 
                 if (phieunhapdetail.Count() > 0)
@@ -1471,7 +1502,7 @@ namespace BEEACCOUNT.View
 
 
             //  txtquyenso.Enabled = true;
-
+            cbkhohang.Enabled = true;
             txttennguoigiao.Enabled = true;
             txtdiachi.Enabled = true;
             txtdiengiai.Enabled = true;
