@@ -20,8 +20,8 @@ namespace BEEACCOUNT.View
         public int tknochitiet { get; set; }
         public string tkco { get; set; }
         public int tkcochitiet { get; set; }
-        public double pssotienno { get; set; }
-        public double pssotienco { get; set; }
+        public double sotien { get; set; }
+    //    public double pssotienco { get; set; }
 
         public int maphieuthuOld { get; set; }
         //    public DataGridView DataGridView1 { get; set; }
@@ -46,20 +46,6 @@ namespace BEEACCOUNT.View
 
             string connection_string = Utils.getConnectionstr();
             LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
-
-
-            //        //---------------
-            //dt.Columns.Add(new DataColumn("Tên_sản_phẩm", typeof(string)));
-
-            //dt.Columns.Add(new DataColumn("Đơn_vị", typeof(string)));
-            //dt.Columns.Add(new DataColumn("Số_lượng_nhập", typeof(string)));
-
-            ////Threahold
-            ////      dt.Columns.Add(new DataColumn("Tk_Có", typeof(double)));
-            //dt.Columns.Add(new DataColumn("Đơn_giá", typeof(double)));
-            //dt.Columns.Add(new DataColumn("Thành_tiền", typeof(double)));
-            ////    
-
 
 
             DataTable dataTable = (DataTable)dataGridViewTkCo.DataSource;
@@ -94,16 +80,7 @@ namespace BEEACCOUNT.View
 
 
             int i = dataTable.Rows.Count - 1;
-            //     dataGridViewTkCo.Rows[i].Cells["Đơn_giá"].EditedFormattedValue = true;
-            //   int i = dataGridViewTkCo.RowCount -1;
-            //dt.Columns.Add(new DataColumn("Tên_sản_phẩm", typeof(string)));
-
-            //dt.Columns.Add(new DataColumn("Đơn_vị", typeof(string)));
-            //dt.Columns.Add(new DataColumn("Số_lượng_nhập", typeof(string)));
-            //   cmbdgv.HeaderText = "Mã_sản_phẩm";
-            ////Threahold
-            ////      dt.Columns.Add(new DataColumn("Tk_Có", typeof(double)));
-            //dt.Columns.Add(new DataColumn("Đơn_giá", typeof(double)));
+         
             DataGridViewComboBoxCell cb = (DataGridViewComboBoxCell)dataGridViewTkCo.Rows[i].Cells["Mã_sản_phẩm"];
             DataGridViewCell dgvc = (DataGridViewCell)dataGridViewTkCo.Rows[i].Cells["Mã_sản_phẩm"];
 
@@ -128,14 +105,7 @@ namespace BEEACCOUNT.View
             #endregion tom item comboubox
 
 
-            //        //   ComboboxItem cbx = (ComboboxItem)cb.Items[3];
-            //        //     dataGridViewTkCo.Rows[i].Cells["Tk_Có"].Value = cbx.Value;
-            //        if (Utils.IsValidnumber(txtsotienco.Text))
-            //        {
-            //            this.pssotienco = double.Parse(txtsotienco.Text);
-
-            //        }
-
+         
 
 
         }
@@ -163,7 +133,7 @@ namespace BEEACCOUNT.View
             txttennguoigiao.Text = "";
             txtdiachi.Text = "";
             txtdiengiai.Text = "";
-            lbid.Text = "";
+            //lbid.Text = "";
             //     txtsotien.Text = "";
             //     txtsochungtugoc.Text = "";
             //     txtquyenso.Text = "";
@@ -282,11 +252,12 @@ namespace BEEACCOUNT.View
             this.KeyPreview = true;
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(Control_KeyPress);  // để đọc từ bàn phím phím tắt
 
-            this.pssotienno = 0;
-            this.pssotienco = 0;
+            this.sotien = 0;
+         //   this.pssotienco = 0;
             this.main1 = Main;
-            lbid.Text = "";
+            //lbid.Text = "";
             this.statusphieunhap = 1; // tạo mới
+            txtsotiensave.Visible = false;
 
             Model.Username used = new Model.Username();
             string connection_string = Utils.getConnectionstr();
@@ -388,6 +359,10 @@ namespace BEEACCOUNT.View
             dataGridViewTkCo = Model.Khohang.reloaddetailnewPNK(dataGridViewTkCo);
 
             dataGridViewListPNK.DataSource = Model.Khohang.danhsachphieunhapkho(dc);
+
+
+            dataGridViewListPNK.Columns["Số_tiền"].DefaultCellStyle.Format = "N0";
+            dataGridViewListPNK.Columns["Số_tiền"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight; // để hiện số có dấu phảy
 
             #endregion load datanew
 
@@ -800,7 +775,7 @@ namespace BEEACCOUNT.View
 
                 if (Utils.IsValidnumber(txtsotiensave.Text))
                 {
-                    headphieunhap.sotien = float.Parse(txtsotiensave.Text.ToString());
+                    headphieunhap.sotien = this.sotien;
                 }
 
 
@@ -1292,7 +1267,7 @@ namespace BEEACCOUNT.View
                     if (phieunhap.sotien != null)
                     {
                         txtsotiensave.Text = phieunhap.sotien.ToString();
-                        this.pssotienno = double.Parse(phieunhap.sotien.ToString());
+                        this.sotien = double.Parse(phieunhap.sotien.ToString());
                     }
 
                     lbtenchitietno.Text = phieunhap.tenchitietno;
@@ -1455,7 +1430,7 @@ namespace BEEACCOUNT.View
                 // xóa detail
 
 
-                MessageBox.Show("Đã xóa phiếu: " + this.sophieunhap, "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Đã xóa phiếu nhâp : " + phieunhaphead.phieuso, "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
                 //  Model.
@@ -1916,7 +1891,7 @@ namespace BEEACCOUNT.View
             }
 
             //txtValueSotienCo.Text = tongcong.ToString();
-            this.pssotienco = tongcong;
+            this.sotien = tongcong;
             txtsotiendisplay.Text = tongcong.ToString("#,#", CultureInfo.InvariantCulture);
             #endregion
 
@@ -2201,7 +2176,7 @@ namespace BEEACCOUNT.View
         {
             if (Utils.IsValidnumber(txtsotiensave.Text.ToString()))
             {
-                this.pssotienco = double.Parse(txtsotiensave.Text);
+                this.sotien = double.Parse(txtsotiensave.Text);
             }
             //else
             //{
@@ -2282,7 +2257,7 @@ namespace BEEACCOUNT.View
             }
 
             //txtValueSotienCo.Text = tongcong.ToString();
-            this.pssotienco = tongcong;
+            this.sotien = tongcong;
             txtsotiendisplay.Text = tongcong.ToString("#,#", CultureInfo.InvariantCulture);
             #endregion
 

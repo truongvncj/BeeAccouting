@@ -36,8 +36,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lbid = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cbtkno = new System.Windows.Forms.ComboBox();
             this.lb_machitietco = new System.Windows.Forms.Label();
@@ -99,8 +97,6 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.lbid);
-            this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.txthoadonkemtheo);
             this.panel1.Controls.Add(this.label9);
@@ -124,27 +120,6 @@
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // lbid
-            // 
-            this.lbid.AutoSize = true;
-            this.lbid.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbid.ForeColor = System.Drawing.Color.Red;
-            this.lbid.Location = new System.Drawing.Point(791, 35);
-            this.lbid.Name = "lbid";
-            this.lbid.Size = new System.Drawing.Size(30, 18);
-            this.lbid.TabIndex = 72;
-            this.lbid.Text = "lbid";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(763, 35);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(22, 18);
-            this.label4.TabIndex = 71;
-            this.label4.Text = "ID";
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.cbtkno);
@@ -155,9 +130,9 @@
             this.groupBox1.Controls.Add(this.cbtkco);
             this.groupBox1.Controls.Add(this.lb_machitietno);
             this.groupBox1.Controls.Add(this.label16);
-            this.groupBox1.Location = new System.Drawing.Point(732, 61);
+            this.groupBox1.Location = new System.Drawing.Point(691, 54);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(322, 156);
+            this.groupBox1.Size = new System.Drawing.Size(317, 156);
             this.groupBox1.TabIndex = 70;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Định khoản";
@@ -798,8 +773,6 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label lbid;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtsotiendisplay;
     }
 }

@@ -270,7 +270,7 @@ namespace BEEACCOUNT.Model
             dt.Columns.Add(new DataColumn("Tên_sản_phẩm", typeof(string)));
 
             dt.Columns.Add(new DataColumn("Đơn_vị", typeof(string)));
-            dt.Columns.Add(new DataColumn("Số_lượng_nhập", typeof(string)));
+            dt.Columns.Add(new DataColumn("Số_lượng_nhập", typeof(double)));
 
             //Threahold
             //      dt.Columns.Add(new DataColumn("Tk_Có", typeof(double)));
@@ -337,6 +337,27 @@ namespace BEEACCOUNT.Model
 
             dataGridViewdetailPNK.Columns["masanpham"].Visible = false;
             dataGridViewdetailPNK.Columns["Mã_sản_phẩm"].DisplayIndex = 0;
+
+            dataGridViewdetailPNK.Columns["Tên_sản_phẩm"].ReadOnly = true;
+            dataGridViewdetailPNK.Columns["Đơn_vị"].ReadOnly = true;
+
+            dataGridViewdetailPNK.Columns["Tên_sản_phẩm"].DefaultCellStyle.BackColor = Color.LightGray;
+            dataGridViewdetailPNK.Columns["Đơn_vị"].DefaultCellStyle.BackColor = Color.LightGray;
+
+            dataGridViewdetailPNK.Columns["Số_lượng_nhập"].DefaultCellStyle.Format = "N0"; // để hiện số có dấu phảy
+            dataGridViewdetailPNK.Columns["Đơn_giá"].DefaultCellStyle.Format = "N0";
+            dataGridViewdetailPNK.Columns["Thành_tiền"].DefaultCellStyle.Format = "N0";
+
+
+            dataGridViewdetailPNK.Columns["Số_lượng_nhập"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight; // để hiện số có dấu phảy
+            dataGridViewdetailPNK.Columns["Đơn_giá"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            dataGridViewdetailPNK.Columns["Thành_tiền"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+
+        //    this.dataGridView1.Columns["CustomerCode"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
+            //this.dataGridView1.Columns["CustomerCode"].DefaultCellStyle.Format = "N0";
+            //this.dataGridView1.Columns["CustomerCode"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;// = "N0";
+
+            //   dataGridViewdetailPNK.Columns["Đơn_giá"].DefaultCellStyle = datag  ;
 
             //    dataGridViewdetailPNK.Columns["Tk_Có"].Visible = false;
             // dataGridViewdetailPNK.Columns["masanpham"].Visible = false;

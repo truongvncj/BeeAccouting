@@ -28,8 +28,8 @@ namespace BEEACCOUNT.View
             }
         }
 
-        public double pssotienno { get; set; }
-        public double pssotienco { get; set; }
+     //   public double pssotienno { get; set; }
+        public double sotien { get; set; }
 
         public BeeHtdoiungphieunhapkho(View.BeeKhophieunhap phieunhapkho, string labe1, string labe2, string labe3)
         {
@@ -48,8 +48,8 @@ namespace BEEACCOUNT.View
             //}
             //txtTongno.Text = phieunhapkho.pssotienno.ToString("#,#", CultureInfo.InvariantCulture);
             //txtTongco.Text = phieunhapkho.pssotienco.ToString("#,#", CultureInfo.InvariantCulture);
-            this.pssotienco = phieunhapkho.pssotienco;
-            this.pssotienno = phieunhapkho.pssotienno;
+           // this.pssotienco = phieunhapkho.pssotienco;
+            this.sotien = phieunhapkho.sotien;
 
             //   txtChenlech.Text = (this.pssotienno - this.pssotienco).ToString("#,#", CultureInfo.InvariantCulture);
 
