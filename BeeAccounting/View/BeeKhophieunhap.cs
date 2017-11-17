@@ -21,9 +21,9 @@ namespace BEEACCOUNT.View
         public string tkco { get; set; }
         public int tkcochitiet { get; set; }
         public double sotien { get; set; }
-    //    public double pssotienco { get; set; }
+        //    public double pssotienco { get; set; }
 
-        public int maphieuthuOld { get; set; }
+        public string maphieuthuOld { get; set; }
         //    public DataGridView DataGridView1 { get; set; }
         public class ComboboxItem
         {
@@ -80,7 +80,7 @@ namespace BEEACCOUNT.View
 
 
             int i = dataTable.Rows.Count - 1;
-         
+
             DataGridViewComboBoxCell cb = (DataGridViewComboBoxCell)dataGridViewTkCo.Rows[i].Cells["Mã_sản_phẩm"];
             DataGridViewCell dgvc = (DataGridViewCell)dataGridViewTkCo.Rows[i].Cells["Mã_sản_phẩm"];
 
@@ -105,7 +105,7 @@ namespace BEEACCOUNT.View
             #endregion tom item comboubox
 
 
-         
+
 
 
         }
@@ -253,7 +253,7 @@ namespace BEEACCOUNT.View
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(Control_KeyPress);  // để đọc từ bàn phím phím tắt
 
             this.sotien = 0;
-         //   this.pssotienco = 0;
+            //   this.pssotienco = 0;
             this.main1 = Main;
             //lbid.Text = "";
             this.statusphieunhap = 1; // tạo mới
@@ -773,10 +773,7 @@ namespace BEEACCOUNT.View
                 }
                 headphieunhap.TenCTietTKCo = lbtenchitietco.Text;
 
-                if (Utils.IsValidnumber(txtsotiensave.Text))
-                {
-                    headphieunhap.sotien = this.sotien;
-                }
+                headphieunhap.sotien = this.sotien;
 
 
 
@@ -1051,40 +1048,17 @@ namespace BEEACCOUNT.View
             string connection_string = Utils.getConnectionstr();
             LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
 
-            var rptpthu = from phieuthud in dc.Rpt_PhieuThus
-                          where phieuthud.username == username
-                          select phieuthud;
+            var rptphieunhap = from p in dc.Rptphieunhapkhoheads
+                               where p.username == username
+                               select p;
 
-            dc.Rpt_PhieuThus.DeleteAllOnSubmit(rptpthu);
+            dc.Rptphieunhapkhoheads.DeleteAllOnSubmit(rptphieunhap);
             dc.SubmitChanges();
 
 
-            var phieuthu = (from tbl_SoQuy in dc.tbl_SoQuys
-                            where tbl_SoQuy.id == this.phieunhapid
-                            select new
-                            {
-
-                                //     tencongty = Model.Congty.getnamecongty(),
-                                //     diachicongty = Model.Congty.getdiachicongty(),
-                                ////     masothue = Model.Congty.getmasothuecongty(),
-                                //   tengiamdoc = Model.Congty.gettengiamdoccongty(),
-                                //    tenketoantruong = Model.Congty.gettenketoantruongcongty(),
-
-                                sophieuthu = tbl_SoQuy.Sophieu,
-                                ngaychungtu = tbl_SoQuy.Ngayctu,
-                                nguoinoptien = tbl_SoQuy.Nguoinopnhantien,
-                                //    nguoilapphieu = Utils.getname(),
-                                diachinguoinop = tbl_SoQuy.Diachinguoinhannop,
-                                lydothu = tbl_SoQuy.Diengiai,
-                                sotien = tbl_SoQuy.PsNo,
-                                //   sotienbangchu = Utils.ChuyenSo(tbl_SoQuy.PsNo.ToString()),
-                                sochungtugoc = tbl_SoQuy.Chungtugockemtheo,
-                                //    username = Utils.getusername(),
-
-                                tkno = tbl_SoQuy.TKtienmat,
-                                tkco = tbl_SoQuy.TKdoiung,
-
-                            }).FirstOrDefault();
+            var phieunhap = (from p in dc.tbl_kho_phieunhap_heads
+                             where p.id == this.phieunhapid
+                             select p).FirstOrDefault();
 
             //   this.dataGridViewListphieuthu.DataSource = phieuthu;
 
@@ -1097,44 +1071,49 @@ namespace BEEACCOUNT.View
 
 
 
-            if (phieuthu != null)
+            if (phieunhap != null)
             {
 
 
                 #region  insert vao rpt phieu thu
 
-                Rpt_PhieuThu pt = new Rpt_PhieuThu();
-                pt.tencongty = Model.Congty.getnamecongty();
-                pt.diachicongty = Model.Congty.getdiachicongty();
-                pt.masothue = Model.Congty.getmasothuecongty();
-                pt.tengiamdoc = Model.Congty.gettengiamdoccongty();
-                pt.tenketoantruong = Model.Congty.gettenketoantruongcongty();
-                pt.phieuthuso = phieuthu.sophieuthu;
-                pt.ngaychungtu = phieuthu.ngaychungtu;
-                pt.nguoinoptien = phieuthu.nguoinoptien;
-                pt.nguoilapphieu = Utils.getname();
-                pt.diachinguoinop = phieuthu.diachinguoinop;
-                pt.lydothu = phieuthu.lydothu;
-                pt.sotien = phieuthu.sotien;
-                pt.sotienbangchu = Utils.ChuyenSo(decimal.Parse(phieuthu.sotien.ToString()));
-                pt.sochungtugoc = phieuthu.sochungtugoc;
-                pt.username = Utils.getusername();
-                pt.tkno = phieuthu.tkno;
-                pt.tkco = phieuthu.tkco;
+                Rptphieunhapkhohead pnk = new Rptphieunhapkhohead();
+                pnk.tencongty = Model.Congty.getnamecongty();
+                pnk.diachicongty = Model.Congty.getdiachicongty();
+                pnk.masothue = Model.Congty.getmasothuecongty();
+                pnk.tengiamdoc = Model.Congty.gettengiamdoccongty();
+                pnk.tenketoantruong = Model.Congty.gettenketoantruongcongty();
+                pnk.phieunhapso = phieunhap.phieuso;
+                pnk.ngaychungtu = phieunhap.ngayphieunhap;
+                pnk.nguoigiao = phieunhap.nguoigiao;
+                pnk.nguoilapphieu = Utils.getname();
+                pnk.nhaptaikho = phieunhap.makho;
+                pnk.diachikho = phieunhap.tenkho;
+                //      pnk.s = phieunhap.sotien;
+                if (phieunhap.sotien != null)
+                {
+                    pnk.sotienbangchu = Utils.ChuyenSo(decimal.Parse(phieunhap.sotien.ToString()));
+                }
 
-                dc.Rpt_PhieuThus.InsertOnSubmit(pt);
+                pnk.sochungtugoc = phieunhap.hoadondikhem;
+                pnk.username = Utils.getusername();
+                pnk.tkno = phieunhap.notk;
+                pnk.tkco = phieunhap.cotk;
+
+                dc.Rptphieunhapkhoheads.InsertOnSubmit(pnk);
                 dc.SubmitChanges();
                 #endregion
 
-                var rsphieuthu = from tblRpt_PhieuThu in dc.Rpt_PhieuThus
-                                 where tblRpt_PhieuThu.username == username
-                                 select tblRpt_PhieuThu;
+                var datarptphieunhap = from p in dc.Rptphieunhapkhoheads
+                                       where p.username == username
+                                       select p;
 
 
                 Utils ut = new Utils();
-                var dataset1 = ut.ToDataTable(dc, rsphieuthu);
+                var dataset1 = ut.ToDataTable(dc, datarptphieunhap);
+                var dataset2 = ut.ToDataTable(dc, datarptphieunhap);
 
-                Reportsview rpt = new Reportsview(dataset1, null, "Phieunxkhohead.rdlc");
+                Reportsview rpt = new Reportsview(dataset1, dataset2, "Phieunxkhohead.rdlc");
                 rpt.ShowDialog();
 
             }
@@ -1472,7 +1451,7 @@ namespace BEEACCOUNT.View
             if (txtsophieu.Text != "")
             {
                 this.sophieunhap = txtsophieu.Text.ToString();
-                this.maphieuthuOld = int.Parse(txtsophieu.Text.ToString());
+                this.maphieuthuOld = txtsophieu.Text.ToString();
             }
 
 

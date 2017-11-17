@@ -114,7 +114,7 @@
                   <FontStyle>Normal</FontStyle>
                   <FontFamily>Times New Roman</FontFamily>
                   <FontSize>9pt</FontSize>
-                  <FontWeight>Bold</FontWeight>
+                  <FontWeight>Normal</FontWeight>
                   <TextDecoration>None</TextDecoration>
                   <Color>#000000</Color>
                 </Style>
@@ -381,7 +381,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=Fields!nguoinoptien.Value</Value>
+                <Value>=Fields!nguoigiao.Value</Value>
                 <Style>
                   <FontStyle>Normal</FontStyle>
                   <FontFamily>Times New Roman</FontFamily>
@@ -463,7 +463,7 @@
                 </Style>
               </TextRun>
               <TextRun>
-                <Value>=Fields!diachinguoinop.Value</Value>
+                <Value>=Fields!theodonhang.Value</Value>
                 <Style>
                   <FontStyle>Normal</FontStyle>
                   <FontFamily>Times New Roman</FontFamily>
@@ -545,7 +545,7 @@
                 </Style>
               </TextRun>
               <TextRun>
-                <Value>=Fields!lydothu.Value</Value>
+                <Value>=Fields!nhaptaikho.Value</Value>
                 <Style>
                   <FontStyle>Normal</FontStyle>
                   <FontFamily>Times New Roman</FontFamily>
@@ -599,7 +599,7 @@
         <Top>2.46104in</Top>
         <Left>0.1875in</Left>
         <Height>0.25in</Height>
-        <Width>0.84695in</Width>
+        <Width>0.93445in</Width>
         <ZIndex>13</ZIndex>
         <Style>
           <Border>
@@ -633,10 +633,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>8.34715in</Top>
+        <Top>8.60965in</Top>
         <Left>0.15in</Left>
         <Height>0.25in</Height>
-        <Width>1.02699in</Width>
+        <Width>1.9047in</Width>
         <ZIndex>14</ZIndex>
         <Style>
           <Border>
@@ -669,8 +669,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>8.33604in</Top>
-        <Left>1.25174in</Left>
+        <Top>8.61172in</Top>
+        <Left>2.12414in</Left>
         <Height>0.25in</Height>
         <Width>1.20175in</Width>
         <ZIndex>15</ZIndex>
@@ -707,7 +707,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>7.77701in</Top>
+        <Top>8.11451in</Top>
         <Left>1.29139in</Left>
         <Height>0.42777in</Height>
         <Width>6.09631in</Width>
@@ -1231,7 +1231,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=Fields!nguoinoptien.Value</Value>
+                <Value>=Fields!nguoigiao.Value</Value>
                 <Style>
                   <FontStyle>Normal</FontStyle>
                   <FontFamily>Times New Roman</FontFamily>
@@ -1501,7 +1501,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>1.36819in</Top>
+        <Top>1.44319in</Top>
         <Left>5.62258in</Left>
         <Height>0.21249in</Height>
         <Width>0.35416in</Width>
@@ -1573,7 +1573,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>1.34319in</Top>
+        <Top>1.41819in</Top>
         <Left>6.02119in</Left>
         <Height>0.23749in</Height>
         <Width>1.36651in</Width>
@@ -1609,7 +1609,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>7.77701in</Top>
+        <Top>8.08951in</Top>
         <Left>0.15in</Left>
         <Height>0.20624in</Height>
         <Width>1.07195in</Width>
@@ -1631,7 +1631,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=Fields!phieuthuso.Value</Value>
+                <Value>=Fields!phieunhapso.Value</Value>
                 <Style>
                   <FontStyle>Normal</FontStyle>
                   <FontFamily>Times New Roman</FontFamily>
@@ -1677,7 +1677,7 @@
                 </Style>
               </TextRun>
               <TextRun>
-                <Value>=Fields!lydothu.Value</Value>
+                <Value>=Fields!diachikho.Value</Value>
                 <Style>
                   <FontStyle>Normal</FontStyle>
                   <FontFamily>Times New Roman</FontFamily>
@@ -1706,12 +1706,12 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Subreport Name="Phieunxkhodetailsub">
-        <ReportName>BeeAccounting.Reports.Phieunxkhodetailsub.rdlc</ReportName>
-        <Top>7.13299cm</Top>
-        <Left>0.47625cm</Left>
-        <Height>12.47951cm</Height>
-        <Width>18.2259cm</Width>
+      <Subreport Name="Subreport1">
+        <ReportName>BeeAccounting.Reports.Phieunxkhodetailsub1.rdlc</ReportName>
+        <Top>7.24641cm</Top>
+        <Left>0.2412cm</Left>
+        <Height>12.75414cm</Height>
+        <Width>18.46095cm</Width>
         <ZIndex>41</ZIndex>
         <Style>
           <Border>
@@ -1768,33 +1768,33 @@
           <DataField>masothue</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="phieuthuso">
-          <DataField>phieuthuso</DataField>
+        <Field Name="phieunhapso">
+          <DataField>phieunhapso</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="ngaychungtu">
           <DataField>ngaychungtu</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="nguoinoptien">
-          <DataField>nguoinoptien</DataField>
+        <Field Name="nguoigiao">
+          <DataField>nguoigiao</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="nguoilapphieu">
           <DataField>nguoilapphieu</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="diachinguoinop">
-          <DataField>diachinguoinop</DataField>
+        <Field Name="nhaptaikho">
+          <DataField>nhaptaikho</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="lydothu">
-          <DataField>lydothu</DataField>
+        <Field Name="diachikho">
+          <DataField>diachikho</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="sotien">
-          <DataField>sotien</DataField>
-          <rd:TypeName>System.Double</rd:TypeName>
+        <Field Name="theodonhang">
+          <DataField>theodonhang</DataField>
+          <rd:TypeName>System.Single</rd:TypeName>
         </Field>
         <Field Name="sotienbangchu">
           <DataField>sotienbangchu</DataField>
@@ -1828,7 +1828,7 @@
       <rd:DataSetInfo>
         <rd:DataSetName>DataSet1</rd:DataSetName>
         <rd:SchemaPath>E:\Product\BeeAccouting\BeeAccounting\Reports\dsCallogs.xsd</rd:SchemaPath>
-        <rd:TableName>PhieuthuRPT</rd:TableName>
+        <rd:TableName>Phieunhapkho01RPt</rd:TableName>
         <rd:TableAdapterFillMethod />
         <rd:TableAdapterGetDataMethod />
         <rd:TableAdapterName />

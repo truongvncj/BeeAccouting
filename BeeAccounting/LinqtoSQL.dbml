@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="BEE" Class="LinqtoSQLDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=HAN-L-3PFF7H2;Initial Catalog=BEE;Persist Security Info=True;User ID=sa" SettingsObjectName="BEEACCOUNT.Properties.Settings" SettingsPropertyName="BEEConnectionString2" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-8D4F853\SQLEXPRESS;Initial Catalog=BEE;Persist Security Info=True;User ID=sa" SettingsObjectName="BEEACCOUNT.Properties.Settings" SettingsPropertyName="BEEConnectionString1" Provider="System.Data.SqlClient" />
   <Table Name="dbo.Rpt_PhieuThu" Member="Rpt_PhieuThus">
     <Type Name="Rpt_PhieuThu">
       <Column Name="tencongty" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
@@ -194,6 +194,28 @@
       <Column Name="taikhoan" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="tungay" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="denngay" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Rptphieunhapkhohead" Member="Rptphieunhapkhoheads">
+    <Type Name="Rptphieunhapkhohead">
+      <Column Name="tencongty" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="diachicongty" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="masothue" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="tengiamdoc" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="tenketoantruong" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="ngaychungtu" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="nguoigiao" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="nguoilapphieu" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="nhaptaikho" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="diachikho" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="sotienbangchu" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="sochungtugoc" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="username" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="tkno" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="tkco" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="theodonhang" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="phieunhapso" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.RPtsoQuy" Member="RPtsoQuys">
