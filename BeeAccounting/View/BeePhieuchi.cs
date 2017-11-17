@@ -582,9 +582,7 @@ namespace BEEACCOUNT.View
             {
                 if (dataGridViewTkNo.Rows[idrow].Cells["Tk_Nợ"].Value != DBNull.Value)
                 {
-
-
-
+                    
 
                     if (cbtkco.SelectedItem == null)
                     {
@@ -710,8 +708,8 @@ namespace BEEACCOUNT.View
                     {
 
                         // không lặp
-                        if (this.statusphieuchi == 1 || (this.statusphieuchi == 2) && this.sophieuchi != txtsophieu.Text.Trim())
-                        {
+                        //if (this.statusphieuchi == 1 || (this.statusphieuchi == 2) && this.sophieuchi != txtsophieu.Text.Trim())
+                        //{
                             var sophieuthu = (from tbl_SoQuy in dc.tbl_SoQuys
                                               where (tbl_SoQuy.Sophieu.Trim() == txtsophieu.Text.ToString().Trim())
                                                     && (tbl_SoQuy.Machungtu == "PC")
@@ -729,11 +727,11 @@ namespace BEEACCOUNT.View
                                 soquy.Sophieu = txtsophieu.Text.Trim();
 
                             }
-                        }
-                        else
-                        {
-                            soquy.Sophieu = txtsophieu.Text.Trim();
-                        }
+                        //}
+                        //else
+                        //{
+                        //    soquy.Sophieu = txtsophieu.Text.Trim();
+                        //}
 
 
 
@@ -975,7 +973,7 @@ namespace BEEACCOUNT.View
 
 
 
-                    }
+               //     }
 
                     txttaikhoanno.Text = tkcotext;
 
@@ -986,54 +984,54 @@ namespace BEEACCOUNT.View
 
                 }
 
-                if (this.statusphieuchi == 2)
-                {
+                //if (this.statusphieuchi == 2)
+                //{
 
 
-                    Model.Socaitaikhoan.xoa("PC", maphieuchiOld);
-
-
-
-                    var phieuchange = (from tbl_SoQuy in dc.tbl_SoQuys
-                                       where tbl_SoQuy.id == this.phieuchiid
-                                       select tbl_SoQuy).FirstOrDefault();
-
-                    if (phieuchange != null)
-                    {
-                        phieuchange.Machungtu = soquy.Machungtu;
-                        phieuchange.Chitietdoiung = soquy.Chitietdoiung;
-                        phieuchange.TenchitietTM = soquy.TenchitietTM;
-                        phieuchange.ChitietTM = soquy.ChitietTM;
-                        phieuchange.Chungtugockemtheo = soquy.Chungtugockemtheo;
-                        phieuchange.Diachinguoinhannop = soquy.Diachinguoinhannop;
-                        phieuchange.Diengiai = soquy.Diengiai;
-                        phieuchange.Machungtu = soquy.Machungtu;
-
-
-                        phieuchange.Nguoinopnhantien = soquy.Nguoinopnhantien;
-                        phieuchange.PsNo = soquy.PsNo;
-                        phieuchange.PsCo = soquy.PsCo;
-
-                        phieuchange.TKdoiung = soquy.TKdoiung;
-                        phieuchange.TKtienmat = soquy.TKtienmat;
-                        phieuchange.Username = soquy.Username;
-
-
-                        phieuchange.Sophieu = soquy.Sophieu;
-                        phieuchange.Ngayctu = soquy.Ngayctu;
-                        phieuchange.Ngayghiso = soquy.Ngayghiso;
+                //    Model.Socaitaikhoan.xoa("PC", maphieuchiOld);
 
 
 
+                //    var phieuchange = (from tbl_SoQuy in dc.tbl_SoQuys
+                //                       where tbl_SoQuy.id == this.phieuchiid
+                //                       select tbl_SoQuy).FirstOrDefault();
 
-                        dc.SubmitChanges();
-                    }
+                //    if (phieuchange != null)
+                //    {
+                //        phieuchange.Machungtu = soquy.Machungtu;
+                //        phieuchange.Chitietdoiung = soquy.Chitietdoiung;
+                //        phieuchange.TenchitietTM = soquy.TenchitietTM;
+                //        phieuchange.ChitietTM = soquy.ChitietTM;
+                //        phieuchange.Chungtugockemtheo = soquy.Chungtugockemtheo;
+                //        phieuchange.Diachinguoinhannop = soquy.Diachinguoinhannop;
+                //        phieuchange.Diengiai = soquy.Diengiai;
+                //        phieuchange.Machungtu = soquy.Machungtu;
+
+
+                //        phieuchange.Nguoinopnhantien = soquy.Nguoinopnhantien;
+                //        phieuchange.PsNo = soquy.PsNo;
+                //        phieuchange.PsCo = soquy.PsCo;
+
+                //        phieuchange.TKdoiung = soquy.TKdoiung;
+                //        phieuchange.TKtienmat = soquy.TKtienmat;
+                //        phieuchange.Username = soquy.Username;
+
+
+                //        phieuchange.Sophieu = soquy.Sophieu;
+                //        phieuchange.Ngayctu = soquy.Ngayctu;
+                //        phieuchange.Ngayghiso = soquy.Ngayghiso;
+
+
+
+
+                //        dc.SubmitChanges();
+                //    }
 
 
                     #region  ghi vao so cai
 
 
-                    string tkcotext = "";
+             //       string tkcotext = "";
                     // int dem = 0;
                     for (int idrow = 0; idrow < dataGridViewTkNo.RowCount - 1; idrow++)
                     {
