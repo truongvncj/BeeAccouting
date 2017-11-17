@@ -268,3 +268,8 @@ E:\Product\BeeAccouting\BeeAccounting\bin\x86\Debug\Microsoft.ReportViewer.Commo
 E:\Product\BeeAccouting\BeeAccounting\bin\x86\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
 E:\Product\BeeAccouting\BeeAccounting\bin\x86\Debug\Microsoft.ReportViewer.DataVisualization.dll
 E:\Product\BeeAccouting\BeeAccounting\bin\x86\Debug\Microsoft.SqlServer.Types.dll
+D:\GitHub\BeeAccouting\BeeAccounting\bin\x86\Debug\Reports\Phieunxkhodetailsub.rdlc
+D:\GitHub\BeeAccouting\BeeAccounting\bin\x86\Debug\Reports\Phieunxkhohead.rdlc
+D:\GitHub\BeeAccouting\BeeAccounting\bin\x86\Debug\Microsoft.ReportViewer.WinForms.dll
+D:\GitHub\BeeAccouting\BeeAccounting\obj\x86\Debug\RdlCompile.cache
+D:\GitHub\BeeAccouting\BeeAccounting\obj\x86\Debug\RdlCompile.compiled
