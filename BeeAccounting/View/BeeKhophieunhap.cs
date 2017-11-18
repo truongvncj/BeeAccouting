@@ -1048,12 +1048,24 @@ namespace BEEACCOUNT.View
             string connection_string = Utils.getConnectionstr();
             LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
 
-            var rptphieunhap = from p in dc.Rptphieunhapkhoheads
+            var xoahead = from p in dc.Rptphieunhapkhoheads
                                where p.username == username
                                select p;
 
-            dc.Rptphieunhapkhoheads.DeleteAllOnSubmit(rptphieunhap);
+            dc.Rptphieunhapkhoheads.DeleteAllOnSubmit(xoahead);
             dc.SubmitChanges();
+
+
+
+            var xoadetail = from p in dc.Rptphieunhapkhodetail01s
+                               where p.username == username
+                               select p;
+
+            dc.Rptphieunhapkhodetail01s.DeleteAllOnSubmit(xoadetail);
+            dc.SubmitChanges();
+
+
+
 
 
             var phieunhap = (from p in dc.tbl_kho_phieunhap_heads
@@ -1096,13 +1108,60 @@ namespace BEEACCOUNT.View
                 }
 
                 pnk.sochungtugoc = phieunhap.hoadondikhem;
-                pnk.username = Utils.getusername();
+                pnk.username = username;
                 pnk.tkno = phieunhap.notk;
                 pnk.tkco = phieunhap.cotk;
 
                 dc.Rptphieunhapkhoheads.InsertOnSubmit(pnk);
                 dc.SubmitChanges();
-                #endregion
+
+
+
+
+
+                #endregion  inserphieu thu
+
+
+                #region inser detail phieu thu
+
+
+
+                int i = 0;
+
+                var detailphieu = from p in dc.tbl_kho_phieunhap_details
+                                       where p.phieuso == phieunhap.phieuso
+                                      select p;
+                foreach (var item in detailphieu)
+                {
+                    Rptphieunhapkhodetail01 detail = new Rptphieunhapkhodetail01();
+                    i = i + 1;
+                    detail.dongia = item.dongia;
+                    detail.donvi = item.donvi;
+                    detail.masanpham = item.mahang;
+                    detail.soluongthucte = item.soluongnhap;
+                    detail.soluongyeucau = item.soluongyeucau;
+                    detail.sophieunhap = item.phieuso;
+                    detail.tensanpham = item.tenhang;
+                    detail.thanhtien = item.thanhtien;
+                    detail.username = username;
+                    detail.stt = i;
+                
+
+                    dc.Rptphieunhapkhodetail01s.InsertOnSubmit(detail);
+                    dc.SubmitChanges();
+
+                }
+
+
+
+
+
+                #endregion inserd detail phiếu thu
+
+
+
+
+
 
                 var datarptphieunhap = from p in dc.Rptphieunhapkhoheads
                                        where p.username == username
@@ -1111,7 +1170,12 @@ namespace BEEACCOUNT.View
 
                 Utils ut = new Utils();
                 var dataset1 = ut.ToDataTable(dc, datarptphieunhap);
-                var dataset2 = ut.ToDataTable(dc, datarptphieunhap);
+
+                var datadetailphieu = from p in dc.Rptphieunhapkhodetail01s
+                                       where p.username == username
+                                       select p;
+
+                var dataset2 = ut.ToDataTable(dc, datadetailphieu);
 
                 Reportsview rpt = new Reportsview(dataset1, dataset2, "Phieunxkhohead.rdlc");
                 rpt.ShowDialog();
