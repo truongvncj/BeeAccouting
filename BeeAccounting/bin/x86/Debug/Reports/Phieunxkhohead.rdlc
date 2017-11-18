@@ -1808,8 +1808,8 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
-        <Top>15.11237cm</Top>
-        <Left>0.28787cm</Left>
+        <Top>13.60249cm</Top>
+        <Left>0.18203cm</Left>
         <Height>7.13591cm</Height>
         <Width>18.93651cm</Width>
         <ZIndex>1</ZIndex>
@@ -1822,14 +1822,14 @@
       <Subreport Name="Phieunxkhodetailsub1">
         <ReportName>BEEACCOUNT.Reports.Phieunxkhodetailsub1.rdlc</ReportName>
         <Parameters>
-          <Parameter Name="sophieunhap">
-            <Value>=First(Fields!theodonhang.Value, "DataSet1")</Value>
+          <Parameter Name="soid">
+            <Value>=First(Fields!phieunhapso.Value, "DataSet1")</Value>
           </Parameter>
         </Parameters>
         <Top>7.37135cm</Top>
-        <Left>0.22233cm</Left>
-        <Height>7.6cm</Height>
-        <Width>18.83067cm</Width>
+        <Left>0.18203cm</Left>
+        <Height>3.20792cm</Height>
+        <Width>18.74599cm</Width>
         <ZIndex>2</ZIndex>
         <Style>
           <Border>
@@ -1838,7 +1838,7 @@
         </Style>
       </Subreport>
     </ReportItems>
-    <Height>27.39148cm</Height>
+    <Height>20.88273cm</Height>
     <Style>
       <Border>
         <Color>White</Color>
@@ -1846,7 +1846,7 @@
       </Border>
     </Style>
   </Body>
-  <Width>21.41863cm</Width>
+  <Width>19.38134cm</Width>
   <Page>
     <PageHeight>29.7cm</PageHeight>
     <PageWidth>21cm</PageWidth>

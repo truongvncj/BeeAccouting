@@ -14,31 +14,33 @@ namespace BEEACCOUNT.View
     public partial class Reportsview : Form
     {
         public DataTable tbl2 { get; set; }
-   //     public int BatchNo { get; set; }
+        public DataTable tbl1 { get; set; }
+        //     public int BatchNo { get; set; }
 
-      //  public int subid { get; set; }
-     //   public string contractno { get; set; }
-     //   public View.CreatenewContract formcreatCtract { get; set; }
+        //  public int subid { get; set; }
+        //   public string contractno { get; set; }
+        //   public View.CreatenewContract formcreatCtract { get; set; }
         //    formcreatCtract
-        public Reportsview(DataTable tbl1, DataTable tbl2, string rptname ) //IQueryable rs  // tble 1 la gốc, tbk2 là báo cáo phụ theo datasset2
+        public Reportsview(DataTable tbl1, DataTable tbl2, string rptname) //IQueryable rs  // tble 1 la gốc, tbk2 là báo cáo phụ theo datasset2
         {
             InitializeComponent();
 
             this.tbl2 = tbl2;
+            this.tbl1 = tbl1;
 
-    //        this.BatchNo = BatchNo;
-        //    this.subid = subid;
-     //       this.contractno = contractno;
-         //   this.formcreatCtract = formcreatCtract;
+            //        this.BatchNo = BatchNo;
+            //    this.subid = subid;
+            //       this.contractno = contractno;
+            //   this.formcreatCtract = formcreatCtract;
 
 
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "BEEACCOUNT.Reports."+ rptname + "";
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "BEEACCOUNT.Reports." + rptname + "";
             // chọn báo cáo hiển thị
 
             // chọn data hiển thị
 
 
-           ReportDataSource datasource = new ReportDataSource("DataSet1", tbl1);
+            ReportDataSource datasource = new ReportDataSource("DataSet1", tbl1);
 
             this.reportViewer1.LocalReport.DataSources.Clear();
             this.reportViewer1.LocalReport.DataSources.Add(datasource);
@@ -51,15 +53,15 @@ namespace BEEACCOUNT.View
             }
 
 
-            this.reportViewer1.LocalReport.SubreportProcessing += new SubreportProcessingEventHandler(LocalReport_SubreportProcessing );
+            this.reportViewer1.LocalReport.SubreportProcessing += new SubreportProcessingEventHandler(LocalReport_SubreportProcessing);
 
             // chọn data hiển thị
 
             // chọn kiểu hiển thị
             this.reportViewer1.SetDisplayMode(DisplayMode.PrintLayout);
 
-           // this.reportViewer1.ZoomMode = ZoomMode.Percent;
-           // this.reportViewer1.ZoomPercent = 100;
+            // this.reportViewer1.ZoomMode = ZoomMode.Percent;
+            // this.reportViewer1.ZoomPercent = 100;
             this.reportViewer1.ZoomMode = ZoomMode.PageWidth;
             this.reportViewer1.ShowExportButton = true;
             this.reportViewer1.ShowPageNavigationControls = true;
@@ -67,9 +69,9 @@ namespace BEEACCOUNT.View
 
             #region kiểm tra printed  OK
 
-          //  string connection_string = Utils.getConnectionstr();
+            //  string connection_string = Utils.getConnectionstr();
 
-         //   LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+            //   LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
 
 
             //var rschangepritcheck = (from tbl_kacontractsdetailpayment in dc.tbl_kacontractsdetailpayments
@@ -82,7 +84,7 @@ namespace BEEACCOUNT.View
             //{
 
             //    this.reportViewer1.ShowPrintButton = false;
-          
+
             //  ///  return;
             //}
 
@@ -119,8 +121,7 @@ namespace BEEACCOUNT.View
 
         private void LocalReport_SubreportProcessing(object sender, SubreportProcessingEventArgs e)
         {
-
-            //    var custGroupid = double.Parse(e.Parameters["custGroupid"].Values.First());
+             var sophieunhap = double.Parse(e.Parameters["soid"].Values.First());
             //   var subSource = ((List<Cus>)mainSource.Value).Single(o => o.OrderID == orderId).Suppliers;
 
             if (tbl2 != null)
@@ -128,6 +129,14 @@ namespace BEEACCOUNT.View
                 e.DataSources.Add(new ReportDataSource("DataSet2", tbl2));
 
             }
+            //var custGroupid = double.Parse(e.Parameters["custGroupid"].Values.First());
+            // //  var subSource = ((List<Cus>)mainSource.Value).Single(o => o.OrderID == orderId).Suppliers;
+
+            //e.DataSources.Add(new ReportDataSource("DataSet1", tbl1));
+
+
+
+
 
             //  throw new NotImplementedException();
         }
@@ -165,7 +174,7 @@ namespace BEEACCOUNT.View
             //}
 
 
-      //      this.Close();
+            //      this.Close();
 
 
 
