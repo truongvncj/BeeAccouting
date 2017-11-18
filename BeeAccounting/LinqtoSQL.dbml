@@ -473,7 +473,7 @@
     <Type Name="tbl_kho_phieunhap_head">
       <Column Name="ngayphieunhap" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="nguoigiao" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="diachibophan" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="theodonhang" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
       <Column Name="makho" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="hoadondikhem" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="notk" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />

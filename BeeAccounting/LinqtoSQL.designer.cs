@@ -10090,7 +10090,7 @@ namespace BEEACCOUNT
 		
 		private string _nguoigiao;
 		
-		private string _diachibophan;
+		private string _theodonhang;
 		
 		private string _makho;
 		
@@ -10130,8 +10130,8 @@ namespace BEEACCOUNT
     partial void OnngayphieunhapChanged();
     partial void OnnguoigiaoChanging(string value);
     partial void OnnguoigiaoChanged();
-    partial void OndiachibophanChanging(string value);
-    partial void OndiachibophanChanged();
+    partial void OntheodonhangChanging(string value);
+    partial void OntheodonhangChanged();
     partial void OnmakhoChanging(string value);
     partial void OnmakhoChanged();
     partial void OnhoadondikhemChanging(string value);
@@ -10209,22 +10209,22 @@ namespace BEEACCOUNT
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_diachibophan", DbType="NVarChar(225)")]
-		public string diachibophan
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_theodonhang", DbType="NVarChar(225)")]
+		public string theodonhang
 		{
 			get
 			{
-				return this._diachibophan;
+				return this._theodonhang;
 			}
 			set
 			{
-				if ((this._diachibophan != value))
+				if ((this._theodonhang != value))
 				{
-					this.OndiachibophanChanging(value);
+					this.OntheodonhangChanging(value);
 					this.SendPropertyChanging();
-					this._diachibophan = value;
-					this.SendPropertyChanged("diachibophan");
-					this.OndiachibophanChanged();
+					this._theodonhang = value;
+					this.SendPropertyChanged("theodonhang");
+					this.OntheodonhangChanged();
 				}
 			}
 		}

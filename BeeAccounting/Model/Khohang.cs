@@ -221,7 +221,7 @@ namespace BEEACCOUNT.Model
                          Tên_kho = p.tenkho,
                          Phiếu_số = p.phieuso,
                          Người_giao = p.nguoigiao,
-                         Địa_chỉ = p.diachibophan,
+                         Theo_đơn_hàng = p.theodonhang,
                          Diễn_giải = p.diengiai,
                          Có_TK = p.cotk,
                          Chi_tiết_TK_Có = p.MaCTietTKCo,

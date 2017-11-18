@@ -117,7 +117,7 @@ namespace BEEACCOUNT.View
             //         txtquyenso.Enabled = true;
             txtsophieu.Enabled = true;
             txttennguoigiao.Enabled = true;
-            txtdiachi.Enabled = true;
+            txtdonhang.Enabled = true;
             txtdiengiai.Enabled = true;
             //txtsotien.Enabled = true;
             //   txtsochungtugoc.Enabled = true;
@@ -131,7 +131,7 @@ namespace BEEACCOUNT.View
 
             txtsophieu.Text = "";
             txttennguoigiao.Text = "";
-            txtdiachi.Text = "";
+            txtdonhang.Text = "";
             txtdiengiai.Text = "";
             //lbid.Text = "";
             //     txtsotien.Text = "";
@@ -430,7 +430,7 @@ namespace BEEACCOUNT.View
             if (e.KeyChar == (char)Keys.Enter)
             {
                 e.Handled = true;
-                txtdiachi.Focus();
+                txtdonhang.Focus();
 
                 //    string valueinput = cb_customerka.Text;
 
@@ -718,11 +718,11 @@ namespace BEEACCOUNT.View
 
             }
 
-            if (txtdiachi.Text == "")
+            if (txtdonhang.Text == "")
             {
                 MessageBox.Show("Kiểm tra địa chỉ, bộ phận !", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 checkdinhkhoan = false;
-                txtdiachi.Focus();
+                txtdonhang.Focus();
                 return;
 
             }
@@ -750,7 +750,7 @@ namespace BEEACCOUNT.View
                 headphieunhap.diengiai = txtdiengiai.Text;
                 headphieunhap.createby = Utils.getusername();
                 headphieunhap.createdate = DateTime.Today;
-                headphieunhap.diachibophan = txtdiachi.Text.Trim();
+                headphieunhap.theodonhang = txtdonhang.Text.Trim();
                 headphieunhap.hoadondikhem = txthoadonkemtheo.Text;
                 headphieunhap.makho = (cbkhohang.SelectedItem as ComboboxItem).Value.ToString();
                 headphieunhap.tenkho = (cbkhohang.SelectedItem as ComboboxItem).Text.ToString();
@@ -1101,6 +1101,7 @@ namespace BEEACCOUNT.View
                 pnk.nguoilapphieu = Utils.getname();
                 pnk.nhaptaikho = phieunhap.makho;
                 pnk.diachikho = phieunhap.tenkho;
+                pnk.theodonhang = phieunhap.theodonhang;
                 //      pnk.s = phieunhap.sotien;
                 if (phieunhap.sotien != null)
                 {
@@ -1276,7 +1277,7 @@ namespace BEEACCOUNT.View
                                      ngaychungtu = p.ngayphieunhap,
                                      nguoigiao = p.nguoigiao,
                                      //    nguoilapphieu = Utils.getname(),
-                                     diachibophan = p.diachibophan,
+                                     theodonhang = p.theodonhang,
                                      diengiai = p.diengiai,
                                      sotien = p.sotien,
                                      //   sotienbangchu = Utils.ChuyenSo(tbl_SoQuy.PsNo.ToString()),
@@ -1304,7 +1305,7 @@ namespace BEEACCOUNT.View
                     datepickngayphieu.Value = (DateTime)phieunhap.ngaychungtu;
                     txtsophieu.Text = phieunhap.Phieuso.ToString();
                     txttennguoigiao.Text = phieunhap.nguoigiao;
-                    txtdiachi.Text = phieunhap.diachibophan;
+                    txtdonhang.Text = phieunhap.theodonhang;
                     txtdiengiai.Text = phieunhap.diengiai;
 
                     if (phieunhap.sotien != null)
@@ -1361,7 +1362,7 @@ namespace BEEACCOUNT.View
                     datepickngayphieu.Enabled = false;
                     txtsophieu.Enabled = false;
                     txttennguoigiao.Enabled = false;
-                    txtdiachi.Enabled = false;
+                    txtdonhang.Enabled = false;
                     txtdiengiai.Enabled = false;
 
                     btsua.Enabled = true;
@@ -1522,7 +1523,7 @@ namespace BEEACCOUNT.View
             //  txtquyenso.Enabled = true;
             cbkhohang.Enabled = true;
             txttennguoigiao.Enabled = true;
-            txtdiachi.Enabled = true;
+            txtdonhang.Enabled = true;
             txtdiengiai.Enabled = true;
             //    txtsotien.Enabled = true;
             //    txtsochungtugoc.Enabled = true;
@@ -1560,7 +1561,7 @@ namespace BEEACCOUNT.View
             {
                 //  cbsophieu.
                 e.Handled = true;
-                txtdiachi.Focus();
+                txtdonhang.Focus();
 
                 //    string valueinput = cb_customerka.Text;
 

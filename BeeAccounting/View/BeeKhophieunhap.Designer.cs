@@ -50,7 +50,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.cbkhohang = new System.Windows.Forms.ComboBox();
             this.txtdiengiai = new System.Windows.Forms.TextBox();
-            this.txtdiachi = new System.Windows.Forms.TextBox();
+            this.txtdonhang = new System.Windows.Forms.TextBox();
             this.txttennguoigiao = new System.Windows.Forms.TextBox();
             this.txtsophieu = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -103,7 +103,7 @@
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.cbkhohang);
             this.panel1.Controls.Add(this.txtdiengiai);
-            this.panel1.Controls.Add(this.txtdiachi);
+            this.panel1.Controls.Add(this.txtdonhang);
             this.panel1.Controls.Add(this.txttennguoigiao);
             this.panel1.Controls.Add(this.txtsophieu);
             this.panel1.Controls.Add(this.label11);
@@ -280,14 +280,14 @@
             this.txtdiengiai.TabIndex = 23;
             this.txtdiengiai.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtdiengiai_KeyPress);
             // 
-            // txtdiachi
+            // txtdonhang
             // 
-            this.txtdiachi.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtdiachi.Location = new System.Drawing.Point(151, 156);
-            this.txtdiachi.Name = "txtdiachi";
-            this.txtdiachi.Size = new System.Drawing.Size(358, 24);
-            this.txtdiachi.TabIndex = 22;
-            this.txtdiachi.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtdiachi_KeyPress);
+            this.txtdonhang.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtdonhang.Location = new System.Drawing.Point(151, 156);
+            this.txtdonhang.Name = "txtdonhang";
+            this.txtdonhang.Size = new System.Drawing.Size(358, 24);
+            this.txtdonhang.TabIndex = 22;
+            this.txtdonhang.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtdiachi_KeyPress);
             // 
             // txttennguoigiao
             // 
@@ -343,9 +343,9 @@
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(12, 162);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(116, 18);
+            this.label6.Size = new System.Drawing.Size(107, 18);
             this.label6.TabIndex = 9;
-            this.label6.Text = "Địa chỉ/ Bộ phận";
+            this.label6.Text = "Theo đơn hàng";
             // 
             // label5
             // 
@@ -752,7 +752,7 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.TextBox txtsophieu;
         private System.Windows.Forms.TextBox txttennguoigiao;
-        private System.Windows.Forms.TextBox txtdiachi;
+        private System.Windows.Forms.TextBox txtdonhang;
         private System.Windows.Forms.TextBox txtdiengiai;
         private System.Windows.Forms.DataGridView dataGridViewTkCo;
         private System.Windows.Forms.Label label14;
