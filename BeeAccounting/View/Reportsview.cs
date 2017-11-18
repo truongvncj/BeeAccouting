@@ -121,7 +121,7 @@ namespace BEEACCOUNT.View
 
         private void LocalReport_SubreportProcessing(object sender, SubreportProcessingEventArgs e)
         {
-             var sophieunhap = double.Parse(e.Parameters["soid"].Values.First());
+          //   var sophieunhap = double.Parse(e.Parameters["Groupid"].Values.First());
             //   var subSource = ((List<Cus>)mainSource.Value).Single(o => o.OrderID == orderId).Suppliers;
 
             if (tbl2 != null)

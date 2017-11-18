@@ -1822,7 +1822,7 @@
       <Subreport Name="Phieunxkhodetailsub1">
         <ReportName>BEEACCOUNT.Reports.Phieunxkhodetailsub1.rdlc</ReportName>
         <Parameters>
-          <Parameter Name="soid">
+          <Parameter Name="phieunhapso">
             <Value>=First(Fields!phieunhapso.Value, "DataSet1")</Value>
           </Parameter>
         </Parameters>
