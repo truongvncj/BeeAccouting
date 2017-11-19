@@ -1055,5 +1055,20 @@ namespace BEEACCOUNT.View
             viewtbl.Show();
 
         }
+
+        private void button41_Click(object sender, EventArgs e)
+        {
+            //  Main.clearpannel();
+
+            main1.clearpannel();
+
+
+            View.BeeKhophieuxuat accsup = new BeeKhophieuxuat(main1);
+            main1.clearpannelload(accsup);
+            //    accsup.TopLevel = false;
+            //  accsup.AutoScroll = true;
+            //    panelmain.Controls.Add(accsup);
+            //    accsup.Show();
+        }
     }
 }

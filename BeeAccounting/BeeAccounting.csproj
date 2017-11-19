@@ -159,11 +159,23 @@
     <Compile Include="View\BeeDanhsachkho.Designer.cs">
       <DependentUpon>BeeDanhsachkho.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\BeeHtdoiungphieuxuatkho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\BeeHtdoiungphieuxuatkho.Designer.cs">
+      <DependentUpon>BeeHtdoiungphieuxuatkho.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\BeeHtdoiungphieunhapkho.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\BeeHtdoiungphieunhapkho.Designer.cs">
       <DependentUpon>BeeHtdoiungphieunhapkho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\BeeKhophieuxuat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\BeeKhophieuxuat.Designer.cs">
+      <DependentUpon>BeeKhophieuxuat.cs</DependentUpon>
     </Compile>
     <Compile Include="View\BeeNCCnewaccount.cs">
       <SubType>Form</SubType>
@@ -495,8 +507,14 @@
     <EmbeddedResource Include="View\BeeDanhsachkho.resx">
       <DependentUpon>BeeDanhsachkho.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\BeeHtdoiungphieuxuatkho.resx">
+      <DependentUpon>BeeHtdoiungphieuxuatkho.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\BeeHtdoiungphieunhapkho.resx">
       <DependentUpon>BeeHtdoiungphieunhapkho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\BeeKhophieuxuat.resx">
+      <DependentUpon>BeeKhophieuxuat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\BeeNCCnewaccount.resx">
       <DependentUpon>BeeNCCnewaccount.cs</DependentUpon>

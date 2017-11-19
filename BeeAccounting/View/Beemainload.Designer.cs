@@ -65,6 +65,8 @@
             this.button22 = new System.Windows.Forms.Button();
             this.button23 = new System.Windows.Forms.Button();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.button55 = new System.Windows.Forms.Button();
+            this.button26 = new System.Windows.Forms.Button();
             this.button45 = new System.Windows.Forms.Button();
             this.button27 = new System.Windows.Forms.Button();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
@@ -99,8 +101,6 @@
             this.button52 = new System.Windows.Forms.Button();
             this.button53 = new System.Windows.Forms.Button();
             this.button54 = new System.Windows.Forms.Button();
-            this.button26 = new System.Windows.Forms.Button();
-            this.button55 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -530,6 +530,28 @@
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Sổ kế toán";
             // 
+            // button55
+            // 
+            this.button55.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.button55.Location = new System.Drawing.Point(9, 102);
+            this.button55.Name = "button55";
+            this.button55.Size = new System.Drawing.Size(166, 22);
+            this.button55.TabIndex = 18;
+            this.button55.TabStop = false;
+            this.button55.Text = "Ktra bút  toán sổ cái không đối ứng";
+            this.button55.UseVisualStyleBackColor = false;
+            // 
+            // button26
+            // 
+            this.button26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.button26.Location = new System.Drawing.Point(9, 78);
+            this.button26.Name = "button26";
+            this.button26.Size = new System.Drawing.Size(166, 22);
+            this.button26.TabIndex = 17;
+            this.button26.TabStop = false;
+            this.button26.Text = "Ktra bút  toán thiếu chi tiết";
+            this.button26.UseVisualStyleBackColor = false;
+            // 
             // button45
             // 
             this.button45.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
@@ -692,17 +714,19 @@
             // 
             // button41
             // 
+            this.button41.BackColor = System.Drawing.Color.Red;
             this.button41.Location = new System.Drawing.Point(25, 155);
             this.button41.Name = "button41";
             this.button41.Size = new System.Drawing.Size(166, 22);
             this.button41.TabIndex = 14;
             this.button41.TabStop = false;
             this.button41.Text = "Phiếu xuất kho";
-            this.button41.UseVisualStyleBackColor = true;
+            this.button41.UseVisualStyleBackColor = false;
+            this.button41.Click += new System.EventHandler(this.button41_Click);
             // 
             // button42
             // 
-            this.button42.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.button42.BackColor = System.Drawing.Color.WhiteSmoke;
             this.button42.Location = new System.Drawing.Point(25, 127);
             this.button42.Name = "button42";
             this.button42.Size = new System.Drawing.Size(166, 22);
@@ -921,28 +945,6 @@
             this.button54.Text = "Danh sách loại tài khoản";
             this.button54.UseVisualStyleBackColor = false;
             this.button54.Click += new System.EventHandler(this.button54_Click);
-            // 
-            // button26
-            // 
-            this.button26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.button26.Location = new System.Drawing.Point(9, 78);
-            this.button26.Name = "button26";
-            this.button26.Size = new System.Drawing.Size(166, 22);
-            this.button26.TabIndex = 17;
-            this.button26.TabStop = false;
-            this.button26.Text = "Ktra bút  toán thiếu chi tiết";
-            this.button26.UseVisualStyleBackColor = false;
-            // 
-            // button55
-            // 
-            this.button55.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.button55.Location = new System.Drawing.Point(9, 102);
-            this.button55.Name = "button55";
-            this.button55.Size = new System.Drawing.Size(166, 22);
-            this.button55.TabIndex = 18;
-            this.button55.TabStop = false;
-            this.button55.Text = "Ktra bút  toán sổ cái không đối ứng";
-            this.button55.UseVisualStyleBackColor = false;
             // 
             // Beemainload
             // 
