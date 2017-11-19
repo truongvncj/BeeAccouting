@@ -1025,7 +1025,9 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Nodk</rd:DefaultName>
@@ -1057,7 +1059,9 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Codk1</rd:DefaultName>
@@ -1089,7 +1093,9 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Psno</rd:DefaultName>
@@ -1121,7 +1127,9 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Psco</rd:DefaultName>
@@ -1153,7 +1161,9 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Nock</rd:DefaultName>
@@ -1185,7 +1195,9 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Cock</rd:DefaultName>
@@ -1285,7 +1297,9 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Nodk1</rd:DefaultName>
@@ -1318,7 +1332,9 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Codk</rd:DefaultName>
@@ -1351,7 +1367,9 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Psno1</rd:DefaultName>
@@ -1384,7 +1402,9 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Psco1</rd:DefaultName>
@@ -1417,7 +1437,9 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Nock1</rd:DefaultName>
@@ -1450,7 +1472,9 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Cock1</rd:DefaultName>
@@ -1465,7 +1489,6 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
               </TablixCells>
@@ -1774,7 +1797,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!nguoighiso.Value, "DataSet1")</Value>
+                <Value>=First(Fields!ketoantruong.Value, "DataSet1")</Value>
                 <Style>
                   <FontStyle>Normal</FontStyle>
                   <FontFamily>Times New Roman</FontFamily>

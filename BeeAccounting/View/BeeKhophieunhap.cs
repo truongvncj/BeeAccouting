@@ -780,7 +780,7 @@ namespace BEEACCOUNT.View
                 dc.tbl_kho_phieunhap_heads.InsertOnSubmit(headphieunhap);
                 dc.SubmitChanges();
 
-                headphieunhap = null;
+              headphieunhap = null;
 
             }
             #endregion   /// save head phieu nhap
@@ -834,47 +834,44 @@ namespace BEEACCOUNT.View
             #endregion   /// save  detail phieu nhap
 
 
-            // save so cái phiếu nhập
+            #region// save so cái phiếu nhập
             tbl_Socai socai = new tbl_Socai();
-            //socai.nghiepvuso = txtsophieu.Text.Trim();
+            socai.Diengiai = txtdiengiai.Text;
+
+            if (lb_machitietco.Text != "" & Utils.IsValidnumber(lb_machitietco.Text))
+            {
+                socai.MaCTietTKCo = int.Parse(lb_machitietco.Text);
+            }
+            socai.tenchitietCo = lbtenchitietco.Text;
+
+            if (lb_machitietno.Text != "" & Utils.IsValidnumber(lb_machitietno.Text))
+            {
+                socai.MaCTietTKNo = int.Parse(lb_machitietno.Text);
+            }
+            socai.tenchitietNo = lbtenchitietno.Text;
+
+            socai.manghiepvu = "PNK";
+            socai.Ngayctu = datepickngayphieu.Value;
+            socai.Ngayghiso = DateTime.Today;
+            socai.PsCo = this.sotien;
+            socai.PsNo = this.sotien;
+
+            socai.Sohieuchungtu = txtsophieu.Text.Trim();
+            socai.TkCo = (cbtkco.SelectedItem as ComboboxItem).Value.ToString();
+            socai.TkNo = (cbtkno.SelectedItem as ComboboxItem).Value.ToString();
+
+            socai.username = Utils.getusername();
 
 
-            //headphieunhap.createby = Utils.getusername();
-            //headphieunhap.createdate = DateTime.Today;
-            //headphieunhap.diachibophan = txtdiachi.Text.Trim();
-            //headphieunhap.hoadondikhem = txthoadonkemtheo.Text;
-            //headphieunhap.makho = (cbkhohang.SelectedItem as ComboboxItem).Value.ToString();
-            //headphieunhap.ngayphieunhap = datepickngayphieu.Value;
-            //headphieunhap.nguoigiao = txttennguoinop.Text.Trim();
+            Model.Taikhoanketoan.ghisocaitk(socai);
 
-            //headphieunhap.notk = (cbtkno.SelectedItem as ComboboxItem).Value.ToString();
-            //if (lb_machitietno.Text != "" & Utils.IsValidnumber(lb_machitietno.Text))
-            //{
-            //    headphieunhap.MaCTietTKNo = int.Parse(lb_machitietno.Text);
-            //}
+            #endregion// save so cái phiếu nhập
 
-
-            //headphieunhap.cotk = (cbtkco.SelectedItem as ComboboxItem).Value.ToString();
-
-            //if (lb_machitietco.Text != "" & Utils.IsValidnumber(lb_machitietco.Text))
-            //{
-            //    headphieunhap.MaCTietTKCo = int.Parse(lb_machitietco.Text);
-            //}
-
-            //dc.tbl_kho_phieunhap_heads.InsertOnSubmit(headphieunhap);
-            //dc.SubmitChanges();
-
-            //headphieunhap = null;
-
-
-            /// save so cái phiếu nhập
-
-
-            //      MessageBox.Show("Số phiếu vừa lưu: " + this.sophieunhap, "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+       
             this.blankphieunhapkho();
 
             dataGridViewListPNK.DataSource = Model.Khohang.danhsachphieunhapkho(dc);
+            MessageBox.Show("Số phiếu vừa lưu: " + this.sophieunhap, "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
 
@@ -1464,9 +1461,9 @@ namespace BEEACCOUNT.View
                 }
                 #endregion     //    phieunhapdetail
 
-                #region // xóa sổ cái
+                #region // xóa ở sổ cái
 
-                //      Model.Socaitaikhoan.xoa("PT", phieunhapkho.Sochungtu);
+                   Model.Socaitaikhoan.xoa("PNK", phieunhaphead.phieuso.Trim());
 
                 #endregion                // xóa sổ cái nưa
 
@@ -1495,7 +1492,6 @@ namespace BEEACCOUNT.View
             }
 
             #endregion có số phiếu
-
 
 
 
