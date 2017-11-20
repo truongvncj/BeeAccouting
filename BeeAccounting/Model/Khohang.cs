@@ -250,6 +250,54 @@ namespace BEEACCOUNT.Model
             // throw new NotImplementedException();
         }
 
+
+        public static IQueryable danhsachphieuxuatkho(LinqtoSQLDataContext dc)
+        {
+
+
+            LinqtoSQLDataContext db = dc;
+
+
+            var rs = from p in dc.tbl_kho_phieuxuat_heads
+
+                     select new
+                     {
+
+                         Ngày_phiếu_xuất = p.ngayphieuxuat,
+                         Mã_kho = p.makho,
+                         Tên_kho = p.tenkho,
+                         Phiếu_số = p.phieuso,
+                         Người_nhận = p.nguoinhanhang,
+                  //       Theo_đơn_hàng = p.theodonhang,
+                         Diễn_giải = p.diengiai,
+                         Có_TK = p.cotk,
+                         Chi_tiết_TK_Có = p.MaCTietTKCo,
+                         Tên_TK_chi_tiết_Có = p.TenCTietTKCo,
+
+                         Nợ_TK = p.notk,
+                         Chi_tiết_TK_Nợ = p.MaCTietTKNo,
+                         Tên_TK_chi_tiết_Nợ = p.TenCTietTKNo,
+
+                         Số_tiền = p.sotien,
+
+                         Tạo_bởi = p.createby,
+
+
+
+                         ID = p.id
+                     };
+
+
+
+
+
+            return rs;
+
+
+            // throw new NotImplementedException();
+        }
+
+
         public static DataGridView reloaddetailnewPNK(DataGridView dataGridViewdetailPNK)
         {
 

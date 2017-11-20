@@ -50,7 +50,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.cbkhohang = new System.Windows.Forms.ComboBox();
             this.txtlydoxuat = new System.Windows.Forms.TextBox();
-            this.txttennguoigiao = new System.Windows.Forms.TextBox();
+            this.txttennguoinhan = new System.Windows.Forms.TextBox();
             this.txtsophieu = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -101,7 +101,7 @@
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.cbkhohang);
             this.panel1.Controls.Add(this.txtlydoxuat);
-            this.panel1.Controls.Add(this.txttennguoigiao);
+            this.panel1.Controls.Add(this.txttennguoinhan);
             this.panel1.Controls.Add(this.txtsophieu);
             this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.label8);
@@ -276,14 +276,14 @@
             this.txtlydoxuat.TabIndex = 22;
             this.txtlydoxuat.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtdiachi_KeyPress);
             // 
-            // txttennguoigiao
+            // txttennguoinhan
             // 
-            this.txttennguoigiao.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txttennguoigiao.Location = new System.Drawing.Point(151, 126);
-            this.txttennguoigiao.Name = "txttennguoigiao";
-            this.txttennguoigiao.Size = new System.Drawing.Size(271, 24);
-            this.txttennguoigiao.TabIndex = 21;
-            this.txttennguoigiao.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txttennguoinop_KeyPress);
+            this.txttennguoinhan.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txttennguoinhan.Location = new System.Drawing.Point(151, 126);
+            this.txttennguoinhan.Name = "txttennguoinhan";
+            this.txttennguoinhan.Size = new System.Drawing.Size(271, 24);
+            this.txttennguoinhan.TabIndex = 21;
+            this.txttennguoinhan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txttennguoinop_KeyPress);
             // 
             // txtsophieu
             // 
@@ -727,7 +727,7 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.TextBox txtsophieu;
-        private System.Windows.Forms.TextBox txttennguoigiao;
+        private System.Windows.Forms.TextBox txttennguoinhan;
         private System.Windows.Forms.TextBox txtlydoxuat;
         private System.Windows.Forms.DataGridView dataGridViewTkCo;
         private System.Windows.Forms.Label label14;
