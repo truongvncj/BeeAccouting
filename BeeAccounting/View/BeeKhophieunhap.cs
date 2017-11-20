@@ -720,7 +720,7 @@ namespace BEEACCOUNT.View
 
             if (txtdonhang.Text == "")
             {
-                MessageBox.Show("Kiểm tra địa chỉ, bộ phận !", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Kiểm tra thông tin theo đơn hàng !", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 checkdinhkhoan = false;
                 txtdonhang.Focus();
                 return;
@@ -1048,9 +1048,12 @@ namespace BEEACCOUNT.View
             var xoahead = from p in dc.Rptphieunhapkhoheads
                                where p.username == username
                                select p;
+            if (xoahead != null)
+            {
+                dc.Rptphieunhapkhoheads.DeleteAllOnSubmit(xoahead);
+                dc.SubmitChanges();
 
-            dc.Rptphieunhapkhoheads.DeleteAllOnSubmit(xoahead);
-            dc.SubmitChanges();
+            }
 
 
 
