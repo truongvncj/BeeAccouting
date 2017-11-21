@@ -1003,27 +1003,27 @@ namespace BEEACCOUNT.View
             string connection_string = Utils.getConnectionstr();
             LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
 
-            var xoahead = from p in dc.Rptphieunhapkhoheads
+            var xoahead = from p in dc.Rptphieuxuatkhoheads
                           where p.username == username
                           select p;
 
-            dc.Rptphieunhapkhoheads.DeleteAllOnSubmit(xoahead);
+            dc.Rptphieuxuatkhoheads.DeleteAllOnSubmit(xoahead);
             dc.SubmitChanges();
 
 
 
-            var xoadetail = from p in dc.Rptphieunhapkhodetail01s
+            var xoadetail = from p in dc.Rptphieuxuatkhodetail01s
                             where p.username == username
                             select p;
 
-            dc.Rptphieunhapkhodetail01s.DeleteAllOnSubmit(xoadetail);
+            dc.Rptphieuxuatkhodetail01s.DeleteAllOnSubmit(xoadetail);
             dc.SubmitChanges();
 
 
 
 
 
-            var phieunhap = (from p in dc.tbl_kho_phieunhap_heads
+            var phieunhap = (from p in dc.Rptphieuxuatkhoheads
                              where p.id == this.phieuxuatid
                              select p).FirstOrDefault();
 
@@ -1044,38 +1044,38 @@ namespace BEEACCOUNT.View
 
                 #region  insert vao rpt phieu thu
 
-                Rptphieunhapkhohead pnk = new Rptphieunhapkhohead();
-                pnk.tencongty = Model.Congty.getnamecongty();
-                pnk.diachicongty = Model.Congty.getdiachicongty();
-                pnk.masothue = Model.Congty.getmasothuecongty();
-                pnk.tengiamdoc = Model.Congty.gettengiamdoccongty();
-                pnk.tenketoantruong = Model.Congty.gettenketoantruongcongty();
-                pnk.phieunhapso = phieunhap.phieuso;
-                pnk.ngaychungtu = phieunhap.ngayphieunhap;
-                pnk.nguoigiao = phieunhap.nguoigiao;
-                pnk.nguoilapphieu = Utils.getname();
-                pnk.nhaptaikho = phieunhap.makho;
-                pnk.diachikho = phieunhap.tenkho;
-                pnk.theodonhang = phieunhap.theodonhang;
+                Rptphieuxuatkhohead pxk = new Rptphieuxuatkhohead();
+                pxk.tencongty = Model.Congty.getnamecongty();
+                pxk.diachicongty = Model.Congty.getdiachicongty();
+                pxk.masothue = Model.Congty.getmasothuecongty();
+                pxk.tengiamdoc = Model.Congty.gettengiamdoccongty();
+                pxk.tenketoantruong = Model.Congty.gettenketoantruongcongty();
+                pxk.phieuso = phieunhap.phieuso;
+                pxk.ngaychungtu = phieunhap.ngaychungtu;
+                pxk.nguoinhan = phieunhap.nguoinhan;
+                pxk.nguoilapphieu = Utils.getname();
+                pxk.xuattaikho = phieunhap.xuattaikho;
+                pxk.lydoxuat = phieunhap.lydoxuat;
+                pxk.diachibophan = phieunhap.diachibophan;
                 //      pnk.s = phieunhap.sotien;
                 if (phieunhap.sotien != null)
                 {
-                    pnk.sotienbangchu = Utils.ChuyenSo(decimal.Parse(phieunhap.sotien.ToString()));
+                    pxk.sotienbangchu = Utils.ChuyenSo(decimal.Parse(phieunhap.sotien.ToString()));
                 }
 
-                pnk.sochungtugoc = phieunhap.hoadondikhem;
-                pnk.username = username;
-                pnk.tkno = phieunhap.notk;
-                pnk.tkco = phieunhap.cotk;
+                pxk.sochungtugoc = phieunhap.sochungtugoc;
+                pxk.username = username;
+                pxk.tkno = phieunhap.tkno;
+                pxk.tkco = phieunhap.tkco;
 
-                dc.Rptphieunhapkhoheads.InsertOnSubmit(pnk);
+                dc.Rptphieuxuatkhoheads.InsertOnSubmit(pxk);
                 dc.SubmitChanges();
 
 
 
 
 
-                #endregion  inserphieu thu
+                #endregion  inserphieu head
 
 
                 #region inser detail phieu thu
@@ -1084,7 +1084,7 @@ namespace BEEACCOUNT.View
 
                 int i = 0;
 
-                var detailphieu = from p in dc.tbl_kho_phieunhap_details
+                var detailphieu = from p in dc.tbl_kho_phieuxuat_details
                                   where p.phieuso == phieunhap.phieuso
                                   select p;
                 foreach (var item in detailphieu)
@@ -1094,7 +1094,7 @@ namespace BEEACCOUNT.View
                     detail.dongia = item.dongia;
                     detail.donvi = item.donvi;
                     detail.masanpham = item.mahang;
-                    detail.soluongthucte = item.soluongnhap;
+                    detail.soluongthucte = item.soluongxuat;
                     detail.soluongyeucau = item.soluongyeucau;
                     detail.sophieunhap = item.phieuso;
                     detail.tensanpham = item.tenhang;
@@ -1119,15 +1119,15 @@ namespace BEEACCOUNT.View
 
 
 
-                var datarptphieunhap = from p in dc.Rptphieunhapkhoheads
+                var datarptphieuxuat = from p in dc.Rptphieuxuatkhoheads
                                        where p.username == username
                                        select p;
 
 
                 Utils ut = new Utils();
-                var dataset1 = ut.ToDataTable(dc, datarptphieunhap);
+                var dataset1 = ut.ToDataTable(dc, datarptphieuxuat);
 
-                var datadetailphieu = from p in dc.Rptphieunhapkhodetail01s
+                var datadetailphieu = from p in dc.Rptphieuxuatkhodetail01s
                                       where p.username == username
                                       select p;
 

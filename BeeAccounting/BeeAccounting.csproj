@@ -468,7 +468,10 @@
     <Compile Include="View\Viewtable.Designer.cs">
       <DependentUpon>Viewtable.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Reports\Phieunxkhohead.rdlc">
+    <EmbeddedResource Include="Reports\Phieuxuatkho.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Phieunhapkho.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\Phieuchi.rdlc">

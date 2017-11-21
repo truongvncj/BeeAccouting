@@ -4,6 +4,10 @@
 
     partial class DataSet1
     {
+        partial class Phieuxuatkho01RPtDataTable
+        {
+        }
+
         partial class Phieunhapkhodetail01DataTable
         {
         }

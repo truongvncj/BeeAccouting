@@ -1178,7 +1178,7 @@ namespace BEEACCOUNT.View
 
                 var dataset2 = ut.ToDataTable(dc, datadetailphieu);
 
-                Reportsview rpt = new Reportsview(dataset1, dataset2, "Phieunxkhohead.rdlc");
+                Reportsview rpt = new Reportsview(dataset1, dataset2, "Phieunhapkho.rdlc");
                 rpt.ShowDialog();
 
             }
