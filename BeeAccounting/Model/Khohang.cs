@@ -469,7 +469,177 @@ namespace BEEACCOUNT.Model
             //  throw new NotImplementedException();
         }
 
-   
+        public static DataGridView reloaddetailnewPXK(DataGridView dataGridViewdetailPNK)
+        {
+
+
+
+            dataGridViewdetailPNK.DataSource = null;
+            #region datatable temp
+
+
+
+
+            DataTable dt = new DataTable();
+
+
+
+            //   dt.Columns.Add(new DataColumn("Ngày_chứng_từ", typeof(DGV_DateTimePicker.DateTimePickerCell)));
+            dt.Columns.Add(new DataColumn("masanpham", typeof(string)));
+            dt.Columns.Add(new DataColumn("Tên_sản_phẩm", typeof(string)));
+
+            dt.Columns.Add(new DataColumn("Đơn_vị", typeof(string)));
+            dt.Columns.Add(new DataColumn("Số_lượng_xuất", typeof(double)));
+
+            //Threahold
+            //      dt.Columns.Add(new DataColumn("Tk_Có", typeof(double)));
+            dt.Columns.Add(new DataColumn("Đơn_giá", typeof(double)));
+            dt.Columns.Add(new DataColumn("Thành_tiền", typeof(double)));
+            //     dt.Columns.Add(new DataColumn("tkidhide", typeof(string))); //comnoxxon
+            //  dt.Columns.Add(new DataColumn("Tk_Có", typeof(double)));
+            //    dt.Columns.Add(new DataColumn("ngayctuhide", typeof(DateTime))); //adding column for combobox
+
+
+
+
+
+            dataGridViewdetailPNK.DataSource = dt;
+
+
+            //DGV_DateTimePicker.DateTimePickerColumn col = new DGV_DateTimePicker.DateTimePickerColumn();
+            //col.HeaderText = "Ngày chứng từ";
+            //col.Name = "Ngày_chứng_từ";
+            //col.DataPropertyName = "ngayctuhide";
+            //dataGridViewdetailPNK.Columns.Add(col);
+
+
+            //    dataGridViewTkCo.Columns.Remove("Tk_Có");
+
+            #region  //  mã sản phẩm
+            string connection_string = Utils.getConnectionstr();
+            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+            DataGridViewComboBoxColumn cmbdgv = new DataGridViewComboBoxColumn();
+
+
+            List<View.BeeKhophieuxuat.ComboboxItem> CombomCollection = new List<View.BeeKhophieuxuat.ComboboxItem>();
+
+            var rs = from p in dc.tbl_kho_sanphams
+
+                     orderby p.masp
+                     select p;
+            foreach (var item in rs)
+            {
+                View.BeeKhophieuxuat.ComboboxItem cb = new View.BeeKhophieuxuat.ComboboxItem();
+                cb.Value = item.masp;
+                cb.Text = item.masp.Trim() + ": " + item.tensp;
+                CombomCollection.Add(cb);
+            }
+
+            cmbdgv.DataSource = CombomCollection;
+            cmbdgv.HeaderText = "Mã_sản_phẩm";
+            cmbdgv.Name = "Mã_sản_phẩm";
+            cmbdgv.ValueMember = "Value";
+            cmbdgv.DisplayMember = "Text";
+            cmbdgv.Width = 300;
+            cmbdgv.DropDownWidth = 300;
+            cmbdgv.DataPropertyName = "masanpham"; //Bound value to the datasource
+
+
+            dataGridViewdetailPNK.Columns.Add(cmbdgv);
+
+
+
+
+
+            #endregion binddata
+
+            dataGridViewdetailPNK.Columns["masanpham"].Visible = false;
+            dataGridViewdetailPNK.Columns["Mã_sản_phẩm"].DisplayIndex = 0;
+
+            dataGridViewdetailPNK.Columns["Tên_sản_phẩm"].ReadOnly = true;
+            dataGridViewdetailPNK.Columns["Đơn_vị"].ReadOnly = true;
+
+            dataGridViewdetailPNK.Columns["Tên_sản_phẩm"].DefaultCellStyle.BackColor = Color.LightGray;
+            dataGridViewdetailPNK.Columns["Đơn_vị"].DefaultCellStyle.BackColor = Color.LightGray;
+
+            dataGridViewdetailPNK.Columns["Số_lượng_xuất"].DefaultCellStyle.Format = "N0"; // để hiện số có dấu phảy
+            dataGridViewdetailPNK.Columns["Đơn_giá"].DefaultCellStyle.Format = "N0";
+            dataGridViewdetailPNK.Columns["Thành_tiền"].DefaultCellStyle.Format = "N0";
+
+
+            dataGridViewdetailPNK.Columns["Số_lượng_xuất"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight; // để hiện số có dấu phảy
+            dataGridViewdetailPNK.Columns["Đơn_giá"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            dataGridViewdetailPNK.Columns["Thành_tiền"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+
+            //    this.dataGridView1.Columns["CustomerCode"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
+            //this.dataGridView1.Columns["CustomerCode"].DefaultCellStyle.Format = "N0";
+            //this.dataGridView1.Columns["CustomerCode"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;// = "N0";
+
+            //   dataGridViewdetailPNK.Columns["Đơn_giá"].DefaultCellStyle = datag  ;
+
+            //    dataGridViewdetailPNK.Columns["Tk_Có"].Visible = false;
+            // dataGridViewdetailPNK.Columns["masanpham"].Visible = false;
+
+            //     dataGridViewdetailPNK.Columns["Tk_Nợ"].DisplayIndex = 0;
+            //    dataGridViewdetailPNK.Columns["Tk_Nợ"].Width = 100;
+            //    dataGridViewdetailPNK.Columns["Tk_Nợ"].SortMode = DataGridViewColumnSortMode.NotSortable;
+
+            //dataGridViewdetailPNK.Columns["Mã_chi_tiết"].DisplayIndex = 1;
+            //dataGridViewdetailPNK.Columns["Mã_chi_tiết"].Width = 100;
+            //dataGridViewdetailPNK.Columns["Mã_chi_tiết"].SortMode = DataGridViewColumnSortMode.NotSortable;
+            //dataGridViewdetailPNK.Columns["Mã_chi_tiết"].ReadOnly = true;
+            //dataGridViewdetailPNK.Columns["Mã_chi_tiết"].DefaultCellStyle.BackColor = Color.LightGray;
+
+            //dataGridViewdetailPNK.Columns["Tên_chi_tiết"].DisplayIndex = 2;
+            //dataGridViewdetailPNK.Columns["Tên_chi_tiết"].Width = 200;
+            //dataGridViewdetailPNK.Columns["Tên_chi_tiết"].SortMode = DataGridViewColumnSortMode.NotSortable;
+            //dataGridViewdetailPNK.Columns["Tên_chi_tiết"].ReadOnly = true;
+            //dataGridViewdetailPNK.Columns["Tên_chi_tiết"].DefaultCellStyle.BackColor = Color.LightGray;
+
+
+            //dataGridViewdetailPNK.Columns["Số_tiền"].DisplayIndex = 3;
+            //dataGridViewdetailPNK.Columns["Số_tiền"].Width = 100;
+            //dataGridViewdetailPNK.Columns["Số_tiền"].SortMode = DataGridViewColumnSortMode.NotSortable;
+            //dataGridViewdetailPNK.Columns["Số_tiền"].DefaultCellStyle.Format = "N0";
+
+
+            //dataGridViewdetailPNK.Columns["Diễn_giải"].DisplayIndex = 4;
+            //dataGridViewdetailPNK.Columns["Diễn_giải"].Width = 300;
+            //dataGridViewdetailPNK.Columns["Diễn_giải"].SortMode = DataGridViewColumnSortMode.NotSortable;
+
+
+            //dataGridViewdetailPNK.Columns["Ký_hiêu"].DisplayIndex = 5;
+            //dataGridViewdetailPNK.Columns["Ký_hiêu"].Width = 100;
+            //dataGridViewdetailPNK.Columns["Ký_hiêu"].SortMode = DataGridViewColumnSortMode.NotSortable;
+
+
+            //dataGridViewdetailPNK.Columns["Ngày_chứng_từ"].DisplayIndex = 6;
+            //dataGridViewdetailPNK.Columns["Ngày_chứng_từ"].Width = 100;
+            //dataGridViewdetailPNK.Columns["Ngày_chứng_từ"].SortMode = DataGridViewColumnSortMode.NotSortable;
+
+
+            //dataGridViewdetailPNK.Columns["Số_chứng_từ"].DisplayIndex = 7;
+            //dataGridViewdetailPNK.Columns["Số_chứng_từ"].Width = 200;
+            //dataGridViewdetailPNK.Columns["Số_chứng_từ"].SortMode = DataGridViewColumnSortMode.NotSortable;
+
+
+
+
+
+
+            #endregion datatable temp
+
+
+            return dataGridViewdetailPNK;
+
+
+
+
+
+            //  throw new NotImplementedException();
+        }
+
 
     }
 }
