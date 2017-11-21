@@ -110,7 +110,7 @@ namespace BEEACCOUNT.View
 
         }
 
-        public void blankphieunhapkho()
+        public void blankphieutonew()
         {
             #region  list black phiếu
             datepickngayphieu.Enabled = true;
@@ -358,7 +358,7 @@ namespace BEEACCOUNT.View
             //       dataGridViewTkCo.DataSource = Model.Khohang.danhsachphieunhapkho(dc);
             dataGridViewTkCo = Model.Khohang.reloaddetailnewPNK(dataGridViewTkCo);
 
-            dataGridViewListPNK.DataSource = Model.Khohang.danhsachphieunhapkho(dc);
+            dataGridViewListPNK.DataSource = Model.Khohang.danhsachphieuxuatkho(dc);
 
 
             dataGridViewListPNK.Columns["Số_tiền"].DefaultCellStyle.Format = "N0";
@@ -861,7 +861,7 @@ namespace BEEACCOUNT.View
             #endregion// save so cái phiếu nhập
 
        
-            this.blankphieunhapkho();
+            this.blankphieutonew();
 
             dataGridViewListPNK.DataSource = Model.Khohang.danhsachphieunhapkho(dc);
             MessageBox.Show("Số phiếu vừa lưu: " + this.sophieuxuat, "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -1023,7 +1023,7 @@ namespace BEEACCOUNT.View
 
         private void button6_Click(object sender, EventArgs e)
         {
-            this.blankphieunhapkho();
+            this.blankphieutonew();
 
             tabControl1.SelectedTab = tabPage1;
             //      dataGridViewTkCo = Model.Phieuthuchi.reloadnewdetailtaikhoanco(dataGridViewTkCo);
