@@ -1023,7 +1023,7 @@ namespace BEEACCOUNT.View
 
 
 
-            var phieunhap = (from p in dc.Rptphieuxuatkhoheads
+            var phieuxuat = (from p in dc.Rptphieuxuatkhoheads
                              where p.id == this.phieuxuatid
                              select p).FirstOrDefault();
 
@@ -1038,7 +1038,7 @@ namespace BEEACCOUNT.View
 
 
 
-            if (phieunhap != null)
+            if (phieuxuat != null)
             {
 
 
@@ -1050,23 +1050,23 @@ namespace BEEACCOUNT.View
                 pxk.masothue = Model.Congty.getmasothuecongty();
                 pxk.tengiamdoc = Model.Congty.gettengiamdoccongty();
                 pxk.tenketoantruong = Model.Congty.gettenketoantruongcongty();
-                pxk.phieuso = phieunhap.phieuso;
-                pxk.ngaychungtu = phieunhap.ngaychungtu;
-                pxk.nguoinhan = phieunhap.nguoinhan;
+                pxk.phieuso = phieuxuat.phieuso;
+                pxk.ngaychungtu = phieuxuat.ngaychungtu;
+                pxk.nguoinhan = phieuxuat.nguoinhan;
                 pxk.nguoilapphieu = Utils.getname();
-                pxk.xuattaikho = phieunhap.xuattaikho;
-                pxk.lydoxuat = phieunhap.lydoxuat;
-                pxk.diachibophan = phieunhap.diachibophan;
+                pxk.xuattaikho = phieuxuat.xuattaikho;
+                pxk.lydoxuat = phieuxuat.lydoxuat;
+                pxk.diachibophan = phieuxuat.diachibophan;
                 //      pnk.s = phieunhap.sotien;
-                if (phieunhap.sotien != null)
+                if (phieuxuat.sotien != null)
                 {
-                    pxk.sotienbangchu = Utils.ChuyenSo(decimal.Parse(phieunhap.sotien.ToString()));
+                    pxk.sotienbangchu = Utils.ChuyenSo(decimal.Parse(phieuxuat.sotien.ToString()));
                 }
 
-                pxk.sochungtugoc = phieunhap.sochungtugoc;
+                pxk.sochungtugoc = phieuxuat.sochungtugoc;
                 pxk.username = username;
-                pxk.tkno = phieunhap.tkno;
-                pxk.tkco = phieunhap.tkco;
+                pxk.tkno = phieuxuat.tkno;
+                pxk.tkco = phieuxuat.tkco;
 
                 dc.Rptphieuxuatkhoheads.InsertOnSubmit(pxk);
                 dc.SubmitChanges();
@@ -1085,7 +1085,7 @@ namespace BEEACCOUNT.View
                 int i = 0;
 
                 var detailphieu = from p in dc.tbl_kho_phieuxuat_details
-                                  where p.phieuso == phieunhap.phieuso
+                                  where p.phieuso == phieuxuat.phieuso
                                   select p;
                 foreach (var item in detailphieu)
                 {
@@ -1133,7 +1133,7 @@ namespace BEEACCOUNT.View
 
                 var dataset2 = ut.ToDataTable(dc, datadetailphieu);
 
-                Reportsview rpt = new Reportsview(dataset1, dataset2, "Phieunxkhohead.rdlc");
+                Reportsview rpt = new Reportsview(dataset1, dataset2, "Phieuxuatkho.rdlc");
                 rpt.ShowDialog();
 
             }

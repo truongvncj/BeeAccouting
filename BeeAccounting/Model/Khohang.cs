@@ -469,12 +469,12 @@ namespace BEEACCOUNT.Model
             //  throw new NotImplementedException();
         }
 
-        public static DataGridView reloaddetailnewPXK(DataGridView dataGridViewdetailPNK)
+        public static DataGridView reloaddetailnewPXK(DataGridView dataGridViewdetailPXK)
         {
 
 
 
-            dataGridViewdetailPNK.DataSource = null;
+            dataGridViewdetailPXK.DataSource = null;
             #region datatable temp
 
 
@@ -503,7 +503,7 @@ namespace BEEACCOUNT.Model
 
 
 
-            dataGridViewdetailPNK.DataSource = dt;
+            dataGridViewdetailPXK.DataSource = dt;
 
 
             //DGV_DateTimePicker.DateTimePickerColumn col = new DGV_DateTimePicker.DateTimePickerColumn();
@@ -546,7 +546,7 @@ namespace BEEACCOUNT.Model
             cmbdgv.DataPropertyName = "masanpham"; //Bound value to the datasource
 
 
-            dataGridViewdetailPNK.Columns.Add(cmbdgv);
+            dataGridViewdetailPXK.Columns.Add(cmbdgv);
 
 
 
@@ -554,23 +554,23 @@ namespace BEEACCOUNT.Model
 
             #endregion binddata
 
-            dataGridViewdetailPNK.Columns["masanpham"].Visible = false;
-            dataGridViewdetailPNK.Columns["Mã_sản_phẩm"].DisplayIndex = 0;
+            dataGridViewdetailPXK.Columns["masanpham"].Visible = false;
+            dataGridViewdetailPXK.Columns["Mã_sản_phẩm"].DisplayIndex = 0;
 
-            dataGridViewdetailPNK.Columns["Tên_sản_phẩm"].ReadOnly = true;
-            dataGridViewdetailPNK.Columns["Đơn_vị"].ReadOnly = true;
+            dataGridViewdetailPXK.Columns["Tên_sản_phẩm"].ReadOnly = true;
+            dataGridViewdetailPXK.Columns["Đơn_vị"].ReadOnly = true;
 
-            dataGridViewdetailPNK.Columns["Tên_sản_phẩm"].DefaultCellStyle.BackColor = Color.LightGray;
-            dataGridViewdetailPNK.Columns["Đơn_vị"].DefaultCellStyle.BackColor = Color.LightGray;
+            dataGridViewdetailPXK.Columns["Tên_sản_phẩm"].DefaultCellStyle.BackColor = Color.LightGray;
+            dataGridViewdetailPXK.Columns["Đơn_vị"].DefaultCellStyle.BackColor = Color.LightGray;
 
-            dataGridViewdetailPNK.Columns["Số_lượng_xuất"].DefaultCellStyle.Format = "N0"; // để hiện số có dấu phảy
-            dataGridViewdetailPNK.Columns["Đơn_giá"].DefaultCellStyle.Format = "N0";
-            dataGridViewdetailPNK.Columns["Thành_tiền"].DefaultCellStyle.Format = "N0";
+            dataGridViewdetailPXK.Columns["Số_lượng_xuất"].DefaultCellStyle.Format = "N0"; // để hiện số có dấu phảy
+            dataGridViewdetailPXK.Columns["Đơn_giá"].DefaultCellStyle.Format = "N0";
+            dataGridViewdetailPXK.Columns["Thành_tiền"].DefaultCellStyle.Format = "N0";
 
 
-            dataGridViewdetailPNK.Columns["Số_lượng_xuất"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight; // để hiện số có dấu phảy
-            dataGridViewdetailPNK.Columns["Đơn_giá"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
-            dataGridViewdetailPNK.Columns["Thành_tiền"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            dataGridViewdetailPXK.Columns["Số_lượng_xuất"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight; // để hiện số có dấu phảy
+            dataGridViewdetailPXK.Columns["Đơn_giá"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            dataGridViewdetailPXK.Columns["Thành_tiền"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
 
             //    this.dataGridView1.Columns["CustomerCode"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
             //this.dataGridView1.Columns["CustomerCode"].DefaultCellStyle.Format = "N0";
@@ -631,7 +631,7 @@ namespace BEEACCOUNT.Model
             #endregion datatable temp
 
 
-            return dataGridViewdetailPNK;
+            return dataGridViewdetailPXK;
 
 
 
