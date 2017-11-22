@@ -547,7 +547,7 @@
     <Type Name="tbl_kho_phieuxuat_head">
       <Column Name="ngayphieuxuat" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="nguoinhanhang" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="theodonhang" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="diachibophan" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
       <Column Name="makho" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="hoadondikhem" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="notk" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />

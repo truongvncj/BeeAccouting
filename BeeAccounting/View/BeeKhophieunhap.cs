@@ -114,7 +114,7 @@ namespace BEEACCOUNT.View
         {
             #region  list black phiếu
             datepickngayphieu.Enabled = true;
-            //         txtquyenso.Enabled = true;
+            txthoadonkemtheo.Enabled = true;
             txtsophieu.Enabled = true;
             txttennguoigiao.Enabled = true;
             txtdonhang.Enabled = true;
@@ -780,7 +780,7 @@ namespace BEEACCOUNT.View
                 dc.tbl_kho_phieunhap_heads.InsertOnSubmit(headphieunhap);
                 dc.SubmitChanges();
 
-              headphieunhap = null;
+                headphieunhap = null;
 
             }
             #endregion   /// save head phieu nhap
@@ -867,7 +867,7 @@ namespace BEEACCOUNT.View
 
             #endregion// save so cái phiếu nhập
 
-       
+
             this.blankphieunhapkho();
 
             dataGridViewListPNK.DataSource = Model.Khohang.danhsachphieunhapkho(dc);
@@ -1046,8 +1046,8 @@ namespace BEEACCOUNT.View
             LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
 
             var xoahead = from p in dc.Rptphieunhapkhoheads
-                               where p.username == username
-                               select p;
+                          where p.username == username
+                          select p;
             if (xoahead != null)
             {
                 dc.Rptphieunhapkhoheads.DeleteAllOnSubmit(xoahead);
@@ -1058,8 +1058,8 @@ namespace BEEACCOUNT.View
 
 
             var xoadetail = from p in dc.Rptphieunhapkhodetail01s
-                               where p.username == username
-                               select p;
+                            where p.username == username
+                            select p;
 
             dc.Rptphieunhapkhodetail01s.DeleteAllOnSubmit(xoadetail);
             dc.SubmitChanges();
@@ -1130,8 +1130,8 @@ namespace BEEACCOUNT.View
                 int i = 0;
 
                 var detailphieu = from p in dc.tbl_kho_phieunhap_details
-                                       where p.phieuso == phieunhap.phieuso
-                                      select p;
+                                  where p.phieuso == phieunhap.phieuso
+                                  select p;
                 foreach (var item in detailphieu)
                 {
                     Rptphieunhapkhodetail01 detail = new Rptphieunhapkhodetail01();
@@ -1146,7 +1146,7 @@ namespace BEEACCOUNT.View
                     detail.thanhtien = item.thanhtien;
                     detail.username = username;
                     detail.stt = i;
-                
+
 
                     dc.Rptphieunhapkhodetail01s.InsertOnSubmit(detail);
                     dc.SubmitChanges();
@@ -1173,8 +1173,8 @@ namespace BEEACCOUNT.View
                 var dataset1 = ut.ToDataTable(dc, datarptphieunhap);
 
                 var datadetailphieu = from p in dc.Rptphieunhapkhodetail01s
-                                       where p.username == username
-                                       select p;
+                                      where p.username == username
+                                      select p;
 
                 var dataset2 = ut.ToDataTable(dc, datadetailphieu);
 
@@ -1357,7 +1357,7 @@ namespace BEEACCOUNT.View
 
                     }
 
-
+                    txthoadonkemtheo.Enabled = false;
 
                     datepickngayphieu.Enabled = false;
                     txtsophieu.Enabled = false;
@@ -1466,7 +1466,7 @@ namespace BEEACCOUNT.View
 
                 #region // xóa ở sổ cái
 
-                   Model.Socaitaikhoan.xoa("PNK", phieunhaphead.phieuso.Trim());
+                Model.Socaitaikhoan.xoa("PNK", phieunhaphead.phieuso.Trim());
 
                 #endregion                // xóa sổ cái nưa
 
@@ -1519,7 +1519,7 @@ namespace BEEACCOUNT.View
             }
 
 
-            //  txtquyenso.Enabled = true;
+            txthoadonkemtheo.Enabled = true;
             cbkhohang.Enabled = true;
             txttennguoigiao.Enabled = true;
             txtdonhang.Enabled = true;

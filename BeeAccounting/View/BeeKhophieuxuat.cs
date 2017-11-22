@@ -114,7 +114,8 @@ namespace BEEACCOUNT.View
             cbtkco.Enabled = true;
             btsua.Enabled = false;
             txtsotiensave.Visible = false;
-
+            txtdiachibophan.Enabled = true;
+            txtdiachibophan.Text = "";
             txtsophieu.Text = "";
             txttennguoinhan.Text = "";
             txtlydoxuat.Text = "";
@@ -207,7 +208,7 @@ namespace BEEACCOUNT.View
                 bool kq = false;
                 foreach (Form frm in fc)
                 {
-                    if (frm.Text == "BeeHtdoiungphieunhapkho")
+                    if (frm.Text == "BeeHtdoiungphieuxuatkho")
 
 
                     {
@@ -219,8 +220,8 @@ namespace BEEACCOUNT.View
 
                 if (!kq)
                 {
-                    // phai phieu xuat rieng  View.BeeHtdoiungphieunhapkho BeeHtdoiungphieunhapkho = new BeeHtdoiungphieunhapkho(this, "Địa chỉ", "", "");
-                    //              BeeHtdoiungphieunhapkho.Show();
+                View.BeeHtdoiungphieuxuatkho BeeHtdoiungphieuxuatkho = new BeeHtdoiungphieuxuatkho(this, "Địa chỉ", "", "");
+                    BeeHtdoiungphieuxuatkho.Show();
                 }
 
 
@@ -642,7 +643,7 @@ namespace BEEACCOUNT.View
             string connection_string = Utils.getConnectionstr();
 
             LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
-            var sophieunhaplap = (from p in dc.tbl_kho_phieunhap_heads
+            var sophieunhaplap = (from p in dc.tbl_kho_phieuxuat_heads
                                   where (p.phieuso == txtsophieu.Text.ToString().Trim())
                                   select p).FirstOrDefault();
 
@@ -696,16 +697,26 @@ namespace BEEACCOUNT.View
 
             }
 
-
+            
 
             if (txtlydoxuat.Text == "")
             {
-                MessageBox.Show("Kiểm tra địa chỉ, bộ phận !", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Kiểm tra lý do xuất chưa có thông tin!", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 checkdinhkhoan = false;
                 txtlydoxuat.Focus();
                 return;
 
             }
+
+            if (txtdiachibophan.Text == "")
+            {
+                MessageBox.Show("Kiểm tra địa chỉ / bộ phận !", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                checkdinhkhoan = false;
+                txtlydoxuat.Focus();
+                return;
+
+            }
+
 
             if (txttennguoinhan.Text == "")
             {
@@ -727,13 +738,15 @@ namespace BEEACCOUNT.View
                 tbl_kho_phieuxuat_head headphieuxuat = new tbl_kho_phieuxuat_head();
                 headphieuxuat.phieuso = txtsophieu.Text.Trim();
 
-                headphieuxuat.diengiai = txtlydoxuat.Text;
+         //       headphieuxuat.diengiai = txtlydoxuat.Text;
                 headphieuxuat.createby = Utils.getusername();
                 headphieuxuat.createdate = DateTime.Today;
-                headphieuxuat.theodonhang = txtlydoxuat.Text.Trim();
+                headphieuxuat.diengiai = txtlydoxuat.Text.Trim();
                 headphieuxuat.hoadondikhem = txthoadonkemtheo.Text;
                 headphieuxuat.makho = (cbkhohang.SelectedItem as ComboboxItem).Value.ToString();
                 headphieuxuat.tenkho = (cbkhohang.SelectedItem as ComboboxItem).Text.ToString();
+                headphieuxuat.diachibophan = txtdiachibophan.Text;
+
 
                 headphieuxuat.ngayphieuxuat = datepickngayphieu.Value;
                 headphieuxuat.nguoinhanhang = txttennguoinhan.Text.Trim();
@@ -855,22 +868,10 @@ namespace BEEACCOUNT.View
 
         private void cbtkno_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            //List<ComboboxItem> CombomCollection = new List<ComboboxItem>();
-            //var rs = from tbl_Kafuctionlist in db.tbl_Kafuctionlists
-            //         where tbl_Kafuctionlist.Code != "DIS"
-            //         orderby tbl_Kafuctionlist.Code
-            //         select tbl_Kafuctionlist;
-            //foreach (var item2 in rs)
-            //{
-            //    ComboboxItem cb = new ComboboxItem();
-            //    cb.Value = item2.Code.Trim();
-            //    cb.Text = item2.Code.Trim() + ": " + item2.Description.Trim() + "    || Example: " + item2.Example;
-            //    CombomCollection.Add(cb);
-            //}
+          
 
             string taikhoan = (cbtkno.SelectedItem as ComboboxItem).Value.ToString();
-            //     this.matk = taikhoan;
-
+        
 
             string connection_string = Utils.getConnectionstr();
             LinqtoSQLDataContext db = new LinqtoSQLDataContext(connection_string);
@@ -1003,6 +1004,9 @@ namespace BEEACCOUNT.View
             string connection_string = Utils.getConnectionstr();
             LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
 
+            #region xoa detail va head phieu xuat
+
+            
             var xoahead = from p in dc.Rptphieuxuatkhoheads
                           where p.username == username
                           select p;
@@ -1019,30 +1023,18 @@ namespace BEEACCOUNT.View
             dc.Rptphieuxuatkhodetail01s.DeleteAllOnSubmit(xoadetail);
             dc.SubmitChanges();
 
+            #endregion xoa detail va head pheiu xuat
 
-
-
-
-            var phieuxuat = (from p in dc.Rptphieuxuatkhoheads
+            
+            var phieuxuat = (from p in dc.tbl_kho_phieuxuat_heads
                              where p.id == this.phieuxuatid
                              select p).FirstOrDefault();
 
-            //   this.dataGridViewListphieuthu.DataSource = phieuthu;
-
-            #region  view reports payment request  
-
-            //Control_ac ctrac = new Control_ac();
-
-            //var rs1 = ctrac.KArptdataset1(dc);
-            //var rs2 = ctrac.KArptdataset2(dc);
-
-
-
+       
             if (phieuxuat != null)
             {
-
-
-                #region  insert vao rpt phieu thu
+                
+                #region  insert vao rpt head
 
                 Rptphieuxuatkhohead pxk = new Rptphieuxuatkhohead();
                 pxk.tencongty = Model.Congty.getnamecongty();
@@ -1051,11 +1043,11 @@ namespace BEEACCOUNT.View
                 pxk.tengiamdoc = Model.Congty.gettengiamdoccongty();
                 pxk.tenketoantruong = Model.Congty.gettenketoantruongcongty();
                 pxk.phieuso = phieuxuat.phieuso;
-                pxk.ngaychungtu = phieuxuat.ngaychungtu;
-                pxk.nguoinhan = phieuxuat.nguoinhan;
+                pxk.ngaychungtu = phieuxuat.ngayphieuxuat;
+                pxk.nguoinhan = phieuxuat.nguoinhanhang;
                 pxk.nguoilapphieu = Utils.getname();
-                pxk.xuattaikho = phieuxuat.xuattaikho;
-                pxk.lydoxuat = phieuxuat.lydoxuat;
+                pxk.xuattaikho = phieuxuat.tenkho;
+                pxk.lydoxuat = phieuxuat.diengiai;
                 pxk.diachibophan = phieuxuat.diachibophan;
                 //      pnk.s = phieunhap.sotien;
                 if (phieuxuat.sotien != null)
@@ -1063,10 +1055,10 @@ namespace BEEACCOUNT.View
                     pxk.sotienbangchu = Utils.ChuyenSo(decimal.Parse(phieuxuat.sotien.ToString()));
                 }
 
-                pxk.sochungtugoc = phieuxuat.sochungtugoc;
+                pxk.sochungtugoc = phieuxuat.hoadondikhem;
                 pxk.username = username;
-                pxk.tkno = phieuxuat.tkno;
-                pxk.tkco = phieuxuat.tkco;
+                pxk.tkno = phieuxuat.notk;
+                pxk.tkco = phieuxuat.cotk;
 
                 dc.Rptphieuxuatkhoheads.InsertOnSubmit(pxk);
                 dc.SubmitChanges();
@@ -1077,8 +1069,7 @@ namespace BEEACCOUNT.View
 
                 #endregion  inserphieu head
 
-
-                #region inser detail phieu thu
+                #region inser detail phieu detail
 
 
 
@@ -1089,21 +1080,21 @@ namespace BEEACCOUNT.View
                                   select p;
                 foreach (var item in detailphieu)
                 {
-                    Rptphieunhapkhodetail01 detail = new Rptphieunhapkhodetail01();
+                    Rptphieuxuatkhodetail01 detail = new Rptphieuxuatkhodetail01();
                     i = i + 1;
                     detail.dongia = item.dongia;
                     detail.donvi = item.donvi;
                     detail.masanpham = item.mahang;
                     detail.soluongthucte = item.soluongxuat;
                     detail.soluongyeucau = item.soluongyeucau;
-                    detail.sophieunhap = item.phieuso;
+                    detail.sophieu = item.phieuso;
                     detail.tensanpham = item.tenhang;
                     detail.thanhtien = item.thanhtien;
                     detail.username = username;
                     detail.stt = i;
 
 
-                    dc.Rptphieunhapkhodetail01s.InsertOnSubmit(detail);
+                    dc.Rptphieuxuatkhodetail01s.InsertOnSubmit(detail);
                     dc.SubmitChanges();
 
                 }
@@ -1114,10 +1105,7 @@ namespace BEEACCOUNT.View
 
                 #endregion inserd detail phiếu thu
 
-
-
-
-
+                
 
                 var datarptphieuxuat = from p in dc.Rptphieuxuatkhoheads
                                        where p.username == username
@@ -1137,8 +1125,15 @@ namespace BEEACCOUNT.View
                 rpt.ShowDialog();
 
             }
+            else
+            {
 
-            #endregion view reports payment request  // 
+                MessageBox.Show("Phieu xuat ID : " + this.phieuxuatid.ToString(), "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+
+            }
+
+
 
         }
 
@@ -1181,7 +1176,7 @@ namespace BEEACCOUNT.View
                 cbcolectiontkno.Add(cb);
             }
 
-            cbtkco.DataSource = cbcolectiontkno; 
+            cbtkco.DataSource = cbcolectiontkno;
 
             #endregion
 
@@ -1232,13 +1227,13 @@ namespace BEEACCOUNT.View
                                      ngaychungtu = p.ngayphieuxuat,
                                      nguoinhan = p.nguoinhanhang,
                                      //    nguoilapphieu = Utils.getname(),
-                                     theodonhang = p.theodonhang,
+                                     lydoxuat = p.diengiai,
                                      diengiai = p.diengiai,
                                      sotien = p.sotien,
                                      //   sotienbangchu = Utils.ChuyenSo(tbl_SoQuy.PsNo.ToString()),
                                      sochungtugoc = p.hoadondikhem,
                                      //    username = Utils.getusername(),
-
+                                     diachibophan = p.diachibophan,
                                      notk = p.notk,
                                      cotk = p.cotk,
                                      machitietno = p.MaCTietTKNo,
@@ -1261,7 +1256,8 @@ namespace BEEACCOUNT.View
                     txtsophieu.Text = phieuxuat.Phieuso.ToString();
                     txttennguoinhan.Text = phieuxuat.nguoinhan;
                     //   txtlydoxuat.Text = phieunhap.ly;
-                    txtlydoxuat.Text = phieuxuat.diengiai;
+                    txtlydoxuat.Text = phieuxuat.lydoxuat;
+                    txtdiachibophan.Text = phieuxuat.diachibophan;
 
                     if (phieuxuat.sotien != null)
                     {
@@ -1312,8 +1308,8 @@ namespace BEEACCOUNT.View
 
                     }
 
-
-
+                    txthoadonkemtheo.Enabled = false;
+                    txtdiachibophan.Enabled = false;
                     datepickngayphieu.Enabled = false;
                     txtsophieu.Enabled = false;
                     txttennguoinhan.Enabled = false;
@@ -1399,7 +1395,7 @@ namespace BEEACCOUNT.View
 
             if (phieuxuathead != null)
             {
-                this.phieuxuatid = phieuxuathead.id;
+                //      this.phieuxuatid = phieuxuathead.id;
 
                 dc.tbl_kho_phieuxuat_heads.DeleteOnSubmit(phieuxuathead);
                 dc.SubmitChanges();
@@ -1473,8 +1469,8 @@ namespace BEEACCOUNT.View
                 this.maphieuthuOld = txtsophieu.Text.ToString();
             }
 
-
-            //  txtquyenso.Enabled = true;
+            txtdiachibophan.Enabled = true;
+            txthoadonkemtheo.Enabled = true;
             cbkhohang.Enabled = true;
             txttennguoinhan.Enabled = true;
             txtlydoxuat.Enabled = true;

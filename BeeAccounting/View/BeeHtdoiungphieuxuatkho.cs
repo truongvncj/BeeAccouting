@@ -13,7 +13,7 @@ namespace BEEACCOUNT.View
     public partial class BeeHtdoiungphieuxuatkho : Form
     {
         //    View.BeePhieuThu phieuchi;
-        View.BeeHtdoiungphieuxuatkho phieuxuatkho;
+        View.BeeKhophieuxuat phieuxuatkho;
         public int tkcochitiet { get; set; }
         public bool click { get; set; }
 
@@ -31,7 +31,7 @@ namespace BEEACCOUNT.View
      //   public double pssotienno { get; set; }
         public double sotien { get; set; }
 
-        public BeeHtdoiungphieuxuatkho(View.BeeHtdoiungphieuxuatkho phieuxuatkho, string labe1, string labe2, string labe3)
+        public BeeHtdoiungphieuxuatkho(View.BeeKhophieuxuat phieuxuatkho, string labe1, string labe2, string labe3)
         {
 
 
@@ -342,7 +342,7 @@ namespace BEEACCOUNT.View
             LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
 
 
-            tbl_kho_phieunhap_detail sanpham = new tbl_kho_phieunhap_detail();
+            tbl_kho_phieuxuat_detail sanpham = new tbl_kho_phieuxuat_detail();
 
             //if (this.cb_channel.SelectedItem != null)
             if (cbmasanpham.SelectedItem != null)
@@ -361,7 +361,7 @@ namespace BEEACCOUNT.View
             {
                 sanpham.donvi = txtdonvi.Text;
                 sanpham.tenhang = txttensanpham.Text;
-                sanpham.soluongnhap = double.Parse(txtsoluong.Text.Trim());
+                sanpham.soluongxuat = double.Parse(txtsoluong.Text.Trim());
             }
             else
             {
@@ -395,7 +395,7 @@ namespace BEEACCOUNT.View
 
 
 
-     // ??!       this.phieuxuatkho.add_detailGridviewPNkho(sanpham);
+           this.phieuxuatkho.add_detailGridviewPXkho(sanpham);
 
             //       txtTongco.Text = phieunhapkho.pssotienco.ToString("#,#", CultureInfo.InvariantCulture);
             //  this.pssotienco = phieunhapkho.pssotienco;

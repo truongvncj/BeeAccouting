@@ -227,7 +227,7 @@
             // 
             // button25
             // 
-            this.button25.BackColor = System.Drawing.Color.Transparent;
+            this.button25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.button25.Location = new System.Drawing.Point(13, 233);
             this.button25.Name = "button25";
             this.button25.Size = new System.Drawing.Size(157, 22);
@@ -238,7 +238,7 @@
             // 
             // button20
             // 
-            this.button20.BackColor = System.Drawing.Color.Transparent;
+            this.button20.BackColor = System.Drawing.Color.Red;
             this.button20.Location = new System.Drawing.Point(13, 205);
             this.button20.Name = "button20";
             this.button20.Size = new System.Drawing.Size(157, 22);
@@ -714,7 +714,7 @@
             // 
             // button41
             // 
-            this.button41.BackColor = System.Drawing.Color.Red;
+            this.button41.BackColor = System.Drawing.Color.WhiteSmoke;
             this.button41.Location = new System.Drawing.Point(25, 155);
             this.button41.Name = "button41";
             this.button41.Size = new System.Drawing.Size(166, 22);
