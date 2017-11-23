@@ -1565,55 +1565,55 @@ namespace BEEACCOUNT.Model
                         {
                             stt = stt + 1;
 
-                            RptdetaiTHchitiet detail = new RptdetaiTHchitiet();
+                            //RptdetaiTHchitiet detail = new RptdetaiTHchitiet();
 
 
-                            detail.machitiet = item.machitiet;
-                            detail.tenchitiet = item.tenchitiet;
+                            //detail.machitiet = item.machitiet;
+                            //detail.tenchitiet = item.tenchitiet;
 
-                            detail.stt = stt;
-                            detail.Codk = (from tbl_Socai in dc.tbl_Socais
-                                           where tbl_Socai.Ngayctu < fromdate
-                                           && tbl_Socai.TkCo.Trim() == mataikhoan
-                                           && tbl_Socai.MaCTietTKCo == item.machitiet
-                                           select tbl_Socai.PsCo).Sum().GetValueOrDefault(0) + (from p in dc.tbl_machitiettks
-                                                                                                where p.matk == mataikhoan
-                                                                                                && p.machitiet == item.machitiet
-                                                                                                select p.codk).FirstOrDefault();
+                            //detail.stt = stt;
+                            //detail.Codk = (from tbl_Socai in dc.tbl_Socais
+                            //               where tbl_Socai.Ngayctu < fromdate
+                            //               && tbl_Socai.TkCo.Trim() == mataikhoan
+                            //               && tbl_Socai.MaCTietTKCo == item.machitiet
+                            //               select tbl_Socai.PsCo).Sum().GetValueOrDefault(0) + (from p in dc.tbl_machitiettks
+                            //                                                                    where p.matk == mataikhoan
+                            //                                                                    && p.machitiet == item.machitiet
+                            //                                                                    select p.codk).FirstOrDefault();
 
-                            detail.Nodk = (from tbl_Socai in dc.tbl_Socais
-                                           where tbl_Socai.Ngayctu < fromdate
-                                           && tbl_Socai.TkNo.Trim() == mataikhoan
-                                           && tbl_Socai.MaCTietTKNo == item.machitiet
-                                           select tbl_Socai.PsNo).Sum().GetValueOrDefault(0) + (from p in dc.tbl_machitiettks
-                                                                                                where p.matk == mataikhoan
-                                                                                                && p.machitiet == item.machitiet
-                                                                                                select p.nodk).FirstOrDefault().GetValueOrDefault(0);
+                            //detail.Nodk = (from tbl_Socai in dc.tbl_Socais
+                            //               where tbl_Socai.Ngayctu < fromdate
+                            //               && tbl_Socai.TkNo.Trim() == mataikhoan
+                            //               && tbl_Socai.MaCTietTKNo == item.machitiet
+                            //               select tbl_Socai.PsNo).Sum().GetValueOrDefault(0) + (from p in dc.tbl_machitiettks
+                            //                                                                    where p.matk == mataikhoan
+                            //                                                                    && p.machitiet == item.machitiet
+                            //                                                                    select p.nodk).FirstOrDefault().GetValueOrDefault(0);
 
-                            detail.Psco = (from tbl_Socai in dc.tbl_Socais
-                                           where tbl_Socai.Ngayctu >= fromdate
-                                           && tbl_Socai.Ngayctu <= todate
-                                           && tbl_Socai.TkCo.Trim() == mataikhoan
-                                           && tbl_Socai.MaCTietTKCo == item.machitiet
-                                           select tbl_Socai.PsCo).Sum().GetValueOrDefault(0);
+                            //detail.Psco = (from tbl_Socai in dc.tbl_Socais
+                            //               where tbl_Socai.Ngayctu >= fromdate
+                            //               && tbl_Socai.Ngayctu <= todate
+                            //               && tbl_Socai.TkCo.Trim() == mataikhoan
+                            //               && tbl_Socai.MaCTietTKCo == item.machitiet
+                            //               select tbl_Socai.PsCo).Sum().GetValueOrDefault(0);
 
-                            detail.Psno = (from tbl_Socai in dc.tbl_Socais
-                                           where tbl_Socai.Ngayctu >= fromdate
-                                           && tbl_Socai.Ngayctu <= todate
-                                           && tbl_Socai.TkNo.Trim() == mataikhoan
-                                           && tbl_Socai.MaCTietTKNo == item.machitiet
-                                           select tbl_Socai.PsNo).Sum().GetValueOrDefault(0);
-
-
-                            detail.Cock = detail.Codk + detail.Psco;
-
-                            detail.Nock = detail.Nodk + detail.Psno;
-
-                            detail.username = username;
+                            //detail.Psno = (from tbl_Socai in dc.tbl_Socais
+                            //               where tbl_Socai.Ngayctu >= fromdate
+                            //               && tbl_Socai.Ngayctu <= todate
+                            //               && tbl_Socai.TkNo.Trim() == mataikhoan
+                            //               && tbl_Socai.MaCTietTKNo == item.machitiet
+                            //               select tbl_Socai.PsNo).Sum().GetValueOrDefault(0);
 
 
-                            dc.RptdetaiTHchitiets.InsertOnSubmit(detail);
-                            dc.SubmitChanges();
+                            //detail.Cock = detail.Codk + detail.Psco;
+
+                            //detail.Nock = detail.Nodk + detail.Psno;
+
+                            //detail.username = username;
+
+
+                            //dc.RptdetaiTHchitiets.InsertOnSubmit(detail);
+                            //dc.SubmitChanges();
 
 
 
