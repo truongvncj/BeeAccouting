@@ -518,7 +518,7 @@ namespace BEEACCOUNT.Model
 
 
 
-                View.Beeselecttk Beeselecttk = new View.Beeselecttk("tienmat");
+                View.Beeselecttk Beeselecttk = new View.Beeselecttk("tien");
                 Beeselecttk.ShowDialog();
 
                 chon = Beeselecttk.chon;
