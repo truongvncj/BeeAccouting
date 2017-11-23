@@ -1070,5 +1070,10 @@ namespace BEEACCOUNT.View
             //    panelmain.Controls.Add(accsup);
             //    accsup.Show();
         }
+
+        private void button25_Click(object sender, EventArgs e)
+        {
+            Model.Soketoan.sotonghopbaocaonhapxuatton();
+        }
     }
 }

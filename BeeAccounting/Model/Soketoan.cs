@@ -1452,7 +1452,222 @@ namespace BEEACCOUNT.Model
         }
 
 
+        public static void sotonghopbaocaonhapxuatton()
+        {
+            string connection_string = Utils.getConnectionstr();
+            string username = Utils.getusername();
+            //  var db = new LinqtoSQLDataContext(connection_string);
+            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
 
+
+            #region  chọn sổ kho
+
+
+            FormCollection fc = System.Windows.Forms.Application.OpenForms;
+            bool chon;
+            bool kq = false;
+            foreach (Form frm in fc)
+            {
+
+                if (frm.Text == "Chọn kho")
+                {
+                    kq = true;
+                    frm.Focus();
+
+                }
+            }
+
+            if (!kq)
+            {
+
+
+                View.Beeseleckhobcxnt Beeseleckhohang = new View.Beeseleckhobcxnt();
+                Beeseleckhohang.ShowDialog();
+
+                chon = Beeseleckhohang.chon;
+                DateTime fromdate = Beeseleckhohang.fromdate;
+                DateTime todate = Beeseleckhohang.todate;
+
+                string makho = Beeseleckhohang.makho;
+                string tenkho = Beeseleckhohang.tenkho;
+
+
+
+                if (chon)
+                {
+                    #region showreport
+
+                    #region     // xoa data cũ
+
+                    //    string username = Utils.getusername();
+
+                    var listRptthchitiet = from p in dc.RptdetaiTHxuatnhaptons
+                                           where p.username == username
+                                           select p;
+
+                    dc.RptdetaiTHxuatnhaptons.DeleteAllOnSubmit(listRptthchitiet);
+                    dc.SubmitChanges();
+
+
+                    var listrptheadchitiet = from p in dc.RPtheadTHxuatnhaptons
+                                             where p.username == username
+                                             select p;
+
+                    dc.RPtheadTHxuatnhaptons.DeleteAllOnSubmit(listrptheadchitiet);
+                    dc.SubmitChanges();
+                    #endregion          // xoa data cũ
+
+
+
+                    #region  // update head mới  
+
+
+                    RPtheadTHxuatnhapton headTHxnhapton = new RPtheadTHxuatnhapton();
+
+
+                    headTHxnhapton.taikhoan = tenkho.Trim(); //mataikhoan.Trim() + "-" + 
+                    headTHxnhapton.tencongty = Model.Congty.getnamecongty();
+                    headTHxnhapton.username = username;
+                    headTHxnhapton.diachicongty = Model.Congty.getdiachicongty();
+                    headTHxnhapton.masothue = Model.Congty.getmasothuecongty();
+                    headTHxnhapton.tungay = fromdate;
+                    headTHxnhapton.denngay = todate;
+                    
+                    dc.RPtheadTHxuatnhaptons.InsertOnSubmit(headTHxnhapton);
+                    dc.SubmitChanges();
+
+
+
+
+                    var header = from p in dc.RPtheadTHchitiets
+                                 where p.username == username
+                                 select p;
+
+
+                    Utils ut = new Utils();
+                    var dataset1 = ut.ToDataTable(dc, header);
+
+                    #endregion  // update head mới  
+
+                    #region  update data detail mới
+
+
+              
+
+                    var chitiet = from p in dc.tbl_machitiettks
+                                  where p.matk == makho
+                                  select p;
+
+                    if (chitiet.Count() > 0)
+                    {
+                        int stt = 0;
+                        foreach (var item in chitiet)
+                        {
+                            stt = stt + 1;
+
+                            RptdetaiTHchitiet detail = new RptdetaiTHchitiet();
+
+
+                            detail.machitiet = item.machitiet;
+                            detail.tenchitiet = item.tenchitiet;
+
+                            detail.stt = stt;
+                            detail.Codk = (from tbl_Socai in dc.tbl_Socais
+                                           where tbl_Socai.Ngayctu < fromdate
+                                           && tbl_Socai.TkCo.Trim() == mataikhoan
+                                           && tbl_Socai.MaCTietTKCo == item.machitiet
+                                           select tbl_Socai.PsCo).Sum().GetValueOrDefault(0) + (from p in dc.tbl_machitiettks
+                                                                                                where p.matk == mataikhoan
+                                                                                                && p.machitiet == item.machitiet
+                                                                                                select p.codk).FirstOrDefault();
+
+                            detail.Nodk = (from tbl_Socai in dc.tbl_Socais
+                                           where tbl_Socai.Ngayctu < fromdate
+                                           && tbl_Socai.TkNo.Trim() == mataikhoan
+                                           && tbl_Socai.MaCTietTKNo == item.machitiet
+                                           select tbl_Socai.PsNo).Sum().GetValueOrDefault(0) + (from p in dc.tbl_machitiettks
+                                                                                                where p.matk == mataikhoan
+                                                                                                && p.machitiet == item.machitiet
+                                                                                                select p.nodk).FirstOrDefault().GetValueOrDefault(0);
+
+                            detail.Psco = (from tbl_Socai in dc.tbl_Socais
+                                           where tbl_Socai.Ngayctu >= fromdate
+                                           && tbl_Socai.Ngayctu <= todate
+                                           && tbl_Socai.TkCo.Trim() == mataikhoan
+                                           && tbl_Socai.MaCTietTKCo == item.machitiet
+                                           select tbl_Socai.PsCo).Sum().GetValueOrDefault(0);
+
+                            detail.Psno = (from tbl_Socai in dc.tbl_Socais
+                                           where tbl_Socai.Ngayctu >= fromdate
+                                           && tbl_Socai.Ngayctu <= todate
+                                           && tbl_Socai.TkNo.Trim() == mataikhoan
+                                           && tbl_Socai.MaCTietTKNo == item.machitiet
+                                           select tbl_Socai.PsNo).Sum().GetValueOrDefault(0);
+
+
+                            detail.Cock = detail.Codk + detail.Psco;
+
+                            detail.Nock = detail.Nodk + detail.Psno;
+
+                            detail.username = username;
+
+
+                            dc.RptdetaiTHchitiets.InsertOnSubmit(detail);
+                            dc.SubmitChanges();
+
+
+
+
+
+
+
+
+                        }
+                      
+
+                    }
+
+
+                    #endregion update data detail region
+
+                    var rptdetail = from p in dc.RptdetaiTHxuatnhaptons
+                                    where p.username == username
+                                    orderby p.stt
+
+                                    select p;
+
+
+
+                    var dataset2 = ut.ToDataTable(dc, rptdetail);
+
+
+
+                    Reportsview rpt = new Reportsview(dataset1, dataset2, "Sotonghopxuatnhapton.rdlc");
+
+
+
+                    rpt.ShowDialog();
+
+
+                    #endregion showreports
+
+
+
+
+                }
+
+
+            }
+
+
+
+
+
+            #endregion
+
+
+
+        }
 
     }
 }

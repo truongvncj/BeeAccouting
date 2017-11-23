@@ -148,7 +148,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>SỔ TỔNG HỢP TÀI KHOẢN CHI TIẾT </Value>
+                <Value>SỔ TỔNG HỢP TÀI KHOẢN CHI TIẾT  </Value>
                 <Style>
                   <FontStyle>Normal</FontStyle>
                   <FontFamily>Times New Roman</FontFamily>
@@ -725,7 +725,6 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -1906,7 +1905,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>DataSet1</rd:DataSetName>
-        <rd:SchemaPath>D:\Product\BeeAccouting\BeeAccounting\Reports\dsCallogs.xsd</rd:SchemaPath>
+        <rd:SchemaPath>E:\Product\BeeAccouting\BeeAccounting\Reports\dsCallogs.xsd</rd:SchemaPath>
         <rd:TableName>RPtheadTHchitiet</rd:TableName>
         <rd:TableAdapterFillMethod />
         <rd:TableAdapterGetDataMethod />
@@ -1958,7 +1957,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>DataSet1</rd:DataSetName>
-        <rd:SchemaPath>D:\Product\BeeAccouting\BeeAccounting\Reports\dsCallogs.xsd</rd:SchemaPath>
+        <rd:SchemaPath>E:\Product\BeeAccouting\BeeAccounting\Reports\dsCallogs.xsd</rd:SchemaPath>
         <rd:TableName>RptdetaiTHchitiet</rd:TableName>
         <rd:TableAdapterFillMethod />
         <rd:TableAdapterGetDataMethod />
