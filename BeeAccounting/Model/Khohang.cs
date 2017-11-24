@@ -153,12 +153,16 @@ namespace BEEACCOUNT.Model
                      {
 
                          Mã_sản_phẩm = p.masp,
+                         Mã_kho_hàng = p.makho,
+                         Tên_kho_hàng = p.tenkho,
                          Tên_sản_phẩm = p.tensp,
                          Mã_vạch = p.mavach,
                          Đơn_vị = p.donvi,
                          KHối_lượng = p.khoiluong,
                          Trọng_lượng = p.trongluong,
                          Mã_nhóm_sản_phẩm = p.idmanhomsp,
+                         Số_lượng_tồn_đầu = p.tondksoluong,
+                         Thành_tiên_tồn_đầu = p.tondkthanhtien,
                          Ghi_chú = p.ghichu,
 
 

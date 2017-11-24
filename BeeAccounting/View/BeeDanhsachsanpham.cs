@@ -19,12 +19,17 @@ namespace BEEACCOUNT.View
         public string masanpham { get; set; }
         public string tensanpham { get; set; }
 
+        public string makho { get; set; }
+        public string tenkho { get; set; }
+
         public string mavach { get; set; }
         public string donvi { get; set; }
 
 
         public float trongluong { get; set; }
         public float khoiluong { get; set; }
+        public float daukhysoluong { get; set; }
+        public float daukythanhtien { get; set; }
 
         public string idnhomsanpham { get; set; }
         public string ghichu { get; set; }
@@ -49,13 +54,35 @@ namespace BEEACCOUNT.View
             InitializeComponent();
 
             chon = false;
+        //    cbkhohang
 
 
-
-            #region load nhóm sản phẩm
+            #region load nhóm kho
 
             string connection_string = Utils.getConnectionstr();
             LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+            var listkho = from p in dc.tbl_khohangs
+                          //   where tk.loaitkid == 5 || tk.loaitkid == 9 || tk.loaitkid == 7  // 5.nguon von;  7 phai tra; 9. tam ung
+                      select p;
+
+            //      string drowdownshow = "";
+
+            foreach (var item in listkho)
+            {
+                ComboboxItem cbkho = new ComboboxItem();
+                cbkho.Value = item.makho;
+                cbkho.Text = item.makho.Trim() + ": " + item.tenkho;
+                this.cbkhohang.Items.Add(cbkho); // CombomCollection.Add(cb);
+
+            }
+
+            #endregion load tk kho
+
+            #region load nhóm sản phẩm
+
+      //      string connection_string = Utils.getConnectionstr();
+          //  LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
 
             var rs1 = from p in dc.tbl_kho_nhomsanphams
                           //   where tk.loaitkid == 5 || tk.loaitkid == 9 || tk.loaitkid == 7  // 5.nguon von;  7 phai tra; 9. tam ung
@@ -67,7 +94,7 @@ namespace BEEACCOUNT.View
             {
                 ComboboxItem cb = new ComboboxItem();
                 cb.Value = item.manhomsanpham;
-                cb.Text = item.manhomsanpham + ":" + item.tennhomsanpham;
+                cb.Text = item.manhomsanpham.Trim() + ": " + item.tennhomsanpham;
                 this.txtnhomsanpham.Items.Add(cb); // CombomCollection.Add(cb);
 
             }
@@ -314,6 +341,7 @@ namespace BEEACCOUNT.View
                 MessageBox.Show("Bạn kiểm tra mã sản phẩm", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+
             this.mavach = txtmavach.Text;
             this.masanpham = this.txtmasanpham.Text;
             this.tensanpham = this.txttensanpham.Text;
