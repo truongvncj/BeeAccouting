@@ -302,7 +302,7 @@ namespace BEEACCOUNT.Model
         }
 
 
-        public static DataGridView reloaddetailnewPNK(DataGridView dataGridViewdetailPNK)
+        public static DataGridView reloaddetailnewPNK(DataGridView dataGridViewdetailPNK, string makho)
         {
 
 
@@ -358,7 +358,7 @@ namespace BEEACCOUNT.Model
             List<View.BeeKhophieunhap.ComboboxItem> CombomCollection = new List<View.BeeKhophieunhap.ComboboxItem>();
 
             var rs = from p in dc.tbl_kho_sanphams
-
+                     where p.makho == makho
                      orderby p.masp
                      select p;
             foreach (var item in rs)
@@ -473,7 +473,7 @@ namespace BEEACCOUNT.Model
             //  throw new NotImplementedException();
         }
 
-        public static DataGridView reloaddetailnewPXK(DataGridView dataGridViewdetailPXK)
+        public static DataGridView reloaddetailnewPXK(DataGridView dataGridViewdetailPXK, string makho)
         {
 
 
@@ -529,6 +529,7 @@ namespace BEEACCOUNT.Model
             List<View.BeeKhophieuxuat.ComboboxItem> CombomCollection = new List<View.BeeKhophieuxuat.ComboboxItem>();
 
             var rs = from p in dc.tbl_kho_sanphams
+                     where p.makho == makho
 
                      orderby p.masp
                      select p;

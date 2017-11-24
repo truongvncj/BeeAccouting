@@ -8535,7 +8535,7 @@ namespace BEEACCOUNT.Reports {
             
             private global::System.Data.DataColumn columndiachicongty;
             
-            private global::System.Data.DataColumn columntaikhoan;
+            private global::System.Data.DataColumn columnkho;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -8612,9 +8612,9 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn taikhoanColumn {
+            public global::System.Data.DataColumn khoColumn {
                 get {
-                    return this.columntaikhoan;
+                    return this.columnkho;
                 }
             }
             
@@ -8655,7 +8655,7 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public RPtheadTHXNTRow AddRPtheadTHXNTRow(System.DateTime tungay, System.DateTime denngay, string tencongty, string masothue, string diachicongty, string taikhoan) {
+            public RPtheadTHXNTRow AddRPtheadTHXNTRow(System.DateTime tungay, System.DateTime denngay, string tencongty, string masothue, string diachicongty, string kho) {
                 RPtheadTHXNTRow rowRPtheadTHXNTRow = ((RPtheadTHXNTRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         tungay,
@@ -8663,7 +8663,7 @@ namespace BEEACCOUNT.Reports {
                         tencongty,
                         masothue,
                         diachicongty,
-                        taikhoan};
+                        kho};
                 rowRPtheadTHXNTRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowRPtheadTHXNTRow);
                 return rowRPtheadTHXNTRow;
@@ -8691,7 +8691,7 @@ namespace BEEACCOUNT.Reports {
                 this.columntencongty = base.Columns["tencongty"];
                 this.columnmasothue = base.Columns["masothue"];
                 this.columndiachicongty = base.Columns["diachicongty"];
-                this.columntaikhoan = base.Columns["taikhoan"];
+                this.columnkho = base.Columns["kho"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8707,8 +8707,8 @@ namespace BEEACCOUNT.Reports {
                 base.Columns.Add(this.columnmasothue);
                 this.columndiachicongty = new global::System.Data.DataColumn("diachicongty", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndiachicongty);
-                this.columntaikhoan = new global::System.Data.DataColumn("taikhoan", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columntaikhoan);
+                this.columnkho = new global::System.Data.DataColumn("kho", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnkho);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -15677,17 +15677,17 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string taikhoan {
+            public string kho {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtheadTHXNT.taikhoanColumn]));
+                        return ((string)(this[this.tableRPtheadTHXNT.khoColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'taikhoan\' in table \'RPtheadTHXNT\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'kho\' in table \'RPtheadTHXNT\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableRPtheadTHXNT.taikhoanColumn] = value;
+                    this[this.tableRPtheadTHXNT.khoColumn] = value;
                 }
             }
             
@@ -15753,14 +15753,14 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IstaikhoanNull() {
-                return this.IsNull(this.tableRPtheadTHXNT.taikhoanColumn);
+            public bool IskhoNull() {
+                return this.IsNull(this.tableRPtheadTHXNT.khoColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SettaikhoanNull() {
-                this[this.tableRPtheadTHXNT.taikhoanColumn] = global::System.Convert.DBNull;
+            public void SetkhoNull() {
+                this[this.tableRPtheadTHXNT.khoColumn] = global::System.Convert.DBNull;
             }
         }
         

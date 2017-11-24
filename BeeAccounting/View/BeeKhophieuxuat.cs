@@ -15,6 +15,8 @@ namespace BEEACCOUNT.View
     {
         public int statusphieuxuat { get; set; } // mới  // 2 suawra // 3 display //
         public int phieuxuatid { get; set; }
+
+        public string makho { get; set; }
         public string sophieuxuat { get; set; }
         public string tkno { get; set; }
         public int tknochitiet { get; set; }
@@ -134,14 +136,14 @@ namespace BEEACCOUNT.View
             //    txttaikhoanco.Text = "";
             lb_machitietco.Text = "";
             lbtenchitietco.Text = "";
-
+            this.makho = null;
             txtsophieu.Focus();
-
+            txthoadonkemtheo.Text = "";
 
             this.phieuxuatid = -1;
 
             this.statusphieuxuat = 1; // tạo mới
-            dataGridViewTkCo = Model.Khohang.reloaddetailnewPXK(dataGridViewTkCo);
+            dataGridViewTkCo = Model.Khohang.reloaddetailnewPXK(dataGridViewTkCo, this.makho);
             #endregion
 
         }
@@ -220,7 +222,7 @@ namespace BEEACCOUNT.View
 
                 if (!kq)
                 {
-                View.BeeHtdoiungphieuxuatkho BeeHtdoiungphieuxuatkho = new BeeHtdoiungphieuxuatkho(this, "Địa chỉ", "", "");
+                    View.BeeHtdoiungphieuxuatkho BeeHtdoiungphieuxuatkho = new BeeHtdoiungphieuxuatkho(this, "Địa chỉ", "", "");
                     BeeHtdoiungphieuxuatkho.Show();
                 }
 
@@ -261,7 +263,11 @@ namespace BEEACCOUNT.View
 
             this.lbtenchitietco.Text = "";
             lb_machitietco.Text = "";
-
+            if (cbkhohang.SelectedItem != null)
+            {
+                this.makho = (cbkhohang.SelectedItem as ComboboxItem).Value.ToString();
+            }
+      
 
             #region load tk nợ
 
@@ -343,7 +349,9 @@ namespace BEEACCOUNT.View
 
 
             //       dataGridViewTkCo.DataSource = Model.Khohang.danhsachphieunhapkho(dc);
-            dataGridViewTkCo = Model.Khohang.reloaddetailnewPXK(dataGridViewTkCo);
+         
+
+            dataGridViewTkCo = Model.Khohang.reloaddetailnewPXK(dataGridViewTkCo, this.makho);
 
             dataGridViewListPNK.DataSource = Model.Khohang.danhsachphieuxuatkho(dc);
 
@@ -697,7 +705,7 @@ namespace BEEACCOUNT.View
 
             }
 
-            
+
 
             if (txtlydoxuat.Text == "")
             {
@@ -727,7 +735,13 @@ namespace BEEACCOUNT.View
 
             }
 
-
+            if (this.makho == null)
+            {
+                MessageBox.Show("Bạn chưa chọn kho hàng !", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                checkdinhkhoan = false;
+                cbkhohang.Focus();
+                return;
+            }
             #endregion  end check chi tiết phieu thu
 
             #region     // save head phieu xuat
@@ -738,12 +752,13 @@ namespace BEEACCOUNT.View
                 tbl_kho_phieuxuat_head headphieuxuat = new tbl_kho_phieuxuat_head();
                 headphieuxuat.phieuso = txtsophieu.Text.Trim();
 
-         //       headphieuxuat.diengiai = txtlydoxuat.Text;
+                //       headphieuxuat.diengiai = txtlydoxuat.Text;
                 headphieuxuat.createby = Utils.getusername();
                 headphieuxuat.createdate = DateTime.Today;
                 headphieuxuat.diengiai = txtlydoxuat.Text.Trim();
                 headphieuxuat.hoadondikhem = txthoadonkemtheo.Text;
                 headphieuxuat.makho = (cbkhohang.SelectedItem as ComboboxItem).Value.ToString();
+
                 headphieuxuat.tenkho = (cbkhohang.SelectedItem as ComboboxItem).Text.ToString();
                 headphieuxuat.diachibophan = txtdiachibophan.Text;
 
@@ -787,6 +802,9 @@ namespace BEEACCOUNT.View
 
                 tbl_kho_phieuxuat_detail detail = new tbl_kho_phieuxuat_detail();
 
+                detail.ngayphieuxuat = datepickngayphieu.Value;
+
+                detail.makho = (cbkhohang.SelectedItem as ComboboxItem).Value.ToString();
                 detail.dongia = float.Parse(dataGridViewTkCo.Rows[idrow].Cells["Đơn_giá"].Value.ToString());
                 detail.donvi = dataGridViewTkCo.Rows[idrow].Cells["Đơn_vị"].Value.ToString();
                 detail.mahang = dataGridViewTkCo.Rows[idrow].Cells["masanpham"].Value.ToString();
@@ -868,10 +886,10 @@ namespace BEEACCOUNT.View
 
         private void cbtkno_SelectionChangeCommitted(object sender, EventArgs e)
         {
-          
+
 
             string taikhoan = (cbtkno.SelectedItem as ComboboxItem).Value.ToString();
-        
+
 
             string connection_string = Utils.getConnectionstr();
             LinqtoSQLDataContext db = new LinqtoSQLDataContext(connection_string);
@@ -1006,7 +1024,7 @@ namespace BEEACCOUNT.View
 
             #region xoa detail va head phieu xuat
 
-            
+
             var xoahead = from p in dc.Rptphieuxuatkhoheads
                           where p.username == username
                           select p;
@@ -1025,15 +1043,15 @@ namespace BEEACCOUNT.View
 
             #endregion xoa detail va head pheiu xuat
 
-            
+
             var phieuxuat = (from p in dc.tbl_kho_phieuxuat_heads
                              where p.id == this.phieuxuatid
                              select p).FirstOrDefault();
 
-       
+
             if (phieuxuat != null)
             {
-                
+
                 #region  insert vao rpt head
 
                 Rptphieuxuatkhohead pxk = new Rptphieuxuatkhohead();
@@ -1105,7 +1123,7 @@ namespace BEEACCOUNT.View
 
                 #endregion inserd detail phiếu thu
 
-                
+
 
                 var datarptphieuxuat = from p in dc.Rptphieuxuatkhoheads
                                        where p.username == username
@@ -1329,7 +1347,7 @@ namespace BEEACCOUNT.View
                 }
 
 
-                dataGridViewTkCo = Model.Khohang.reloaddetailnewPXK(dataGridViewTkCo);
+                dataGridViewTkCo = Model.Khohang.reloaddetailnewPXK(dataGridViewTkCo, this.makho);
 
                 #region adđ detail san phẩm
                 //     add_detailGridviewPNkho(tbl_kho_phieunhap_detail sanpham)
@@ -1705,12 +1723,13 @@ namespace BEEACCOUNT.View
 
                     string connection_string = Utils.getConnectionstr();
                     LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
-
-
+              
                     var sp = (from p in dc.tbl_kho_sanphams
                               where p.masp == SelectedItem
+                              && p.makho == this.makho
                               orderby p.masp
                               select p).FirstOrDefault();
+
 
                     if (sp != null)
                     {
@@ -2422,6 +2441,19 @@ namespace BEEACCOUNT.View
 
 
             tabControl1.SelectedTab = tabPage1;
+        }
+
+        private void cbkhohang_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if (cbkhohang.SelectedItem != null)
+            {
+                this.makho = (cbkhohang.SelectedItem as ComboboxItem).Value.ToString();
+            }
+            else
+            {
+                this.makho = null;
+            }
+            dataGridViewTkCo = Model.Khohang.reloaddetailnewPXK(dataGridViewTkCo, this.makho);
         }
     }
 }

@@ -1302,7 +1302,7 @@ namespace BEEACCOUNT.Model
 
                 if (chon)
                 {
-                    
+
                     #region showreport
                     // xoa data cũ
                     //    string username = Utils.getusername();
@@ -1444,7 +1444,7 @@ namespace BEEACCOUNT.Model
 
                     #endregion showreports
 
-                    
+
                 }
 
 
@@ -1525,21 +1525,21 @@ namespace BEEACCOUNT.Model
                     RPtheadTHxuatnhapton headTHxnhapton = new RPtheadTHxuatnhapton();
 
 
-                    headTHxnhapton.taikhoan = tenkho.Trim(); //mataikhoan.Trim() + "-" + 
+                    headTHxnhapton.kho = tenkho.Trim(); //mataikhoan.Trim() + "-" + 
                     headTHxnhapton.tencongty = Model.Congty.getnamecongty();
                     headTHxnhapton.username = username;
                     headTHxnhapton.diachicongty = Model.Congty.getdiachicongty();
                     headTHxnhapton.masothue = Model.Congty.getmasothuecongty();
                     headTHxnhapton.tungay = fromdate;
                     headTHxnhapton.denngay = todate;
-                    
+
                     dc.RPtheadTHxuatnhaptons.InsertOnSubmit(headTHxnhapton);
                     dc.SubmitChanges();
 
 
 
 
-                    var header = from p in dc.RPtheadTHchitiets
+                    var header = from p in dc.RPtheadTHxuatnhaptons
                                  where p.username == username
                                  select p;
 
@@ -1552,68 +1552,113 @@ namespace BEEACCOUNT.Model
                     #region  update data detail mới
 
 
-              
 
-                    var chitiet = from p in dc.tbl_machitiettks
-                                  where p.matk == makho
+
+                    var sanpham = from p in dc.tbl_kho_sanphams
+                                  where p.makho == makho
                                   select p;
 
-                    if (chitiet.Count() > 0)
+                    if (sanpham.Count() > 0)
                     {
                         int stt = 0;
-                        foreach (var item in chitiet)
+                        foreach (var item in sanpham)
                         {
                             stt = stt + 1;
+                            RptdetaiTHxuatnhapton detail = new RptdetaiTHxuatnhapton();
 
-                            //RptdetaiTHchitiet detail = new RptdetaiTHchitiet();
-
-
-                            //detail.machitiet = item.machitiet;
-                            //detail.tenchitiet = item.tenchitiet;
-
-                            //detail.stt = stt;
-                            //detail.Codk = (from tbl_Socai in dc.tbl_Socais
-                            //               where tbl_Socai.Ngayctu < fromdate
-                            //               && tbl_Socai.TkCo.Trim() == mataikhoan
-                            //               && tbl_Socai.MaCTietTKCo == item.machitiet
-                            //               select tbl_Socai.PsCo).Sum().GetValueOrDefault(0) + (from p in dc.tbl_machitiettks
-                            //                                                                    where p.matk == mataikhoan
-                            //                                                                    && p.machitiet == item.machitiet
-                            //                                                                    select p.codk).FirstOrDefault();
-
-                            //detail.Nodk = (from tbl_Socai in dc.tbl_Socais
-                            //               where tbl_Socai.Ngayctu < fromdate
-                            //               && tbl_Socai.TkNo.Trim() == mataikhoan
-                            //               && tbl_Socai.MaCTietTKNo == item.machitiet
-                            //               select tbl_Socai.PsNo).Sum().GetValueOrDefault(0) + (from p in dc.tbl_machitiettks
-                            //                                                                    where p.matk == mataikhoan
-                            //                                                                    && p.machitiet == item.machitiet
-                            //                                                                    select p.nodk).FirstOrDefault().GetValueOrDefault(0);
-
-                            //detail.Psco = (from tbl_Socai in dc.tbl_Socais
-                            //               where tbl_Socai.Ngayctu >= fromdate
-                            //               && tbl_Socai.Ngayctu <= todate
-                            //               && tbl_Socai.TkCo.Trim() == mataikhoan
-                            //               && tbl_Socai.MaCTietTKCo == item.machitiet
-                            //               select tbl_Socai.PsCo).Sum().GetValueOrDefault(0);
-
-                            //detail.Psno = (from tbl_Socai in dc.tbl_Socais
-                            //               where tbl_Socai.Ngayctu >= fromdate
-                            //               && tbl_Socai.Ngayctu <= todate
-                            //               && tbl_Socai.TkNo.Trim() == mataikhoan
-                            //               && tbl_Socai.MaCTietTKNo == item.machitiet
-                            //               select tbl_Socai.PsNo).Sum().GetValueOrDefault(0);
+                            detail.stt = stt;
 
 
-                            //detail.Cock = detail.Codk + detail.Psco;
-
-                            //detail.Nock = detail.Nodk + detail.Psno;
-
-                            //detail.username = username;
+                            detail.mahanghoa = item.masp;
+                            detail.tenhanghoa = item.tensp;
+                            detail.donvi = item.donvi;
 
 
-                            //dc.RptdetaiTHchitiets.InsertOnSubmit(detail);
-                            //dc.SubmitChanges();
+                            detail.tondaukysoluong = (from p in dc.tbl_kho_phieunhap_details
+                                                      where p.ngayphieunhap < fromdate
+                                           && p.makho == item.makho
+                                           && p.mahang == item.masp
+                                                      select p.soluongnhap).Sum().GetValueOrDefault(0)
+                                                      + (from p in dc.tbl_kho_sanphams
+                                                         where p.masp == item.masp
+                                                        && p.makho == item.makho
+                                                         select p.tondksoluong).FirstOrDefault()
+                                      - (from p in dc.tbl_kho_phieuxuat_details
+                                         where p.ngayphieuxuat < fromdate
+                                              && p.makho == item.makho
+                                          && p.mahang == item.masp
+                                         select p.soluongxuat).Sum().GetValueOrDefault(0);
+
+                            detail.tondaukythanhtien = (from p in dc.tbl_kho_phieunhap_details
+                                                        where p.ngayphieunhap < fromdate
+                                             && p.makho == item.makho
+                                             && p.mahang == item.masp
+                                                        select p.thanhtien).Sum().GetValueOrDefault(0)
+                                                        + (from p in dc.tbl_kho_sanphams
+                                                           where p.masp == item.masp
+                                                            && p.makho == item.makho
+                                                           select p.tondkthanhtien).FirstOrDefault()
+                                                        - (from p in dc.tbl_kho_phieuxuat_details
+                                                           where p.ngayphieuxuat < fromdate
+                                                               && p.makho == item.makho
+                                                               && p.mahang == item.masp
+                                                           select p.thanhtien).Sum().GetValueOrDefault(0);
+
+
+                            detail.nhaptrongkysoluong = (from p in dc.tbl_kho_phieunhap_details
+                                                         where p.ngayphieunhap >= fromdate
+                                                         && p.ngayphieunhap <= todate
+                                              && p.makho == item.makho
+                                              && p.mahang == item.masp
+                                                         select p.soluongnhap).Sum().GetValueOrDefault(0);
+
+                            detail.nhaptrongkythanhtien = (from p in dc.tbl_kho_phieunhap_details
+                                                           where p.ngayphieunhap >= fromdate
+                                                           && p.ngayphieunhap <= todate
+                                                && p.makho == item.makho
+                                                && p.mahang == item.masp
+                                                           select p.thanhtien).Sum().GetValueOrDefault(0);
+
+
+                            detail.xuattrongkysoluong = (from p in dc.tbl_kho_phieuxuat_details
+                                                         where p.ngayphieuxuat >= fromdate
+                                                         && p.ngayphieuxuat <= todate
+                                              && p.makho == item.makho
+                                              && p.mahang == item.masp
+                                                         select p.soluongxuat).Sum().GetValueOrDefault(0);
+
+                            detail.xuattrongkythanhtien = (from p in dc.tbl_kho_phieuxuat_details
+                                                           where p.ngayphieuxuat >= fromdate
+                                                           && p.ngayphieuxuat <= todate
+                                                && p.makho == item.makho
+                                                && p.mahang == item.masp
+                                                           select p.thanhtien).Sum().GetValueOrDefault(0);
+
+
+                            detail.toncuoikysoluong = detail.tondaukysoluong
+                                + detail.nhaptrongkysoluong
+                                - detail.xuattrongkysoluong;
+
+
+                            detail.toncuoikythanhtien = detail.tondaukythanhtien
+                                + detail.nhaptrongkythanhtien
+                                - detail.xuattrongkythanhtien;
+
+                            if (detail.toncuoikysoluong != 0)
+                            {
+                                detail.dongiaton = detail.toncuoikythanhtien / detail.toncuoikysoluong;
+
+                            }
+                            else
+                            {
+                                detail.dongiaton = 0;
+                            }
+
+                            detail.username = username;
+
+
+                            dc.RptdetaiTHxuatnhaptons.InsertOnSubmit(detail);
+                            dc.SubmitChanges();
 
 
 
@@ -1623,7 +1668,7 @@ namespace BEEACCOUNT.Model
 
 
                         }
-                      
+
 
                     }
 

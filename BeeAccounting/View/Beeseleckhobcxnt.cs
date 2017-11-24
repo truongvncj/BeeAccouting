@@ -35,7 +35,7 @@ namespace BEEACCOUNT.View
             InitializeComponent();
 
         
-            this.tenkho = "";
+         //   this.tenkho = "";
 
 
             chon = false;
@@ -52,7 +52,7 @@ namespace BEEACCOUNT.View
             {
                 ComboboxItem cb = new ComboboxItem();
                 cb.Value = item.makho;
-                cb.Text = item.makho + ":" + item.tenkho;
+                cb.Text = item.tenkho;
                 this.cbkhohang.Items.Add(cb); // CombomCollection.Add(cb);
 
             }
@@ -94,11 +94,12 @@ namespace BEEACCOUNT.View
         private void cbtk_SelectionChangeCommitted(object sender, EventArgs e)
         {
             string khohang = (cbkhohang.SelectedItem as ComboboxItem).Value.ToString();
+            tenkho = (cbkhohang.SelectedItem as ComboboxItem).Text.ToString();
             //     this.matk = taikhoan;
 
 
-        
-            
+
+
 
         }
 

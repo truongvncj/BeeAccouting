@@ -16,6 +16,8 @@ namespace BEEACCOUNT.View
         public int statusphieunhap { get; set; } // mới  // 2 suawra // 3 display //
         public int phieunhapid { get; set; }
         public string sophieunhap { get; set; }
+
+        public string makho { get; set; }
         public string tkno { get; set; }
         public int tknochitiet { get; set; }
         public string tkco { get; set; }
@@ -127,6 +129,8 @@ namespace BEEACCOUNT.View
             cbtkno.Enabled = true;
             cbtkco.Enabled = true;
             btsua.Enabled = false;
+        cbkhohang.Enabled = true;
+
             txtsotiensave.Visible = false;
 
             txtsophieu.Text = "";
@@ -150,11 +154,11 @@ namespace BEEACCOUNT.View
 
             txtsophieu.Focus();
 
-
+            this.makho = null;
             this.phieunhapid = -1;
 
             this.statusphieunhap = 1; // tạo mới
-            dataGridViewTkCo = Model.Khohang.reloaddetailnewPNK(dataGridViewTkCo);
+            dataGridViewTkCo = Model.Khohang.reloaddetailnewPNK(dataGridViewTkCo, this.makho);
             #endregion
 
         }
@@ -356,7 +360,7 @@ namespace BEEACCOUNT.View
 
 
             //       dataGridViewTkCo.DataSource = Model.Khohang.danhsachphieunhapkho(dc);
-            dataGridViewTkCo = Model.Khohang.reloaddetailnewPNK(dataGridViewTkCo);
+            dataGridViewTkCo = Model.Khohang.reloaddetailnewPNK(dataGridViewTkCo, this.makho);
 
             dataGridViewListPNK.DataSource = Model.Khohang.danhsachphieunhapkho(dc);
 
@@ -786,29 +790,6 @@ namespace BEEACCOUNT.View
             #endregion   /// save head phieu nhap
 
 
-            #region data detail phieu nhap
-
-            ////   dt.Columns.Add(new DataColumn("Ngày_chứng_từ", typeof(DGV_DateTimePicker.DateTimePickerCell)));
-            //dt.Columns.Add(new DataColumn("masanpham", typeof(string)));
-            //dt.Columns.Add(new DataColumn("Tên_sản_phẩm", typeof(string)));
-
-            //dt.Columns.Add(new DataColumn("Đơn_vị", typeof(string)));
-            //dt.Columns.Add(new DataColumn("Số_lượng_nhập", typeof(string)));
-
-            ////Threahold
-            ////      dt.Columns.Add(new DataColumn("Tk_Có", typeof(double)));
-            //dt.Columns.Add(new DataColumn("Đơn_giá", typeof(double)));
-            //dt.Columns.Add(new DataColumn("Thành_tiền", typeof(double)));
-            //if (cbtkno.SelectedItem == null)
-            //{
-
-            //    MessageBox.Show("Bạn chua định khoản tài khoản tiền mặt", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //    checkdinhkhoanco = false;
-            //    return;
-            //}
-
-            #endregion
-
 
             #region   // save  detail phieu nhap
             for (int idrow = 0; idrow < dataGridViewTkCo.RowCount - 1; idrow++)
@@ -816,6 +797,8 @@ namespace BEEACCOUNT.View
 
                 tbl_kho_phieunhap_detail detail = new tbl_kho_phieunhap_detail();
 
+                detail.ngayphieunhap = datepickngayphieu.Value;
+                detail.makho = (cbkhohang.SelectedItem as ComboboxItem).Value.ToString();
                 detail.dongia = float.Parse(dataGridViewTkCo.Rows[idrow].Cells["Đơn_giá"].Value.ToString());
                 detail.donvi = dataGridViewTkCo.Rows[idrow].Cells["Đơn_vị"].Value.ToString();
                 detail.mahang = dataGridViewTkCo.Rows[idrow].Cells["masanpham"].Value.ToString();
@@ -1378,7 +1361,7 @@ namespace BEEACCOUNT.View
                 }
 
 
-                dataGridViewTkCo = Model.Khohang.reloaddetailnewPNK(dataGridViewTkCo);
+                dataGridViewTkCo = Model.Khohang.reloaddetailnewPNK(dataGridViewTkCo, this.makho);
 
                 #region adđ detail san phẩm
                 //     add_detailGridviewPNkho(tbl_kho_phieunhap_detail sanpham)
@@ -2471,6 +2454,19 @@ namespace BEEACCOUNT.View
 
 
             tabControl1.SelectedTab = tabPage1;
+        }
+
+        private void cbkhohang_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if (cbkhohang.SelectedItem != null)
+            {
+                this.makho = (cbkhohang.SelectedItem as ComboboxItem).Value.ToString();
+
+            }
+
+            dataGridViewTkCo = Model.Khohang.reloaddetailnewPNK(dataGridViewTkCo, this.makho);
+
+
         }
     }
 }

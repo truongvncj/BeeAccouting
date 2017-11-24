@@ -222,9 +222,9 @@
       <Column Name="diachicongty" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="username" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="taikhoan" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="tungay" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="denngay" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="kho" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.Rptphieunhapkhodetail01" Member="Rptphieunhapkhodetail01s">
@@ -536,6 +536,8 @@
       <Column Name="soluongyeucau" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Column Name="soluongnhap" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Column Name="subid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="makho" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ngayphieunhap" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.tbl_kho_phieunhap_head" Member="tbl_kho_phieunhap_heads">
@@ -572,6 +574,8 @@
       <Column Name="soluongyeucau" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Column Name="soluongxuat" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Column Name="subid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="makho" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ngayphieuxuat" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.tbl_kho_phieuxuat_head" Member="tbl_kho_phieuxuat_heads">

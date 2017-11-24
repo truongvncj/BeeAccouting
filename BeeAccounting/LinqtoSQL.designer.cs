@@ -4878,11 +4878,11 @@ namespace BEEACCOUNT
 		
 		private string _username;
 		
-		private string _taikhoan;
-		
 		private System.Nullable<System.DateTime> _tungay;
 		
 		private System.Nullable<System.DateTime> _denngay;
+		
+		private string _kho;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -4898,12 +4898,12 @@ namespace BEEACCOUNT
     partial void OnidChanged();
     partial void OnusernameChanging(string value);
     partial void OnusernameChanged();
-    partial void OntaikhoanChanging(string value);
-    partial void OntaikhoanChanged();
     partial void OntungayChanging(System.Nullable<System.DateTime> value);
     partial void OntungayChanged();
     partial void OndenngayChanging(System.Nullable<System.DateTime> value);
     partial void OndenngayChanged();
+    partial void OnkhoChanging(string value);
+    partial void OnkhoChanged();
     #endregion
 		
 		public RPtheadTHxuatnhapton()
@@ -5011,26 +5011,6 @@ namespace BEEACCOUNT
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_taikhoan", DbType="NVarChar(50)")]
-		public string taikhoan
-		{
-			get
-			{
-				return this._taikhoan;
-			}
-			set
-			{
-				if ((this._taikhoan != value))
-				{
-					this.OntaikhoanChanging(value);
-					this.SendPropertyChanging();
-					this._taikhoan = value;
-					this.SendPropertyChanged("taikhoan");
-					this.OntaikhoanChanged();
-				}
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tungay", DbType="DateTime")]
 		public System.Nullable<System.DateTime> tungay
 		{
@@ -5067,6 +5047,26 @@ namespace BEEACCOUNT
 					this._denngay = value;
 					this.SendPropertyChanged("denngay");
 					this.OndenngayChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_kho", DbType="NVarChar(225)")]
+		public string kho
+		{
+			get
+			{
+				return this._kho;
+			}
+			set
+			{
+				if ((this._kho != value))
+				{
+					this.OnkhoChanging(value);
+					this.SendPropertyChanging();
+					this._kho = value;
+					this.SendPropertyChanged("kho");
+					this.OnkhoChanged();
 				}
 			}
 		}
@@ -11318,6 +11318,10 @@ namespace BEEACCOUNT
 		
 		private System.Nullable<int> _subid;
 		
+		private string _makho;
+		
+		private System.Nullable<System.DateTime> _ngayphieunhap;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -11342,6 +11346,10 @@ namespace BEEACCOUNT
     partial void OnsoluongnhapChanged();
     partial void OnsubidChanging(System.Nullable<int> value);
     partial void OnsubidChanged();
+    partial void OnmakhoChanging(string value);
+    partial void OnmakhoChanged();
+    partial void OnngayphieunhapChanging(System.Nullable<System.DateTime> value);
+    partial void OnngayphieunhapChanged();
     #endregion
 		
 		public tbl_kho_phieunhap_detail()
@@ -11545,6 +11553,46 @@ namespace BEEACCOUNT
 					this._subid = value;
 					this.SendPropertyChanged("subid");
 					this.OnsubidChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_makho", DbType="NVarChar(50)")]
+		public string makho
+		{
+			get
+			{
+				return this._makho;
+			}
+			set
+			{
+				if ((this._makho != value))
+				{
+					this.OnmakhoChanging(value);
+					this.SendPropertyChanging();
+					this._makho = value;
+					this.SendPropertyChanged("makho");
+					this.OnmakhoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ngayphieunhap", DbType="DateTime")]
+		public System.Nullable<System.DateTime> ngayphieunhap
+		{
+			get
+			{
+				return this._ngayphieunhap;
+			}
+			set
+			{
+				if ((this._ngayphieunhap != value))
+				{
+					this.OnngayphieunhapChanging(value);
+					this.SendPropertyChanging();
+					this._ngayphieunhap = value;
+					this.SendPropertyChanged("ngayphieunhap");
+					this.OnngayphieunhapChanged();
 				}
 			}
 		}
@@ -12066,6 +12114,10 @@ namespace BEEACCOUNT
 		
 		private System.Nullable<int> _subid;
 		
+		private string _makho;
+		
+		private System.Nullable<System.DateTime> _ngayphieuxuat;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -12090,6 +12142,10 @@ namespace BEEACCOUNT
     partial void OnsoluongxuatChanged();
     partial void OnsubidChanging(System.Nullable<int> value);
     partial void OnsubidChanged();
+    partial void OnmakhoChanging(string value);
+    partial void OnmakhoChanged();
+    partial void OnngayphieuxuatChanging(System.Nullable<System.DateTime> value);
+    partial void OnngayphieuxuatChanged();
     #endregion
 		
 		public tbl_kho_phieuxuat_detail()
@@ -12293,6 +12349,46 @@ namespace BEEACCOUNT
 					this._subid = value;
 					this.SendPropertyChanged("subid");
 					this.OnsubidChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_makho", DbType="NVarChar(50)")]
+		public string makho
+		{
+			get
+			{
+				return this._makho;
+			}
+			set
+			{
+				if ((this._makho != value))
+				{
+					this.OnmakhoChanging(value);
+					this.SendPropertyChanging();
+					this._makho = value;
+					this.SendPropertyChanged("makho");
+					this.OnmakhoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ngayphieuxuat", DbType="DateTime")]
+		public System.Nullable<System.DateTime> ngayphieuxuat
+		{
+			get
+			{
+				return this._ngayphieuxuat;
+			}
+			set
+			{
+				if ((this._ngayphieuxuat != value))
+				{
+					this.OnngayphieuxuatChanging(value);
+					this.SendPropertyChanging();
+					this._ngayphieuxuat = value;
+					this.SendPropertyChanged("ngayphieuxuat");
+					this.OnngayphieuxuatChanged();
 				}
 			}
 		}
