@@ -54,7 +54,7 @@ namespace BEEACCOUNT.View
             InitializeComponent();
 
             chon = false;
-        //    cbkhohang
+            //    cbkhohang
 
 
             #region load nhóm kho
@@ -63,8 +63,8 @@ namespace BEEACCOUNT.View
             LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
 
             var listkho = from p in dc.tbl_khohangs
-                          //   where tk.loaitkid == 5 || tk.loaitkid == 9 || tk.loaitkid == 7  // 5.nguon von;  7 phai tra; 9. tam ung
-                      select p;
+                              //   where tk.loaitkid == 5 || tk.loaitkid == 9 || tk.loaitkid == 7  // 5.nguon von;  7 phai tra; 9. tam ung
+                          select p;
 
             //      string drowdownshow = "";
 
@@ -72,7 +72,7 @@ namespace BEEACCOUNT.View
             {
                 ComboboxItem cbkho = new ComboboxItem();
                 cbkho.Value = item.makho;
-                cbkho.Text = item.makho.Trim() + ": " + item.tenkho;
+                cbkho.Text = item.tenkho;
                 this.cbkhohang.Items.Add(cbkho); // CombomCollection.Add(cb);
 
             }
@@ -81,8 +81,8 @@ namespace BEEACCOUNT.View
 
             #region load nhóm sản phẩm
 
-      //      string connection_string = Utils.getConnectionstr();
-          //  LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+            //      string connection_string = Utils.getConnectionstr();
+            //  LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
 
             var rs1 = from p in dc.tbl_kho_nhomsanphams
                           //   where tk.loaitkid == 5 || tk.loaitkid == 9 || tk.loaitkid == 7  // 5.nguon von;  7 phai tra; 9. tam ung
@@ -94,7 +94,7 @@ namespace BEEACCOUNT.View
             {
                 ComboboxItem cb = new ComboboxItem();
                 cb.Value = item.manhomsanpham;
-                cb.Text = item.manhomsanpham.Trim() + ": " + item.tennhomsanpham;
+                cb.Text = item.tennhomsanpham;
                 this.txtnhomsanpham.Items.Add(cb); // CombomCollection.Add(cb);
 
             }
@@ -127,7 +127,8 @@ namespace BEEACCOUNT.View
 
                 if (item != null)
                 {
-
+                    txttondaukysoluong.Text = item.tondksoluong.ToString();
+                    txtthanhtienton.Text = item.tondkthanhtien.ToString();
 
                     txtmasanpham.Text = item.masp;
                     txttensanpham.Text = item.tensp;
@@ -155,6 +156,26 @@ namespace BEEACCOUNT.View
 
 
                     }
+
+                    foreach (var kho in cbkhohang.Items)
+                    {
+
+                        if ((string)(kho as ComboboxItem).Value == item.makho)
+                        {
+                            //      loaitk = (int)(cbloaitk.SelectedItem as ComboboxItem).Value;
+                            //     cmbEmployeeStatus.SelectedValue = cmbEmployeeStatus.Items.FindByText("text").Value;
+
+                            cbkhohang.SelectedItem = kho;
+                            //      cbtkmother.(iten);
+
+                        }
+
+
+
+                    }
+
+
+
 
 
 
@@ -257,13 +278,54 @@ namespace BEEACCOUNT.View
 
             }
 
-            this.idnhomsanpham = (string)(txtnhomsanpham.SelectedItem as ComboboxItem).Value;// (cbm.SelectedItem as ComboboxItem).Value.ToString();
+            if (txtnhomsanpham.SelectedItem  != null)
+            {
+                this.idnhomsanpham = (string)(txtnhomsanpham.SelectedItem as ComboboxItem).Value;// (cbm.SelectedItem as ComboboxItem).Value.ToString();
+
+            }
+            else
+            {
+                MessageBox.Show("Kiểm tra nhóm sản phẩm !", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
 
             this.ghichu = txtghichu.Text;
 
+            if (cbkhohang.SelectedItem != null)
+            {
+                this.makho = (string)(cbkhohang.SelectedItem as ComboboxItem).Value;// (cbm.SelectedItem as ComboboxItem).Value.ToString();
+            }
+            else
+            {
+                MessageBox.Show("Kiểm tra kho hàng!", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
 
+            this.tenkho = (string)(cbkhohang.SelectedItem as ComboboxItem).Text;
+
+
+
+            if (Utils.IsValidnumber(txttondaukysoluong.Text))
+            {
+                this.daukhysoluong = float.Parse(txttondaukysoluong.Text);
+            }
+            else
+            {
+                MessageBox.Show("Số lượng tôn đàu kỳ phải là số !", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (Utils.IsValidnumber(txtthanhtienton.Text))
+            {
+                this.daukythanhtien = float.Parse(txtthanhtienton.Text);
+            }
+            else
+            {
+                MessageBox.Show("Thành tiền tôn đàu kỳ phải là số !", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
 
 
@@ -301,7 +363,10 @@ namespace BEEACCOUNT.View
 
                     rs.mavach = this.mavach;
                     rs.donvi = this.donvi;
-
+                    rs.makho = this.makho;
+                    rs.tenkho = this.tenkho;
+                    rs.tondksoluong = this.daukhysoluong;
+                    rs.tondkthanhtien = this.daukythanhtien;
 
                     rs.khoiluong = this.khoiluong;
 
@@ -380,6 +445,30 @@ namespace BEEACCOUNT.View
                 return;
             }
 
+            this.makho = (string)(cbkhohang.SelectedItem as ComboboxItem).Value;// (cbm.SelectedItem as ComboboxItem).Value.ToString();
+            this.tenkho = (string)(cbkhohang.SelectedItem as ComboboxItem).Text;
+
+
+
+            if (Utils.IsValidnumber(txttondaukysoluong.Text))
+            {
+                this.daukhysoluong = float.Parse(txttondaukysoluong.Text);
+            }
+            else
+            {
+                MessageBox.Show("Số lượng tôn đàu kỳ phải là số !", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (Utils.IsValidnumber(txtthanhtienton.Text))
+            {
+                this.daukythanhtien = float.Parse(txtthanhtienton.Text);
+            }
+            else
+            {
+                MessageBox.Show("Thành tiền tôn đàu kỳ phải là số !", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
 
 
@@ -398,7 +487,10 @@ namespace BEEACCOUNT.View
             p.ghichu = this.ghichu;
             p.mavach = this.mavach;
             p.donvi = this.donvi;
-
+            p.makho = this.makho;
+            p.tenkho = this.tenkho;
+            p.tondksoluong = this.daukhysoluong;
+            p.tondkthanhtien = this.daukythanhtien;
 
 
 

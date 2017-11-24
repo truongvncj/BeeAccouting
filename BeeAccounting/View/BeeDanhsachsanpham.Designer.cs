@@ -30,6 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BeeDanhsachsanpham));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtthanhtienton = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.txttondaukysoluong = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.cbkhohang = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.txtnhomsanpham = new System.Windows.Forms.ComboBox();
@@ -51,12 +57,6 @@
             this.txttensanpham = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
-            this.cbkhohang = new System.Windows.Forms.ComboBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.txttondaukysoluong = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.txtthanhtienton = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -94,6 +94,67 @@
             this.panel1.Size = new System.Drawing.Size(578, 433);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // txtthanhtienton
+            // 
+            this.txtthanhtienton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtthanhtienton.Location = new System.Drawing.Point(176, 239);
+            this.txtthanhtienton.Name = "txtthanhtienton";
+            this.txtthanhtienton.Size = new System.Drawing.Size(205, 20);
+            this.txtthanhtienton.TabIndex = 71;
+            // 
+            // label13
+            // 
+            this.label13.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label13.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(18, 239);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(125, 20);
+            this.label13.TabIndex = 72;
+            this.label13.Text = "Số dư đầu thành tiền";
+            // 
+            // txttondaukysoluong
+            // 
+            this.txttondaukysoluong.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txttondaukysoluong.Location = new System.Drawing.Point(177, 206);
+            this.txttondaukysoluong.Name = "txttondaukysoluong";
+            this.txttondaukysoluong.Size = new System.Drawing.Size(204, 20);
+            this.txttondaukysoluong.TabIndex = 68;
+            // 
+            // label11
+            // 
+            this.label11.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label11.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(19, 206);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(125, 20);
+            this.label11.TabIndex = 69;
+            this.label11.Text = "Số dư đầu số lượng";
+            // 
+            // cbkhohang
+            // 
+            this.cbkhohang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbkhohang.FormattingEnabled = true;
+            this.cbkhohang.Location = new System.Drawing.Point(175, 271);
+            this.cbkhohang.Name = "cbkhohang";
+            this.cbkhohang.Size = new System.Drawing.Size(206, 21);
+            this.cbkhohang.TabIndex = 67;
+            // 
+            // label9
+            // 
+            this.label9.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label9.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(19, 271);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(125, 20);
+            this.label9.TabIndex = 66;
+            this.label9.Text = "Mã kho hàng";
             // 
             // label8
             // 
@@ -324,67 +385,6 @@
             this.label21.Size = new System.Drawing.Size(125, 20);
             this.label21.TabIndex = 49;
             this.label21.Text = "Tên sản phẩm";
-            // 
-            // cbkhohang
-            // 
-            this.cbkhohang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbkhohang.FormattingEnabled = true;
-            this.cbkhohang.Location = new System.Drawing.Point(175, 271);
-            this.cbkhohang.Name = "cbkhohang";
-            this.cbkhohang.Size = new System.Drawing.Size(206, 21);
-            this.cbkhohang.TabIndex = 67;
-            // 
-            // label9
-            // 
-            this.label9.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label9.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(19, 271);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(125, 20);
-            this.label9.TabIndex = 66;
-            this.label9.Text = "Mã kho hàng";
-            // 
-            // txttondaukysoluong
-            // 
-            this.txttondaukysoluong.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txttondaukysoluong.Location = new System.Drawing.Point(177, 206);
-            this.txttondaukysoluong.Name = "txttondaukysoluong";
-            this.txttondaukysoluong.Size = new System.Drawing.Size(204, 20);
-            this.txttondaukysoluong.TabIndex = 68;
-            // 
-            // label11
-            // 
-            this.label11.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label11.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(19, 206);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(125, 20);
-            this.label11.TabIndex = 69;
-            this.label11.Text = "Số lượng tồn đầu ";
-            // 
-            // txtthanhtienton
-            // 
-            this.txtthanhtienton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtthanhtienton.Location = new System.Drawing.Point(176, 239);
-            this.txtthanhtienton.Name = "txtthanhtienton";
-            this.txtthanhtienton.Size = new System.Drawing.Size(205, 20);
-            this.txtthanhtienton.TabIndex = 71;
-            // 
-            // label13
-            // 
-            this.label13.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label13.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(18, 239);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(125, 20);
-            this.label13.TabIndex = 72;
-            this.label13.Text = "Thành tiền tồn đầu ";
             // 
             // BeeDanhsachsanpham
             // 
