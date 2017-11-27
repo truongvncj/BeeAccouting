@@ -227,7 +227,7 @@
             // 
             // button25
             // 
-            this.button25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.button25.BackColor = System.Drawing.Color.WhiteSmoke;
             this.button25.Location = new System.Drawing.Point(13, 233);
             this.button25.Name = "button25";
             this.button25.Size = new System.Drawing.Size(157, 22);

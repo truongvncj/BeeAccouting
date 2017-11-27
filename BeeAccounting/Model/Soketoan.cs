@@ -1551,9 +1551,6 @@ namespace BEEACCOUNT.Model
 
                     #region  update data detail mới
 
-
-
-
                     var sanpham = from p in dc.tbl_kho_sanphams
                                   where p.makho == makho
                                   select p;
