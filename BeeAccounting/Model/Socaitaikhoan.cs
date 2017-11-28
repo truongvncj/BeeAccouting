@@ -41,6 +41,7 @@ namespace BEEACCOUNT.Model
 
 
             dataGridViewTkTHop.DataSource = null;
+
             #region datatable temp
 
 
@@ -59,9 +60,10 @@ namespace BEEACCOUNT.Model
 
 
             dt.Columns.Add(new DataColumn("Mã_chi_tiết_TK_Nợ", typeof(int)));
-            dt.Columns.Add(new DataColumn("Mã_chi_tiết_TK_Có", typeof(string)));
+            dt.Columns.Add(new DataColumn("Tên_chi_tiết_TK_Nợ", typeof(string)));
+            dt.Columns.Add(new DataColumn("Mã_chi_tiết_TK_Có", typeof(int)));
 
-            dt.Columns.Add(new DataColumn("Tên_chi_tiết_TK_Nợ", typeof(int)));
+       
             dt.Columns.Add(new DataColumn("Tên_chi_tiết_TK_Có", typeof(string)));
 
 
@@ -81,8 +83,8 @@ namespace BEEACCOUNT.Model
 
 
             //     dt.Columns.Add(new DataColumn("tkidhide", typeof(string))); //comnoxxon
-          
-         
+
+
 
 
             dataGridViewTkTHop.DataSource = dt;
@@ -256,6 +258,49 @@ namespace BEEACCOUNT.Model
             return dataGridViewTkTHop;
 
 
+
+        }
+
+        public static object danhsachbuttoantonghop(LinqtoSQLDataContext dc)
+
+        {
+
+
+            LinqtoSQLDataContext db = dc;
+
+
+            var rs = from p in dc.tbl_Socais
+                     where p.manghiepvu == "TH"
+                     select new
+                     {
+
+                         Ngày_chứng_từ = p.Ngayctu,
+                         Số_chứng_từ = p.Sohieuchungtu,
+                         Nợ_TK = p.TkNo,
+                         Có_TK = p.TkCo,
+                         Số_tiền = p.PsCo,
+                         Diễn_giải = p.Diengiai,
+                         Mã_chi_tiết_TK_Có = p.MaCTietTKCo,
+                         Mã_chi_tiết_TK_Nợ = p.MaCTietTKNo,
+
+                         Tên_chi_tiết_TK_Có = p.tenchitietCo,
+                         Tên_chi_tiết_TK_Nợ = p.tenchitietNo,
+
+                    
+
+
+                         Tạo_bởi = p.username,
+
+
+
+                         ID = p.id
+                     };
+
+
+
+
+
+            return rs;
 
         }
 
