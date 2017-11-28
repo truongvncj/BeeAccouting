@@ -367,7 +367,7 @@
             // txtsochungtugoc
             // 
             this.txtsochungtugoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtsochungtugoc.Location = new System.Drawing.Point(609, 189);
+            this.txtsochungtugoc.Location = new System.Drawing.Point(424, 190);
             this.txtsochungtugoc.Name = "txtsochungtugoc";
             this.txtsochungtugoc.Size = new System.Drawing.Size(99, 24);
             this.txtsochungtugoc.TabIndex = 25;
@@ -456,7 +456,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(714, 193);
+            this.label10.Location = new System.Drawing.Point(529, 193);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(96, 18);
             this.label10.TabIndex = 18;
@@ -466,7 +466,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(527, 193);
+            this.label9.Location = new System.Drawing.Point(342, 193);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(76, 18);
             this.label9.TabIndex = 16;
@@ -538,10 +538,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Georgia", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(393, 4);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(140, 29);
+            this.label1.Size = new System.Drawing.Size(156, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "PHIẾU CHI";
             // 
@@ -573,10 +573,10 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(547, 14);
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(532, 12);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(209, 20);
+            this.label12.Size = new System.Drawing.Size(190, 20);
             this.label12.TabIndex = 38;
             this.label12.Text = "DANH SÁCH PHIẾU CHI";
             // 

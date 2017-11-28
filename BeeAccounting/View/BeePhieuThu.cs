@@ -892,7 +892,7 @@ namespace BEEACCOUNT.View
                 {
 
 
-                    Model.Socaitaikhoan.xoa("PT", maphieuthuOld);
+                    Model.hachtoantonghop.xoa("PT", maphieuthuOld);
 
 
 
@@ -1602,7 +1602,7 @@ namespace BEEACCOUNT.View
                 dc.SubmitChanges();
 
 
-                Model.Socaitaikhoan.xoa("PT", phieuthu.Sophieu);
+                Model.hachtoantonghop.xoa("PT", phieuthu.Sophieu);
 
                 MessageBox.Show("Đã xóa phiếu thu: " + this.phieuthuso, "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 //  Model.

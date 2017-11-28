@@ -171,6 +171,12 @@
     <Compile Include="View\BeeHtdoiungphieunhapkho.Designer.cs">
       <DependentUpon>BeeHtdoiungphieunhapkho.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\BeeButtoantonghop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\BeeButtoantonghop.Designer.cs">
+      <DependentUpon>BeeButtoantonghop.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\BeeKhophieuxuat.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -524,6 +530,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\BeeHtdoiungphieunhapkho.resx">
       <DependentUpon>BeeHtdoiungphieunhapkho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\BeeButtoantonghop.resx">
+      <DependentUpon>BeeButtoantonghop.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\BeeKhophieuxuat.resx">
       <DependentUpon>BeeKhophieuxuat.cs</DependentUpon>

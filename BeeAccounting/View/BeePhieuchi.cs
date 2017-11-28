@@ -1661,7 +1661,7 @@ namespace BEEACCOUNT.View
                 dc.SubmitChanges();
 
 
-                Model.Socaitaikhoan.xoa("PC", phieuthu.Machungtu);
+                Model.hachtoantonghop.xoa("PC", phieuthu.Machungtu);
 
                 MessageBox.Show("Đã xóa phiếu thu: " + this.sophieuchi, "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 //  Model.

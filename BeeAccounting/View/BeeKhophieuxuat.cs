@@ -1435,7 +1435,7 @@ namespace BEEACCOUNT.View
 
                 #region // xóa ở sổ cái phiếu xuất
 
-                Model.Socaitaikhoan.xoa("PXK", phieuxuathead.phieuso.Trim());
+                Model.hachtoantonghop.xoa("PXK", phieuxuathead.phieuso.Trim());
 
                 #endregion                // xóa sổ cái nưa
 

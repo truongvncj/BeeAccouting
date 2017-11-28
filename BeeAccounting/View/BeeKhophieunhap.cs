@@ -1449,7 +1449,7 @@ namespace BEEACCOUNT.View
 
                 #region // xóa ở sổ cái
 
-                Model.Socaitaikhoan.xoa("PNK", phieunhaphead.phieuso.Trim());
+                Model.hachtoantonghop.xoa("PNK", phieunhaphead.phieuso.Trim());
 
                 #endregion                // xóa sổ cái nưa
 

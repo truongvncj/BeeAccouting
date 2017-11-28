@@ -1085,8 +1085,8 @@ namespace BEEACCOUNT.View
             main1.clearpannel();
 
 
-        //    View.Beebuttoantonghop buttoantonghop = new Beebuttoantonghop(main1);
-         //   main1.clearpannelload(buttoantonghop);
+              View.BeeButtoantonghop buttoantonghop = new BeeButtoantonghop(main1);
+              main1.clearpannelload(buttoantonghop);
             //    accsup.TopLevel = false;
             //  accsup.AutoScroll = true;
             //    panelmain.Controls.Add(accsup);
