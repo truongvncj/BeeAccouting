@@ -1075,5 +1075,23 @@ namespace BEEACCOUNT.View
         {
             Model.Soketoan.sotonghopbaocaonhapxuatton();
         }
+
+        private void button56_Click(object sender, EventArgs e)
+        {
+            //    Beebuttoantonghop
+
+            //  Main.clearpannel();
+
+            main1.clearpannel();
+
+
+        //    View.Beebuttoantonghop buttoantonghop = new Beebuttoantonghop(main1);
+         //   main1.clearpannelload(buttoantonghop);
+            //    accsup.TopLevel = false;
+            //  accsup.AutoScroll = true;
+            //    panelmain.Controls.Add(accsup);
+            //    accsup.Show();
+
+        }
     }
 }

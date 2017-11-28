@@ -40,7 +40,6 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.button25 = new System.Windows.Forms.Button();
             this.button20 = new System.Windows.Forms.Button();
-            this.button35 = new System.Windows.Forms.Button();
             this.button17 = new System.Windows.Forms.Button();
             this.button16 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -101,6 +100,8 @@
             this.button52 = new System.Windows.Forms.Button();
             this.button53 = new System.Windows.Forms.Button();
             this.button54 = new System.Windows.Forms.Button();
+            this.groupBox15 = new System.Windows.Forms.GroupBox();
+            this.button56 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -115,6 +116,7 @@
             this.groupBox12.SuspendLayout();
             this.groupBox13.SuspendLayout();
             this.groupBox14.SuspendLayout();
+            this.groupBox15.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -211,7 +213,6 @@
             this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox3.Controls.Add(this.button25);
             this.groupBox3.Controls.Add(this.button20);
-            this.groupBox3.Controls.Add(this.button35);
             this.groupBox3.Controls.Add(this.button17);
             this.groupBox3.Controls.Add(this.button16);
             this.groupBox3.Controls.Add(this.button4);
@@ -247,17 +248,6 @@
             this.button20.TabStop = false;
             this.button20.Text = "Sổ kho";
             this.button20.UseVisualStyleBackColor = false;
-            // 
-            // button35
-            // 
-            this.button35.BackColor = System.Drawing.Color.Transparent;
-            this.button35.Location = new System.Drawing.Point(13, 261);
-            this.button35.Name = "button35";
-            this.button35.Size = new System.Drawing.Size(157, 22);
-            this.button35.TabIndex = 19;
-            this.button35.TabStop = false;
-            this.button35.Text = "Sổ khác";
-            this.button35.UseVisualStyleBackColor = false;
             // 
             // button17
             // 
@@ -947,11 +937,35 @@
             this.button54.UseVisualStyleBackColor = false;
             this.button54.Click += new System.EventHandler(this.button54_Click);
             // 
+            // groupBox15
+            // 
+            this.groupBox15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox15.Controls.Add(this.button56);
+            this.groupBox15.Location = new System.Drawing.Point(230, 199);
+            this.groupBox15.Name = "groupBox15";
+            this.groupBox15.Size = new System.Drawing.Size(184, 68);
+            this.groupBox15.TabIndex = 46;
+            this.groupBox15.TabStop = false;
+            this.groupBox15.Text = "Kế toán tổng hợp";
+            // 
+            // button56
+            // 
+            this.button56.BackColor = System.Drawing.Color.Red;
+            this.button56.Location = new System.Drawing.Point(9, 31);
+            this.button56.Name = "button56";
+            this.button56.Size = new System.Drawing.Size(166, 22);
+            this.button56.TabIndex = 14;
+            this.button56.TabStop = false;
+            this.button56.Text = "Bút toán tổng hợp";
+            this.button56.UseVisualStyleBackColor = false;
+            this.button56.Click += new System.EventHandler(this.button56_Click);
+            // 
             // Beemainload
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1097, 648);
             this.ControlBox = false;
+            this.Controls.Add(this.groupBox15);
             this.Controls.Add(this.groupBox14);
             this.Controls.Add(this.groupBox13);
             this.Controls.Add(this.groupBox12);
@@ -974,7 +988,7 @@
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Posmmasterinput";
+            this.Text = " ";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Deactivate += new System.EventHandler(this.KAmasterinput_Deactivate);
             this.Load += new System.EventHandler(this.KAmasterinput_Load);
@@ -992,6 +1006,7 @@
             this.groupBox12.ResumeLayout(false);
             this.groupBox13.ResumeLayout(false);
             this.groupBox14.ResumeLayout(false);
+            this.groupBox15.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1041,7 +1056,6 @@
         private System.Windows.Forms.Button button41;
         private System.Windows.Forms.Button button42;
         private System.Windows.Forms.Button button28;
-        private System.Windows.Forms.Button button35;
         private System.Windows.Forms.Button button39;
         private System.Windows.Forms.Button button25;
         private System.Windows.Forms.Button button20;
@@ -1069,5 +1083,7 @@
         private System.Windows.Forms.Button button54;
         private System.Windows.Forms.Button button55;
         private System.Windows.Forms.Button button26;
+        private System.Windows.Forms.GroupBox groupBox15;
+        private System.Windows.Forms.Button button56;
     }
 }
