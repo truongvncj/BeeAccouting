@@ -89,6 +89,8 @@ namespace BEEACCOUNT.Model
 
             dataGridViewTkTHop.DataSource = dt;
 
+            dataGridViewTkTHop.Columns["Số_tiền"].DefaultCellStyle.Format = "N0";
+            dataGridViewTkTHop.Columns["Số_tiền"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight; // để hiện số có dấu phảy
 
             //DGV_DateTimePicker.DateTimePickerColumn col = new DGV_DateTimePicker.DateTimePickerColumn();
             //col.HeaderText = "Ngày chứng từ";
