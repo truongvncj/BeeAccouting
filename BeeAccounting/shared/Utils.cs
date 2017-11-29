@@ -626,7 +626,7 @@ namespace BEEACCOUNT
 
         //Phương thức check xem có workbook excel nào đang được mở hay k?
 
-        public static DateTime chageExceldatetoData(string get_data)
+        public static DateTime ChageExceldatetoDate(string get_data)
 
 
         {

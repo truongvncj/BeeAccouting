@@ -477,7 +477,7 @@ City ,    Telephone1,  VATregistrationNo, Indirect,
                     dr["salesblock"] = sourceData.Rows[rowixd][salesblockid].ToString().Trim();
 
              
-                    dr["Createdon"] = Utils.chageExceldatetoData(sourceData.Rows[rowixd][Createdonid].ToString());// Utils.GetValueOfCellInExcel(worksheet, rowid, columValid_to);
+                    dr["Createdon"] = Utils.ChageExceldatetoDate(sourceData.Rows[rowixd][Createdonid].ToString());// Utils.GetValueOfCellInExcel(worksheet, rowid, columValid_to);
 
                     batable.Rows.Add(dr);
 

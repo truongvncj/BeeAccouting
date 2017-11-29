@@ -417,7 +417,7 @@ namespace BEEACCOUNT.Model
                     dr["SalesOrg"] = sourceData.Rows[rowixd][SalesOrgid].ToString().Trim();
                     dr["InvoiceDocNr"] = double.Parse(sourceData.Rows[rowixd][InvoiceDocNrid].ToString().Trim());
                     dr["OutboundDelivery"] = double.Parse(sourceData.Rows[rowixd][OutboundDeliveryid].ToString().Trim());
-                    dr["DeliveryDate"] = Utils.chageExceldatetoData(sourceData.Rows[rowixd][DeliveryDateid].ToString().Trim());
+                    dr["DeliveryDate"] = Utils.ChageExceldatetoDate(sourceData.Rows[rowixd][DeliveryDateid].ToString().Trim());
 
                     dr["SalesDistrict"] = sourceData.Rows[rowixd][SalesDistrictid].ToString().Trim();
                     dr["CondType"] = sourceData.Rows[rowixd][CondTypeid].ToString().Trim();
@@ -444,7 +444,7 @@ namespace BEEACCOUNT.Model
                     dr["CondValue"] = double.Parse(sourceData.Rows[rowixd][CondValueid].ToString().Trim());
 
 
-                    dr["InvoiceDate"] = Utils.chageExceldatetoData(sourceData.Rows[rowixd][InvoiceDateid].ToString());// Utils.GetValueOfCellInExcel(worksheet, rowid, columValid_to);
+                    dr["InvoiceDate"] = Utils.ChageExceldatetoDate(sourceData.Rows[rowixd][InvoiceDateid].ToString());// Utils.GetValueOfCellInExcel(worksheet, rowid, columValid_to);
                     dr["UoM"] = sourceData.Rows[rowixd][UoMid].ToString().Trim();
 
                     
