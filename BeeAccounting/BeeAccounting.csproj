@@ -480,6 +480,9 @@
     <Compile Include="View\Viewtable.Designer.cs">
       <DependentUpon>Viewtable.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Reports\Phieuketoanth.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\Phieuxuatkho.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>

@@ -281,3 +281,4 @@ E:\Product\BeeAccouting\BeeAccounting\bin\x86\Debug\Reports\Phieunhapkho.rdlc
 E:\Product\BeeAccouting\BeeAccounting\bin\x86\Debug\Reports\Sotonghopxuatnhapton.rdlc
 E:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.Beeseleckhobcxnt.resources
 E:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.Beebuttoantonghop.resources
+E:\Product\BeeAccouting\BeeAccounting\bin\x86\Debug\Reports\Phieuketoanth.rdlc

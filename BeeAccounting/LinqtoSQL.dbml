@@ -36,6 +36,31 @@
       <Column Name="name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
     </Type>
   </Table>
+  <Table Name="dbo.RptBTTHdetail" Member="RptBTTHdetails">
+    <Type Name="RptBTTHdetail">
+      <Column Name="matk" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="tentk" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="noidung" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="psno" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="psco" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="username" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RptBTTHhead" Member="RptBTTHheads">
+    <Type Name="RptBTTHhead">
+      <Column Name="tencongty" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="diachicongty" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="masothue" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="tengiamdoc" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="tenketoantruong" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="ngaychungtu" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="nguoilapphieu" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="username" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="phieuso" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
   <Table Name="dbo.RptdetaiCDPS" Member="RptdetaiCDPs">
     <Type Name="RptdetaiCDP">
       <Column Name="username" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
