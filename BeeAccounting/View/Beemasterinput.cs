@@ -429,9 +429,9 @@ namespace BEEACCOUNT.View
         private void button5_Click(object sender, EventArgs e)
         {
             //    SetGroupFrom
-            SetGroupFrom prdgroup = new SetGroupFrom("PRODUCT GROUP MEMBER");
+            //SetGroupFrom prdgroup = new SetGroupFrom("PRODUCT GROUP MEMBER");
 
-            prdgroup.ShowDialog();
+            //prdgroup.ShowDialog();
 
 
 

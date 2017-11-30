@@ -11,7 +11,7 @@ namespace BEEACCOUNT.View
 {
     public partial class KASeachcontract : Form
     {
-        public KAcontractlisting Fromviewable;
+      //  public KAcontractlisting Fromviewable;
     //    public DataGridView Dtgridview;
        
         public string tablename;
@@ -20,22 +20,22 @@ namespace BEEACCOUNT.View
 
 
 
-        public KASeachcontract(KAcontractlisting Fromviewable, string tablename)
-        {
+        //public KASeachcontract(KAcontractlisting Fromviewable, string tablename)
+        //{
 
           
-         //   return false;
+        // //   return false;
 
 
 
 
 
-            InitializeComponent();
-            this.Fromviewable = Fromviewable;
+        //    InitializeComponent();
+        //    this.Fromviewable = Fromviewable;
 
-            this.tablename = tablename;
+        //    this.tablename = tablename;
 
-        }
+        //}
 
 
 

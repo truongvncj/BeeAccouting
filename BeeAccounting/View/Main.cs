@@ -2693,30 +2693,7 @@ namespace BEEACCOUNT.View
 
         private void usersSetupToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string connection_string = Utils.getConnectionstr();
-        //    panelmain.Controls.Clear();
-            //  var db = new LinqtoSQLDataContext(connection_string);
-            //    LinqtoSQLDataContext db = new LinqtoSQLDataContext(connection_string);
-
-            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
-
-
-            var typeff = typeof(tbl_Temp);
-
-            BeeInputchange inputcdata = new BeeInputchange("", "USERNAME AND PASSWORD CONFIG ! ", dc, "tbl_Temp", "tbl_Temp", typeff, typeff, "id", "id", "");
-            inputcdata.TopLevel = false;
-            inputcdata.AutoScroll = true;
-
-            panelmain.Controls.Add(inputcdata);
-            inputcdata.Show();
-
-
-            //Form1 myForm = new Form1();
-            //myForm.TopLevel = false;
-            //myForm.AutoScroll = true;
-            //frmMain.Panel2.Controls.Add(myForm);
-            //myForm.Show();
-            //
+       
         }
 
         private void mKTLoadToolStripMenuItem_Click(object sender, EventArgs e)
@@ -2731,15 +2708,15 @@ namespace BEEACCOUNT.View
 
         private void tạoPhiếuXuấtToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            panelmain.Controls.Clear();  //PosmCreateTK
+            //panelmain.Controls.Clear();  //PosmCreateTK
 
 
-            View.PosmCreateTK PosmCreateTK = new View.PosmCreateTK();
+            //View.PosmCreateTK PosmCreateTK = new View.PosmCreateTK();
 
-            PosmCreateTK.TopLevel = false;
-            PosmCreateTK.AutoScroll = true;
-            panelmain.Controls.Add(PosmCreateTK);
-            PosmCreateTK.Show();
+            //PosmCreateTK.TopLevel = false;
+            //PosmCreateTK.AutoScroll = true;
+            //panelmain.Controls.Add(PosmCreateTK);
+            //PosmCreateTK.Show();
         }
 
         private void fINToolStripMenuItem_Click(object sender, EventArgs e)
@@ -2820,14 +2797,6 @@ namespace BEEACCOUNT.View
         {
 
 
-
-
-            View.BeeAccountsetup accsup = new BeeAccountsetup(this);
-
-            accsup.TopLevel = false;
-            accsup.AutoScroll = true;
-            panelmain.Controls.Add(accsup);
-            accsup.Show();
 
 
 

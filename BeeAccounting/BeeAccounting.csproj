@@ -273,12 +273,6 @@
     <Compile Include="View\BeeselecSocai.Designer.cs">
       <DependentUpon>BeeselecSocai.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Beestoreinput.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\Beestoreinput.Designer.cs">
-      <DependentUpon>Beestoreinput.cs</DependentUpon>
-    </Compile>
     <Compile Include="View\BeeCaculating.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -315,30 +309,6 @@
     <Compile Include="View\Beeyearsellect.Designer.cs">
       <DependentUpon>Beeyearsellect.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\PosmCreateTK.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\PosmCreateTK.Designer.cs">
-      <DependentUpon>PosmCreateTK.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\EditContractItem.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\EditContractItem.Designer.cs">
-      <DependentUpon>EditContractItem.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\Createpayment.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\Createpayment.Designer.cs">
-      <DependentUpon>Createpayment.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\CreatnewCust.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\CreatnewCust.Designer.cs">
-      <DependentUpon>CreatnewCust.cs</DependentUpon>
-    </Compile>
     <Compile Include="View\Noouthourise.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -351,12 +321,6 @@
     <Compile Include="View\Passwordchange.Designer.cs">
       <DependentUpon>Passwordchange.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\SetCustGroup.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\SetCustGroup.Designer.cs">
-      <DependentUpon>SetCustGroup.cs</DependentUpon>
-    </Compile>
     <Compile Include="View\beeselectinput.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -368,12 +332,6 @@
     </Compile>
     <Compile Include="View\Viewdatatable.Designer.cs">
       <DependentUpon>Viewdatatable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\kaconfirmPayment.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\kaconfirmPayment.Designer.cs">
-      <DependentUpon>kaconfirmPayment.cs</DependentUpon>
     </Compile>
     <Compile Include="View\kaPriodmake.cs">
       <SubType>Form</SubType>
@@ -392,18 +350,6 @@
     </Compile>
     <Compile Include="View\kasaleupload.Designer.cs">
       <DependentUpon>kasaleupload.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\KAcontractlisting.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\KAcontractlisting.Designer.cs">
-      <DependentUpon>KAcontractlisting.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\CreatenewContract.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\CreatenewContract.Designer.cs">
-      <DependentUpon>CreatenewContract.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Datepick.cs">
       <SubType>Form</SubType>
@@ -452,12 +398,6 @@
     </Compile>
     <Compile Include="View\BeeServersetup.Designer.cs">
       <DependentUpon>BeeServersetup.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\SetGroupFrom.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\SetGroupFrom.Designer.cs">
-      <DependentUpon>SetGroupFrom.cs</DependentUpon>
     </Compile>
     <Compile Include="View\valueinput.cs">
       <SubType>Form</SubType>
@@ -597,9 +537,6 @@
     <EmbeddedResource Include="View\BeeselecSocai.resx">
       <DependentUpon>BeeselecSocai.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Beestoreinput.resx">
-      <DependentUpon>Beestoreinput.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="View\BeeCaculating.resx">
       <DependentUpon>BeeCaculating.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -619,35 +556,17 @@
     <EmbeddedResource Include="View\Beeyearsellect.resx">
       <DependentUpon>Beeyearsellect.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\PosmCreateTK.resx">
-      <DependentUpon>PosmCreateTK.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\EditContractItem.resx">
-      <DependentUpon>EditContractItem.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\Createpayment.resx">
-      <DependentUpon>Createpayment.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\CreatnewCust.resx">
-      <DependentUpon>CreatnewCust.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="View\Noouthourise.resx">
       <DependentUpon>Noouthourise.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Passwordchange.resx">
       <DependentUpon>Passwordchange.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\SetCustGroup.resx">
-      <DependentUpon>SetCustGroup.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="View\beeselectinput.resx">
       <DependentUpon>beeselectinput.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Viewdatatable.resx">
       <DependentUpon>Viewdatatable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\kaconfirmPayment.resx">
-      <DependentUpon>kaconfirmPayment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\kaPriodmake.resx">
       <DependentUpon>kaPriodmake.cs</DependentUpon>
@@ -657,12 +576,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\kasaleupload.resx">
       <DependentUpon>kasaleupload.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\KAcontractlisting.resx">
-      <DependentUpon>KAcontractlisting.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\CreatenewContract.resx">
-      <DependentUpon>CreatenewContract.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Datepick.resx">
       <DependentUpon>Datepick.cs</DependentUpon>
@@ -687,9 +600,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\BeeServersetup.resx">
       <DependentUpon>BeeServersetup.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\SetGroupFrom.resx">
-      <DependentUpon>SetGroupFrom.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\valueinput.resx">
       <DependentUpon>valueinput.cs</DependentUpon>
