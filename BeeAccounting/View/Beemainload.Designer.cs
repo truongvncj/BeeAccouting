@@ -28,6 +28,68 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Thông tin doanh nghiệp");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("BH01-Quầy hàng");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Kế toán bán hàng", new System.Windows.Forms.TreeNode[] {
+            treeNode2});
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Kế toán thanh toán");
+            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Đăng ký tài sản cố định");
+            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Bản phân bổ khấu hao TSCĐ");
+            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Kế toán TSCĐ", new System.Windows.Forms.TreeNode[] {
+            treeNode5,
+            treeNode6});
+            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Bản xác nhận công nợ");
+            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Thanh toán bù trừ");
+            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Kế toán công nợ", new System.Windows.Forms.TreeNode[] {
+            treeNode8,
+            treeNode9});
+            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("Phiếu thu");
+            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("Phiếu chi");
+            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("Kế toán quỹ", new System.Windows.Forms.TreeNode[] {
+            treeNode11,
+            treeNode12});
+            System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("Phiếu nhập kho");
+            System.Windows.Forms.TreeNode treeNode15 = new System.Windows.Forms.TreeNode("Phiếu xuất kho");
+            System.Windows.Forms.TreeNode treeNode16 = new System.Windows.Forms.TreeNode("Xuất nội bộ");
+            System.Windows.Forms.TreeNode treeNode17 = new System.Windows.Forms.TreeNode("Nhập nội bộ");
+            System.Windows.Forms.TreeNode treeNode18 = new System.Windows.Forms.TreeNode("Kiểm kê hàng hóa");
+            System.Windows.Forms.TreeNode treeNode19 = new System.Windows.Forms.TreeNode("Danh sách kho");
+            System.Windows.Forms.TreeNode treeNode20 = new System.Windows.Forms.TreeNode("Danh sách nhóm sản phẩm");
+            System.Windows.Forms.TreeNode treeNode21 = new System.Windows.Forms.TreeNode("Danh sách sản phẩm");
+            System.Windows.Forms.TreeNode treeNode22 = new System.Windows.Forms.TreeNode("Kho hàng", new System.Windows.Forms.TreeNode[] {
+            treeNode14,
+            treeNode15,
+            treeNode16,
+            treeNode17,
+            treeNode18,
+            treeNode19,
+            treeNode20,
+            treeNode21});
+            System.Windows.Forms.TreeNode treeNode23 = new System.Windows.Forms.TreeNode("Sổ quỹ");
+            System.Windows.Forms.TreeNode treeNode24 = new System.Windows.Forms.TreeNode("Sổ cái tài khoản");
+            System.Windows.Forms.TreeNode treeNode25 = new System.Windows.Forms.TreeNode("Sổ tổng hợp tài khoản");
+            System.Windows.Forms.TreeNode treeNode26 = new System.Windows.Forms.TreeNode("Sổ chi tiết tài khoản");
+            System.Windows.Forms.TreeNode treeNode27 = new System.Windows.Forms.TreeNode("Sổ nhật ký chung");
+            System.Windows.Forms.TreeNode treeNode28 = new System.Windows.Forms.TreeNode("Báo cáo nhập xuất tồn kho");
+            System.Windows.Forms.TreeNode treeNode29 = new System.Windows.Forms.TreeNode("Báo cáo quản trị", new System.Windows.Forms.TreeNode[] {
+            treeNode23,
+            treeNode24,
+            treeNode25,
+            treeNode26,
+            treeNode27,
+            treeNode28});
+            System.Windows.Forms.TreeNode treeNode30 = new System.Windows.Forms.TreeNode("Bảng cân đối phát sinh");
+            System.Windows.Forms.TreeNode treeNode31 = new System.Windows.Forms.TreeNode("Báo cáo kết quả kinh doanh");
+            System.Windows.Forms.TreeNode treeNode32 = new System.Windows.Forms.TreeNode("Thuyết minh báo cáo tài chính");
+            System.Windows.Forms.TreeNode treeNode33 = new System.Windows.Forms.TreeNode("Bảng cân đối kế toán");
+            System.Windows.Forms.TreeNode treeNode34 = new System.Windows.Forms.TreeNode("Báo cáo lưu chuyển tiền tệ");
+            System.Windows.Forms.TreeNode treeNode35 = new System.Windows.Forms.TreeNode("Báo cáo tài chính", new System.Windows.Forms.TreeNode[] {
+            treeNode30,
+            treeNode31,
+            treeNode32,
+            treeNode33,
+            treeNode34});
+            System.Windows.Forms.TreeNode treeNode36 = new System.Windows.Forms.TreeNode("Hệ thống");
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Beemainload));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button13 = new System.Windows.Forms.Button();
@@ -37,23 +99,15 @@
             this.button29 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
             this.button15 = new System.Windows.Forms.Button();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.button25 = new System.Windows.Forms.Button();
-            this.button20 = new System.Windows.Forms.Button();
-            this.button17 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.button20 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btdanhsachnhavantai = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.button32 = new System.Windows.Forms.Button();
             this.button18 = new System.Windows.Forms.Button();
@@ -68,20 +122,6 @@
             this.button26 = new System.Windows.Forms.Button();
             this.button45 = new System.Windows.Forms.Button();
             this.button27 = new System.Windows.Forms.Button();
-            this.groupBox10 = new System.Windows.Forms.GroupBox();
-            this.button33 = new System.Windows.Forms.Button();
-            this.button34 = new System.Windows.Forms.Button();
-            this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.button30 = new System.Windows.Forms.Button();
-            this.button31 = new System.Windows.Forms.Button();
-            this.groupBox11 = new System.Windows.Forms.GroupBox();
-            this.btdanhsachsanpham = new System.Windows.Forms.Button();
-            this.btdanhsachnhomsanpham = new System.Windows.Forms.Button();
-            this.btsanhsachkhohang = new System.Windows.Forms.Button();
-            this.button28 = new System.Windows.Forms.Button();
-            this.button40 = new System.Windows.Forms.Button();
-            this.button41 = new System.Windows.Forms.Button();
-            this.button42 = new System.Windows.Forms.Button();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.button46 = new System.Windows.Forms.Button();
             this.button36 = new System.Windows.Forms.Button();
@@ -102,30 +142,39 @@
             this.button54 = new System.Windows.Forms.Button();
             this.groupBox15 = new System.Windows.Forms.GroupBox();
             this.button56 = new System.Windows.Forms.Button();
+            this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.button33 = new System.Windows.Forms.Button();
+            this.groupBox17 = new System.Windows.Forms.GroupBox();
+            this.button35 = new System.Windows.Forms.Button();
+            this.button34 = new System.Windows.Forms.Button();
+            this.button31 = new System.Windows.Forms.Button();
+            this.button30 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.treeView1 = new System.Windows.Forms.TreeView();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox7.SuspendLayout();
-            this.groupBox10.SuspendLayout();
-            this.groupBox8.SuspendLayout();
-            this.groupBox11.SuspendLayout();
             this.groupBox9.SuspendLayout();
             this.groupBox12.SuspendLayout();
             this.groupBox13.SuspendLayout();
             this.groupBox14.SuspendLayout();
             this.groupBox15.SuspendLayout();
+            this.groupBox10.SuspendLayout();
+            this.groupBox17.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.button13);
             this.groupBox1.Controls.Add(this.button10);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Location = new System.Drawing.Point(703, 28);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(184, 85);
+            this.groupBox1.Size = new System.Drawing.Size(184, 81);
             this.groupBox1.TabIndex = 40;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tiền mặt";
@@ -133,9 +182,9 @@
             // button13
             // 
             this.button13.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.button13.Location = new System.Drawing.Point(6, 50);
+            this.button13.Location = new System.Drawing.Point(6, 45);
             this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(157, 22);
+            this.button13.Size = new System.Drawing.Size(166, 22);
             this.button13.TabIndex = 14;
             this.button13.TabStop = false;
             this.button13.Text = "Phiếu chi tiền";
@@ -145,9 +194,9 @@
             // button10
             // 
             this.button10.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.button10.Location = new System.Drawing.Point(6, 22);
+            this.button10.Location = new System.Drawing.Point(6, 17);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(157, 22);
+            this.button10.Size = new System.Drawing.Size(166, 22);
             this.button10.TabIndex = 13;
             this.button10.TabStop = false;
             this.button10.Text = "Phiếu thu tiền";
@@ -161,16 +210,16 @@
             this.groupBox2.Controls.Add(this.button29);
             this.groupBox2.Controls.Add(this.button14);
             this.groupBox2.Controls.Add(this.button15);
-            this.groupBox2.Location = new System.Drawing.Point(449, 277);
+            this.groupBox2.Location = new System.Drawing.Point(482, 251);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(184, 195);
+            this.groupBox2.Size = new System.Drawing.Size(184, 136);
             this.groupBox2.TabIndex = 41;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Báo cáo tài chính";
             // 
             // button39
             // 
-            this.button39.Location = new System.Drawing.Point(6, 147);
+            this.button39.Location = new System.Drawing.Point(6, 103);
             this.button39.Name = "button39";
             this.button39.Size = new System.Drawing.Size(166, 22);
             this.button39.TabIndex = 16;
@@ -180,7 +229,7 @@
             // 
             // button29
             // 
-            this.button29.Location = new System.Drawing.Point(6, 110);
+            this.button29.Location = new System.Drawing.Point(6, 75);
             this.button29.Name = "button29";
             this.button29.Size = new System.Drawing.Size(166, 22);
             this.button29.TabIndex = 15;
@@ -190,7 +239,7 @@
             // 
             // button14
             // 
-            this.button14.Location = new System.Drawing.Point(6, 72);
+            this.button14.Location = new System.Drawing.Point(6, 47);
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(166, 22);
             this.button14.TabIndex = 14;
@@ -200,157 +249,56 @@
             // 
             // button15
             // 
-            this.button15.Location = new System.Drawing.Point(6, 32);
+            this.button15.BackColor = System.Drawing.Color.Red;
+            this.button15.Location = new System.Drawing.Point(6, 19);
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(166, 22);
             this.button15.TabIndex = 13;
             this.button15.TabStop = false;
             this.button15.Text = "Báo cáo KQKD";
-            this.button15.UseVisualStyleBackColor = true;
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox3.Controls.Add(this.button25);
-            this.groupBox3.Controls.Add(this.button20);
-            this.groupBox3.Controls.Add(this.button17);
-            this.groupBox3.Controls.Add(this.button16);
-            this.groupBox3.Controls.Add(this.button4);
-            this.groupBox3.Controls.Add(this.button3);
-            this.groupBox3.Controls.Add(this.button1);
-            this.groupBox3.Controls.Add(this.button2);
-            this.groupBox3.Location = new System.Drawing.Point(901, 12);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(184, 300);
-            this.groupBox3.TabIndex = 41;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Sổ kế toán";
-            // 
-            // button25
-            // 
-            this.button25.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.button25.Location = new System.Drawing.Point(13, 233);
-            this.button25.Name = "button25";
-            this.button25.Size = new System.Drawing.Size(157, 22);
-            this.button25.TabIndex = 21;
-            this.button25.TabStop = false;
-            this.button25.Text = "Báo cáo nhập xuất tồn";
-            this.button25.UseVisualStyleBackColor = false;
-            this.button25.Click += new System.EventHandler(this.button25_Click);
-            // 
-            // button20
-            // 
-            this.button20.BackColor = System.Drawing.Color.Red;
-            this.button20.Location = new System.Drawing.Point(13, 205);
-            this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(157, 22);
-            this.button20.TabIndex = 20;
-            this.button20.TabStop = false;
-            this.button20.Text = "Sổ kho";
-            this.button20.UseVisualStyleBackColor = false;
-            // 
-            // button17
-            // 
-            this.button17.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.button17.Location = new System.Drawing.Point(13, 172);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(157, 22);
-            this.button17.TabIndex = 18;
-            this.button17.TabStop = false;
-            this.button17.Text = "Bảng cân đối  phát sinh";
-            this.button17.UseVisualStyleBackColor = false;
-            this.button17.Click += new System.EventHandler(this.button17_Click);
-            // 
-            // button16
-            // 
-            this.button16.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.button16.Location = new System.Drawing.Point(13, 144);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(157, 22);
-            this.button16.TabIndex = 17;
-            this.button16.TabStop = false;
-            this.button16.Text = "Sổ nhật ký chung";
-            this.button16.UseVisualStyleBackColor = false;
-            this.button16.Click += new System.EventHandler(this.button16_Click_2);
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.button4.Location = new System.Drawing.Point(13, 116);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(157, 22);
-            this.button4.TabIndex = 16;
-            this.button4.TabStop = false;
-            this.button4.Text = "Sổ  chi tiết tài khoản";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click_2);
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.button3.Location = new System.Drawing.Point(13, 88);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(157, 22);
-            this.button3.TabIndex = 15;
-            this.button3.TabStop = false;
-            this.button3.Text = "Sổ tổng hợp theo tài khoản";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click_2);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.button1.Location = new System.Drawing.Point(13, 60);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(157, 22);
-            this.button1.TabIndex = 14;
-            this.button1.TabStop = false;
-            this.button1.Text = "Sổ cái tài khoản";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.button2.Location = new System.Drawing.Point(13, 32);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(157, 22);
-            this.button2.TabIndex = 13;
-            this.button2.TabStop = false;
-            this.button2.Text = "Sổ Quỹ";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            this.button15.UseVisualStyleBackColor = false;
             // 
             // groupBox4
             // 
             this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox4.Controls.Add(this.button20);
             this.groupBox4.Controls.Add(this.button12);
             this.groupBox4.Controls.Add(this.button11);
             this.groupBox4.Controls.Add(this.button9);
             this.groupBox4.Controls.Add(this.button8);
             this.groupBox4.Controls.Add(this.button7);
             this.groupBox4.Controls.Add(this.button5);
-            this.groupBox4.Controls.Add(this.button6);
-            this.groupBox4.Location = new System.Drawing.Point(449, 15);
+            this.groupBox4.Controls.Add(this.btdanhsachnhavantai);
+            this.groupBox4.Location = new System.Drawing.Point(482, 15);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(184, 255);
+            this.groupBox4.Size = new System.Drawing.Size(184, 243);
             this.groupBox4.TabIndex = 43;
             this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Điều vận";
+            this.groupBox4.Text = "Vận tải Nam Phong";
+            // 
+            // button20
+            // 
+            this.button20.Location = new System.Drawing.Point(6, 160);
+            this.button20.Name = "button20";
+            this.button20.Size = new System.Drawing.Size(157, 22);
+            this.button20.TabIndex = 20;
+            this.button20.TabStop = false;
+            this.button20.Text = "Bảng giá theo cây số";
+            this.button20.UseVisualStyleBackColor = true;
             // 
             // button12
             // 
-            this.button12.Location = new System.Drawing.Point(6, 200);
+            this.button12.Location = new System.Drawing.Point(6, 131);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(157, 22);
             this.button12.TabIndex = 19;
             this.button12.TabStop = false;
-            this.button12.Text = "Báo cáo cân đối thuế";
+            this.button12.Text = "Bảng giá theo khoán ";
             this.button12.UseVisualStyleBackColor = true;
             // 
             // button11
             // 
-            this.button11.Location = new System.Drawing.Point(6, 172);
+            this.button11.Location = new System.Drawing.Point(6, 216);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(157, 22);
             this.button11.TabIndex = 18;
@@ -360,7 +308,7 @@
             // 
             // button9
             // 
-            this.button9.Location = new System.Drawing.Point(6, 144);
+            this.button9.Location = new System.Drawing.Point(6, 188);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(157, 22);
             this.button9.TabIndex = 17;
@@ -370,52 +318,56 @@
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(6, 116);
+            this.button8.Location = new System.Drawing.Point(6, 103);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(157, 22);
             this.button8.TabIndex = 16;
             this.button8.TabStop = false;
-            this.button8.Text = "Điều vận xe";
+            this.button8.Text = "Bảng giá theo tuyến";
             this.button8.UseVisualStyleBackColor = true;
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(6, 88);
+            this.button7.Location = new System.Drawing.Point(6, 75);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(157, 22);
             this.button7.TabIndex = 15;
             this.button7.TabStop = false;
-            this.button7.Text = "Bảng giá";
+            this.button7.Text = "Danh sách khách hàng";
             this.button7.UseVisualStyleBackColor = true;
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(6, 60);
+            this.button5.BackColor = System.Drawing.Color.Red;
+            this.button5.Location = new System.Drawing.Point(6, 47);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(157, 22);
             this.button5.TabIndex = 14;
             this.button5.TabStop = false;
-            this.button5.Text = "Danh sách điểm giao hàng";
-            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Text = "Danh sách xe ";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click_1);
             // 
-            // button6
+            // btdanhsachnhavantai
             // 
-            this.button6.Location = new System.Drawing.Point(6, 32);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(157, 22);
-            this.button6.TabIndex = 13;
-            this.button6.TabStop = false;
-            this.button6.Text = "Danh sách xe";
-            this.button6.UseVisualStyleBackColor = true;
+            this.btdanhsachnhavantai.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btdanhsachnhavantai.Location = new System.Drawing.Point(6, 19);
+            this.btdanhsachnhavantai.Name = "btdanhsachnhavantai";
+            this.btdanhsachnhavantai.Size = new System.Drawing.Size(157, 22);
+            this.btdanhsachnhavantai.TabIndex = 13;
+            this.btdanhsachnhavantai.TabStop = false;
+            this.btdanhsachnhavantai.Text = "Danh sách nhà xe";
+            this.btdanhsachnhavantai.UseVisualStyleBackColor = false;
+            this.btdanhsachnhavantai.Click += new System.EventHandler(this.btdanhsachnhavantai_Click);
             // 
             // groupBox5
             // 
             this.groupBox5.Controls.Add(this.button32);
             this.groupBox5.Controls.Add(this.button18);
             this.groupBox5.Controls.Add(this.button19);
-            this.groupBox5.Location = new System.Drawing.Point(12, 145);
+            this.groupBox5.Location = new System.Drawing.Point(265, 209);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(184, 128);
+            this.groupBox5.Size = new System.Drawing.Size(184, 103);
             this.groupBox5.TabIndex = 42;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Mua hàng";
@@ -423,7 +375,7 @@
             // button32
             // 
             this.button32.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.button32.Location = new System.Drawing.Point(6, 88);
+            this.button32.Location = new System.Drawing.Point(6, 75);
             this.button32.Name = "button32";
             this.button32.Size = new System.Drawing.Size(166, 24);
             this.button32.TabIndex = 16;
@@ -434,7 +386,7 @@
             // 
             // button18
             // 
-            this.button18.Location = new System.Drawing.Point(6, 60);
+            this.button18.Location = new System.Drawing.Point(6, 47);
             this.button18.Name = "button18";
             this.button18.Size = new System.Drawing.Size(166, 22);
             this.button18.TabIndex = 14;
@@ -444,7 +396,7 @@
             // 
             // button19
             // 
-            this.button19.Location = new System.Drawing.Point(6, 32);
+            this.button19.Location = new System.Drawing.Point(6, 19);
             this.button19.Name = "button19";
             this.button19.Size = new System.Drawing.Size(166, 22);
             this.button19.TabIndex = 13;
@@ -459,9 +411,9 @@
             this.groupBox6.Controls.Add(this.button21);
             this.groupBox6.Controls.Add(this.button22);
             this.groupBox6.Controls.Add(this.button23);
-            this.groupBox6.Location = new System.Drawing.Point(233, 15);
+            this.groupBox6.Location = new System.Drawing.Point(265, 12);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(184, 177);
+            this.groupBox6.Size = new System.Drawing.Size(184, 135);
             this.groupBox6.TabIndex = 43;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Bán hàng";
@@ -514,9 +466,9 @@
             this.groupBox7.Controls.Add(this.button26);
             this.groupBox7.Controls.Add(this.button45);
             this.groupBox7.Controls.Add(this.button27);
-            this.groupBox7.Location = new System.Drawing.Point(239, 397);
+            this.groupBox7.Location = new System.Drawing.Point(266, 476);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(184, 154);
+            this.groupBox7.Size = new System.Drawing.Size(190, 131);
             this.groupBox7.TabIndex = 44;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Sổ kế toán";
@@ -565,167 +517,6 @@
             this.button27.Text = "Mở sổ chi tiết tài khản";
             this.button27.UseVisualStyleBackColor = false;
             this.button27.Click += new System.EventHandler(this.button27_Click);
-            // 
-            // groupBox10
-            // 
-            this.groupBox10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox10.Controls.Add(this.button33);
-            this.groupBox10.Controls.Add(this.button34);
-            this.groupBox10.Location = new System.Drawing.Point(23, 432);
-            this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Size = new System.Drawing.Size(184, 120);
-            this.groupBox10.TabIndex = 42;
-            this.groupBox10.TabStop = false;
-            this.groupBox10.Text = "Ngân hàng";
-            // 
-            // button33
-            // 
-            this.button33.Location = new System.Drawing.Point(6, 46);
-            this.button33.Name = "button33";
-            this.button33.Size = new System.Drawing.Size(166, 22);
-            this.button33.TabIndex = 14;
-            this.button33.TabStop = false;
-            this.button33.Text = "Ủy nhiệm chi";
-            this.button33.UseVisualStyleBackColor = true;
-            // 
-            // button34
-            // 
-            this.button34.Location = new System.Drawing.Point(6, 18);
-            this.button34.Name = "button34";
-            this.button34.Size = new System.Drawing.Size(166, 22);
-            this.button34.TabIndex = 13;
-            this.button34.TabStop = false;
-            this.button34.Text = "Ủy nhiệm thu";
-            this.button34.UseVisualStyleBackColor = true;
-            // 
-            // groupBox8
-            // 
-            this.groupBox8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox8.Controls.Add(this.button30);
-            this.groupBox8.Controls.Add(this.button31);
-            this.groupBox8.Location = new System.Drawing.Point(17, 305);
-            this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(178, 102);
-            this.groupBox8.TabIndex = 43;
-            this.groupBox8.TabStop = false;
-            this.groupBox8.Text = "Thanh toán";
-            // 
-            // button30
-            // 
-            this.button30.Location = new System.Drawing.Point(6, 72);
-            this.button30.Name = "button30";
-            this.button30.Size = new System.Drawing.Size(166, 22);
-            this.button30.TabIndex = 14;
-            this.button30.TabStop = false;
-            this.button30.Text = "Ủy nhiệm chi";
-            this.button30.UseVisualStyleBackColor = true;
-            // 
-            // button31
-            // 
-            this.button31.Location = new System.Drawing.Point(6, 32);
-            this.button31.Name = "button31";
-            this.button31.Size = new System.Drawing.Size(166, 22);
-            this.button31.TabIndex = 13;
-            this.button31.TabStop = false;
-            this.button31.Text = "Thanh toán theo Po";
-            this.button31.UseVisualStyleBackColor = true;
-            // 
-            // groupBox11
-            // 
-            this.groupBox11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox11.Controls.Add(this.btdanhsachsanpham);
-            this.groupBox11.Controls.Add(this.btdanhsachnhomsanpham);
-            this.groupBox11.Controls.Add(this.btsanhsachkhohang);
-            this.groupBox11.Controls.Add(this.button28);
-            this.groupBox11.Controls.Add(this.button40);
-            this.groupBox11.Controls.Add(this.button41);
-            this.groupBox11.Controls.Add(this.button42);
-            this.groupBox11.Location = new System.Drawing.Point(678, 15);
-            this.groupBox11.Name = "groupBox11";
-            this.groupBox11.Size = new System.Drawing.Size(217, 258);
-            this.groupBox11.TabIndex = 46;
-            this.groupBox11.TabStop = false;
-            this.groupBox11.Text = "Kho hàng";
-            // 
-            // btdanhsachsanpham
-            // 
-            this.btdanhsachsanpham.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btdanhsachsanpham.Location = new System.Drawing.Point(25, 88);
-            this.btdanhsachsanpham.Name = "btdanhsachsanpham";
-            this.btdanhsachsanpham.Size = new System.Drawing.Size(166, 22);
-            this.btdanhsachsanpham.TabIndex = 19;
-            this.btdanhsachsanpham.TabStop = false;
-            this.btdanhsachsanpham.Text = "Danh sách sản phẩm";
-            this.btdanhsachsanpham.UseVisualStyleBackColor = false;
-            this.btdanhsachsanpham.Click += new System.EventHandler(this.btdanhsachsanpham_Click);
-            // 
-            // btdanhsachnhomsanpham
-            // 
-            this.btdanhsachnhomsanpham.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btdanhsachnhomsanpham.Location = new System.Drawing.Point(25, 60);
-            this.btdanhsachnhomsanpham.Name = "btdanhsachnhomsanpham";
-            this.btdanhsachnhomsanpham.Size = new System.Drawing.Size(166, 22);
-            this.btdanhsachnhomsanpham.TabIndex = 18;
-            this.btdanhsachnhomsanpham.TabStop = false;
-            this.btdanhsachnhomsanpham.Text = "Danh sách nhóm sản phẩm";
-            this.btdanhsachnhomsanpham.UseVisualStyleBackColor = false;
-            this.btdanhsachnhomsanpham.Click += new System.EventHandler(this.btdanhsachnhomsanpham_Click);
-            // 
-            // btsanhsachkhohang
-            // 
-            this.btsanhsachkhohang.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btsanhsachkhohang.Location = new System.Drawing.Point(25, 29);
-            this.btsanhsachkhohang.Name = "btsanhsachkhohang";
-            this.btsanhsachkhohang.Size = new System.Drawing.Size(166, 22);
-            this.btsanhsachkhohang.TabIndex = 17;
-            this.btsanhsachkhohang.TabStop = false;
-            this.btsanhsachkhohang.Text = "Danh sách kho";
-            this.btsanhsachkhohang.UseVisualStyleBackColor = false;
-            this.btsanhsachkhohang.Click += new System.EventHandler(this.btsanhsachkhohang_Click);
-            // 
-            // button28
-            // 
-            this.button28.Location = new System.Drawing.Point(25, 212);
-            this.button28.Name = "button28";
-            this.button28.Size = new System.Drawing.Size(166, 22);
-            this.button28.TabIndex = 16;
-            this.button28.TabStop = false;
-            this.button28.Text = "Phiếu nhập nội bộ";
-            this.button28.UseVisualStyleBackColor = true;
-            // 
-            // button40
-            // 
-            this.button40.Location = new System.Drawing.Point(25, 183);
-            this.button40.Name = "button40";
-            this.button40.Size = new System.Drawing.Size(166, 22);
-            this.button40.TabIndex = 15;
-            this.button40.TabStop = false;
-            this.button40.Text = "Phiếu xuất nội bộ";
-            this.button40.UseVisualStyleBackColor = true;
-            // 
-            // button41
-            // 
-            this.button41.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.button41.Location = new System.Drawing.Point(25, 155);
-            this.button41.Name = "button41";
-            this.button41.Size = new System.Drawing.Size(166, 22);
-            this.button41.TabIndex = 14;
-            this.button41.TabStop = false;
-            this.button41.Text = "Phiếu xuất kho";
-            this.button41.UseVisualStyleBackColor = false;
-            this.button41.Click += new System.EventHandler(this.button41_Click);
-            // 
-            // button42
-            // 
-            this.button42.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.button42.Location = new System.Drawing.Point(25, 127);
-            this.button42.Name = "button42";
-            this.button42.Size = new System.Drawing.Size(166, 22);
-            this.button42.TabIndex = 13;
-            this.button42.TabStop = false;
-            this.button42.Text = "Phiếu nhập kho";
-            this.button42.UseVisualStyleBackColor = false;
-            this.button42.Click += new System.EventHandler(this.button42_Click);
             // 
             // groupBox9
             // 
@@ -790,16 +581,16 @@
             this.groupBox12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox12.Controls.Add(this.button43);
             this.groupBox12.Controls.Add(this.button44);
-            this.groupBox12.Location = new System.Drawing.Point(233, 298);
+            this.groupBox12.Location = new System.Drawing.Point(482, 536);
             this.groupBox12.Name = "groupBox12";
-            this.groupBox12.Size = new System.Drawing.Size(184, 93);
+            this.groupBox12.Size = new System.Drawing.Size(184, 77);
             this.groupBox12.TabIndex = 45;
             this.groupBox12.TabStop = false;
             this.groupBox12.Text = "Sản xuất";
             // 
             // button43
             // 
-            this.button43.Location = new System.Drawing.Point(9, 60);
+            this.button43.Location = new System.Drawing.Point(6, 47);
             this.button43.Name = "button43";
             this.button43.Size = new System.Drawing.Size(166, 22);
             this.button43.TabIndex = 15;
@@ -809,7 +600,7 @@
             // 
             // button44
             // 
-            this.button44.Location = new System.Drawing.Point(9, 31);
+            this.button44.Location = new System.Drawing.Point(9, 19);
             this.button44.Name = "button44";
             this.button44.Size = new System.Drawing.Size(166, 22);
             this.button44.TabIndex = 14;
@@ -882,7 +673,7 @@
             this.groupBox14.Controls.Add(this.button52);
             this.groupBox14.Controls.Add(this.button53);
             this.groupBox14.Controls.Add(this.button54);
-            this.groupBox14.Location = new System.Drawing.Point(900, 318);
+            this.groupBox14.Location = new System.Drawing.Point(901, 15);
             this.groupBox14.Name = "groupBox14";
             this.groupBox14.Size = new System.Drawing.Size(185, 136);
             this.groupBox14.TabIndex = 49;
@@ -941,17 +732,17 @@
             // 
             this.groupBox15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox15.Controls.Add(this.button56);
-            this.groupBox15.Location = new System.Drawing.Point(230, 199);
+            this.groupBox15.Location = new System.Drawing.Point(482, 480);
             this.groupBox15.Name = "groupBox15";
-            this.groupBox15.Size = new System.Drawing.Size(184, 68);
+            this.groupBox15.Size = new System.Drawing.Size(184, 50);
             this.groupBox15.TabIndex = 46;
             this.groupBox15.TabStop = false;
             this.groupBox15.Text = "Kế toán tổng hợp";
             // 
             // button56
             // 
-            this.button56.BackColor = System.Drawing.Color.Red;
-            this.button56.Location = new System.Drawing.Point(9, 31);
+            this.button56.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.button56.Location = new System.Drawing.Point(9, 19);
             this.button56.Name = "button56";
             this.button56.Size = new System.Drawing.Size(166, 22);
             this.button56.TabIndex = 14;
@@ -960,24 +751,221 @@
             this.button56.UseVisualStyleBackColor = false;
             this.button56.Click += new System.EventHandler(this.button56_Click);
             // 
+            // groupBox10
+            // 
+            this.groupBox10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox10.Controls.Add(this.button33);
+            this.groupBox10.Location = new System.Drawing.Point(266, 153);
+            this.groupBox10.Name = "groupBox10";
+            this.groupBox10.Size = new System.Drawing.Size(178, 50);
+            this.groupBox10.TabIndex = 50;
+            this.groupBox10.TabStop = false;
+            this.groupBox10.Text = "Kế toán thuế";
+            // 
+            // button33
+            // 
+            this.button33.Location = new System.Drawing.Point(6, 19);
+            this.button33.Name = "button33";
+            this.button33.Size = new System.Drawing.Size(160, 22);
+            this.button33.TabIndex = 13;
+            this.button33.TabStop = false;
+            this.button33.Text = "Bản cân đối thuế VAT";
+            this.button33.UseVisualStyleBackColor = true;
+            // 
+            // groupBox17
+            // 
+            this.groupBox17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox17.Controls.Add(this.button35);
+            this.groupBox17.Controls.Add(this.button34);
+            this.groupBox17.Controls.Add(this.button31);
+            this.groupBox17.Controls.Add(this.button30);
+            this.groupBox17.Controls.Add(this.button6);
+            this.groupBox17.Location = new System.Drawing.Point(266, 320);
+            this.groupBox17.Name = "groupBox17";
+            this.groupBox17.Size = new System.Drawing.Size(178, 167);
+            this.groupBox17.TabIndex = 51;
+            this.groupBox17.TabStop = false;
+            this.groupBox17.Text = "Tính năng";
+            // 
+            // button35
+            // 
+            this.button35.Location = new System.Drawing.Point(6, 131);
+            this.button35.Name = "button35";
+            this.button35.Size = new System.Drawing.Size(160, 22);
+            this.button35.TabIndex = 17;
+            this.button35.TabStop = false;
+            this.button35.Text = "Xem báo cáo từ web";
+            this.button35.UseVisualStyleBackColor = true;
+            // 
+            // button34
+            // 
+            this.button34.Location = new System.Drawing.Point(6, 103);
+            this.button34.Name = "button34";
+            this.button34.Size = new System.Drawing.Size(160, 22);
+            this.button34.TabIndex = 16;
+            this.button34.TabStop = false;
+            this.button34.Text = "Thực hiện từ điện thoại";
+            this.button34.UseVisualStyleBackColor = true;
+            // 
+            // button31
+            // 
+            this.button31.Location = new System.Drawing.Point(6, 75);
+            this.button31.Name = "button31";
+            this.button31.Size = new System.Drawing.Size(160, 22);
+            this.button31.TabIndex = 15;
+            this.button31.TabStop = false;
+            this.button31.Text = "Gửi  ZAlo/ facebook";
+            this.button31.UseVisualStyleBackColor = true;
+            // 
+            // button30
+            // 
+            this.button30.Location = new System.Drawing.Point(6, 47);
+            this.button30.Name = "button30";
+            this.button30.Size = new System.Drawing.Size(160, 22);
+            this.button30.TabIndex = 14;
+            this.button30.TabStop = false;
+            this.button30.Text = "Gửi  EMS";
+            this.button30.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(6, 19);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(160, 22);
+            this.button6.TabIndex = 13;
+            this.button6.TabStop = false;
+            this.button6.Text = "Gửi email";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // treeView1
+            // 
+            this.treeView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.treeView1.BackColor = System.Drawing.SystemColors.Window;
+            this.treeView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.treeView1.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.treeView1.Location = new System.Drawing.Point(3, 3);
+            this.treeView1.Name = "treeView1";
+            treeNode1.Name = "thongtin";
+            treeNode1.Text = "Thông tin doanh nghiệp";
+            treeNode2.Name = "bh01phieuxuatsieuthi";
+            treeNode2.Text = "BH01-Quầy hàng";
+            treeNode3.Name = "ktbanhang";
+            treeNode3.Text = "Kế toán bán hàng";
+            treeNode4.Name = "Node0";
+            treeNode4.Text = "Kế toán thanh toán";
+            treeNode5.Name = "tsdangky";
+            treeNode5.Text = "Đăng ký tài sản cố định";
+            treeNode6.Name = "tsphambokhauhao";
+            treeNode6.Text = "Bản phân bổ khấu hao TSCĐ";
+            treeNode7.Name = "Node1";
+            treeNode7.Text = "Kế toán TSCĐ";
+            treeNode8.Name = "Node10";
+            treeNode8.Text = "Bản xác nhận công nợ";
+            treeNode9.Name = "Node11";
+            treeNode9.Text = "Thanh toán bù trừ";
+            treeNode10.Name = "Node0";
+            treeNode10.Text = "Kế toán công nợ";
+            treeNode11.Name = "tmphieuthu";
+            treeNode11.Text = "Phiếu thu";
+            treeNode12.Name = "tmphieuchi";
+            treeNode12.Text = "Phiếu chi";
+            treeNode13.Name = "kttiemmat";
+            treeNode13.Text = "Kế toán quỹ";
+            treeNode14.Name = "khophieunhap";
+            treeNode14.Text = "Phiếu nhập kho";
+            treeNode15.Name = "khophieuxuat";
+            treeNode15.Text = "Phiếu xuất kho";
+            treeNode16.ForeColor = System.Drawing.Color.Red;
+            treeNode16.Name = "Node15";
+            treeNode16.Text = "Xuất nội bộ";
+            treeNode17.ForeColor = System.Drawing.Color.Red;
+            treeNode17.Name = "Node16";
+            treeNode17.Text = "Nhập nội bộ";
+            treeNode18.ForeColor = System.Drawing.Color.Red;
+            treeNode18.Name = "Node17";
+            treeNode18.Text = "Kiểm kê hàng hóa";
+            treeNode19.Name = "khodskho";
+            treeNode19.Text = "Danh sách kho";
+            treeNode20.Name = "khonhomsanpham";
+            treeNode20.Text = "Danh sách nhóm sản phẩm";
+            treeNode21.Name = "khodssanpham";
+            treeNode21.Text = "Danh sách sản phẩm";
+            treeNode22.Name = "Node12";
+            treeNode22.Text = "Kho hàng";
+            treeNode23.Name = "bcsoquy";
+            treeNode23.Text = "Sổ quỹ";
+            treeNode24.Name = "bcsocai";
+            treeNode24.Text = "Sổ cái tài khoản";
+            treeNode25.Name = "bcsotonghop";
+            treeNode25.Text = "Sổ tổng hợp tài khoản";
+            treeNode26.Name = "bcsochitiet";
+            treeNode26.Text = "Sổ chi tiết tài khoản";
+            treeNode27.Name = "bcsonhatkychung";
+            treeNode27.Text = "Sổ nhật ký chung";
+            treeNode28.Name = "bcxuatnhapton";
+            treeNode28.Text = "Báo cáo nhập xuất tồn kho";
+            treeNode29.Name = "bcquantri";
+            treeNode29.Text = "Báo cáo quản trị";
+            treeNode30.Name = "bcbangcandoitaikhoan";
+            treeNode30.Text = "Bảng cân đối phát sinh";
+            treeNode31.ForeColor = System.Drawing.Color.Red;
+            treeNode31.Name = "bckqkd";
+            treeNode31.Text = "Báo cáo kết quả kinh doanh";
+            treeNode32.Name = "bcthuyetminh";
+            treeNode32.Text = "Thuyết minh báo cáo tài chính";
+            treeNode33.Name = "bccandoiketoan";
+            treeNode33.Text = "Bảng cân đối kế toán";
+            treeNode34.Name = "bcluuchuyentien";
+            treeNode34.Text = "Báo cáo lưu chuyển tiền tệ";
+            treeNode35.Name = "bctaichinh";
+            treeNode35.Text = "Báo cáo tài chính";
+            treeNode36.Name = "Node4";
+            treeNode36.Text = "Hệ thống";
+            this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
+            treeNode1,
+            treeNode3,
+            treeNode4,
+            treeNode7,
+            treeNode10,
+            treeNode13,
+            treeNode22,
+            treeNode29,
+            treeNode35,
+            treeNode36});
+            this.treeView1.Size = new System.Drawing.Size(241, 595);
+            this.treeView1.TabIndex = 52;
+            this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
+            this.treeView1.NodeMouseDoubleClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.treeView1_NodeMouseDoubleClick);
+            this.treeView1.DoubleClick += new System.EventHandler(this.treeView1_DoubleClick);
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.panel1.Controls.Add(this.treeView1);
+            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(247, 601);
+            this.panel1.TabIndex = 52;
+            // 
             // Beemainload
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(1097, 648);
+            this.ClientSize = new System.Drawing.Size(1097, 617);
             this.ControlBox = false;
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.groupBox17);
+            this.Controls.Add(this.groupBox10);
             this.Controls.Add(this.groupBox15);
             this.Controls.Add(this.groupBox14);
             this.Controls.Add(this.groupBox13);
             this.Controls.Add(this.groupBox12);
             this.Controls.Add(this.groupBox9);
-            this.Controls.Add(this.groupBox11);
             this.Controls.Add(this.groupBox7);
-            this.Controls.Add(this.groupBox8);
-            this.Controls.Add(this.groupBox10);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
-            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -994,19 +982,18 @@
             this.Load += new System.EventHandler(this.KAmasterinput_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
-            this.groupBox3.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
             this.groupBox6.ResumeLayout(false);
             this.groupBox7.ResumeLayout(false);
-            this.groupBox10.ResumeLayout(false);
-            this.groupBox8.ResumeLayout(false);
-            this.groupBox11.ResumeLayout(false);
             this.groupBox9.ResumeLayout(false);
             this.groupBox12.ResumeLayout(false);
             this.groupBox13.ResumeLayout(false);
             this.groupBox14.ResumeLayout(false);
             this.groupBox15.ResumeLayout(false);
+            this.groupBox10.ResumeLayout(false);
+            this.groupBox17.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1018,21 +1005,13 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button button14;
         private System.Windows.Forms.Button button15;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button17;
-        private System.Windows.Forms.Button button16;
+        private System.Windows.Forms.Button btdanhsachnhavantai;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.Button button18;
         private System.Windows.Forms.Button button19;
@@ -1044,24 +1023,8 @@
         private System.Windows.Forms.GroupBox groupBox7;
         private System.Windows.Forms.Button button27;
         private System.Windows.Forms.Button button29;
-        private System.Windows.Forms.GroupBox groupBox10;
-        private System.Windows.Forms.Button button33;
-        private System.Windows.Forms.Button button34;
-        private System.Windows.Forms.GroupBox groupBox8;
-        private System.Windows.Forms.Button button30;
-        private System.Windows.Forms.Button button31;
         private System.Windows.Forms.Button button32;
-        private System.Windows.Forms.GroupBox groupBox11;
-        private System.Windows.Forms.Button button40;
-        private System.Windows.Forms.Button button41;
-        private System.Windows.Forms.Button button42;
-        private System.Windows.Forms.Button button28;
         private System.Windows.Forms.Button button39;
-        private System.Windows.Forms.Button button25;
-        private System.Windows.Forms.Button button20;
-        private System.Windows.Forms.Button btsanhsachkhohang;
-        private System.Windows.Forms.Button btdanhsachnhomsanpham;
-        private System.Windows.Forms.Button btdanhsachsanpham;
         private System.Windows.Forms.Button button45;
         private System.Windows.Forms.GroupBox groupBox9;
         private System.Windows.Forms.Button button46;
@@ -1085,5 +1048,17 @@
         private System.Windows.Forms.Button button26;
         private System.Windows.Forms.GroupBox groupBox15;
         private System.Windows.Forms.Button button56;
+        private System.Windows.Forms.Button button20;
+        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.GroupBox groupBox10;
+        private System.Windows.Forms.Button button33;
+        private System.Windows.Forms.GroupBox groupBox17;
+        private System.Windows.Forms.Button button31;
+        private System.Windows.Forms.Button button30;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button35;
+        private System.Windows.Forms.Button button34;
+        private System.Windows.Forms.TreeView treeView1;
+        private System.Windows.Forms.Panel panel1;
     }
 }

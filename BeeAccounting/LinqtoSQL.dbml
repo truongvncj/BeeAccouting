@@ -669,6 +669,30 @@
       <Column Name="codk" Type="System.Double" DbType="Float" CanBeNull="true" />
     </Type>
   </Table>
+  <Table Name="dbo.tbl_NP_danhsachxe" Member="tbl_NP_danhsachxes">
+    <Type Name="tbl_NP_danhsachxe">
+      <Column Name="maNVT" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="bienso" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="tenlaixe" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="cmtlaixe" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="dienthoailaixe" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="sotantai" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="sokhoithungxe" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_NP_Nhacungungvantai" Member="tbl_NP_Nhacungungvantais">
+    <Type Name="tbl_NP_Nhacungungvantai">
+      <Column Name="tenNVT" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="maNVT" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="diachiNVT" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="masothueNVT" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="dienthoaiNVT" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="sotaikhoannganhangNVT" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="diachinganhangNVT" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+    </Type>
+  </Table>
   <Table Name="dbo.tbl_Socai" Member="tbl_Socais">
     <Type Name="tbl_Socai">
       <Column Name="Diengiai" Type="System.String" DbType="NChar(225)" CanBeNull="true" />

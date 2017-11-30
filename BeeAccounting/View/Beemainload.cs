@@ -841,21 +841,21 @@ namespace BEEACCOUNT.View
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            Model.Soketoan.soQuy();
+            //Model.Soketoan.soQuy();
 
 
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Model.Soketoan.socaitaikhoan();
+            //Model.Soketoan.socaitaikhoan();
 
 
         }
 
         private void button4_Click_2(object sender, EventArgs e)
         {
-            Model.Soketoan.sochitiettaikhoan();
+         
 
 
         }
@@ -864,20 +864,19 @@ namespace BEEACCOUNT.View
         {
 
 
-            Model.Soketoan.sonhatkychung();
-
+        
 
         }
 
         private void button3_Click_2(object sender, EventArgs e)
         {
-            Model.Soketoan.sotonghoptaikhoanchitiet();
+            //Model.Soketoan.sotonghoptaikhoanchitiet();
 
         }
 
         private void button17_Click(object sender, EventArgs e)
         {
-            Model.Soketoan.bangcandoiphatsinhtaikhoan();
+         
         }
 
         private void button32_Click(object sender, EventArgs e)
@@ -895,29 +894,13 @@ namespace BEEACCOUNT.View
 
         private void btsanhsachkhohang_Click(object sender, EventArgs e)
         {
-            string connection_string = Utils.getConnectionstr();
-
-            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
-
-            var rs1 = Model.Khohang.Danhsachkho(dc);
-            Viewtable viewtbl = new Viewtable(rs1, dc, "DANH SÁCH KHO HÀNG", 4);// mã 4 là danh sách kho
-
-            viewtbl.Show();
+     
         }
 
         private void btdanhsachnhomsanpham_Click(object sender, EventArgs e)
         {
 
-            string connection_string = Utils.getConnectionstr();
-
-            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
-
-            var rs1 = Model.Khohang.danhsachnhomsanpham(dc);
-            Viewtable viewtbl = new Viewtable(rs1, dc, "DANH SÁCH NHÓM SẢN PHẨM", 6);// mã 6 là danh sách nhóm sản phẩm
-
-            viewtbl.Show();
-
-
+         
 
 
 
@@ -927,16 +910,7 @@ namespace BEEACCOUNT.View
         private void btdanhsachsanpham_Click(object sender, EventArgs e)
         {
 
-            string connection_string = Utils.getConnectionstr();
-
-            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
-
-            var rs1 = Model.Khohang.danhsachsanpham(dc);
-            Viewtable viewtbl = new Viewtable(rs1, dc, "DANH SÁCH SẢN PHẨM", 7);// mã 7 là danh sách nhóm sản phẩm
-
-            viewtbl.Show();
-
-
+          
 
 
 
@@ -958,17 +932,7 @@ namespace BEEACCOUNT.View
 
         private void button42_Click(object sender, EventArgs e)
         {
-            //  Main.clearpannel();
-
-            main1.clearpannel();
-
-
-            View.BeeKhophieunhap accsup = new BeeKhophieunhap(main1);
-            main1.clearpannelload(accsup);
-            //    accsup.TopLevel = false;
-            //  accsup.AutoScroll = true;
-            //    panelmain.Controls.Add(accsup);
-            //    accsup.Show();
+         
 
 
         }
@@ -1031,8 +995,7 @@ namespace BEEACCOUNT.View
 
         private void button51_Click(object sender, EventArgs e)
         {
-            View.BeeThongtindoanhnghiep doanhnghiep = new BeeThongtindoanhnghiep();
-            doanhnghiep.ShowDialog();
+        
         }
 
         private void button27_Click(object sender, EventArgs e)
@@ -1058,22 +1021,12 @@ namespace BEEACCOUNT.View
 
         private void button41_Click(object sender, EventArgs e)
         {
-            //  Main.clearpannel();
-
-            main1.clearpannel();
-
-
-            View.BeeKhophieuxuat accsup = new BeeKhophieuxuat(main1);
-            main1.clearpannelload(accsup);
-            //    accsup.TopLevel = false;
-            //  accsup.AutoScroll = true;
-            //    panelmain.Controls.Add(accsup);
-            //    accsup.Show();
+          
         }
 
         private void button25_Click(object sender, EventArgs e)
         {
-            Model.Soketoan.sotonghopbaocaonhapxuatton();
+         
         }
 
         private void button56_Click(object sender, EventArgs e)
@@ -1091,6 +1044,216 @@ namespace BEEACCOUNT.View
             //  accsup.AutoScroll = true;
             //    panelmain.Controls.Add(accsup);
             //    accsup.Show();
+
+        }
+
+        private void btdanhsachnhavantai_Click(object sender, EventArgs e)
+        {
+            //    NPDanhsachnhavantai
+            string connection_string = Utils.getConnectionstr();
+
+            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+            var rs1 = Model.Nhacungcap.danhsachNVT(dc);
+            Viewtable viewtbl = new Viewtable(rs1, dc, "DANH SÁCH NHÀ VẬN TẢI", 8);// mã 8 là danh sach nha nha van tai
+
+            viewtbl.Show();
+
+
+
+        }
+
+        private void button5_Click_1(object sender, EventArgs e)
+        {
+            string connection_string = Utils.getConnectionstr();
+
+            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+            var rs1 = Model.Nhacungcap.danhsachxe(dc);
+            Viewtable viewtbl = new Viewtable(rs1, dc, "DANH SÁCH XE", 9);// mã 8 là danh sach nha nha van tai
+
+            viewtbl.Show();
+
+
+
+
+
+        }
+
+        private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+          
+
+        }
+
+        private void treeView1_DoubleClick(object sender, EventArgs e)
+        {
+        
+
+        }
+
+        private void treeView1_NodeMouseDoubleClick(object sender, TreeNodeMouseClickEventArgs e)
+        {
+            string name = e.Node.Name;
+
+            #region//thongtin dn
+            if (name == "thongtin")
+            {
+
+
+                View.BeeThongtindoanhnghiep doanhnghiep = new BeeThongtindoanhnghiep();
+                doanhnghiep.ShowDialog();
+
+            }
+            #endregion
+
+            
+            #region//soquy
+            if (name == "bcsoquy")
+            {
+
+                Model.Soketoan.soQuy();
+
+            }
+            #endregion
+
+            #region// khophieunhap
+            if (name == "khophieunhap")
+            {
+
+
+                main1.clearpannel();
+
+
+                View.BeeKhophieunhap accsup = new BeeKhophieunhap(main1);
+                main1.clearpannelload(accsup);
+
+            }
+            #endregion
+
+            #region//khophieuxuat
+            if (name == "khophieuxuat")
+            {
+                //  Main.clearpannel();
+
+                main1.clearpannel();
+
+
+                View.BeeKhophieuxuat accsup = new BeeKhophieuxuat(main1);
+                main1.clearpannelload(accsup);
+                //    accsup.TopLevel = false;
+                //  accsup.AutoScroll = true;
+                //    panelmain.Controls.Add(accsup);
+                //    accsup.Show();
+
+            }
+            #endregion
+
+
+            #region//khodskho
+            if (name == "khodskho")
+            {
+                string connection_string = Utils.getConnectionstr();
+
+                LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+                var rs1 = Model.Khohang.Danhsachkho(dc);
+                Viewtable viewtbl = new Viewtable(rs1, dc, "DANH SÁCH KHO HÀNG", 4);// mã 4 là danh sách kho
+
+                viewtbl.Show();
+
+            }
+            #endregion
+
+
+            #region//khonhomsanpham
+            if (name == "khonhomsanpham")
+            {
+                string connection_string = Utils.getConnectionstr();
+
+            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+            var rs1 = Model.Khohang.danhsachnhomsanpham(dc);
+            Viewtable viewtbl = new Viewtable(rs1, dc, "DANH SÁCH NHÓM SẢN PHẨM", 6);// mã 6 là danh sách nhóm sản phẩm
+
+            viewtbl.Show();
+
+            }
+            #endregion
+            
+            #region//khodssanpham
+            if (name == "khodssanpham")
+            {
+                string connection_string = Utils.getConnectionstr();
+
+                LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+                var rs1 = Model.Khohang.danhsachsanpham(dc);
+                Viewtable viewtbl = new Viewtable(rs1, dc, "DANH SÁCH SẢN PHẨM", 7);// mã 7 là danh sách nhóm sản phẩm
+
+                viewtbl.Show();
+
+
+
+            }
+            #endregion
+
+            #region  // bcsocai
+            if (name == "bcsocai")
+            {
+
+                Model.Soketoan.socaitaikhoan();
+
+            }
+            #endregion
+
+
+            #region// bcsotonghop
+
+            if (name == "bcsotonghop")
+            {
+
+                Model.Soketoan.sotonghoptaikhoanchitiet();
+
+            }
+
+            #endregion
+
+            #region//bcxuatnhapton
+            if (name == "bcxuatnhapton")
+            {
+
+                Model.Soketoan.sotonghopbaocaonhapxuatton();
+            }
+            #endregion
+            #region//bcsonhatkychung
+            if (name == "bcsonhatkychung")
+            {
+
+                Model.Soketoan.sonhatkychung();
+
+            }
+            #endregion
+
+             #region//bcsochitiet
+            if (name == "bcsochitiet")
+            {
+
+                Model.Soketoan.sochitiettaikhoan();
+
+            }
+            #endregion
+
+            #region//bcbangcandoitaikhoan
+            if (name == "bcbangcandoitaikhoan")
+            {
+
+                Model.Soketoan.bangcandoiphatsinhtaikhoan();
+
+            }
+            #endregion
+
+          
 
         }
     }

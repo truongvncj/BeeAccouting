@@ -141,6 +141,18 @@
     <Compile Include="shared\ExtractToDataTableOptions.cs" />
     <Compile Include="shared\LinQToExcel.cs" />
     <Compile Include="shared\StringExtensions.cs" />
+    <Compile Include="View\NPdanhsachxe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\NPdanhsachxe.Designer.cs">
+      <DependentUpon>NPdanhsachxe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\NPDanhsachnhavantai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\NPDanhsachnhavantai.Designer.cs">
+      <DependentUpon>NPDanhsachnhavantai.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\BeeDanhsachsanpham.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -518,6 +530,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\Paymentrequest.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\NPdanhsachxe.resx">
+      <DependentUpon>NPdanhsachxe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\NPDanhsachnhavantai.resx">
+      <DependentUpon>NPDanhsachnhavantai.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\BeeDanhsachsanpham.resx">
       <DependentUpon>BeeDanhsachsanpham.cs</DependentUpon>

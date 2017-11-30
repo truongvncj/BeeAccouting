@@ -33,11 +33,11 @@ namespace BEEACCOUNT.Model
                          Điện_thoại = p.dienthoai,
                          Người_đại_diện = p.nguoidaidien,
                          Số_tài_khoán_ngân_hàng = p.sotaikhoannganhang,
-                         Tên_ngân_hàng =p.tennganhang,
-                         Ghi_chú= p.ghichunganhnghe,
+                         Tên_ngân_hàng = p.tennganhang,
+                         Ghi_chú = p.ghichunganhnghe,
                          Ngày_tạo = p.ngaytao,
                          Người_tạo = p.usertao,
-                         
+
 
                          ID = p.id,
                      };
@@ -59,16 +59,16 @@ namespace BEEACCOUNT.Model
         }
 
 
-        
+
 
         internal static void themmoiNCC()
         {
-       
+
             View.BeeNCCnewaccount p = new BeeNCCnewaccount(3, -1);  // 3 là thêm ới
 
             p.ShowDialog();
 
-         
+
         }
 
 
@@ -85,7 +85,103 @@ namespace BEEACCOUNT.Model
             //    throw new NotImplementedException();
         }
 
+        public static IQueryable danhsachNVT(LinqtoSQLDataContext dc)
+        {
+            //throw new NotImplementedException();
+
+            //   NPDanhsachnhavantai
+
+            LinqtoSQLDataContext db = dc;
+            var rs = from p in db.tbl_NP_Nhacungungvantais
+                     orderby p.maNVT
+                     select new
+                     {
 
 
+                         Mã_nhà_vận_tải = p.maNVT,
+                         Tên_nhà_vận_tải = p.tenNVT,
+                         Mã_số_thuế = p.masothueNVT,
+                         Địa_chỉ = p.diachinganhangNVT,
+                         Điện_thoại = p.dienthoaiNVT,
+
+                         Tài_khoản_ngân_hàng_số = p.sotaikhoannganhangNVT,
+                         Tại_ngân_hàng = p.diachinganhangNVT,
+
+                         ID = p.id,
+                     };
+
+            //    grviewlisttk.DataSource = rs;
+
+
+
+
+
+
+
+            return rs;
+
+
+
+
+        }
+
+        public static void themmoiNVT(int v1, int v2)
+        {
+
+            View.NPDanhsachnhavantai p = new NPDanhsachnhavantai(3, -1);  // 3 là thêm ới
+
+            p.ShowDialog();
+
+            //   throw new NotImplementedException();
+        }
+
+        public static void suathongtinNVT(int idtk)
+        {
+
+
+            View.NPDanhsachnhavantai p = new NPDanhsachnhavantai(4, idtk);  // 3 là thêm ới
+
+            p.ShowDialog();
+
+
+
+            //   throw new NotImplementedException();
+        }
+
+        public static IQueryable danhsachxe(LinqtoSQLDataContext dc)
+        {
+            // throw new NotImplementedException();
+
+
+            LinqtoSQLDataContext db = dc;
+            var rs = from p in db.tbl_NP_danhsachxes
+                     orderby p.maNVT
+                     select new
+                     {
+
+
+                         Mã_nhà_vận_tải = p.maNVT,
+                         Biển_số = p.bienso,
+                         Tên_lái_xe = p.tenlaixe,
+                         CMT = p.cmtlaixe,
+                         Tải_trọng = p.sotantai,
+                         Kích_thước_thùng = p.sokhoithungxe,
+
+                         ID = p.id,
+                     };
+
+            //    grviewlisttk.DataSource = rs;
+
+
+
+
+
+
+
+            return rs;
+
+
+
+        }
     }
 }

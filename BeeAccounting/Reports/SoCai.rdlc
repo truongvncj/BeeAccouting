@@ -1109,6 +1109,9 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <BottomBorder>
+                          <Style>None</Style>
+                        </BottomBorder>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -1127,7 +1130,18 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>TK</Value>
+                              <Value>Tài </Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>khoản</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -1142,6 +1156,9 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <BottomBorder>
+                          <Style>None</Style>
+                        </BottomBorder>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -1277,6 +1294,9 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <TopBorder>
+                          <Style>None</Style>
+                        </TopBorder>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -1309,6 +1329,9 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <TopBorder>
+                          <Style>None</Style>
+                        </TopBorder>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -1405,7 +1428,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
         <Top>5.34141cm</Top>
         <Left>0.30839cm</Left>
         <Height>1.2637cm</Height>
-        <Width>27.8208cm</Width>
+        <Width>27.82081cm</Width>
         <ZIndex>11</ZIndex>
         <Style>
           <Border>
@@ -1573,11 +1596,14 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                             <TextRun>
                               <Value>=Fields!nocuoiky.Value</Value>
                               <Style>
+                                <FontWeight>Bold</FontWeight>
                                 <Format>#,0;(#,0);''</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>nocuoiky</rd:DefaultName>
@@ -1605,11 +1631,14 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                             <TextRun>
                               <Value>=Fields!cocuoiky.Value</Value>
                               <Style>
+                                <FontWeight>Bold</FontWeight>
                                 <Format>#,0;(#,0);''</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>cocuoiky</rd:DefaultName>
@@ -1703,7 +1732,9 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>machungtu</rd:DefaultName>
@@ -1831,7 +1862,9 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>psno1</rd:DefaultName>
@@ -1863,7 +1896,9 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>psco1</rd:DefaultName>
@@ -2024,7 +2059,9 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>psno2</rd:DefaultName>
@@ -2056,7 +2093,9 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>psco2</rd:DefaultName>
@@ -2101,7 +2140,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
         <Top>6.60511cm</Top>
         <Left>0.30839cm</Left>
         <Height>1.17354cm</Height>
-        <Width>27.84729cm</Width>
+        <Width>27.84731cm</Width>
         <ZIndex>13</ZIndex>
         <Style>
           <Border>

@@ -6,7 +6,7 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>18.31203cm</Width>
+              <Width>18.55127cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -293,7 +293,7 @@
                                 <TextRun>
                                   <Value>Mẫu số : 01-TH</Value>
                                   <Style>
-                                    <FontWeight>Bold</FontWeight>
+                                    <FontWeight>Normal</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -417,9 +417,9 @@
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
         <Top>0.16558cm</Top>
-        <Left>0.32817cm</Left>
+        <Left>0cm</Left>
         <Height>4.54229cm</Height>
-        <Width>18.31203cm</Width>
+        <Width>18.55127cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -873,8 +873,8 @@
                             </Textbox>
                           </ReportItems>
                           <KeepTogether>true</KeepTogether>
-                          <Top>0.13403in</Top>
-                          <Left>0.0742in</Left>
+                          <Top>0.10903in</Top>
+                          <Left>0.0125in</Left>
                           <Height>1.91735in</Height>
                           <Width>7.19899in</Width>
                           <Style>
@@ -907,11 +907,8 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
-        <PageBreak>
-          <BreakLocation>End</BreakLocation>
-        </PageBreak>
-        <Top>9.02366cm</Top>
-        <Left>0.1663cm</Left>
+        <Top>8.03944cm</Top>
+        <Left>0.06046cm</Left>
         <Height>5.33925cm</Height>
         <Width>18.4739cm</Width>
         <ZIndex>1</ZIndex>
@@ -925,19 +922,19 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>1.60388cm</Width>
+              <Width>1.63597cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>4.51777cm</Width>
+              <Width>4.54986cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>6.18871cm</Width>
+              <Width>6.2208cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.04377cm</Width>
+              <Width>3.07586cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.92498cm</Width>
+              <Width>2.95707cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -1670,7 +1667,7 @@
                             </TextRun>
                           </TextRuns>
                           <Style>
-                            <TextAlign>Left</TextAlign>
+                            <TextAlign>Center</TextAlign>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
@@ -2039,9 +2036,9 @@
         </TablixRowHierarchy>
         <DataSetName>DataSet2</DataSetName>
         <Top>4.86808cm</Top>
-        <Left>0.27214cm</Left>
+        <Left>0.11169cm</Left>
         <Height>3.03025cm</Height>
-        <Width>18.27911cm</Width>
+        <Width>18.43956cm</Width>
         <ZIndex>2</ZIndex>
         <Style>
           <Border>
@@ -2070,7 +2067,7 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>14.63856cm</Height>
+    <Height>13.37869cm</Height>
     <Style>
       <Border>
         <Color>White</Color>
@@ -2078,7 +2075,7 @@
       </Border>
     </Style>
   </Body>
-  <Width>18.79477cm</Width>
+  <Width>18.55127cm</Width>
   <Page>
     <PageHeight>29.7cm</PageHeight>
     <PageWidth>21cm</PageWidth>

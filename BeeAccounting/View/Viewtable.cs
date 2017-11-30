@@ -311,7 +311,7 @@ namespace BEEACCOUNT.View
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void bt_themmoi_Click(object sender, EventArgs e)
         {
             #region  // viewcode ==0  la danh sách tài k khoản kê toán
 
@@ -433,6 +433,22 @@ namespace BEEACCOUNT.View
             }
             #endregion
 
+
+            #region // viewcode == 8  lA DANH SACH  nha van tai
+
+            if (this.viewcode == 8)
+            {
+
+                // Model.Khohang.themmoinhomsanpham();
+                //   var rs = Model.Khohang.danhsachnhomsanpham(this.db);
+                Model.Nhacungcap.themmoiNVT(3,0);
+                var rs = Model.Nhacungcap.danhsachNVT(dc);
+                dataGridView1.DataSource = rs;
+
+
+
+            }
+            #endregion
 
         }
 
@@ -703,9 +719,75 @@ namespace BEEACCOUNT.View
             #endregion
 
 
+            #region viewcode =8 danh sach  NVT
+            if (this.viewcode == 8)
+            {
+                int idtk = 0;
+                try
+                {
+                    idtk = (int)this.dataGridView1.Rows[this.dataGridView1.CurrentCell.RowIndex].Cells["ID"].Value;
+
+
+
+                }
+                catch (Exception)
+                {
+
+                    MessageBox.Show("Bạn phải chọn một nhà vận tải !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                // Model.Khohang.suasanpham(idtk);
+                Model.Nhacungcap.suathongtinNVT(idtk);
+                var rs = Model.Nhacungcap.danhsachNVT(this.db);
+
+                dataGridView1.DataSource = rs;
+
+
+
+            }
+            #endregion
+
+
+
+            //#region // viewcode == 8  lA DANH SACH  nha van tai
+
+            //if (this.viewcode == 8)
+            //{
+
+            //    // Model.Khohang.themmoinhomsanpham();
+            //    //   var rs = Model.Khohang.danhsachnhomsanpham(this.db);
+            //    Model.Nhacungcap.themmoiNVT(3, 0);
+            //    var rs = Model.Nhacungcap.danhsachNVT(dc);
+            //    dataGridView1.DataSource = rs;
+
+
+
+            //}
+            //#endregion
+
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+
+
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+
+        }
+
+        private void Viewtable_FormClosed(object sender, FormClosedEventArgs e)
+        {
+       
+        }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
 
             #region  viewcode = 0 à  tài khoản kế toán
@@ -966,20 +1048,35 @@ namespace BEEACCOUNT.View
             #endregion
 
 
+            #region viewcode =8 danh sach  NVT
+            if (this.viewcode == 8)
+            {
+                int idtk = 0;
+                try
+                {
+                    idtk = (int)this.dataGridView1.Rows[this.dataGridView1.CurrentCell.RowIndex].Cells["ID"].Value;
 
 
 
-        }
+                }
+                catch (Exception)
+                {
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
+                    MessageBox.Show("Bạn phải chọn một nhà vận tải !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                // Model.Khohang.suasanpham(idtk);
+                Model.Nhacungcap.suathongtinNVT(idtk);
+                var rs = Model.Nhacungcap.danhsachNVT(this.db);
+
+                dataGridView1.DataSource = rs;
 
 
-        }
 
-        private void Viewtable_FormClosed(object sender, FormClosedEventArgs e)
-        {
-       
+            }
+            #endregion
+
         }
     }
 
