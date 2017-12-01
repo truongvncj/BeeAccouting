@@ -167,6 +167,7 @@
             this.button14 = new System.Windows.Forms.Button();
             this.button15 = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.button20 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
@@ -209,7 +210,6 @@
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox6.SuspendLayout();
@@ -296,6 +296,16 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Vận tải Nam Phong";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(6, 244);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(157, 22);
+            this.button1.TabIndex = 21;
+            this.button1.TabStop = false;
+            this.button1.Text = "Điều xe";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // button20
             // 
             this.button20.Location = new System.Drawing.Point(6, 160);
@@ -338,17 +348,18 @@
             // 
             // button8
             // 
+            this.button8.BackColor = System.Drawing.Color.Red;
             this.button8.Location = new System.Drawing.Point(6, 103);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(157, 22);
             this.button8.TabIndex = 16;
             this.button8.TabStop = false;
             this.button8.Text = "Bảng giá theo tuyến";
-            this.button8.UseVisualStyleBackColor = true;
+            this.button8.UseVisualStyleBackColor = false;
             // 
             // button7
             // 
-            this.button7.BackColor = System.Drawing.Color.Red;
+            this.button7.BackColor = System.Drawing.Color.WhiteSmoke;
             this.button7.Location = new System.Drawing.Point(6, 75);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(157, 22);
@@ -940,16 +951,6 @@
             this.label1.Size = new System.Drawing.Size(146, 59);
             this.label1.TabIndex = 53;
             this.label1.Text = "apovi";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(6, 244);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(157, 22);
-            this.button1.TabIndex = 21;
-            this.button1.TabStop = false;
-            this.button1.Text = "Điều xe";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // Beemainload
             // 
