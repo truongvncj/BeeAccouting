@@ -154,17 +154,11 @@ namespace BEEACCOUNT.View
 
             this.Username = Username;
 
-            this.btrigh.Visible = false;
-
-            if (tblnamesub == "tbl_Temp")
-            {
-                this.btrigh.Visible = true;
-            }
+      //      this.btrigh.Visible = false;
+   
 
             this.lbseachedit.Visible = false;
-            this.Bt_uploadbegin.Visible = false;
-            // this.lbusername.Text = Utils.getusername();
-
+          
 
 
 

@@ -244,7 +244,8 @@ namespace BEEACCOUNT.View
 
 
             }
-            MessageBox.Show("OK, Done !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Thành công !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.Close();
 
         }
     }

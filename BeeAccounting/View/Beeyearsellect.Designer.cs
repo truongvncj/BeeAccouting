@@ -36,7 +36,7 @@
             // 
             // bt_thuchien
             // 
-            this.bt_thuchien.Location = new System.Drawing.Point(173, 23);
+            this.bt_thuchien.Location = new System.Drawing.Point(65, 71);
             this.bt_thuchien.Name = "bt_thuchien";
             this.bt_thuchien.Size = new System.Drawing.Size(93, 22);
             this.bt_thuchien.TabIndex = 3;
@@ -63,7 +63,7 @@
             "2026"});
             this.cb_year.Location = new System.Drawing.Point(65, 22);
             this.cb_year.Name = "cb_year";
-            this.cb_year.Size = new System.Drawing.Size(91, 23);
+            this.cb_year.Size = new System.Drawing.Size(122, 23);
             this.cb_year.TabIndex = 10;
             this.cb_year.SelectedValueChanged += new System.EventHandler(this.cb_year_SelectedValueChanged);
             // 
@@ -71,7 +71,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(16, 27);
+            this.label3.Location = new System.Drawing.Point(22, 25);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(37, 17);
             this.label3.TabIndex = 9;
@@ -81,7 +81,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(278, 72);
+            this.ClientSize = new System.Drawing.Size(225, 105);
             this.Controls.Add(this.cb_year);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.bt_thuchien);

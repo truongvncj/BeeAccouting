@@ -158,6 +158,7 @@
             this.button6 = new System.Windows.Forms.Button();
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -178,7 +179,7 @@
             this.groupBox2.Controls.Add(this.button29);
             this.groupBox2.Controls.Add(this.button14);
             this.groupBox2.Controls.Add(this.button15);
-            this.groupBox2.Location = new System.Drawing.Point(482, 251);
+            this.groupBox2.Location = new System.Drawing.Point(893, 351);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(184, 136);
             this.groupBox2.TabIndex = 41;
@@ -333,7 +334,7 @@
             this.groupBox5.Controls.Add(this.button32);
             this.groupBox5.Controls.Add(this.button18);
             this.groupBox5.Controls.Add(this.button19);
-            this.groupBox5.Location = new System.Drawing.Point(265, 209);
+            this.groupBox5.Location = new System.Drawing.Point(266, 244);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(184, 103);
             this.groupBox5.TabIndex = 42;
@@ -434,7 +435,7 @@
             this.groupBox7.Controls.Add(this.button26);
             this.groupBox7.Controls.Add(this.button45);
             this.groupBox7.Controls.Add(this.button27);
-            this.groupBox7.Location = new System.Drawing.Point(266, 476);
+            this.groupBox7.Location = new System.Drawing.Point(266, 370);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Size = new System.Drawing.Size(190, 131);
             this.groupBox7.TabIndex = 44;
@@ -493,9 +494,9 @@
             this.groupBox9.Controls.Add(this.button36);
             this.groupBox9.Controls.Add(this.button37);
             this.groupBox9.Controls.Add(this.button38);
-            this.groupBox9.Location = new System.Drawing.Point(678, 279);
+            this.groupBox9.Location = new System.Drawing.Point(672, 193);
             this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(217, 154);
+            this.groupBox9.Size = new System.Drawing.Size(197, 154);
             this.groupBox9.TabIndex = 47;
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "Tài sản cố định";
@@ -549,7 +550,7 @@
             this.groupBox12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox12.Controls.Add(this.button43);
             this.groupBox12.Controls.Add(this.button44);
-            this.groupBox12.Location = new System.Drawing.Point(482, 536);
+            this.groupBox12.Location = new System.Drawing.Point(476, 320);
             this.groupBox12.Name = "groupBox12";
             this.groupBox12.Size = new System.Drawing.Size(184, 77);
             this.groupBox12.TabIndex = 45;
@@ -583,9 +584,9 @@
             this.groupBox13.Controls.Add(this.button48);
             this.groupBox13.Controls.Add(this.button49);
             this.groupBox13.Controls.Add(this.button50);
-            this.groupBox13.Location = new System.Drawing.Point(678, 439);
+            this.groupBox13.Location = new System.Drawing.Point(888, 189);
             this.groupBox13.Name = "groupBox13";
-            this.groupBox13.Size = new System.Drawing.Size(217, 154);
+            this.groupBox13.Size = new System.Drawing.Size(197, 154);
             this.groupBox13.TabIndex = 48;
             this.groupBox13.TabStop = false;
             this.groupBox13.Text = "Công cụ dụng cụ";
@@ -638,7 +639,7 @@
             // 
             this.groupBox10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox10.Controls.Add(this.button33);
-            this.groupBox10.Location = new System.Drawing.Point(266, 153);
+            this.groupBox10.Location = new System.Drawing.Point(482, 264);
             this.groupBox10.Name = "groupBox10";
             this.groupBox10.Size = new System.Drawing.Size(178, 50);
             this.groupBox10.TabIndex = 50;
@@ -663,7 +664,7 @@
             this.groupBox17.Controls.Add(this.button31);
             this.groupBox17.Controls.Add(this.button30);
             this.groupBox17.Controls.Add(this.button6);
-            this.groupBox17.Location = new System.Drawing.Point(266, 320);
+            this.groupBox17.Location = new System.Drawing.Point(488, 420);
             this.groupBox17.Name = "groupBox17";
             this.groupBox17.Size = new System.Drawing.Size(178, 167);
             this.groupBox17.TabIndex = 51;
@@ -856,11 +857,23 @@
             this.panel1.Size = new System.Drawing.Size(247, 601);
             this.panel1.TabIndex = 52;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 38F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Magenta;
+            this.label1.Location = new System.Drawing.Point(745, 50);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(195, 59);
+            this.label1.TabIndex = 53;
+            this.label1.Text = "Provica";
+            // 
             // Beemainload
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1097, 617);
             this.ControlBox = false;
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox17);
             this.Controls.Add(this.groupBox10);
@@ -896,6 +909,7 @@
             this.groupBox17.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -951,5 +965,6 @@
         private System.Windows.Forms.Button button34;
         private System.Windows.Forms.TreeView treeView1;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label1;
     }
 }

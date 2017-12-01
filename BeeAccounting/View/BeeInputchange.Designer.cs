@@ -33,11 +33,10 @@ namespace BEEACCOUNT.View
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BeeInputchange));
             this.lb_headersub = new System.Windows.Forms.Label();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btrigh = new System.Windows.Forms.Button();
             this.lbseachedit = new System.Windows.Forms.Label();
             this.export = new System.Windows.Forms.Button();
-            this.Bt_uploadbegin = new System.Windows.Forms.Button();
             this.bnt_adddataselected = new System.Windows.Forms.Button();
             this.Bt_Deleteddata = new System.Windows.Forms.Button();
             this.bt_updatedata = new System.Windows.Forms.Button();
@@ -47,7 +46,6 @@ namespace BEEACCOUNT.View
             this.bt_detletedsetlectmain = new System.Windows.Forms.Button();
             this.lb_headermain = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
@@ -80,10 +78,8 @@ namespace BEEACCOUNT.View
             // 
             this.splitContainer1.Panel1.Controls.Add(this.label1);
             this.splitContainer1.Panel1.Controls.Add(this.pictureBox1);
-            this.splitContainer1.Panel1.Controls.Add(this.btrigh);
             this.splitContainer1.Panel1.Controls.Add(this.lbseachedit);
             this.splitContainer1.Panel1.Controls.Add(this.export);
-            this.splitContainer1.Panel1.Controls.Add(this.Bt_uploadbegin);
             this.splitContainer1.Panel1.Controls.Add(this.bnt_adddataselected);
             this.splitContainer1.Panel1.Controls.Add(this.lb_headersub);
             this.splitContainer1.Panel1.Controls.Add(this.Bt_Deleteddata);
@@ -100,6 +96,17 @@ namespace BEEACCOUNT.View
             this.splitContainer1.SplitterWidth = 5;
             this.splitContainer1.TabIndex = 33;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial Unicode MS", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.Location = new System.Drawing.Point(20, 10);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(171, 24);
+            this.label1.TabIndex = 55;
+            this.label1.Text = "BEE ACCOUNTING";
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -108,24 +115,13 @@ namespace BEEACCOUNT.View
             this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
             this.pictureBox1.Location = new System.Drawing.Point(528, 10);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(98, 51);
+            this.pictureBox1.Size = new System.Drawing.Size(98, 43);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 54;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             this.pictureBox1.MouseLeave += new System.EventHandler(this.pictureBox1_MouseLeave);
             this.pictureBox1.MouseHover += new System.EventHandler(this.pictureBox1_MouseHover);
-            // 
-            // btrigh
-            // 
-            this.btrigh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btrigh.Location = new System.Drawing.Point(189, 456);
-            this.btrigh.Name = "btrigh";
-            this.btrigh.Size = new System.Drawing.Size(110, 24);
-            this.btrigh.TabIndex = 52;
-            this.btrigh.Text = "ContType && Region";
-            this.btrigh.UseVisualStyleBackColor = true;
-            this.btrigh.Click += new System.EventHandler(this.button2_Click);
             // 
             // lbseachedit
             // 
@@ -149,16 +145,6 @@ namespace BEEACCOUNT.View
             this.export.Text = "Export To Excel";
             this.export.UseVisualStyleBackColor = true;
             this.export.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // Bt_uploadbegin
-            // 
-            this.Bt_uploadbegin.Location = new System.Drawing.Point(87, 451);
-            this.Bt_uploadbegin.Name = "Bt_uploadbegin";
-            this.Bt_uploadbegin.Size = new System.Drawing.Size(131, 26);
-            this.Bt_uploadbegin.TabIndex = 49;
-            this.Bt_uploadbegin.Text = "Upload Begin Balace";
-            this.Bt_uploadbegin.UseVisualStyleBackColor = true;
-            this.Bt_uploadbegin.Click += new System.EventHandler(this.Bt_uploadbegin_Click);
             // 
             // bnt_adddataselected
             // 
@@ -267,17 +253,6 @@ namespace BEEACCOUNT.View
             this.dataGridView2.Size = new System.Drawing.Size(504, 369);
             this.dataGridView2.TabIndex = 45;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial Unicode MS", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(20, 10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(171, 24);
-            this.label1.TabIndex = 55;
-            this.label1.Text = "BEE ACCOUNTING";
-            // 
             // BeeInputchange
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
@@ -322,10 +297,8 @@ namespace BEEACCOUNT.View
         public System.Windows.Forms.DataGridView dataGridView2;
         public System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button bnt_adddataselected;
-        private System.Windows.Forms.Button Bt_uploadbegin;
         private System.Windows.Forms.Button export;
         private System.Windows.Forms.Label lbseachedit;
-        private System.Windows.Forms.Button btrigh;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
     }
