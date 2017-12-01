@@ -52,7 +52,7 @@
             this.formlabelED.AutoSize = true;
             this.formlabelED.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.formlabelED.Font = new System.Drawing.Font("Microsoft MHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.formlabelED.Location = new System.Drawing.Point(225, 9);
+            this.formlabelED.Location = new System.Drawing.Point(208, 16);
             this.formlabelED.Name = "formlabelED";
             this.formlabelED.Size = new System.Drawing.Size(186, 17);
             this.formlabelED.TabIndex = 87;
@@ -62,6 +62,7 @@
             // 
             this.groupBox4.Controls.Add(this.txttenketoantruong);
             this.groupBox4.Controls.Add(this.label5);
+            this.groupBox4.Controls.Add(this.formlabelED);
             this.groupBox4.Controls.Add(this.txttengiamdoc);
             this.groupBox4.Controls.Add(this.label4);
             this.groupBox4.Controls.Add(this.txtmasothue);
@@ -70,9 +71,9 @@
             this.groupBox4.Controls.Add(this.label2);
             this.groupBox4.Controls.Add(this.txtten);
             this.groupBox4.Controls.Add(this.label1);
-            this.groupBox4.Location = new System.Drawing.Point(7, 38);
+            this.groupBox4.Location = new System.Drawing.Point(7, -2);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(619, 253);
+            this.groupBox4.Size = new System.Drawing.Size(619, 255);
             this.groupBox4.TabIndex = 102;
             this.groupBox4.TabStop = false;
             // 
@@ -80,7 +81,7 @@
             // 
             this.txttenketoantruong.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
             this.txttenketoantruong.FormattingEnabled = true;
-            this.txttenketoantruong.Location = new System.Drawing.Point(116, 194);
+            this.txttenketoantruong.Location = new System.Drawing.Point(116, 176);
             this.txttenketoantruong.Name = "txttenketoantruong";
             this.txttenketoantruong.Size = new System.Drawing.Size(240, 21);
             this.txttenketoantruong.TabIndex = 96;
@@ -91,7 +92,7 @@
             this.label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label5.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(9, 195);
+            this.label5.Location = new System.Drawing.Point(9, 177);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(101, 19);
             this.label5.TabIndex = 95;
@@ -101,7 +102,7 @@
             // 
             this.txttengiamdoc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
             this.txttengiamdoc.FormattingEnabled = true;
-            this.txttengiamdoc.Location = new System.Drawing.Point(116, 152);
+            this.txttengiamdoc.Location = new System.Drawing.Point(116, 143);
             this.txttengiamdoc.Name = "txttengiamdoc";
             this.txttengiamdoc.Size = new System.Drawing.Size(240, 21);
             this.txttengiamdoc.TabIndex = 94;
@@ -112,7 +113,7 @@
             this.label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label4.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(9, 153);
+            this.label4.Location = new System.Drawing.Point(9, 144);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(101, 19);
             this.label4.TabIndex = 93;
@@ -122,7 +123,7 @@
             // 
             this.txtmasothue.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
             this.txtmasothue.FormattingEnabled = true;
-            this.txtmasothue.Location = new System.Drawing.Point(116, 113);
+            this.txtmasothue.Location = new System.Drawing.Point(116, 110);
             this.txtmasothue.Name = "txtmasothue";
             this.txtmasothue.Size = new System.Drawing.Size(240, 21);
             this.txtmasothue.TabIndex = 92;
@@ -133,7 +134,7 @@
             this.label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label3.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(9, 114);
+            this.label3.Location = new System.Drawing.Point(9, 111);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(101, 19);
             this.label3.TabIndex = 91;
@@ -143,7 +144,7 @@
             // 
             this.txtdiachi.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
             this.txtdiachi.FormattingEnabled = true;
-            this.txtdiachi.Location = new System.Drawing.Point(116, 73);
+            this.txtdiachi.Location = new System.Drawing.Point(116, 78);
             this.txtdiachi.Name = "txtdiachi";
             this.txtdiachi.Size = new System.Drawing.Size(497, 21);
             this.txtdiachi.TabIndex = 90;
@@ -154,7 +155,7 @@
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(9, 74);
+            this.label2.Location = new System.Drawing.Point(9, 79);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(101, 19);
             this.label2.TabIndex = 89;
@@ -164,7 +165,7 @@
             // 
             this.txtten.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
             this.txtten.FormattingEnabled = true;
-            this.txtten.Location = new System.Drawing.Point(116, 33);
+            this.txtten.Location = new System.Drawing.Point(116, 46);
             this.txtten.Name = "txtten";
             this.txtten.Size = new System.Drawing.Size(496, 21);
             this.txtten.TabIndex = 88;
@@ -175,7 +176,7 @@
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(8, 34);
+            this.label1.Location = new System.Drawing.Point(8, 47);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(102, 19);
             this.label1.TabIndex = 87;
@@ -189,7 +190,7 @@
             this.btchangecontractitem.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.btchangecontractitem.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btchangecontractitem.ForeColor = System.Drawing.Color.Red;
-            this.btchangecontractitem.Location = new System.Drawing.Point(285, 339);
+            this.btchangecontractitem.Location = new System.Drawing.Point(285, 259);
             this.btchangecontractitem.Name = "btchangecontractitem";
             this.btchangecontractitem.Size = new System.Drawing.Size(78, 23);
             this.btchangecontractitem.TabIndex = 101;
@@ -201,10 +202,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(638, 374);
+            this.ClientSize = new System.Drawing.Size(638, 284);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.btchangecontractitem);
-            this.Controls.Add(this.formlabelED);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -214,8 +214,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thông tin doanh nghiệp";
             this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

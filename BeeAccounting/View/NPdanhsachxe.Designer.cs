@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NPdanhsachxe));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtcmtlaixe = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.txtdienthoailaixe = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.txttenlaixe = new System.Windows.Forms.TextBox();
@@ -47,8 +49,6 @@
             this.btupdate = new System.Windows.Forms.Button();
             this.btxoa = new System.Windows.Forms.Button();
             this.btnew = new System.Windows.Forms.Button();
-            this.txtcmtlaixe = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -78,6 +78,26 @@
             this.panel1.Size = new System.Drawing.Size(398, 336);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // txtcmtlaixe
+            // 
+            this.txtcmtlaixe.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtcmtlaixe.Location = new System.Drawing.Point(177, 243);
+            this.txtcmtlaixe.Name = "txtcmtlaixe";
+            this.txtcmtlaixe.Size = new System.Drawing.Size(205, 20);
+            this.txtcmtlaixe.TabIndex = 73;
+            // 
+            // label6
+            // 
+            this.label6.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label6.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(19, 243);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(125, 20);
+            this.label6.TabIndex = 74;
+            this.label6.Text = "Chứng minh nhân dân";
             // 
             // txtdienthoailaixe
             // 
@@ -263,26 +283,6 @@
             this.btnew.UseVisualStyleBackColor = false;
             this.btnew.Click += new System.EventHandler(this.btnew_Click);
             // 
-            // txtcmtlaixe
-            // 
-            this.txtcmtlaixe.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtcmtlaixe.Location = new System.Drawing.Point(177, 243);
-            this.txtcmtlaixe.Name = "txtcmtlaixe";
-            this.txtcmtlaixe.Size = new System.Drawing.Size(205, 20);
-            this.txtcmtlaixe.TabIndex = 73;
-            // 
-            // label6
-            // 
-            this.label6.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label6.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(19, 243);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(125, 20);
-            this.label6.TabIndex = 74;
-            this.label6.Text = "Chứng minh nhân dân";
-            // 
             // NPdanhsachxe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -295,7 +295,7 @@
             this.MinimizeBox = false;
             this.Name = "NPdanhsachxe";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Xe";
+            this.Text = "Danh sách xe";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

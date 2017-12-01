@@ -677,8 +677,19 @@
       <Column Name="tenlaixe" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
       <Column Name="cmtlaixe" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="dienthoailaixe" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="sotantai" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
-      <Column Name="sokhoithungxe" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="sotantai" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="sokhoithungxe" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_NP_khachhangvanchuyen" Member="tbl_NP_khachhangvanchuyens">
+    <Type Name="tbl_NP_khachhangvanchuyen">
+      <Column Name="maKH" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="tenKH" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="diachiKH" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="masothueKH" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="sotaikhoannganhangKH" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="diachinganhangKH" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.tbl_NP_Nhacungungvantai" Member="tbl_NP_Nhacungungvantais">

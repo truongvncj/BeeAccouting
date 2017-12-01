@@ -861,14 +861,7 @@ namespace BEEACCOUNT.View
 
         private void button32_Click(object sender, EventArgs e)
         {
-            string connection_string = Utils.getConnectionstr();
-
-            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
-
-            var rs1 = Model.Nhacungcap.danhsachNhacungcap(dc);
-            Viewtable viewtbl = new Viewtable(rs1, dc, "DANH SÁCH NHÀ CUNG CẤP", 5);// mã 5 là danh sach nha cung cap
-
-            viewtbl.Show();
+       
 
         }
 
@@ -1028,6 +1021,66 @@ namespace BEEACCOUNT.View
 
             LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
 
+
+            #region//dskhachhangvantai
+            if (name == "dskhachhangvantai")
+            {
+             //   string connection_string = Utils.getConnectionstr();
+
+             //   LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+                var rs1 = Model.Nhacungcap.danhsachkhachhangvantai(dc);
+                Viewtable viewtbl = new Viewtable(rs1, dc, "DANH SÁCH KHÁCH HÀNG VẬN TẢI", 10);// mã 8 là danh sach nha nha van tai
+
+                viewtbl.Show();
+
+
+            }
+            #endregion
+
+
+            //     npdanhsachxe
+
+
+            #region//npdanhsachxe
+            if (name == "npdanhsachxe")
+            {
+              //  string connection_string = Utils.getConnectionstr();
+
+             //   LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+                var rs1 = Model.Nhacungcap.danhsachxe(dc);
+                Viewtable viewtbl = new Viewtable(rs1, dc, "DANH SÁCH XE", 9);// mã 8 là danh sach nha nha van tai
+
+                viewtbl.Show();
+
+
+
+
+            }
+            #endregion
+
+
+            //dsxenp
+
+
+            #region//dsxenp
+            if (name == "dsxenp")
+            {
+
+                //    NPDanhsachnhavantai
+            //    string connection_string = Utils.getConnectionstr();
+
+         //       LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+                var rs1 = Model.Nhacungcap.danhsachNVT(dc);
+                Viewtable viewtbl = new Viewtable(rs1, dc, "DANH SÁCH NHÀ VẬN TẢI", 8);// mã 8 là danh sach nha nha van tai
+
+                viewtbl.Show();
+
+
+            }
+            #endregion
 
 
             #region//thongtin dn
@@ -1201,6 +1254,7 @@ namespace BEEACCOUNT.View
                 Model.Soketoan.sotonghopbaocaonhapxuatton();
             }
             #endregion
+
             #region//bcsonhatkychung
             if (name == "bcsonhatkychung")
             {
@@ -1340,6 +1394,24 @@ namespace BEEACCOUNT.View
             #endregion
 
 
+            // dsnhacungcap
+
+
+            #region//dsnhacungcap
+            if (name == "dsnhacungcap")
+            {
+               // string connection_string = Utils.getConnectionstr();
+
+               // LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+                var rs1 = Model.Nhacungcap.danhsachNhacungcap(dc);
+                Viewtable viewtbl = new Viewtable(rs1, dc, "DANH SÁCH NHÀ CUNG CẤP", 5);// mã 5 là danh sach nha cung cap
+
+                viewtbl.Show();
+
+
+            }
+            #endregion
 
 
 
@@ -1350,6 +1422,19 @@ namespace BEEACCOUNT.View
 
 
 
+
+        }
+
+        private void button7_Click_2(object sender, EventArgs e)
+        {
+            string connection_string = Utils.getConnectionstr();
+
+            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+            var rs1 = Model.Nhacungcap.danhsachkhachhangvantai(dc);
+            Viewtable viewtbl = new Viewtable(rs1, dc, "DANH SÁCH KHÁCH HÀNG VẬN TẢI", 10);// mã 8 là danh sach nha nha van tai
+
+            viewtbl.Show();
 
         }
     }

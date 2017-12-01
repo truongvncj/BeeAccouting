@@ -130,10 +130,10 @@ namespace BEEACCOUNT.View
             this.formlabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.formlabel.AutoSize = true;
             this.formlabel.BackColor = System.Drawing.Color.Transparent;
-            this.formlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.formlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.formlabel.Location = new System.Drawing.Point(495, 4);
             this.formlabel.Name = "formlabel";
-            this.formlabel.Size = new System.Drawing.Size(236, 24);
+            this.formlabel.Size = new System.Drawing.Size(211, 22);
             this.formlabel.TabIndex = 8;
             this.formlabel.Text = "VIEW TABLE REPORTS";
             // 

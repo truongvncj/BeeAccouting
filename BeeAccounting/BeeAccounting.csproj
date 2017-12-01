@@ -141,6 +141,12 @@
     <Compile Include="shared\ExtractToDataTableOptions.cs" />
     <Compile Include="shared\LinQToExcel.cs" />
     <Compile Include="shared\StringExtensions.cs" />
+    <Compile Include="View\NPDanhsackhachhangvantai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\NPDanhsackhachhangvantai.Designer.cs">
+      <DependentUpon>NPDanhsackhachhangvantai.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\NPdanhsachxe.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -470,6 +476,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\Paymentrequest.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\NPDanhsackhachhangvantai.resx">
+      <DependentUpon>NPDanhsackhachhangvantai.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\NPdanhsachxe.resx">
       <DependentUpon>NPdanhsachxe.cs</DependentUpon>

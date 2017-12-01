@@ -163,7 +163,8 @@ namespace BEEACCOUNT.Model
                          Mã_nhà_vận_tải = p.maNVT,
                          Biển_số = p.bienso,
                          Tên_lái_xe = p.tenlaixe,
-                         CMT = p.cmtlaixe,
+                         Số_hứng_minh_thư = p.cmtlaixe,
+                         Điện_thoại = p.dienthoailaixe,
                          Tải_trọng = p.sotantai,
                          Kích_thước_thùng = p.sokhoithungxe,
 
@@ -182,6 +183,96 @@ namespace BEEACCOUNT.Model
 
 
 
+        }
+
+        public static void themmoixetai(int manghiepvu, int id)
+        {
+            // throw new NotImplementedException();
+
+            View.NPdanhsachxe p = new NPdanhsachxe(3, -1);  // 3 là thêm ới
+
+            p.ShowDialog();
+
+
+        }
+
+        public static void suathongtinxe(int id)
+        {
+            View.NPdanhsachxe p = new NPdanhsachxe(4, id);  // 3 là thêm ới
+
+            p.ShowDialog();
+        }
+
+        public static IQueryable danhsachkhachhangvantai(LinqtoSQLDataContext dc)
+        {
+
+            LinqtoSQLDataContext db = dc;
+            var rs = from p in db.tbl_NP_khachhangvanchuyens
+                     orderby p.maKH
+                     select new
+                     {
+
+
+                         Mã_khách_hàng = p.maKH,
+                         Tên_khách_hàng = p.tenKH,
+                         Địa_chỉ_khách_hàng = p.diachiKH,
+                         Mã_số_thuế = p.masothueKH,
+                         Số_tài_khoản_ngân_hàng = p.sotaikhoannganhangKH,
+
+                         Tại_ngân_hàng = p.diachinganhangKH,
+
+
+                         ID = p.id,
+                     };
+
+            //    grviewlisttk.DataSource = rs;
+
+
+
+
+
+
+
+            return rs;
+
+
+
+
+
+            //   throw new NotImplementedException();
+        }
+
+        public static void themmoikhachhangvantai()
+        {
+
+
+            View.NPDanhsackhachhangvantai p = new NPDanhsackhachhangvantai(3, -1);  // 3 là thêm ới
+
+            p.ShowDialog();
+
+
+
+
+            // throw new NotImplementedException();
+        }
+
+      
+
+        public static void suadanhsachkhachhangvantai(int idtk)
+        {
+
+
+
+            View.NPDanhsackhachhangvantai p = new NPDanhsackhachhangvantai(4, idtk);  // 4 là sua
+
+            p.ShowDialog();
+
+
+
+
+
+
+            // throw new NotImplementedException();
         }
     }
 }
