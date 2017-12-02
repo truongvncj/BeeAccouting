@@ -766,7 +766,7 @@ namespace BEEACCOUNT.View
             //          };
 
             var rs1 = Model.loaitaikhoanketoan.danhsachloaitaikhoan(dc);
-            Viewtable viewtbl = new Viewtable(rs1, dc, "DANH SÁCH LOẠI TÀI KHOẢN", 1);// danh sach loại tài khoản kế toán
+            Viewtable viewtbl = new Viewtable(rs1, dc, "DANH SÁCH LOẠI TÀI KHOẢN", 1, "tk");// danh sach loại tài khoản kế toán
 
             viewtbl.Show();
 
@@ -820,7 +820,7 @@ namespace BEEACCOUNT.View
             //          };
 
             var rs = Model.Taikhoanketoan.danhsachtaikhoan(dc);
-            Viewtable viewtbl = new Viewtable(rs, dc, "DANH SÁCH TÀI KHOẢN KẾ TOÁN", 0);// view code 0 la danh sach tai khoan ke toan
+            Viewtable viewtbl = new Viewtable(rs, dc, "DANH SÁCH TÀI KHOẢN KẾ TOÁN", 0, "tk");// view code 0 la danh sach tai khoan ke toan
 
             viewtbl.Show();
         }
@@ -930,7 +930,7 @@ namespace BEEACCOUNT.View
 
             var rs1 = Model.Danhsachtkchitiet.danhsachtaikhoanchitiet(dc);
 
-            Viewtable viewtbl = new Viewtable(rs1, dc, "DANH SÁCH MÃ CHI TIẾT TÀI KHOẢN", 2);// view code 2 mo so chi tiet tai khoan
+            Viewtable viewtbl = new Viewtable(rs1, dc, "DANH SÁCH MÃ CHI TIẾT TÀI KHOẢN", 2, "tk");// view code 2 mo so chi tiet tai khoan
             viewtbl.Show();
 
 

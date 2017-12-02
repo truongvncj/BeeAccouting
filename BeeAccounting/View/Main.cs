@@ -2752,7 +2752,7 @@ namespace BEEACCOUNT.View
                              };
 
 
-            Viewtable viewtbl = new Viewtable(rstk, dc, "DANH SÁCH TÀI KHOẢN", 3);// view code 1 la can viet them lenh
+            Viewtable viewtbl = new Viewtable(rstk, dc, "DANH SÁCH TÀI KHOẢN", 3, "tk");// view code 1 la can viet them lenh
 
             viewtbl.Show();
 

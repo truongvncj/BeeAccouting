@@ -256,7 +256,7 @@ namespace BEEACCOUNT.Model
             // throw new NotImplementedException();
         }
 
-      
+
 
         public static void suadanhsachkhachhangvantai(int idtk)
         {
@@ -273,6 +273,73 @@ namespace BEEACCOUNT.Model
 
 
             // throw new NotImplementedException();
+        }
+
+        public static IQueryable danhsachgiatheotuyenvamanhavantai(LinqtoSQLDataContext dc, string makh)
+        {
+
+            LinqtoSQLDataContext db = dc;
+            var rs = from p in db.tbl_NP_giavantaitheotuyens
+                     orderby p.maKH == makh
+                     select new
+                     {
+                         p.maKH,
+                         p.matuyen,
+                         p.tentuyen,
+                         p.giahoadon,
+                         p.giathue,
+                         p.trichcongty,
+                         p.trichdoitac,
+                         p.dtkhac,
+                         p.dinhmucdau,
+
+                         ID = p.id,
+                     };
+
+            //    grviewlisttk.DataSource = rs;
+
+
+
+
+
+
+
+            return rs;
+
+
+
+
+
+
+            // throw new NotImplementedException();
+        }
+
+
+
+        public static void themmoigiavantaitheotuyen(string makh)
+        {
+
+
+            View.NPgiavantaitheotuyen p = new NPgiavantaitheotuyen(3, -1);  // 4 là them moi
+
+            p.ShowDialog();
+
+
+
+
+
+
+
+            //   throw new NotImplementedException();
+        }
+
+        public static void suadanhsachgiatheotuyencuakhachhang(int idtk)
+        {
+            View.NPgiavantaitheotuyen p = new NPgiavantaitheotuyen(3, idtk);  // 3 là sua
+
+            p.ShowDialog();
+
+
         }
     }
 }

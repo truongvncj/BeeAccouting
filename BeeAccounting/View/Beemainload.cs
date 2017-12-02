@@ -948,7 +948,7 @@ namespace BEEACCOUNT.View
 
             var rs1 = Model.Danhsachtkchitiet.danhsachtaikhoanchitiet(dc);
 
-            Viewtable viewtbl = new Viewtable(rs1, dc, "DANH SÁCH MÃ CHI TIẾT TÀI KHOẢN", 2);// view code 2 mo so chi tiet tai khoan
+            Viewtable viewtbl = new Viewtable(rs1, dc, "DANH SÁCH MÃ CHI TIẾT TÀI KHOẢN", 2, "tk");// view code 2 mo so chi tiet tai khoan
             viewtbl.Show();
 
         }
@@ -977,7 +977,7 @@ namespace BEEACCOUNT.View
             LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
 
             var rs1 = Model.Nhacungcap.danhsachNVT(dc);
-            Viewtable viewtbl = new Viewtable(rs1, dc, "DANH SÁCH NHÀ VẬN TẢI", 8);// mã 8 là danh sach nha nha van tai
+            Viewtable viewtbl = new Viewtable(rs1, dc, "DANH SÁCH NHÀ VẬN TẢI", 8, "tk");// mã 8 là danh sach nha nha van tai
 
             viewtbl.Show();
 
@@ -992,7 +992,7 @@ namespace BEEACCOUNT.View
             LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
 
             var rs1 = Model.Nhacungcap.danhsachxe(dc);
-            Viewtable viewtbl = new Viewtable(rs1, dc, "DANH SÁCH XE", 9);// mã 8 là danh sach nha nha van tai
+            Viewtable viewtbl = new Viewtable(rs1, dc, "DANH SÁCH XE", 9, "tk");// mã 8 là danh sach nha nha van tai
 
             viewtbl.Show();
 
@@ -1030,7 +1030,7 @@ namespace BEEACCOUNT.View
              //   LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
 
                 var rs1 = Model.Nhacungcap.danhsachkhachhangvantai(dc);
-                Viewtable viewtbl = new Viewtable(rs1, dc, "DANH SÁCH KHÁCH HÀNG VẬN TẢI", 10);// mã 8 là danh sach nha nha van tai
+                Viewtable viewtbl = new Viewtable(rs1, dc, "DANH SÁCH KHÁCH HÀNG VẬN TẢI", 10, "tk");// mã 8 là danh sach nha nha van tai
 
                 viewtbl.Show();
 
@@ -1050,7 +1050,7 @@ namespace BEEACCOUNT.View
              //   LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
 
                 var rs1 = Model.Nhacungcap.danhsachxe(dc);
-                Viewtable viewtbl = new Viewtable(rs1, dc, "DANH SÁCH XE", 9);// mã 8 là danh sach nha nha van tai
+                Viewtable viewtbl = new Viewtable(rs1, dc, "DANH SÁCH XE", 9, "tk");// mã 8 là danh sach nha nha van tai
 
                 viewtbl.Show();
 
@@ -1074,7 +1074,7 @@ namespace BEEACCOUNT.View
          //       LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
 
                 var rs1 = Model.Nhacungcap.danhsachNVT(dc);
-                Viewtable viewtbl = new Viewtable(rs1, dc, "DANH SÁCH NHÀ VẬN TẢI", 8);// mã 8 là danh sach nha nha van tai
+                Viewtable viewtbl = new Viewtable(rs1, dc, "DANH SÁCH NHÀ VẬN TẢI", 8, "tk");// mã 8 là danh sach nha nha van tai
 
                 viewtbl.Show();
 
@@ -1186,7 +1186,7 @@ namespace BEEACCOUNT.View
                 //        LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
 
                 var rs5 = Model.Khohang.Danhsachkho(dc);
-                Viewtable viewtbl66 = new Viewtable(rs5, dc, "DANH SÁCH KHO HÀNG", 4);// mã 4 là danh sách kho
+                Viewtable viewtbl66 = new Viewtable(rs5, dc, "DANH SÁCH KHO HÀNG", 4, "tk");// mã 4 là danh sách kho
 
                 viewtbl66.Show();
 
@@ -1202,7 +1202,7 @@ namespace BEEACCOUNT.View
                 //    LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
 
                 var rs6 = Model.Khohang.danhsachnhomsanpham(dc);
-                Viewtable viewtbl2 = new Viewtable(rs6, dc, "DANH SÁCH NHÓM SẢN PHẨM", 6);// mã 6 là danh sách nhóm sản phẩm
+                Viewtable viewtbl2 = new Viewtable(rs6, dc, "DANH SÁCH NHÓM SẢN PHẨM", 6, "tk");// mã 6 là danh sách nhóm sản phẩm
 
                 viewtbl2.Show();
 
@@ -1217,7 +1217,7 @@ namespace BEEACCOUNT.View
                 //    LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
 
                 var rs7 = Model.Khohang.danhsachsanpham(dc);
-                Viewtable viewtb77l = new Viewtable(rs7, dc, "DANH SÁCH SẢN PHẨM", 7);// mã 7 là danh sách nhóm sản phẩm
+                Viewtable viewtb77l = new Viewtable(rs7, dc, "DANH SÁCH SẢN PHẨM", 7, "tk");// mã 7 là danh sách nhóm sản phẩm
 
                 viewtb77l.Show();
 
@@ -1292,7 +1292,7 @@ namespace BEEACCOUNT.View
            
 
                 var rs8 = Model.loaitaikhoanketoan.danhsachloaitaikhoan(dc);
-                Viewtable viewtblrs8 = new Viewtable(rs8, dc, "DANH SÁCH LOẠI TÀI KHOẢN", 1);// danh sach loại tài khoản kế toán
+                Viewtable viewtblrs8 = new Viewtable(rs8, dc, "DANH SÁCH LOẠI TÀI KHOẢN", 1, "tk");// danh sach loại tài khoản kế toán
 
                 viewtblrs8.Show();
 
@@ -1308,7 +1308,7 @@ namespace BEEACCOUNT.View
              
 
                 var rs = Model.Taikhoanketoan.danhsachtaikhoan(dc);
-                Viewtable viewtblrs55 = new Viewtable(rs, dc, "DANH SÁCH TÀI KHOẢN KẾ TOÁN", 0);// view code 0 la danh sach tai khoan ke toan
+                Viewtable viewtblrs55 = new Viewtable(rs, dc, "DANH SÁCH TÀI KHOẢN KẾ TOÁN", 0, "tk");// view code 0 la danh sach tai khoan ke toan
 
                 viewtblrs55.Show();
 
@@ -1386,7 +1386,7 @@ namespace BEEACCOUNT.View
             {
                 var rs1 = Model.Danhsachtkchitiet.danhsachtaikhoanchitiet(dc);
 
-                Viewtable viewtbl = new Viewtable(rs1, dc, "DANH SÁCH MÃ CHI TIẾT TÀI KHOẢN", 2);// view code 2 mo so chi tiet tai khoan
+                Viewtable viewtbl = new Viewtable(rs1, dc, "DANH SÁCH MÃ CHI TIẾT TÀI KHOẢN", 2, "tk");// view code 2 mo so chi tiet tai khoan
                 viewtbl.Show();
 
 
@@ -1405,7 +1405,7 @@ namespace BEEACCOUNT.View
                // LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
 
                 var rs1 = Model.Nhacungcap.danhsachNhacungcap(dc);
-                Viewtable viewtbl = new Viewtable(rs1, dc, "DANH SÁCH NHÀ CUNG CẤP", 5);// mã 5 là danh sach nha cung cap
+                Viewtable viewtbl = new Viewtable(rs1, dc, "DANH SÁCH NHÀ CUNG CẤP", 5, "tk");// mã 5 là danh sach nha cung cap
 
                 viewtbl.Show();
 
@@ -1432,7 +1432,7 @@ namespace BEEACCOUNT.View
             LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
 
             var rs1 = Model.Nhacungcap.danhsachkhachhangvantai(dc);
-            Viewtable viewtbl = new Viewtable(rs1, dc, "DANH SÁCH KHÁCH HÀNG VẬN TẢI", 10);// mã 8 là danh sach nha nha van tai
+            Viewtable viewtbl = new Viewtable(rs1, dc, "DANH SÁCH KHÁCH HÀNG VẬN TẢI", 10, "tk");// mã 8 là danh sach nha nha van tai
 
             viewtbl.Show();
 
@@ -1461,14 +1461,20 @@ namespace BEEACCOUNT.View
             beeselectinput choosesl = new beeselectinput("Chọn khách hàng vận tải" , CombomCollection);
             choosesl.ShowDialog();
 
-            //string connection_string = Utils.getConnectionstr();
+            if (choosesl.kq == true)
+            {
+                string makh = choosesl.value;
+                String tenkh = choosesl.valuetext;
+                //string connection_string = Utils.getConnectionstr();
 
-            //LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+                //LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
 
-            //var rs1 = Model.Nhacungcap.danhsachkhachhangvantai(dc);
-            //Viewtable viewtbl = new Viewtable(rs1, dc, "DANH SÁCH KHÁCH HÀNG VẬN TẢI", 10);// mã 8 là danh sach nha nha van tai
+                var rs1 = Model.Nhacungcap.danhsachgiatheotuyenvamanhavantai(dc, makh);
+                Viewtable viewtbl = new Viewtable(rs1, dc, "DANH SÁCH GIÁ THEO TUYẾN CỦA KHÁCH HÀNG " + tenkh.ToUpper(), 11, makh);// mã 8 là danh sach nha nha van tai
 
-            //viewtbl.Show();
+                viewtbl.Show();
+            }
+          
         }
     }
 }

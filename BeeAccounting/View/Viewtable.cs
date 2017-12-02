@@ -32,7 +32,7 @@ namespace BEEACCOUNT.View
                 return Text;
             }
         }
-
+        public string valuesave { get; set; }
         public int viewcode;
         public IQueryable rs;
         LinqtoSQLDataContext db;
@@ -240,11 +240,11 @@ namespace BEEACCOUNT.View
 
 
         public BindingSource source2;
-        public Viewtable(IQueryable rs, LinqtoSQLDataContext dc, string fornname, int viewcode)
+        public Viewtable(IQueryable rs, LinqtoSQLDataContext dc, string fornname, int viewcode, string valuesave)
         {
             //    this.dataGridView1.DataSource = rs;
             InitializeComponent();
-
+            this.valuesave = valuesave;
 
 
             this.KeyPreview = true;
@@ -313,6 +313,34 @@ namespace BEEACCOUNT.View
 
         private void bt_themmoi_Click(object sender, EventArgs e)
         {
+
+
+            #region  // viewcode ==11  la danh gia theo tuyen
+
+
+            if (this.viewcode == 11)
+            {
+
+
+                string makh = valuesave;
+
+
+
+
+
+                Model.Nhacungcap.themmoigiavantaitheotuyen(makh);
+                var rs = Model.Nhacungcap.danhsachgiatheotuyenvamanhavantai(this.db, makh);
+
+                dataGridView1.DataSource = rs;
+
+
+
+            }
+
+
+
+            #endregion
+
             #region  // viewcode ==10  la danh sách khách hàng kế toán
 
 
@@ -490,6 +518,66 @@ namespace BEEACCOUNT.View
 
         private void button2_Click(object sender, EventArgs e)
         {
+
+
+            #region  viewcode = 11 à  list gia theo tuyến
+
+
+            if (this.viewcode == 11)  // viewcode ==0  la danh sách tài k khoản kê toán
+            {
+
+                int idtk = 0;
+                try
+                {
+                    idtk = (int)this.dataGridView1.Rows[this.dataGridView1.CurrentCell.RowIndex].Cells["ID"].Value;
+                }
+                catch (Exception)
+                {
+
+                    MessageBox.Show("Bạn phải chọn một tuyến !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                string connection_string = Utils.getConnectionstr();
+
+                LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+
+                var rs = (from p in dc.tbl_NP_giavantaitheotuyens
+                          where p.id == idtk
+                          select p).FirstOrDefault();
+                if (rs == null)
+                {
+                    MessageBox.Show("Bạn chọn một tuyến !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+
+                if (rs != null)
+                {
+                    string makh = valuesave;
+
+                    //     string taikhoan = rs.matk;
+
+                    ////View.BeeCreatenewaccount createacc = new BeeCreatenewaccount(4, taikhoan); // int = 1 xóa; int = 2 sửa ; int = 3 tao mới; int = 4 vừa sửa+ xóa
+
+                    ////createacc.ShowDialog();
+
+                    Model.Nhacungcap.suadanhsachgiatheotuyencuakhachhang(idtk);
+
+                    var rs3 = Model.Nhacungcap.danhsachgiatheotuyenvamanhavantai(dc, makh);
+
+                    dataGridView1.DataSource = rs3;
+
+                }
+            }
+
+
+
+
+            #endregion viewcode = 1 dnah muc tai khoan ke toan
+
+
 
             #region  viewcode = 10 à  khach hang van tai
 
