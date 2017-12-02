@@ -681,6 +681,32 @@
       <Column Name="sokhoithungxe" Type="System.Double" DbType="Float" CanBeNull="true" />
     </Type>
   </Table>
+  <Table Name="dbo.tbl_NP_giavantaitheotuyen" Member="tbl_NP_giavantaitheotuyens">
+    <Type Name="tbl_NP_giavantaitheotuyen">
+      <Column Name="maKH" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="matuyen" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="tentuyen" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="loaidonxe" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="km" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="trichcongty" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="giathue" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="giahoadon" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="trichdoitac" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dtkhac" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="bocxep" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="giadau" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dinhmucdau" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="cfxang" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="cflaixe" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="cfcongan" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="cfcauduong" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="cfkhauhao" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="tongcfuoctinh" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ghichucf" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="lntuyen" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </Type>
+  </Table>
   <Table Name="dbo.tbl_NP_khachhangvanchuyen" Member="tbl_NP_khachhangvanchuyens">
     <Type Name="tbl_NP_khachhangvanchuyen">
       <Column Name="maKH" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />

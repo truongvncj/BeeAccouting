@@ -51,7 +51,7 @@ namespace BEEACCOUNT.View
             //    cbkhohang
 
 
-            #region load nhóm kho
+            #region load ma nha van tai
 
             string connection_string = Utils.getConnectionstr();
             LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);

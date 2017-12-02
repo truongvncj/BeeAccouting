@@ -33,20 +33,27 @@ namespace BEEACCOUNT.View
             InitializeComponent();
 
             this.label1.Text = headcolumname;
-          
-            //List<ComboboxItem> CombomCollection = new List<ComboboxItem>();
-            //var rs = from tbl_Kafuctionlist in db.tbl_Kafuctionlists
-            //         where tbl_Kafuctionlist.Code != "DIS"
-            //         orderby tbl_Kafuctionlist.Code
-            //         select tbl_Kafuctionlist;
+
+            //List<View.beeselectinput.ComboboxItem> CombomCollection = new List<View.beeselectinput.ComboboxItem>();
+            //string connection_string = Utils.getConnectionstr();
+
+            //LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+            //var rs = from p in dc.tbl_NP_khachhangvanchuyens
+            //             //     where p.Code != "DIS"
+            //         orderby p.maKH
+            //         select p;
             //foreach (var item2 in rs)
             //{
-            //    ComboboxItem cb = new ComboboxItem();
-            //    cb.Value = item2.Code.Trim();
-            //    cb.Text = item2.Code.Trim() + ": " + item2.Description.Trim() + "    || Example: " + item2.Example;
+            //    View.beeselectinput.ComboboxItem cb = new View.beeselectinput.ComboboxItem();
+            //    cb.Value = item2.maKH.Trim();
+            //    cb.Text = item2.maKH.Trim() + ": " + item2.tenKH.Trim();// + "    || Example: " + item2.Example;
             //    CombomCollection.Add(cb);
             //}
 
+
+            //beeselectinput choosesl = new beeselectinput("Chọn khách hàng vận tải", CombomCollection);
+            //choosesl.ShowDialog();
 
             cbselect.DataSource = CombomCollection;
             this.kq = false;

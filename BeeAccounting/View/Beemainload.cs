@@ -1437,5 +1437,38 @@ namespace BEEACCOUNT.View
             viewtbl.Show();
 
         }
+
+        private void button8_Click_1(object sender, EventArgs e)
+        {
+            List<View.beeselectinput.ComboboxItem> CombomCollection = new List<View.beeselectinput.ComboboxItem>();
+            string connection_string = Utils.getConnectionstr();
+
+            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+            var rs = from p in dc.tbl_NP_khachhangvanchuyens
+                //     where p.Code != "DIS"
+                     orderby p.maKH
+                     select p;
+            foreach (var item2 in rs)
+            {
+                View.beeselectinput.ComboboxItem cb = new View.beeselectinput.ComboboxItem();
+                cb.Value = item2.maKH.Trim();
+                cb.Text = item2.maKH.Trim() + ": " + item2.tenKH.Trim();// + "    || Example: " + item2.Example;
+                CombomCollection.Add(cb);
+            }
+
+
+            beeselectinput choosesl = new beeselectinput("Chọn khách hàng vận tải" , CombomCollection);
+            choosesl.ShowDialog();
+
+            //string connection_string = Utils.getConnectionstr();
+
+            //LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+            //var rs1 = Model.Nhacungcap.danhsachkhachhangvantai(dc);
+            //Viewtable viewtbl = new Viewtable(rs1, dc, "DANH SÁCH KHÁCH HÀNG VẬN TẢI", 10);// mã 8 là danh sach nha nha van tai
+
+            //viewtbl.Show();
+        }
     }
 }

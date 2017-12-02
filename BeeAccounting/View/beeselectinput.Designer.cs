@@ -46,7 +46,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(437, 33);
+            this.button1.Location = new System.Drawing.Point(293, 35);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(82, 23);
             this.button1.TabIndex = 1;
@@ -67,7 +67,7 @@
             this.cbselect.FormattingEnabled = true;
             this.cbselect.Location = new System.Drawing.Point(12, 35);
             this.cbselect.Name = "cbselect";
-            this.cbselect.Size = new System.Drawing.Size(381, 21);
+            this.cbselect.Size = new System.Drawing.Size(275, 21);
             this.cbselect.TabIndex = 0;
             this.cbselect.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbselect_KeyPress);
             // 
@@ -75,7 +75,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(531, 90);
+            this.ClientSize = new System.Drawing.Size(387, 90);
             this.Controls.Add(this.cbselect);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button1);
@@ -85,7 +85,7 @@
             this.MinimizeBox = false;
             this.Name = "beeselectinput";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Nhập liệu";
+            this.Text = "Select ";
             this.Load += new System.EventHandler(this.valueinput_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

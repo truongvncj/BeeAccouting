@@ -275,3 +275,4 @@ E:\Product\BeeAccouting\BeeAccounting\bin\x86\Debug\Reports\Phieuketoanth.rdlc
 E:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.NPDanhsachnhavantai.resources
 E:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.NPdanhsachxe.resources
 E:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.NPDanhsackhachhangvantai.resources
+E:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.NPgiavantaitheotuyen.resources
