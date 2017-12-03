@@ -1476,5 +1476,24 @@ namespace BEEACCOUNT.View
             }
           
         }
+
+        private void button4_Click_3(object sender, EventArgs e)
+        {
+
+            #region//bcsonhatkychung
+            //if (name == "bcsonhatkychung")
+            //{
+
+                Model.Soketoan.baocaokqkd();
+
+          //  }
+            #endregion
+
+        }
+
+        private void label2_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -213,6 +213,8 @@
             this.button49 = new System.Windows.Forms.Button();
             this.button50 = new System.Windows.Forms.Button();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.button33 = new System.Windows.Forms.Button();
             this.groupBox17 = new System.Windows.Forms.GroupBox();
             this.button35 = new System.Windows.Forms.Button();
@@ -223,8 +225,8 @@
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox6.SuspendLayout();
@@ -684,6 +686,26 @@
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "Note";
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(9, 75);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(160, 55);
+            this.button3.TabIndex = 15;
+            this.button3.TabStop = false;
+            this.button3.Text = "ghi sổ cái nghiệp vụ toongr để bctc";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(6, 47);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(160, 22);
+            this.button2.TabIndex = 14;
+            this.button2.TabStop = false;
+            this.button2.Text = "mã chi phí costcenter";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
             // button33
             // 
             this.button33.Location = new System.Drawing.Point(6, 19);
@@ -979,37 +1001,43 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 38F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Magenta;
-            this.label1.Location = new System.Drawing.Point(745, 50);
+            this.label1.Location = new System.Drawing.Point(746, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(216, 59);
+            this.label1.Size = new System.Drawing.Size(251, 59);
             this.label1.TabIndex = 53;
-            this.label1.Text = "amadica";
+            this.label1.Text = "strateprov";
             // 
-            // button2
+            // button4
             // 
-            this.button2.Location = new System.Drawing.Point(6, 47);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(160, 22);
-            this.button2.TabIndex = 14;
-            this.button2.TabStop = false;
-            this.button2.Text = "mã chi phí costcenter";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button4.BackColor = System.Drawing.Color.Red;
+            this.button4.Location = new System.Drawing.Point(684, 146);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(157, 22);
+            this.button4.TabIndex = 22;
+            this.button4.TabStop = false;
+            this.button4.Text = "báo cáo kqkd";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click_3);
             // 
-            // button3
+            // label2
             // 
-            this.button3.Location = new System.Drawing.Point(9, 75);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(160, 55);
-            this.button3.TabIndex = 15;
-            this.button3.TabStop = false;
-            this.button3.Text = "ghi sổ cái nghiệp vụ toongr để bctc";
-            this.button3.UseVisualStyleBackColor = true;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Magenta;
+            this.label2.Location = new System.Drawing.Point(746, 68);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(323, 20);
+            this.label2.TabIndex = 54;
+            this.label2.Text = "strategy - productivity - valueable -cashreturn";
+            this.label2.Click += new System.EventHandler(this.label2_Click_1);
             // 
             // Beemainload
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1097, 617);
             this.ControlBox = false;
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox17);
@@ -1100,5 +1128,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Label label2;
     }
 }

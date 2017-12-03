@@ -36,7 +36,7 @@
             // 
             // bt_thuchien
             // 
-            this.bt_thuchien.Location = new System.Drawing.Point(65, 71);
+            this.bt_thuchien.Location = new System.Drawing.Point(75, 71);
             this.bt_thuchien.Name = "bt_thuchien";
             this.bt_thuchien.Size = new System.Drawing.Size(93, 22);
             this.bt_thuchien.TabIndex = 3;
@@ -61,9 +61,9 @@
             "2024",
             "2025",
             "2026"});
-            this.cb_year.Location = new System.Drawing.Point(65, 22);
+            this.cb_year.Location = new System.Drawing.Point(75, 22);
             this.cb_year.Name = "cb_year";
-            this.cb_year.Size = new System.Drawing.Size(122, 23);
+            this.cb_year.Size = new System.Drawing.Size(93, 23);
             this.cb_year.TabIndex = 10;
             this.cb_year.SelectedValueChanged += new System.EventHandler(this.cb_year_SelectedValueChanged);
             // 

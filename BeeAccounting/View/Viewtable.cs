@@ -986,6 +986,64 @@ namespace BEEACCOUNT.View
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
 
+            #region  viewcode = 11 danh sahch giá vân tải theo tuyến
+
+
+            if (this.viewcode == 11)  // viewcode ==0  la danh sách tài k khoản kê toán
+            {
+
+                int idtk = 0;
+                try
+                {
+                    idtk = (int)this.dataGridView1.Rows[this.dataGridView1.CurrentCell.RowIndex].Cells["ID"].Value;
+                }
+                catch (Exception)
+                {
+
+                    MessageBox.Show("Bạn phải chọn một tuyến !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                string connection_string = Utils.getConnectionstr();
+
+                LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+
+                var rs = (from p in dc.tbl_NP_giavantaitheotuyens
+                          where p.id == idtk
+                          select p).FirstOrDefault();
+                if (rs == null)
+                {
+                    MessageBox.Show("Bạn chọn một tuyến", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+
+                if (rs != null)
+                {
+
+                    //     string taikhoan = rs.matk;
+
+                    ////View.BeeCreatenewaccount createacc = new BeeCreatenewaccount(4, taikhoan); // int = 1 xóa; int = 2 sửa ; int = 3 tao mới; int = 4 vừa sửa+ xóa
+
+                    ////createacc.ShowDialog();
+                    string makh = valuesave;
+                    Model.Nhacungcap.suadanhsachgiatheotuyencuakhachhang(idtk);
+
+                    var rs3 = Model.Nhacungcap.danhsachgiatheotuyenvamanhavantai(dc, makh);
+
+                    dataGridView1.DataSource = rs3;
+
+                }
+            }
+
+
+
+
+            #endregion viewcode = 1 dnah muc tai khoan ke toan
+
+
+
             #region  viewcode = 10 à  khach hang van tai
 
 

@@ -121,7 +121,7 @@ namespace BEEACCOUNT.View
                     }
 
 
-
+                    cbkhachhang.Enabled = false;
 
 
                     txttrichdoitac.Text = item.trichdoitac.ToString();
@@ -438,8 +438,8 @@ namespace BEEACCOUNT.View
 
 
 
-            if (matuyen != "")
-            {
+            //if (matuyen != "")
+            //{
                 chon = true;
                 string connection_string = Utils.getConnectionstr();
                 LinqtoSQLDataContext db = new LinqtoSQLDataContext(connection_string);
@@ -449,7 +449,8 @@ namespace BEEACCOUNT.View
 
                 //    MeasureItemEventArgs.re
                 var rs = (from p in db.tbl_NP_giavantaitheotuyens
-                          where p.maKH == makh && p.matuyen == matuyen
+                       //   where p.maKH == makh && p.matuyen == matuyen
+                          where p.id == this.id
                           //  orderby tbl_dstaikhoan.matk
                           select p).FirstOrDefault();
 
@@ -488,7 +489,7 @@ namespace BEEACCOUNT.View
 
 
 
-            }
+       //     }
 
 
 

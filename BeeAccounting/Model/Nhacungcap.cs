@@ -320,7 +320,7 @@ namespace BEEACCOUNT.Model
         {
 
 
-            View.NPgiavantaitheotuyen p = new NPgiavantaitheotuyen(3, -1);  // 4 là them moi
+            View.NPgiavantaitheotuyen p = new NPgiavantaitheotuyen(3, -1);  // 3 là them moi
 
             p.ShowDialog();
 
@@ -335,7 +335,7 @@ namespace BEEACCOUNT.Model
 
         public static void suadanhsachgiatheotuyencuakhachhang(int idtk)
         {
-            View.NPgiavantaitheotuyen p = new NPgiavantaitheotuyen(3, idtk);  // 3 là sua
+            View.NPgiavantaitheotuyen p = new NPgiavantaitheotuyen(4, idtk);  // 4 là sua
 
             p.ShowDialog();
 

@@ -48,8 +48,6 @@ namespace BEEACCOUNT.Model
                 if (chon)
                 {
 
-
-
                     #region showreport
                     // xoa data cũ
                     string username = Utils.getusername();
@@ -196,10 +194,6 @@ namespace BEEACCOUNT.Model
 
 
                     #endregion showreports
-
-
-
-
 
 
 
@@ -1262,6 +1256,205 @@ namespace BEEACCOUNT.Model
             #endregion
 
 
+        }
+
+        public static void baocaokqkd()
+        {
+            //  Beeyearsellect
+            string connection_string = Utils.getConnectionstr();
+            string urs = Utils.getusername();
+            //  var db = new LinqtoSQLDataContext(connection_string);
+            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+
+            FormCollection fc = System.Windows.Forms.Application.OpenForms;
+            bool chon;
+            string yearchon;
+            bool kq = false;
+            foreach (Form frm in fc)
+            {
+
+                if (frm.Text == "Chọn năm")
+                {
+                    kq = true;
+                    frm.Focus();
+
+                }
+            }
+
+            if (!kq)
+            {
+
+
+
+                View.Beeyearsellect Beeyearsellect = new View.Beeyearsellect();
+                Beeyearsellect.ShowDialog();
+
+                yearchon = Beeyearsellect.year;
+                chon = Beeyearsellect.chon;
+
+
+                if (chon)
+                {
+
+                    #region showreport
+                    // xoa data cũ
+                    string username = Utils.getusername();
+
+                    var detailrptNKc = from P in dc.RptdetaiNKCs
+                                       where P.username == username
+                                       select P;
+
+                    dc.RptdetaiNKCs.DeleteAllOnSubmit(detailrptNKc);
+                    dc.SubmitChanges();
+
+
+                    var headrptnkc = from p in dc.RPtheadNKCs
+                                     where p.username == username
+                                     select p;
+
+                    dc.RPtheadNKCs.DeleteAllOnSubmit(headrptnkc);
+                    dc.SubmitChanges();
+
+
+                    // update data mới   RPtsoQuy
+
+
+                    RPtheadNKC HeadHKC = new RPtheadNKC();
+
+
+                    HeadHKC.nam = yearchon;
+                    HeadHKC.tencongty = Model.Congty.getnamecongty();
+                    HeadHKC.username = username;
+                    HeadHKC.diachicongty = Model.Congty.getdiachicongty();
+                    HeadHKC.masothue = Model.Congty.getmasothuecongty();
+                    //      pt.tencongty = Model.Congty.getnamecongty();
+                    //    pt.diachicongty = Model.Congty.getdiachicongty();
+                    //  pt.masothue = Model.Congty.getmasothuecongty();
+                    HeadHKC.giamdoc = Model.Congty.gettengiamdoccongty();
+                    HeadHKC.ketoantruong = Model.Congty.gettenketoantruongcongty();
+                    HeadHKC.nguoighiso = Utils.getname();
+
+
+
+
+
+                    dc.RPtheadNKCs.InsertOnSubmit(HeadHKC);
+                    dc.SubmitChanges();
+
+
+
+                    var headNKC = from p in dc.RPtheadNKCs
+                                  where p.username == username
+                                  select p;
+
+
+                    Utils ut = new Utils();
+                    var dataset1 = ut.ToDataTable(dc, headNKC);
+
+                    //-----------------------
+
+
+
+
+                    var detairpt = from tbl_Socai in dc.tbl_Socais
+                                   where tbl_Socai.Ngayctu.Value.Year.ToString().Trim() == yearchon.Trim()
+                                   orderby tbl_Socai.Ngayctu
+                                   select tbl_Socai;
+
+                    foreach (var item in detairpt)
+                    {
+                        RptdetaiNKC q = new RptdetaiNKC();
+                        if (item.Diengiai != "")
+                        {
+                            q.diengiai = item.Diengiai.Trim();
+                        }
+
+                        q.machungtu = item.manghiepvu + " " + item.Sohieuchungtu;
+
+
+                        q.username = username;
+                        q.Ngaychungtu = item.Ngayctu;
+
+
+                        q.taikhoandoiung = item.TkNo.Trim();
+                        q.psno = item.PsNo;
+                        q.psco = 0;
+
+
+                        //       q.ton = daukysave + item.PSNo - item.PSCo;
+                        //        daukysave = daukysave + (double)item.PSNo - (double)item.PSCo;
+
+                        dc.RptdetaiNKCs.InsertOnSubmit(q);
+                        dc.SubmitChanges();
+
+                        RptdetaiNKC q2 = new RptdetaiNKC();
+
+
+                        //         RptdetaiNKC q = new RptdetaiNKC();
+                        if (item.Diengiai != "")
+                        {
+                            q2.diengiai = item.Diengiai.Trim();
+                        }
+
+                        q2.machungtu = item.manghiepvu + " " + item.Sohieuchungtu;
+
+
+                        q2.username = username;
+                        q2.Ngaychungtu = item.Ngayctu;
+
+
+                        q2.taikhoandoiung = item.TkCo.Trim();
+                        q2.psno = 0;
+                        q2.psco = item.PsCo;
+
+
+                        dc.RptdetaiNKCs.InsertOnSubmit(q2);
+                        dc.SubmitChanges();
+
+
+
+
+
+                    }
+
+
+
+
+
+
+                    var rptdetail = from p in dc.RptdetaiNKCs
+                                    where p.username == username
+                                    orderby p.Ngaychungtu
+
+                                    select p;
+
+
+
+                    var dataset2 = ut.ToDataTable(dc, rptdetail);
+
+
+
+                    Reportsview rpt = new Reportsview(dataset1, dataset2, "BaocaoKQKD.rdlc");
+
+
+
+                    rpt.ShowDialog();
+
+
+                    #endregion showreports
+
+
+                }
+
+                //   }
+            }
+
+
+
+
+
+            //   throw new NotImplementedException();
         }
 
         public static void bangcandoiphatsinhtaikhoan()
