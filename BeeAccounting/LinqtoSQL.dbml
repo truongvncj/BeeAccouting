@@ -535,7 +535,7 @@
   <Table Name="dbo.tbl_dstaikhoan" Member="tbl_dstaikhoans">
     <Type Name="tbl_dstaikhoan">
       <Column Name="matk" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
-      <Column Name="tentk" Type="System.String" DbType="NChar(50)" CanBeNull="true" />
+      <Column Name="tentk" Type="System.String" DbType="NChar(225)" CanBeNull="true" />
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="captk" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="matktren" Type="System.String" DbType="NChar(10)" CanBeNull="true" />

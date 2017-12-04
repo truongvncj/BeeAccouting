@@ -1562,7 +1562,7 @@ namespace BEEACCOUNT.Model
 
 
                             detail.matk = item.matk;
-                            detail.tentk = item.tentk;
+                            detail.tentk = item.tentk.Trim();
 
                             detail.Codk = (from tbl_Socai in dc.tbl_Socais
                                            where tbl_Socai.Ngayctu < fromdate

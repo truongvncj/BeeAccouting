@@ -11634,7 +11634,7 @@ namespace BEEACCOUNT
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tentk", DbType="NChar(50)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tentk", DbType="NChar(225)")]
 		public string tentk
 		{
 			get
