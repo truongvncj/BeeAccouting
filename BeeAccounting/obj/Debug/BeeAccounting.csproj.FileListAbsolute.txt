@@ -46,3 +46,4 @@ E:\Desktop\Developing product\Bee Accounting\Bee Accounting\BeeAccounting\obj\De
 E:\Desktop\Developing product\Bee Accounting\Bee Accounting\BeeAccounting\obj\Debug\RdlCompile.cache
 E:\Desktop\Developing product\Bee Accounting\Bee Accounting\BeeAccounting\obj\Debug\RdlCompile.compiled
 D:\Product\BeeAccouting\BeeAccounting\bin\Debug\BEE ACCOUNTING.exe.config
+E:\Product\BeeAccouting\BeeAccounting\bin\Debug\BEE ACCOUNTING.exe.config

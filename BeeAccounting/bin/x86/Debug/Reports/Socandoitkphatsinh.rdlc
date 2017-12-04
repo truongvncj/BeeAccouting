@@ -159,14 +159,16 @@
                 </Style>
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
         <Top>0.64874in</Top>
-        <Left>3.25963in</Left>
+        <Left>3.13463in</Left>
         <Height>0.30208in</Height>
-        <Width>4.14486in</Width>
+        <Width>3.73138in</Width>
         <ZIndex>3</ZIndex>
         <Style>
           <Border>
