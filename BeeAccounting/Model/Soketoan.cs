@@ -1309,18 +1309,18 @@ namespace BEEACCOUNT.Model
                     dc.SubmitChanges();
 
 
-                    var headrptnkc = from p in dc.RPtheadNKCs
+                    var headrptnkc = from p in dc.RPtheadKQKD200s
                                      where p.username == username
                                      select p;
 
-                    dc.RPtheadNKCs.DeleteAllOnSubmit(headrptnkc);
+                    dc.RPtheadKQKD200s.DeleteAllOnSubmit(headrptnkc);
                     dc.SubmitChanges();
 
 
                     // update data mới   RPtsoQuy
 
 
-                    RPtheadNKC HeadHKC = new RPtheadNKC();
+                    RPtheadKQKD200 HeadHKC = new RPtheadKQKD200();
 
 
                     HeadHKC.nam = yearchon;
@@ -1339,12 +1339,12 @@ namespace BEEACCOUNT.Model
 
 
 
-                    dc.RPtheadNKCs.InsertOnSubmit(HeadHKC);
+                    dc.RPtheadKQKD200s.InsertOnSubmit(HeadHKC);
                     dc.SubmitChanges();
 
 
 
-                    var headNKC = from p in dc.RPtheadNKCs
+                    var headNKC = from p in dc.RPtheadKQKD200s
                                   where p.username == username
                                   select p;
 

@@ -1024,11 +1024,11 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Magenta;
-            this.label2.Location = new System.Drawing.Point(746, 68);
+            this.label2.Location = new System.Drawing.Point(717, 68);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(323, 20);
+            this.label2.Size = new System.Drawing.Size(360, 20);
             this.label2.TabIndex = 54;
-            this.label2.Text = "strategy - productivity - valueable -cashreturn";
+            this.label2.Text = "strategy - productivity - valueable -salescashreturn";
             this.label2.Click += new System.EventHandler(this.label2_Click_1);
             // 
             // Beemainload

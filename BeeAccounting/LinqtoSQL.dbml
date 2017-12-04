@@ -177,6 +177,20 @@
       <Column Name="taikhoan" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
     </Type>
   </Table>
+  <Table Name="dbo.RPtheadKQKD200" Member="RPtheadKQKD200s">
+    <Type Name="RPtheadKQKD200">
+      <Column Name="nam" Type="System.String" DbType="NVarChar(4)" CanBeNull="true" />
+      <Column Name="giamdoc" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ketoantruong" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="nguoighiso" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="tencongty" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="masothue" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="diachicongty" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="username" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="taikhoan" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
   <Table Name="dbo.RPtheadNKC" Member="RPtheadNKCs">
     <Type Name="RPtheadNKC">
       <Column Name="nam" Type="System.String" DbType="NVarChar(4)" CanBeNull="true" />
@@ -705,6 +719,8 @@
       <Column Name="tongcfuoctinh" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Column Name="ghichucf" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
       <Column Name="lntuyen" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ngayapdung" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ngayhethan" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.tbl_NP_khachhangvanchuyen" Member="tbl_NP_khachhangvanchuyens">
