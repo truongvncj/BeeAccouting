@@ -1,5 +1,39 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="BEE" Class="LinqtoSQLDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
   <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-8D4F853\SQLEXPRESS;Initial Catalog=BEE;Persist Security Info=True;User ID=sa" SettingsObjectName="BEEACCOUNT.Properties.Settings" SettingsPropertyName="BEEConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.KQKD200" Member="KQKD200s">
+    <Type Name="KQKD200">
+      <Column Name="nam" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="dthu01" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="giamdt02" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="giavon11" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dttaichinh" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="cftaichinh" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="cflaivay" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="cfbanhang" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="cfquanlydn" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="thunhapkhac" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="cfkhac" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="cftndnhienhanh" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="cfdnhoanlai" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="laicbcophieu" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="laigiaomtrencphieu" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="username" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_Temp" Member="tbl_Temps">
+    <Type Name="tbl_Temp">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Version" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RegionCode" Type="System.String" DbType="NChar(225)" CanBeNull="true" />
+      <Column Name="username" Type="System.String" DbType="NChar(225)" CanBeNull="true" />
+      <Column Name="password" Type="System.String" DbType="NChar(225)" CanBeNull="true" />
+      <Column Name="userright" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="note" Type="System.String" DbType="NChar(225)" CanBeNull="true" />
+      <Column Name="inputcontract" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
   <Table Name="dbo.Rpt_PhieuThu" Member="Rpt_PhieuThus">
     <Type Name="Rpt_PhieuThu">
       <Column Name="tencongty" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
@@ -21,19 +55,6 @@
       <Column Name="quyenso" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
       <Column Name="tkco" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
       <Column Name="phieuthuso" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.tbl_Temp" Member="tbl_Temps">
-    <Type Name="tbl_Temp">
-      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="Version" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="RegionCode" Type="System.String" DbType="NChar(225)" CanBeNull="true" />
-      <Column Name="username" Type="System.String" DbType="NChar(225)" CanBeNull="true" />
-      <Column Name="password" Type="System.String" DbType="NChar(225)" CanBeNull="true" />
-      <Column Name="userright" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="note" Type="System.String" DbType="NChar(225)" CanBeNull="true" />
-      <Column Name="inputcontract" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
-      <Column Name="name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.RptBTTHdetail" Member="RptBTTHdetails">
@@ -73,6 +94,40 @@
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="Nock" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Column Name="matk" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RPtdetailKQKD200" Member="RPtdetailKQKD200s">
+    <Type Name="RPtdetailKQKD200">
+      <Column Name="nay01dt" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="nay02giamdt" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="nay11giavon" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="naydttaichinh" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="naycftaichinh" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="naycflaivay" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="naycfbanhang" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="naycfquanlydn" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="naythunhapkhac" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="naycfkhac" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="naycftndnhienhanh" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="nayfdnhoanlai" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="naylaicbcophieu" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="naylaigiaomtrencphieu" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="truoc01dt" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="truoc02giamdt" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="truoc11giavon" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="truocdttaichinh" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="truoccftaichinh" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="truoccflaivay" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="truoccfbanhang" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="truoccfquanlydn" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="truocthunhapkhac" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="truoccfkhac" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="truoccftndnhienhanh" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="truoccfdnhoanlai" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="truoclaicbcophieu" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="truoclaigiaomtrencphieu" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="username" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.RptdetailSoCai" Member="RptdetailSoCais">

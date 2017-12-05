@@ -141,6 +141,12 @@
     <Compile Include="shared\ExtractToDataTableOptions.cs" />
     <Compile Include="shared\LinQToExcel.cs" />
     <Compile Include="shared\StringExtensions.cs" />
+    <Compile Include="View\BeeBCKQKD200updatechotso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\BeeBCKQKD200updatechotso.Designer.cs">
+      <DependentUpon>BeeBCKQKD200updatechotso.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\NPgiavantaitheotuyen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -485,6 +491,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\Paymentrequest.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\BeeBCKQKD200updatechotso.resx">
+      <DependentUpon>BeeBCKQKD200updatechotso.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\NPgiavantaitheotuyen.resx">
       <DependentUpon>NPgiavantaitheotuyen.cs</DependentUpon>

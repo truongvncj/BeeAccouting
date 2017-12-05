@@ -1,14 +1,18 @@
 ﻿using BEEACCOUNT.View;
 using System;
-using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
-using System.Text;
+
 using System.Windows.Forms;
+
 
 namespace BEEACCOUNT.Model
 {
     class Soketoan
     {
+        //  public static object CommandType { get; private set; }
+
         public static void sonhatkychung()
         {
             //  Beeyearsellect
@@ -207,6 +211,55 @@ namespace BEEACCOUNT.Model
             }
 
 
+        }
+
+        public static void caculationServerDKKD200(string yearchon)
+        {
+            #region xoavatEDLPandFBL5nDochaveinFbl5nth
+            SqlConnection conn2 = null;
+            SqlDataReader rdr1 = null;
+
+            string destConnString = Utils.getConnectionstr();
+            try
+            {
+
+                conn2 = new SqlConnection(destConnString);
+                conn2.Open();
+                SqlCommand cmd1 = new SqlCommand("calulationKQKD200", conn2);
+                cmd1.CommandType = CommandType.StoredProcedure;
+                cmd1.CommandTimeout = 0;
+                    cmd1.Parameters.Add("@username", SqlDbType.VarChar).Value = Utils.getusername();
+                cmd1.Parameters.Add("@yearchon", SqlDbType.Int).Value = int.Parse(yearchon);
+             //   cmd1.Parameters.Add("@todate", SqlDbType.DateTime).Value = todate;
+
+                
+
+
+                rdr1 = cmd1.ExecuteReader();
+
+
+                //
+//                @username nvarchar (225),
+//             @fromdate Datetime,
+//           @todate Datetime
+
+                //       rdr1 = cmd1.ExecuteReader();
+
+            }
+            finally
+            {
+                if (conn2 != null)
+                {
+                    conn2.Close();
+                }
+                if (rdr1 != null)
+                {
+                    rdr1.Close();
+                }
+            }
+            //     MessageBox.Show("ok", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            #endregion
         }
         public static void socaitaikhoan()
         {
@@ -1258,6 +1311,55 @@ namespace BEEACCOUNT.Model
 
         }
 
+        public static void xemvaupdatekqkd200()
+        {
+            //  Beeyearsellect
+            string connection_string = Utils.getConnectionstr();
+            string urs = Utils.getusername();
+            //  var db = new LinqtoSQLDataContext(connection_string);
+            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+
+            FormCollection fc = System.Windows.Forms.Application.OpenForms;
+            bool chon;
+            int yearchon;
+            bool kq = false;
+            foreach (Form frm in fc)
+            {
+
+                if (frm.Text == "Chọn năm")
+                {
+                    kq = true;
+                    frm.Focus();
+
+                }
+            }
+
+            if (!kq)
+            {
+
+                View.Beeyearsellect Beeyearsellect = new View.Beeyearsellect();
+                Beeyearsellect.ShowDialog();
+
+                yearchon = int.Parse(Beeyearsellect.year);
+                chon = Beeyearsellect.chon;
+
+                if (chon)
+                {
+
+                    View.BeeBCKQKD200updatechotso xemsuakqkd = new BeeBCKQKD200updatechotso(yearchon);
+                    xemsuakqkd.Show();
+                }
+
+
+
+
+
+                }
+
+            // throw new NotImplementedException();
+        }
+
         public static void baocaokqkd()
         {
             //  Beeyearsellect
@@ -1301,11 +1403,11 @@ namespace BEEACCOUNT.Model
                     // xoa data cũ
                     string username = Utils.getusername();
 
-                    var detailrptNKc = from P in dc.RptdetaiNKCs
-                                       where P.username == username
-                                       select P;
+                    var detailrpt = from P in dc.RPtdetailKQKD200s
+                                    where P.username == username
+                                    select P;
 
-                    dc.RptdetaiNKCs.DeleteAllOnSubmit(detailrptNKc);
+                    dc.RPtdetailKQKD200s.DeleteAllOnSubmit(detailrpt);
                     dc.SubmitChanges();
 
 
@@ -1320,26 +1422,26 @@ namespace BEEACCOUNT.Model
                     // update data mới   RPtsoQuy
 
 
-                    RPtheadKQKD200 HeadHKC = new RPtheadKQKD200();
+                    RPtheadKQKD200 headrpt = new RPtheadKQKD200();
 
 
-                    HeadHKC.nam = yearchon;
-                    HeadHKC.tencongty = Model.Congty.getnamecongty();
-                    HeadHKC.username = username;
-                    HeadHKC.diachicongty = Model.Congty.getdiachicongty();
-                    HeadHKC.masothue = Model.Congty.getmasothuecongty();
+                    headrpt.nam = yearchon;
+                    headrpt.tencongty = Model.Congty.getnamecongty();
+                    headrpt.username = username;
+                    headrpt.diachicongty = Model.Congty.getdiachicongty();
+                    headrpt.masothue = Model.Congty.getmasothuecongty();
                     //      pt.tencongty = Model.Congty.getnamecongty();
                     //    pt.diachicongty = Model.Congty.getdiachicongty();
                     //  pt.masothue = Model.Congty.getmasothuecongty();
-                    HeadHKC.giamdoc = Model.Congty.gettengiamdoccongty();
-                    HeadHKC.ketoantruong = Model.Congty.gettenketoantruongcongty();
-                    HeadHKC.nguoighiso = Utils.getname();
+                    headrpt.giamdoc = Model.Congty.gettengiamdoccongty();
+                    headrpt.ketoantruong = Model.Congty.gettenketoantruongcongty();
+                    headrpt.nguoighiso = Utils.getname();
 
 
 
 
 
-                    dc.RPtheadKQKD200s.InsertOnSubmit(HeadHKC);
+                    dc.RPtheadKQKD200s.InsertOnSubmit(headrpt);
                     dc.SubmitChanges();
 
 
@@ -1354,78 +1456,14 @@ namespace BEEACCOUNT.Model
 
                     //-----------------------
 
+                    //  ádfdsaf
+                    caculationServerDKKD200(yearchon);
 
+                    ///===============
 
-
-                    var detairpt = from tbl_Socai in dc.tbl_Socais
-                                   where tbl_Socai.Ngayctu.Value.Year.ToString().Trim() == yearchon.Trim()
-                                   orderby tbl_Socai.Ngayctu
-                                   select tbl_Socai;
-
-                    foreach (var item in detairpt)
-                    {
-                        RptdetaiNKC q = new RptdetaiNKC();
-                        if (item.Diengiai != "")
-                        {
-                            q.diengiai = item.Diengiai.Trim();
-                        }
-
-                        q.machungtu = item.manghiepvu + " " + item.Sohieuchungtu;
-
-
-                        q.username = username;
-                        q.Ngaychungtu = item.Ngayctu;
-
-
-                        q.taikhoandoiung = item.TkNo.Trim();
-                        q.psno = item.PsNo;
-                        q.psco = 0;
-
-
-                        //       q.ton = daukysave + item.PSNo - item.PSCo;
-                        //        daukysave = daukysave + (double)item.PSNo - (double)item.PSCo;
-
-                        dc.RptdetaiNKCs.InsertOnSubmit(q);
-                        dc.SubmitChanges();
-
-                        RptdetaiNKC q2 = new RptdetaiNKC();
-
-
-                        //         RptdetaiNKC q = new RptdetaiNKC();
-                        if (item.Diengiai != "")
-                        {
-                            q2.diengiai = item.Diengiai.Trim();
-                        }
-
-                        q2.machungtu = item.manghiepvu + " " + item.Sohieuchungtu;
-
-
-                        q2.username = username;
-                        q2.Ngaychungtu = item.Ngayctu;
-
-
-                        q2.taikhoandoiung = item.TkCo.Trim();
-                        q2.psno = 0;
-                        q2.psco = item.PsCo;
-
-
-                        dc.RptdetaiNKCs.InsertOnSubmit(q2);
-                        dc.SubmitChanges();
-
-
-
-
-
-                    }
-
-
-
-
-
-
-                    var rptdetail = from p in dc.RptdetaiNKCs
+                    var rptdetail = from p in dc.RPtdetailKQKD200s
                                     where p.username == username
-                                    orderby p.Ngaychungtu
+
 
                                     select p;
 

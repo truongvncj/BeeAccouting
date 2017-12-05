@@ -159,7 +159,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>1.11279in</Top>
+        <Top>0.86279in</Top>
         <Left>1.38752in</Left>
         <Height>0.3132in</Height>
         <Width>5.69407in</Width>
@@ -246,19 +246,19 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>10.89614cm</Width>
+              <Width>8.62072cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.19893cm</Width>
+              <Width>1.09052cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.75305cm</Width>
+              <Width>1.54138cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.54679cm</Width>
+              <Width>3.76903cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.51389cm</Width>
+              <Width>3.77875cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -477,7 +477,20 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value xml:space="preserve">  </Value>
+                              <Value xml:space="preserve"> </Value>
+                              <Style>
+                                <FontSize>12pt</FontSize>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value xml:space="preserve"> </Value>
                               <Style>
                                 <FontSize>12pt</FontSize>
                               </Style>
@@ -533,6 +546,24 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value />
+                              <Style>
+                                <FontStyle>Normal</FontStyle>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>12pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                                <TextDecoration>None</TextDecoration>
+                                <Color>#000000</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
@@ -855,7 +886,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontStyle>Normal</FontStyle>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
-                                <FontWeight>Normal</FontWeight>
+                                <FontWeight>Bold</FontWeight>
                                 <TextDecoration>None</TextDecoration>
                                 <Color>#000000</Color>
                               </Style>
@@ -1022,8 +1053,10 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                             <TextRun>
                               <Value>=Fields!nay01dt.Value</Value>
                               <Style>
+                                <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
-                                <FontWeight>Normal</FontWeight>
+                                <FontWeight>Bold</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -1037,26 +1070,6 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Border>
                           <Style>Solid</Style>
                         </Border>
-                        <TopBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </TopBorder>
-                        <BottomBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </BottomBorder>
-                        <LeftBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </LeftBorder>
-                        <RightBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </RightBorder>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -1076,8 +1089,10 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                             <TextRun>
                               <Value>=Fields!truoc01dt.Value</Value>
                               <Style>
+                                <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
-                                <FontWeight>Normal</FontWeight>
+                                <FontWeight>Bold</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -1091,26 +1106,6 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Border>
                           <Style>Solid</Style>
                         </Border>
-                        <TopBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </TopBorder>
-                        <BottomBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </BottomBorder>
-                        <LeftBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </LeftBorder>
-                        <RightBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </RightBorder>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -1305,8 +1300,10 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                             <TextRun>
                               <Value>=Fields!nay02giamdt.Value</Value>
                               <Style>
+                                <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -1320,26 +1317,6 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Border>
                           <Style>Solid</Style>
                         </Border>
-                        <TopBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </TopBorder>
-                        <BottomBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </BottomBorder>
-                        <LeftBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </LeftBorder>
-                        <RightBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </RightBorder>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -1359,8 +1336,10 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                             <TextRun>
                               <Value>=Fields!truoc02giamdt.Value</Value>
                               <Style>
+                                <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -1374,26 +1353,6 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Border>
                           <Style>Solid</Style>
                         </Border>
-                        <TopBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </TopBorder>
-                        <BottomBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </BottomBorder>
-                        <LeftBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </LeftBorder>
-                        <RightBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </RightBorder>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -1579,17 +1538,19 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox34">
+                    <Textbox Name="Textbox12">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!nay01dt.Value - Fields!nay02giamdt.Value</Value>
                               <Style>
+                                <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -1598,31 +1559,11 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox34</rd:DefaultName>
+                      <rd:DefaultName>Textbox12</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>Solid</Style>
                         </Border>
-                        <TopBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </TopBorder>
-                        <BottomBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </BottomBorder>
-                        <LeftBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </LeftBorder>
-                        <RightBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </RightBorder>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -1640,10 +1581,12 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!truoc01dt.Value-Fields!truoc02giamdt.Value</Value>
                               <Style>
+                                <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -1657,26 +1600,6 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Border>
                           <Style>Solid</Style>
                         </Border>
-                        <TopBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </TopBorder>
-                        <BottomBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </BottomBorder>
-                        <LeftBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </LeftBorder>
-                        <RightBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </RightBorder>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -1871,8 +1794,10 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                             <TextRun>
                               <Value>=Fields!nay11giavon.Value</Value>
                               <Style>
+                                <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -1905,8 +1830,10 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                             <TextRun>
                               <Value>=Fields!truoc11giavon.Value</Value>
                               <Style>
+                                <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>n0</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -1920,26 +1847,6 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Border>
                           <Style>Solid</Style>
                         </Border>
-                        <TopBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </TopBorder>
-                        <BottomBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </BottomBorder>
-                        <LeftBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </LeftBorder>
-                        <RightBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </RightBorder>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -2132,10 +2039,12 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!nay01dt.Value - Fields!nay02giamdt.Value -Fields!nay11giavon.Value</Value>
                               <Style>
+                                <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -2149,26 +2058,6 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Border>
                           <Style>Solid</Style>
                         </Border>
-                        <TopBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </TopBorder>
-                        <BottomBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </BottomBorder>
-                        <LeftBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </LeftBorder>
-                        <RightBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </RightBorder>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -2186,10 +2075,12 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!truoc01dt.Value-Fields!truoc02giamdt.Value-Fields!truoc11giavon.Value</Value>
                               <Style>
+                                <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -2203,26 +2094,6 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Border>
                           <Style>Solid</Style>
                         </Border>
-                        <TopBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </TopBorder>
-                        <BottomBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </BottomBorder>
-                        <LeftBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </LeftBorder>
-                        <RightBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </RightBorder>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -2417,8 +2288,10 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                             <TextRun>
                               <Value>=Fields!naydttaichinh.Value</Value>
                               <Style>
+                                <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -2432,26 +2305,6 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Border>
                           <Style>Solid</Style>
                         </Border>
-                        <TopBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </TopBorder>
-                        <BottomBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </BottomBorder>
-                        <LeftBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </LeftBorder>
-                        <RightBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </RightBorder>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -2471,8 +2324,10 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                             <TextRun>
                               <Value>=Fields!truocdttaichinh.Value</Value>
                               <Style>
+                                <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>n0</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -2486,26 +2341,6 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Border>
                           <Style>Solid</Style>
                         </Border>
-                        <TopBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </TopBorder>
-                        <BottomBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </BottomBorder>
-                        <LeftBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </LeftBorder>
-                        <RightBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </RightBorder>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -2700,8 +2535,10 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                             <TextRun>
                               <Value>=Fields!naycftaichinh.Value</Value>
                               <Style>
+                                <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -2715,26 +2552,6 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Border>
                           <Style>Solid</Style>
                         </Border>
-                        <TopBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </TopBorder>
-                        <BottomBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </BottomBorder>
-                        <LeftBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </LeftBorder>
-                        <RightBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </RightBorder>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -2754,8 +2571,10 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                             <TextRun>
                               <Value>=Fields!truoccftaichinh.Value</Value>
                               <Style>
+                                <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -2769,26 +2588,6 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Border>
                           <Style>Solid</Style>
                         </Border>
-                        <TopBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </TopBorder>
-                        <BottomBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </BottomBorder>
-                        <LeftBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </LeftBorder>
-                        <RightBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </RightBorder>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -2990,7 +2789,10 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!naycflaivay.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <Format>#,0;(#,0)</Format>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -3003,26 +2805,6 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Border>
                           <Style>Solid</Style>
                         </Border>
-                        <TopBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </TopBorder>
-                        <BottomBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </BottomBorder>
-                        <LeftBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </LeftBorder>
-                        <RightBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </RightBorder>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -3041,7 +2823,10 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!truoccflaivay.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <Format>#,0;(#,0)</Format>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -3054,26 +2839,6 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Border>
                           <Style>Solid</Style>
                         </Border>
-                        <TopBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </TopBorder>
-                        <BottomBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </BottomBorder>
-                        <LeftBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </LeftBorder>
-                        <RightBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </RightBorder>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -3268,8 +3033,10 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                             <TextRun>
                               <Value>=Fields!naycfbanhang.Value</Value>
                               <Style>
+                                <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -3283,26 +3050,6 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Border>
                           <Style>Solid</Style>
                         </Border>
-                        <TopBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </TopBorder>
-                        <BottomBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </BottomBorder>
-                        <LeftBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </LeftBorder>
-                        <RightBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </RightBorder>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -3322,8 +3069,10 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                             <TextRun>
                               <Value>=Fields!truoccfbanhang.Value</Value>
                               <Style>
+                                <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -3337,26 +3086,6 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Border>
                           <Style>Solid</Style>
                         </Border>
-                        <TopBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </TopBorder>
-                        <BottomBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </BottomBorder>
-                        <LeftBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </LeftBorder>
-                        <RightBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </RightBorder>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -3542,17 +3271,19 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="truoccfquanlydn">
+                    <Textbox Name="naycfquanlydn">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!truoccfquanlydn.Value</Value>
+                              <Value>=Fields!naycfquanlydn.Value</Value>
                               <Style>
+                                <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -3561,31 +3292,11 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>truoccfquanlydn</rd:DefaultName>
+                      <rd:DefaultName>naycfquanlydn</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>Solid</Style>
                         </Border>
-                        <TopBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </TopBorder>
-                        <BottomBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </BottomBorder>
-                        <LeftBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </LeftBorder>
-                        <RightBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </RightBorder>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -3605,8 +3316,10 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                             <TextRun>
                               <Value>=Fields!truoccfquanlydn.Value</Value>
                               <Style>
+                                <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -3620,26 +3333,6 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Border>
                           <Style>Solid</Style>
                         </Border>
-                        <TopBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </TopBorder>
-                        <BottomBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </BottomBorder>
-                        <LeftBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </LeftBorder>
-                        <RightBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </RightBorder>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -3667,7 +3360,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontStyle>Normal</FontStyle>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
-                                <FontWeight>Normal</FontWeight>
+                                <FontWeight>Bold</FontWeight>
                                 <TextDecoration>None</TextDecoration>
                                 <Color>#000000</Color>
                               </Style>
@@ -3685,7 +3378,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontStyle>Normal</FontStyle>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
-                                <FontWeight>Normal</FontWeight>
+                                <FontWeight>Bold</FontWeight>
                                 <TextDecoration>None</TextDecoration>
                                 <Color>#000000</Color>
                               </Style>
@@ -3850,10 +3543,12 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!nay01dt.Value - Fields!nay02giamdt.Value -Fields!nay11giavon.Value +Fields!naydttaichinh.Value-Fields!naycftaichinh.Value -Fields!naycfbanhang.Value -Fields!naycfquanlydn.Value</Value>
                               <Style>
+                                <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
-                                <FontWeight>Normal</FontWeight>
+                                <FontWeight>Bold</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -3904,10 +3599,12 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!truoc01dt.Value-Fields!truoc02giamdt.Value-Fields!truoc11giavon.Value+Fields!truocdttaichinh.Value-Fields!truoccftaichinh.Value-Fields!truoccfbanhang.Value-Fields!truoccfquanlydn.Value</Value>
                               <Style>
+                                <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
-                                <FontWeight>Normal</FontWeight>
+                                <FontWeight>Bold</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -3921,26 +3618,6 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Border>
                           <Style>Solid</Style>
                         </Border>
-                        <TopBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </TopBorder>
-                        <BottomBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </BottomBorder>
-                        <LeftBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </LeftBorder>
-                        <RightBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </RightBorder>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -4135,8 +3812,10 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                             <TextRun>
                               <Value>=Fields!naythunhapkhac.Value</Value>
                               <Style>
+                                <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -4150,26 +3829,6 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Border>
                           <Style>Solid</Style>
                         </Border>
-                        <TopBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </TopBorder>
-                        <BottomBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </BottomBorder>
-                        <LeftBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </LeftBorder>
-                        <RightBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </RightBorder>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -4189,8 +3848,10 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                             <TextRun>
                               <Value>=Fields!truocthunhapkhac.Value</Value>
                               <Style>
+                                <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -4204,26 +3865,6 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Border>
                           <Style>Solid</Style>
                         </Border>
-                        <TopBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </TopBorder>
-                        <BottomBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </BottomBorder>
-                        <LeftBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </LeftBorder>
-                        <RightBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </RightBorder>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -4418,8 +4059,10 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                             <TextRun>
                               <Value>=Fields!naycfkhac.Value</Value>
                               <Style>
+                                <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -4433,26 +4076,6 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Border>
                           <Style>Solid</Style>
                         </Border>
-                        <TopBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </TopBorder>
-                        <BottomBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </BottomBorder>
-                        <LeftBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </LeftBorder>
-                        <RightBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </RightBorder>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -4472,8 +4095,10 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                             <TextRun>
                               <Value>=Fields!truoccfkhac.Value</Value>
                               <Style>
+                                <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -4487,26 +4112,6 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Border>
                           <Style>Solid</Style>
                         </Border>
-                        <TopBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </TopBorder>
-                        <BottomBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </BottomBorder>
-                        <LeftBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </LeftBorder>
-                        <RightBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </RightBorder>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -4699,10 +4304,12 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!naythunhapkhac.Value-Fields!naycfkhac.Value</Value>
                               <Style>
+                                <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -4716,26 +4323,6 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Border>
                           <Style>Solid</Style>
                         </Border>
-                        <TopBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </TopBorder>
-                        <BottomBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </BottomBorder>
-                        <LeftBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </LeftBorder>
-                        <RightBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </RightBorder>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -4753,10 +4340,12 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!truocthunhapkhac.Value-Fields!truoccfkhac.Value</Value>
                               <Style>
+                                <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -4770,26 +4359,6 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Border>
                           <Style>Solid</Style>
                         </Border>
-                        <TopBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </TopBorder>
-                        <BottomBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </BottomBorder>
-                        <LeftBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </LeftBorder>
-                        <RightBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </RightBorder>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -4817,7 +4386,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontStyle>Normal</FontStyle>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
-                                <FontWeight>Normal</FontWeight>
+                                <FontWeight>Bold</FontWeight>
                                 <TextDecoration>None</TextDecoration>
                                 <Color>#000000</Color>
                               </Style>
@@ -4875,7 +4444,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontStyle>Normal</FontStyle>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
-                                <FontWeight>Normal</FontWeight>
+                                <FontWeight>Bold</FontWeight>
                                 <TextDecoration>None</TextDecoration>
                                 <Color>#000000</Color>
                               </Style>
@@ -4931,7 +4500,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                               <Value />
                               <Style>
                                 <FontSize>12pt</FontSize>
-                                <FontWeight>Normal</FontWeight>
+                                <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -4982,10 +4551,12 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=(Fields!naythunhapkhac.Value-Fields!naycfkhac.Value) +(Fields!nay01dt.Value - Fields!nay02giamdt.Value -Fields!nay11giavon.Value +Fields!naydttaichinh.Value-Fields!naycftaichinh.Value -Fields!naycfbanhang.Value -Fields!naycfquanlydn.Value)</Value>
                               <Style>
+                                <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
-                                <FontWeight>Normal</FontWeight>
+                                <FontWeight>Bold</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -4999,26 +4570,6 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Border>
                           <Style>Solid</Style>
                         </Border>
-                        <TopBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </TopBorder>
-                        <BottomBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </BottomBorder>
-                        <LeftBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </LeftBorder>
-                        <RightBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </RightBorder>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -5036,10 +4587,12 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!truocthunhapkhac.Value-Fields!truoccfkhac.Value + Fields!truocthunhapkhac.Value-Fields!truoccfkhac.Value</Value>
                               <Style>
+                                <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
-                                <FontWeight>Normal</FontWeight>
+                                <FontWeight>Bold</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -5053,26 +4606,6 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Border>
                           <Style>Solid</Style>
                         </Border>
-                        <TopBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </TopBorder>
-                        <BottomBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </BottomBorder>
-                        <LeftBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </LeftBorder>
-                        <RightBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </RightBorder>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -5267,8 +4800,10 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                             <TextRun>
                               <Value>=Fields!naycftndnhienhanh.Value</Value>
                               <Style>
+                                <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -5282,26 +4817,6 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Border>
                           <Style>Solid</Style>
                         </Border>
-                        <TopBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </TopBorder>
-                        <BottomBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </BottomBorder>
-                        <LeftBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </LeftBorder>
-                        <RightBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </RightBorder>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -5321,8 +4836,10 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                             <TextRun>
                               <Value>=Fields!truoccftndnhienhanh.Value</Value>
                               <Style>
+                                <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -5336,26 +4853,6 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Border>
                           <Style>Solid</Style>
                         </Border>
-                        <TopBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </TopBorder>
-                        <BottomBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </BottomBorder>
-                        <LeftBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </LeftBorder>
-                        <RightBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </RightBorder>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -5550,8 +5047,10 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                             <TextRun>
                               <Value>=Fields!nayfdnhoanlai.Value</Value>
                               <Style>
+                                <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -5565,26 +5064,6 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Border>
                           <Style>Solid</Style>
                         </Border>
-                        <TopBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </TopBorder>
-                        <BottomBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </BottomBorder>
-                        <LeftBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </LeftBorder>
-                        <RightBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </RightBorder>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -5604,8 +5083,10 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                             <TextRun>
                               <Value>=Fields!truoccfdnhoanlai.Value</Value>
                               <Style>
+                                <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -5619,26 +5100,6 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Border>
                           <Style>Solid</Style>
                         </Border>
-                        <TopBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </TopBorder>
-                        <BottomBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </BottomBorder>
-                        <LeftBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </LeftBorder>
-                        <RightBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </RightBorder>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -5666,7 +5127,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontStyle>Normal</FontStyle>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
-                                <FontWeight>Normal</FontWeight>
+                                <FontWeight>Bold</FontWeight>
                                 <TextDecoration>None</TextDecoration>
                                 <Color>#000000</Color>
                               </Style>
@@ -5724,7 +5185,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontStyle>Normal</FontStyle>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
-                                <FontWeight>Normal</FontWeight>
+                                <FontWeight>Bold</FontWeight>
                                 <TextDecoration>None</TextDecoration>
                                 <Color>#000000</Color>
                               </Style>
@@ -5780,7 +5241,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                               <Value />
                               <Style>
                                 <FontSize>12pt</FontSize>
-                                <FontWeight>Normal</FontWeight>
+                                <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -5831,10 +5292,12 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=(Fields!naythunhapkhac.Value-Fields!naycfkhac.Value) +(Fields!nay01dt.Value - Fields!nay02giamdt.Value -Fields!nay11giavon.Value +Fields!naydttaichinh.Value-Fields!naycftaichinh.Value -Fields!naycfbanhang.Value -Fields!naycfquanlydn.Value) -Fields!naycftndnhienhanh.Value -Fields!nayfdnhoanlai.Value</Value>
                               <Style>
+                                <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
-                                <FontWeight>Normal</FontWeight>
+                                <FontWeight>Bold</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -5848,26 +5311,6 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Border>
                           <Style>Solid</Style>
                         </Border>
-                        <TopBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </TopBorder>
-                        <BottomBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </BottomBorder>
-                        <LeftBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </LeftBorder>
-                        <RightBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </RightBorder>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -5885,10 +5328,12 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!truocthunhapkhac.Value-Fields!truoccfkhac.Value + Fields!truocthunhapkhac.Value-Fields!truoccfkhac.Value-Fields!truoccftndnhienhanh.Value-Fields!truoccfdnhoanlai.Value</Value>
                               <Style>
+                                <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
-                                <FontWeight>Normal</FontWeight>
+                                <FontWeight>Bold</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -5902,26 +5347,6 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Border>
                           <Style>Solid</Style>
                         </Border>
-                        <TopBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </TopBorder>
-                        <BottomBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </BottomBorder>
-                        <LeftBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </LeftBorder>
-                        <RightBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </RightBorder>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -6116,8 +5541,10 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                             <TextRun>
                               <Value>=Fields!naylaicbcophieu.Value</Value>
                               <Style>
+                                <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -6131,26 +5558,6 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Border>
                           <Style>Solid</Style>
                         </Border>
-                        <TopBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </TopBorder>
-                        <BottomBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </BottomBorder>
-                        <LeftBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </LeftBorder>
-                        <RightBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </RightBorder>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -6170,8 +5577,10 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                             <TextRun>
                               <Value>=Fields!truoclaicbcophieu.Value</Value>
                               <Style>
+                                <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -6185,26 +5594,6 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Border>
                           <Style>Solid</Style>
                         </Border>
-                        <TopBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </TopBorder>
-                        <BottomBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </BottomBorder>
-                        <LeftBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </LeftBorder>
-                        <RightBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </RightBorder>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -6399,8 +5788,10 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                             <TextRun>
                               <Value>=Fields!naylaigiaomtrencphieu.Value</Value>
                               <Style>
+                                <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -6414,26 +5805,6 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Border>
                           <Style>Solid</Style>
                         </Border>
-                        <TopBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </TopBorder>
-                        <BottomBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </BottomBorder>
-                        <LeftBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </LeftBorder>
-                        <RightBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </RightBorder>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -6453,8 +5824,10 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                             <TextRun>
                               <Value>=Fields!truoclaigiaomtrencphieu.Value</Value>
                               <Style>
+                                <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -6468,26 +5841,6 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Border>
                           <Style>Solid</Style>
                         </Border>
-                        <TopBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </TopBorder>
-                        <BottomBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </BottomBorder>
-                        <LeftBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </LeftBorder>
-                        <RightBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </RightBorder>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -6536,10 +5889,10 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSet2</DataSetName>
-        <Top>5.07544cm</Top>
+        <Top>4.44044cm</Top>
         <Left>0cm</Left>
         <Height>14.435cm</Height>
-        <Width>18.9088cm</Width>
+        <Width>18.80039cm</Width>
         <ZIndex>6</ZIndex>
         <Style>
           <Border>
@@ -6569,7 +5922,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>1.48293in</Top>
+        <Top>1.23293in</Top>
         <Left>3.00537in</Left>
         <Height>0.22222in</Height>
         <Width>0.40336in</Width>
@@ -6606,7 +5959,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>1.48155in</Top>
+        <Top>1.23155in</Top>
         <Left>3.40873in</Left>
         <Height>0.2111in</Height>
         <Width>1.24776in</Width>
@@ -6643,7 +5996,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>1.73109in</Top>
+        <Top>1.48109in</Top>
         <Left>6.1411in</Left>
         <Height>0.21156in</Height>
         <Width>1.30331in</Width>
@@ -6679,7 +6032,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>8.40003in</Top>
+        <Top>8.02503in</Top>
         <Left>2.76767in</Left>
         <Height>0.25in</Height>
         <Width>1.15945in</Width>
@@ -6735,7 +6088,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>8.65003in</Top>
+        <Top>8.27503in</Top>
         <Left>2.86767in</Left>
         <Height>0.20833in</Height>
         <Width>0.84695in</Width>
@@ -6772,7 +6125,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>8.4417in</Top>
+        <Top>8.0667in</Top>
         <Left>5.78496in</Left>
         <Height>0.20833in</Height>
         <Width>1.15945in</Width>
@@ -6828,7 +6181,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>8.65003in</Top>
+        <Top>8.27503in</Top>
         <Left>5.60827in</Left>
         <Height>0.25in</Height>
         <Width>1.49609in</Width>
@@ -6865,7 +6218,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>8.16392in</Top>
+        <Top>7.78892in</Top>
         <Left>5.37848in</Left>
         <Height>0.22222in</Height>
         <Width>2.02325in</Width>
@@ -6903,7 +6256,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>9.88058in</Top>
+        <Top>9.50558in</Top>
         <Left>5.18544in</Left>
         <Height>0.20347in</Height>
         <Width>2.21629in</Width>
@@ -6941,7 +6294,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>9.88058in</Top>
+        <Top>9.50558in</Top>
         <Left>2.38037in</Left>
         <Height>0.19444in</Height>
         <Width>1.9407in</Width>
@@ -6978,7 +6331,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>8.40003in</Top>
+        <Top>8.02503in</Top>
         <Left>0.0123in</Left>
         <Height>0.25in</Height>
         <Width>1.15945in</Width>
@@ -7034,7 +6387,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>8.65003in</Top>
+        <Top>8.27503in</Top>
         <Left>0.0246in</Left>
         <Height>0.25in</Height>
         <Width>0.84695in</Width>
@@ -7072,7 +6425,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>9.88058in</Top>
+        <Top>9.50558in</Top>
         <Height>0.19444in</Height>
         <Width>1.5657in</Width>
         <ZIndex>19</ZIndex>
@@ -7095,7 +6448,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
       </Border>
     </Style>
   </Body>
-  <Width>7.44441in</Width>
+  <Width>7.46524in</Width>
   <Page>
     <PageFooter>
       <Height>0.23622in</Height>
@@ -7318,6 +6671,10 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
         <Field Name="nayfdnhoanlai">
           <DataField>nayfdnhoanlai</DataField>
           <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="naycfquanlydn">
+          <DataField>naycfquanlydn</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>

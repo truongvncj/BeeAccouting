@@ -1495,5 +1495,10 @@ namespace BEEACCOUNT.View
         {
 
         }
+
+        private void button10_Click_2(object sender, EventArgs e)
+        {
+            Model.Soketoan.xemvaupdatekqkd200();
+        }
     }
 }

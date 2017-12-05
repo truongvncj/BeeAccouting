@@ -10490,6 +10490,8 @@ namespace BEEACCOUNT.Reports {
             
             private global::System.Data.DataColumn columnnayfdnhoanlai;
             
+            private global::System.Data.DataColumn columnnaycfquanlydn;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public RPtdetailKQKD200DataTable() {
@@ -10741,6 +10743,14 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn naycfquanlydnColumn {
+                get {
+                    return this.columnnaycfquanlydn;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -10803,7 +10813,8 @@ namespace BEEACCOUNT.Reports {
                         double truoccfdnhoanlai, 
                         double truoclaicbcophieu, 
                         double truoclaigiaomtrencphieu, 
-                        double nayfdnhoanlai) {
+                        double nayfdnhoanlai, 
+                        string naycfquanlydn) {
                 RPtdetailKQKD200Row rowRPtdetailKQKD200Row = ((RPtdetailKQKD200Row)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         nay01dt,
@@ -10832,7 +10843,8 @@ namespace BEEACCOUNT.Reports {
                         truoccfdnhoanlai,
                         truoclaicbcophieu,
                         truoclaigiaomtrencphieu,
-                        nayfdnhoanlai};
+                        nayfdnhoanlai,
+                        naycfquanlydn};
                 rowRPtdetailKQKD200Row.ItemArray = columnValuesArray;
                 this.Rows.Add(rowRPtdetailKQKD200Row);
                 return rowRPtdetailKQKD200Row;
@@ -10882,6 +10894,7 @@ namespace BEEACCOUNT.Reports {
                 this.columntruoclaicbcophieu = base.Columns["truoclaicbcophieu"];
                 this.columntruoclaigiaomtrencphieu = base.Columns["truoclaigiaomtrencphieu"];
                 this.columnnayfdnhoanlai = base.Columns["nayfdnhoanlai"];
+                this.columnnaycfquanlydn = base.Columns["naycfquanlydn"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10941,6 +10954,8 @@ namespace BEEACCOUNT.Reports {
                 base.Columns.Add(this.columntruoclaigiaomtrencphieu);
                 this.columnnayfdnhoanlai = new global::System.Data.DataColumn("nayfdnhoanlai", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnnayfdnhoanlai);
+                this.columnnaycfquanlydn = new global::System.Data.DataColumn("naycfquanlydn", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnaycfquanlydn);
                 this.columnnay01dt.Caption = "tencongty";
                 this.columnnaydttaichinh.Caption = "masothue";
                 this.columnnay02giamdt.Caption = "diachicongty";
@@ -19096,6 +19111,22 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string naycfquanlydn {
+                get {
+                    try {
+                        return ((string)(this[this.tableRPtdetailKQKD200.naycfquanlydnColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'naycfquanlydn\' in table \'RPtdetailKQKD200\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableRPtdetailKQKD200.naycfquanlydnColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool Isnay01dtNull() {
                 return this.IsNull(this.tableRPtdetailKQKD200.nay01dtColumn);
             }
@@ -19416,6 +19447,18 @@ namespace BEEACCOUNT.Reports {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetnayfdnhoanlaiNull() {
                 this[this.tableRPtdetailKQKD200.nayfdnhoanlaiColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsnaycfquanlydnNull() {
+                return this.IsNull(this.tableRPtdetailKQKD200.naycfquanlydnColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetnaycfquanlydnNull() {
+                this[this.tableRPtdetailKQKD200.naycfquanlydnColumn] = global::System.Convert.DBNull;
             }
         }
         

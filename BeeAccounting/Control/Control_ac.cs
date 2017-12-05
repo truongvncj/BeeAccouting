@@ -12,6 +12,7 @@ using System.Threading;
 using System.Net;
 using System.Data.SqlClient;
 using System.Data;
+using System.Drawing;
 
 //BEEACCOUNT.LinqtoSQLDataContext
 
@@ -20,6 +21,14 @@ namespace BEEACCOUNT.Control
     class Control_ac
     {
 
+
+        public static void messagetomanin(Main main, string messagetext, Color maunen )
+        {
+            main.messagetext(messagetext, maunen);
+
+
+
+        }
 
         //  public bool checkVATnameanddtodata()
         //  {
@@ -32,18 +41,18 @@ namespace BEEACCOUNT.Control
         //      //        updateVATstatinmaster
 
 
-        //      #region  updateVATstatinmaster ra TREN SQL da  viet ok
-        //      SqlConnection conn2 = null;
-        //      SqlDataReader rdr1 = null;
+        //#region  updateVATstatinmaster ra TREN SQL da  viet ok
+        //SqlConnection conn2 = null;
+        //SqlDataReader rdr1 = null;
 
-        //      string destConnString = Utils.getConnectionstr();
+        //string destConnString = Utils.getConnectionstr();
         //      try
         //      {
 
         //          conn2 = new SqlConnection(destConnString);
-        //          conn2.Open();
+        //conn2.Open();
         //          SqlCommand cmd1 = new SqlCommand("updateVATstatinmaster", conn2);
-        //          cmd1.CommandType = CommandType.StoredProcedure;
+        //cmd1.CommandType = CommandType.StoredProcedure;
         //          //      cmd1.Parameters.Add("@name", SqlDbType.VarChar).Value = userupdate;
 
         //          rdr1 = cmd1.ExecuteReader();

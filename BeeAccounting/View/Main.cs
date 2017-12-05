@@ -21,11 +21,18 @@ namespace BEEACCOUNT.View
     public partial class Main : Form
     {
 
-       // public 
+        // public 
         //   private string rptname;
-    //    private IQueryable rs1;
-  //      private IQueryable rs2;
+        //    private IQueryable rs1;
+        //      private IQueryable rs2;
         //
+        public void messagetext(string message, Color colornen)
+        {
+            messageinfor.Text = message;
+            messageinfor.BackColor = colornen;
+
+        }
+     
         public void clearpannel()  
         {
 
