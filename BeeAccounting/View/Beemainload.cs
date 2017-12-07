@@ -1020,6 +1020,25 @@ namespace BEEACCOUNT.View
             string connection_string = Utils.getConnectionstr();
 
             LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+            //nhapdaukybckdkd
+
+            #region//xem nhập số dư dầu bckqkd
+            if (name == "nhapdaukybckdkd")
+            {
+                Model.Soketoan.xemvaupdatekqkd200();
+
+               
+            }
+            #endregion
+
+
+            #region//xem báo cóa ckqkd
+            if (name == "bckqkdview")
+            {
+        
+                Model.Soketoan.baocaokqkd();
+            }
+            #endregion
 
 
             #region//dskhachhangvantai
