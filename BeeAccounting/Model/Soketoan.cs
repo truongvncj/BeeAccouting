@@ -215,7 +215,8 @@ namespace BEEACCOUNT.Model
 
         public static void caculationServerDKKD200(string yearchon)
         {
-            #region xoavatEDLPandFBL5nDochaveinFbl5nth
+
+            #region caculation kqkd
             SqlConnection conn2 = null;
             SqlDataReader rdr1 = null;
 
@@ -238,12 +239,6 @@ namespace BEEACCOUNT.Model
                 rdr1 = cmd1.ExecuteReader();
 
 
-                //
-//                @username nvarchar (225),
-//             @fromdate Datetime,
-//           @todate Datetime
-
-                //       rdr1 = cmd1.ExecuteReader();
 
             }
             finally
@@ -260,6 +255,9 @@ namespace BEEACCOUNT.Model
             //     MessageBox.Show("ok", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             #endregion
+
+
+
         }
         public static void socaitaikhoan()
         {
@@ -1309,6 +1307,185 @@ namespace BEEACCOUNT.Model
             #endregion
 
 
+        }
+
+        public static void baocaocandoiketoantt200lientuc()
+        {
+
+            //  Beeyearsellect
+            string connection_string = Utils.getConnectionstr();
+            string urs = Utils.getusername();
+            //  var db = new LinqtoSQLDataContext(connection_string);
+            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+
+            FormCollection fc = System.Windows.Forms.Application.OpenForms;
+            bool chon;
+            string yearchon;
+            bool kq = false;
+            foreach (Form frm in fc)
+            {
+
+                if (frm.Text == "Chọn năm")
+                {
+                    kq = true;
+                    frm.Focus();
+
+                }
+            }
+
+            if (!kq)
+            {
+
+
+
+                View.Beeyearsellect Beeyearsellect = new View.Beeyearsellect();
+                Beeyearsellect.ShowDialog();
+
+                yearchon = Beeyearsellect.year;
+                chon = Beeyearsellect.chon;
+
+
+                if (chon)
+                {
+
+                    #region showreport
+                    // xoa data cũ
+                    string username = Utils.getusername();
+
+                    var detailrpt = from P in dc.RPtdetailCDKT200lientucs
+                                    where P.username == username
+                                    select P;
+
+                    dc.RPtdetailCDKT200lientucs.DeleteAllOnSubmit(detailrpt);
+                    dc.SubmitChanges();
+
+
+                    var headrptnkc = from p in dc.RPtheadCDKT200mau01s
+                                     where p.username == username
+                                     select p;
+
+                    dc.RPtheadCDKT200mau01s.DeleteAllOnSubmit(headrptnkc);
+                    dc.SubmitChanges();
+
+
+                    // update data mới   RPtsoQuy
+
+
+                    RPtheadCDKT200mau01 headrpt = new RPtheadCDKT200mau01();
+
+
+                    headrpt.nam = yearchon;
+                    headrpt.tencongty = Model.Congty.getnamecongty();
+                    headrpt.username = username;
+                    headrpt.diachicongty = Model.Congty.getdiachicongty();
+                    headrpt.masothue = Model.Congty.getmasothuecongty();
+                    //      pt.tencongty = Model.Congty.getnamecongty();
+                    //    pt.diachicongty = Model.Congty.getdiachicongty();
+                    //  pt.masothue = Model.Congty.getmasothuecongty();
+                    headrpt.giamdoc = Model.Congty.gettengiamdoccongty();
+                    headrpt.ketoantruong = Model.Congty.gettenketoantruongcongty();
+                    headrpt.nguoighiso = Utils.getname();
+
+
+
+
+
+                    dc.RPtheadCDKT200mau01s.InsertOnSubmit(headrpt);
+                    dc.SubmitChanges();
+
+
+
+                    var headNKC = from p in dc.RPtheadCDKT200mau01s
+                                  where p.username == username
+                                  select p;
+
+
+                    Utils ut = new Utils();
+                    var dataset1 = ut.ToDataTable(dc, headNKC);
+
+                    //-----------------------
+
+                    //  ádfdsaf
+                    //     caculationServerCD200(yearchon);
+
+
+                    #region caculation cdkt200 lien tuc
+                    SqlConnection conn2 = null;
+                    SqlDataReader rdr1 = null;
+
+                    string destConnString = Utils.getConnectionstr();
+                    try
+                    {
+
+                        conn2 = new SqlConnection(destConnString);
+                        conn2.Open();
+                        SqlCommand cmd1 = new SqlCommand("calulationCDKT200loai1", conn2);
+                        cmd1.CommandType = CommandType.StoredProcedure;
+                        cmd1.CommandTimeout = 0;
+                        cmd1.Parameters.Add("@username", SqlDbType.VarChar).Value = Utils.getusername();
+                        cmd1.Parameters.Add("@yearchon", SqlDbType.Int).Value = int.Parse(yearchon);
+                        //   cmd1.Parameters.Add("@todate", SqlDbType.DateTime).Value = todate;
+
+
+
+
+                        rdr1 = cmd1.ExecuteReader();
+
+
+
+                    }
+                    finally
+                    {
+                        if (conn2 != null)
+                        {
+                            conn2.Close();
+                        }
+                        if (rdr1 != null)
+                        {
+                            rdr1.Close();
+                        }
+                    }
+                    //     MessageBox.Show("ok", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    #endregion
+
+
+                    ///===============
+
+                    var rptdetail = from p in dc.RPtdetailCDKT200lientucs
+                                    where p.username == username
+
+
+                                    select p;
+
+
+
+                    var dataset2 = ut.ToDataTable(dc, rptdetail);
+
+
+
+                    Reportsview rpt = new Reportsview(dataset1, dataset2, "BangCDKToant200lt.rdlc");
+
+
+
+                    rpt.ShowDialog();
+
+
+                    #endregion showreports
+
+
+                }
+
+                //   }
+            }
+
+
+
+
+
+
+            //  throw new NotImplementedException();
         }
 
         public static void xemvaupdatekqkd200()

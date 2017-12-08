@@ -77,7 +77,7 @@
         <Top>0.33208in</Top>
         <Left>0.1842in</Left>
         <Height>0.24722in</Height>
-        <Width>4.34765in</Width>
+        <Width>3.891in</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -199,9 +199,9 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
         <Top>0.29306in</Top>
-        <Left>4.66137in</Left>
+        <Left>4.14464in</Left>
         <Height>0.36111in</Height>
-        <Width>2.92974in</Width>
+        <Width>3.1078in</Width>
         <ZIndex>4</ZIndex>
         <Style>
           <Border>
@@ -236,9 +236,9 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
         <Top>0.04167in</Top>
-        <Left>5.75497in</Left>
+        <Left>5.91492in</Left>
         <Height>0.20139in</Height>
-        <Width>1.83614in</Width>
+        <Width>1.33752in</Width>
         <ZIndex>5</ZIndex>
         <Style>
           <Border>
@@ -254,7 +254,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>9.47678cm</Width>
+              <Width>8.25187cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>1.09052cm</Width>
@@ -263,7 +263,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
               <Width>1.54138cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.22928cm</Width>
+              <Width>3.7406cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>3.32896cm</Width>
@@ -1046,14 +1046,14 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox11">
+                    <Textbox Name="Textbox12">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>cn100ts</Value>
+                              <Value />
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -1066,7 +1066,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox11</rd:DefaultName>
+                      <rd:DefaultName>Textbox12</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>Solid</Style>
@@ -1291,14 +1291,14 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox135">
+                    <Textbox Name="Textbox14">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>cn110ts</Value>
+                              <Value />
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -1311,7 +1311,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox135</rd:DefaultName>
+                      <rd:DefaultName>Textbox14</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>Solid</Style>
@@ -1543,7 +1543,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>cn111tien</Value>
+                              <Value>=Fields!cn111tien.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -1788,7 +1788,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>cn112tientduong</Value>
+                              <Value>=Fields!cn112tientduong.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -2026,14 +2026,14 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox141">
+                    <Textbox Name="Textbox15">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>cn120dttcngan</Value>
+                              <Value />
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -2046,7 +2046,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox141</rd:DefaultName>
+                      <rd:DefaultName>Textbox15</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>Solid</Style>
@@ -2278,7 +2278,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>cn121chungkhoan</Value>
+                              <Value>=Fields!cn121chungkhoan.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -2523,7 +2523,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>cn122ckduphong</Value>
+                              <Value>=Fields!cn122ckduphong.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -2768,7 +2768,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>cn123dtdenngay</Value>
+                              <Value>=Fields!cn123dtdenngay.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -3006,14 +3006,14 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox151">
+                    <Textbox Name="Textbox18">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>cn130pthungan</Value>
+                              <Value />
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -3026,7 +3026,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox151</rd:DefaultName>
+                      <rd:DefaultName>Textbox18</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>Solid</Style>
@@ -3258,7 +3258,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>cn131ptkhach</Value>
+                              <Value>=Fields!cn131ptkhach.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -3523,7 +3523,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>cn132tratruoc</Value>
+                              <Value>=Fields!cn132tratruoc.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -3768,7 +3768,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>cn123pthunbnganh</Value>
+                              <Value>=Fields!cn123pthunbnganh.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -4013,7 +4013,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>cn134pthutiendokh</Value>
+                              <Value>=Fields!cn134pthutiendokh.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -4258,7 +4258,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>cn135pthuchovay</Value>
+                              <Value>=Fields!cn135pthuchovay.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -4503,7 +4503,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>cn136ptnganhan</Value>
+                              <Value>=Fields!cn136ptnganhan.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -4748,7 +4748,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>cn137dpptnganhan</Value>
+                              <Value>=Fields!cn137dpptnganhan.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -4993,7 +4993,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>cn139tsthieucho</Value>
+                              <Value>=Fields!cn139tsthieucho.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -5231,14 +5231,14 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox171">
+                    <Textbox Name="Textbox19">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>cn140hangton</Value>
+                              <Value />
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -5251,7 +5251,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox171</rd:DefaultName>
+                      <rd:DefaultName>Textbox19</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>Solid</Style>
@@ -5483,7 +5483,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>cn141hangton</Value>
+                              <Value>=Fields!cn141hangton.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -5728,7 +5728,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>cn149duphonght</Value>
+                              <Value>=Fields!cn149duphonght.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -5966,14 +5966,14 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox218">
+                    <Textbox Name="Textbox23">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>cn150tsnhkhac</Value>
+                              <Value />
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -5986,7 +5986,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox218</rd:DefaultName>
+                      <rd:DefaultName>Textbox23</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>Solid</Style>
@@ -6218,7 +6218,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>cn151cftratruoc</Value>
+                              <Value>=Fields!cn151cftratruoc.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -6463,7 +6463,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>cn152vatkhautru</Value>
+                              <Value>=Fields!cn152vatkhautru.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -6708,7 +6708,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>cn153thuepthukac</Value>
+                              <Value>=Fields!cn153thuepthukac.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -6953,7 +6953,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>cn154traiphieu</Value>
+                              <Value>=Fields!cn154traiphieu.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -7198,7 +7198,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>cn155tskhacnh</Value>
+                              <Value>=Fields!cn155tskhacnh.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -7436,14 +7436,14 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox188">
+                    <Textbox Name="Textbox24">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>cn200tsdhan</Value>
+                              <Value />
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -7456,7 +7456,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox188</rd:DefaultName>
+                      <rd:DefaultName>Textbox24</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>Solid</Style>
@@ -7681,14 +7681,14 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox268">
+                    <Textbox Name="Textbox28">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>cn210pthudai</Value>
+                              <Value />
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -7701,7 +7701,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox268</rd:DefaultName>
+                      <rd:DefaultName>Textbox28</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>Solid</Style>
@@ -7933,7 +7933,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>cn211ptkhach</Value>
+                              <Value>=Fields!cn211ptkhach.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -8178,7 +8178,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>cn212tratruocdh</Value>
+                              <Value>=Fields!cn212tratruocdh.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -8423,7 +8423,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>cn213vonodonvi</Value>
+                              <Value>=Fields!cn213vonodonvi.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -8668,7 +8668,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>cn214pthunbo</Value>
+                              <Value>=Fields!cn214pthunbo.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -8913,7 +8913,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>cn215pthuchovay</Value>
+                              <Value>=Fields!cn215pthuchovay.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -9158,7 +9158,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>cn216pthukhac</Value>
+                              <Value>=Fields!cn216pthukhac.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -9403,7 +9403,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>cn219duphongpt</Value>
+                              <Value>=Fields!cn219duphongpt.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -9641,14 +9641,14 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox228">
+                    <Textbox Name="Textbox29">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>cn220tscd</Value>
+                              <Value />
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -9661,7 +9661,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox228</rd:DefaultName>
+                      <rd:DefaultName>Textbox29</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>Solid</Style>
@@ -9886,14 +9886,14 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox223">
+                    <Textbox Name="Textbox34">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>cn221tscdhh</Value>
+                              <Value />
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -9906,7 +9906,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox223</rd:DefaultName>
+                      <rd:DefaultName>Textbox34</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>Solid</Style>
@@ -10138,7 +10138,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>cn222tscdngia</Value>
+                              <Value>=Fields!cn222tscdngia.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -10383,7 +10383,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>cn223tskhauh</Value>
+                              <Value>=Fields!cn223tskhauh.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -10621,14 +10621,14 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox314">
+                    <Textbox Name="Textbox44">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>cn224tscdthue</Value>
+                              <Value />
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -10641,7 +10641,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox314</rd:DefaultName>
+                      <rd:DefaultName>Textbox44</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>Solid</Style>
@@ -10873,7 +10873,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>cn225tscdthung</Value>
+                              <Value>=Fields!cn225tscdthung.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -11118,7 +11118,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>cn226tscdthuekha</Value>
+                              <Value>=Fields!cn226tscdthuekha.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -11356,14 +11356,14 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox295">
+                    <Textbox Name="Textbox48">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>cn227tscdvoh</Value>
+                              <Value />
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -11376,7 +11376,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox295</rd:DefaultName>
+                      <rd:DefaultName>Textbox48</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>Solid</Style>
@@ -11608,7 +11608,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>cn228tscdvohnggia</Value>
+                              <Value>=Fields!cn228tscdvohnggia.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -11853,7 +11853,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>cn229tscdvhkhauh</Value>
+                              <Value>=Fields!cn229tscdvhkhauh.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -12091,14 +12091,14 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox329">
+                    <Textbox Name="Textbox49">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>cn230bdsdautu</Value>
+                              <Value />
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -12111,7 +12111,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox329</rd:DefaultName>
+                      <rd:DefaultName>Textbox49</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>Solid</Style>
@@ -12343,7 +12343,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>cn231bdsngia</Value>
+                              <Value>=Fields!cn231bdsngia.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -12588,7 +12588,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>cn232bdshaomon</Value>
+                              <Value>=Fields!cn232bdshaomon.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -12826,14 +12826,14 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox324">
+                    <Textbox Name="Textbox50">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>cn240tsdodangdh</Value>
+                              <Value />
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -12846,7 +12846,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox324</rd:DefaultName>
+                      <rd:DefaultName>Textbox50</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>Solid</Style>
@@ -13078,7 +13078,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!cn241cfkddd.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -13102,7 +13102,6 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -13324,7 +13323,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!cn242cfxddd.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -13562,7 +13561,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox349">
+                    <Textbox Name="Textbox51">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -13582,7 +13581,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox349</rd:DefaultName>
+                      <rd:DefaultName>Textbox51</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>Solid</Style>
@@ -13814,7 +13813,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!cn251dtuctycon.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -14059,7 +14058,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!cn252dtuctylienket.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -14304,7 +14303,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!cn253dtukhac.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -14549,7 +14548,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!cn254duphongdt.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -14794,7 +14793,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!cn255dtudaohan.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -15032,7 +15031,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox384">
+                    <Textbox Name="Textbox52">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -15052,7 +15051,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox384</rd:DefaultName>
+                      <rd:DefaultName>Textbox52</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>Solid</Style>
@@ -15284,7 +15283,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!cn261cftratruocdn.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -15529,7 +15528,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!cn262thuetndnhl.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -15774,7 +15773,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!cn263vtuthietbidn.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -16019,7 +16018,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!cn268tskhac.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -16275,7 +16274,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox419">
+                    <Textbox Name="Textbox53">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -16295,7 +16294,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox419</rd:DefaultName>
+                      <rd:DefaultName>Textbox53</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>Solid</Style>
@@ -16520,7 +16519,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox414">
+                    <Textbox Name="Textbox54">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -16540,7 +16539,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox414</rd:DefaultName>
+                      <rd:DefaultName>Textbox54</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>Solid</Style>
@@ -16765,7 +16764,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox409">
+                    <Textbox Name="Textbox58">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -16785,7 +16784,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox409</rd:DefaultName>
+                      <rd:DefaultName>Textbox58</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>Solid</Style>
@@ -17017,7 +17016,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!cn311ptnbannh.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -17262,7 +17261,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!cn312ngmuatratr.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -17507,7 +17506,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!cn312thuephainop.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -17752,7 +17751,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!cn314ptracnhan.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -17997,7 +17996,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!cn315cphiptranh.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -18242,7 +18241,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!cn316cfptranbonh.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -18487,7 +18486,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!cn317ptrtheoluong.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -18732,7 +18731,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!cn318pthuchunhan.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -18977,7 +18976,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!cn319ptranhan.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -19222,7 +19221,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!cn320vaynotcnhan.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -19467,7 +19466,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!cn321duphptranh.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -19712,7 +19711,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!cn322quykhen.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -19957,7 +19956,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!cn323quygia.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -20202,7 +20201,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!cn324bantraiphieu.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -20440,7 +20439,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox474">
+                    <Textbox Name="Textbox59">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -20460,7 +20459,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox474</rd:DefaultName>
+                      <rd:DefaultName>Textbox59</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>Solid</Style>
@@ -20692,7 +20691,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!cn331nodnngban.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -20937,7 +20936,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!cn332ngmuatratdn.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -21182,7 +21181,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!cn333cphiphaitra.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -21427,7 +21426,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!cn334ptranbvevon.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -21672,7 +21671,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!cn335ptranbdaihan.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -21917,7 +21916,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!cn336dthuchthdn.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -22162,7 +22161,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!cn337ptradnkhac.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -22407,7 +22406,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!cn338vaynodn.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -22652,7 +22651,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!cn339traiphieu.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -22897,7 +22896,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!cn340cophieu.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -23142,7 +23141,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!cn341tnhoanlai.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -23387,7 +23386,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!cn342duphongdn.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -23650,7 +23649,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!cn343quykhoahoc.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -23888,7 +23887,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox564">
+                    <Textbox Name="Textbox63">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -23908,7 +23907,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox564</rd:DefaultName>
+                      <rd:DefaultName>Textbox63</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>Solid</Style>
@@ -24133,7 +24132,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox559">
+                    <Textbox Name="Textbox64">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -24153,7 +24152,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox559</rd:DefaultName>
+                      <rd:DefaultName>Textbox64</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>Solid</Style>
@@ -24385,7 +24384,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!cn411vongopcsh.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -24630,7 +24629,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!cn411acophieupt.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -24875,7 +24874,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!cn411bcpudai.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -25120,7 +25119,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!cn412thangduvon.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -25365,7 +25364,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!cn413traiphieu.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -25610,7 +25609,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!cn414voncshkhac.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -25855,7 +25854,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!cn415cphieuquy.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -26100,7 +26099,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!cn416chenhlechts.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -26345,7 +26344,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!cn417tygia.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -26590,7 +26589,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!cn418dautuptrien.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -26835,7 +26834,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!cn419quyxxdn.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -27080,7 +27079,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!cn420quykhacsh.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -27325,7 +27324,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!cn421lnsauthue.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -27570,7 +27569,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!cn421alnkytruoc.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -27815,7 +27814,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!cn421blnkynay.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -28060,7 +28059,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!cn422vonxdcb.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -28298,7 +28297,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox654">
+                    <Textbox Name="Textbox68">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -28318,7 +28317,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox654</rd:DefaultName>
+                      <rd:DefaultName>Textbox68</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>Solid</Style>
@@ -28550,7 +28549,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!cn431nkinhphi.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -28795,7 +28794,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!cn432kpthanhtscd.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -29033,7 +29032,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox664">
+                    <Textbox Name="Textbox69">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -29053,7 +29052,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox664</rd:DefaultName>
+                      <rd:DefaultName>Textbox69</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>Solid</Style>
@@ -29239,7 +29238,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
         <Top>4.44044cm</Top>
         <Left>0.46787cm</Left>
         <Height>74.90083cm</Height>
-        <Width>18.66692cm</Width>
+        <Width>17.95333cm</Width>
         <ZIndex>6</ZIndex>
         <Style>
           <Border>
@@ -29291,7 +29290,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
         <Top>1.22043in</Top>
         <Left>2.11665in</Left>
         <Height>0.22222in</Height>
-        <Width>1.86169in</Width>
+        <Width>1.94255in</Width>
         <ZIndex>7</ZIndex>
         <Style>
           <Border>
@@ -29325,8 +29324,8 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>1.23293in</Top>
-        <Left>4.00047in</Left>
+        <Top>1.24543in</Top>
+        <Left>4.12864in</Left>
         <Height>0.2111in</Height>
         <Width>1.0014in</Width>
         <ZIndex>8</ZIndex>
@@ -29362,8 +29361,8 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>1.48109in</Top>
-        <Left>6.3253in</Left>
+        <Top>1.4672in</Top>
+        <Left>5.91492in</Left>
         <Height>0.21156in</Height>
         <Width>1.30331in</Width>
         <ZIndex>9</ZIndex>
@@ -29491,8 +29490,8 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>31.68199in</Top>
-        <Left>5.93304in</Left>
+        <Top>31.65421in</Top>
+        <Left>5.63096in</Left>
         <Height>0.20833in</Height>
         <Width>1.15945in</Width>
         <ZIndex>12</ZIndex>
@@ -29547,8 +29546,8 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>31.89032in</Top>
-        <Left>5.75635in</Left>
+        <Top>31.87643in</Top>
+        <Left>5.48552in</Left>
         <Height>0.25in</Height>
         <Width>1.49609in</Width>
         <ZIndex>13</ZIndex>
@@ -29584,8 +29583,8 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>31.38754in</Top>
-        <Left>5.09948in</Left>
+        <Top>31.37643in</Top>
+        <Left>4.94424in</Left>
         <Height>0.26389in</Height>
         <Width>2.27325in</Width>
         <ZIndex>14</ZIndex>
@@ -29622,8 +29621,8 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>33.12087in</Top>
-        <Left>5.33352in</Left>
+        <Top>33.08892in</Top>
+        <Left>5.03615in</Left>
         <Height>0.20347in</Height>
         <Width>2.21629in</Width>
         <ZIndex>15</ZIndex>
@@ -29815,7 +29814,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
       </Border>
     </Style>
   </Body>
-  <Width>7.62861in</Width>
+  <Width>7.25244in</Width>
   <Page>
     <PageFooter>
       <Height>0.27789in</Height>
@@ -29919,7 +29918,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
       <rd:DataSetInfo>
         <rd:DataSetName>DataSet1</rd:DataSetName>
         <rd:SchemaPath>E:\Product\BeeAccouting\BeeAccounting\Reports\dsCallogs.xsd</rd:SchemaPath>
-        <rd:TableName>RPtheadKQKD200</rd:TableName>
+        <rd:TableName>RPtheadCDKT200mau01</rd:TableName>
         <rd:TableAdapterFillMethod />
         <rd:TableAdapterGetDataMethod />
         <rd:TableAdapterName />
@@ -29931,123 +29930,375 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
-        <Field Name="nay01dt">
-          <DataField>nay01dt</DataField>
+        <Field Name="cn111tien">
+          <DataField>cn111tien</DataField>
           <rd:TypeName>System.Double</rd:TypeName>
         </Field>
-        <Field Name="naydttaichinh">
-          <DataField>naydttaichinh</DataField>
+        <Field Name="cn112tientduong">
+          <DataField>cn112tientduong</DataField>
           <rd:TypeName>System.Double</rd:TypeName>
         </Field>
-        <Field Name="nay02giamdt">
-          <DataField>nay02giamdt</DataField>
+        <Field Name="cn122ckduphong">
+          <DataField>cn122ckduphong</DataField>
           <rd:TypeName>System.Double</rd:TypeName>
         </Field>
-        <Field Name="nay11giavon">
-          <DataField>nay11giavon</DataField>
+        <Field Name="cn121chungkhoan">
+          <DataField>cn121chungkhoan</DataField>
           <rd:TypeName>System.Double</rd:TypeName>
         </Field>
-        <Field Name="naycftaichinh">
-          <DataField>naycftaichinh</DataField>
+        <Field Name="cn123dtdenngay">
+          <DataField>cn123dtdenngay</DataField>
           <rd:TypeName>System.Double</rd:TypeName>
         </Field>
-        <Field Name="naycflaivay">
-          <DataField>naycflaivay</DataField>
+        <Field Name="cn131ptkhach">
+          <DataField>cn131ptkhach</DataField>
           <rd:TypeName>System.Double</rd:TypeName>
         </Field>
-        <Field Name="naycfbanhang">
-          <DataField>naycfbanhang</DataField>
+        <Field Name="cn132tratruoc">
+          <DataField>cn132tratruoc</DataField>
           <rd:TypeName>System.Double</rd:TypeName>
         </Field>
-        <Field Name="naythunhapkhac">
-          <DataField>naythunhapkhac</DataField>
+        <Field Name="cn123pthunbnganh">
+          <DataField>cn123pthunbnganh</DataField>
           <rd:TypeName>System.Double</rd:TypeName>
         </Field>
-        <Field Name="naycftndnhienhanh">
-          <DataField>naycftndnhienhanh</DataField>
+        <Field Name="cn134pthutiendokh">
+          <DataField>cn134pthutiendokh</DataField>
           <rd:TypeName>System.Double</rd:TypeName>
         </Field>
-        <Field Name="naycfkhac">
-          <DataField>naycfkhac</DataField>
+        <Field Name="cn135pthuchovay">
+          <DataField>cn135pthuchovay</DataField>
           <rd:TypeName>System.Double</rd:TypeName>
         </Field>
-        <Field Name="naylaicbcophieu">
-          <DataField>naylaicbcophieu</DataField>
+        <Field Name="cn136ptnganhan">
+          <DataField>cn136ptnganhan</DataField>
           <rd:TypeName>System.Double</rd:TypeName>
         </Field>
-        <Field Name="naylaigiaomtrencphieu">
-          <DataField>naylaigiaomtrencphieu</DataField>
+        <Field Name="cn137dpptnganhan">
+          <DataField>cn137dpptnganhan</DataField>
           <rd:TypeName>System.Double</rd:TypeName>
         </Field>
-        <Field Name="truoc01dt">
-          <DataField>truoc01dt</DataField>
+        <Field Name="cn139tsthieucho">
+          <DataField>cn139tsthieucho</DataField>
           <rd:TypeName>System.Double</rd:TypeName>
         </Field>
-        <Field Name="truoc02giamdt">
-          <DataField>truoc02giamdt</DataField>
+        <Field Name="cn141hangton">
+          <DataField>cn141hangton</DataField>
           <rd:TypeName>System.Double</rd:TypeName>
         </Field>
-        <Field Name="truoc11giavon">
-          <DataField>truoc11giavon</DataField>
+        <Field Name="cn149duphonght">
+          <DataField>cn149duphonght</DataField>
           <rd:TypeName>System.Double</rd:TypeName>
         </Field>
-        <Field Name="truocdttaichinh">
-          <DataField>truocdttaichinh</DataField>
+        <Field Name="cn151cftratruoc">
+          <DataField>cn151cftratruoc</DataField>
           <rd:TypeName>System.Double</rd:TypeName>
         </Field>
-        <Field Name="truoccftaichinh">
-          <DataField>truoccftaichinh</DataField>
+        <Field Name="cn152vatkhautru">
+          <DataField>cn152vatkhautru</DataField>
           <rd:TypeName>System.Double</rd:TypeName>
         </Field>
-        <Field Name="truoccflaivay">
-          <DataField>truoccflaivay</DataField>
+        <Field Name="cn153thuepthukac">
+          <DataField>cn153thuepthukac</DataField>
           <rd:TypeName>System.Double</rd:TypeName>
         </Field>
-        <Field Name="truoccfbanhang">
-          <DataField>truoccfbanhang</DataField>
+        <Field Name="cn154traiphieu">
+          <DataField>cn154traiphieu</DataField>
           <rd:TypeName>System.Double</rd:TypeName>
         </Field>
-        <Field Name="truoccfquanlydn">
-          <DataField>truoccfquanlydn</DataField>
+        <Field Name="cn155tskhacnh">
+          <DataField>cn155tskhacnh</DataField>
           <rd:TypeName>System.Double</rd:TypeName>
         </Field>
-        <Field Name="truocthunhapkhac">
-          <DataField>truocthunhapkhac</DataField>
+        <Field Name="cn211ptkhach">
+          <DataField>cn211ptkhach</DataField>
           <rd:TypeName>System.Double</rd:TypeName>
         </Field>
-        <Field Name="truoccfkhac">
-          <DataField>truoccfkhac</DataField>
+        <Field Name="cn212tratruocdh">
+          <DataField>cn212tratruocdh</DataField>
           <rd:TypeName>System.Double</rd:TypeName>
         </Field>
-        <Field Name="truoccftndnhienhanh">
-          <DataField>truoccftndnhienhanh</DataField>
+        <Field Name="cn213vonodonvi">
+          <DataField>cn213vonodonvi</DataField>
           <rd:TypeName>System.Double</rd:TypeName>
         </Field>
-        <Field Name="truoccfdnhoanlai">
-          <DataField>truoccfdnhoanlai</DataField>
+        <Field Name="cn214pthunbo">
+          <DataField>cn214pthunbo</DataField>
           <rd:TypeName>System.Double</rd:TypeName>
         </Field>
-        <Field Name="truoclaicbcophieu">
-          <DataField>truoclaicbcophieu</DataField>
+        <Field Name="cn215pthuchovay">
+          <DataField>cn215pthuchovay</DataField>
           <rd:TypeName>System.Double</rd:TypeName>
         </Field>
-        <Field Name="truoclaigiaomtrencphieu">
-          <DataField>truoclaigiaomtrencphieu</DataField>
+        <Field Name="cn216pthukhac">
+          <DataField>cn216pthukhac</DataField>
           <rd:TypeName>System.Double</rd:TypeName>
         </Field>
-        <Field Name="nayfdnhoanlai">
-          <DataField>nayfdnhoanlai</DataField>
+        <Field Name="cn219duphongpt">
+          <DataField>cn219duphongpt</DataField>
           <rd:TypeName>System.Double</rd:TypeName>
         </Field>
-        <Field Name="naycfquanlydn">
-          <DataField>naycfquanlydn</DataField>
+        <Field Name="cn222tscdngia">
+          <DataField>cn222tscdngia</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="cn223tskhauh">
+          <DataField>cn223tskhauh</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="cn225tscdthung">
+          <DataField>cn225tscdthung</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="cn226tscdthuekha">
+          <DataField>cn226tscdthuekha</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="cn228tscdvohnggia">
+          <DataField>cn228tscdvohnggia</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="cn229tscdvhkhauh">
+          <DataField>cn229tscdvhkhauh</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="cn231bdsngia">
+          <DataField>cn231bdsngia</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="cn232bdshaomon">
+          <DataField>cn232bdshaomon</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="cn241cfkddd">
+          <DataField>cn241cfkddd</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="cn242cfxddd">
+          <DataField>cn242cfxddd</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="cn251dtuctycon">
+          <DataField>cn251dtuctycon</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="cn252dtuctylienket">
+          <DataField>cn252dtuctylienket</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="cn253dtukhac">
+          <DataField>cn253dtukhac</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="cn254duphongdt">
+          <DataField>cn254duphongdt</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="cn255dtudaohan">
+          <DataField>cn255dtudaohan</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="cn261cftratruocdn">
+          <DataField>cn261cftratruocdn</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="cn262thuetndnhl">
+          <DataField>cn262thuetndnhl</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="cn263vtuthietbidn">
+          <DataField>cn263vtuthietbidn</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="cn268tskhac">
+          <DataField>cn268tskhac</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="cn311ptnbannh">
+          <DataField>cn311ptnbannh</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="cn312ngmuatratr">
+          <DataField>cn312ngmuatratr</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="cn312thuephainop">
+          <DataField>cn312thuephainop</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="cn314ptracnhan">
+          <DataField>cn314ptracnhan</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="cn315cphiptranh">
+          <DataField>cn315cphiptranh</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="cn316cfptranbonh">
+          <DataField>cn316cfptranbonh</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="cn317ptrtheoluong">
+          <DataField>cn317ptrtheoluong</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="cn318pthuchunhan">
+          <DataField>cn318pthuchunhan</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="cn319ptranhan">
+          <DataField>cn319ptranhan</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="cn320vaynotcnhan">
+          <DataField>cn320vaynotcnhan</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="cn321duphptranh">
+          <DataField>cn321duphptranh</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="cn322quykhen">
+          <DataField>cn322quykhen</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="cn323quygia">
+          <DataField>cn323quygia</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="cn324bantraiphieu">
+          <DataField>cn324bantraiphieu</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="cn331nodnngban">
+          <DataField>cn331nodnngban</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="cn332ngmuatratdn">
+          <DataField>cn332ngmuatratdn</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="cn333cphiphaitra">
+          <DataField>cn333cphiphaitra</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="cn334ptranbvevon">
+          <DataField>cn334ptranbvevon</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="cn335ptranbdaihan">
+          <DataField>cn335ptranbdaihan</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="cn336dthuchthdn">
+          <DataField>cn336dthuchthdn</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="cn337ptradnkhac">
+          <DataField>cn337ptradnkhac</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="cn338vaynodn">
+          <DataField>cn338vaynodn</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="cn339traiphieu">
+          <DataField>cn339traiphieu</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="cn340cophieu">
+          <DataField>cn340cophieu</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="cn341tnhoanlai">
+          <DataField>cn341tnhoanlai</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="cn342duphongdn">
+          <DataField>cn342duphongdn</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="cn343quykhoahoc">
+          <DataField>cn343quykhoahoc</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="cn411vongopcsh">
+          <DataField>cn411vongopcsh</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="cn411bcpudai">
+          <DataField>cn411bcpudai</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="cn412thangduvon">
+          <DataField>cn412thangduvon</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="cn413traiphieu">
+          <DataField>cn413traiphieu</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="cn414voncshkhac">
+          <DataField>cn414voncshkhac</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="cn415cphieuquy">
+          <DataField>cn415cphieuquy</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="cn416chenhlechts">
+          <DataField>cn416chenhlechts</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="cn417tygia">
+          <DataField>cn417tygia</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="cn418dautuptrien">
+          <DataField>cn418dautuptrien</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="cn419quyxxdn">
+          <DataField>cn419quyxxdn</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="cn420quykhacsh">
+          <DataField>cn420quykhacsh</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="cn421lnsauthue">
+          <DataField>cn421lnsauthue</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="cn421alnkytruoc">
+          <DataField>cn421alnkytruoc</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="cn421blnkynay">
+          <DataField>cn421blnkynay</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="cn422vonxdcb">
+          <DataField>cn422vonxdcb</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="cn431nkinhphi">
+          <DataField>cn431nkinhphi</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="cn432kpthanhtscd">
+          <DataField>cn432kpthanhtscd</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="cn411acophieupt">
+          <DataField>cn411acophieupt</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>DataSet1</rd:DataSetName>
         <rd:SchemaPath>E:\Product\BeeAccouting\BeeAccounting\Reports\dsCallogs.xsd</rd:SchemaPath>
-        <rd:TableName>RPtdetailKQKD200</rd:TableName>
+        <rd:TableName>RPtdetailCDKT200lientuc</rd:TableName>
         <rd:TableAdapterFillMethod />
         <rd:TableAdapterGetDataMethod />
         <rd:TableAdapterName />

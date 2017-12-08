@@ -450,7 +450,7 @@
     <Compile Include="View\Viewtable.Designer.cs">
       <DependentUpon>Viewtable.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Reports\BangCDKToan.rdlc">
+    <EmbeddedResource Include="Reports\BangCDKToant200lt.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\Phieuketoanth.rdlc">

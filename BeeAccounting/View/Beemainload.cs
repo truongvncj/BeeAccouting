@@ -1519,5 +1519,18 @@ namespace BEEACCOUNT.View
         {
             Model.Soketoan.xemvaupdatekqkd200();
         }
+
+        private void button14_Click_1(object sender, EventArgs e)
+        {
+
+            #region//bccan doi ke toan
+            //if (name == "bcsonhatkychung")
+            //{
+
+            Model.Soketoan.baocaocandoiketoantt200lientuc();
+
+            //  }
+            #endregion
+        }
     }
 }

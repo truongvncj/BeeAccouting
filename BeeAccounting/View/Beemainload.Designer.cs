@@ -179,8 +179,10 @@
             treeNode83});
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Beemainload));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button10 = new System.Windows.Forms.Button();
             this.button39 = new System.Windows.Forms.Button();
             this.button29 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -228,9 +230,7 @@
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.button10 = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox6.SuspendLayout();
@@ -258,6 +258,18 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Báo cáo tài chính";
             // 
+            // button10
+            // 
+            this.button10.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.button10.Location = new System.Drawing.Point(12, 47);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(157, 22);
+            this.button10.TabIndex = 55;
+            this.button10.TabStop = false;
+            this.button10.Text = "NHẬP SỐ DƯ ĐẦU BCKQKD";
+            this.button10.UseVisualStyleBackColor = false;
+            this.button10.Click += new System.EventHandler(this.button10_Click_2);
+            // 
             // button39
             // 
             this.button39.Location = new System.Drawing.Point(12, 189);
@@ -278,15 +290,29 @@
             this.button29.Text = "Thuyết minh báo cáo tài chính";
             this.button29.UseVisualStyleBackColor = true;
             // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.button4.Location = new System.Drawing.Point(12, 19);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(157, 22);
+            this.button4.TabIndex = 22;
+            this.button4.TabStop = false;
+            this.button4.Text = "BÁO CÁO KQKD";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click_3);
+            // 
             // button14
             // 
+            this.button14.BackColor = System.Drawing.Color.Red;
             this.button14.Location = new System.Drawing.Point(12, 133);
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(166, 22);
             this.button14.TabIndex = 14;
             this.button14.TabStop = false;
             this.button14.Text = "Bản cân đối kế toán";
-            this.button14.UseVisualStyleBackColor = true;
+            this.button14.UseVisualStyleBackColor = false;
+            this.button14.Click += new System.EventHandler(this.button14_Click_1);
             // 
             // groupBox4
             // 
@@ -1005,18 +1031,6 @@
             this.label1.TabIndex = 53;
             this.label1.Text = "miacapro";
             // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.button4.Location = new System.Drawing.Point(12, 19);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(157, 22);
-            this.button4.TabIndex = 22;
-            this.button4.TabStop = false;
-            this.button4.Text = "BÁO CÁO KQKD";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click_3);
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -1028,18 +1042,6 @@
             this.label2.TabIndex = 54;
             this.label2.Text = "immideately strategy - productivity - valueable -salescashreturn";
             this.label2.Click += new System.EventHandler(this.label2_Click_1);
-            // 
-            // button10
-            // 
-            this.button10.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.button10.Location = new System.Drawing.Point(12, 47);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(157, 22);
-            this.button10.TabIndex = 55;
-            this.button10.TabStop = false;
-            this.button10.Text = "NHẬP SỐ DƯ ĐẦU BCKQKD";
-            this.button10.UseVisualStyleBackColor = false;
-            this.button10.Click += new System.EventHandler(this.button10_Click_2);
             // 
             // Beemainload
             // 
