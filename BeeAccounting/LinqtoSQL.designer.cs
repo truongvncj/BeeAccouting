@@ -2611,7 +2611,7 @@ namespace BEEACCOUNT
 		
 		private System.Nullable<double> _cn132tratruoc;
 		
-		private System.Nullable<double> _cn123pthunbnganh;
+		private System.Nullable<double> _cn133pthunbnganh;
 		
 		private System.Nullable<double> _cn134pthutiendokh;
 		
@@ -2801,8 +2801,8 @@ namespace BEEACCOUNT
     partial void Oncn131ptkhachChanged();
     partial void Oncn132tratruocChanging(System.Nullable<double> value);
     partial void Oncn132tratruocChanged();
-    partial void Oncn123pthunbnganhChanging(System.Nullable<double> value);
-    partial void Oncn123pthunbnganhChanged();
+    partial void Oncn133pthunbnganhChanging(System.Nullable<double> value);
+    partial void Oncn133pthunbnganhChanged();
     partial void Oncn134pthutiendokhChanging(System.Nullable<double> value);
     partial void Oncn134pthutiendokhChanged();
     partial void Oncn135pthuchovayChanging(System.Nullable<double> value);
@@ -3120,22 +3120,22 @@ namespace BEEACCOUNT
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_cn123pthunbnganh", DbType="Float")]
-		public System.Nullable<double> cn123pthunbnganh
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_cn133pthunbnganh", DbType="Float")]
+		public System.Nullable<double> cn133pthunbnganh
 		{
 			get
 			{
-				return this._cn123pthunbnganh;
+				return this._cn133pthunbnganh;
 			}
 			set
 			{
-				if ((this._cn123pthunbnganh != value))
+				if ((this._cn133pthunbnganh != value))
 				{
-					this.Oncn123pthunbnganhChanging(value);
+					this.Oncn133pthunbnganhChanging(value);
 					this.SendPropertyChanging();
-					this._cn123pthunbnganh = value;
-					this.SendPropertyChanged("cn123pthunbnganh");
-					this.Oncn123pthunbnganhChanged();
+					this._cn133pthunbnganh = value;
+					this.SendPropertyChanged("cn133pthunbnganh");
+					this.Oncn133pthunbnganhChanged();
 				}
 			}
 		}
@@ -19659,6 +19659,8 @@ namespace BEEACCOUNT
 		
 		private string _Sohieuchungtu;
 		
+		private System.Nullable<bool> _nganhan;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -19693,6 +19695,8 @@ namespace BEEACCOUNT
     partial void OnPsCoChanged();
     partial void OnSohieuchungtuChanging(string value);
     partial void OnSohieuchungtuChanged();
+    partial void OnnganhanChanging(System.Nullable<bool> value);
+    partial void OnnganhanChanged();
     #endregion
 		
 		public tbl_Socai()
@@ -19996,6 +20000,26 @@ namespace BEEACCOUNT
 					this._Sohieuchungtu = value;
 					this.SendPropertyChanged("Sohieuchungtu");
 					this.OnSohieuchungtuChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_nganhan", DbType="Bit")]
+		public System.Nullable<bool> nganhan
+		{
+			get
+			{
+				return this._nganhan;
+			}
+			set
+			{
+				if ((this._nganhan != value))
+				{
+					this.OnnganhanChanging(value);
+					this.SendPropertyChanging();
+					this._nganhan = value;
+					this.SendPropertyChanged("nganhan");
+					this.OnnganhanChanged();
 				}
 			}
 		}

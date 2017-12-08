@@ -3768,7 +3768,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!cn123pthunbnganh.Value</Value>
+                              <Value>=Fields!cn133pthunbnganh.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -29958,8 +29958,8 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
           <DataField>cn132tratruoc</DataField>
           <rd:TypeName>System.Double</rd:TypeName>
         </Field>
-        <Field Name="cn123pthunbnganh">
-          <DataField>cn123pthunbnganh</DataField>
+        <Field Name="cn133pthunbnganh">
+          <DataField>cn133pthunbnganh</DataField>
           <rd:TypeName>System.Double</rd:TypeName>
         </Field>
         <Field Name="cn134pthutiendokh">

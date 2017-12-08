@@ -11181,7 +11181,7 @@ namespace BEEACCOUNT.Reports {
             
             private global::System.Data.DataColumn columncn132tratruoc;
             
-            private global::System.Data.DataColumn columncn123pthunbnganh;
+            private global::System.Data.DataColumn columncn133pthunbnganh;
             
             private global::System.Data.DataColumn columncn134pthutiendokh;
             
@@ -11440,9 +11440,9 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn cn123pthunbnganhColumn {
+            public global::System.Data.DataColumn cn133pthunbnganhColumn {
                 get {
-                    return this.columncn123pthunbnganh;
+                    return this.columncn133pthunbnganh;
                 }
             }
             
@@ -12155,7 +12155,7 @@ namespace BEEACCOUNT.Reports {
                         double cn123dtdenngay, 
                         double cn131ptkhach, 
                         double cn132tratruoc, 
-                        double cn123pthunbnganh, 
+                        double cn133pthunbnganh, 
                         double cn134pthutiendokh, 
                         double cn135pthuchovay, 
                         double cn136ptnganhan, 
@@ -12248,7 +12248,7 @@ namespace BEEACCOUNT.Reports {
                         cn123dtdenngay,
                         cn131ptkhach,
                         cn132tratruoc,
-                        cn123pthunbnganh,
+                        cn133pthunbnganh,
                         cn134pthutiendokh,
                         cn135pthuchovay,
                         cn136ptnganhan,
@@ -12361,7 +12361,7 @@ namespace BEEACCOUNT.Reports {
                 this.columncn123dtdenngay = base.Columns["cn123dtdenngay"];
                 this.columncn131ptkhach = base.Columns["cn131ptkhach"];
                 this.columncn132tratruoc = base.Columns["cn132tratruoc"];
-                this.columncn123pthunbnganh = base.Columns["cn123pthunbnganh"];
+                this.columncn133pthunbnganh = base.Columns["cn133pthunbnganh"];
                 this.columncn134pthutiendokh = base.Columns["cn134pthutiendokh"];
                 this.columncn135pthuchovay = base.Columns["cn135pthuchovay"];
                 this.columncn136ptnganhan = base.Columns["cn136ptnganhan"];
@@ -12464,8 +12464,8 @@ namespace BEEACCOUNT.Reports {
                 base.Columns.Add(this.columncn131ptkhach);
                 this.columncn132tratruoc = new global::System.Data.DataColumn("cn132tratruoc", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncn132tratruoc);
-                this.columncn123pthunbnganh = new global::System.Data.DataColumn("cn123pthunbnganh", typeof(double), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncn123pthunbnganh);
+                this.columncn133pthunbnganh = new global::System.Data.DataColumn("cn133pthunbnganh", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncn133pthunbnganh);
                 this.columncn134pthutiendokh = new global::System.Data.DataColumn("cn134pthutiendokh", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncn134pthutiendokh);
                 this.columncn135pthuchovay = new global::System.Data.DataColumn("cn135pthuchovay", typeof(double), null, global::System.Data.MappingType.Element);
@@ -12639,7 +12639,7 @@ namespace BEEACCOUNT.Reports {
                 this.columncn123dtdenngay.Caption = "giamdoc";
                 this.columncn131ptkhach.Caption = "ketoantruong";
                 this.columncn132tratruoc.Caption = "nguoighiso";
-                this.columncn123pthunbnganh.Caption = "taikhoan";
+                this.columncn133pthunbnganh.Caption = "taikhoan";
                 this.columncn134pthutiendokh.Caption = "naycftndnhienhanh";
                 this.columncn135pthuchovay.Caption = "naycfkhac";
                 this.columncn136ptnganhan.Caption = "naylaicbcophieu";
@@ -21637,18 +21637,18 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public double cn123pthunbnganh {
+            public double cn133pthunbnganh {
                 get {
                     try {
-                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.cn123pthunbnganhColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.cn133pthunbnganhColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'cn123pthunbnganh\' in table \'RPtdetailCDKT200lientuc\' is DBN" +
+                        throw new global::System.Data.StrongTypingException("The value for column \'cn133pthunbnganh\' in table \'RPtdetailCDKT200lientuc\' is DBN" +
                                 "ull.", e);
                     }
                 }
                 set {
-                    this[this.tableRPtdetailCDKT200lientuc.cn123pthunbnganhColumn] = value;
+                    this[this.tableRPtdetailCDKT200lientuc.cn133pthunbnganhColumn] = value;
                 }
             }
             
@@ -23144,14 +23144,14 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Iscn123pthunbnganhNull() {
-                return this.IsNull(this.tableRPtdetailCDKT200lientuc.cn123pthunbnganhColumn);
+            public bool Iscn133pthunbnganhNull() {
+                return this.IsNull(this.tableRPtdetailCDKT200lientuc.cn133pthunbnganhColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Setcn123pthunbnganhNull() {
-                this[this.tableRPtdetailCDKT200lientuc.cn123pthunbnganhColumn] = global::System.Convert.DBNull;
+            public void Setcn133pthunbnganhNull() {
+                this[this.tableRPtdetailCDKT200lientuc.cn133pthunbnganhColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
