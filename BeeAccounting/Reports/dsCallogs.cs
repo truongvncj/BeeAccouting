@@ -4,6 +4,10 @@
 
     partial class DataSet1
     {
+        partial class RPtdetailCDKT200lientucDataTable
+        {
+        }
+
         partial class RPtdetailKQKD200DataTable
         {
         }

@@ -11263,7 +11263,7 @@ namespace BEEACCOUNT.Reports {
             
             private global::System.Data.DataColumn columncn312ngmuatratr;
             
-            private global::System.Data.DataColumn columncn312thuephainop;
+            private global::System.Data.DataColumn columncn313thuephainop;
             
             private global::System.Data.DataColumn columncn314ptracnhan;
             
@@ -11768,9 +11768,9 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn cn312thuephainopColumn {
+            public global::System.Data.DataColumn cn313thuephainopColumn {
                 get {
-                    return this.columncn312thuephainop;
+                    return this.columncn313thuephainop;
                 }
             }
             
@@ -12196,7 +12196,7 @@ namespace BEEACCOUNT.Reports {
                         string cn268tskhac, 
                         string cn311ptnbannh, 
                         string cn312ngmuatratr, 
-                        string cn312thuephainop, 
+                        string cn313thuephainop, 
                         string cn314ptracnhan, 
                         string cn315cphiptranh, 
                         string cn316cfptranbonh, 
@@ -12289,7 +12289,7 @@ namespace BEEACCOUNT.Reports {
                         cn268tskhac,
                         cn311ptnbannh,
                         cn312ngmuatratr,
-                        cn312thuephainop,
+                        cn313thuephainop,
                         cn314ptracnhan,
                         cn315cphiptranh,
                         cn316cfptranbonh,
@@ -12402,7 +12402,7 @@ namespace BEEACCOUNT.Reports {
                 this.columncn268tskhac = base.Columns["cn268tskhac"];
                 this.columncn311ptnbannh = base.Columns["cn311ptnbannh"];
                 this.columncn312ngmuatratr = base.Columns["cn312ngmuatratr"];
-                this.columncn312thuephainop = base.Columns["cn312thuephainop"];
+                this.columncn313thuephainop = base.Columns["cn313thuephainop"];
                 this.columncn314ptracnhan = base.Columns["cn314ptracnhan"];
                 this.columncn315cphiptranh = base.Columns["cn315cphiptranh"];
                 this.columncn316cfptranbonh = base.Columns["cn316cfptranbonh"];
@@ -12546,8 +12546,8 @@ namespace BEEACCOUNT.Reports {
                 base.Columns.Add(this.columncn311ptnbannh);
                 this.columncn312ngmuatratr = new global::System.Data.DataColumn("cn312ngmuatratr", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncn312ngmuatratr);
-                this.columncn312thuephainop = new global::System.Data.DataColumn("cn312thuephainop", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncn312thuephainop);
+                this.columncn313thuephainop = new global::System.Data.DataColumn("cn313thuephainop", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncn313thuephainop);
                 this.columncn314ptracnhan = new global::System.Data.DataColumn("cn314ptracnhan", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncn314ptracnhan);
                 this.columncn315cphiptranh = new global::System.Data.DataColumn("cn315cphiptranh", typeof(string), null, global::System.Data.MappingType.Element);
@@ -22331,18 +22331,18 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string cn312thuephainop {
+            public string cn313thuephainop {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.cn312thuephainopColumn]));
+                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.cn313thuephainopColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'cn312thuephainop\' in table \'RPtdetailCDKT200lientuc\' is DBN" +
+                        throw new global::System.Data.StrongTypingException("The value for column \'cn313thuephainop\' in table \'RPtdetailCDKT200lientuc\' is DBN" +
                                 "ull.", e);
                     }
                 }
                 set {
-                    this[this.tableRPtdetailCDKT200lientuc.cn312thuephainopColumn] = value;
+                    this[this.tableRPtdetailCDKT200lientuc.cn313thuephainopColumn] = value;
                 }
             }
             
@@ -23636,14 +23636,14 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Iscn312thuephainopNull() {
-                return this.IsNull(this.tableRPtdetailCDKT200lientuc.cn312thuephainopColumn);
+            public bool Iscn313thuephainopNull() {
+                return this.IsNull(this.tableRPtdetailCDKT200lientuc.cn313thuephainopColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Setcn312thuephainopNull() {
-                this[this.tableRPtdetailCDKT200lientuc.cn312thuephainopColumn] = global::System.Convert.DBNull;
+            public void Setcn313thuephainopNull() {
+                this[this.tableRPtdetailCDKT200lientuc.cn313thuephainopColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

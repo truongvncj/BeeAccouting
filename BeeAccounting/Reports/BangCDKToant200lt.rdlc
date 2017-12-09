@@ -1298,7 +1298,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!cn111tien.Value+Fields!cn112tientduong.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -1322,6 +1322,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -17506,7 +17507,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!cn312thuephainop.Value</Value>
+                              <Value>=Fields!cn313thuephainop.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -30122,8 +30123,8 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
           <DataField>cn312ngmuatratr</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="cn312thuephainop">
-          <DataField>cn312thuephainop</DataField>
+        <Field Name="cn313thuephainop">
+          <DataField>cn313thuephainop</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="cn314ptracnhan">

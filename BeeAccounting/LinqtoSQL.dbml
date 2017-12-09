@@ -146,7 +146,7 @@
       <Column Name="cn268tskhac" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Column Name="cn311ptnbannh" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Column Name="cn312ngmuatratr" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="cn312thuephainop" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="cn313thuephainop" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Column Name="cn314ptracnhan" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Column Name="cn315cphiptranh" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Column Name="cn316cfptranbonh" Type="System.Double" DbType="Float" CanBeNull="true" />

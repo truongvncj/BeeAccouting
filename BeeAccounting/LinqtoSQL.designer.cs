@@ -2693,7 +2693,7 @@ namespace BEEACCOUNT
 		
 		private System.Nullable<double> _cn312ngmuatratr;
 		
-		private System.Nullable<double> _cn312thuephainop;
+		private System.Nullable<double> _cn313thuephainop;
 		
 		private System.Nullable<double> _cn314ptracnhan;
 		
@@ -2883,8 +2883,8 @@ namespace BEEACCOUNT
     partial void Oncn311ptnbannhChanged();
     partial void Oncn312ngmuatratrChanging(System.Nullable<double> value);
     partial void Oncn312ngmuatratrChanged();
-    partial void Oncn312thuephainopChanging(System.Nullable<double> value);
-    partial void Oncn312thuephainopChanged();
+    partial void Oncn313thuephainopChanging(System.Nullable<double> value);
+    partial void Oncn313thuephainopChanged();
     partial void Oncn314ptracnhanChanging(System.Nullable<double> value);
     partial void Oncn314ptracnhanChanged();
     partial void Oncn315cphiptranhChanging(System.Nullable<double> value);
@@ -3940,22 +3940,22 @@ namespace BEEACCOUNT
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_cn312thuephainop", DbType="Float")]
-		public System.Nullable<double> cn312thuephainop
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_cn313thuephainop", DbType="Float")]
+		public System.Nullable<double> cn313thuephainop
 		{
 			get
 			{
-				return this._cn312thuephainop;
+				return this._cn313thuephainop;
 			}
 			set
 			{
-				if ((this._cn312thuephainop != value))
+				if ((this._cn313thuephainop != value))
 				{
-					this.Oncn312thuephainopChanging(value);
+					this.Oncn313thuephainopChanging(value);
 					this.SendPropertyChanging();
-					this._cn312thuephainop = value;
-					this.SendPropertyChanged("cn312thuephainop");
-					this.Oncn312thuephainopChanged();
+					this._cn313thuephainop = value;
+					this.SendPropertyChanged("cn313thuephainop");
+					this.Oncn313thuephainopChanged();
 				}
 			}
 		}
