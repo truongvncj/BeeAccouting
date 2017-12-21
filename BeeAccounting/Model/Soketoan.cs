@@ -1141,7 +1141,7 @@ namespace BEEACCOUNT.Model
                 {
 
                     View.BeeCDKT200nhapsocho xemsuacdkt = new BeeCDKT200nhapsocho(yearchon);
-                    xemsuacdkt.Show();
+                    xemsuacdkt.ShowDialog();
                 }
 
 

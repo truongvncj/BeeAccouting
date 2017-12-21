@@ -47,18 +47,20 @@ namespace BEEACCOUNT.View
                          Chỉ_tiêu = p.Tenchitieu,
                          Mã_số = p.Machitieu,
                          Cách_ghi = p.Cachghi,
-                         Số_chốt = p.Sotien,
-                         p.id
+                         Số_cuối_năm = p.Sotien,
+                         ID = p.id
 
                      }; ;
             if (kq.Count() > 0)
             {
 
+                Utils ut = new Utils();
+                var tble1 = ut.ToDataTable(dc, kq);
 
-                dataGridView1.DataSource = kq;
+                dataGridView1.DataSource = tble1;
 
 
-
+             
 
 
 
@@ -72,14 +74,52 @@ namespace BEEACCOUNT.View
                               Chỉ_tiêu = p.Tenchitieu,
                               Mã_số = p.Machitieu,
                               Cách_ghi = p.Cachghi,
-                              Số_chốt = p.Sotien,
-                              p.id
+                              Số_cuối_năm = p.Sotien,
+                              ID = p.id
 
                           };
-                dataGridView1.DataSource = kq2;
+
+                Utils ut = new Utils();
+                var tble2 = ut.ToDataTable(dc, kq2);
+
+                dataGridView1.DataSource = tble2;
+
+            
             }
 
+            dataGridView1.Columns["ID"].SortMode = DataGridViewColumnSortMode.NotSortable;
+            dataGridView1.Columns["ID"].ReadOnly = true;
 
+            dataGridView1.Columns["Mã_số"].SortMode = DataGridViewColumnSortMode.NotSortable;
+            dataGridView1.Columns["Mã_số"].ReadOnly = true;
+            dataGridView1.Columns["Cách_ghi"].SortMode = DataGridViewColumnSortMode.NotSortable;
+            dataGridView1.Columns["Cách_ghi"].ReadOnly = true;
+
+            dataGridView1.Columns["Chỉ_tiêu"].SortMode = DataGridViewColumnSortMode.NotSortable;
+            dataGridView1.Columns["Chỉ_tiêu"].ReadOnly = true;
+
+            dataGridView1.Columns["Số_cuối_năm"].SortMode = DataGridViewColumnSortMode.NotSortable;
+            dataGridView1.Columns["Số_cuối_năm"].DefaultCellStyle.BackColor = Color.BurlyWood;
+
+            //        idtk = (int)this.dataGridView1.Rows[this.dataGridView1.CurrentCell.RowIndex].Cells["ID"].Value;
+
+
+
+            //    }
+            //            catch (Exception)
+            //            {
+
+            //                MessageBox.Show("Bạn phải chọn một xe !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //                return;
+            //            }
+            //Model.Nhacungcap.suathongtinxe(idtk);
+            //            var rs = Model.Nhacungcap.danhsachxe(dc);
+            //dataGridView1.DataSource = rs;
+
+            //            //   Tải_trọng = p.sotantai,
+            //            //      Kích_thước_thùng = p.sokhoithungxe,
+            //            dataGridView1.Columns["Tải_trọng"].DefaultCellStyle.Format = "N0"; // để hiện số có dấu phảy
+            //            dataGridView1.Columns["Kích_thước_thùng"].DefaultCellStyle.Format = "N0"; // để hiện số có dấu phảy
 
         }
 
