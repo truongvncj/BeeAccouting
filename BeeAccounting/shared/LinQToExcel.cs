@@ -77,7 +77,7 @@ namespace BEEACCOUNT
 
       
             cExcel.Application xlApp = new cExcel.Application();
-            cExcel.Workbooks xlWorkBook = null;
+            //cExcel.Workbooks xlWorkBook = null;
           
             cExcel.Worksheet xlWorkSheet = GetworksheetObject(filename);
         
@@ -131,14 +131,18 @@ namespace BEEACCOUNT
             }
 
             // assign table to default data grid view
-        //    dataGridView1.DataSource = mainDt;
+            //    dataGridView1.DataSource = mainDt;
 
-       //     xlWorkBook.Close(true, missing, missing);
+            //     xlWorkBook.Close(true, missing, missing);
+
+            xlWorkSheet = null;
+       //     xlWorkBook = null;
+            xlApp = null;
             xlApp.Quit();
 
-            releaseObject(xlWorkSheet);
-            releaseObject(xlWorkBook);
-            releaseObject(xlApp);
+            //releaseObject(xlWorkSheet);
+            //releaseObject(xlWorkBook);
+            //releaseObject(xlApp);
             return mainDt;
         }
         //-- get string dâttaable

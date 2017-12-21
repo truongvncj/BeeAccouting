@@ -33,7 +33,7 @@ namespace BEEACCOUNT.View
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Viewtable));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
+            this.bt_sua = new System.Windows.Forms.Button();
             this.bt_exporttoex = new System.Windows.Forms.Button();
             this.bt_themmoi = new System.Windows.Forms.Button();
             this.formlabel = new System.Windows.Forms.Label();
@@ -81,7 +81,7 @@ namespace BEEACCOUNT.View
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel2.Controls.Add(this.button2);
+            this.panel2.Controls.Add(this.bt_sua);
             this.panel2.Controls.Add(this.bt_exporttoex);
             this.panel2.Controls.Add(this.bt_themmoi);
             this.panel2.Location = new System.Drawing.Point(0, 26);
@@ -89,17 +89,17 @@ namespace BEEACCOUNT.View
             this.panel2.Size = new System.Drawing.Size(1332, 28);
             this.panel2.TabIndex = 45;
             // 
-            // button2
+            // bt_sua
             // 
-            this.button2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.button2.Location = new System.Drawing.Point(95, 2);
-            this.button2.Name = "button2";
-            this.button2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.button2.Size = new System.Drawing.Size(87, 23);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Sửa";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.bt_sua.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.bt_sua.Location = new System.Drawing.Point(95, 2);
+            this.bt_sua.Name = "bt_sua";
+            this.bt_sua.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.bt_sua.Size = new System.Drawing.Size(87, 23);
+            this.bt_sua.TabIndex = 5;
+            this.bt_sua.Text = "Sửa";
+            this.bt_sua.UseVisualStyleBackColor = true;
+            this.bt_sua.Click += new System.EventHandler(this.button2_Click);
             // 
             // bt_exporttoex
             // 
@@ -377,7 +377,7 @@ namespace BEEACCOUNT.View
         private System.Windows.Forms.Label lb_seach;
         private System.Windows.Forms.Label formlabel;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button bt_sua;
         private System.Windows.Forms.Button bt_themmoi;
     }
 }

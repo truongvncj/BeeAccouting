@@ -36,9 +36,9 @@
             // 
             // bt_thuchien
             // 
-            this.bt_thuchien.Location = new System.Drawing.Point(75, 71);
+            this.bt_thuchien.Location = new System.Drawing.Point(75, 68);
             this.bt_thuchien.Name = "bt_thuchien";
-            this.bt_thuchien.Size = new System.Drawing.Size(93, 22);
+            this.bt_thuchien.Size = new System.Drawing.Size(93, 25);
             this.bt_thuchien.TabIndex = 3;
             this.bt_thuchien.Text = "Chọn";
             this.bt_thuchien.UseVisualStyleBackColor = true;

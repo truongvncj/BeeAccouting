@@ -1020,7 +1020,65 @@ namespace BEEACCOUNT.View
             string connection_string = Utils.getConnectionstr();
 
             LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
-            //nhapdaukybckdkd
+            //bangsoducd
+            //    
+
+            #region//xem bangsoducd
+            if (name == "bcluuchuyentien")
+            {
+                #region//bangsoducd
+                //if (name == "bcsonhatkychung")
+                //{
+
+                Model.Soketoan.baocaoluuchuyentiente();
+
+                //  }
+                #endregion
+
+            }
+            #endregion
+
+
+            #region//xem bangsoducd
+            if (name == "bangsoducd")
+            {
+                #region//bangsoducd
+                //if (name == "bcsonhatkychung")
+                //{
+
+                Model.Soketoan.Bangcandoiphatsinhketoantt200lientuc();
+
+                //  }
+                #endregion
+
+            }
+            #endregion
+
+            #region//xem nhập số dư dầu bckqkd
+            if (name == "bangnhapsoducdkt")
+            {
+                Model.Soketoan.xemvaupdauCDKT200();
+
+
+            }
+            #endregion
+
+
+            #region//xem bangcdkt200
+            if (name == "bangcdkt200")
+            {
+                #region//bccan doi ke toan
+                //if (name == "bcsonhatkychung")
+                //{
+
+                Model.Soketoan.baocaocandoiketoantt200lientuc();
+
+                //  }
+                #endregion
+
+            }
+            #endregion
+
 
             #region//xem nhập số dư dầu bckqkd
             if (name == "nhapdaukybckdkd")

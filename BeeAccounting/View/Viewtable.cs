@@ -272,9 +272,19 @@ namespace BEEACCOUNT.View
                                                                                                             //   this.Show();
             this.KeyPreview = true;
 
+            #region  // viewcode ==12  la view bang tong hop phat sinh
 
 
+            if (this.viewcode == 12)
+            {
+                lb_seach.Visible = false;
 
+                bt_themmoi.Visible = false;
+
+                bt_sua.Visible = false;
+            }
+
+            #endregion
 
         }
 

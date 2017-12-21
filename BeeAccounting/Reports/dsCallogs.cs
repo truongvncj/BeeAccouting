@@ -4,6 +4,15 @@
 
     partial class DataSet1
     {
+        partial class RPtdetaillchuyenttttiepDataTable
+
+        {
+        }
+
+        partial class RPtheadLCTTTtiepDataTable
+        {
+        }
+
         partial class RPtdetailCDKT200lientucDataTable
         {
         }

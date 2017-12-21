@@ -124,27 +124,27 @@ namespace BEEACCOUNT.View
                     cbkhachhang.Enabled = false;
 
 
-                    txttrichdoitac.Text = item.trichdoitac.ToString();
+                   // txttrichdoitac.Text = item.trichdoitac.ToString();
 
-                    txttrichcongty.Text = item.trichcongty.ToString();
-                    txttongchiphi.Text = item.tongcfuoctinh.ToString();
+                    //txttrichcongty.Text = item.trichcongty.ToString();
+                   // txttongchiphi.Text = item.tongcfuoctinh.ToString();
                     txttentuyen.Text = item.tentuyen;
                     txtmatuyen.Text = item.matuyen;
-                    txtloinhuantuyen.Text = item.lntuyen.ToString();
+                   // txtloinhuantuyen.Text = item.lntuyen.ToString();
                     txtloaidon.Text = item.loaidonxe.ToString();
                     txtkm.Text = item.km.ToString();
-                    txtkhauhao.Text = item.cfkhauhao.ToString();
+                  //  txtkhauhao.Text = item.cfkhauhao.ToString();
                     txtgiathue.Text = item.giathue.ToString();
                     txtgiahoadon.Text = item.giahoadon.ToString();
-                    txtgiadauhientai.Text = item.giadau.ToString();
-                    txtghichu.Text = item.ghichucf;
-                    txtphiphac.Text = item.dtkhac.ToString();
-                    txtdinhmucdau.Text = item.dinhmucdau.ToString();
-                    txtchiphilaixe.Text = item.cflaixe.ToString();
-                    txtchiphidau.Text = item.cfxang.ToString();
-                    txtchiphicongan.Text = item.cfcongan.ToString();
-                    txtbocxep.Text = item.bocxep.ToString();
-                    txtchiphicauduong.Text = item.cfcauduong.ToString();
+                   // txtgiadauhientai.Text = item.giadau.ToString();
+                  //  txtghichu.Text = item.ghichucf;
+                  //  txtphiphac.Text = item.dtkhac.ToString();
+                   // txtdinhmucdau.Text = item.dinhmucdau.ToString();
+                  //  txtchiphilaixe.Text = item.cflaixe.ToString();
+                   // txtchiphidau.Text = item.cfxang.ToString();
+                  //  txtchiphicongan.Text = item.cfcongan.ToString();
+                  //  txtbocxep.Text = item.bocxep.ToString();
+                  //  txtchiphicauduong.Text = item.cfcauduong.ToString();
 
 
 
@@ -272,26 +272,26 @@ namespace BEEACCOUNT.View
                 cbkhachhang.Focus();
                 return;
             }
-            if (txttrichdoitac.Text == "" || Utils.IsValidnumber(txttrichdoitac.Text) == false)
-            {
-                MessageBox.Show("Kiểm tra lại trích đối tác !", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txttrichdoitac.Focus();
-                return;
-            }
+            //if (txttrichdoitac.Text == "" || Utils.IsValidnumber(txttrichdoitac.Text) == false)
+            //{
+            //    MessageBox.Show("Kiểm tra lại trích đối tác !", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //    txttrichdoitac.Focus();
+            //    return;
+            //}
 
-            if (txttrichcongty.Text == "" || Utils.IsValidnumber(txttrichcongty.Text) == false)
-            {
-                MessageBox.Show("Kiểm tra lại trích công ty!", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txttrichcongty.Focus();
-                return;
-            }
+            //if (txttrichcongty.Text == "" || Utils.IsValidnumber(txttrichcongty.Text) == false)
+            //{
+            //    MessageBox.Show("Kiểm tra lại trích công ty!", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //    txttrichcongty.Focus();
+            //    return;
+            //}
 
-            if (txttongchiphi.Text == "" || Utils.IsValidnumber(txttongchiphi.Text) == false)
-            {
-                MessageBox.Show("Kiểm tra lại tổng chi phí !", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txttongchiphi.Focus();
-                return;
-            }
+            //if (txttongchiphi.Text == "" || Utils.IsValidnumber(txttongchiphi.Text) == false)
+            //{
+            //    MessageBox.Show("Kiểm tra lại tổng chi phí !", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //    txttongchiphi.Focus();
+            //    return;
+            //}
 
             if (txttentuyen.Text == "" || txttentuyen.Text == null)
             {
@@ -307,12 +307,7 @@ namespace BEEACCOUNT.View
                 return;
             }
 
-            if (txtloinhuantuyen.Text == "" || Utils.IsValidnumber(txtloinhuantuyen.Text) == false)
-            {
-                MessageBox.Show("Kiểm tra lại lợi nhận tuyến !", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtloinhuantuyen.Focus();
-                return;
-            }
+        
 
             if (txtloaidon.Text == "" || Utils.IsValidnumber(txtloaidon.Text) == false)
             {
@@ -326,12 +321,7 @@ namespace BEEACCOUNT.View
                 txtkm.Focus();
                 return;
             }
-            if (txtkhauhao.Text == "" || Utils.IsValidnumber(txtkhauhao.Text) == false)
-            {
-                MessageBox.Show("Kiểm tra lại khấu hao ", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtkhauhao.Focus();
-                return;
-            }
+         
             if (txtgiathue.Text == "" || Utils.IsValidnumber(txtgiathue.Text) == false)
             {
                 MessageBox.Show("Kiểm tra lại giá thuê ", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -345,94 +335,32 @@ namespace BEEACCOUNT.View
                 return;
             }
 
-            if (txtgiadauhientai.Text == "" || Utils.IsValidnumber(txtgiadauhientai.Text) == false)
-            {
-                MessageBox.Show("Kiểm tra lại giá dầu hiện tại ", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtgiadauhientai.Focus();
-                return;
-            }
+         
 
-
-            if (txtghichu.Text == "" || txtghichu.Text == null)
-            {
-                MessageBox.Show("Kiểm tra lại ghi chú ", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtghichu.Focus();
-                return;
-            }
-
-            if (txtphiphac.Text == "" || Utils.IsValidnumber(txtphiphac.Text) == false)
-            {
-                MessageBox.Show("Kiểm tra lại tiền phí khác ", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtphiphac.Focus();
-                return;
-            }
-
-
-            if (txtdinhmucdau.Text == "" || Utils.IsValidnumber(txtdinhmucdau.Text) == false)
-            {
-                MessageBox.Show("Kiểm tra lại định mức dầu ", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtdinhmucdau.Focus();
-                return;
-            }
-
-            if (txtchiphilaixe.Text == "" || Utils.IsValidnumber(txtchiphilaixe.Text) == false)
-            {
-                MessageBox.Show("Kiểm tra lại chi phí lái xe ước tính ! ", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtchiphilaixe.Focus();
-                return;
-            }
-
-            if (txtchiphidau.Text == "" || Utils.IsValidnumber(txtchiphidau.Text) == false)
-            {
-                MessageBox.Show("Kiểm tra lại chi phí dầu ! ", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtchiphidau.Focus();
-                return;
-            }
-
-            if (txtchiphicongan.Text == "" || Utils.IsValidnumber(txtchiphicongan.Text) == false)
-            {
-                MessageBox.Show("Kiểm tra lại chi phí công an ! ", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtchiphicongan.Focus();
-                return;
-            }
-
-            if (txtbocxep.Text == "" || Utils.IsValidnumber(txtbocxep.Text) == false)
-            {
-                MessageBox.Show("Kiểm tra lại chi phí bốc xếp ! ", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtbocxep.Focus();
-                return;
-            }
-
-            if (txtchiphicauduong.Text == "" || Utils.IsValidnumber(txtchiphicauduong.Text) == false)
-            {
-                MessageBox.Show("Kiểm tra lại chi phí cầu đường  ", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtchiphicauduong.Focus();
-                return;
-            }
             #endregion
 
 
-            this.trichdoitac = float.Parse(txttrichdoitac.Text);
+         //   this.trichdoitac = float.Parse(txttrichdoitac.Text);
 
-            this.trichcongty = float.Parse(txttrichcongty.Text);
-            this.tongchiphi = float.Parse(txttongchiphi.Text);
+           // this.trichcongty = float.Parse(txttrichcongty.Text);
+          //  this.tongchiphi = float.Parse(txttongchiphi.Text);
             this.tentuyen = txttentuyen.Text;
             this.matuyen = txtmatuyen.Text;
-            this.loinhuantuyen = float.Parse(txtloinhuantuyen.Text);
+          //  this.loinhuantuyen = float.Parse(txtloinhuantuyen.Text);
             this.loaidon = float.Parse(txtloaidon.Text);
             this.km = float.Parse(txtkm.Text);
-            this.khauhao = float.Parse(txtkhauhao.Text);
+           // this.khauhao = float.Parse(txtkhauhao.Text);
             this.giathue = float.Parse(txtgiathue.Text);
             this.giahoadon = float.Parse(txtgiahoadon.Text);
-            this.giadauhientai = float.Parse(txtgiadauhientai.Text);
-            this.ghichu = txtghichu.Text;
-            this.dtkhac = float.Parse(txtphiphac.Text); // item.ghepdiem.ToString();
-            this.dinhmucdau = float.Parse(txtdinhmucdau.Text);
-            this.chiphilaixe = float.Parse(txtchiphilaixe.Text);
-            this.chiphidau = float.Parse(txtchiphidau.Text);
-            this.chiphicongan = float.Parse(txtchiphicongan.Text);
-            this.bocxep = float.Parse(txtbocxep.Text);
-            this.chiphicauduong = float.Parse(txtchiphicauduong.Text);
+          //  this.giadauhientai = float.Parse(txtgiadauhientai.Text);
+           // this.ghichu = txtghichu.Text;
+          //  this.dtkhac = float.Parse(txtphiphac.Text); // item.ghepdiem.ToString();
+           // this.dinhmucdau = float.Parse(txtdinhmucdau.Text);
+           // this.chiphilaixe = float.Parse(txtchiphilaixe.Text);
+          //  this.chiphidau = float.Parse(txtchiphidau.Text);
+           // this.chiphicongan = float.Parse(txtchiphicongan.Text);
+           // this.bocxep = float.Parse(txtbocxep.Text);
+           // this.chiphicauduong = float.Parse(txtchiphicauduong.Text);
             this.makh = (string)(cbkhachhang.SelectedItem as ComboboxItem).Value;
 
 
@@ -519,27 +447,7 @@ namespace BEEACCOUNT.View
                 cbkhachhang.Focus();
                 return;
             }
-            if (txttrichdoitac.Text == "" || Utils.IsValidnumber(txttrichdoitac.Text) == false)
-            {
-                MessageBox.Show("Kiểm tra lại trích đối tác !", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txttrichdoitac.Focus();
-                return;
-            }
-
-            if (txttrichcongty.Text == "" || Utils.IsValidnumber(txttrichcongty.Text) == false)
-            {
-                MessageBox.Show("Kiểm tra lại trích công ty!", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txttrichcongty.Focus();
-                return;
-            }
-
-            if (txttongchiphi.Text == "" || Utils.IsValidnumber(txttongchiphi.Text) == false)
-            {
-                MessageBox.Show("Kiểm tra lại tổng chi phí !", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txttongchiphi.Focus();
-                return;
-            }
-
+        
             if (txttentuyen.Text == "" || txttentuyen.Text == null)
             {
                 MessageBox.Show("Kiểm tra lại tên tuyến !", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -554,13 +462,7 @@ namespace BEEACCOUNT.View
                 return;
             }
 
-            if (txtloinhuantuyen.Text == "" || Utils.IsValidnumber(txtloinhuantuyen.Text) == false)
-            {
-                MessageBox.Show("Kiểm tra lại lợi nhận tuyến !", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtloinhuantuyen.Focus();
-                return;
-            }
-
+         
             if (txtloaidon.Text == "" || Utils.IsValidnumber(txtloaidon.Text) == false)
             {
                 MessageBox.Show("Kiểm tra lại loại đơn !", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -573,12 +475,7 @@ namespace BEEACCOUNT.View
                 txtkm.Focus();
                 return;
             }
-            if (txtkhauhao.Text == "" || Utils.IsValidnumber(txtkhauhao.Text) == false)
-            {
-                MessageBox.Show("Kiểm tra lại khấu hao ", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtkhauhao.Focus();
-                return;
-            }
+         
             if (txtgiathue.Text == "" || Utils.IsValidnumber(txtgiathue.Text) == false)
             {
                 MessageBox.Show("Kiểm tra lại giá thuê ", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -592,94 +489,32 @@ namespace BEEACCOUNT.View
                 return;
             }
 
-            if (txtgiadauhientai.Text == "" || Utils.IsValidnumber(txtgiadauhientai.Text) == false)
-            {
-                MessageBox.Show("Kiểm tra lại giá dầu hiện tại ", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtgiadauhientai.Focus();
-                return;
-            }
-
-
-            if (txtghichu.Text == "" || txtghichu.Text == null)
-            {
-                MessageBox.Show("Kiểm tra lại ghi chú ", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtghichu.Focus();
-                return;
-            }
-
-            if (txtphiphac.Text == "" || Utils.IsValidnumber(txtphiphac.Text) == false)
-            {
-                MessageBox.Show("Kiểm tra lại tiền phí khác ", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtphiphac.Focus();
-                return;
-            }
-
-
-            if (txtdinhmucdau.Text == "" || Utils.IsValidnumber(txtdinhmucdau.Text) == false)
-            {
-                MessageBox.Show("Kiểm tra lại định mức dầu ", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtdinhmucdau.Focus();
-                return;
-            }
-
-            if (txtchiphilaixe.Text == "" || Utils.IsValidnumber(txtchiphilaixe.Text) == false)
-            {
-                MessageBox.Show("Kiểm tra lại chi phí lái xe ước tính ! ", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtchiphilaixe.Focus();
-                return;
-            }
-
-            if (txtchiphidau.Text == "" || Utils.IsValidnumber(txtchiphidau.Text) == false)
-            {
-                MessageBox.Show("Kiểm tra lại chi phí dầu ! ", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtchiphidau.Focus();
-                return;
-            }
-
-            if (txtchiphicongan.Text == "" || Utils.IsValidnumber(txtchiphicongan.Text) == false)
-            {
-                MessageBox.Show("Kiểm tra lại chi phí công an ! ", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtchiphicongan.Focus();
-                return;
-            }
-
-            if (txtbocxep.Text == "" || Utils.IsValidnumber(txtbocxep.Text) == false)
-            {
-                MessageBox.Show("Kiểm tra lại chi phí bốc xếp ! ", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtbocxep.Focus();
-                return;
-            }
-
-            if (txtchiphicauduong.Text == "" || Utils.IsValidnumber(txtchiphicauduong.Text) == false)
-            {
-                MessageBox.Show("Kiểm tra lại chi phí cầu đường  ", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtchiphicauduong.Focus();
-                return;
-            }
+         
+            
             #endregion
 
 
-            this.trichdoitac = float.Parse(txttrichdoitac.Text);
+//            this.trichdoitac = float.Parse(txttrichdoitac.Text);
 
-            this.trichcongty = float.Parse(txttrichcongty.Text);
-            this.tongchiphi = float.Parse(txttongchiphi.Text);
+  //          this.trichcongty = float.Parse(txttrichcongty.Text);
+    //        this.tongchiphi = float.Parse(txttongchiphi.Text);
             this.tentuyen = txttentuyen.Text;
             this.matuyen = txtmatuyen.Text;
-            this.loinhuantuyen = float.Parse(txtloinhuantuyen.Text);
+      //      this.loinhuantuyen = float.Parse(txtloinhuantuyen.Text);
             this.loaidon = float.Parse(txtloaidon.Text);
             this.km = float.Parse(txtkm.Text);
-            this.khauhao = float.Parse(txtkhauhao.Text);
+        //    this.khauhao = float.Parse(txtkhauhao.Text);
             this.giathue = float.Parse(txtgiathue.Text);
             this.giahoadon = float.Parse(txtgiahoadon.Text);
-            this.giadauhientai = float.Parse(txtgiadauhientai.Text);
-            this.ghichu = txtghichu.Text;
-            this.dtkhac = float.Parse(txtphiphac.Text); // item.ghepdiem.ToString();
-            this.dinhmucdau = float.Parse(txtdinhmucdau.Text);
-            this.chiphilaixe = float.Parse(txtchiphilaixe.Text);
-            this.chiphidau = float.Parse(txtchiphidau.Text);
-            this.chiphicongan = float.Parse(txtchiphicongan.Text);
-            this.bocxep = float.Parse(txtbocxep.Text);
-            this.chiphicauduong = float.Parse(txtchiphicauduong.Text);
+          //  this.giadauhientai = float.Parse(txtgiadauhientai.Text);
+          //  this.ghichu = txtghichu.Text;
+         //   this.dtkhac = float.Parse(txtphiphac.Text); // item.ghepdiem.ToString();
+         //   this.dinhmucdau = float.Parse(txtdinhmucdau.Text);
+         //   this.chiphilaixe = float.Parse(txtchiphilaixe.Text);
+         //   this.chiphidau = float.Parse(txtchiphidau.Text);
+         //   this.chiphicongan = float.Parse(txtchiphicongan.Text);
+         //   this.bocxep = float.Parse(txtbocxep.Text);
+        //    this.chiphicauduong = float.Parse(txtchiphicauduong.Text);
             this.makh = (string)(cbkhachhang.SelectedItem as ComboboxItem).Value;
 
 

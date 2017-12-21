@@ -35,8 +35,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.messageinfor = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
@@ -45,7 +45,6 @@
             this.panelmain = new System.Windows.Forms.Panel();
             this.dfasfToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ádfasdfToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.messageinfor = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,7 +55,6 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.Controls.Add(this.messageinfor);
             this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.webBrowser1);
@@ -69,28 +67,29 @@
             this.panel1.Size = new System.Drawing.Size(1336, 662);
             this.panel1.TabIndex = 20;
             // 
+            // messageinfor
+            // 
+            this.messageinfor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.messageinfor.AutoSize = true;
+            this.messageinfor.ForeColor = System.Drawing.Color.Red;
+            this.messageinfor.Location = new System.Drawing.Point(198, 649);
+            this.messageinfor.Name = "messageinfor";
+            this.messageinfor.Size = new System.Drawing.Size(35, 13);
+            this.messageinfor.TabIndex = 31;
+            this.messageinfor.Text = "label1";
+            // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(270, 3);
+            this.button2.Location = new System.Drawing.Point(210, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(81, 21);
+            this.button2.Size = new System.Drawing.Size(52, 21);
             this.button2.TabIndex = 30;
             this.button2.Text = "Seach";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(9, 7);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(54, 16);
-            this.label1.TabIndex = 29;
-            this.label1.Text = "T-Code";
-            // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(217, 3);
+            this.button1.Location = new System.Drawing.Point(170, 4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(34, 21);
             this.button1.TabIndex = 28;
@@ -99,7 +98,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(69, 5);
+            this.textBox1.Location = new System.Drawing.Point(23, 4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(142, 20);
             this.textBox1.TabIndex = 26;
@@ -165,17 +164,6 @@
             this.ádfasdfToolStripMenuItem.Text = "Thiết lập hệ thống";
             this.ádfasdfToolStripMenuItem.Click += new System.EventHandler(this.ádfasdfToolStripMenuItem_Click);
             // 
-            // messageinfor
-            // 
-            this.messageinfor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.messageinfor.AutoSize = true;
-            this.messageinfor.ForeColor = System.Drawing.Color.Red;
-            this.messageinfor.Location = new System.Drawing.Point(198, 649);
-            this.messageinfor.Name = "messageinfor";
-            this.messageinfor.Size = new System.Drawing.Size(35, 13);
-            this.messageinfor.TabIndex = 31;
-            this.messageinfor.Text = "label1";
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -205,7 +193,6 @@
         private Panel panelmain;
         private Button button1;
         private TextBox textBox1;
-        private Label label1;
         private Button button2;
         private Label messageinfor;
     }

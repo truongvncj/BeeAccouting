@@ -1053,11 +1053,12 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!cn111tien.Value+Fields!cn112tientduong.Value+Fields!cn121chungkhoan.Value+Fields!cn122ckduphong.Value+Fields!cn123dtdenngay.Value+Fields!cn131ptkhach.Value+Fields!cn132tratruoc.Value+Fields!cn133pthunbnganh.Value+Fields!cn134pthutiendokh.Value+Fields!cn135pthuchovay.Value+Fields!cn136ptnganhan.Value+Fields!cn137dpptnganhan.Value+Fields!cn139tsthieucho.Value+Fields!cn141hangton.Value+Fields!cn149duphonght.Value+Fields!cn151cftratruoc.Value+Fields!cn152vatkhautru.Value+Fields!cn153thuepthukac.Value+Fields!cn154traiphieu.Value+Fields!cn155tskhacnh.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -1093,6 +1094,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -1303,6 +1305,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -1322,7 +1325,6 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -1339,6 +1341,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -1549,6 +1552,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -1584,6 +1588,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -1794,6 +1799,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -1829,6 +1835,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -2034,11 +2041,12 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!cn121chungkhoan.Value+Fields!cn122ckduphong.Value+Fields!cn123dtdenngay.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -2074,6 +2082,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -2284,6 +2293,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -2529,6 +2539,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -2774,6 +2785,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -3014,11 +3026,12 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!cn131ptkhach.Value+Fields!cn132tratruoc.Value+Fields!cn133pthunbnganh.Value+Fields!cn134pthutiendokh.Value+Fields!cn135pthuchovay.Value+Fields!cn136ptnganhan.Value+Fields!cn137dpptnganhan.Value+Fields!cn139tsthieucho.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -3264,6 +3277,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -3277,26 +3291,6 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Border>
                           <Style>Solid</Style>
                         </Border>
-                        <TopBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </TopBorder>
-                        <BottomBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </BottomBorder>
-                        <LeftBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </LeftBorder>
-                        <RightBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </RightBorder>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -3529,6 +3523,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -3774,6 +3769,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -4019,6 +4015,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -4264,6 +4261,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -4509,6 +4507,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -4754,6 +4753,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -4999,6 +4999,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -5239,11 +5240,12 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!cn141hangton.Value+Fields!cn149duphonght.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -5489,6 +5491,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -5734,6 +5737,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -5974,11 +5978,12 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!cn151cftratruoc.Value+Fields!cn152vatkhautru.Value+Fields!cn153thuepthukac.Value+Fields!cn154traiphieu.Value+Fields!cn155tskhacnh.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -6224,6 +6229,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -6469,6 +6475,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -6714,6 +6721,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -6959,6 +6967,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -7204,6 +7213,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -7444,11 +7454,12 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!cn211ptkhach.Value+Fields!cn212tratruocdh.Value+Fields!cn213vonodonvi.Value+Fields!cn214pthunbo.Value+Fields!cn215pthuchovay.Value+Fields!cn216pthukhac.Value+Fields!cn219duphongpt.Value+Fields!cn223tskhauh.Value+Fields!cn222tscdngia.Value+Fields!cn225tscdthung.Value+Fields!cn226tscdthuekha.Value+Fields!cn228tscdvohnggia.Value+Fields!cn229tscdvhkhauh.Value+Fields!cn231bdsngia.Value+Fields!cn232bdshaomon.Value+Fields!cn231bdsngia.Value+Fields!cn232bdshaomon.Value+Fields!cn241cfkddd.Value+Fields!cn242cfxddd.Value+Fields!cn251dtuctycon.Value+Fields!cn252dtuctylienket.Value+Fields!cn253dtukhac.Value+Fields!cn254duphongdt.Value+Fields!cn255dtudaohan.Value+Fields!cn261cftratruocdn.Value+Fields!cn262thuetndnhl.Value+Fields!cn263vtuthietbidn.Value+Fields!cn268tskhac.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -7689,11 +7700,12 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!cn211ptkhach.Value+Fields!cn212tratruocdh.Value+Fields!cn213vonodonvi.Value+Fields!cn214pthunbo.Value+Fields!cn215pthuchovay.Value+Fields!cn216pthukhac.Value+Fields!cn219duphongpt.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -7939,6 +7951,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -8184,6 +8197,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -8429,6 +8443,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -8674,6 +8689,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -8919,6 +8935,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -9164,6 +9181,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -9409,6 +9427,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -9649,11 +9668,12 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!cn223tskhauh.Value+Fields!cn222tscdngia.Value+Fields!cn225tscdthung.Value+Fields!cn226tscdthuekha.Value+Fields!cn228tscdvohnggia.Value+Fields!cn229tscdvhkhauh.Value+Fields!cn231bdsngia.Value+Fields!cn232bdshaomon.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -9894,11 +9914,12 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!cn223tskhauh.Value+Fields!cn222tscdngia.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -10144,6 +10165,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -10389,6 +10411,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -10629,11 +10652,12 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!cn225tscdthung.Value+Fields!cn226tscdthuekha.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -10879,6 +10903,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -11124,6 +11149,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -11364,11 +11390,12 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!cn228tscdvohnggia.Value+Fields!cn229tscdvhkhauh.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -11614,6 +11641,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -11859,6 +11887,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -12099,11 +12128,12 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!cn231bdsngia.Value+Fields!cn232bdshaomon.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -12349,6 +12379,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -12594,6 +12625,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -12834,11 +12866,12 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!cn241cfkddd.Value+Fields!cn242cfxddd.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -13084,6 +13117,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -13329,6 +13363,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -13569,11 +13604,12 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!cn251dtuctycon.Value+Fields!cn252dtuctylienket.Value+Fields!cn253dtukhac.Value+Fields!cn254duphongdt.Value+Fields!cn255dtudaohan.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -13819,6 +13855,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -14064,6 +14101,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -14309,6 +14347,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -14554,6 +14593,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -14799,6 +14839,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -15039,11 +15080,12 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!cn261cftratruocdn.Value+Fields!cn262thuetndnhl.Value+Fields!cn263vtuthietbidn.Value+Fields!cn268tskhac.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -15289,6 +15331,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -15534,6 +15577,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -15779,6 +15823,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -16024,6 +16069,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -16282,11 +16328,12 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!cn111tien.Value+Fields!cn112tientduong.Value+Fields!cn121chungkhoan.Value+Fields!cn122ckduphong.Value+Fields!cn123dtdenngay.Value+Fields!cn131ptkhach.Value+Fields!cn132tratruoc.Value+Fields!cn133pthunbnganh.Value+Fields!cn134pthutiendokh.Value+Fields!cn135pthuchovay.Value+Fields!cn136ptnganhan.Value+Fields!cn137dpptnganhan.Value+Fields!cn139tsthieucho.Value+Fields!cn141hangton.Value+Fields!cn149duphonght.Value+Fields!cn151cftratruoc.Value+Fields!cn152vatkhautru.Value+Fields!cn153thuepthukac.Value+Fields!cn154traiphieu.Value+Fields!cn155tskhacnh.Value+Fields!cn211ptkhach.Value+Fields!cn212tratruocdh.Value+Fields!cn213vonodonvi.Value+Fields!cn214pthunbo.Value+Fields!cn215pthuchovay.Value+Fields!cn216pthukhac.Value+Fields!cn219duphongpt.Value+Fields!cn223tskhauh.Value+Fields!cn222tscdngia.Value+Fields!cn225tscdthung.Value+Fields!cn226tscdthuekha.Value+Fields!cn228tscdvohnggia.Value+Fields!cn229tscdvhkhauh.Value+Fields!cn231bdsngia.Value+Fields!cn232bdshaomon.Value+Fields!cn231bdsngia.Value+Fields!cn232bdshaomon.Value+Fields!cn241cfkddd.Value+Fields!cn242cfxddd.Value+Fields!cn251dtuctycon.Value+Fields!cn252dtuctylienket.Value+Fields!cn253dtukhac.Value+Fields!cn254duphongdt.Value+Fields!cn255dtudaohan.Value+Fields!cn261cftratruocdn.Value+Fields!cn262thuetndnhl.Value+Fields!cn263vtuthietbidn.Value+Fields!cn268tskhac.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -16527,11 +16574,12 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!cn311ptnbannh.Value+Fields!cn312ngmuatratr.Value+Fields!cn313thuephainop.Value+Fields!cn314ptracnhan.Value+Fields!cn315cphiptranh.Value+Fields!cn316cfptranbonh.Value+Fields!cn317ptrtheoluong.Value+Fields!cn318pthuchunhan.Value+Fields!cn319ptranhan.Value+Fields!cn320vaynotcnhan.Value+Fields!cn321duphptranh.Value+Fields!cn322quykhen.Value+Fields!cn323quygia.Value+Fields!cn324bantraiphieu.Value+Fields!cn331nodnngban.Value+Fields!cn332ngmuatratdn.Value+Fields!cn333cphiphaitra.Value+Fields!cn334ptranbvevon.Value+Fields!cn335ptranbdaihan.Value+Fields!cn336dthuchthdn.Value+Fields!cn337ptradnkhac.Value+Fields!cn338vaynodn.Value+Fields!cn339traiphieu.Value+Fields!cn340cophieu.Value+Fields!cn341tnhoanlai.Value+Fields!cn342duphongdn.Value+Fields!cn343quykhoahoc.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -16772,11 +16820,12 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!cn311ptnbannh.Value+Fields!cn312ngmuatratr.Value+Fields!cn313thuephainop.Value+Fields!cn314ptracnhan.Value+Fields!cn315cphiptranh.Value+Fields!cn316cfptranbonh.Value+Fields!cn317ptrtheoluong.Value+Fields!cn318pthuchunhan.Value+Fields!cn319ptranhan.Value+Fields!cn320vaynotcnhan.Value+Fields!cn321duphptranh.Value+Fields!cn322quykhen.Value+Fields!cn323quygia.Value+Fields!cn324bantraiphieu.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -17022,6 +17071,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -17267,6 +17317,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -17512,6 +17563,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -17757,6 +17809,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -18002,6 +18055,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -18247,6 +18301,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -18492,6 +18547,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -18737,6 +18793,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -18982,6 +19039,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -19227,6 +19285,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -19472,6 +19531,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -19717,6 +19777,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -19962,6 +20023,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -20207,6 +20269,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -20447,11 +20510,12 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!cn331nodnngban.Value+Fields!cn332ngmuatratdn.Value+Fields!cn333cphiphaitra.Value+Fields!cn334ptranbvevon.Value+Fields!cn335ptranbdaihan.Value+Fields!cn336dthuchthdn.Value+Fields!cn337ptradnkhac.Value+Fields!cn338vaynodn.Value+Fields!cn339traiphieu.Value+Fields!cn340cophieu.Value+Fields!cn341tnhoanlai.Value+Fields!cn342duphongdn.Value+Fields!cn343quykhoahoc.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -20697,6 +20761,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -20942,6 +21007,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -21187,6 +21253,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -21432,6 +21499,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -21677,6 +21745,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -21922,6 +21991,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -22167,6 +22237,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -22412,6 +22483,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -22657,6 +22729,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -22902,6 +22975,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -23147,6 +23221,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -23392,6 +23467,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -23655,6 +23731,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -23895,11 +23972,12 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!cn411vongopcsh.Value+Fields!cn412thangduvon.Value+Fields!cn413traiphieu.Value+Fields!cn414voncshkhac.Value+Fields!cn415cphieuquy.Value+Fields!cn416chenhlechts.Value+Fields!cn417tygia.Value+Fields!cn418dautuptrien.Value+Fields!cn419quyxxdn.Value+Fields!cn420quykhacsh.Value+Fields!cn421lnsauthue.Value+Fields!cn422vonxdcb.Value+Fields!cn431nkinhphi.Value+Fields!cn432kpthanhtscd.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -24140,11 +24218,12 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!cn411vongopcsh.Value+Fields!cn412thangduvon.Value+Fields!cn413traiphieu.Value+Fields!cn414voncshkhac.Value+Fields!cn415cphieuquy.Value+Fields!cn416chenhlechts.Value+Fields!cn417tygia.Value+Fields!cn418dautuptrien.Value+Fields!cn419quyxxdn.Value+Fields!cn420quykhacsh.Value+Fields!cn421lnsauthue.Value+Fields!cn422vonxdcb.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -24390,6 +24469,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -24635,6 +24715,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -24880,6 +24961,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -25125,6 +25207,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -25370,6 +25453,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -25615,6 +25699,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -25860,6 +25945,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -26105,6 +26191,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -26350,6 +26437,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -26595,6 +26683,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -26840,6 +26929,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -27085,6 +27175,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -27330,6 +27421,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -27575,6 +27667,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -27820,6 +27913,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -28065,6 +28159,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -28305,11 +28400,12 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!cn431nkinhphi.Value+Fields!cn432kpthanhtscd.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -28555,6 +28651,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -28800,6 +28897,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -29040,11 +29138,12 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!cn311ptnbannh.Value+Fields!cn312ngmuatratr.Value+Fields!cn313thuephainop.Value+Fields!cn314ptracnhan.Value+Fields!cn315cphiptranh.Value+Fields!cn316cfptranbonh.Value+Fields!cn317ptrtheoluong.Value+Fields!cn318pthuchunhan.Value+Fields!cn319ptranhan.Value+Fields!cn320vaynotcnhan.Value+Fields!cn321duphptranh.Value+Fields!cn322quykhen.Value+Fields!cn323quygia.Value+Fields!cn324bantraiphieu.Value+Fields!cn331nodnngban.Value+Fields!cn332ngmuatratdn.Value+Fields!cn333cphiphaitra.Value+Fields!cn334ptranbvevon.Value+Fields!cn335ptranbdaihan.Value+Fields!cn336dthuchthdn.Value+Fields!cn337ptradnkhac.Value+Fields!cn338vaynodn.Value+Fields!cn339traiphieu.Value+Fields!cn340cophieu.Value+Fields!cn341tnhoanlai.Value+Fields!cn342duphongdn.Value+Fields!cn343quykhoahoc.Value+Fields!cn411vongopcsh.Value+Fields!cn412thangduvon.Value+Fields!cn413traiphieu.Value+Fields!cn414voncshkhac.Value+Fields!cn415cphieuquy.Value+Fields!cn416chenhlechts.Value+Fields!cn417tygia.Value+Fields!cn418dautuptrien.Value+Fields!cn419quyxxdn.Value+Fields!cn420quykhacsh.Value+Fields!cn421lnsauthue.Value+Fields!cn422vonxdcb.Value+Fields!cn431nkinhphi.Value+Fields!cn432kpthanhtscd.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -29064,6 +29163,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>

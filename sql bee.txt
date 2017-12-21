@@ -925,4 +925,103 @@ CREATE TABLE [dbo].[tbl_Temp](
 
 GO
 
+USE [BEE]
+GO
+
+/****** Object:  Table [dbo].[RPtdetaillchuyenttttiep]    Script Date: 19/12/2017 7:36:13 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[RPtdetaillchuyenttttiep](
+	[nn01thudthu] [float] NULL,
+	[nn02chiccap] [float] NULL,
+	[nn03chilaodong] [float] NULL,
+	[nn05chithuetndn] [float] NULL,
+	[nn06thukhac] [float] NULL,
+	[nn07chikhac] [float] NULL,
+	[nn20llkd] [float] NULL,
+	[nn21chitsan] [float] NULL,
+	[nn22thutaisan] [float] NULL,
+	[nn23chichovay] [float] NULL,
+	[nn25chidtdonvikhac] [float] NULL,
+	[nn26thudtdonvikhac] [float] NULL,
+	[nn27thulaicotuc] [float] NULL,
+	[nn31thucophieu] [float] NULL,
+	[nn32chitravon] [float] NULL,
+	[nn33thudivay] [float] NULL,
+	[nn34tragoc] [float] NULL,
+	[nn35tragocthue] [float] NULL,
+	[nn36tracotuc] [float] NULL,
+	[nn50lltrongky] [float] NULL,
+	[nn60tiendauky] [float] NULL,
+	[nn61tientygia] [float] NULL,
+	[nn70tiencuoiky] [float] NULL,
+	[nt01thudthu] [float] NULL,
+	[nt02chiccap] [float] NULL,
+	[nt03chilaodong] [float] NULL,
+	[nt04chilaivay] [float] NULL,
+	[nt05chithuetndn] [float] NULL,
+	[nt06thukhac] [float] NULL,
+	[nt07chikhac] [float] NULL,
+	[nt21chitsan] [float] NULL,
+	[nt22thutaisan] [float] NULL,
+	[nt23chichovay] [float] NULL,
+	[nt24thuchovay] [float] NULL,
+	[nt25chidtdonvikhac] [float] NULL,
+	[nt26thudtdonvikhac] [float] NULL,
+	[nt31thucophieu] [float] NULL,
+	[nt32chitravon] [float] NULL,
+	[nt33thudivay] [float] NULL,
+	[nt34tragoc] [float] NULL,
+	[nt27thulaicotuc] [float] NULL,
+	[nt20llkd] [float] NULL,
+	[nn24thuchovay] [float] NULL,
+	[nn04chilaivay] [float] NULL,
+	[nt35tragocthue] [float] NULL,
+	[nt36tracotuc] [float] NULL,
+	[nt50lltrongky] [float] NULL,
+	[nt60tiendauky] [float] NULL,
+	[nt70tiencuoiky] [float] NULL,
+	[nt61tientygia] [float] NULL,
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[username] [nvarchar](50) NULL,
+ CONSTRAINT [PK_RPtdetaillchuyenttttiep] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+USE [BEE]
+GO
+
+/****** Object:  Table [dbo].[RPtheadLCTTTtiep]    Script Date: 19/12/2017 7:36:48 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[RPtheadLCTTTtiep](
+	[nam] [nvarchar](4) NULL,
+	[giamdoc] [nvarchar](50) NULL,
+	[ketoantruong] [nvarchar](50) NULL,
+	[nguoighiso] [nvarchar](50) NULL,
+	[tencongty] [nvarchar](225) NULL,
+	[masothue] [nvarchar](50) NULL,
+	[diachicongty] [nvarchar](225) NULL,
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[username] [nvarchar](50) NULL,
+	[taikhoan] [nvarchar](50) NULL,
+ CONSTRAINT [PK_RPtheadLCTTTtiep] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
 
