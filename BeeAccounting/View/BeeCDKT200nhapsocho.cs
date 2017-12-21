@@ -60,7 +60,7 @@ namespace BEEACCOUNT.View
                 dataGridView1.DataSource = tble1;
 
 
-             
+
 
 
 
@@ -84,7 +84,7 @@ namespace BEEACCOUNT.View
 
                 dataGridView1.DataSource = tble2;
 
-            
+
             }
 
             dataGridView1.Columns["ID"].SortMode = DataGridViewColumnSortMode.NotSortable;
@@ -269,57 +269,86 @@ namespace BEEACCOUNT.View
         private void btchangecontractitem_Click(object sender, EventArgs e)
         {
 
-            //string connection_string = Utils.getConnectionstr();
+            string connection_string = Utils.getConnectionstr();
 
-            //LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
-
-            //#region  kiểm tra
-            //if (Utils.IsValidnumber(txtdk111.Text) ==false)
-            //{
-            //    //   Control.Control_ac ctr12 = new Control_ac();
-            //    MessageBox.Show("Kiểm tra doanh thu ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //    //    ctr12.
-
-            //    txtdk111.Focus();
-            //    return;
-            //}
+            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
 
 
 
-            //#endregion
-
-            //var kq = (from p in dc.KQKD200s
-            //          where p.nam == namchon
-            //          select p).FirstOrDefault();
-            //if (kq != null)
-            //{
-
-            //    kq.dthu01 = float.Parse(txtdk111.Text); // 
-
-
-
-
-            //    dc.SubmitChanges();
-            //}
-            //else
-            //{
-            //    KQKD200 p = new KQKD200();
-
-            //    p.dthu01 = float.Parse(txtdk111.Text); // 
-
-            //    p.nam = this.namchon;
+            var kq = (from p in dc.CDKT200s
+                      where p.nam == namchon
+                      select p);
+            if (kq.Count() > 0)
+            {
+                foreach (var c in dataGridView1.Rows)
+                {
+                    DataGridViewRow ro = (DataGridViewRow)c;
+                    int id2 = (int)ro.Cells["ID"].Value;
+                    var ma = (from p in dc.CDKT200s
+                              where p.id == id2
+                              select p).FirstOrDefault();
 
 
+                    if (ma != null)
+                    {
+
+                        ma.Machitieu = (int)ro.Cells["Mã_số"].Value;
+                        ma.Tenchitieu = (string)ro.Cells["Chỉ_tiêu"].Value;
+                        ma.Cachghi = (string)ro.Cells["Cách_ghi"].Value;
+                        ma.Sotien = (double)ro.Cells["Số_cuối_năm"].Value;
+                        ma.stat = 0;
+                        ma.username = Utils.getname();
+
+                     
+                        dc.SubmitChanges();
+                    }
+
+                 
+                }
 
 
-            //    dc.KQKD200s.InsertOnSubmit(p);
-            //    dc.SubmitChanges();
+
+               
+            }
+            else
+            {
+
+                foreach (var c in dataGridView1.Rows)
+                {
+
+                    // Chỉ_tiêu = p.Tenchitieu,
+                    //          Mã_số = p.Machitieu,
+                    //          Cách_ghi = p.Cachghi,
+                    //          Số_cuối_năm = p.Sotien,
+                    //          ID = p.id
+                    DataGridViewRow ro = (DataGridViewRow)c;
+                    CDKT200 p = new CDKT200();
+                    p.nam = this.namchon;
+                  
+                    p.Machitieu = (int)ro.Cells["Mã_số"].Value;
+                    p.Tenchitieu = (string)ro.Cells["Chỉ_tiêu"].Value;
+                    p.Cachghi = (string)ro.Cells["Cách_ghi"].Value;
+                    p.Sotien = (double)ro.Cells["Số_cuối_năm"].Value;
+                    p.stat = 0;
+                    p.username = Utils.getname();
+                   
+                    dc.CDKT200s.InsertOnSubmit(p);
+                    dc.SubmitChanges();
+                }
 
 
 
-            //}
-            //MessageBox.Show("Đã cập nhật theo dữ liệu nhập vào ! ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //this.Close();
+                //int id = (int)this.dataGridView1.Rows[this.dataGridView1.CurrentCell.RowIndex].Cells["ID"].Value;
+                //var 
+
+
+
+
+
+
+            }
+            MessageBox.Show("Đã cập nhật theo dữ liệu nhập vào ! ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.Close();
 
         }
 
