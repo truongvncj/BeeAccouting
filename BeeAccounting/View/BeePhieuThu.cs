@@ -1520,6 +1520,7 @@ namespace BEEACCOUNT.View
                     else
                     {
                         lbtenchitietno.Text = "";
+                        lb_machitietno.Text = "";
 
                     }
 
@@ -2062,7 +2063,7 @@ namespace BEEACCOUNT.View
 
             #region if la slect tai khoan co chi tiet
 
-            if (colname == "Tk_Có" && SelectedItem != "")
+            if (colname == "Tk_Có" && SelectedItem != "" && currentCell.Value != null)
             {
                 string taikhoan = currentCell.Value.ToString();
                 string connection_string = Utils.getConnectionstr();

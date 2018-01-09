@@ -281,3 +281,5 @@ E:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.BeeBCKQKD200
 E:\Product\BeeAccouting\BeeAccounting\bin\x86\Debug\Reports\BangCDKToant200lt.rdlc
 E:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.BeeCDKT200nhapsocho.resources
 E:\Product\BeeAccouting\BeeAccounting\bin\x86\Debug\Reports\BaocaoLuuchuyenttett.rdlc
+E:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.BeeLCTT200dauky.resources
+E:\Product\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.BeePhieuchi2.resources

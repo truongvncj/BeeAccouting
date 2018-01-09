@@ -20,7 +20,32 @@ namespace BEEACCOUNT
 {
     class Utils
     {
+        public static DateTime getEndOfMonth(DateTime date)
+        {
+            if (date.Month == 12)
+            {
+                // nếu là tháng 12 thì trả về ngày 31
+                return new DateTime(date.Year, date.Month, 31);
+            }
+            // chuyển tới ngày đầu tiên của tháng kế tiếp
+            DateTime tem = new DateTime(date.Year, date.Month + 1, 1);
+            // lùi lại 1 ngày là về ngày cuối tháng của tháng hiện tại rồi. 
+            return tem.AddDays(-1);
+        }
 
+
+        public static DateTime getFirstOfMonth(DateTime date)
+        {
+            if (date.Month == 1)
+            {
+                // nếu là tháng 12 thì trả về ngày 31
+                return new DateTime(date.Year, date.Month, 01);
+            }
+            // chuyển tới ngày đầu tiên của tháng kế tiếp
+            DateTime tem = new DateTime(date.Year, date.Month, 01);
+            // lùi lại 1 ngày là về ngày cuối tháng của tháng hiện tại rồi. 
+            return tem;
+        }
 
         // public static string ChuyenSo(string number)
         public static string ChuyenSo(decimal total)  //đọc đc 18 số vd: 999999999999999999

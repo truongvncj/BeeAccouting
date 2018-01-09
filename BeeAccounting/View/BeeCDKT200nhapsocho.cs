@@ -40,14 +40,14 @@ namespace BEEACCOUNT.View
             txtnam.Enabled = false;
 
 
-            var kq = from p in dc.CDKT200s
+            var kq = from p in dc.CDKT200Daukies
                      where p.nam == namchon
                      select new
                      {
                          Chỉ_tiêu = p.Tenchitieu,
                          Mã_số = p.Machitieu,
                          Cách_ghi = p.Cachghi,
-                         Số_cuối_năm = p.Sotien,
+                         Số_đầu_kỳ = p.Sotien,
                          ID = p.id
 
                      }; ;
@@ -67,14 +67,14 @@ namespace BEEACCOUNT.View
             }
             else
             {
-                var kq2 = from p in dc.CDKT200s
+                var kq2 = from p in dc.CDKT200Daukies
                           where p.nam == 2006
                           select new
                           {
                               Chỉ_tiêu = p.Tenchitieu,
                               Mã_số = p.Machitieu,
                               Cách_ghi = p.Cachghi,
-                              Số_cuối_năm = p.Sotien,
+                              Số_đầu_kỳ = p.Sotien,
                               ID = p.id
 
                           };
@@ -88,7 +88,7 @@ namespace BEEACCOUNT.View
             }
 
             dataGridView1.Columns["ID"].SortMode = DataGridViewColumnSortMode.NotSortable;
-            dataGridView1.Columns["ID"].ReadOnly = true;
+            dataGridView1.Columns["ID"].Visible = false;
 
             dataGridView1.Columns["Mã_số"].SortMode = DataGridViewColumnSortMode.NotSortable;
             dataGridView1.Columns["Mã_số"].ReadOnly = true;
@@ -98,8 +98,8 @@ namespace BEEACCOUNT.View
             dataGridView1.Columns["Chỉ_tiêu"].SortMode = DataGridViewColumnSortMode.NotSortable;
             dataGridView1.Columns["Chỉ_tiêu"].ReadOnly = true;
 
-            dataGridView1.Columns["Số_cuối_năm"].SortMode = DataGridViewColumnSortMode.NotSortable;
-            dataGridView1.Columns["Số_cuối_năm"].DefaultCellStyle.BackColor = Color.BurlyWood;
+            dataGridView1.Columns["Số_đầu_kỳ"].SortMode = DataGridViewColumnSortMode.NotSortable;
+            dataGridView1.Columns["Số_đầu_kỳ"].DefaultCellStyle.BackColor = Color.BurlyWood;
 
             //        idtk = (int)this.dataGridView1.Rows[this.dataGridView1.CurrentCell.RowIndex].Cells["ID"].Value;
 
@@ -275,7 +275,7 @@ namespace BEEACCOUNT.View
 
 
 
-            var kq = (from p in dc.CDKT200s
+            var kq = (from p in dc.CDKT200Daukies
                       where p.nam == namchon
                       select p);
             if (kq.Count() > 0)
@@ -284,7 +284,7 @@ namespace BEEACCOUNT.View
                 {
                     DataGridViewRow ro = (DataGridViewRow)c;
                     int id2 = (int)ro.Cells["ID"].Value;
-                    var ma = (from p in dc.CDKT200s
+                    var ma = (from p in dc.CDKT200Daukies
                               where p.id == id2
                               select p).FirstOrDefault();
 
@@ -295,7 +295,7 @@ namespace BEEACCOUNT.View
                         ma.Machitieu = (int)ro.Cells["Mã_số"].Value;
                         ma.Tenchitieu = (string)ro.Cells["Chỉ_tiêu"].Value;
                         ma.Cachghi = (string)ro.Cells["Cách_ghi"].Value;
-                        ma.Sotien = (double)ro.Cells["Số_cuối_năm"].Value;
+                        ma.Sotien = (double)ro.Cells["Số_đầu_kỳ"].Value;
                         ma.stat = 0;
                         ma.username = Utils.getname();
 
@@ -322,17 +322,17 @@ namespace BEEACCOUNT.View
                     //          Số_cuối_năm = p.Sotien,
                     //          ID = p.id
                     DataGridViewRow ro = (DataGridViewRow)c;
-                    CDKT200 p = new CDKT200();
+                    CDKT200Dauky p = new CDKT200Dauky();
                     p.nam = this.namchon;
                   
                     p.Machitieu = (int)ro.Cells["Mã_số"].Value;
                     p.Tenchitieu = (string)ro.Cells["Chỉ_tiêu"].Value;
                     p.Cachghi = (string)ro.Cells["Cách_ghi"].Value;
-                    p.Sotien = (double)ro.Cells["Số_cuối_năm"].Value;
+                    p.Sotien = (double)ro.Cells["Số_đầu_kỳ"].Value;
                     p.stat = 0;
                     p.username = Utils.getname();
                    
-                    dc.CDKT200s.InsertOnSubmit(p);
+                    dc.CDKT200Daukies.InsertOnSubmit(p);
                     dc.SubmitChanges();
                 }
 

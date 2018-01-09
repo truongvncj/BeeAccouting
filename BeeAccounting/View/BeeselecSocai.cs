@@ -38,10 +38,16 @@ namespace BEEACCOUNT.View
             this.tentaikhoan = "";
             this.tentaikhoanchitiet = "";
 
+            pk_todate.Value = DateTime.Today;
+            pkfromdate.Value = Utils.getFirstOfMonth(DateTime.Today); // DateTime.Today.AddDays(-double.Parse(DateTime.Today.Day.ToString()));
+
+
             chon = false;
 
             string connection_string = Utils.getConnectionstr();
             LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+
 
             #region load socai
             var rs2 = from tk in dc.tbl_dstaikhoans

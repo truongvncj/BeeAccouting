@@ -51,10 +51,10 @@
             // txtChenlech
             // 
             this.txtChenlech.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtChenlech.Location = new System.Drawing.Point(134, 62);
+            this.txtChenlech.Location = new System.Drawing.Point(156, 63);
             this.txtChenlech.Name = "txtChenlech";
             this.txtChenlech.ReadOnly = true;
-            this.txtChenlech.Size = new System.Drawing.Size(208, 24);
+            this.txtChenlech.Size = new System.Drawing.Size(233, 24);
             this.txtChenlech.TabIndex = 31;
             this.txtChenlech.TabStop = false;
             // 
@@ -62,17 +62,17 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(13, 65);
+            this.label2.Location = new System.Drawing.Point(12, 66);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(82, 18);
+            this.label2.Size = new System.Drawing.Size(137, 18);
             this.label2.TabIndex = 33;
-            this.label2.Text = "Chênh lệch";
+            this.label2.Text = "Tổng Có - Tổng Nợ";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(12, 9);
+            this.label3.Location = new System.Drawing.Point(12, 41);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(66, 18);
             this.label3.TabIndex = 35;
@@ -81,16 +81,16 @@
             // txtTongno
             // 
             this.txtTongno.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTongno.Location = new System.Drawing.Point(134, 6);
+            this.txtTongno.Location = new System.Drawing.Point(156, 36);
             this.txtTongno.Name = "txtTongno";
             this.txtTongno.ReadOnly = true;
-            this.txtTongno.Size = new System.Drawing.Size(208, 24);
+            this.txtTongno.Size = new System.Drawing.Size(233, 24);
             this.txtTongno.TabIndex = 34;
             this.txtTongno.TabStop = false;
             // 
             // bt_themvao
             // 
-            this.bt_themvao.Location = new System.Drawing.Point(348, 245);
+            this.bt_themvao.Location = new System.Drawing.Point(370, 245);
             this.bt_themvao.Name = "bt_themvao";
             this.bt_themvao.Size = new System.Drawing.Size(103, 23);
             this.bt_themvao.TabIndex = 7;
@@ -120,7 +120,7 @@
             this.tbmachitiet.AutoSize = true;
             this.tbmachitiet.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbmachitiet.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.tbmachitiet.Location = new System.Drawing.Point(125, 56);
+            this.tbmachitiet.Location = new System.Drawing.Point(147, 56);
             this.tbmachitiet.Name = "tbmachitiet";
             this.tbmachitiet.Size = new System.Drawing.Size(40, 16);
             this.tbmachitiet.TabIndex = 62;
@@ -139,7 +139,7 @@
             // txtsotien
             // 
             this.txtsotien.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtsotien.Location = new System.Drawing.Point(127, 79);
+            this.txtsotien.Location = new System.Drawing.Point(149, 79);
             this.txtsotien.Name = "txtsotien";
             this.txtsotien.Size = new System.Drawing.Size(207, 24);
             this.txtsotien.TabIndex = 1;
@@ -149,9 +149,9 @@
             // txtdiachi
             // 
             this.txtdiachi.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtdiachi.Location = new System.Drawing.Point(127, 112);
+            this.txtdiachi.Location = new System.Drawing.Point(149, 112);
             this.txtdiachi.Name = "txtdiachi";
-            this.txtdiachi.Size = new System.Drawing.Size(402, 24);
+            this.txtdiachi.Size = new System.Drawing.Size(317, 24);
             this.txtdiachi.TabIndex = 2;
             this.txtdiachi.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtdiachi_KeyPress);
             // 
@@ -180,7 +180,7 @@
             this.lbtenchitiet.AutoSize = true;
             this.lbtenchitiet.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbtenchitiet.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lbtenchitiet.Location = new System.Drawing.Point(171, 56);
+            this.lbtenchitiet.Location = new System.Drawing.Point(193, 56);
             this.lbtenchitiet.Name = "lbtenchitiet";
             this.lbtenchitiet.Size = new System.Drawing.Size(72, 16);
             this.lbtenchitiet.TabIndex = 34;
@@ -192,7 +192,7 @@
             this.cbtkno.DropDownWidth = 350;
             this.cbtkno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbtkno.FormattingEnabled = true;
-            this.cbtkno.Location = new System.Drawing.Point(127, 29);
+            this.cbtkno.Location = new System.Drawing.Point(149, 29);
             this.cbtkno.Name = "cbtkno";
             this.cbtkno.Size = new System.Drawing.Size(317, 24);
             this.cbtkno.TabIndex = 0;
@@ -202,7 +202,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(12, 36);
+            this.label9.Location = new System.Drawing.Point(12, 9);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(66, 18);
             this.label9.TabIndex = 37;
@@ -211,10 +211,10 @@
             // txtTongco
             // 
             this.txtTongco.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTongco.Location = new System.Drawing.Point(134, 33);
+            this.txtTongco.Location = new System.Drawing.Point(156, 6);
             this.txtTongco.Name = "txtTongco";
             this.txtTongco.ReadOnly = true;
-            this.txtTongco.Size = new System.Drawing.Size(208, 24);
+            this.txtTongco.Size = new System.Drawing.Size(233, 24);
             this.txtTongco.TabIndex = 36;
             this.txtTongco.TabStop = false;
             // 
@@ -228,9 +228,9 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.bt_themvao);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtTongno);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtChenlech);
+            this.Controls.Add(this.txtTongno);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;

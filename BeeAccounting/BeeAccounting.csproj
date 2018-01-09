@@ -141,6 +141,12 @@
     <Compile Include="shared\ExtractToDataTableOptions.cs" />
     <Compile Include="shared\LinQToExcel.cs" />
     <Compile Include="shared\StringExtensions.cs" />
+    <Compile Include="View\BeeLCTT200dauky.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\BeeLCTT200dauky.Designer.cs">
+      <DependentUpon>BeeLCTT200dauky.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\BeeCDKT200nhapsocho.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,6 +158,12 @@
     </Compile>
     <Compile Include="View\BeeBCKQKD200updatechotso.Designer.cs">
       <DependentUpon>BeeBCKQKD200updatechotso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\BeePhieuchi2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\BeePhieuchi2.Designer.cs">
+      <DependentUpon>BeePhieuchi2.cs</DependentUpon>
     </Compile>
     <Compile Include="View\NPgiavantaitheotuyen.cs">
       <SubType>Form</SubType>
@@ -504,11 +516,17 @@
     <EmbeddedResource Include="Reports\Paymentrequest.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\BeeLCTT200dauky.resx">
+      <DependentUpon>BeeLCTT200dauky.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\BeeCDKT200nhapsocho.resx">
       <DependentUpon>BeeCDKT200nhapsocho.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\BeeBCKQKD200updatechotso.resx">
       <DependentUpon>BeeBCKQKD200updatechotso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\BeePhieuchi2.resx">
+      <DependentUpon>BeePhieuchi2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\NPgiavantaitheotuyen.resx">
       <DependentUpon>NPgiavantaitheotuyen.cs</DependentUpon>

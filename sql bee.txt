@@ -1239,4 +1239,2403 @@ CREATE TABLE [dbo].[RPtdetailCDKT200lientuc](
 
 GO
 
+USE [BEE]
+GO
+/****** Object:  StoredProcedure [dbo].[calulationCDKT200loai1]    Script Date: 22/12/2017 11:15:49 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+
+
+ALTER procedure  [dbo].[calulationCDKT200loai1]
+( 
+@username nvarchar (225) ,
+ @yearchon INT 
+
+
+)
+ 
+as
+
+
+begin
+
+
+		IF OBJECT_ID(N'tempdb..#TempResults', N'U') IS NOT NULL 
+        DROP TABLE #TempResults;
+
+		CREATE TABLE #TempResults
+			(
+		                       matk Nvarchar(10),
+								loainganhan bit, 
+                             	machitiet int,
+                                tPSNo float,
+                                tPSCo float,
+								tPsNotruPSco float,
+							
+			)
+
+
+
+		begin
+        insert into #TempResults (matk,loainganhan, machitiet, tPSCo, tPSNo )
+		SELECT tbl_Socai.TkCo,tbl_Socai.[nganhan], ISNULL(tbl_Socai.MaCTietTKCo, -1), SUM(tbl_Socai.PsCo),'0'
+		 FROM  tbl_Socai
+		 WHERE   year( tbl_Socai.Ngayctu)= @yearchon
+	     GROUP BY tbl_Socai.TkCo, tbl_Socai.MaCTietTKCo, tbl_Socai.[nganhan]
+		end
+
+		
+		begin
+        insert into #TempResults (matk,loainganhan, machitiet, tPSNo, tPSCo )
+		SELECT tbl_Socai.TkNo,tbl_Socai.[nganhan], ISNULL(tbl_Socai.MaCTietTKNo,-1), SUM(tbl_Socai.PsNo),'0'
+		 FROM  tbl_Socai
+		 WHERE   year( tbl_Socai.Ngayctu)= @yearchon
+	     GROUP BY tbl_Socai.TkNo, tbl_Socai.MaCTietTKNo, tbl_Socai.[nganhan]
+		end
+		
+
+		IF OBJECT_ID(N'tempdb..#TempResults2', N'U') IS NOT NULL 
+        DROP TABLE #TempResults2;
+
+		CREATE TABLE #TempResults2
+			(
+		                       matk Nvarchar(10),
+								loainganhan bit, 
+                             	machitiet int,
+                                tPSNo float,
+                                tPSCo float,
+								tPsNotruPSco float,
+							
+			)
+
+
+	   begin
+        insert into #TempResults2 (matk,loainganhan, machitiet, tPSNo, tPSCo, tPsNotruPSco)
+		SELECT #TempResults.matk,#TempResults.loainganhan, #TempResults.machitiet, SUM(#TempResults.tPSNo),SUM(#TempResults.tPSCo) , SUM(#TempResults.tPSNo)- SUM(#TempResults.tPSCo)
+		 FROM  #TempResults
+	--	 WHERE   year( tbl_Socai.Ngayctu)= @yearchon
+	     GROUP BY #TempResults.matk , #TempResults.machitiet ,#TempResults.loainganhan
+		end
+
+
+
+
+
+
+	BEGIN  -- udate baocaos ke toan
+
+				begin
+				delete RPtdetailCDKT200lientuc
+				where RPtdetailCDKT200lientuc.username = @username
+
+				end
+				   
+    END
+   
+    begin
+        insert into RPtdetailCDKT200lientuc (username )
+		values (@username )
+		 --FROM RPtdetailKQKD200 
+	--   where tbl_Socai.Ngayctu >=@fromdate and  tbl_Socai.Ngayctu <= @todate
+	--   group by  tbl_Socai.TkNo --tbl_Socai.TkCo,
+		end
+
+
+BEGIN
+  UPDATE  RPtdetailCDKT200lientuc
+         SET 
+		
+	RPtdetailCDKT200lientuc.cn111tien = isnull( (select sum(#TempResults2.tPsNotruPSco) from #TempResults2 
+                         where (left(#TempResults2.matk,3) =  '111' 
+						 or left(#TempResults2.matk,3) =  '112' 
+						 	 or left(#TempResults2.matk,3) =  '113') )  ,0),
+
+RPtdetailCDKT200lientuc.cn112tientduong = isnull( (select sum(#TempResults2.tPsNotruPSco) from #TempResults2 
+                         where (left(#TempResults2.matk,4) =  '1281' 
+						 or left(#TempResults2.matk,4) =  '1288' ) and
+							#TempResults2.loainganhan ='1')  ,0),
+
+RPtdetailCDKT200lientuc.cn121chungkhoan = isnull( (select sum(#TempResults2.tPsNotruPSco) from #TempResults2 
+                         where (left(#TempResults2.matk,3) =  '121' 
+						 ) and
+							#TempResults2.loainganhan ='1')  ,0)	,												
+
+
+RPtdetailCDKT200lientuc.cn122ckduphong = - isnull( (select sum(#TempResults2.tPsNotruPSco) from #TempResults2 
+                         where (left(#TempResults2.matk,4) =  '2291' 
+						 ) and
+							#TempResults2.loainganhan ='1')  ,0)	,	
+																		
+RPtdetailCDKT200lientuc.cn123dtdenngay = isnull( (select sum(#TempResults2.tPsNotruPSco) from #TempResults2 
+                         where (left(#TempResults2.matk,4) =  '1281' 
+						or left(#TempResults2.matk,4) =  '1282' 
+							or left(#TempResults2.matk,4) =  '1288' 
+						 ) )  ,0)													
+
+							- isnull( (select sum(#TempResults2.tPsNotruPSco) from #TempResults2 
+                         where (left(#TempResults2.matk,4) =  '1281' 
+						 or left(#TempResults2.matk,4) =  '1288' ) and
+							#TempResults2.loainganhan ='1')  ,0) ,
+
+
+RPtdetailCDKT200lientuc.cn131ptkhach = isnull( (select sum(#TempResults2.tPsNotruPSco) from #TempResults2 
+                         where (left(#TempResults2.matk,3) =  '131' 
+						and #TempResults2.tPsNotruPSco > 0
+						
+						 ) and 
+							#TempResults2.loainganhan ='1')  ,0)	,	
+
+
+RPtdetailCDKT200lientuc.cn132tratruoc = isnull( (select sum(#TempResults2.tPsNotruPSco) from #TempResults2 
+                         where (left(#TempResults2.matk,3) =  '331' 
+						and #TempResults2.tPsNotruPSco > 0
+						
+						 ) and 
+							#TempResults2.loainganhan ='1')  ,0)	,	
+
+
+RPtdetailCDKT200lientuc.cn133pthunbnganh = isnull( (select sum(#TempResults2.tPsNotruPSco) from #TempResults2 
+                         where (left(#TempResults2.matk,4) =  '1362' 
+						 or left(#TempResults2.matk,4) =  '1363' 
+						  or left(#TempResults2.matk,4) =  '1368' 
+						  )
+						and #TempResults2.tPsNotruPSco > 0
+						
+						  and 
+							#TempResults2.loainganhan ='1')  ,0)	,	
+
+RPtdetailCDKT200lientuc.cn134pthutiendokh = isnull( (select sum(#TempResults2.tPsNotruPSco) from #TempResults2 
+                         where (left(#TempResults2.matk,3) =  '337' 
+						
+						  )
+						and #TempResults2.tPsNotruPSco > 0
+						
+						)  ,0)	,	
+
+RPtdetailCDKT200lientuc.cn135pthuchovay = isnull( (select sum(#TempResults2.tPsNotruPSco) from #TempResults2 
+                         where (left(#TempResults2.matk,4) =  '1283' 
+						
+						  )
+						and #TempResults2.tPsNotruPSco > 0
+						
+						  and 
+							#TempResults2.loainganhan ='1')  ,0)	,	
+
+
+RPtdetailCDKT200lientuc.cn136ptnganhan = isnull( (select sum(#TempResults2.tPsNotruPSco) from #TempResults2 
+                         where (left(#TempResults2.matk,4) =  '1385' 
+					or	left(#TempResults2.matk,4) =  '1388' 
+					or	left(#TempResults2.matk,3) =  '334' 
+						or	left(#TempResults2.matk,3) =  '338' 
+							or	left(#TempResults2.matk,3) =  '141' 
+								or	left(#TempResults2.matk,3) =  '244' 
+						  )
+						and #TempResults2.tPsNotruPSco > 0
+						
+						  and 
+							#TempResults2.loainganhan ='1')  ,0)		,
+
+	RPtdetailCDKT200lientuc.cn137dpptnganhan = isnull( (select sum(#TempResults2.tPsNotruPSco) from #TempResults2 
+                         where (left(#TempResults2.matk,4) =  '2293' 
+						
+						  )
+
+						and #TempResults2.tPsNotruPSco < 0
+							
+						  and 
+							#TempResults2.loainganhan ='1')  ,0)	,
+
+
+	RPtdetailCDKT200lientuc.cn139tsthieucho = isnull( (select sum(#TempResults2.tPsNotruPSco) from #TempResults2 
+                         where (left(#TempResults2.matk,4) =  '1381' 
+						
+						  )
+
+						and #TempResults2.tPsNotruPSco < 0
+						
+						)  ,0)	,
+
+
+	RPtdetailCDKT200lientuc.cn141hangton = isnull( (select sum(#TempResults2.tPsNotruPSco) from #TempResults2 
+                         where (left(#TempResults2.matk,3) =  '151' 
+						 or left(#TempResults2.matk,3) =  '152' 
+							 or left(#TempResults2.matk,3) =  '153' 
+							 	 or left(#TempResults2.matk,3) =  '154' 
+								 	 or left(#TempResults2.matk,3) =  '155' 
+									 	 or left(#TempResults2.matk,3) =  '156' 
+										  or left(#TempResults2.matk,3) =  '157' 
+						  )
+
+						and #TempResults2.tPsNotruPSco > 0
+						
+						)  ,0)	,						
+								
+	RPtdetailCDKT200lientuc.cn151cftratruoc = isnull( (select sum(#TempResults2.tPsNotruPSco) from #TempResults2 
+                         where (left(#TempResults2.matk,4) =  '242' 
+					
+						  )
+
+						and #TempResults2.tPsNotruPSco > 0
+						
+						)  ,0)	,
+						
+	RPtdetailCDKT200lientuc.cn152vatkhautru = isnull( (select sum(#TempResults2.tPsNotruPSco) from #TempResults2 
+                         where (left(#TempResults2.matk,3) =  '133' 
+					
+						  )
+
+						and #TempResults2.tPsNotruPSco > 0
+						
+						)  ,0)	,
+						
+	RPtdetailCDKT200lientuc.cn153thuepthukac = isnull( (select sum(#TempResults2.tPsNotruPSco) from #TempResults2 
+                         where (left(#TempResults2.matk,3) =  '333' 
+					
+						  )
+
+						and #TempResults2.tPsNotruPSco > 0
+							and #TempResults2.machitiet is not null 
+						)  ,0)	,								
+						
+	RPtdetailCDKT200lientuc.cn154traiphieu = isnull( (select sum(#TempResults2.tPsNotruPSco) from #TempResults2 
+                         where (left(#TempResults2.matk,3) =  '171' 
+					
+						  )
+
+						and #TempResults2.tPsNotruPSco > 0
+					
+						)  ,0)	,	
+													
+	RPtdetailCDKT200lientuc.cn155tskhacnh = isnull( (select sum(#TempResults2.tPsNotruPSco) from #TempResults2 
+                         where (left(#TempResults2.matk,4) =  '2288' 
+					
+						  )
+
+						and #TempResults2.tPsNotruPSco > 0
+						
+							  and 
+							#TempResults2.loainganhan ='1'
+						)  ,0)		,
+						
+RPtdetailCDKT200lientuc.cn211ptkhach = isnull( (select sum(#TempResults2.tPsNotruPSco) from #TempResults2 
+                         where (left(#TempResults2.matk,3) =  '131' 
+						and #TempResults2.tPsNotruPSco > 0
+							
+						 ) and 
+							#TempResults2.loainganhan ='0')  ,0)	,	
+						
+						
+RPtdetailCDKT200lientuC.cn212tratruocdh = isnull( (select sum(#TempResults2.tPsNotruPSco) from #TempResults2 
+                         where (left(#TempResults2.matk,3) =  '331' 
+						and #TempResults2.tPsNotruPSco > 0
+							
+						 ) and 
+							#TempResults2.loainganhan ='0')  ,0)	,	
+												
+RPtdetailCDKT200lientuc.cn213vonodonvi = isnull( (select sum(#TempResults2.tPsNotruPSco) from #TempResults2 
+                         where (left(#TempResults2.matk,4) =  '1361' 
+						and #TempResults2.tPsNotruPSco > 0
+							
+						 ) )  ,0)	,	
+												
+											
+RPtdetailCDKT200lientuc.cn214pthunbo = isnull( (select sum(#TempResults2.tPsNotruPSco) from #TempResults2 
+                         where (left(#TempResults2.matk,4) =  '1362' 
+						 or left(#TempResults2.matk,4) =  '1363' 
+						  or left(#TempResults2.matk,4) =  '1368' 
+						and #TempResults2.tPsNotruPSco > 0
+							
+						 ) and 
+							#TempResults2.loainganhan ='0')  ,0)	,	
+							
+							
+RPtdetailCDKT200lientuc.cn215pthuchovay = isnull( (select sum(#TempResults2.tPsNotruPSco) from #TempResults2 
+                         where (left(#TempResults2.matk,4) =  '1283' 
+						
+						and #TempResults2.tPsNotruPSco > 0
+							
+						 )and 
+							#TempResults2.loainganhan ='0')  ,0)	,	
+														
+					
+RPtdetailCDKT200lientuc.cn216pthukhac = isnull( (select sum(#TempResults2.tPsNotruPSco) from #TempResults2 
+                         where (left(#TempResults2.matk,4) =  '1285' 
+						or left(#TempResults2.matk,4) =  '1288' 
+					or	left(#TempResults2.matk,3) =  '334' 
+						or left(#TempResults2.matk,3) =  '338' 
+							or left(#TempResults2.matk,3) =  '141' 
+								or left(#TempResults2.matk,3) =  '244' 
+						and #TempResults2.tPsNotruPSco > 0
+							
+						 )and 
+							#TempResults2.loainganhan ='0')  ,0)	,	
+														
+							
+RPtdetailCDKT200lientuc.cn219duphongpt = isnull( (select sum(#TempResults2.tPsNotruPSco) from #TempResults2 
+                         where (left(#TempResults2.matk,4) =  '2293' 
+						
+						and #TempResults2.tPsNotruPSco > 0
+							
+						 )and 
+							#TempResults2.loainganhan ='0')  ,0) 	,
+							
+							
+							
+RPtdetailCDKT200lientuc.cn222tscdngia = isnull( (select sum(#TempResults2.tPsNotruPSco) from #TempResults2 
+                         where (left(#TempResults2.matk,3) =  '211' 
+						
+						and #TempResults2.tPsNotruPSco > 0
+							
+						 ))  ,0) 		,
+						 
+							
+RPtdetailCDKT200lientuc.cn223tskhauh = -isnull( (select sum(#TempResults2.tPsNotruPSco) from #TempResults2 
+                         where (left(#TempResults2.matk,4) =  '2141' 
+						
+						and #TempResults2.tPsNotruPSco <0 
+							
+						 ))  ,0) 	,
+
+RPtdetailCDKT200lientuc.cn225tscdthung = isnull( (select sum(#TempResults2.tPsNotruPSco) from #TempResults2 
+                         where (left(#TempResults2.matk,3) =  '212' 
+						
+						and #TempResults2.tPsNotruPSco >0 
+							
+						 ))  ,0)	,						
+							
+RPtdetailCDKT200lientuc.cn226tscdthuekha = isnull( (select sum(#TempResults2.tPsNotruPSco) from #TempResults2 
+                         where (left(#TempResults2.matk,4) =  '2142' 
+						
+						and #TempResults2.tPsNotruPSco >0 
+							
+						 ))  ,0)			,
+						 
+RPtdetailCDKT200lientuc.cn228tscdvohnggia = isnull( (select sum(#TempResults2.tPsNotruPSco) from #TempResults2 
+                         where (left(#TempResults2.matk,3) =  '213' 
+						
+						and #TempResults2.tPsNotruPSco >0 
+							
+						 ))  ,0)	,					 				
+			
+RPtdetailCDKT200lientuc.cn229tscdvhkhauh = isnull( (select sum(#TempResults2.tPsNotruPSco) from #TempResults2 
+                         where (left(#TempResults2.matk,4) =  '2143' 
+						
+						and #TempResults2.tPsNotruPSco <0 
+							
+						 ))  ,0)	,					 				
+						
+RPtdetailCDKT200lientuc.cn231bdsngia = -isnull( (select sum(#TempResults2.tPsNotruPSco) from #TempResults2 
+                         where (left(#TempResults2.matk,3) =  '217' 
+						
+						and #TempResults2.tPsNotruPSco >0 
+							
+						 ))  ,0)		,
+						
+RPtdetailCDKT200lientuc.cn232bdshaomon = isnull( (select sum(#TempResults2.tPsNotruPSco) from #TempResults2 
+                         where (left(#TempResults2.matk,4) =  '2147' 
+						
+						and #TempResults2.tPsNotruPSco >0 
+							
+						 ))  ,0)		,
+
+RPtdetailCDKT200lientuc.cn241cfkddd = isnull( (select sum(#TempResults2.tPsNotruPSco) from #TempResults2 
+                         where (left(#TempResults2.matk,4) =  '2294' 
+						
+						and #TempResults2.tPsNotruPSco >0 
+							
+						 )and 
+							#TempResults2.loainganhan ='0')  ,0)	,
+							
+RPtdetailCDKT200lientuc.cn242cfxddd = isnull( (select sum(#TempResults2.tPsNotruPSco) from #TempResults2 
+                         where (left(#TempResults2.matk,4) =  '241' 
+						
+						and #TempResults2.tPsNotruPSco >0 
+							
+						 ))  ,0)	,
+						 
+RPtdetailCDKT200lientuc.cn251dtuctycon = isnull( (select sum(#TempResults2.tPsNotruPSco) from #TempResults2 
+                         where (left(#TempResults2.matk,3) =  '221' 
+						
+						and #TempResults2.tPsNotruPSco >0 
+							
+						 ))  ,0)	,
+						 
+RPtdetailCDKT200lientuc.cn252dtuctylienket = isnull( (select sum(#TempResults2.tPsNotruPSco) from #TempResults2 
+                         where (left(#TempResults2.matk,3) =  '222' 
+						
+						and #TempResults2.tPsNotruPSco >0 
+							
+						 ))  ,0)		,
+						 
+RPtdetailCDKT200lientuc.cn253dtukhac = isnull( (select sum(#TempResults2.tPsNotruPSco) from #TempResults2 
+                         where (left(#TempResults2.matk,4) =  '2281' 
+						
+						and #TempResults2.tPsNotruPSco >0 
+							
+						 ))  ,0)			,
+						 
+RPtdetailCDKT200lientuc.cn254duphongdt =- isnull( (select sum(#TempResults2.tPsNotruPSco) from #TempResults2 
+                         where (left(#TempResults2.matk,4) =  '2292' 
+						
+						and #TempResults2.tPsNotruPSco <0 
+							
+						 ))  ,0)	,
+						 
+RPtdetailCDKT200lientuc.cn255dtudaohan = isnull( (select sum(#TempResults2.tPsNotruPSco) from #TempResults2 
+                         where (left(#TempResults2.matk,4) =  '1281' 
+					or	left(#TempResults2.matk,4) =  '1282' 
+						or	left(#TempResults2.matk,4) =  '1288' 
+						
+
+						and #TempResults2.tPsNotruPSco >0 
+							
+						 )and 
+							#TempResults2.loainganhan ='0')  ,0)	,
+
+						
+	RPtdetailCDKT200lientuc.cn261cftratruocdn = isnull( (select sum(#TempResults2.tPsNotruPSco) from #TempResults2 
+                         where (left(#TempResults2.matk,3) =  '242' 
+						
+						and #TempResults2.tPsNotruPSco >0 
+							
+						 ))  ,0)	,
+							
+	RPtdetailCDKT200lientuc.cn262thuetndnhl = isnull( (select sum(#TempResults2.tPsNotruPSco) from #TempResults2 
+                         where (left(#TempResults2.matk,3) =  '243' 
+						
+						and #TempResults2.tPsNotruPSco >0 
+							
+						 ))  ,0)	,
+						 
+	RPtdetailCDKT200lientuc.cn263vtuthietbidn = isnull( (select sum(#TempResults2.tPsNotruPSco) from #TempResults2 
+                         where (left(#TempResults2.matk,4) =  '1534' 
+						
+						and #TempResults2.tPsNotruPSco >0 
+							
+						 )and 
+							#TempResults2.loainganhan ='0')  ,0)							 						
+													 						 				 					 														 						 				 				
+						+
+						isnull( (select sum(#TempResults2.tPsNotruPSco) from #TempResults2 
+                         where (left(#TempResults2.matk,4) =  '2294' 
+						
+						and #TempResults2.tPsNotruPSco <0 
+							
+						 )and 
+							#TempResults2.loainganhan ='0')  ,0)		,
+							
+RPtdetailCDKT200lientuc.cn268tskhac = isnull( (select sum(#TempResults2.tPsNotruPSco) from #TempResults2 
+                         where (left(#TempResults2.matk,4) =  '2288' 
+						
+						and #TempResults2.tPsNotruPSco >0 
+							
+						 ))  ,0)	,							
+														 														 						 				 				
+	
+RPtdetailCDKT200lientuc.cn311ptnbannh = -isnull( (select sum(#TempResults2.tPsNotruPSco) from #TempResults2 
+                         where (left(#TempResults2.matk,3) =  '311' 
+						
+						and #TempResults2.tPsNotruPSco <0 
+							
+						 )and 
+							#TempResults2.loainganhan ='1')  ,0)	,
+
+RPtdetailCDKT200lientuc.cn312ngmuatratr = -isnull( (select sum(#TempResults2.tPsNotruPSco) from #TempResults2 
+                         where (left(#TempResults2.matk,3) =  '131' 
+						
+						and #TempResults2.tPsNotruPSco <0 
+							
+						 )and 
+							#TempResults2.loainganhan ='1')  ,0)	,
+							
+							
+RPtdetailCDKT200lientuc.cn313thuephainop =- isnull( (select sum(#TempResults2.tPsNotruPSco) from #TempResults2 
+                         where (left(#TempResults2.matk,3) =  '333' 
+						
+						and #TempResults2.tPsNotruPSco <0 
+							
+						 )and 
+							#TempResults2.loainganhan ='1')  ,0)	,
+							
+							
+RPtdetailCDKT200lientuc.cn314ptracnhan = -isnull( (select sum(#TempResults2.tPsNotruPSco) from #TempResults2 
+                         where (left(#TempResults2.matk,3) =  '334' 
+						
+						and #TempResults2.tPsNotruPSco <0 
+							
+						 )and 
+							#TempResults2.loainganhan ='1')  ,0)	,
+
+					
+RPtdetailCDKT200lientuc.cn315cphiptranh = -isnull( (select sum(#TempResults2.tPsNotruPSco) from #TempResults2 
+                         where (left(#TempResults2.matk,3) =  '335' 
+						
+						and #TempResults2.tPsNotruPSco <0 
+							
+						 )and 
+							#TempResults2.loainganhan ='1')  ,0)		,
+							
+							
+												
+RPtdetailCDKT200lientuc.cn316cfptranbonh = -isnull( (select sum(#TempResults2.tPsNotruPSco) from #TempResults2 
+                         where ((left(#TempResults2.matk,4) =  '3362' 
+					or	left(#TempResults2.matk,4) =  '3363' 
+							or	left(#TempResults2.matk,4) =  '3368' )
+
+						and #TempResults2.tPsNotruPSco <0 
+							
+						 )and 
+							#TempResults2.loainganhan ='1')  ,0)		,														
+														 														
+														 																						
+RPtdetailCDKT200lientuc.cn317ptrtheoluong = -isnull( (select sum(#TempResults2.tPsNotruPSco) from #TempResults2 
+                         where (left(#TempResults2.matk,3) =  '337' 
+						
+						and #TempResults2.tPsNotruPSco <0 
+							
+						 )and 
+							#TempResults2.loainganhan ='1')  ,0)		,														 														
+														 																		
+														 																						
+RPtdetailCDKT200lientuc.cn318pthuchunhan = -isnull( (select sum(#TempResults2.tPsNotruPSco) from #TempResults2 
+                         where (left(#TempResults2.matk,4) =  '3387 ' 
+						
+						and #TempResults2.tPsNotruPSco <0 
+							
+						 )and 
+							#TempResults2.loainganhan ='1')  ,0)	,															 														
+														 																		
+																			 																						
+RPtdetailCDKT200lientuC.cn319ptranhan = -isnull( (select sum(#TempResults2.tPsNotruPSco) from #TempResults2 
+                         where ((left(#TempResults2.matk,3) =  '338' 
+					or	left(#TempResults2.matk,3) =  '138'
+							or	left(#TempResults2.matk,3) =  '344'
+					
+					 )
+						and #TempResults2.tPsNotruPSco <0 
+							
+						 )and 
+							#TempResults2.loainganhan ='1')  ,0)	,
+
+
+																										 																						
+RPtdetailCDKT200lientuC.cn320vaynotcnhan =- isnull( (select sum(#TempResults2.tPsNotruPSco) from #TempResults2 
+                         where ((left(#TempResults2.matk,3) =  '341' 
+					or	left(#TempResults2.matk,5) =  '34311' )
+						and #TempResults2.tPsNotruPSco <0 
+							
+						 ))  ,0)	,
+
+
+																										 																						
+RPtdetailCDKT200lientuc.cn321duphptranh = -isnull( (select sum(#TempResults2.tPsNotruPSco) from #TempResults2 
+                         where ((left(#TempResults2.matk,3) =  '352' 
+					     )
+						and #TempResults2.tPsNotruPSco <0 
+							
+						 )and 
+							#TempResults2.loainganhan ='1')  ,0)	,
+
+
+
+																										 																						
+RPtdetailCDKT200lientuc.cn322quykhen = -isnull( (select sum(#TempResults2.tPsNotruPSco) from #TempResults2 
+                         where ((left(#TempResults2.matk,3) =  '353' 
+					     )
+						and #TempResults2.tPsNotruPSco <0 
+							
+						 ))  ,0)	,
+
+							
+				
+																										 																						
+RPtdetailCDKT200lientuc.cn323quygia = -isnull( (select sum(#TempResults2.tPsNotruPSco) from #TempResults2 
+                         where ((left(#TempResults2.matk,3) =  '357' 
+					     )
+						and #TempResults2.tPsNotruPSco <0 
+							
+						 ))  ,0  ),
+
+			
+																										 																						
+RPtdetailCDKT200lientuc.cn324bantraiphieu =- isnull( (select sum(#TempResults2.tPsNotruPSco) from #TempResults2 
+                         where ((left(#TempResults2.matk,3) =  '171' 
+					     )
+						and #TempResults2.tPsNotruPSco <0 
+							
+						 ))  ,0 )	,
+
+RPtdetailCDKT200lientuc.cn331nodnngban = -isnull( (select sum(#TempResults2.tPsNotruPSco) from #TempResults2 
+                         where ((left(#TempResults2.matk,3) =  '331' 
+					     )
+						and #TempResults2.tPsNotruPSco <0 
+							
+						 )and 
+							#TempResults2.loainganhan ='0')  ,0)	,
+
+		
+RPtdetailCDKT200lientuc.cn332ngmuatratdn = -isnull( (select sum(#TempResults2.tPsNotruPSco) from #TempResults2 
+                         where ((left(#TempResults2.matk,3) =  '131' 
+					     )
+						and #TempResults2.tPsNotruPSco <0 
+							
+						 )and 
+							#TempResults2.loainganhan ='0')  ,0)	,  
+
+
+RPtdetailCDKT200lientuc.cn333cphiphaitra = -isnull( (select sum(#TempResults2.tPsNotruPSco) from #TempResults2 
+                         where ((left(#TempResults2.matk,3) =  '335' 
+					     )
+						and #TempResults2.tPsNotruPSco <0 
+							
+						 )and 
+							#TempResults2.loainganhan ='0')  ,0)	,  
+
+
+		
+RPtdetailCDKT200lientuc.cn334ptranbvevon =- isnull( (select sum(#TempResults2.tPsNotruPSco) from #TempResults2 
+                         where ((left(#TempResults2.matk,4) =  '3361' 
+					     )
+						and #TempResults2.tPsNotruPSco <0 
+							
+						 )and 
+							#TempResults2.loainganhan ='0')  ,0)	,  
+																
+							
+		
+RPtdetailCDKT200lientuc.cn335ptranbdaihan =- isnull( (select sum(#TempResults2.tPsNotruPSco) from #TempResults2 
+                         where ((left(#TempResults2.matk,4) =  '3362' 
+						 or left(#TempResults2.matk,4) =  '3363' 
+						or left(#TempResults2.matk,4) =  '3368' 
+					     )
+						and #TempResults2.tPsNotruPSco <0 
+							
+						 )and 
+							#TempResults2.loainganhan ='0')  ,0)	,  
+									
+				
+		
+RPtdetailCDKT200lientuc.cn336dthuchthdn =- isnull( (select sum(#TempResults2.tPsNotruPSco) from #TempResults2 
+                         where ((left(#TempResults2.matk,4) =  '3387' 
+						
+					     )
+						and #TempResults2.tPsNotruPSco <0 
+							
+						 )and 
+							#TempResults2.loainganhan ='0')  ,0)	,  
+									
+
+			
+RPtdetailCDKT200lientuc.cn337ptradnkhac = -isnull( (select sum(#TempResults2.tPsNotruPSco) from #TempResults2 
+                         where ((left(#TempResults2.matk,3) =  '338' 
+				or		left(#TempResults2.matk,3) =  '334' 
+			
+					     )
+						and #TempResults2.tPsNotruPSco <0 
+							
+						 )and 
+							#TempResults2.loainganhan ='0')  ,0)	  ,
+				--	Du Có chi ti?t TK 341 và
+--Du Có TK 34311 tr? (-) du N? TK
+-- 34312 c?ng (+) du Có TK 34313.			
+			
+RPtdetailCDKT200lientuc.cn338vaynodn = -isnull( (select sum(#TempResults2.tPsNotruPSco) from #TempResults2 
+                         where ((left(#TempResults2.matk,3) =  '341' 
+						
+					     )
+						and #TempResults2.tPsNotruPSco <0 
+							
+						 )and 
+							#TempResults2.loainganhan ='0')  ,0)	
+					+		isnull( (select sum(#TempResults2.tPsNotruPSco) from #TempResults2 
+                         where ((left(#TempResults2.matk,5) =  '34311' 
+						
+					     )
+						and #TempResults2.tPsNotruPSco <0 
+							
+						 )and 
+							#TempResults2.loainganhan ='0')  ,0)  
+					-		isnull( (select sum(#TempResults2.tPsNotruPSco) from #TempResults2 
+                         where ((left(#TempResults2.matk,5) =  '34312' 
+						
+					     )
+						and #TempResults2.tPsNotruPSco <0 
+							
+						 )and 
+							#TempResults2.loainganhan ='0')  ,0)
+					+	isnull( (select sum(#TempResults2.tPsNotruPSco) from #TempResults2 
+                         where ((left(#TempResults2.matk,5) =  '34313' 
+						
+					     )
+						and #TempResults2.tPsNotruPSco <0 
+							
+						 )and 
+							#TempResults2.loainganhan ='0')  ,0)  ,						
+							
+	
+			
+RPtdetailCDKT200lientuc.cn339traiphieu =- isnull( (select sum(#TempResults2.tPsNotruPSco) from #TempResults2 
+                         where ((left(#TempResults2.matk,4) =  '34312' 
+			
+			
+					     )
+						and #TempResults2.tPsNotruPSco <0 
+							
+						 )and 
+							#TempResults2.loainganhan ='0')  ,0)	  ,						
+																					 											
+	
+RPtdetailCDKT200lientuc.cn340cophieu = -isnull( (select sum(#TempResults2.tPsNotruPSco) from #TempResults2 
+                         where ((left(#TempResults2.matk,4) =  '41112' 
+			
+			
+					     )
+						and #TempResults2.tPsNotruPSco <0 
+							
+						 )and 
+							#TempResults2.loainganhan ='0')  ,0)	  ,
+							
+							
+				
+RPtdetailCDKT200lientuc.cn341tnhoanlai = -isnull( (select sum(#TempResults2.tPsNotruPSco) from #TempResults2 
+                         where ((left(#TempResults2.matk,3) =  '347' 
+			
+			
+					     )
+						and #TempResults2.tPsNotruPSco <0 
+							
+						 ))  ,0)	  ,						
+																					 											
+	
+RPtdetailCDKT200lientuc.cn342duphongdn =- isnull( (select sum(#TempResults2.tPsNotruPSco) from #TempResults2 
+                         where ((left(#TempResults2.matk,3) =  '352' 
+			
+			
+					     )
+						and #TempResults2.tPsNotruPSco <0 
+							
+						 )and 
+							#TempResults2.loainganhan ='0')  ,0)	  ,						
+													
+	
+RPtdetailCDKT200lientuc.cn343quykhoahoc =- isnull( (select sum(#TempResults2.tPsNotruPSco) from #TempResults2 
+                         where ((left(#TempResults2.matk,3) =  '356' 
+			
+			
+					     )
+						and #TempResults2.tPsNotruPSco <0 
+							
+						 ))  ,0)	 ,
+						 
+						 
+						 								
+	
+RPtdetailCDKT200lientuc.cn411vongopcsh = -isnull( (select sum(#TempResults2.tPsNotruPSco) from #TempResults2 
+                         where ((left(#TempResults2.matk,3) =  '411' 
+			
+			
+					     )
+						and #TempResults2.tPsNotruPSco <0 
+							
+						 ))  ,0)	  		,		
+		 								
+	
+RPtdetailCDKT200lientuc.cn411acophieupt =- isnull( (select sum(#TempResults2.tPsNotruPSco) from #TempResults2 
+                         where ((left(#TempResults2.matk,5) =  '41111' 
+			
+			
+					     )
+						and #TempResults2.tPsNotruPSco <0 
+							
+						 ))  ,0)	  		,
+
+RPtdetailCDKT200lientuc.cn411bcpudai =- isnull( (select sum(#TempResults2.tPsNotruPSco) from #TempResults2 
+                         where ((left(#TempResults2.matk,5) =  '41112' 
+			
+			
+					     )
+						and #TempResults2.tPsNotruPSco <0 
+							
+						 ))  ,0)	  		,
+						 
+
+RPtdetailCDKT200lientuc.cn412thangduvon = - isnull( (select sum(#TempResults2.tPsNotruPSco) from #TempResults2 
+                         where ((left(#TempResults2.matk,4) =  '4112' 
+			
+			
+					     )
+						and #TempResults2.tPsNotruPSco >0 
+							
+						 ))  ,0)		,					 				 		
+											
+											
+			
+RPtdetailCDKT200lientuc.cn413traiphieu = -isnull( (select sum(#TempResults2.tPsNotruPSco) from #TempResults2 
+                         where ((left(#TempResults2.matk,4) =  '4113' 
+			
+			
+					     )
+						and #TempResults2.tPsNotruPSco <0 
+							
+						 ))  ,0)			,
+						 
+						 
+RPtdetailCDKT200lientuc.cn414voncshkhac = - isnull( (select sum(#TempResults2.tPsNotruPSco) from #TempResults2 
+                         where ((left(#TempResults2.matk,4) =  '4118' 
+			
+			
+					     )
+						and #TempResults2.tPsNotruPSco <0 
+							
+						 ))  ,0)	,
+						 
+
+RPtdetailCDKT200lientuc.cn415cphieuquy =  isnull( (select sum(#TempResults2.tPsNotruPSco) from #TempResults2 
+                         where ((left(#TempResults2.matk,3) =  '419' 
+			
+			
+					     )
+						and #TempResults2.tPsNotruPSco <0 
+							
+						 ))  ,0)			,
+						 
+
+
+RPtdetailCDKT200lientuc.cn416chenhlechts =  isnull( (select sum(#TempResults2.tPsNotruPSco) from #TempResults2 
+                         where ((left(#TempResults2.matk,3) =  '416' 
+			
+			
+					     )
+					--	and #TempResults2.tPsNotruPSco <0 
+							
+						 ))  ,0)	,
+						 
+
+
+RPtdetailCDKT200lientuc.cn417tygia =-  isnull( (select sum(#TempResults2.tPsNotruPSco) from #TempResults2 
+                         where ((left(#TempResults2.matk,3) =  '413' 
+			
+			
+					     )
+					--	and #TempResults2.tPsNotruPSco <0 
+							
+						 ))  ,0)	,
+						 
+						 
+
+RPtdetailCDKT200lientuc.cn418dautuptrien =- isnull( (select sum(#TempResults2.tPsNotruPSco) from #TempResults2 
+                         where ((left(#TempResults2.matk,3) =  '414' 
+			
+			
+					     )
+			         	and #TempResults2.tPsNotruPSco <0 
+							
+						 ))  ,0)	,
+						 
+
+RPtdetailCDKT200lientuc.cn419quyxxdn =- isnull( (select sum(#TempResults2.tPsNotruPSco) from #TempResults2 
+                         where ((left(#TempResults2.matk,3) =  '417' 
+			
+			
+					     )
+			         	and #TempResults2.tPsNotruPSco <0 
+							
+						 ))  ,0)		,				 						 									
+														 									
+																 							
+			
+RPtdetailCDKT200lientuc.cn420quykhacsh = -isnull( (select sum(#TempResults2.tPsNotruPSco) from #TempResults2 
+                         where ((left(#TempResults2.matk,3) =  '418' 
+			
+			
+					     )
+			         	and #TempResults2.tPsNotruPSco <0 
+							
+						 ))  ,0)		,
+						 
+						 									 							
+			
+RPtdetailCDKT200lientuc.cn421lnsauthue = -isnull( (select sum(#TempResults2.tPsNotruPSco) from #TempResults2 
+                         where ((left(#TempResults2.matk,3) =  '421' 
+			
+			
+					     )
+			        -- 	and #TempResults2.tPsNotruPSco <0 
+							
+						 ))  ,0)			,
+						 
+						 
+						  									 							
+			
+RPtdetailCDKT200lientuc.cn421alnkytruoc =- isnull( (select sum(#TempResults2.tPsNotruPSco) from #TempResults2 
+                         where ((left(#TempResults2.matk,4) =  '4211' 
+			
+			
+					     )
+			     --   	and #TempResults2.tPsNotruPSco >0 
+							
+						 ))  ,0)		,
+						 
+						 									 							
+			
+RPtdetailCDKT200lientuc.cn421blnkynay = -isnull( (select sum(#TempResults2.tPsNotruPSco) from #TempResults2 
+                         where ((left(#TempResults2.matk,4) =  '4212' 
+			
+			
+					     )
+			        --	and #TempResults2.tPsNotruPSco >0 
+							
+						 ))  ,0)		,
+						 
+						 								 							
+			
+RPtdetailCDKT200lientuc.cn422vonxdcb = -isnull( (select sum(#TempResults2.tPsNotruPSco) from #TempResults2 
+                         where ((left(#TempResults2.matk,3) =  '441' 
+			
+			
+					     )
+			       	and #TempResults2.tPsNotruPSco <0 
+							
+						 ))  ,0)		,
+						 
+						 
+RPtdetailCDKT200lientuc.cn431nkinhphi = -isnull( (select sum(#TempResults2.tPsNotruPSco) from #TempResults2 
+                         where ((left(#TempResults2.matk,3) =  '461' 
+			
+			
+					     )
+			       	and #TempResults2.tPsNotruPSco <0 
+							
+						 ))  ,0)	
+						 -isnull( (select sum(#TempResults2.tPsNotruPSco) from #TempResults2 
+                         where ((left(#TempResults2.matk,3) =  '161' 
+			
+			
+					     )
+			       	and #TempResults2.tPsNotruPSco >0 
+							
+						 ))  ,0)	,
+						 
+						 
+		
+RPtdetailCDKT200lientuc.cn432kpthanhtscd = -isnull( (select sum(#TempResults2.tPsNotruPSco) from #TempResults2 
+                         where ((left(#TempResults2.matk,3) =  '466' 
+			
+			
+					     )
+			       	and #TempResults2.tPsNotruPSco <0 
+							
+						 ))  ,0)	,					 								 						 									
+													 						 									
+																					 									
+	RPtdetailCDKT200lientuc.dn111tien = 	isnull( (select sum(CDKT200.Sotien) from CDKT200 
+                         where    CDKT200.nam =@yearchon
+						 
+						 
+						 and CDKT200.Machitieu= 111
+						 
+						           )  ,0)	,
+								   
+								   
+								   																				 									
+	RPtdetailCDKT200lientuc.dn112tientduong = 	isnull( (select sum(CDKT200.Sotien) from CDKT200 
+                         where    CDKT200.nam =@yearchon
+						 			 
+						 and CDKT200.Machitieu= 112
+						 
+						           )  ,0)	,
+							   																				 									
+	RPtdetailCDKT200lientuc.dn121chungkhoan = 	isnull( (select sum(CDKT200.Sotien) from CDKT200 
+                         where    CDKT200.nam =@yearchon
+						 			 
+						 and CDKT200.Machitieu= 121
+						 
+						           )  ,0)		,								   								
+																				
+RPtdetailCDKT200lientuc.dn122ckduphong = 	isnull( (select sum(CDKT200.Sotien) from CDKT200 
+                         where    CDKT200.nam =@yearchon
+						 			 
+						 and CDKT200.Machitieu= 122
+						 
+						           )  ,0)	,																					 				
+																				
+RPtdetailCDKT200lientuc.dn123dtdenngay = 	isnull( (select sum(CDKT200.Sotien) from CDKT200 
+                         where    CDKT200.nam =@yearchon
+						 			 
+						 and CDKT200.Machitieu= 123
+						 
+						           )  ,0)	,
+																				
+RPtdetailCDKT200lientuc.dn131ptkhach = 	isnull( (select sum(CDKT200.Sotien) from CDKT200 
+                         where    CDKT200.nam =@yearchon
+						 			 
+						 and CDKT200.Machitieu= 131
+						 
+						           )  ,0)	,	
+RPtdetailCDKT200lientuc.dn132tratruoc = 	isnull( (select sum(CDKT200.Sotien) from CDKT200 
+                         where    CDKT200.nam =@yearchon
+						 			 
+						 and CDKT200.Machitieu= 132
+						 
+						           )  ,0)	,	
+RPtdetailCDKT200lientuc.dn133pthunbnganh = 	isnull( (select sum(CDKT200.Sotien) from CDKT200 
+                         where    CDKT200.nam =@yearchon
+						 			 
+						 and CDKT200.Machitieu= 133
+						 
+						           )  ,0)	,									   								   								   																					 				
+RPtdetailCDKT200lientuc.dn134pthutiendokh = 	isnull( (select sum(CDKT200.Sotien) from CDKT200 
+                         where    CDKT200.nam =@yearchon
+						 			 
+						 and CDKT200.Machitieu= 134
+						 
+						           )  ,0)	,	
+RPtdetailCDKT200lientuc.dn135pthuchovay = 	isnull( (select sum(CDKT200.Sotien) from CDKT200 
+                         where    CDKT200.nam =@yearchon
+						 			 
+						 and CDKT200.Machitieu= 135
+						 
+						           )  ,0)	,	
+RPtdetailCDKT200lientuc.dn136ptnganhan = 	isnull( (select sum(CDKT200.Sotien) from CDKT200 
+                         where    CDKT200.nam =@yearchon
+						 			 
+						 and CDKT200.Machitieu= 136
+						 
+						           )  ,0)	,		
+RPtdetailCDKT200lientuc.dn137dpptnganhan = 	isnull( (select sum(CDKT200.Sotien) from CDKT200 
+                         where    CDKT200.nam =@yearchon
+						 			 
+						 and CDKT200.Machitieu= 137
+						 
+						           )  ,0)	,	
+RPtdetailCDKT200lientuc.dn139tsthieucho = 	isnull( (select sum(CDKT200.Sotien) from CDKT200 
+                         where    CDKT200.nam =@yearchon
+						 			 
+						 and CDKT200.Machitieu= 139
+						 
+						           )  ,0)	,	
+								   
+RPtdetailCDKT200lientuc.dn141hangton = 	isnull( (select sum(CDKT200.Sotien) from CDKT200 
+                         where    CDKT200.nam =@yearchon
+						 			 
+						 and CDKT200.Machitieu= 141
+						 
+						           )  ,0)	,	
+
+RPtdetailCDKT200lientuc.dn149duphonght = 	isnull( (select sum(CDKT200.Sotien) from CDKT200 
+                         where    CDKT200.nam =@yearchon
+						 			 
+						 and CDKT200.Machitieu= 131
+						 
+						           )  ,0)	,
+								   
+
+RPtdetailCDKT200lientuc.dn151cftratruoc = 	isnull( (select sum(CDKT200.Sotien) from CDKT200 
+                         where    CDKT200.nam =@yearchon
+						 			 
+						 and CDKT200.Machitieu= 151
+						 
+						           )  ,0)	,
+
+RPtdetailCDKT200lientuc.dn152vatkhautru = 	isnull( (select sum(CDKT200.Sotien) from CDKT200 
+                         where    CDKT200.nam =@yearchon
+						 			 
+						 and CDKT200.Machitieu= 152
+						 
+						           )  ,0)		,
+
+RPtdetailCDKT200lientuc.dn153thuepthukac = 	isnull( (select sum(CDKT200.Sotien) from CDKT200 
+                         where    CDKT200.nam =@yearchon
+						 			 
+						 and CDKT200.Machitieu= 153
+						 
+						           )  ,0)		,
+
+RPtdetailCDKT200lientuc.dn154traiphieu = 	isnull( (select sum(CDKT200.Sotien) from CDKT200 
+                         where    CDKT200.nam =@yearchon
+						 			 
+						 and CDKT200.Machitieu= 154
+						 
+						           )  ,0)		,
+
+RPtdetailCDKT200lientuc.dn155tskhacnh = 	isnull( (select sum(CDKT200.Sotien) from CDKT200 
+                         where    CDKT200.nam =@yearchon
+						 			 
+						 and CDKT200.Machitieu= 155
+						 
+						           )  ,0)		,
+
+RPtdetailCDKT200lientuc.dn211ptkhach = 	isnull( (select sum(CDKT200.Sotien) from CDKT200 
+                         where    CDKT200.nam =@yearchon
+						 			 
+						 and CDKT200.Machitieu= 211
+						 
+						           )  ,0)		,
+
+RPtdetailCDKT200lientuc.dn212tratruocdh = 	isnull( (select sum(CDKT200.Sotien) from CDKT200 
+                         where    CDKT200.nam =@yearchon
+						 			 
+						 and CDKT200.Machitieu= 212
+						 
+						           )  ,0),
+
+RPtdetailCDKT200lientuc.dn213vonodonvi = 	isnull( (select sum(CDKT200.Sotien) from CDKT200 
+                         where    CDKT200.nam =@yearchon
+						 			 
+						 and CDKT200.Machitieu= 213
+						 
+						           )  ,0)		,
+
+RPtdetailCDKT200lientuc.dn214pthunbo = 	isnull( (select sum(CDKT200.Sotien) from CDKT200 
+                         where    CDKT200.nam =@yearchon
+						 			 
+						 and CDKT200.Machitieu= 214
+						 
+						           )  ,0)		,
+
+RPtdetailCDKT200lientuc.dn215pthuchovay = 	isnull( (select sum(CDKT200.Sotien) from CDKT200 
+                         where    CDKT200.nam =@yearchon
+						 			 
+						 and CDKT200.Machitieu= 215
+						 
+						           )  ,0)		,
+
+RPtdetailCDKT200lientuc.dn216pthukhac = 	isnull( (select sum(CDKT200.Sotien) from CDKT200 
+                         where    CDKT200.nam =@yearchon
+						 			 
+						 and CDKT200.Machitieu= 216
+						 
+						           )  ,0)	,
+
+RPtdetailCDKT200lientuc.dn219duphongpt = 	isnull( (select sum(CDKT200.Sotien) from CDKT200 
+                         where    CDKT200.nam =@yearchon
+						 			 
+						 and CDKT200.Machitieu= 219
+						 
+						           )  ,0)		,
+								   
+
+
+RPtdetailCDKT200lientuc.dn222tscdngia = 	isnull( (select sum(CDKT200.Sotien) from CDKT200 
+                         where    CDKT200.nam =@yearchon
+						 			 
+						 and CDKT200.Machitieu= 222
+						 
+						           )  ,0)		,
+								
+RPtdetailCDKT200lientuc.dn223tskhauh = 	isnull( (select sum(CDKT200.Sotien) from CDKT200 
+                         where    CDKT200.nam =@yearchon
+						 			 
+						 and CDKT200.Machitieu= 223
+						 
+						           )  ,0)		,
+								   
+RPtdetailCDKT200lientuc.dn225tscdthung = 	isnull( (select sum(CDKT200.Sotien) from CDKT200 
+                         where    CDKT200.nam =@yearchon
+						 			 
+						 and CDKT200.Machitieu= 225
+						 
+						           )  ,0)		,
+								 
+RPtdetailCDKT200lientuc.dn226tscdthuekha = 	isnull( (select sum(CDKT200.Sotien) from CDKT200 
+                         where    CDKT200.nam =@yearchon
+						 			 
+						 and CDKT200.Machitieu= 226
+						 
+						           )  ,0)		,
+								   
+RPtdetailCDKT200lientuc.dn228tscdvohnggia = 	isnull( (select sum(CDKT200.Sotien) from CDKT200 
+                         where    CDKT200.nam =@yearchon
+						 			 
+						 and CDKT200.Machitieu= 228
+						 
+						           )  ,0)		,
+								   
+								   
+RPtdetailCDKT200lientuc.dn229tscdvhkhauh = 	isnull( (select sum(CDKT200.Sotien) from CDKT200 
+                         where    CDKT200.nam =@yearchon
+						 			 
+						 and CDKT200.Machitieu= 229
+						 
+						           )  ,0)		,
+								   
+RPtdetailCDKT200lientuc.dn231bdsngia = 	isnull( (select sum(CDKT200.Sotien) from CDKT200 
+                         where    CDKT200.nam =@yearchon
+						 			 
+						 and CDKT200.Machitieu= 231
+						 
+						           )  ,0)		,
+								   
+RPtdetailCDKT200lientuc.dn232bdshaomon = 	isnull( (select sum(CDKT200.Sotien) from CDKT200 
+                         where    CDKT200.nam =@yearchon
+						 			 
+						 and CDKT200.Machitieu= 232
+						 
+						           )  ,0)		,
+								   
+								   
+RPtdetailCDKT200lientuc.dn241cfkddd = 	isnull( (select sum(CDKT200.Sotien) from CDKT200 
+                         where    CDKT200.nam =@yearchon
+						 			 
+						 and CDKT200.Machitieu= 241
+						 
+						           )  ,0)		,
+								   
+
+RPtdetailCDKT200lientuc.dn242cfxddd = 	isnull( (select sum(CDKT200.Sotien) from CDKT200 
+                         where    CDKT200.nam =@yearchon
+						 			 
+						 and CDKT200.Machitieu= 242
+						 
+						           )  ,0)		,
+								   
+								   
+RPtdetailCDKT200lientuc.dn251dtuctycon = 	isnull( (select sum(CDKT200.Sotien) from CDKT200 
+                         where    CDKT200.nam =@yearchon
+						 			 
+						 and CDKT200.Machitieu= 251
+						 
+						           )  ,0)		,
+								   
+RPtdetailCDKT200lientuc.dn252dtuctylienket = 	isnull( (select sum(CDKT200.Sotien) from CDKT200 
+                         where    CDKT200.nam =@yearchon
+						 			 
+						 and CDKT200.Machitieu= 252
+						 
+						           )  ,0)		,
+								   
+								   
+RPtdetailCDKT200lientuc.dn253dtukhac = 	isnull( (select sum(CDKT200.Sotien) from CDKT200 
+                         where    CDKT200.nam =@yearchon
+						 			 
+						 and CDKT200.Machitieu= 253
+						 
+						           )  ,0)		,
+								   
+RPtdetailCDKT200lientuc.dn254duphongdt = 	isnull( (select sum(CDKT200.Sotien) from CDKT200 
+                         where    CDKT200.nam =@yearchon
+						 			 
+						 and CDKT200.Machitieu= 254
+						 
+						           )  ,0)		,
+								   
+
+RPtdetailCDKT200lientuc.dn255dtudaohan = 	isnull( (select sum(CDKT200.Sotien) from CDKT200 
+                         where    CDKT200.nam =@yearchon
+						 			 
+						 and CDKT200.Machitieu= 255
+						 
+						           )  ,0)		,
+								   
+								   
+RPtdetailCDKT200lientuc.dn261cftratruocdn = 	isnull( (select sum(CDKT200.Sotien) from CDKT200 
+                         where    CDKT200.nam =@yearchon
+						 			 
+						 and CDKT200.Machitieu= 261
+						 
+						           )  ,0)		,
+								   
+								   
+RPtdetailCDKT200lientuc.dn262thuetndnhl = 	isnull( (select sum(CDKT200.Sotien) from CDKT200 
+                         where    CDKT200.nam =@yearchon
+						 			 
+						 and CDKT200.Machitieu= 262
+						 
+						           )  ,0)		,
+								   
+RPtdetailCDKT200lientuc.dn263vtuthietbidn = 	isnull( (select sum(CDKT200.Sotien) from CDKT200 
+                         where    CDKT200.nam =@yearchon
+						 			 
+						 and CDKT200.Machitieu= 263
+						 
+						           )  ,0)		,
+								   
+								   
+RPtdetailCDKT200lientuc.dn268tskhac = 	isnull( (select sum(CDKT200.Sotien) from CDKT200 
+                         where    CDKT200.nam =@yearchon
+						 			 
+						 and CDKT200.Machitieu= 268
+						 
+						           )  ,0)		,
+								 
+
+RPtdetailCDKT200lientuc.dn311ptnbannh = 	isnull( (select sum(CDKT200.Sotien) from CDKT200 
+                         where    CDKT200.nam =@yearchon
+						 			 
+						 and CDKT200.Machitieu= 311
+						 
+						           )  ,0)		,
+
+RPtdetailCDKT200lientuc.dn312ngmuatratr = 	isnull( (select sum(CDKT200.Sotien) from CDKT200 
+                         where    CDKT200.nam =@yearchon
+						 			 
+						 and CDKT200.Machitieu= 312
+						 
+						           )  ,0)		,
+
+RPtdetailCDKT200lientuc.dn313thuephainop = 	isnull( (select sum(CDKT200.Sotien) from CDKT200 
+                         where    CDKT200.nam =@yearchon
+						 			 
+						 and CDKT200.Machitieu= 313
+						 
+						           )  ,0)	,
+
+RPtdetailCDKT200lientuc.dn314ptracnhan = 	isnull( (select sum(CDKT200.Sotien) from CDKT200 
+                         where    CDKT200.nam =@yearchon
+						 			 
+						 and CDKT200.Machitieu= 314
+						 
+						           )  ,0)	,
+
+RPtdetailCDKT200lientuc.dn315cphiptranh = 	isnull( (select sum(CDKT200.Sotien) from CDKT200 
+                         where    CDKT200.nam =@yearchon
+						 			 
+						 and CDKT200.Machitieu= 315
+						 
+						           )  ,0)		,
+
+RPtdetailCDKT200lientuc.dn316cfptranbonh = 	isnull( (select sum(CDKT200.Sotien) from CDKT200 
+                         where    CDKT200.nam =@yearchon
+						 			 
+						 and CDKT200.Machitieu= 316
+						 
+						           )  ,0)		,
+
+RPtdetailCDKT200lientuc.dn317ptrtheoluong = 	isnull( (select sum(CDKT200.Sotien) from CDKT200 
+                         where    CDKT200.nam =@yearchon
+						 			 
+						 and CDKT200.Machitieu= 317
+						 
+						           )  ,0)		,
+
+RPtdetailCDKT200lientuc.dn318pthuchunhan = 	isnull( (select sum(CDKT200.Sotien) from CDKT200 
+                         where    CDKT200.nam =@yearchon
+						 			 
+						 and CDKT200.Machitieu= 318
+						 
+						           )  ,0)	,
+
+RPtdetailCDKT200lientuc.dn319ptranhan = 	isnull( (select sum(CDKT200.Sotien) from CDKT200 
+                         where    CDKT200.nam =@yearchon
+						 			 
+						 and CDKT200.Machitieu= 319
+						 
+						           )  ,0)		,
+
+
+								   
+RPtdetailCDKT200lientuc.dn320vaynotcnhan = 	isnull( (select sum(CDKT200.Sotien) from CDKT200 
+                         where    CDKT200.nam =@yearchon
+						 			 
+						 and CDKT200.Machitieu= 320
+						 
+						           )  ,0)		,
+
+
+RPtdetailCDKT200lientuc.dn321duphptranh = 	isnull( (select sum(CDKT200.Sotien) from CDKT200 
+                         where    CDKT200.nam =@yearchon
+						 			 
+						 and CDKT200.Machitieu= 321
+						 
+						           )  ,0)		,
+
+								   
+RPtdetailCDKT200lientuc.dn322quykhen = 	isnull( (select sum(CDKT200.Sotien) from CDKT200 
+                         where    CDKT200.nam =@yearchon
+						 			 
+						 and CDKT200.Machitieu= 322
+						 
+						           )  ,0)		,
+
+								   
+RPtdetailCDKT200lientuc.dn323quygia = 	isnull( (select sum(CDKT200.Sotien) from CDKT200 
+                         where    CDKT200.nam =@yearchon
+						 			 
+						 and CDKT200.Machitieu= 323
+						 
+						           )  ,0)		,
+
+								   
+RPtdetailCDKT200lientuc.dn324bantraiphieu = 	isnull( (select sum(CDKT200.Sotien) from CDKT200 
+                         where    CDKT200.nam =@yearchon
+						 			 
+						 and CDKT200.Machitieu= 324
+						 
+						           )  ,0)		,
+
+
+RPtdetailCDKT200lientuc.dn331nodnngban = 	isnull( (select sum(CDKT200.Sotien) from CDKT200 
+                         where    CDKT200.nam =@yearchon
+						 			 
+						 and CDKT200.Machitieu= 331
+						 
+						           )  ,0)		,
+
+
+RPtdetailCDKT200lientuc.dn332ngmuatratdn = 	isnull( (select sum(CDKT200.Sotien) from CDKT200 
+                         where    CDKT200.nam =@yearchon
+						 			 
+						 and CDKT200.Machitieu= 332
+						 
+						           )  ,0)		,
+								   
+RPtdetailCDKT200lientuc.dn333cphiphaitra = 	isnull( (select sum(CDKT200.Sotien) from CDKT200 
+                         where    CDKT200.nam =@yearchon
+						 			 
+						 and CDKT200.Machitieu= 333
+						 
+						           )  ,0)		,
+
+								   
+RPtdetailCDKT200lientuc.dn334ptranbvevon = 	isnull( (select sum(CDKT200.Sotien) from CDKT200 
+                         where    CDKT200.nam =@yearchon
+						 			 
+						 and CDKT200.Machitieu= 334
+						 
+						           )  ,0)		,
+								   
+RPtdetailCDKT200lientuc.dn335ptranbdaihan = 	isnull( (select sum(CDKT200.Sotien) from CDKT200 
+                         where    CDKT200.nam =@yearchon
+						 			 
+						 and CDKT200.Machitieu= 335
+						 
+						           )  ,0)		,
+								   
+RPtdetailCDKT200lientuc.dn336dthuchthdn = 	isnull( (select sum(CDKT200.Sotien) from CDKT200 
+                         where    CDKT200.nam =@yearchon
+						 			 
+						 and CDKT200.Machitieu= 336
+						 
+						           )  ,0)		,
+								   
+RPtdetailCDKT200lientuc.dn337ptradnkhac = 	isnull( (select sum(CDKT200.Sotien) from CDKT200 
+                         where    CDKT200.nam =@yearchon
+						 			 
+						 and CDKT200.Machitieu= 337
+						 
+						           )  ,0)		,
+								   
+RPtdetailCDKT200lientuc.dn338vaynodn = 	isnull( (select sum(CDKT200.Sotien) from CDKT200 
+                         where    CDKT200.nam =@yearchon
+						 			 
+						 and CDKT200.Machitieu= 338
+						 
+						           )  ,0)		,
+								   
+RPtdetailCDKT200lientuc.dn339traiphieu = 	isnull( (select sum(CDKT200.Sotien) from CDKT200 
+                         where    CDKT200.nam =@yearchon
+						 			 
+						 and CDKT200.Machitieu= 339
+						 
+						           )  ,0)		,
+								   
+RPtdetailCDKT200lientuc.dn340cophieu = 	isnull( (select sum(CDKT200.Sotien) from CDKT200 
+                         where    CDKT200.nam =@yearchon
+						 			 
+						 and CDKT200.Machitieu= 340
+						 
+						           )  ,0)		,
+								   
+RPtdetailCDKT200lientuc.dn341tnhoanlai = 	isnull( (select sum(CDKT200.Sotien) from CDKT200 
+                         where    CDKT200.nam =@yearchon
+						 			 
+						 and CDKT200.Machitieu= 341
+						 
+						           )  ,0)		,
+								   
+RPtdetailCDKT200lientuc.dn342duphongdn = 	isnull( (select sum(CDKT200.Sotien) from CDKT200 
+                         where    CDKT200.nam =@yearchon
+						 			 
+						 and CDKT200.Machitieu= 342
+						 
+						           )  ,0)		,
+								   
+RPtdetailCDKT200lientuc.dn343quykhoahoc = 	isnull( (select sum(CDKT200.Sotien) from CDKT200 
+                         where    CDKT200.nam =@yearchon
+						 			 
+						 and CDKT200.Machitieu= 343
+						 
+						           )  ,0)		,
+								   
+
+
+RPtdetailCDKT200lientuc.dn411acophieupt = 	isnull( (select sum(CDKT200.Sotien) from CDKT200 
+                         where    CDKT200.nam =@yearchon
+						 			 
+						 and CDKT200.Machitieu= 4111
+						 
+						           )  ,0)		,
+
+RPtdetailCDKT200lientuc.dn411bcpudai = 	isnull( (select sum(CDKT200.Sotien) from CDKT200 
+                         where    CDKT200.nam =@yearchon
+						 			 
+						 and CDKT200.Machitieu= 4112
+						 
+						           )  ,0)	,
+								   
+RPtdetailCDKT200lientuc.dn411vongopcsh = 	isnull( (select sum(CDKT200.Sotien) from CDKT200 
+                         where    CDKT200.nam =@yearchon
+						 			 
+						 and CDKT200.Machitieu= 411
+						 
+						           )  ,0)		,
+
+RPtdetailCDKT200lientuc.dn412thangduvon = 	isnull( (select sum(CDKT200.Sotien) from CDKT200 
+                         where    CDKT200.nam =@yearchon
+						 			 
+						 and CDKT200.Machitieu= 412
+						 
+						           )  ,0)		,
+
+RPtdetailCDKT200lientuc.dn413traiphieu = 	isnull( (select sum(CDKT200.Sotien) from CDKT200 
+                         where    CDKT200.nam =@yearchon
+						 			 
+						 and CDKT200.Machitieu= 413
+						 
+						           )  ,0)		,
+
+RPtdetailCDKT200lientuc.dn414voncshkhac = 	isnull( (select sum(CDKT200.Sotien) from CDKT200 
+                         where    CDKT200.nam =@yearchon
+						 			 
+						 and CDKT200.Machitieu= 414
+						 
+						           )  ,0)	,
+
+RPtdetailCDKT200lientuc.dn415cphieuquy = 	isnull( (select sum(CDKT200.Sotien) from CDKT200 
+                         where    CDKT200.nam =@yearchon
+						 			 
+						 and CDKT200.Machitieu= 415
+						 
+						           )  ,0)			,
+								   
+RPtdetailCDKT200lientuc.dn416chenhlechts = 	isnull( (select sum(CDKT200.Sotien) from CDKT200 
+                         where    CDKT200.nam =@yearchon
+						 			 
+						 and CDKT200.Machitieu= 416
+						 
+						           )  ,0)		,
+								   
+RPtdetailCDKT200lientuc.dn417tygia = 	isnull( (select sum(CDKT200.Sotien) from CDKT200 
+                         where    CDKT200.nam =@yearchon
+						 			 
+						 and CDKT200.Machitieu= 417
+						 
+						           )  ,0)			,
+
+RPtdetailCDKT200lientuc.dn418dautuptrien = 	isnull( (select sum(CDKT200.Sotien) from CDKT200 
+                         where    CDKT200.nam =@yearchon
+						 			 
+						 and CDKT200.Machitieu= 418
+						 
+						           )  ,0)				,
+
+RPtdetailCDKT200lientuc.dn419quyxxdn = 	isnull( (select sum(CDKT200.Sotien) from CDKT200 
+                         where    CDKT200.nam =@yearchon
+						 			 
+						 and CDKT200.Machitieu= 419
+						 
+						           )  ,0),								   						   	
+
+RPtdetailCDKT200lientuc.dn420quykhacsh = 	isnull( (select sum(CDKT200.Sotien) from CDKT200 
+                         where    CDKT200.nam =@yearchon
+						 			 
+						 and CDKT200.Machitieu= 420
+						 
+						           )  ,0)	,
+
+RPtdetailCDKT200lientuc.dn421alnkytruoc = 	isnull( (select sum(CDKT200.Sotien) from CDKT200 
+                         where    CDKT200.nam =@yearchon
+						 			 
+						 and CDKT200.Machitieu= 4211
+						 
+						           )  ,0)			,								   	
+								   
+RPtdetailCDKT200lientuc.dn421blnkynay = 	isnull( (select sum(CDKT200.Sotien) from CDKT200 
+                         where    CDKT200.nam =@yearchon
+						 			 
+						 and CDKT200.Machitieu= 4212
+						 
+						           )  ,0)			,
+								   
+RPtdetailCDKT200lientuc.dn421lnsauthue = 	isnull( (select sum(CDKT200.Sotien) from CDKT200 
+                         where    CDKT200.nam =@yearchon
+						 			 
+						 and CDKT200.Machitieu= 415
+						 
+						           )  ,0)			,
+								   
+RPtdetailCDKT200lientuc.dn422vonxdcb = 	isnull( (select sum(CDKT200.Sotien) from CDKT200 
+                         where    CDKT200.nam =@yearchon
+						 			 
+						 and CDKT200.Machitieu= 422
+						 
+						           )  ,0)			,
+								   
+RPtdetailCDKT200lientuc.dn431nkinhphi = 	isnull( (select sum(CDKT200.Sotien) from CDKT200 
+                         where    CDKT200.nam =@yearchon
+						 			 
+						 and CDKT200.Machitieu= 431
+						 
+						           )  ,0)			,
+								   
+RPtdetailCDKT200lientuc.dn432kpthanhtscd = 	isnull( (select sum(CDKT200.Sotien) from CDKT200 
+                         where    CDKT200.nam =@yearchon
+						 			 
+						 and CDKT200.Machitieu= 432
+						 
+						           )  ,0)								   	
+								   													   	
+								   													   	
+								   									   		
+								   									   										   										   									   									   									   											   									   									   									   									   									   										   									   								   								   								   							   								   																																																 																																	
+																									 
+     from RPtdetailCDKT200lientuc
+	
+	where RPtdetailCDKT200lientuc.username = @username
+		
+
+      end
+
+
+
+		IF OBJECT_ID(N'tempdb..#TempResults', N'U') IS NOT NULL 
+        DROP TABLE #TempResults;
+
+		
+		IF OBJECT_ID(N'tempdb..#TempResults2', N'U') IS NOT NULL 
+        DROP TABLE #TempResults2;
+
+
+	END
+
+	
+
+-----------------------
+USE [BEE]
+GO
+
+/****** Object:  Table [dbo].[LTTT200Dauky]    Script Date: 22/12/2017 5:36:40 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[LTTT200Dauky](
+	[nam] [int] NULL,
+	[Machitieu] [int] NULL,
+	[Tenchitieu] [nvarchar](225) NULL,
+	[Cachghi] [nvarchar](225) NULL,
+	[Sotien] [float] NULL,
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[username] [nvarchar](50) NULL,
+ CONSTRAINT [PK_LTTT200Dauky] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+------------lcttien progarme
+
+USE [BEE]
+GO
+/****** Object:  StoredProcedure [dbo].[calulationluuchuyentiente200]    Script Date: 22/12/2017 7:05:30 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+
+
+ALTER procedure  [dbo].[calulationluuchuyentiente200]
+( 
+@username nvarchar (225) ,
+ @yearchon INT 
+
+
+)
+ 
+as
+
+
+begin
+
+
+		IF OBJECT_ID(N'tempdb..#Tempthu', N'U') IS NOT NULL 
+        DROP TABLE #Tempthu;
+
+		
+		CREATE TABLE #Tempthu
+			(
+		                        matkDU Nvarchar(10),
+								
+                             	machitiet int,
+                                tPSNo float,
+                          	stat int ,
+							
+			)
+
+IF OBJECT_ID(N'tempdb..#Tempchi', N'U') IS NOT NULL 
+        DROP TABLE #Tempchi;
+
+		
+		CREATE TABLE #Tempchi
+			(
+		                       matkDU Nvarchar(10),
+								
+                             	machitiet int,
+                              
+                                tPSCo float,
+						stat int ,
+							
+			)
+
+
+		begin
+        insert into #Tempthu (matkDU, machitiet, tPSNo ,stat)
+		SELECT tbl_Socai.TkCo, ISNULL(tbl_Socai.MaCTietTKCo, -1), SUM(tbl_Socai.PsCo),'0'
+		 FROM  tbl_Socai
+		 WHERE   year( tbl_Socai.Ngayctu)= @yearchon
+		       and (left(tbl_Socai.TkNo,3) =  '111'  
+					or  left(tbl_Socai.TkNo,3)=  '112' 
+					or  left(tbl_Socai.TkNo,3)=  '113' 	  
+						   )
+
+	     GROUP BY tbl_Socai.TkCo, tbl_Socai.MaCTietTKCo
+		end
+
+		begin
+
+        insert into #Tempchi (matkDU, machitiet, tPSCo ,stat)
+		SELECT tbl_Socai.TkNo, ISNULL(tbl_Socai.MaCTietTKNo, -1),- SUM(tbl_Socai.PsCo),'0'
+		 FROM  tbl_Socai
+		 WHERE   year( tbl_Socai.Ngayctu)= @yearchon
+		       and (left(tbl_Socai.TkCo,3) =  '111'  
+					or  left(tbl_Socai.TkCo,3)=  '112' 
+					or  left(tbl_Socai.TkCo,3)=  '113' 	  
+						   )
+
+	     GROUP BY tbl_Socai.TkNo, tbl_Socai.MaCTietTKNo
+		end
+
+
+		 
+	
+
+		begin
+		delete RPtdetaillchuyenttttiep
+		where RPtdetaillchuyenttttiep.username = @username
+
+		end
+
+       begin
+        insert into RPtdetaillchuyenttttiep (username,nn01thudthu,nn02chiccap )
+		values (@username, '0','0' )
+		
+		end
+
+	
+	
+
+
+begin -- loai 1
+ UPDATE  #Tempthu
+         SET 
+#Tempthu.stat ='1'
+  where (left(#Tempthu.matkDU,3) =  '511'  
+						  or  left(#Tempthu.matkDU,4)=  '3331'  
+						  	  or  left(#Tempthu.matkDU,3)=  '131'  
+							  	  or  left(#Tempthu.matkDU,3)=  '515'  
+	  or  left(#Tempthu.matkDU,3)=  '121'  )
+
+
+end
+
+
+begin -- loai 2
+ UPDATE  #Tempchi  
+         SET 
+#Tempchi.stat ='2'
+  where (left(#Tempchi.matkDU,3) =  '331'  
+					or  left(#Tempchi.matkDU,3)=  '151'  
+					or  left(#Tempchi.matkDU,3)=  '152'  
+					or  left(#Tempchi.matkDU,3)=  '153'  
+					or  left(#Tempchi.matkDU,3)=  '154'  
+							or  left(#Tempchi.matkDU,3)=  '155'  
+									or  left(#Tempchi.matkDU,3)=  '156'  
+											or  left(#Tempchi.matkDU,3)=  '157'  
+						  )
+
+
+end
+
+
+begin  --loai 3
+ UPDATE  #Tempchi
+         SET 
+#Tempchi.stat ='3'
+  
+      where (left(#Tempchi.matkDU,3) =  '334'   )
+
+end
+
+
+
+begin  --loai 4
+ UPDATE  #Tempchi
+         SET 
+#Tempchi.stat ='4'
+  
+      where left(#Tempchi.matkDU,3) =  '635' 
+	             and #Tempchi.machitiet =  '0' -- chi ti?t lai vay mã == 0
+
+end
+
+
+
+begin  --loai 5
+ UPDATE  #Tempchi
+         SET 
+#Tempchi.stat ='5'
+  
+      where left(#Tempchi.matkDU,4) =  '3334' 
+	          
+end
+
+-- PS N? 111+112 / Có 711, 133, 141, 244…(các kho?n THU khác t? ho?t d?ng KD mà ko thu?c ch? tiêu 01)
+
+---PS Có 111+112+113 / N? 211, 213, 217, 241 …
+
+begin  --loai 21
+ UPDATE  #Tempchi
+         SET 
+#Tempchi.stat ='21'
+     where (left(#Tempchi.matkDU,3) =  '211' 
+	          or left(#Tempchi.matkDU,3) =  '213' 
+			     or left(#Tempchi.matkDU,3) =  '217' 
+				  )
+								   and  #Tempchi.stat ='0'
+
+end
+
+
+begin  --loai 31
+ UPDATE  #Tempthu
+         SET 
+#Tempthu.stat ='31'
+     where (left(#Tempthu.matkDU,3) =  '411' 
+	         
+			   
+				  )
+								   and  #Tempthu.stat ='0'
+
+end
+
+
+begin  --loai 32
+ UPDATE  #Tempchi
+         SET 
+#Tempchi.stat ='32'
+     where (left(#Tempchi.matkDU,3) =  '411' 
+	         
+			   
+				  )
+								   and  #Tempchi.stat ='0'
+
+end
+
+begin  --loai 33
+ UPDATE  #Tempthu
+         SET 
+#Tempthu.stat ='33'
+     where (left(#Tempthu.matkDU,4) =  '3411' 
+	         
+			 --or  left(#Tempthu.matkDU,3) =  '342' 
+				  )
+								   and  #Tempthu.stat ='0'
+
+end
+
+
+begin  --loai 34
+ UPDATE  #Tempchi
+         SET 
+#Tempchi.stat ='34'
+     where (left(#Tempchi.matkDU,4) =  '3411' 
+	         
+				 --or  left(#Tempchi.matkDU,3) =  '342'    
+				  )
+								   and  #Tempchi.stat ='0'
+
+end
+
+
+begin  --loai 35
+ UPDATE  #Tempchi
+         SET 
+#Tempchi.stat ='35'
+     where (left(#Tempchi.matkDU,4) =  '3412' 
+	         
+				 --or  left(#Tempchi.matkDU,3) =  '342'    
+				  )
+								   and  #Tempchi.stat ='0'
+
+end
+
+
+begin  --loai 36
+ UPDATE  #Tempchi
+         SET 
+#Tempchi.stat ='36'
+     where (left(#Tempchi.matkDU,3) =  '421' 
+	         
+				 --or  left(#Tempchi.matkDU,3) =  '342'    
+				  )
+								   and  #Tempchi.stat ='0'
+
+end
+
+
+begin  --loai 61
+ UPDATE  #Tempchi
+         SET 
+#Tempchi.stat ='61'
+     where (left(#Tempchi.matkDU,3) =  '412' 
+	         
+				 --or  left(#Tempchi.matkDU,3) =  '342'    
+				  )
+								   and  #Tempchi.stat ='0'
+
+end
+
+begin  --loai 61
+ UPDATE  #Tempthu
+         SET 
+#Tempthu.stat ='61'
+     where (left(#Tempthu.matkDU,3) =  '412' 
+	         
+			 --or  left(#Tempthu.matkDU,3) =  '342' 
+				  )
+								   and  #Tempthu.stat ='0'
+
+end
+
+
+begin  --loai 22
+ UPDATE  #Tempthu
+         SET 
+#Tempthu.stat ='22'
+     where (left(#Tempthu.matkDU,3) =  '711' 
+	         
+			or  left(#Tempthu.matkDU,4) =  '5117' 
+				or  left(#Tempthu.matkDU,3) =  '131' 
+				
+				  )
+								   and  #Tempthu.stat ='0'
+
+end
+  
+
+begin  --loai 22
+ UPDATE  #Tempchi
+         SET 
+#Tempchi.stat ='22'
+     where (left(#Tempchi.matkDU,3) =  '632' 
+	         
+			or  left(#Tempchi.matkDU,3) =  '811' 
+			--	or  left(#Tempchi.matkDU,3) =  '131' 
+				
+				  )
+								   and  #Tempchi.stat ='0'
+
+end					
+
+
+begin  --loai 23
+ UPDATE  #Tempchi
+         SET 
+#Tempchi.stat ='23'
+     where (left(#Tempchi.matkDU,3) =  '128' 
+	         
+			or  left(#Tempchi.matkDU,3) =  '171' 
+			--	or  left(#Tempchi.matkDU,3) =  '131' 
+				
+				  )
+								   and  #Tempchi.stat ='0'
+
+end			
+
+
+begin  --loai 24
+ UPDATE  #Tempthu
+         SET 
+#Tempthu.stat ='24'
+     where (left(#Tempthu.matkDU,3) =  '128' 
+	         
+			or  left(#Tempthu.matkDU,4) =  '171' 
+			
+				
+				  )
+								   and  #Tempthu.stat ='0'
+
+end
+  
+
+begin  --loai 25
+ UPDATE  #Tempchi
+         SET 
+#Tempchi.stat ='25'
+     where (left(#Tempchi.matkDU,3) =  '211' 
+	         
+			or  left(#Tempchi.matkDU,3) =  '222' 
+			or  left(#Tempchi.matkDU,4) =  '2281' 
+				
+				  )
+								   and  #Tempchi.stat ='0'
+
+end			
+
+begin  --loai 26
+ UPDATE  #Tempthu
+         SET 
+#Tempthu.stat ='26'
+     where (left(#Tempthu.matkDU,3) =  '221' 
+	         
+			or  left(#Tempthu.matkDU,3) =  '222' 
+			
+					or  left(#Tempthu.matkDU,4) =  '2281' 
+				  )
+								   and  #Tempthu.stat ='0'
+
+end
+  
+  
+begin  --loai 27
+ UPDATE  #Tempthu
+         SET 
+#Tempthu.stat ='27'
+     where (left(#Tempthu.matkDU,3) =  '515' 
+	         
+	--		or  left(#Tempthu.matkDU,3) =  '222' 
+			
+			--		or  left(#Tempthu.matkDU,4) =  '2281' 
+				  )
+								   and  #Tempthu.stat ='0'
+
+end	
+
+
+
+begin -- loai 6
+ UPDATE  #Tempthu
+         SET 
+#Tempthu.stat ='6'
+  where 
+  --(left(#Tempthu.matkDU,3) =  '711'  
+		--				  or  left(#Tempthu.matkDU,4)=  '133'  
+		--				  	  or  left(#Tempthu.matkDU,3)=  '141'  
+		--					  	  or ( (left(#Tempthu.matkDU,3)=  '244' ) 
+		--						  and (#Tempthu.machitiet <> '1'	)  )
+	 --)
+	   #Tempthu.stat ='0'
+
+end
+-- PS Có 111+112+113 / N? 811, 161, 244, 333, 338, 344, 352, 353, 356…(các kho?n CHI khác t? ho?t d?ng KD mà ko thu?c ch? tiêu 02+03+04+05)								 
+
+begin  --loai 7
+ UPDATE  #Tempchi
+         SET 
+#Tempchi.stat ='7'
+    where
+    --(left(#Tempchi.matkDU,3) =  '811' 
+	     --     or left(#Tempchi.matkDU,3) =  '161' 
+			   --  or left(#Tempchi.matkDU,3) =  '244' 
+				  --  or left(#Tempchi.matkDU,3) =  '333' 
+					 --  or left(#Tempchi.matkDU,3) =  '338' 
+					 --     or left(#Tempchi.matkDU,3) =  '344' 
+						--     or left(#Tempchi.matkDU,3) =  '352' 
+						--	    or left(#Tempchi.matkDU,3) =  '353' 
+						--		   or left(#Tempchi.matkDU,3) =  '356' )   and
+								   #Tempchi.stat ='0'
+
+end
+	begin  -- udate lchuyen tien te
+
+  UPDATE  RPtdetaillchuyenttttiep
+         SET 
+	--PS N? 111+112 / Có 511,3331,131, 515,121 (515,121 chi ti?t s? ti?n thu t? bán ch?ng khoán kinh doanh)	
+RPtdetaillchuyenttttiep.nn01thudthu = isnull( (select sum(#Tempthu.tPSNo) from #Tempthu 
+                         where #Tempthu.stat ='1'	 ),'0'),
+
+-- PS Có 111+112 / N? 331, 151, 152, 153, 154, 155, 156, 157,…
+RPtdetaillchuyenttttiep.nn02chiccap = isnull( (select sum(#Tempchi.tPSCo) from #Tempchi  
+                         where #Tempchi.stat ='2'	 ),'0'),
+							 
+-- 	 PS Có 111+112 / N? 334
+RPtdetaillchuyenttttiep.nn03chilaodong = isnull( (select sum(#Tempchi.tPSCo) from #Tempchi  
+                         where #Tempchi.stat ='3'	 ),'0'),
+
+                   
+
+					
+-- PS Có 111+112+113 / N? 635-chi ti?t lãi vay
+RPtdetaillchuyenttttiep.nn04chilaivay = isnull( (select sum(#Tempchi.tPSCo) from #Tempchi  
+                         where #Tempchi.stat ='4'	 ),'0'),
+
+				 
+
+-- PS Có 111+112+113 / N? 3334
+
+RPtdetaillchuyenttttiep.nn05chithuetndn =  isnull( (select sum(#Tempchi.tPSCo) from #Tempchi  
+                        where #Tempchi.stat ='5'	 ),'0'),
+
+-- PS N? 111+112 / Có 711, 133, 141, 244…(các kho?n THU khác t? ho?t d?ng KD mà ko thu?c ch? tiêu 01)
+			
+RPtdetaillchuyenttttiep.nn06thukhac = isnull( (select sum(#Tempthu.tPSNo) from #Tempthu 
+                         where #Tempthu.stat ='6'	 ),'0'),
+
+								 
+-- PS Có 111+112+113 / N? 811, 161, 244, 333, 338, 344, 352, 353, 356…(các kho?n CHI khác t? ho?t d?ng KD mà ko thu?c ch? tiêu 02+03+04+05)								 
+	RPtdetaillchuyenttttiep.nn07chikhac = isnull( (select sum(#Tempchi.tPSCo) from #Tempchi  
+                         where #Tempchi.stat ='7'	 ),'0'),
+
+	
+						 
+								 
+-- 20 = 01 + 02 + 03 + 04 + 05 + 06 + 07
+
+	
+---PS Có 111+112+113 / N? 211, 213, 217, 241 …
+RPtdetaillchuyenttttiep.nn21chitsan = isnull( (select sum(#Tempchi.tPSCo) from #Tempchi  
+                         where #Tempchi.stat ='21'	 ),'0'),
+
+					
+-- Chênh l?ch duong (+) ho?c âm (-) gi?a:
+-- Thu: PS n? 111+112+113 / Có 711, 5117, 131…), và
+-- Chi (PS có 111+112+113 / N? 632, 811…)
+--chi ti?t v? thanh lý, nhu?ng bán TSCÐ, BÐSÐT và các tài s?n dài h?n khác
+		
+RPtdetaillchuyenttttiep.nn22thutaisan = isnull( (select sum(#Tempchi.tPSCo) from #Tempchi  
+                         where #Tempchi.stat ='22'	 ),'0')
+						 + isnull( (select sum(#Tempthu.tPSNo) from #Tempthu  
+                         where #Tempthu.stat ='22'	 ),'0') ,
+								 
+	--PS Có 111+112+113 / N? 128, 171 …							 
+	
+RPtdetaillchuyenttttiep.nn23chichovay = isnull( (select sum(#Tempchi.tPSCo) from #Tempchi  
+                         where #Tempchi.stat ='23'	 ),'0'),	
+
+--  PS N? 111+112+113 / Có 128, 171 …
+	
+RPtdetaillchuyenttttiep.nn24thuchovay = isnull( (select sum(#Tempthu.tPSNo) from #Tempthu 
+                         where #Tempthu.stat ='24'	 ),'0'),
+
+
+-- PS Có 111+112+113 / N? 221, 222, 2281…
+	
+RPtdetaillchuyenttttiep.nn25chidtdonvikhac = isnull( (select sum(#Tempchi.tPSCo) from #Tempchi  
+                         where #Tempchi.stat ='25'	 ),'0'),
+
+-- PS N? 111+112+113 / Có 221, 222, 2281…
+		
+RPtdetaillchuyenttttiep.nn26thudtdonvikhac = isnull( (select sum(#Tempthu.tPSNo) from #Tempthu 
+                         where #Tempthu.stat ='26'	 ),'0'),
+								 
+								 
+--  PS N? 111+112+113 / Có 515 (lãi, c? t?c, l?i nhu?n du?c chia)
+
+		
+RPtdetaillchuyenttttiep.nn27thulaicotuc = isnull( (select sum(#Tempthu.tPSNo) from #Tempthu 
+                         where #Tempthu.stat ='27'	 ),'0'),
+								 
+								 
+-- 	30 = 21 + 22 + 23 + 24 + 25 + 26 + 27
+-- Ti?n thu t? phát hành c? phi?u, nh?n v?n góp c?a ch? s? h?u
+RPtdetaillchuyenttttiep.nn31thucophieu = isnull( (select sum(#Tempthu.tPSNo) from #Tempthu 
+                         where #Tempthu.stat ='31'	 ),'0'),
+
+RPtdetaillchuyenttttiep.nn32chitravon = isnull( (select sum(#Tempchi.tPSCo) from #Tempchi 
+                         where #Tempchi.stat ='32'	 ),'0'),
+
+RPtdetaillchuyenttttiep.nn33thudivay = isnull( (select sum(#Tempthu.tPSNo) from #Tempthu 
+                         where #Tempthu.stat ='33'	 ),'0'),
+RPtdetaillchuyenttttiep.nn34tragoc = isnull( (select sum(#Tempchi.tPSCo) from #Tempchi 
+                         where #Tempchi.stat ='34'	 ),'0'),
+
+RPtdetaillchuyenttttiep.nn35tragocthue = isnull( (select sum(#Tempchi.tPSCo) from #Tempchi 
+                         where #Tempchi.stat ='35'	 ),'0'),
+
+RPtdetaillchuyenttttiep.nn36tracotuc = isnull( (select sum(#Tempchi.tPSCo) from #Tempchi 
+                         where #Tempchi.stat ='36'	 ),'0'),
+
+RPtdetaillchuyenttttiep.nn61tientygia = isnull( (select sum(#Tempchi.tPSCo) from #Tempchi 
+                         where #Tempchi.stat ='61'	 ),'0')
+						 + isnull( (select sum(#Tempthu.tPSNo) from #Tempthu 
+                         where #Tempthu.stat ='61'	 ),'0'),
+
+				 
+RPtdetaillchuyenttttiep.nt02chiccap = isnull( (select sum(LTTT200Dauky.Sotien) from LTTT200Dauky 
+                         where LTTT200Dauky.nam = @yearchon	
+						 and LTTT200Dauky.Machitieu =2
+						 
+						  ),'0'),
+
+
+RPtdetaillchuyenttttiep.nt03chilaodong = isnull( (select sum(LTTT200Dauky.Sotien) from LTTT200Dauky 
+                         where LTTT200Dauky.nam = @yearchon	
+						 and LTTT200Dauky.Machitieu =3
+						 
+						  ),'0'),
+						  			
+
+RPtdetaillchuyenttttiep.nt04chilaivay = isnull( (select sum(LTTT200Dauky.Sotien) from LTTT200Dauky 
+                         where LTTT200Dauky.nam = @yearchon	
+						 and LTTT200Dauky.Machitieu =4
+						 
+						  ),'0'),
+						  
+RPtdetaillchuyenttttiep.nt05chithuetndn = isnull( (select sum(LTTT200Dauky.Sotien) from LTTT200Dauky 
+                         where LTTT200Dauky.nam = @yearchon	
+						 and LTTT200Dauky.Machitieu =5
+						 
+						  ),'0'),
+
+
+RPtdetaillchuyenttttiep.nt06thukhac = isnull( (select sum(LTTT200Dauky.Sotien) from LTTT200Dauky 
+                         where LTTT200Dauky.nam = @yearchon	
+						 and LTTT200Dauky.Machitieu =6
+						 
+						  ),'0'),
+						  
+RPtdetaillchuyenttttiep.nt07chikhac = isnull( (select sum(LTTT200Dauky.Sotien) from LTTT200Dauky 
+                         where LTTT200Dauky.nam = @yearchon	
+						 and LTTT200Dauky.Machitieu =7
+						 
+						  ),'0'),
+
+RPtdetaillchuyenttttiep.nt21chitsan = isnull( (select sum(LTTT200Dauky.Sotien) from LTTT200Dauky 
+                         where LTTT200Dauky.nam = @yearchon	
+						 and LTTT200Dauky.Machitieu =21
+						 
+						  ),'0'),
+
+
+RPtdetaillchuyenttttiep.nt22thutaisan = isnull( (select sum(LTTT200Dauky.Sotien) from LTTT200Dauky 
+                         where LTTT200Dauky.nam = @yearchon	
+						 and LTTT200Dauky.Machitieu =22
+						 
+						  ),'0'),
+						  
+RPtdetaillchuyenttttiep.nt23chichovay = isnull( (select sum(LTTT200Dauky.Sotien) from LTTT200Dauky 
+                         where LTTT200Dauky.nam = @yearchon	
+						 and LTTT200Dauky.Machitieu =23
+						 
+						  ),'0'),
+						  
+RPtdetaillchuyenttttiep.nt24thuchovay = isnull( (select sum(LTTT200Dauky.Sotien) from LTTT200Dauky 
+                         where LTTT200Dauky.nam = @yearchon	
+						 and LTTT200Dauky.Machitieu =24
+						 
+						  ),'0'),
+						  
+RPtdetaillchuyenttttiep.nt25chidtdonvikhac = isnull( (select sum(LTTT200Dauky.Sotien) from LTTT200Dauky 
+                         where LTTT200Dauky.nam = @yearchon	
+						 and LTTT200Dauky.Machitieu =25
+						 
+						  ),'0'),
+						  
+RPtdetaillchuyenttttiep.nt26thudtdonvikhac = isnull( (select sum(LTTT200Dauky.Sotien) from LTTT200Dauky 
+                         where LTTT200Dauky.nam = @yearchon	
+						 and LTTT200Dauky.Machitieu =26
+						 
+						  ),'0'),
+						  
+RPtdetaillchuyenttttiep.nt27thulaicotuc = isnull( (select sum(LTTT200Dauky.Sotien) from LTTT200Dauky 
+                         where LTTT200Dauky.nam = @yearchon	
+						 and LTTT200Dauky.Machitieu =27
+						 
+						  ),'0'),
+						  
+RPtdetaillchuyenttttiep.nt31thucophieu = isnull( (select sum(LTTT200Dauky.Sotien) from LTTT200Dauky 
+                         where LTTT200Dauky.nam = @yearchon	
+						 and LTTT200Dauky.Machitieu =31
+						 
+						  ),'0'),
+						  
+RPtdetaillchuyenttttiep.nt32chitravon = isnull( (select sum(LTTT200Dauky.Sotien) from LTTT200Dauky 
+                         where LTTT200Dauky.nam = @yearchon	
+						 and LTTT200Dauky.Machitieu =32
+						 
+						  ),'0'),
+						  
+RPtdetaillchuyenttttiep.nt33thudivay = isnull( (select sum(LTTT200Dauky.Sotien) from LTTT200Dauky 
+                         where LTTT200Dauky.nam = @yearchon	
+						 and LTTT200Dauky.Machitieu =33
+						 
+						  ),'0'),
+						  
+RPtdetaillchuyenttttiep.nt34tragoc = isnull( (select sum(LTTT200Dauky.Sotien) from LTTT200Dauky 
+                         where LTTT200Dauky.nam = @yearchon	
+						 and LTTT200Dauky.Machitieu =34
+						 
+						  ),'0'),
+						  
+RPtdetaillchuyenttttiep.nt35tragocthue = isnull( (select sum(LTTT200Dauky.Sotien) from LTTT200Dauky 
+                         where LTTT200Dauky.nam = @yearchon	
+						 and LTTT200Dauky.Machitieu =35
+						 
+						  ),'0'),
+						  
+RPtdetaillchuyenttttiep.nt36tracotuc = isnull( (select sum(LTTT200Dauky.Sotien) from LTTT200Dauky 
+                         where LTTT200Dauky.nam = @yearchon	
+						 and LTTT200Dauky.Machitieu =36
+						 
+						  ),'0'),
+						  
+RPtdetaillchuyenttttiep.nt50lltrongky = isnull( (select sum(LTTT200Dauky.Sotien) from LTTT200Dauky 
+                         where LTTT200Dauky.nam = @yearchon	
+						 and LTTT200Dauky.Machitieu =50
+						 
+						  ),'0'),
+						  
+RPtdetaillchuyenttttiep.nt60tiendauky = isnull( (select sum(LTTT200Dauky.Sotien) from LTTT200Dauky 
+                         where LTTT200Dauky.nam = @yearchon	
+						 and LTTT200Dauky.Machitieu =60
+						 
+						  ),'0'),
+						  
+RPtdetaillchuyenttttiep.nt61tientygia = isnull( (select sum(LTTT200Dauky.Sotien) from LTTT200Dauky 
+                         where LTTT200Dauky.nam = @yearchon	
+						 and LTTT200Dauky.Machitieu =61
+						 
+						  ),'0'),
+						  						  						  												 
+RPtdetaillchuyenttttiep.nt01thudthu = isnull( (select sum(LTTT200Dauky.Sotien) from LTTT200Dauky 
+                         where LTTT200Dauky.nam = @yearchon	
+						 and LTTT200Dauky.Machitieu =1 ),'0')
+
+								 							 					
+     from RPtdetaillchuyenttttiep
+	
+	where RPtdetaillchuyenttttiep.username = @username
+		
+
+end
+
+
+		IF OBJECT_ID(N'tempdb..#TempResults', N'U') IS NOT NULL 
+        DROP TABLE #TempResults;
+
+
+
+	end
+
+	
 

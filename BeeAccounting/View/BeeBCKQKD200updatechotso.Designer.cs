@@ -72,11 +72,11 @@
             this.formlabelED.AutoSize = true;
             this.formlabelED.BackColor = System.Drawing.SystemColors.Control;
             this.formlabelED.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.formlabelED.Location = new System.Drawing.Point(79, 11);
+            this.formlabelED.Location = new System.Drawing.Point(58, 11);
             this.formlabelED.Name = "formlabelED";
-            this.formlabelED.Size = new System.Drawing.Size(210, 19);
+            this.formlabelED.Size = new System.Drawing.Size(274, 19);
             this.formlabelED.TabIndex = 87;
-            this.formlabelED.Text = "NHẬP SỐ  BÁO CÁO KQKD ";
+            this.formlabelED.Text = "NHẬP SỐ ĐẦU KỲ  BÁO CÁO KQKD ";
             this.formlabelED.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // groupBox4

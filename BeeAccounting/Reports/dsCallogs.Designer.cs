@@ -13155,161 +13155,161 @@ namespace BEEACCOUNT.Reports {
                         double cn215pthuchovay, 
                         double cn216pthukhac, 
                         double cn219duphongpt, 
-                        string cn222tscdngia, 
-                        string cn223tskhauh, 
-                        string cn225tscdthung, 
-                        string cn226tscdthuekha, 
-                        string cn228tscdvohnggia, 
-                        string cn229tscdvhkhauh, 
-                        string cn231bdsngia, 
-                        string cn232bdshaomon, 
-                        string cn241cfkddd, 
-                        string cn242cfxddd, 
-                        string cn251dtuctycon, 
-                        string cn252dtuctylienket, 
-                        string cn253dtukhac, 
-                        string cn254duphongdt, 
-                        string cn255dtudaohan, 
-                        string cn261cftratruocdn, 
-                        string cn262thuetndnhl, 
-                        string cn263vtuthietbidn, 
-                        string cn268tskhac, 
-                        string cn311ptnbannh, 
-                        string cn312ngmuatratr, 
-                        string cn313thuephainop, 
-                        string cn314ptracnhan, 
-                        string cn315cphiptranh, 
-                        string cn316cfptranbonh, 
-                        string cn317ptrtheoluong, 
-                        string cn318pthuchunhan, 
-                        string cn319ptranhan, 
-                        string cn320vaynotcnhan, 
-                        string cn321duphptranh, 
-                        string cn322quykhen, 
-                        string cn323quygia, 
-                        string cn324bantraiphieu, 
-                        string cn331nodnngban, 
-                        string cn332ngmuatratdn, 
-                        string cn333cphiphaitra, 
-                        string cn334ptranbvevon, 
-                        string cn335ptranbdaihan, 
-                        string cn336dthuchthdn, 
-                        string cn337ptradnkhac, 
-                        string cn338vaynodn, 
-                        string cn339traiphieu, 
-                        string cn340cophieu, 
-                        string cn341tnhoanlai, 
-                        string cn342duphongdn, 
-                        string cn343quykhoahoc, 
-                        string cn411vongopcsh, 
-                        string cn411bcpudai, 
-                        string cn412thangduvon, 
-                        string cn413traiphieu, 
-                        string cn414voncshkhac, 
-                        string cn415cphieuquy, 
-                        string cn416chenhlechts, 
-                        string cn417tygia, 
-                        string cn418dautuptrien, 
-                        string cn419quyxxdn, 
-                        string cn420quykhacsh, 
-                        string cn421lnsauthue, 
-                        string cn421alnkytruoc, 
-                        string cn421blnkynay, 
-                        string cn422vonxdcb, 
-                        string cn431nkinhphi, 
-                        string cn432kpthanhtscd, 
-                        string dn111tien, 
-                        string dn112tientduong, 
-                        string dn121chungkhoan, 
-                        string dn122ckduphong, 
-                        string dn123dtdenngay, 
-                        string dn131ptkhach, 
-                        string dn132tratruoc, 
-                        string dn133pthunbnganh, 
-                        string dn134pthutiendokh, 
-                        string dn135pthuchovay, 
-                        string dn136ptnganhan, 
-                        string dn137dpptnganhan, 
-                        string dn139tsthieucho, 
-                        string dn141hangton, 
-                        string dn149duphonght, 
-                        string dn151cftratruoc, 
-                        string dn152vatkhautru, 
-                        string dn153thuepthukac, 
-                        string dn154traiphieu, 
-                        string dn155tskhacnh, 
-                        string dn211ptkhach, 
-                        string dn212tratruocdh, 
-                        string dn213vonodonvi, 
-                        string dn214pthunbo, 
-                        string dn215pthuchovay, 
-                        string dn216pthukhac, 
-                        string dn219duphongpt, 
-                        string dn222tscdngia, 
-                        string dn223tskhauh, 
-                        string dn225tscdthung, 
-                        string dn226tscdthuekha, 
-                        string dn228tscdvohnggia, 
-                        string dn229tscdvhkhauh, 
-                        string dn231bdsngia, 
-                        string dn232bdshaomon, 
-                        string dn241cfkddd, 
-                        string dn242cfxddd, 
-                        string dn251dtuctycon, 
-                        string dn252dtuctylienket, 
-                        string dn253dtukhac, 
-                        string dn254duphongdt, 
-                        string dn255dtudaohan, 
-                        string dn261cftratruocdn, 
-                        string dn262thuetndnhl, 
-                        string dn263vtuthietbidn, 
-                        string dn268tskhac, 
-                        string dn311ptnbannh, 
-                        string dn312ngmuatratr, 
-                        string dn313thuephainop, 
-                        string dn314ptracnhan, 
-                        string dn315cphiptranh, 
-                        string dn316cfptranbonh, 
-                        string dn317ptrtheoluong, 
-                        string dn318pthuchunhan, 
-                        string dn319ptranhan, 
-                        string dn320vaynotcnhan, 
-                        string dn323quygia, 
-                        string dn324bantraiphieu, 
-                        string dn321duphptranh, 
-                        string dn331nodnngban, 
-                        string dn332ngmuatratdn, 
-                        string dn333cphiphaitra, 
-                        string dn334ptranbvevon, 
-                        string dn335ptranbdaihan, 
-                        string dn336dthuchthdn, 
-                        string dn337ptradnkhac, 
-                        string dn338vaynodn, 
-                        string dn339traiphieu, 
-                        string dn340cophieu, 
-                        string dn341tnhoanlai, 
-                        string dn342duphongdn, 
-                        string dn343quykhoahoc, 
-                        string dn411vongopcsh, 
-                        string dn322quykhen, 
-                        string dn411bcpudai, 
-                        string dn412thangduvon, 
-                        string dn413traiphieu, 
-                        string dn414voncshkhac, 
-                        string dn415cphieuquy, 
-                        string dn416chenhlechts, 
-                        string dn417tygia, 
-                        string dn418dautuptrien, 
-                        string dn419quyxxdn, 
-                        string dn420quykhacsh, 
-                        string dn421lnsauthue, 
-                        string dn421alnkytruoc, 
-                        string dn421blnkynay, 
-                        string dn422vonxdcb, 
-                        string dn431nkinhphi, 
-                        string dn432kpthanhtscd, 
-                        string dn411acophieupt, 
-                        string cn411acophieupt) {
+                        double cn222tscdngia, 
+                        double cn223tskhauh, 
+                        double cn225tscdthung, 
+                        double cn226tscdthuekha, 
+                        double cn228tscdvohnggia, 
+                        double cn229tscdvhkhauh, 
+                        double cn231bdsngia, 
+                        double cn232bdshaomon, 
+                        double cn241cfkddd, 
+                        double cn242cfxddd, 
+                        double cn251dtuctycon, 
+                        double cn252dtuctylienket, 
+                        double cn253dtukhac, 
+                        double cn254duphongdt, 
+                        double cn255dtudaohan, 
+                        double cn261cftratruocdn, 
+                        double cn262thuetndnhl, 
+                        double cn263vtuthietbidn, 
+                        double cn268tskhac, 
+                        double cn311ptnbannh, 
+                        double cn312ngmuatratr, 
+                        double cn313thuephainop, 
+                        double cn314ptracnhan, 
+                        double cn315cphiptranh, 
+                        double cn316cfptranbonh, 
+                        double cn317ptrtheoluong, 
+                        double cn318pthuchunhan, 
+                        double cn319ptranhan, 
+                        double cn320vaynotcnhan, 
+                        double cn321duphptranh, 
+                        double cn322quykhen, 
+                        double cn323quygia, 
+                        double cn324bantraiphieu, 
+                        double cn331nodnngban, 
+                        double cn332ngmuatratdn, 
+                        double cn333cphiphaitra, 
+                        double cn334ptranbvevon, 
+                        double cn335ptranbdaihan, 
+                        double cn336dthuchthdn, 
+                        double cn337ptradnkhac, 
+                        double cn338vaynodn, 
+                        double cn339traiphieu, 
+                        double cn340cophieu, 
+                        double cn341tnhoanlai, 
+                        double cn342duphongdn, 
+                        double cn343quykhoahoc, 
+                        double cn411vongopcsh, 
+                        double cn411bcpudai, 
+                        double cn412thangduvon, 
+                        double cn413traiphieu, 
+                        double cn414voncshkhac, 
+                        double cn415cphieuquy, 
+                        double cn416chenhlechts, 
+                        double cn417tygia, 
+                        double cn418dautuptrien, 
+                        double cn419quyxxdn, 
+                        double cn420quykhacsh, 
+                        double cn421lnsauthue, 
+                        double cn421alnkytruoc, 
+                        double cn421blnkynay, 
+                        double cn422vonxdcb, 
+                        double cn431nkinhphi, 
+                        double cn432kpthanhtscd, 
+                        double dn111tien, 
+                        double dn112tientduong, 
+                        double dn121chungkhoan, 
+                        double dn122ckduphong, 
+                        double dn123dtdenngay, 
+                        double dn131ptkhach, 
+                        double dn132tratruoc, 
+                        double dn133pthunbnganh, 
+                        double dn134pthutiendokh, 
+                        double dn135pthuchovay, 
+                        double dn136ptnganhan, 
+                        double dn137dpptnganhan, 
+                        double dn139tsthieucho, 
+                        double dn141hangton, 
+                        double dn149duphonght, 
+                        double dn151cftratruoc, 
+                        double dn152vatkhautru, 
+                        double dn153thuepthukac, 
+                        double dn154traiphieu, 
+                        double dn155tskhacnh, 
+                        double dn211ptkhach, 
+                        double dn212tratruocdh, 
+                        double dn213vonodonvi, 
+                        double dn214pthunbo, 
+                        double dn215pthuchovay, 
+                        double dn216pthukhac, 
+                        double dn219duphongpt, 
+                        double dn222tscdngia, 
+                        double dn223tskhauh, 
+                        double dn225tscdthung, 
+                        double dn226tscdthuekha, 
+                        double dn228tscdvohnggia, 
+                        double dn229tscdvhkhauh, 
+                        double dn231bdsngia, 
+                        double dn232bdshaomon, 
+                        double dn241cfkddd, 
+                        double dn242cfxddd, 
+                        double dn251dtuctycon, 
+                        double dn252dtuctylienket, 
+                        double dn253dtukhac, 
+                        double dn254duphongdt, 
+                        double dn255dtudaohan, 
+                        double dn261cftratruocdn, 
+                        double dn262thuetndnhl, 
+                        double dn263vtuthietbidn, 
+                        double dn268tskhac, 
+                        double dn311ptnbannh, 
+                        double dn312ngmuatratr, 
+                        double dn313thuephainop, 
+                        double dn314ptracnhan, 
+                        double dn315cphiptranh, 
+                        double dn316cfptranbonh, 
+                        double dn317ptrtheoluong, 
+                        double dn318pthuchunhan, 
+                        double dn319ptranhan, 
+                        double dn320vaynotcnhan, 
+                        double dn323quygia, 
+                        double dn324bantraiphieu, 
+                        double dn321duphptranh, 
+                        double dn331nodnngban, 
+                        double dn332ngmuatratdn, 
+                        double dn333cphiphaitra, 
+                        double dn334ptranbvevon, 
+                        double dn335ptranbdaihan, 
+                        double dn336dthuchthdn, 
+                        double dn337ptradnkhac, 
+                        double dn338vaynodn, 
+                        double dn339traiphieu, 
+                        double dn340cophieu, 
+                        double dn341tnhoanlai, 
+                        double dn342duphongdn, 
+                        double dn343quykhoahoc, 
+                        double dn411vongopcsh, 
+                        double dn322quykhen, 
+                        double dn411bcpudai, 
+                        double dn412thangduvon, 
+                        double dn413traiphieu, 
+                        double dn414voncshkhac, 
+                        double dn415cphieuquy, 
+                        double dn416chenhlechts, 
+                        double dn417tygia, 
+                        double dn418dautuptrien, 
+                        double dn419quyxxdn, 
+                        double dn420quykhacsh, 
+                        double dn421lnsauthue, 
+                        double dn421alnkytruoc, 
+                        double dn421blnkynay, 
+                        double dn422vonxdcb, 
+                        double dn431nkinhphi, 
+                        double dn432kpthanhtscd, 
+                        double dn411acophieupt, 
+                        double cn411acophieupt) {
                 RPtdetailCDKT200lientucRow rowRPtdetailCDKT200lientucRow = ((RPtdetailCDKT200lientucRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         cn111tien,
@@ -13757,315 +13757,315 @@ namespace BEEACCOUNT.Reports {
                 base.Columns.Add(this.columncn216pthukhac);
                 this.columncn219duphongpt = new global::System.Data.DataColumn("cn219duphongpt", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncn219duphongpt);
-                this.columncn222tscdngia = new global::System.Data.DataColumn("cn222tscdngia", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columncn222tscdngia = new global::System.Data.DataColumn("cn222tscdngia", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncn222tscdngia);
-                this.columncn223tskhauh = new global::System.Data.DataColumn("cn223tskhauh", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columncn223tskhauh = new global::System.Data.DataColumn("cn223tskhauh", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncn223tskhauh);
-                this.columncn225tscdthung = new global::System.Data.DataColumn("cn225tscdthung", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columncn225tscdthung = new global::System.Data.DataColumn("cn225tscdthung", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncn225tscdthung);
-                this.columncn226tscdthuekha = new global::System.Data.DataColumn("cn226tscdthuekha", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columncn226tscdthuekha = new global::System.Data.DataColumn("cn226tscdthuekha", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncn226tscdthuekha);
-                this.columncn228tscdvohnggia = new global::System.Data.DataColumn("cn228tscdvohnggia", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columncn228tscdvohnggia = new global::System.Data.DataColumn("cn228tscdvohnggia", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncn228tscdvohnggia);
-                this.columncn229tscdvhkhauh = new global::System.Data.DataColumn("cn229tscdvhkhauh", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columncn229tscdvhkhauh = new global::System.Data.DataColumn("cn229tscdvhkhauh", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncn229tscdvhkhauh);
-                this.columncn231bdsngia = new global::System.Data.DataColumn("cn231bdsngia", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columncn231bdsngia = new global::System.Data.DataColumn("cn231bdsngia", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncn231bdsngia);
-                this.columncn232bdshaomon = new global::System.Data.DataColumn("cn232bdshaomon", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columncn232bdshaomon = new global::System.Data.DataColumn("cn232bdshaomon", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncn232bdshaomon);
-                this.columncn241cfkddd = new global::System.Data.DataColumn("cn241cfkddd", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columncn241cfkddd = new global::System.Data.DataColumn("cn241cfkddd", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncn241cfkddd);
-                this.columncn242cfxddd = new global::System.Data.DataColumn("cn242cfxddd", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columncn242cfxddd = new global::System.Data.DataColumn("cn242cfxddd", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncn242cfxddd);
-                this.columncn251dtuctycon = new global::System.Data.DataColumn("cn251dtuctycon", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columncn251dtuctycon = new global::System.Data.DataColumn("cn251dtuctycon", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncn251dtuctycon);
-                this.columncn252dtuctylienket = new global::System.Data.DataColumn("cn252dtuctylienket", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columncn252dtuctylienket = new global::System.Data.DataColumn("cn252dtuctylienket", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncn252dtuctylienket);
-                this.columncn253dtukhac = new global::System.Data.DataColumn("cn253dtukhac", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columncn253dtukhac = new global::System.Data.DataColumn("cn253dtukhac", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncn253dtukhac);
-                this.columncn254duphongdt = new global::System.Data.DataColumn("cn254duphongdt", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columncn254duphongdt = new global::System.Data.DataColumn("cn254duphongdt", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncn254duphongdt);
-                this.columncn255dtudaohan = new global::System.Data.DataColumn("cn255dtudaohan", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columncn255dtudaohan = new global::System.Data.DataColumn("cn255dtudaohan", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncn255dtudaohan);
-                this.columncn261cftratruocdn = new global::System.Data.DataColumn("cn261cftratruocdn", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columncn261cftratruocdn = new global::System.Data.DataColumn("cn261cftratruocdn", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncn261cftratruocdn);
-                this.columncn262thuetndnhl = new global::System.Data.DataColumn("cn262thuetndnhl", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columncn262thuetndnhl = new global::System.Data.DataColumn("cn262thuetndnhl", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncn262thuetndnhl);
-                this.columncn263vtuthietbidn = new global::System.Data.DataColumn("cn263vtuthietbidn", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columncn263vtuthietbidn = new global::System.Data.DataColumn("cn263vtuthietbidn", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncn263vtuthietbidn);
-                this.columncn268tskhac = new global::System.Data.DataColumn("cn268tskhac", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columncn268tskhac = new global::System.Data.DataColumn("cn268tskhac", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncn268tskhac);
-                this.columncn311ptnbannh = new global::System.Data.DataColumn("cn311ptnbannh", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columncn311ptnbannh = new global::System.Data.DataColumn("cn311ptnbannh", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncn311ptnbannh);
-                this.columncn312ngmuatratr = new global::System.Data.DataColumn("cn312ngmuatratr", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columncn312ngmuatratr = new global::System.Data.DataColumn("cn312ngmuatratr", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncn312ngmuatratr);
-                this.columncn313thuephainop = new global::System.Data.DataColumn("cn313thuephainop", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columncn313thuephainop = new global::System.Data.DataColumn("cn313thuephainop", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncn313thuephainop);
-                this.columncn314ptracnhan = new global::System.Data.DataColumn("cn314ptracnhan", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columncn314ptracnhan = new global::System.Data.DataColumn("cn314ptracnhan", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncn314ptracnhan);
-                this.columncn315cphiptranh = new global::System.Data.DataColumn("cn315cphiptranh", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columncn315cphiptranh = new global::System.Data.DataColumn("cn315cphiptranh", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncn315cphiptranh);
-                this.columncn316cfptranbonh = new global::System.Data.DataColumn("cn316cfptranbonh", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columncn316cfptranbonh = new global::System.Data.DataColumn("cn316cfptranbonh", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncn316cfptranbonh);
-                this.columncn317ptrtheoluong = new global::System.Data.DataColumn("cn317ptrtheoluong", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columncn317ptrtheoluong = new global::System.Data.DataColumn("cn317ptrtheoluong", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncn317ptrtheoluong);
-                this.columncn318pthuchunhan = new global::System.Data.DataColumn("cn318pthuchunhan", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columncn318pthuchunhan = new global::System.Data.DataColumn("cn318pthuchunhan", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncn318pthuchunhan);
-                this.columncn319ptranhan = new global::System.Data.DataColumn("cn319ptranhan", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columncn319ptranhan = new global::System.Data.DataColumn("cn319ptranhan", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncn319ptranhan);
-                this.columncn320vaynotcnhan = new global::System.Data.DataColumn("cn320vaynotcnhan", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columncn320vaynotcnhan = new global::System.Data.DataColumn("cn320vaynotcnhan", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncn320vaynotcnhan);
-                this.columncn321duphptranh = new global::System.Data.DataColumn("cn321duphptranh", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columncn321duphptranh = new global::System.Data.DataColumn("cn321duphptranh", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncn321duphptranh);
-                this.columncn322quykhen = new global::System.Data.DataColumn("cn322quykhen", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columncn322quykhen = new global::System.Data.DataColumn("cn322quykhen", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncn322quykhen);
-                this.columncn323quygia = new global::System.Data.DataColumn("cn323quygia", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columncn323quygia = new global::System.Data.DataColumn("cn323quygia", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncn323quygia);
-                this.columncn324bantraiphieu = new global::System.Data.DataColumn("cn324bantraiphieu", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columncn324bantraiphieu = new global::System.Data.DataColumn("cn324bantraiphieu", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncn324bantraiphieu);
-                this.columncn331nodnngban = new global::System.Data.DataColumn("cn331nodnngban", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columncn331nodnngban = new global::System.Data.DataColumn("cn331nodnngban", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncn331nodnngban);
-                this.columncn332ngmuatratdn = new global::System.Data.DataColumn("cn332ngmuatratdn", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columncn332ngmuatratdn = new global::System.Data.DataColumn("cn332ngmuatratdn", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncn332ngmuatratdn);
-                this.columncn333cphiphaitra = new global::System.Data.DataColumn("cn333cphiphaitra", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columncn333cphiphaitra = new global::System.Data.DataColumn("cn333cphiphaitra", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncn333cphiphaitra);
-                this.columncn334ptranbvevon = new global::System.Data.DataColumn("cn334ptranbvevon", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columncn334ptranbvevon = new global::System.Data.DataColumn("cn334ptranbvevon", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncn334ptranbvevon);
-                this.columncn335ptranbdaihan = new global::System.Data.DataColumn("cn335ptranbdaihan", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columncn335ptranbdaihan = new global::System.Data.DataColumn("cn335ptranbdaihan", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncn335ptranbdaihan);
-                this.columncn336dthuchthdn = new global::System.Data.DataColumn("cn336dthuchthdn", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columncn336dthuchthdn = new global::System.Data.DataColumn("cn336dthuchthdn", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncn336dthuchthdn);
-                this.columncn337ptradnkhac = new global::System.Data.DataColumn("cn337ptradnkhac", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columncn337ptradnkhac = new global::System.Data.DataColumn("cn337ptradnkhac", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncn337ptradnkhac);
-                this.columncn338vaynodn = new global::System.Data.DataColumn("cn338vaynodn", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columncn338vaynodn = new global::System.Data.DataColumn("cn338vaynodn", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncn338vaynodn);
-                this.columncn339traiphieu = new global::System.Data.DataColumn("cn339traiphieu", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columncn339traiphieu = new global::System.Data.DataColumn("cn339traiphieu", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncn339traiphieu);
-                this.columncn340cophieu = new global::System.Data.DataColumn("cn340cophieu", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columncn340cophieu = new global::System.Data.DataColumn("cn340cophieu", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncn340cophieu);
-                this.columncn341tnhoanlai = new global::System.Data.DataColumn("cn341tnhoanlai", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columncn341tnhoanlai = new global::System.Data.DataColumn("cn341tnhoanlai", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncn341tnhoanlai);
-                this.columncn342duphongdn = new global::System.Data.DataColumn("cn342duphongdn", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columncn342duphongdn = new global::System.Data.DataColumn("cn342duphongdn", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncn342duphongdn);
-                this.columncn343quykhoahoc = new global::System.Data.DataColumn("cn343quykhoahoc", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columncn343quykhoahoc = new global::System.Data.DataColumn("cn343quykhoahoc", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncn343quykhoahoc);
-                this.columncn411vongopcsh = new global::System.Data.DataColumn("cn411vongopcsh", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columncn411vongopcsh = new global::System.Data.DataColumn("cn411vongopcsh", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncn411vongopcsh);
-                this.columncn411bcpudai = new global::System.Data.DataColumn("cn411bcpudai", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columncn411bcpudai = new global::System.Data.DataColumn("cn411bcpudai", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncn411bcpudai);
-                this.columncn412thangduvon = new global::System.Data.DataColumn("cn412thangduvon", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columncn412thangduvon = new global::System.Data.DataColumn("cn412thangduvon", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncn412thangduvon);
-                this.columncn413traiphieu = new global::System.Data.DataColumn("cn413traiphieu", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columncn413traiphieu = new global::System.Data.DataColumn("cn413traiphieu", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncn413traiphieu);
-                this.columncn414voncshkhac = new global::System.Data.DataColumn("cn414voncshkhac", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columncn414voncshkhac = new global::System.Data.DataColumn("cn414voncshkhac", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncn414voncshkhac);
-                this.columncn415cphieuquy = new global::System.Data.DataColumn("cn415cphieuquy", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columncn415cphieuquy = new global::System.Data.DataColumn("cn415cphieuquy", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncn415cphieuquy);
-                this.columncn416chenhlechts = new global::System.Data.DataColumn("cn416chenhlechts", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columncn416chenhlechts = new global::System.Data.DataColumn("cn416chenhlechts", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncn416chenhlechts);
-                this.columncn417tygia = new global::System.Data.DataColumn("cn417tygia", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columncn417tygia = new global::System.Data.DataColumn("cn417tygia", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncn417tygia);
-                this.columncn418dautuptrien = new global::System.Data.DataColumn("cn418dautuptrien", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columncn418dautuptrien = new global::System.Data.DataColumn("cn418dautuptrien", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncn418dautuptrien);
-                this.columncn419quyxxdn = new global::System.Data.DataColumn("cn419quyxxdn", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columncn419quyxxdn = new global::System.Data.DataColumn("cn419quyxxdn", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncn419quyxxdn);
-                this.columncn420quykhacsh = new global::System.Data.DataColumn("cn420quykhacsh", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columncn420quykhacsh = new global::System.Data.DataColumn("cn420quykhacsh", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncn420quykhacsh);
-                this.columncn421lnsauthue = new global::System.Data.DataColumn("cn421lnsauthue", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columncn421lnsauthue = new global::System.Data.DataColumn("cn421lnsauthue", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncn421lnsauthue);
-                this.columncn421alnkytruoc = new global::System.Data.DataColumn("cn421alnkytruoc", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columncn421alnkytruoc = new global::System.Data.DataColumn("cn421alnkytruoc", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncn421alnkytruoc);
-                this.columncn421blnkynay = new global::System.Data.DataColumn("cn421blnkynay", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columncn421blnkynay = new global::System.Data.DataColumn("cn421blnkynay", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncn421blnkynay);
-                this.columncn422vonxdcb = new global::System.Data.DataColumn("cn422vonxdcb", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columncn422vonxdcb = new global::System.Data.DataColumn("cn422vonxdcb", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncn422vonxdcb);
-                this.columncn431nkinhphi = new global::System.Data.DataColumn("cn431nkinhphi", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columncn431nkinhphi = new global::System.Data.DataColumn("cn431nkinhphi", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncn431nkinhphi);
-                this.columncn432kpthanhtscd = new global::System.Data.DataColumn("cn432kpthanhtscd", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columncn432kpthanhtscd = new global::System.Data.DataColumn("cn432kpthanhtscd", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncn432kpthanhtscd);
-                this.columndn111tien = new global::System.Data.DataColumn("dn111tien", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columndn111tien = new global::System.Data.DataColumn("dn111tien", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndn111tien);
-                this.columndn112tientduong = new global::System.Data.DataColumn("dn112tientduong", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columndn112tientduong = new global::System.Data.DataColumn("dn112tientduong", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndn112tientduong);
-                this.columndn121chungkhoan = new global::System.Data.DataColumn("dn121chungkhoan", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columndn121chungkhoan = new global::System.Data.DataColumn("dn121chungkhoan", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndn121chungkhoan);
-                this.columndn122ckduphong = new global::System.Data.DataColumn("dn122ckduphong", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columndn122ckduphong = new global::System.Data.DataColumn("dn122ckduphong", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndn122ckduphong);
-                this.columndn123dtdenngay = new global::System.Data.DataColumn("dn123dtdenngay", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columndn123dtdenngay = new global::System.Data.DataColumn("dn123dtdenngay", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndn123dtdenngay);
-                this.columndn131ptkhach = new global::System.Data.DataColumn("dn131ptkhach", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columndn131ptkhach = new global::System.Data.DataColumn("dn131ptkhach", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndn131ptkhach);
-                this.columndn132tratruoc = new global::System.Data.DataColumn("dn132tratruoc", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columndn132tratruoc = new global::System.Data.DataColumn("dn132tratruoc", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndn132tratruoc);
-                this.columndn133pthunbnganh = new global::System.Data.DataColumn("dn133pthunbnganh", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columndn133pthunbnganh = new global::System.Data.DataColumn("dn133pthunbnganh", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndn133pthunbnganh);
-                this.columndn134pthutiendokh = new global::System.Data.DataColumn("dn134pthutiendokh", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columndn134pthutiendokh = new global::System.Data.DataColumn("dn134pthutiendokh", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndn134pthutiendokh);
-                this.columndn135pthuchovay = new global::System.Data.DataColumn("dn135pthuchovay", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columndn135pthuchovay = new global::System.Data.DataColumn("dn135pthuchovay", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndn135pthuchovay);
-                this.columndn136ptnganhan = new global::System.Data.DataColumn("dn136ptnganhan", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columndn136ptnganhan = new global::System.Data.DataColumn("dn136ptnganhan", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndn136ptnganhan);
-                this.columndn137dpptnganhan = new global::System.Data.DataColumn("dn137dpptnganhan", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columndn137dpptnganhan = new global::System.Data.DataColumn("dn137dpptnganhan", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndn137dpptnganhan);
-                this.columndn139tsthieucho = new global::System.Data.DataColumn("dn139tsthieucho", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columndn139tsthieucho = new global::System.Data.DataColumn("dn139tsthieucho", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndn139tsthieucho);
-                this.columndn141hangton = new global::System.Data.DataColumn("dn141hangton", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columndn141hangton = new global::System.Data.DataColumn("dn141hangton", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndn141hangton);
-                this.columndn149duphonght = new global::System.Data.DataColumn("dn149duphonght", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columndn149duphonght = new global::System.Data.DataColumn("dn149duphonght", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndn149duphonght);
-                this.columndn151cftratruoc = new global::System.Data.DataColumn("dn151cftratruoc", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columndn151cftratruoc = new global::System.Data.DataColumn("dn151cftratruoc", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndn151cftratruoc);
-                this.columndn152vatkhautru = new global::System.Data.DataColumn("dn152vatkhautru", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columndn152vatkhautru = new global::System.Data.DataColumn("dn152vatkhautru", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndn152vatkhautru);
-                this.columndn153thuepthukac = new global::System.Data.DataColumn("dn153thuepthukac", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columndn153thuepthukac = new global::System.Data.DataColumn("dn153thuepthukac", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndn153thuepthukac);
-                this.columndn154traiphieu = new global::System.Data.DataColumn("dn154traiphieu", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columndn154traiphieu = new global::System.Data.DataColumn("dn154traiphieu", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndn154traiphieu);
-                this.columndn155tskhacnh = new global::System.Data.DataColumn("dn155tskhacnh", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columndn155tskhacnh = new global::System.Data.DataColumn("dn155tskhacnh", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndn155tskhacnh);
-                this.columndn211ptkhach = new global::System.Data.DataColumn("dn211ptkhach", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columndn211ptkhach = new global::System.Data.DataColumn("dn211ptkhach", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndn211ptkhach);
-                this.columndn212tratruocdh = new global::System.Data.DataColumn("dn212tratruocdh", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columndn212tratruocdh = new global::System.Data.DataColumn("dn212tratruocdh", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndn212tratruocdh);
-                this.columndn213vonodonvi = new global::System.Data.DataColumn("dn213vonodonvi", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columndn213vonodonvi = new global::System.Data.DataColumn("dn213vonodonvi", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndn213vonodonvi);
-                this.columndn214pthunbo = new global::System.Data.DataColumn("dn214pthunbo", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columndn214pthunbo = new global::System.Data.DataColumn("dn214pthunbo", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndn214pthunbo);
-                this.columndn215pthuchovay = new global::System.Data.DataColumn("dn215pthuchovay", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columndn215pthuchovay = new global::System.Data.DataColumn("dn215pthuchovay", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndn215pthuchovay);
-                this.columndn216pthukhac = new global::System.Data.DataColumn("dn216pthukhac", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columndn216pthukhac = new global::System.Data.DataColumn("dn216pthukhac", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndn216pthukhac);
-                this.columndn219duphongpt = new global::System.Data.DataColumn("dn219duphongpt", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columndn219duphongpt = new global::System.Data.DataColumn("dn219duphongpt", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndn219duphongpt);
-                this.columndn222tscdngia = new global::System.Data.DataColumn("dn222tscdngia", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columndn222tscdngia = new global::System.Data.DataColumn("dn222tscdngia", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndn222tscdngia);
-                this.columndn223tskhauh = new global::System.Data.DataColumn("dn223tskhauh", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columndn223tskhauh = new global::System.Data.DataColumn("dn223tskhauh", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndn223tskhauh);
-                this.columndn225tscdthung = new global::System.Data.DataColumn("dn225tscdthung", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columndn225tscdthung = new global::System.Data.DataColumn("dn225tscdthung", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndn225tscdthung);
-                this.columndn226tscdthuekha = new global::System.Data.DataColumn("dn226tscdthuekha", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columndn226tscdthuekha = new global::System.Data.DataColumn("dn226tscdthuekha", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndn226tscdthuekha);
-                this.columndn228tscdvohnggia = new global::System.Data.DataColumn("dn228tscdvohnggia", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columndn228tscdvohnggia = new global::System.Data.DataColumn("dn228tscdvohnggia", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndn228tscdvohnggia);
-                this.columndn229tscdvhkhauh = new global::System.Data.DataColumn("dn229tscdvhkhauh", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columndn229tscdvhkhauh = new global::System.Data.DataColumn("dn229tscdvhkhauh", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndn229tscdvhkhauh);
-                this.columndn231bdsngia = new global::System.Data.DataColumn("dn231bdsngia", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columndn231bdsngia = new global::System.Data.DataColumn("dn231bdsngia", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndn231bdsngia);
-                this.columndn232bdshaomon = new global::System.Data.DataColumn("dn232bdshaomon", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columndn232bdshaomon = new global::System.Data.DataColumn("dn232bdshaomon", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndn232bdshaomon);
-                this.columndn241cfkddd = new global::System.Data.DataColumn("dn241cfkddd", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columndn241cfkddd = new global::System.Data.DataColumn("dn241cfkddd", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndn241cfkddd);
-                this.columndn242cfxddd = new global::System.Data.DataColumn("dn242cfxddd", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columndn242cfxddd = new global::System.Data.DataColumn("dn242cfxddd", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndn242cfxddd);
-                this.columndn251dtuctycon = new global::System.Data.DataColumn("dn251dtuctycon", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columndn251dtuctycon = new global::System.Data.DataColumn("dn251dtuctycon", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndn251dtuctycon);
-                this.columndn252dtuctylienket = new global::System.Data.DataColumn("dn252dtuctylienket", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columndn252dtuctylienket = new global::System.Data.DataColumn("dn252dtuctylienket", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndn252dtuctylienket);
-                this.columndn253dtukhac = new global::System.Data.DataColumn("dn253dtukhac", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columndn253dtukhac = new global::System.Data.DataColumn("dn253dtukhac", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndn253dtukhac);
-                this.columndn254duphongdt = new global::System.Data.DataColumn("dn254duphongdt", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columndn254duphongdt = new global::System.Data.DataColumn("dn254duphongdt", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndn254duphongdt);
-                this.columndn255dtudaohan = new global::System.Data.DataColumn("dn255dtudaohan", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columndn255dtudaohan = new global::System.Data.DataColumn("dn255dtudaohan", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndn255dtudaohan);
-                this.columndn261cftratruocdn = new global::System.Data.DataColumn("dn261cftratruocdn", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columndn261cftratruocdn = new global::System.Data.DataColumn("dn261cftratruocdn", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndn261cftratruocdn);
-                this.columndn262thuetndnhl = new global::System.Data.DataColumn("dn262thuetndnhl", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columndn262thuetndnhl = new global::System.Data.DataColumn("dn262thuetndnhl", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndn262thuetndnhl);
-                this.columndn263vtuthietbidn = new global::System.Data.DataColumn("dn263vtuthietbidn", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columndn263vtuthietbidn = new global::System.Data.DataColumn("dn263vtuthietbidn", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndn263vtuthietbidn);
-                this.columndn268tskhac = new global::System.Data.DataColumn("dn268tskhac", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columndn268tskhac = new global::System.Data.DataColumn("dn268tskhac", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndn268tskhac);
-                this.columndn311ptnbannh = new global::System.Data.DataColumn("dn311ptnbannh", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columndn311ptnbannh = new global::System.Data.DataColumn("dn311ptnbannh", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndn311ptnbannh);
-                this.columndn312ngmuatratr = new global::System.Data.DataColumn("dn312ngmuatratr", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columndn312ngmuatratr = new global::System.Data.DataColumn("dn312ngmuatratr", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndn312ngmuatratr);
-                this.columndn313thuephainop = new global::System.Data.DataColumn("dn313thuephainop", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columndn313thuephainop = new global::System.Data.DataColumn("dn313thuephainop", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndn313thuephainop);
-                this.columndn314ptracnhan = new global::System.Data.DataColumn("dn314ptracnhan", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columndn314ptracnhan = new global::System.Data.DataColumn("dn314ptracnhan", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndn314ptracnhan);
-                this.columndn315cphiptranh = new global::System.Data.DataColumn("dn315cphiptranh", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columndn315cphiptranh = new global::System.Data.DataColumn("dn315cphiptranh", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndn315cphiptranh);
-                this.columndn316cfptranbonh = new global::System.Data.DataColumn("dn316cfptranbonh", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columndn316cfptranbonh = new global::System.Data.DataColumn("dn316cfptranbonh", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndn316cfptranbonh);
-                this.columndn317ptrtheoluong = new global::System.Data.DataColumn("dn317ptrtheoluong", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columndn317ptrtheoluong = new global::System.Data.DataColumn("dn317ptrtheoluong", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndn317ptrtheoluong);
-                this.columndn318pthuchunhan = new global::System.Data.DataColumn("dn318pthuchunhan", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columndn318pthuchunhan = new global::System.Data.DataColumn("dn318pthuchunhan", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndn318pthuchunhan);
-                this.columndn319ptranhan = new global::System.Data.DataColumn("dn319ptranhan", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columndn319ptranhan = new global::System.Data.DataColumn("dn319ptranhan", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndn319ptranhan);
-                this.columndn320vaynotcnhan = new global::System.Data.DataColumn("dn320vaynotcnhan", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columndn320vaynotcnhan = new global::System.Data.DataColumn("dn320vaynotcnhan", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndn320vaynotcnhan);
-                this.columndn323quygia = new global::System.Data.DataColumn("dn323quygia", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columndn323quygia = new global::System.Data.DataColumn("dn323quygia", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndn323quygia);
-                this.columndn324bantraiphieu = new global::System.Data.DataColumn("dn324bantraiphieu", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columndn324bantraiphieu = new global::System.Data.DataColumn("dn324bantraiphieu", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndn324bantraiphieu);
-                this.columndn321duphptranh = new global::System.Data.DataColumn("dn321duphptranh", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columndn321duphptranh = new global::System.Data.DataColumn("dn321duphptranh", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndn321duphptranh);
-                this.columndn331nodnngban = new global::System.Data.DataColumn("dn331nodnngban", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columndn331nodnngban = new global::System.Data.DataColumn("dn331nodnngban", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndn331nodnngban);
-                this.columndn332ngmuatratdn = new global::System.Data.DataColumn("dn332ngmuatratdn", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columndn332ngmuatratdn = new global::System.Data.DataColumn("dn332ngmuatratdn", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndn332ngmuatratdn);
-                this.columndn333cphiphaitra = new global::System.Data.DataColumn("dn333cphiphaitra", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columndn333cphiphaitra = new global::System.Data.DataColumn("dn333cphiphaitra", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndn333cphiphaitra);
-                this.columndn334ptranbvevon = new global::System.Data.DataColumn("dn334ptranbvevon", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columndn334ptranbvevon = new global::System.Data.DataColumn("dn334ptranbvevon", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndn334ptranbvevon);
-                this.columndn335ptranbdaihan = new global::System.Data.DataColumn("dn335ptranbdaihan", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columndn335ptranbdaihan = new global::System.Data.DataColumn("dn335ptranbdaihan", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndn335ptranbdaihan);
-                this.columndn336dthuchthdn = new global::System.Data.DataColumn("dn336dthuchthdn", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columndn336dthuchthdn = new global::System.Data.DataColumn("dn336dthuchthdn", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndn336dthuchthdn);
-                this.columndn337ptradnkhac = new global::System.Data.DataColumn("dn337ptradnkhac", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columndn337ptradnkhac = new global::System.Data.DataColumn("dn337ptradnkhac", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndn337ptradnkhac);
-                this.columndn338vaynodn = new global::System.Data.DataColumn("dn338vaynodn", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columndn338vaynodn = new global::System.Data.DataColumn("dn338vaynodn", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndn338vaynodn);
-                this.columndn339traiphieu = new global::System.Data.DataColumn("dn339traiphieu", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columndn339traiphieu = new global::System.Data.DataColumn("dn339traiphieu", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndn339traiphieu);
-                this.columndn340cophieu = new global::System.Data.DataColumn("dn340cophieu", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columndn340cophieu = new global::System.Data.DataColumn("dn340cophieu", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndn340cophieu);
-                this.columndn341tnhoanlai = new global::System.Data.DataColumn("dn341tnhoanlai", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columndn341tnhoanlai = new global::System.Data.DataColumn("dn341tnhoanlai", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndn341tnhoanlai);
-                this.columndn342duphongdn = new global::System.Data.DataColumn("dn342duphongdn", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columndn342duphongdn = new global::System.Data.DataColumn("dn342duphongdn", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndn342duphongdn);
-                this.columndn343quykhoahoc = new global::System.Data.DataColumn("dn343quykhoahoc", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columndn343quykhoahoc = new global::System.Data.DataColumn("dn343quykhoahoc", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndn343quykhoahoc);
-                this.columndn411vongopcsh = new global::System.Data.DataColumn("dn411vongopcsh", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columndn411vongopcsh = new global::System.Data.DataColumn("dn411vongopcsh", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndn411vongopcsh);
-                this.columndn322quykhen = new global::System.Data.DataColumn("dn322quykhen", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columndn322quykhen = new global::System.Data.DataColumn("dn322quykhen", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndn322quykhen);
-                this.columndn411bcpudai = new global::System.Data.DataColumn("dn411bcpudai", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columndn411bcpudai = new global::System.Data.DataColumn("dn411bcpudai", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndn411bcpudai);
-                this.columndn412thangduvon = new global::System.Data.DataColumn("dn412thangduvon", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columndn412thangduvon = new global::System.Data.DataColumn("dn412thangduvon", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndn412thangduvon);
-                this.columndn413traiphieu = new global::System.Data.DataColumn("dn413traiphieu", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columndn413traiphieu = new global::System.Data.DataColumn("dn413traiphieu", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndn413traiphieu);
-                this.columndn414voncshkhac = new global::System.Data.DataColumn("dn414voncshkhac", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columndn414voncshkhac = new global::System.Data.DataColumn("dn414voncshkhac", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndn414voncshkhac);
-                this.columndn415cphieuquy = new global::System.Data.DataColumn("dn415cphieuquy", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columndn415cphieuquy = new global::System.Data.DataColumn("dn415cphieuquy", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndn415cphieuquy);
-                this.columndn416chenhlechts = new global::System.Data.DataColumn("dn416chenhlechts", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columndn416chenhlechts = new global::System.Data.DataColumn("dn416chenhlechts", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndn416chenhlechts);
-                this.columndn417tygia = new global::System.Data.DataColumn("dn417tygia", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columndn417tygia = new global::System.Data.DataColumn("dn417tygia", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndn417tygia);
-                this.columndn418dautuptrien = new global::System.Data.DataColumn("dn418dautuptrien", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columndn418dautuptrien = new global::System.Data.DataColumn("dn418dautuptrien", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndn418dautuptrien);
-                this.columndn419quyxxdn = new global::System.Data.DataColumn("dn419quyxxdn", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columndn419quyxxdn = new global::System.Data.DataColumn("dn419quyxxdn", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndn419quyxxdn);
-                this.columndn420quykhacsh = new global::System.Data.DataColumn("dn420quykhacsh", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columndn420quykhacsh = new global::System.Data.DataColumn("dn420quykhacsh", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndn420quykhacsh);
-                this.columndn421lnsauthue = new global::System.Data.DataColumn("dn421lnsauthue", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columndn421lnsauthue = new global::System.Data.DataColumn("dn421lnsauthue", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndn421lnsauthue);
-                this.columndn421alnkytruoc = new global::System.Data.DataColumn("dn421alnkytruoc", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columndn421alnkytruoc = new global::System.Data.DataColumn("dn421alnkytruoc", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndn421alnkytruoc);
-                this.columndn421blnkynay = new global::System.Data.DataColumn("dn421blnkynay", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columndn421blnkynay = new global::System.Data.DataColumn("dn421blnkynay", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndn421blnkynay);
-                this.columndn422vonxdcb = new global::System.Data.DataColumn("dn422vonxdcb", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columndn422vonxdcb = new global::System.Data.DataColumn("dn422vonxdcb", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndn422vonxdcb);
-                this.columndn431nkinhphi = new global::System.Data.DataColumn("dn431nkinhphi", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columndn431nkinhphi = new global::System.Data.DataColumn("dn431nkinhphi", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndn431nkinhphi);
-                this.columndn432kpthanhtscd = new global::System.Data.DataColumn("dn432kpthanhtscd", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columndn432kpthanhtscd = new global::System.Data.DataColumn("dn432kpthanhtscd", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndn432kpthanhtscd);
-                this.columndn411acophieupt = new global::System.Data.DataColumn("dn411acophieupt", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columndn411acophieupt = new global::System.Data.DataColumn("dn411acophieupt", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndn411acophieupt);
-                this.columncn411acophieupt = new global::System.Data.DataColumn("cn411acophieupt", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columncn411acophieupt = new global::System.Data.DataColumn("cn411acophieupt", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncn411acophieupt);
                 this.columncn111tien.Caption = "tencongty";
                 this.columncn112tientduong.Caption = "masothue";
@@ -24744,10 +24744,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string cn222tscdngia {
+            public double cn222tscdngia {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.cn222tscdngiaColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.cn222tscdngiaColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'cn222tscdngia\' in table \'RPtdetailCDKT200lientuc\' is DBNull" +
@@ -24761,10 +24761,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string cn223tskhauh {
+            public double cn223tskhauh {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.cn223tskhauhColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.cn223tskhauhColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'cn223tskhauh\' in table \'RPtdetailCDKT200lientuc\' is DBNull." +
@@ -24778,10 +24778,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string cn225tscdthung {
+            public double cn225tscdthung {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.cn225tscdthungColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.cn225tscdthungColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'cn225tscdthung\' in table \'RPtdetailCDKT200lientuc\' is DBNul" +
@@ -24795,10 +24795,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string cn226tscdthuekha {
+            public double cn226tscdthuekha {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.cn226tscdthuekhaColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.cn226tscdthuekhaColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'cn226tscdthuekha\' in table \'RPtdetailCDKT200lientuc\' is DBN" +
@@ -24812,10 +24812,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string cn228tscdvohnggia {
+            public double cn228tscdvohnggia {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.cn228tscdvohnggiaColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.cn228tscdvohnggiaColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'cn228tscdvohnggia\' in table \'RPtdetailCDKT200lientuc\' is DB" +
@@ -24829,10 +24829,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string cn229tscdvhkhauh {
+            public double cn229tscdvhkhauh {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.cn229tscdvhkhauhColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.cn229tscdvhkhauhColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'cn229tscdvhkhauh\' in table \'RPtdetailCDKT200lientuc\' is DBN" +
@@ -24846,10 +24846,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string cn231bdsngia {
+            public double cn231bdsngia {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.cn231bdsngiaColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.cn231bdsngiaColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'cn231bdsngia\' in table \'RPtdetailCDKT200lientuc\' is DBNull." +
@@ -24863,10 +24863,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string cn232bdshaomon {
+            public double cn232bdshaomon {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.cn232bdshaomonColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.cn232bdshaomonColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'cn232bdshaomon\' in table \'RPtdetailCDKT200lientuc\' is DBNul" +
@@ -24880,10 +24880,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string cn241cfkddd {
+            public double cn241cfkddd {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.cn241cfkdddColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.cn241cfkdddColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'cn241cfkddd\' in table \'RPtdetailCDKT200lientuc\' is DBNull.", e);
@@ -24896,10 +24896,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string cn242cfxddd {
+            public double cn242cfxddd {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.cn242cfxdddColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.cn242cfxdddColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'cn242cfxddd\' in table \'RPtdetailCDKT200lientuc\' is DBNull.", e);
@@ -24912,10 +24912,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string cn251dtuctycon {
+            public double cn251dtuctycon {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.cn251dtuctyconColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.cn251dtuctyconColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'cn251dtuctycon\' in table \'RPtdetailCDKT200lientuc\' is DBNul" +
@@ -24929,10 +24929,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string cn252dtuctylienket {
+            public double cn252dtuctylienket {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.cn252dtuctylienketColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.cn252dtuctylienketColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'cn252dtuctylienket\' in table \'RPtdetailCDKT200lientuc\' is D" +
@@ -24946,10 +24946,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string cn253dtukhac {
+            public double cn253dtukhac {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.cn253dtukhacColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.cn253dtukhacColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'cn253dtukhac\' in table \'RPtdetailCDKT200lientuc\' is DBNull." +
@@ -24963,10 +24963,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string cn254duphongdt {
+            public double cn254duphongdt {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.cn254duphongdtColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.cn254duphongdtColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'cn254duphongdt\' in table \'RPtdetailCDKT200lientuc\' is DBNul" +
@@ -24980,10 +24980,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string cn255dtudaohan {
+            public double cn255dtudaohan {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.cn255dtudaohanColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.cn255dtudaohanColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'cn255dtudaohan\' in table \'RPtdetailCDKT200lientuc\' is DBNul" +
@@ -24997,10 +24997,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string cn261cftratruocdn {
+            public double cn261cftratruocdn {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.cn261cftratruocdnColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.cn261cftratruocdnColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'cn261cftratruocdn\' in table \'RPtdetailCDKT200lientuc\' is DB" +
@@ -25014,10 +25014,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string cn262thuetndnhl {
+            public double cn262thuetndnhl {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.cn262thuetndnhlColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.cn262thuetndnhlColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'cn262thuetndnhl\' in table \'RPtdetailCDKT200lientuc\' is DBNu" +
@@ -25031,10 +25031,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string cn263vtuthietbidn {
+            public double cn263vtuthietbidn {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.cn263vtuthietbidnColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.cn263vtuthietbidnColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'cn263vtuthietbidn\' in table \'RPtdetailCDKT200lientuc\' is DB" +
@@ -25048,10 +25048,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string cn268tskhac {
+            public double cn268tskhac {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.cn268tskhacColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.cn268tskhacColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'cn268tskhac\' in table \'RPtdetailCDKT200lientuc\' is DBNull.", e);
@@ -25064,10 +25064,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string cn311ptnbannh {
+            public double cn311ptnbannh {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.cn311ptnbannhColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.cn311ptnbannhColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'cn311ptnbannh\' in table \'RPtdetailCDKT200lientuc\' is DBNull" +
@@ -25081,10 +25081,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string cn312ngmuatratr {
+            public double cn312ngmuatratr {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.cn312ngmuatratrColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.cn312ngmuatratrColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'cn312ngmuatratr\' in table \'RPtdetailCDKT200lientuc\' is DBNu" +
@@ -25098,10 +25098,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string cn313thuephainop {
+            public double cn313thuephainop {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.cn313thuephainopColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.cn313thuephainopColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'cn313thuephainop\' in table \'RPtdetailCDKT200lientuc\' is DBN" +
@@ -25115,10 +25115,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string cn314ptracnhan {
+            public double cn314ptracnhan {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.cn314ptracnhanColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.cn314ptracnhanColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'cn314ptracnhan\' in table \'RPtdetailCDKT200lientuc\' is DBNul" +
@@ -25132,10 +25132,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string cn315cphiptranh {
+            public double cn315cphiptranh {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.cn315cphiptranhColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.cn315cphiptranhColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'cn315cphiptranh\' in table \'RPtdetailCDKT200lientuc\' is DBNu" +
@@ -25149,10 +25149,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string cn316cfptranbonh {
+            public double cn316cfptranbonh {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.cn316cfptranbonhColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.cn316cfptranbonhColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'cn316cfptranbonh\' in table \'RPtdetailCDKT200lientuc\' is DBN" +
@@ -25166,10 +25166,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string cn317ptrtheoluong {
+            public double cn317ptrtheoluong {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.cn317ptrtheoluongColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.cn317ptrtheoluongColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'cn317ptrtheoluong\' in table \'RPtdetailCDKT200lientuc\' is DB" +
@@ -25183,10 +25183,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string cn318pthuchunhan {
+            public double cn318pthuchunhan {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.cn318pthuchunhanColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.cn318pthuchunhanColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'cn318pthuchunhan\' in table \'RPtdetailCDKT200lientuc\' is DBN" +
@@ -25200,10 +25200,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string cn319ptranhan {
+            public double cn319ptranhan {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.cn319ptranhanColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.cn319ptranhanColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'cn319ptranhan\' in table \'RPtdetailCDKT200lientuc\' is DBNull" +
@@ -25217,10 +25217,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string cn320vaynotcnhan {
+            public double cn320vaynotcnhan {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.cn320vaynotcnhanColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.cn320vaynotcnhanColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'cn320vaynotcnhan\' in table \'RPtdetailCDKT200lientuc\' is DBN" +
@@ -25234,10 +25234,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string cn321duphptranh {
+            public double cn321duphptranh {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.cn321duphptranhColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.cn321duphptranhColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'cn321duphptranh\' in table \'RPtdetailCDKT200lientuc\' is DBNu" +
@@ -25251,10 +25251,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string cn322quykhen {
+            public double cn322quykhen {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.cn322quykhenColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.cn322quykhenColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'cn322quykhen\' in table \'RPtdetailCDKT200lientuc\' is DBNull." +
@@ -25268,10 +25268,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string cn323quygia {
+            public double cn323quygia {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.cn323quygiaColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.cn323quygiaColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'cn323quygia\' in table \'RPtdetailCDKT200lientuc\' is DBNull.", e);
@@ -25284,10 +25284,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string cn324bantraiphieu {
+            public double cn324bantraiphieu {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.cn324bantraiphieuColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.cn324bantraiphieuColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'cn324bantraiphieu\' in table \'RPtdetailCDKT200lientuc\' is DB" +
@@ -25301,10 +25301,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string cn331nodnngban {
+            public double cn331nodnngban {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.cn331nodnngbanColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.cn331nodnngbanColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'cn331nodnngban\' in table \'RPtdetailCDKT200lientuc\' is DBNul" +
@@ -25318,10 +25318,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string cn332ngmuatratdn {
+            public double cn332ngmuatratdn {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.cn332ngmuatratdnColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.cn332ngmuatratdnColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'cn332ngmuatratdn\' in table \'RPtdetailCDKT200lientuc\' is DBN" +
@@ -25335,10 +25335,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string cn333cphiphaitra {
+            public double cn333cphiphaitra {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.cn333cphiphaitraColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.cn333cphiphaitraColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'cn333cphiphaitra\' in table \'RPtdetailCDKT200lientuc\' is DBN" +
@@ -25352,10 +25352,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string cn334ptranbvevon {
+            public double cn334ptranbvevon {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.cn334ptranbvevonColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.cn334ptranbvevonColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'cn334ptranbvevon\' in table \'RPtdetailCDKT200lientuc\' is DBN" +
@@ -25369,10 +25369,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string cn335ptranbdaihan {
+            public double cn335ptranbdaihan {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.cn335ptranbdaihanColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.cn335ptranbdaihanColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'cn335ptranbdaihan\' in table \'RPtdetailCDKT200lientuc\' is DB" +
@@ -25386,10 +25386,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string cn336dthuchthdn {
+            public double cn336dthuchthdn {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.cn336dthuchthdnColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.cn336dthuchthdnColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'cn336dthuchthdn\' in table \'RPtdetailCDKT200lientuc\' is DBNu" +
@@ -25403,10 +25403,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string cn337ptradnkhac {
+            public double cn337ptradnkhac {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.cn337ptradnkhacColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.cn337ptradnkhacColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'cn337ptradnkhac\' in table \'RPtdetailCDKT200lientuc\' is DBNu" +
@@ -25420,10 +25420,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string cn338vaynodn {
+            public double cn338vaynodn {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.cn338vaynodnColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.cn338vaynodnColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'cn338vaynodn\' in table \'RPtdetailCDKT200lientuc\' is DBNull." +
@@ -25437,10 +25437,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string cn339traiphieu {
+            public double cn339traiphieu {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.cn339traiphieuColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.cn339traiphieuColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'cn339traiphieu\' in table \'RPtdetailCDKT200lientuc\' is DBNul" +
@@ -25454,10 +25454,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string cn340cophieu {
+            public double cn340cophieu {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.cn340cophieuColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.cn340cophieuColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'cn340cophieu\' in table \'RPtdetailCDKT200lientuc\' is DBNull." +
@@ -25471,10 +25471,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string cn341tnhoanlai {
+            public double cn341tnhoanlai {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.cn341tnhoanlaiColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.cn341tnhoanlaiColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'cn341tnhoanlai\' in table \'RPtdetailCDKT200lientuc\' is DBNul" +
@@ -25488,10 +25488,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string cn342duphongdn {
+            public double cn342duphongdn {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.cn342duphongdnColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.cn342duphongdnColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'cn342duphongdn\' in table \'RPtdetailCDKT200lientuc\' is DBNul" +
@@ -25505,10 +25505,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string cn343quykhoahoc {
+            public double cn343quykhoahoc {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.cn343quykhoahocColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.cn343quykhoahocColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'cn343quykhoahoc\' in table \'RPtdetailCDKT200lientuc\' is DBNu" +
@@ -25522,10 +25522,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string cn411vongopcsh {
+            public double cn411vongopcsh {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.cn411vongopcshColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.cn411vongopcshColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'cn411vongopcsh\' in table \'RPtdetailCDKT200lientuc\' is DBNul" +
@@ -25539,10 +25539,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string cn411bcpudai {
+            public double cn411bcpudai {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.cn411bcpudaiColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.cn411bcpudaiColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'cn411bcpudai\' in table \'RPtdetailCDKT200lientuc\' is DBNull." +
@@ -25556,10 +25556,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string cn412thangduvon {
+            public double cn412thangduvon {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.cn412thangduvonColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.cn412thangduvonColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'cn412thangduvon\' in table \'RPtdetailCDKT200lientuc\' is DBNu" +
@@ -25573,10 +25573,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string cn413traiphieu {
+            public double cn413traiphieu {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.cn413traiphieuColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.cn413traiphieuColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'cn413traiphieu\' in table \'RPtdetailCDKT200lientuc\' is DBNul" +
@@ -25590,10 +25590,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string cn414voncshkhac {
+            public double cn414voncshkhac {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.cn414voncshkhacColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.cn414voncshkhacColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'cn414voncshkhac\' in table \'RPtdetailCDKT200lientuc\' is DBNu" +
@@ -25607,10 +25607,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string cn415cphieuquy {
+            public double cn415cphieuquy {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.cn415cphieuquyColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.cn415cphieuquyColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'cn415cphieuquy\' in table \'RPtdetailCDKT200lientuc\' is DBNul" +
@@ -25624,10 +25624,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string cn416chenhlechts {
+            public double cn416chenhlechts {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.cn416chenhlechtsColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.cn416chenhlechtsColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'cn416chenhlechts\' in table \'RPtdetailCDKT200lientuc\' is DBN" +
@@ -25641,10 +25641,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string cn417tygia {
+            public double cn417tygia {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.cn417tygiaColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.cn417tygiaColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'cn417tygia\' in table \'RPtdetailCDKT200lientuc\' is DBNull.", e);
@@ -25657,10 +25657,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string cn418dautuptrien {
+            public double cn418dautuptrien {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.cn418dautuptrienColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.cn418dautuptrienColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'cn418dautuptrien\' in table \'RPtdetailCDKT200lientuc\' is DBN" +
@@ -25674,10 +25674,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string cn419quyxxdn {
+            public double cn419quyxxdn {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.cn419quyxxdnColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.cn419quyxxdnColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'cn419quyxxdn\' in table \'RPtdetailCDKT200lientuc\' is DBNull." +
@@ -25691,10 +25691,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string cn420quykhacsh {
+            public double cn420quykhacsh {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.cn420quykhacshColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.cn420quykhacshColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'cn420quykhacsh\' in table \'RPtdetailCDKT200lientuc\' is DBNul" +
@@ -25708,10 +25708,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string cn421lnsauthue {
+            public double cn421lnsauthue {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.cn421lnsauthueColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.cn421lnsauthueColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'cn421lnsauthue\' in table \'RPtdetailCDKT200lientuc\' is DBNul" +
@@ -25725,10 +25725,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string cn421alnkytruoc {
+            public double cn421alnkytruoc {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.cn421alnkytruocColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.cn421alnkytruocColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'cn421alnkytruoc\' in table \'RPtdetailCDKT200lientuc\' is DBNu" +
@@ -25742,10 +25742,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string cn421blnkynay {
+            public double cn421blnkynay {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.cn421blnkynayColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.cn421blnkynayColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'cn421blnkynay\' in table \'RPtdetailCDKT200lientuc\' is DBNull" +
@@ -25759,10 +25759,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string cn422vonxdcb {
+            public double cn422vonxdcb {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.cn422vonxdcbColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.cn422vonxdcbColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'cn422vonxdcb\' in table \'RPtdetailCDKT200lientuc\' is DBNull." +
@@ -25776,10 +25776,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string cn431nkinhphi {
+            public double cn431nkinhphi {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.cn431nkinhphiColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.cn431nkinhphiColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'cn431nkinhphi\' in table \'RPtdetailCDKT200lientuc\' is DBNull" +
@@ -25793,10 +25793,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string cn432kpthanhtscd {
+            public double cn432kpthanhtscd {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.cn432kpthanhtscdColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.cn432kpthanhtscdColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'cn432kpthanhtscd\' in table \'RPtdetailCDKT200lientuc\' is DBN" +
@@ -25810,10 +25810,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string dn111tien {
+            public double dn111tien {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.dn111tienColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.dn111tienColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'dn111tien\' in table \'RPtdetailCDKT200lientuc\' is DBNull.", e);
@@ -25826,10 +25826,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string dn112tientduong {
+            public double dn112tientduong {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.dn112tientduongColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.dn112tientduongColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'dn112tientduong\' in table \'RPtdetailCDKT200lientuc\' is DBNu" +
@@ -25843,10 +25843,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string dn121chungkhoan {
+            public double dn121chungkhoan {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.dn121chungkhoanColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.dn121chungkhoanColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'dn121chungkhoan\' in table \'RPtdetailCDKT200lientuc\' is DBNu" +
@@ -25860,10 +25860,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string dn122ckduphong {
+            public double dn122ckduphong {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.dn122ckduphongColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.dn122ckduphongColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'dn122ckduphong\' in table \'RPtdetailCDKT200lientuc\' is DBNul" +
@@ -25877,10 +25877,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string dn123dtdenngay {
+            public double dn123dtdenngay {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.dn123dtdenngayColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.dn123dtdenngayColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'dn123dtdenngay\' in table \'RPtdetailCDKT200lientuc\' is DBNul" +
@@ -25894,10 +25894,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string dn131ptkhach {
+            public double dn131ptkhach {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.dn131ptkhachColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.dn131ptkhachColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'dn131ptkhach\' in table \'RPtdetailCDKT200lientuc\' is DBNull." +
@@ -25911,10 +25911,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string dn132tratruoc {
+            public double dn132tratruoc {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.dn132tratruocColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.dn132tratruocColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'dn132tratruoc\' in table \'RPtdetailCDKT200lientuc\' is DBNull" +
@@ -25928,10 +25928,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string dn133pthunbnganh {
+            public double dn133pthunbnganh {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.dn133pthunbnganhColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.dn133pthunbnganhColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'dn133pthunbnganh\' in table \'RPtdetailCDKT200lientuc\' is DBN" +
@@ -25945,10 +25945,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string dn134pthutiendokh {
+            public double dn134pthutiendokh {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.dn134pthutiendokhColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.dn134pthutiendokhColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'dn134pthutiendokh\' in table \'RPtdetailCDKT200lientuc\' is DB" +
@@ -25962,10 +25962,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string dn135pthuchovay {
+            public double dn135pthuchovay {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.dn135pthuchovayColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.dn135pthuchovayColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'dn135pthuchovay\' in table \'RPtdetailCDKT200lientuc\' is DBNu" +
@@ -25979,10 +25979,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string dn136ptnganhan {
+            public double dn136ptnganhan {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.dn136ptnganhanColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.dn136ptnganhanColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'dn136ptnganhan\' in table \'RPtdetailCDKT200lientuc\' is DBNul" +
@@ -25996,10 +25996,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string dn137dpptnganhan {
+            public double dn137dpptnganhan {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.dn137dpptnganhanColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.dn137dpptnganhanColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'dn137dpptnganhan\' in table \'RPtdetailCDKT200lientuc\' is DBN" +
@@ -26013,10 +26013,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string dn139tsthieucho {
+            public double dn139tsthieucho {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.dn139tsthieuchoColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.dn139tsthieuchoColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'dn139tsthieucho\' in table \'RPtdetailCDKT200lientuc\' is DBNu" +
@@ -26030,10 +26030,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string dn141hangton {
+            public double dn141hangton {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.dn141hangtonColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.dn141hangtonColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'dn141hangton\' in table \'RPtdetailCDKT200lientuc\' is DBNull." +
@@ -26047,10 +26047,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string dn149duphonght {
+            public double dn149duphonght {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.dn149duphonghtColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.dn149duphonghtColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'dn149duphonght\' in table \'RPtdetailCDKT200lientuc\' is DBNul" +
@@ -26064,10 +26064,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string dn151cftratruoc {
+            public double dn151cftratruoc {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.dn151cftratruocColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.dn151cftratruocColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'dn151cftratruoc\' in table \'RPtdetailCDKT200lientuc\' is DBNu" +
@@ -26081,10 +26081,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string dn152vatkhautru {
+            public double dn152vatkhautru {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.dn152vatkhautruColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.dn152vatkhautruColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'dn152vatkhautru\' in table \'RPtdetailCDKT200lientuc\' is DBNu" +
@@ -26098,10 +26098,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string dn153thuepthukac {
+            public double dn153thuepthukac {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.dn153thuepthukacColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.dn153thuepthukacColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'dn153thuepthukac\' in table \'RPtdetailCDKT200lientuc\' is DBN" +
@@ -26115,10 +26115,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string dn154traiphieu {
+            public double dn154traiphieu {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.dn154traiphieuColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.dn154traiphieuColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'dn154traiphieu\' in table \'RPtdetailCDKT200lientuc\' is DBNul" +
@@ -26132,10 +26132,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string dn155tskhacnh {
+            public double dn155tskhacnh {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.dn155tskhacnhColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.dn155tskhacnhColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'dn155tskhacnh\' in table \'RPtdetailCDKT200lientuc\' is DBNull" +
@@ -26149,10 +26149,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string dn211ptkhach {
+            public double dn211ptkhach {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.dn211ptkhachColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.dn211ptkhachColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'dn211ptkhach\' in table \'RPtdetailCDKT200lientuc\' is DBNull." +
@@ -26166,10 +26166,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string dn212tratruocdh {
+            public double dn212tratruocdh {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.dn212tratruocdhColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.dn212tratruocdhColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'dn212tratruocdh\' in table \'RPtdetailCDKT200lientuc\' is DBNu" +
@@ -26183,10 +26183,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string dn213vonodonvi {
+            public double dn213vonodonvi {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.dn213vonodonviColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.dn213vonodonviColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'dn213vonodonvi\' in table \'RPtdetailCDKT200lientuc\' is DBNul" +
@@ -26200,10 +26200,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string dn214pthunbo {
+            public double dn214pthunbo {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.dn214pthunboColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.dn214pthunboColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'dn214pthunbo\' in table \'RPtdetailCDKT200lientuc\' is DBNull." +
@@ -26217,10 +26217,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string dn215pthuchovay {
+            public double dn215pthuchovay {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.dn215pthuchovayColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.dn215pthuchovayColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'dn215pthuchovay\' in table \'RPtdetailCDKT200lientuc\' is DBNu" +
@@ -26234,10 +26234,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string dn216pthukhac {
+            public double dn216pthukhac {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.dn216pthukhacColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.dn216pthukhacColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'dn216pthukhac\' in table \'RPtdetailCDKT200lientuc\' is DBNull" +
@@ -26251,10 +26251,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string dn219duphongpt {
+            public double dn219duphongpt {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.dn219duphongptColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.dn219duphongptColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'dn219duphongpt\' in table \'RPtdetailCDKT200lientuc\' is DBNul" +
@@ -26268,10 +26268,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string dn222tscdngia {
+            public double dn222tscdngia {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.dn222tscdngiaColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.dn222tscdngiaColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'dn222tscdngia\' in table \'RPtdetailCDKT200lientuc\' is DBNull" +
@@ -26285,10 +26285,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string dn223tskhauh {
+            public double dn223tskhauh {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.dn223tskhauhColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.dn223tskhauhColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'dn223tskhauh\' in table \'RPtdetailCDKT200lientuc\' is DBNull." +
@@ -26302,10 +26302,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string dn225tscdthung {
+            public double dn225tscdthung {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.dn225tscdthungColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.dn225tscdthungColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'dn225tscdthung\' in table \'RPtdetailCDKT200lientuc\' is DBNul" +
@@ -26319,10 +26319,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string dn226tscdthuekha {
+            public double dn226tscdthuekha {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.dn226tscdthuekhaColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.dn226tscdthuekhaColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'dn226tscdthuekha\' in table \'RPtdetailCDKT200lientuc\' is DBN" +
@@ -26336,10 +26336,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string dn228tscdvohnggia {
+            public double dn228tscdvohnggia {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.dn228tscdvohnggiaColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.dn228tscdvohnggiaColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'dn228tscdvohnggia\' in table \'RPtdetailCDKT200lientuc\' is DB" +
@@ -26353,10 +26353,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string dn229tscdvhkhauh {
+            public double dn229tscdvhkhauh {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.dn229tscdvhkhauhColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.dn229tscdvhkhauhColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'dn229tscdvhkhauh\' in table \'RPtdetailCDKT200lientuc\' is DBN" +
@@ -26370,10 +26370,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string dn231bdsngia {
+            public double dn231bdsngia {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.dn231bdsngiaColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.dn231bdsngiaColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'dn231bdsngia\' in table \'RPtdetailCDKT200lientuc\' is DBNull." +
@@ -26387,10 +26387,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string dn232bdshaomon {
+            public double dn232bdshaomon {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.dn232bdshaomonColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.dn232bdshaomonColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'dn232bdshaomon\' in table \'RPtdetailCDKT200lientuc\' is DBNul" +
@@ -26404,10 +26404,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string dn241cfkddd {
+            public double dn241cfkddd {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.dn241cfkdddColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.dn241cfkdddColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'dn241cfkddd\' in table \'RPtdetailCDKT200lientuc\' is DBNull.", e);
@@ -26420,10 +26420,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string dn242cfxddd {
+            public double dn242cfxddd {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.dn242cfxdddColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.dn242cfxdddColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'dn242cfxddd\' in table \'RPtdetailCDKT200lientuc\' is DBNull.", e);
@@ -26436,10 +26436,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string dn251dtuctycon {
+            public double dn251dtuctycon {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.dn251dtuctyconColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.dn251dtuctyconColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'dn251dtuctycon\' in table \'RPtdetailCDKT200lientuc\' is DBNul" +
@@ -26453,10 +26453,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string dn252dtuctylienket {
+            public double dn252dtuctylienket {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.dn252dtuctylienketColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.dn252dtuctylienketColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'dn252dtuctylienket\' in table \'RPtdetailCDKT200lientuc\' is D" +
@@ -26470,10 +26470,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string dn253dtukhac {
+            public double dn253dtukhac {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.dn253dtukhacColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.dn253dtukhacColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'dn253dtukhac\' in table \'RPtdetailCDKT200lientuc\' is DBNull." +
@@ -26487,10 +26487,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string dn254duphongdt {
+            public double dn254duphongdt {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.dn254duphongdtColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.dn254duphongdtColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'dn254duphongdt\' in table \'RPtdetailCDKT200lientuc\' is DBNul" +
@@ -26504,10 +26504,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string dn255dtudaohan {
+            public double dn255dtudaohan {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.dn255dtudaohanColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.dn255dtudaohanColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'dn255dtudaohan\' in table \'RPtdetailCDKT200lientuc\' is DBNul" +
@@ -26521,10 +26521,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string dn261cftratruocdn {
+            public double dn261cftratruocdn {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.dn261cftratruocdnColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.dn261cftratruocdnColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'dn261cftratruocdn\' in table \'RPtdetailCDKT200lientuc\' is DB" +
@@ -26538,10 +26538,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string dn262thuetndnhl {
+            public double dn262thuetndnhl {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.dn262thuetndnhlColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.dn262thuetndnhlColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'dn262thuetndnhl\' in table \'RPtdetailCDKT200lientuc\' is DBNu" +
@@ -26555,10 +26555,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string dn263vtuthietbidn {
+            public double dn263vtuthietbidn {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.dn263vtuthietbidnColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.dn263vtuthietbidnColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'dn263vtuthietbidn\' in table \'RPtdetailCDKT200lientuc\' is DB" +
@@ -26572,10 +26572,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string dn268tskhac {
+            public double dn268tskhac {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.dn268tskhacColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.dn268tskhacColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'dn268tskhac\' in table \'RPtdetailCDKT200lientuc\' is DBNull.", e);
@@ -26588,10 +26588,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string dn311ptnbannh {
+            public double dn311ptnbannh {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.dn311ptnbannhColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.dn311ptnbannhColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'dn311ptnbannh\' in table \'RPtdetailCDKT200lientuc\' is DBNull" +
@@ -26605,10 +26605,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string dn312ngmuatratr {
+            public double dn312ngmuatratr {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.dn312ngmuatratrColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.dn312ngmuatratrColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'dn312ngmuatratr\' in table \'RPtdetailCDKT200lientuc\' is DBNu" +
@@ -26622,10 +26622,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string dn313thuephainop {
+            public double dn313thuephainop {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.dn313thuephainopColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.dn313thuephainopColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'dn313thuephainop\' in table \'RPtdetailCDKT200lientuc\' is DBN" +
@@ -26639,10 +26639,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string dn314ptracnhan {
+            public double dn314ptracnhan {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.dn314ptracnhanColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.dn314ptracnhanColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'dn314ptracnhan\' in table \'RPtdetailCDKT200lientuc\' is DBNul" +
@@ -26656,10 +26656,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string dn315cphiptranh {
+            public double dn315cphiptranh {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.dn315cphiptranhColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.dn315cphiptranhColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'dn315cphiptranh\' in table \'RPtdetailCDKT200lientuc\' is DBNu" +
@@ -26673,10 +26673,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string dn316cfptranbonh {
+            public double dn316cfptranbonh {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.dn316cfptranbonhColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.dn316cfptranbonhColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'dn316cfptranbonh\' in table \'RPtdetailCDKT200lientuc\' is DBN" +
@@ -26690,10 +26690,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string dn317ptrtheoluong {
+            public double dn317ptrtheoluong {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.dn317ptrtheoluongColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.dn317ptrtheoluongColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'dn317ptrtheoluong\' in table \'RPtdetailCDKT200lientuc\' is DB" +
@@ -26707,10 +26707,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string dn318pthuchunhan {
+            public double dn318pthuchunhan {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.dn318pthuchunhanColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.dn318pthuchunhanColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'dn318pthuchunhan\' in table \'RPtdetailCDKT200lientuc\' is DBN" +
@@ -26724,10 +26724,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string dn319ptranhan {
+            public double dn319ptranhan {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.dn319ptranhanColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.dn319ptranhanColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'dn319ptranhan\' in table \'RPtdetailCDKT200lientuc\' is DBNull" +
@@ -26741,10 +26741,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string dn320vaynotcnhan {
+            public double dn320vaynotcnhan {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.dn320vaynotcnhanColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.dn320vaynotcnhanColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'dn320vaynotcnhan\' in table \'RPtdetailCDKT200lientuc\' is DBN" +
@@ -26758,10 +26758,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string dn323quygia {
+            public double dn323quygia {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.dn323quygiaColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.dn323quygiaColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'dn323quygia\' in table \'RPtdetailCDKT200lientuc\' is DBNull.", e);
@@ -26774,10 +26774,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string dn324bantraiphieu {
+            public double dn324bantraiphieu {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.dn324bantraiphieuColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.dn324bantraiphieuColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'dn324bantraiphieu\' in table \'RPtdetailCDKT200lientuc\' is DB" +
@@ -26791,10 +26791,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string dn321duphptranh {
+            public double dn321duphptranh {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.dn321duphptranhColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.dn321duphptranhColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'dn321duphptranh\' in table \'RPtdetailCDKT200lientuc\' is DBNu" +
@@ -26808,10 +26808,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string dn331nodnngban {
+            public double dn331nodnngban {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.dn331nodnngbanColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.dn331nodnngbanColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'dn331nodnngban\' in table \'RPtdetailCDKT200lientuc\' is DBNul" +
@@ -26825,10 +26825,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string dn332ngmuatratdn {
+            public double dn332ngmuatratdn {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.dn332ngmuatratdnColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.dn332ngmuatratdnColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'dn332ngmuatratdn\' in table \'RPtdetailCDKT200lientuc\' is DBN" +
@@ -26842,10 +26842,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string dn333cphiphaitra {
+            public double dn333cphiphaitra {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.dn333cphiphaitraColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.dn333cphiphaitraColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'dn333cphiphaitra\' in table \'RPtdetailCDKT200lientuc\' is DBN" +
@@ -26859,10 +26859,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string dn334ptranbvevon {
+            public double dn334ptranbvevon {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.dn334ptranbvevonColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.dn334ptranbvevonColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'dn334ptranbvevon\' in table \'RPtdetailCDKT200lientuc\' is DBN" +
@@ -26876,10 +26876,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string dn335ptranbdaihan {
+            public double dn335ptranbdaihan {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.dn335ptranbdaihanColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.dn335ptranbdaihanColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'dn335ptranbdaihan\' in table \'RPtdetailCDKT200lientuc\' is DB" +
@@ -26893,10 +26893,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string dn336dthuchthdn {
+            public double dn336dthuchthdn {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.dn336dthuchthdnColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.dn336dthuchthdnColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'dn336dthuchthdn\' in table \'RPtdetailCDKT200lientuc\' is DBNu" +
@@ -26910,10 +26910,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string dn337ptradnkhac {
+            public double dn337ptradnkhac {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.dn337ptradnkhacColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.dn337ptradnkhacColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'dn337ptradnkhac\' in table \'RPtdetailCDKT200lientuc\' is DBNu" +
@@ -26927,10 +26927,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string dn338vaynodn {
+            public double dn338vaynodn {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.dn338vaynodnColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.dn338vaynodnColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'dn338vaynodn\' in table \'RPtdetailCDKT200lientuc\' is DBNull." +
@@ -26944,10 +26944,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string dn339traiphieu {
+            public double dn339traiphieu {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.dn339traiphieuColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.dn339traiphieuColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'dn339traiphieu\' in table \'RPtdetailCDKT200lientuc\' is DBNul" +
@@ -26961,10 +26961,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string dn340cophieu {
+            public double dn340cophieu {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.dn340cophieuColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.dn340cophieuColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'dn340cophieu\' in table \'RPtdetailCDKT200lientuc\' is DBNull." +
@@ -26978,10 +26978,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string dn341tnhoanlai {
+            public double dn341tnhoanlai {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.dn341tnhoanlaiColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.dn341tnhoanlaiColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'dn341tnhoanlai\' in table \'RPtdetailCDKT200lientuc\' is DBNul" +
@@ -26995,10 +26995,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string dn342duphongdn {
+            public double dn342duphongdn {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.dn342duphongdnColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.dn342duphongdnColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'dn342duphongdn\' in table \'RPtdetailCDKT200lientuc\' is DBNul" +
@@ -27012,10 +27012,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string dn343quykhoahoc {
+            public double dn343quykhoahoc {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.dn343quykhoahocColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.dn343quykhoahocColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'dn343quykhoahoc\' in table \'RPtdetailCDKT200lientuc\' is DBNu" +
@@ -27029,10 +27029,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string dn411vongopcsh {
+            public double dn411vongopcsh {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.dn411vongopcshColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.dn411vongopcshColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'dn411vongopcsh\' in table \'RPtdetailCDKT200lientuc\' is DBNul" +
@@ -27046,10 +27046,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string dn322quykhen {
+            public double dn322quykhen {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.dn322quykhenColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.dn322quykhenColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'dn322quykhen\' in table \'RPtdetailCDKT200lientuc\' is DBNull." +
@@ -27063,10 +27063,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string dn411bcpudai {
+            public double dn411bcpudai {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.dn411bcpudaiColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.dn411bcpudaiColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'dn411bcpudai\' in table \'RPtdetailCDKT200lientuc\' is DBNull." +
@@ -27080,10 +27080,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string dn412thangduvon {
+            public double dn412thangduvon {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.dn412thangduvonColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.dn412thangduvonColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'dn412thangduvon\' in table \'RPtdetailCDKT200lientuc\' is DBNu" +
@@ -27097,10 +27097,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string dn413traiphieu {
+            public double dn413traiphieu {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.dn413traiphieuColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.dn413traiphieuColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'dn413traiphieu\' in table \'RPtdetailCDKT200lientuc\' is DBNul" +
@@ -27114,10 +27114,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string dn414voncshkhac {
+            public double dn414voncshkhac {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.dn414voncshkhacColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.dn414voncshkhacColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'dn414voncshkhac\' in table \'RPtdetailCDKT200lientuc\' is DBNu" +
@@ -27131,10 +27131,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string dn415cphieuquy {
+            public double dn415cphieuquy {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.dn415cphieuquyColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.dn415cphieuquyColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'dn415cphieuquy\' in table \'RPtdetailCDKT200lientuc\' is DBNul" +
@@ -27148,10 +27148,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string dn416chenhlechts {
+            public double dn416chenhlechts {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.dn416chenhlechtsColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.dn416chenhlechtsColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'dn416chenhlechts\' in table \'RPtdetailCDKT200lientuc\' is DBN" +
@@ -27165,10 +27165,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string dn417tygia {
+            public double dn417tygia {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.dn417tygiaColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.dn417tygiaColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'dn417tygia\' in table \'RPtdetailCDKT200lientuc\' is DBNull.", e);
@@ -27181,10 +27181,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string dn418dautuptrien {
+            public double dn418dautuptrien {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.dn418dautuptrienColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.dn418dautuptrienColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'dn418dautuptrien\' in table \'RPtdetailCDKT200lientuc\' is DBN" +
@@ -27198,10 +27198,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string dn419quyxxdn {
+            public double dn419quyxxdn {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.dn419quyxxdnColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.dn419quyxxdnColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'dn419quyxxdn\' in table \'RPtdetailCDKT200lientuc\' is DBNull." +
@@ -27215,10 +27215,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string dn420quykhacsh {
+            public double dn420quykhacsh {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.dn420quykhacshColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.dn420quykhacshColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'dn420quykhacsh\' in table \'RPtdetailCDKT200lientuc\' is DBNul" +
@@ -27232,10 +27232,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string dn421lnsauthue {
+            public double dn421lnsauthue {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.dn421lnsauthueColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.dn421lnsauthueColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'dn421lnsauthue\' in table \'RPtdetailCDKT200lientuc\' is DBNul" +
@@ -27249,10 +27249,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string dn421alnkytruoc {
+            public double dn421alnkytruoc {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.dn421alnkytruocColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.dn421alnkytruocColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'dn421alnkytruoc\' in table \'RPtdetailCDKT200lientuc\' is DBNu" +
@@ -27266,10 +27266,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string dn421blnkynay {
+            public double dn421blnkynay {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.dn421blnkynayColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.dn421blnkynayColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'dn421blnkynay\' in table \'RPtdetailCDKT200lientuc\' is DBNull" +
@@ -27283,10 +27283,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string dn422vonxdcb {
+            public double dn422vonxdcb {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.dn422vonxdcbColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.dn422vonxdcbColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'dn422vonxdcb\' in table \'RPtdetailCDKT200lientuc\' is DBNull." +
@@ -27300,10 +27300,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string dn431nkinhphi {
+            public double dn431nkinhphi {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.dn431nkinhphiColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.dn431nkinhphiColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'dn431nkinhphi\' in table \'RPtdetailCDKT200lientuc\' is DBNull" +
@@ -27317,10 +27317,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string dn432kpthanhtscd {
+            public double dn432kpthanhtscd {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.dn432kpthanhtscdColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.dn432kpthanhtscdColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'dn432kpthanhtscd\' in table \'RPtdetailCDKT200lientuc\' is DBN" +
@@ -27334,10 +27334,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string dn411acophieupt {
+            public double dn411acophieupt {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.dn411acophieuptColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.dn411acophieuptColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'dn411acophieupt\' in table \'RPtdetailCDKT200lientuc\' is DBNu" +
@@ -27351,10 +27351,10 @@ namespace BEEACCOUNT.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string cn411acophieupt {
+            public double cn411acophieupt {
                 get {
                     try {
-                        return ((string)(this[this.tableRPtdetailCDKT200lientuc.cn411acophieuptColumn]));
+                        return ((double)(this[this.tableRPtdetailCDKT200lientuc.cn411acophieuptColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'cn411acophieupt\' in table \'RPtdetailCDKT200lientuc\' is DBNu" +

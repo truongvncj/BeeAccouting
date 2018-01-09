@@ -1104,6 +1104,59 @@ namespace BEEACCOUNT.Model
 
         }
 
+        public static void nhapsodudaukylctt()
+        {
+
+            //  Beeyearsellect
+            string connection_string = Utils.getConnectionstr();
+            string urs = Utils.getusername();
+            //  var db = new LinqtoSQLDataContext(connection_string);
+            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+
+            FormCollection fc = System.Windows.Forms.Application.OpenForms;
+            bool chon;
+            int yearchon;
+            bool kq = false;
+            foreach (Form frm in fc)
+            {
+
+                if (frm.Text == "Chọn năm")
+                {
+                    kq = true;
+                    frm.Focus();
+
+                }
+            }
+
+            if (!kq)
+            {
+
+                View.Beeyearsellect Beeyearsellect = new View.Beeyearsellect();
+                Beeyearsellect.ShowDialog();
+
+                yearchon = int.Parse(Beeyearsellect.year);
+                chon = Beeyearsellect.chon;
+
+                if (chon)
+                {
+
+                    View.BeeLCTT200dauky BeeLCTT200dauky = new BeeLCTT200dauky(yearchon);
+                    BeeLCTT200dauky.ShowDialog();
+                }
+
+
+
+
+
+            }
+
+
+
+
+            //  throw new NotImplementedException();
+        }
+
         public static void xemvaupdauCDKT200()
         {
             //  Beeyearsellect

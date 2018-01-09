@@ -149,40 +149,44 @@
             treeNode67,
             treeNode68,
             treeNode69});
-            System.Windows.Forms.TreeNode treeNode71 = new System.Windows.Forms.TreeNode("Thuyết minh báo cáo tài chính");
+            System.Windows.Forms.TreeNode treeNode71 = new System.Windows.Forms.TreeNode("Nhập số dư đầu kỳ LCTT");
             System.Windows.Forms.TreeNode treeNode72 = new System.Windows.Forms.TreeNode("Báo cáo lưu chuyển tiền tệ");
-            System.Windows.Forms.TreeNode treeNode73 = new System.Windows.Forms.TreeNode("Báo cáo tài chính", new System.Windows.Forms.TreeNode[] {
+            System.Windows.Forms.TreeNode treeNode73 = new System.Windows.Forms.TreeNode("Lưu chuyển tiền tệ", new System.Windows.Forms.TreeNode[] {
+            treeNode71,
+            treeNode72});
+            System.Windows.Forms.TreeNode treeNode74 = new System.Windows.Forms.TreeNode("Thuyết minh báo cáo tài chính");
+            System.Windows.Forms.TreeNode treeNode75 = new System.Windows.Forms.TreeNode("Báo cáo tài chính", new System.Windows.Forms.TreeNode[] {
             treeNode63,
             treeNode66,
             treeNode70,
-            treeNode71,
-            treeNode72});
-            System.Windows.Forms.TreeNode treeNode74 = new System.Windows.Forms.TreeNode("Bảng kê VAT mua vào");
-            System.Windows.Forms.TreeNode treeNode75 = new System.Windows.Forms.TreeNode("Bảng kê VAT bán ra");
-            System.Windows.Forms.TreeNode treeNode76 = new System.Windows.Forms.TreeNode("Tờ khai VAT");
-            System.Windows.Forms.TreeNode treeNode77 = new System.Windows.Forms.TreeNode("Tờ khai thuế môn bài");
-            System.Windows.Forms.TreeNode treeNode78 = new System.Windows.Forms.TreeNode("Tờ khai thuế tài nguyên");
-            System.Windows.Forms.TreeNode treeNode79 = new System.Windows.Forms.TreeNode("Tờ khai thuế TNDN");
-            System.Windows.Forms.TreeNode treeNode80 = new System.Windows.Forms.TreeNode("Kế toán thuế", new System.Windows.Forms.TreeNode[] {
-            treeNode74,
-            treeNode75,
+            treeNode73,
+            treeNode74});
+            System.Windows.Forms.TreeNode treeNode76 = new System.Windows.Forms.TreeNode("Bảng kê VAT mua vào");
+            System.Windows.Forms.TreeNode treeNode77 = new System.Windows.Forms.TreeNode("Bảng kê VAT bán ra");
+            System.Windows.Forms.TreeNode treeNode78 = new System.Windows.Forms.TreeNode("Tờ khai VAT");
+            System.Windows.Forms.TreeNode treeNode79 = new System.Windows.Forms.TreeNode("Tờ khai thuế môn bài");
+            System.Windows.Forms.TreeNode treeNode80 = new System.Windows.Forms.TreeNode("Tờ khai thuế tài nguyên");
+            System.Windows.Forms.TreeNode treeNode81 = new System.Windows.Forms.TreeNode("Tờ khai thuế TNDN");
+            System.Windows.Forms.TreeNode treeNode82 = new System.Windows.Forms.TreeNode("Kế toán thuế", new System.Windows.Forms.TreeNode[] {
             treeNode76,
             treeNode77,
             treeNode78,
-            treeNode79});
-            System.Windows.Forms.TreeNode treeNode81 = new System.Windows.Forms.TreeNode("Danh sách loại tài khoản ");
-            System.Windows.Forms.TreeNode treeNode82 = new System.Windows.Forms.TreeNode("Danh sách tài khoản kế toán");
-            System.Windows.Forms.TreeNode treeNode83 = new System.Windows.Forms.TreeNode("Mở sổ chi tiết ");
-            System.Windows.Forms.TreeNode treeNode84 = new System.Windows.Forms.TreeNode("Thiết lập hệ thống tài khoản kế toán");
-            System.Windows.Forms.TreeNode treeNode85 = new System.Windows.Forms.TreeNode("Phân quyền người dùng");
-            System.Windows.Forms.TreeNode treeNode86 = new System.Windows.Forms.TreeNode("Liên hệ");
-            System.Windows.Forms.TreeNode treeNode87 = new System.Windows.Forms.TreeNode("Hệ thống", new System.Windows.Forms.TreeNode[] {
-            treeNode81,
-            treeNode82,
+            treeNode79,
+            treeNode80,
+            treeNode81});
+            System.Windows.Forms.TreeNode treeNode83 = new System.Windows.Forms.TreeNode("Danh sách loại tài khoản ");
+            System.Windows.Forms.TreeNode treeNode84 = new System.Windows.Forms.TreeNode("Danh sách tài khoản kế toán");
+            System.Windows.Forms.TreeNode treeNode85 = new System.Windows.Forms.TreeNode("Mở sổ chi tiết ");
+            System.Windows.Forms.TreeNode treeNode86 = new System.Windows.Forms.TreeNode("Thiết lập hệ thống tài khoản kế toán");
+            System.Windows.Forms.TreeNode treeNode87 = new System.Windows.Forms.TreeNode("Phân quyền người dùng");
+            System.Windows.Forms.TreeNode treeNode88 = new System.Windows.Forms.TreeNode("Liên hệ");
+            System.Windows.Forms.TreeNode treeNode89 = new System.Windows.Forms.TreeNode("Hệ thống", new System.Windows.Forms.TreeNode[] {
             treeNode83,
             treeNode84,
             treeNode85,
-            treeNode86});
+            treeNode86,
+            treeNode87,
+            treeNode88});
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Beemainload));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button10 = new System.Windows.Forms.Button();
@@ -962,40 +966,44 @@
             treeNode69.Text = "Bản cân đối kế toán";
             treeNode70.Name = "bccandoiketoan";
             treeNode70.Text = "Bảng cân đối kế toán";
-            treeNode71.Name = "bcthuyetminh";
-            treeNode71.Text = "Thuyết minh báo cáo tài chính";
+            treeNode71.Name = "bangnhapsodulctt";
+            treeNode71.Text = "Nhập số dư đầu kỳ LCTT";
             treeNode72.Name = "bcluuchuyentien";
             treeNode72.Text = "Báo cáo lưu chuyển tiền tệ";
-            treeNode73.Name = "bctaichinh";
-            treeNode73.Text = "Báo cáo tài chính";
-            treeNode74.Name = "Node1";
-            treeNode74.Text = "Bảng kê VAT mua vào";
-            treeNode75.Name = "Node2";
-            treeNode75.Text = "Bảng kê VAT bán ra";
-            treeNode76.Name = "Node3";
-            treeNode76.Text = "Tờ khai VAT";
-            treeNode77.Name = "Node5";
-            treeNode77.Text = "Tờ khai thuế môn bài";
-            treeNode78.Name = "Node6";
-            treeNode78.Text = "Tờ khai thuế tài nguyên";
-            treeNode79.Name = "Node7";
-            treeNode79.Text = "Tờ khai thuế TNDN";
-            treeNode80.Name = "Node0";
-            treeNode80.Text = "Kế toán thuế";
-            treeNode81.Name = "dsloaitk";
-            treeNode81.Text = "Danh sách loại tài khoản ";
-            treeNode82.Name = "dstaikhoanketoan";
-            treeNode82.Text = "Danh sách tài khoản kế toán";
-            treeNode83.Name = "sochitiet";
-            treeNode83.Text = "Mở sổ chi tiết ";
-            treeNode84.Name = "hethongtk";
-            treeNode84.Text = "Thiết lập hệ thống tài khoản kế toán";
-            treeNode85.Name = "phanquyen";
-            treeNode85.Text = "Phân quyền người dùng";
-            treeNode86.Name = "lienhe";
-            treeNode86.Text = "Liên hệ";
-            treeNode87.Name = "Node4";
-            treeNode87.Text = "Hệ thống";
+            treeNode73.Name = "Node0";
+            treeNode73.Text = "Lưu chuyển tiền tệ";
+            treeNode74.Name = "bcthuyetminh";
+            treeNode74.Text = "Thuyết minh báo cáo tài chính";
+            treeNode75.Name = "bctaichinh";
+            treeNode75.Text = "Báo cáo tài chính";
+            treeNode76.Name = "Node1";
+            treeNode76.Text = "Bảng kê VAT mua vào";
+            treeNode77.Name = "Node2";
+            treeNode77.Text = "Bảng kê VAT bán ra";
+            treeNode78.Name = "Node3";
+            treeNode78.Text = "Tờ khai VAT";
+            treeNode79.Name = "Node5";
+            treeNode79.Text = "Tờ khai thuế môn bài";
+            treeNode80.Name = "Node6";
+            treeNode80.Text = "Tờ khai thuế tài nguyên";
+            treeNode81.Name = "Node7";
+            treeNode81.Text = "Tờ khai thuế TNDN";
+            treeNode82.Name = "Node0";
+            treeNode82.Text = "Kế toán thuế";
+            treeNode83.Name = "dsloaitk";
+            treeNode83.Text = "Danh sách loại tài khoản ";
+            treeNode84.Name = "dstaikhoanketoan";
+            treeNode84.Text = "Danh sách tài khoản kế toán";
+            treeNode85.Name = "sochitiet";
+            treeNode85.Text = "Mở sổ chi tiết ";
+            treeNode86.Name = "hethongtk";
+            treeNode86.Text = "Thiết lập hệ thống tài khoản kế toán";
+            treeNode87.Name = "phanquyen";
+            treeNode87.Text = "Phân quyền người dùng";
+            treeNode88.Name = "lienhe";
+            treeNode88.Text = "Liên hệ";
+            treeNode89.Name = "Node4";
+            treeNode89.Text = "Hệ thống";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
             treeNode1,
             treeNode7,
@@ -1013,9 +1021,9 @@
             treeNode44,
             treeNode55,
             treeNode62,
-            treeNode73,
-            treeNode80,
-            treeNode87});
+            treeNode75,
+            treeNode82,
+            treeNode89});
             this.treeView1.Size = new System.Drawing.Size(237, 595);
             this.treeView1.TabIndex = 52;
             this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
@@ -1039,9 +1047,9 @@
             this.label1.ForeColor = System.Drawing.Color.Magenta;
             this.label1.Location = new System.Drawing.Point(746, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(233, 59);
+            this.label1.Size = new System.Drawing.Size(109, 59);
             this.label1.TabIndex = 53;
-            this.label1.Text = "miacapro";
+            this.label1.Text = "ipro";
             // 
             // label2
             // 

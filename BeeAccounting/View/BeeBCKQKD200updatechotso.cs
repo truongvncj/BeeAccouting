@@ -40,7 +40,7 @@ namespace BEEACCOUNT.View
             txtnam.Enabled = false;
 
 
-            var kq = (from p in dc.KQKD200s
+            var kq = (from p in dc.KQKD200Daukies
                       where p.nam == namchon
                       select p).FirstOrDefault();
             if (kq != null)
@@ -377,7 +377,7 @@ namespace BEEACCOUNT.View
             }
             #endregion
 
-            var kq = (from p in dc.KQKD200s
+            var kq = (from p in dc.KQKD200Daukies
                       where p.nam == namchon
                       select p).FirstOrDefault();
             if (kq != null)
@@ -410,7 +410,7 @@ namespace BEEACCOUNT.View
             }
             else
             {
-                KQKD200 p = new KQKD200();
+                KQKD200Dauky p = new KQKD200Dauky();
 
                 p.dthu01 = float.Parse(txtdoanhthu.Text); // 
 
@@ -438,7 +438,7 @@ namespace BEEACCOUNT.View
 
 
 
-                dc.KQKD200s.InsertOnSubmit(p);
+                dc.KQKD200Daukies.InsertOnSubmit(p);
                 dc.SubmitChanges();
 
 

@@ -39,6 +39,10 @@ namespace BEEACCOUNT.View
             this.tentaikhoan = "";
             this.tentaikhoanchitiet = "";
 
+            pk_todate.Value = DateTime.Today;
+            pkfromdate.Value = Utils.getFirstOfMonth(DateTime.Today); // DateTime.Today.AddDays(-double.Parse(DateTime.Today.Day.ToString()));
+
+
             chon = false;
 
             string connection_string = Utils.getConnectionstr();

@@ -28,8 +28,8 @@ namespace BEEACCOUNT.View
             }
         }
 
-        public double pssotienno { get; set; }
-        public double pssotienco { get; set; }
+    //    public double pssotienno { get; set; }
+      //  public double pssotienco { get; set; }
 
         public BeeHtoansocaidoiungphieuthu(View.BeePhieuThu phieuthu, string labe1, string labe2, string labe3)
         {
@@ -46,12 +46,12 @@ namespace BEEACCOUNT.View
             //{
             //    phieuthu.pssotienco = "0";
             //}
-            txtTongno.Text = phieuthu.pssotienno.ToString("#,#", CultureInfo.InvariantCulture);
-            txtTongco.Text = phieuthu.pssotienco.ToString("#,#", CultureInfo.InvariantCulture);
-            this.pssotienco = phieuthu.pssotienco;
-            this.pssotienno = phieuthu.pssotienno;
+          txtTongno.Text = phieuthu.pssotienno.ToString("#,#", CultureInfo.InvariantCulture);
+           txtTongco.Text = phieuthu.pssotienco.ToString("#,#", CultureInfo.InvariantCulture);
+       //     this.pssotienco = phieuthu.pssotienco;
+         //   this.pssotienno = phieuthu.pssotienno;
 
-            txtChenlech.Text = (this.pssotienno - this.pssotienco).ToString("#,#", CultureInfo.InvariantCulture);
+            txtChenlech.Text = (phieuthu.pssotienno - phieuthu.pssotienco).ToString("#,#", CultureInfo.InvariantCulture);
 
             #region clearr to new
 
@@ -489,10 +489,10 @@ namespace BEEACCOUNT.View
             this.phieuthu.add_detailGridviewTkCophieuthu(socaitemp);
 
             txtTongco.Text = phieuthu.pssotienco.ToString("#,#", CultureInfo.InvariantCulture);
-            this.pssotienco = phieuthu.pssotienco;
-            this.pssotienno = phieuthu.pssotienno;
+        //    this.pssotienco = phieuthu.pssotienco;
+       //     this.pssotienno = phieuthu.pssotienno;
 
-            txtChenlech.Text = (this.pssotienno - this.pssotienco).ToString("#,#", CultureInfo.InvariantCulture);
+            txtChenlech.Text = (phieuthu.pssotienno - phieuthu.pssotienco).ToString("#,#", CultureInfo.InvariantCulture);
 
             #region clearr to new
 

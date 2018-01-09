@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="BEE" Class="LinqtoSQLDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-8D4F853\SQLEXPRESS;Initial Catalog=BEE;Persist Security Info=True;User ID=sa" SettingsObjectName="BEEACCOUNT.Properties.Settings" SettingsPropertyName="BEEConnectionString1" Provider="System.Data.SqlClient" />
-  <Table Name="dbo.CDKT200" Member="CDKT200s">
-    <Type Name="CDKT200">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-8D4F853\SQLEXPRESS;Initial Catalog=BEE;Persist Security Info=True;User ID=sa" SettingsObjectName="BEEACCOUNT.Properties.Settings" SettingsPropertyName="BEEConnectionString3" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.CDKT200Dauky" Member="CDKT200Daukies">
+    <Type Name="CDKT200Dauky">
       <Column Name="nam" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="Machitieu" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="Tenchitieu" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
@@ -25,8 +25,8 @@
       <Column Name="name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
     </Type>
   </Table>
-  <Table Name="dbo.KQKD200" Member="KQKD200s">
-    <Type Name="KQKD200">
+  <Table Name="dbo.KQKD200Dauky" Member="KQKD200Daukies">
+    <Type Name="KQKD200Dauky">
       <Column Name="nam" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="dthu01" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Column Name="giamdt02" Type="System.Double" DbType="Float" CanBeNull="true" />
@@ -200,9 +200,100 @@
       <Column Name="cn422vonxdcb" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Column Name="cn431nkinhphi" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Column Name="cn432kpthanhtscd" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="cn411acophieupt" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dn111tien" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dn112tientduong" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dn121chungkhoan" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dn122ckduphong" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dn123dtdenngay" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dn131ptkhach" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dn132tratruoc" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dn133pthunbnganh" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dn134pthutiendokh" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dn135pthuchovay" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dn136ptnganhan" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dn137dpptnganhan" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dn139tsthieucho" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dn141hangton" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dn149duphonght" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dn151cftratruoc" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dn152vatkhautru" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dn153thuepthukac" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dn154traiphieu" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dn155tskhacnh" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dn211ptkhach" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dn212tratruocdh" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dn213vonodonvi" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dn214pthunbo" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dn215pthuchovay" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dn216pthukhac" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dn219duphongpt" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dn222tscdngia" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dn223tskhauh" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dn225tscdthung" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dn226tscdthuekha" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dn228tscdvohnggia" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dn229tscdvhkhauh" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dn231bdsngia" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dn232bdshaomon" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dn241cfkddd" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dn242cfxddd" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dn251dtuctycon" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dn252dtuctylienket" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dn253dtukhac" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dn254duphongdt" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dn255dtudaohan" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dn261cftratruocdn" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dn262thuetndnhl" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dn263vtuthietbidn" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dn268tskhac" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dn311ptnbannh" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dn312ngmuatratr" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dn313thuephainop" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dn314ptracnhan" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dn315cphiptranh" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dn316cfptranbonh" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dn317ptrtheoluong" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dn318pthuchunhan" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dn319ptranhan" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dn320vaynotcnhan" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dn321duphptranh" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dn322quykhen" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dn323quygia" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dn324bantraiphieu" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dn331nodnngban" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dn332ngmuatratdn" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dn333cphiphaitra" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dn334ptranbvevon" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dn335ptranbdaihan" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dn336dthuchthdn" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dn337ptradnkhac" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dn338vaynodn" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dn339traiphieu" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dn340cophieu" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dn341tnhoanlai" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dn342duphongdn" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dn343quykhoahoc" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dn411vongopcsh" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dn411bcpudai" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dn412thangduvon" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dn413traiphieu" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dn414voncshkhac" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dn415cphieuquy" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dn416chenhlechts" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dn417tygia" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dn418dautuptrien" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dn419quyxxdn" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dn420quykhacsh" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dn421lnsauthue" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dn421alnkytruoc" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dn421blnkynay" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dn422vonxdcb" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dn431nkinhphi" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dn432kpthanhtscd" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dn411acophieupt" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="username" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="cn411acophieupt" Type="System.Double" DbType="Float" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.RPtdetailKQKD200" Member="RPtdetailKQKD200s">
@@ -1047,6 +1138,17 @@
       <Column Name="TKdoiung" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
       <Column Name="TenchitietTM" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
       <Column Name="Sophieu" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LTTT200Dauky" Member="LTTT200Daukies">
+    <Type Name="LTTT200Dauky">
+      <Column Name="nam" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Machitieu" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Tenchitieu" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="Cachghi" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="Sotien" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="username" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
     </Type>
   </Table>
 </Database>

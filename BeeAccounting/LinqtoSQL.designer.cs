@@ -30,15 +30,15 @@ namespace BEEACCOUNT
 		
     #region Extensibility Method Definitions
     partial void OnCreated();
-    partial void InsertCDKT200(CDKT200 instance);
-    partial void UpdateCDKT200(CDKT200 instance);
-    partial void DeleteCDKT200(CDKT200 instance);
+    partial void InsertCDKT200Dauky(CDKT200Dauky instance);
+    partial void UpdateCDKT200Dauky(CDKT200Dauky instance);
+    partial void DeleteCDKT200Dauky(CDKT200Dauky instance);
     partial void Inserttbl_Temp(tbl_Temp instance);
     partial void Updatetbl_Temp(tbl_Temp instance);
     partial void Deletetbl_Temp(tbl_Temp instance);
-    partial void InsertKQKD200(KQKD200 instance);
-    partial void UpdateKQKD200(KQKD200 instance);
-    partial void DeleteKQKD200(KQKD200 instance);
+    partial void InsertKQKD200Dauky(KQKD200Dauky instance);
+    partial void UpdateKQKD200Dauky(KQKD200Dauky instance);
+    partial void DeleteKQKD200Dauky(KQKD200Dauky instance);
     partial void InsertRpt_PhieuThu(Rpt_PhieuThu instance);
     partial void UpdateRpt_PhieuThu(Rpt_PhieuThu instance);
     partial void DeleteRpt_PhieuThu(Rpt_PhieuThu instance);
@@ -198,10 +198,13 @@ namespace BEEACCOUNT
     partial void Inserttbl_SoQuy(tbl_SoQuy instance);
     partial void Updatetbl_SoQuy(tbl_SoQuy instance);
     partial void Deletetbl_SoQuy(tbl_SoQuy instance);
+    partial void InsertLTTT200Dauky(LTTT200Dauky instance);
+    partial void UpdateLTTT200Dauky(LTTT200Dauky instance);
+    partial void DeleteLTTT200Dauky(LTTT200Dauky instance);
     #endregion
 		
 		public LinqtoSQLDataContext() : 
-				base(global::BEEACCOUNT.Properties.Settings.Default.BEEConnectionString1, mappingSource)
+				base(global::BEEACCOUNT.Properties.Settings.Default.BEEConnectionString3, mappingSource)
 		{
 			OnCreated();
 		}
@@ -230,11 +233,11 @@ namespace BEEACCOUNT
 			OnCreated();
 		}
 		
-		public System.Data.Linq.Table<CDKT200> CDKT200s
+		public System.Data.Linq.Table<CDKT200Dauky> CDKT200Daukies
 		{
 			get
 			{
-				return this.GetTable<CDKT200>();
+				return this.GetTable<CDKT200Dauky>();
 			}
 		}
 		
@@ -246,11 +249,11 @@ namespace BEEACCOUNT
 			}
 		}
 		
-		public System.Data.Linq.Table<KQKD200> KQKD200s
+		public System.Data.Linq.Table<KQKD200Dauky> KQKD200Daukies
 		{
 			get
 			{
-				return this.GetTable<KQKD200>();
+				return this.GetTable<KQKD200Dauky>();
 			}
 		}
 		
@@ -677,10 +680,18 @@ namespace BEEACCOUNT
 				return this.GetTable<tbl_SoQuy>();
 			}
 		}
+		
+		public System.Data.Linq.Table<LTTT200Dauky> LTTT200Daukies
+		{
+			get
+			{
+				return this.GetTable<LTTT200Dauky>();
+			}
+		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.CDKT200")]
-	public partial class CDKT200 : INotifyPropertyChanging, INotifyPropertyChanged
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.CDKT200Dauky")]
+	public partial class CDKT200Dauky : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
@@ -723,7 +734,7 @@ namespace BEEACCOUNT
     partial void OnusernameChanged();
     #endregion
 		
-		public CDKT200()
+		public CDKT200Dauky()
 		{
 			OnCreated();
 		}
@@ -1163,8 +1174,8 @@ namespace BEEACCOUNT
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.KQKD200")]
-	public partial class KQKD200 : INotifyPropertyChanging, INotifyPropertyChanged
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.KQKD200Dauky")]
+	public partial class KQKD200Dauky : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
@@ -1243,7 +1254,7 @@ namespace BEEACCOUNT
     partial void OnusernameChanged();
     #endregion
 		
-		public KQKD200()
+		public KQKD200Dauky()
 		{
 			OnCreated();
 		}
@@ -3051,11 +3062,193 @@ namespace BEEACCOUNT
 		
 		private System.Nullable<double> _cn432kpthanhtscd;
 		
+		private System.Nullable<double> _cn411acophieupt;
+		
+		private System.Nullable<double> _dn111tien;
+		
+		private System.Nullable<double> _dn112tientduong;
+		
+		private System.Nullable<double> _dn121chungkhoan;
+		
+		private System.Nullable<double> _dn122ckduphong;
+		
+		private System.Nullable<double> _dn123dtdenngay;
+		
+		private System.Nullable<double> _dn131ptkhach;
+		
+		private System.Nullable<double> _dn132tratruoc;
+		
+		private System.Nullable<double> _dn133pthunbnganh;
+		
+		private System.Nullable<double> _dn134pthutiendokh;
+		
+		private System.Nullable<double> _dn135pthuchovay;
+		
+		private System.Nullable<double> _dn136ptnganhan;
+		
+		private System.Nullable<double> _dn137dpptnganhan;
+		
+		private System.Nullable<double> _dn139tsthieucho;
+		
+		private System.Nullable<double> _dn141hangton;
+		
+		private System.Nullable<double> _dn149duphonght;
+		
+		private System.Nullable<double> _dn151cftratruoc;
+		
+		private System.Nullable<double> _dn152vatkhautru;
+		
+		private System.Nullable<double> _dn153thuepthukac;
+		
+		private System.Nullable<double> _dn154traiphieu;
+		
+		private System.Nullable<double> _dn155tskhacnh;
+		
+		private System.Nullable<double> _dn211ptkhach;
+		
+		private System.Nullable<double> _dn212tratruocdh;
+		
+		private System.Nullable<double> _dn213vonodonvi;
+		
+		private System.Nullable<double> _dn214pthunbo;
+		
+		private System.Nullable<double> _dn215pthuchovay;
+		
+		private System.Nullable<double> _dn216pthukhac;
+		
+		private System.Nullable<double> _dn219duphongpt;
+		
+		private System.Nullable<double> _dn222tscdngia;
+		
+		private System.Nullable<double> _dn223tskhauh;
+		
+		private System.Nullable<double> _dn225tscdthung;
+		
+		private System.Nullable<double> _dn226tscdthuekha;
+		
+		private System.Nullable<double> _dn228tscdvohnggia;
+		
+		private System.Nullable<double> _dn229tscdvhkhauh;
+		
+		private System.Nullable<double> _dn231bdsngia;
+		
+		private System.Nullable<double> _dn232bdshaomon;
+		
+		private System.Nullable<double> _dn241cfkddd;
+		
+		private System.Nullable<double> _dn242cfxddd;
+		
+		private System.Nullable<double> _dn251dtuctycon;
+		
+		private System.Nullable<double> _dn252dtuctylienket;
+		
+		private System.Nullable<double> _dn253dtukhac;
+		
+		private System.Nullable<double> _dn254duphongdt;
+		
+		private System.Nullable<double> _dn255dtudaohan;
+		
+		private System.Nullable<double> _dn261cftratruocdn;
+		
+		private System.Nullable<double> _dn262thuetndnhl;
+		
+		private System.Nullable<double> _dn263vtuthietbidn;
+		
+		private System.Nullable<double> _dn268tskhac;
+		
+		private System.Nullable<double> _dn311ptnbannh;
+		
+		private System.Nullable<double> _dn312ngmuatratr;
+		
+		private System.Nullable<double> _dn313thuephainop;
+		
+		private System.Nullable<double> _dn314ptracnhan;
+		
+		private System.Nullable<double> _dn315cphiptranh;
+		
+		private System.Nullable<double> _dn316cfptranbonh;
+		
+		private System.Nullable<double> _dn317ptrtheoluong;
+		
+		private System.Nullable<double> _dn318pthuchunhan;
+		
+		private System.Nullable<double> _dn319ptranhan;
+		
+		private System.Nullable<double> _dn320vaynotcnhan;
+		
+		private System.Nullable<double> _dn321duphptranh;
+		
+		private System.Nullable<double> _dn322quykhen;
+		
+		private System.Nullable<double> _dn323quygia;
+		
+		private System.Nullable<double> _dn324bantraiphieu;
+		
+		private System.Nullable<double> _dn331nodnngban;
+		
+		private System.Nullable<double> _dn332ngmuatratdn;
+		
+		private System.Nullable<double> _dn333cphiphaitra;
+		
+		private System.Nullable<double> _dn334ptranbvevon;
+		
+		private System.Nullable<double> _dn335ptranbdaihan;
+		
+		private System.Nullable<double> _dn336dthuchthdn;
+		
+		private System.Nullable<double> _dn337ptradnkhac;
+		
+		private System.Nullable<double> _dn338vaynodn;
+		
+		private System.Nullable<double> _dn339traiphieu;
+		
+		private System.Nullable<double> _dn340cophieu;
+		
+		private System.Nullable<double> _dn341tnhoanlai;
+		
+		private System.Nullable<double> _dn342duphongdn;
+		
+		private System.Nullable<double> _dn343quykhoahoc;
+		
+		private System.Nullable<double> _dn411vongopcsh;
+		
+		private System.Nullable<double> _dn411bcpudai;
+		
+		private System.Nullable<double> _dn412thangduvon;
+		
+		private System.Nullable<double> _dn413traiphieu;
+		
+		private System.Nullable<double> _dn414voncshkhac;
+		
+		private System.Nullable<double> _dn415cphieuquy;
+		
+		private System.Nullable<double> _dn416chenhlechts;
+		
+		private System.Nullable<double> _dn417tygia;
+		
+		private System.Nullable<double> _dn418dautuptrien;
+		
+		private System.Nullable<double> _dn419quyxxdn;
+		
+		private System.Nullable<double> _dn420quykhacsh;
+		
+		private System.Nullable<double> _dn421lnsauthue;
+		
+		private System.Nullable<double> _dn421alnkytruoc;
+		
+		private System.Nullable<double> _dn421blnkynay;
+		
+		private System.Nullable<double> _dn422vonxdcb;
+		
+		private System.Nullable<double> _dn431nkinhphi;
+		
+		private System.Nullable<double> _dn432kpthanhtscd;
+		
+		private System.Nullable<double> _dn411acophieupt;
+		
 		private int _id;
 		
 		private string _username;
-		
-		private System.Nullable<double> _cn411acophieupt;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -3241,12 +3434,194 @@ namespace BEEACCOUNT
     partial void Oncn431nkinhphiChanged();
     partial void Oncn432kpthanhtscdChanging(System.Nullable<double> value);
     partial void Oncn432kpthanhtscdChanged();
+    partial void Oncn411acophieuptChanging(System.Nullable<double> value);
+    partial void Oncn411acophieuptChanged();
+    partial void Ondn111tienChanging(System.Nullable<double> value);
+    partial void Ondn111tienChanged();
+    partial void Ondn112tientduongChanging(System.Nullable<double> value);
+    partial void Ondn112tientduongChanged();
+    partial void Ondn121chungkhoanChanging(System.Nullable<double> value);
+    partial void Ondn121chungkhoanChanged();
+    partial void Ondn122ckduphongChanging(System.Nullable<double> value);
+    partial void Ondn122ckduphongChanged();
+    partial void Ondn123dtdenngayChanging(System.Nullable<double> value);
+    partial void Ondn123dtdenngayChanged();
+    partial void Ondn131ptkhachChanging(System.Nullable<double> value);
+    partial void Ondn131ptkhachChanged();
+    partial void Ondn132tratruocChanging(System.Nullable<double> value);
+    partial void Ondn132tratruocChanged();
+    partial void Ondn133pthunbnganhChanging(System.Nullable<double> value);
+    partial void Ondn133pthunbnganhChanged();
+    partial void Ondn134pthutiendokhChanging(System.Nullable<double> value);
+    partial void Ondn134pthutiendokhChanged();
+    partial void Ondn135pthuchovayChanging(System.Nullable<double> value);
+    partial void Ondn135pthuchovayChanged();
+    partial void Ondn136ptnganhanChanging(System.Nullable<double> value);
+    partial void Ondn136ptnganhanChanged();
+    partial void Ondn137dpptnganhanChanging(System.Nullable<double> value);
+    partial void Ondn137dpptnganhanChanged();
+    partial void Ondn139tsthieuchoChanging(System.Nullable<double> value);
+    partial void Ondn139tsthieuchoChanged();
+    partial void Ondn141hangtonChanging(System.Nullable<double> value);
+    partial void Ondn141hangtonChanged();
+    partial void Ondn149duphonghtChanging(System.Nullable<double> value);
+    partial void Ondn149duphonghtChanged();
+    partial void Ondn151cftratruocChanging(System.Nullable<double> value);
+    partial void Ondn151cftratruocChanged();
+    partial void Ondn152vatkhautruChanging(System.Nullable<double> value);
+    partial void Ondn152vatkhautruChanged();
+    partial void Ondn153thuepthukacChanging(System.Nullable<double> value);
+    partial void Ondn153thuepthukacChanged();
+    partial void Ondn154traiphieuChanging(System.Nullable<double> value);
+    partial void Ondn154traiphieuChanged();
+    partial void Ondn155tskhacnhChanging(System.Nullable<double> value);
+    partial void Ondn155tskhacnhChanged();
+    partial void Ondn211ptkhachChanging(System.Nullable<double> value);
+    partial void Ondn211ptkhachChanged();
+    partial void Ondn212tratruocdhChanging(System.Nullable<double> value);
+    partial void Ondn212tratruocdhChanged();
+    partial void Ondn213vonodonviChanging(System.Nullable<double> value);
+    partial void Ondn213vonodonviChanged();
+    partial void Ondn214pthunboChanging(System.Nullable<double> value);
+    partial void Ondn214pthunboChanged();
+    partial void Ondn215pthuchovayChanging(System.Nullable<double> value);
+    partial void Ondn215pthuchovayChanged();
+    partial void Ondn216pthukhacChanging(System.Nullable<double> value);
+    partial void Ondn216pthukhacChanged();
+    partial void Ondn219duphongptChanging(System.Nullable<double> value);
+    partial void Ondn219duphongptChanged();
+    partial void Ondn222tscdngiaChanging(System.Nullable<double> value);
+    partial void Ondn222tscdngiaChanged();
+    partial void Ondn223tskhauhChanging(System.Nullable<double> value);
+    partial void Ondn223tskhauhChanged();
+    partial void Ondn225tscdthungChanging(System.Nullable<double> value);
+    partial void Ondn225tscdthungChanged();
+    partial void Ondn226tscdthuekhaChanging(System.Nullable<double> value);
+    partial void Ondn226tscdthuekhaChanged();
+    partial void Ondn228tscdvohnggiaChanging(System.Nullable<double> value);
+    partial void Ondn228tscdvohnggiaChanged();
+    partial void Ondn229tscdvhkhauhChanging(System.Nullable<double> value);
+    partial void Ondn229tscdvhkhauhChanged();
+    partial void Ondn231bdsngiaChanging(System.Nullable<double> value);
+    partial void Ondn231bdsngiaChanged();
+    partial void Ondn232bdshaomonChanging(System.Nullable<double> value);
+    partial void Ondn232bdshaomonChanged();
+    partial void Ondn241cfkdddChanging(System.Nullable<double> value);
+    partial void Ondn241cfkdddChanged();
+    partial void Ondn242cfxdddChanging(System.Nullable<double> value);
+    partial void Ondn242cfxdddChanged();
+    partial void Ondn251dtuctyconChanging(System.Nullable<double> value);
+    partial void Ondn251dtuctyconChanged();
+    partial void Ondn252dtuctylienketChanging(System.Nullable<double> value);
+    partial void Ondn252dtuctylienketChanged();
+    partial void Ondn253dtukhacChanging(System.Nullable<double> value);
+    partial void Ondn253dtukhacChanged();
+    partial void Ondn254duphongdtChanging(System.Nullable<double> value);
+    partial void Ondn254duphongdtChanged();
+    partial void Ondn255dtudaohanChanging(System.Nullable<double> value);
+    partial void Ondn255dtudaohanChanged();
+    partial void Ondn261cftratruocdnChanging(System.Nullable<double> value);
+    partial void Ondn261cftratruocdnChanged();
+    partial void Ondn262thuetndnhlChanging(System.Nullable<double> value);
+    partial void Ondn262thuetndnhlChanged();
+    partial void Ondn263vtuthietbidnChanging(System.Nullable<double> value);
+    partial void Ondn263vtuthietbidnChanged();
+    partial void Ondn268tskhacChanging(System.Nullable<double> value);
+    partial void Ondn268tskhacChanged();
+    partial void Ondn311ptnbannhChanging(System.Nullable<double> value);
+    partial void Ondn311ptnbannhChanged();
+    partial void Ondn312ngmuatratrChanging(System.Nullable<double> value);
+    partial void Ondn312ngmuatratrChanged();
+    partial void Ondn313thuephainopChanging(System.Nullable<double> value);
+    partial void Ondn313thuephainopChanged();
+    partial void Ondn314ptracnhanChanging(System.Nullable<double> value);
+    partial void Ondn314ptracnhanChanged();
+    partial void Ondn315cphiptranhChanging(System.Nullable<double> value);
+    partial void Ondn315cphiptranhChanged();
+    partial void Ondn316cfptranbonhChanging(System.Nullable<double> value);
+    partial void Ondn316cfptranbonhChanged();
+    partial void Ondn317ptrtheoluongChanging(System.Nullable<double> value);
+    partial void Ondn317ptrtheoluongChanged();
+    partial void Ondn318pthuchunhanChanging(System.Nullable<double> value);
+    partial void Ondn318pthuchunhanChanged();
+    partial void Ondn319ptranhanChanging(System.Nullable<double> value);
+    partial void Ondn319ptranhanChanged();
+    partial void Ondn320vaynotcnhanChanging(System.Nullable<double> value);
+    partial void Ondn320vaynotcnhanChanged();
+    partial void Ondn321duphptranhChanging(System.Nullable<double> value);
+    partial void Ondn321duphptranhChanged();
+    partial void Ondn322quykhenChanging(System.Nullable<double> value);
+    partial void Ondn322quykhenChanged();
+    partial void Ondn323quygiaChanging(System.Nullable<double> value);
+    partial void Ondn323quygiaChanged();
+    partial void Ondn324bantraiphieuChanging(System.Nullable<double> value);
+    partial void Ondn324bantraiphieuChanged();
+    partial void Ondn331nodnngbanChanging(System.Nullable<double> value);
+    partial void Ondn331nodnngbanChanged();
+    partial void Ondn332ngmuatratdnChanging(System.Nullable<double> value);
+    partial void Ondn332ngmuatratdnChanged();
+    partial void Ondn333cphiphaitraChanging(System.Nullable<double> value);
+    partial void Ondn333cphiphaitraChanged();
+    partial void Ondn334ptranbvevonChanging(System.Nullable<double> value);
+    partial void Ondn334ptranbvevonChanged();
+    partial void Ondn335ptranbdaihanChanging(System.Nullable<double> value);
+    partial void Ondn335ptranbdaihanChanged();
+    partial void Ondn336dthuchthdnChanging(System.Nullable<double> value);
+    partial void Ondn336dthuchthdnChanged();
+    partial void Ondn337ptradnkhacChanging(System.Nullable<double> value);
+    partial void Ondn337ptradnkhacChanged();
+    partial void Ondn338vaynodnChanging(System.Nullable<double> value);
+    partial void Ondn338vaynodnChanged();
+    partial void Ondn339traiphieuChanging(System.Nullable<double> value);
+    partial void Ondn339traiphieuChanged();
+    partial void Ondn340cophieuChanging(System.Nullable<double> value);
+    partial void Ondn340cophieuChanged();
+    partial void Ondn341tnhoanlaiChanging(System.Nullable<double> value);
+    partial void Ondn341tnhoanlaiChanged();
+    partial void Ondn342duphongdnChanging(System.Nullable<double> value);
+    partial void Ondn342duphongdnChanged();
+    partial void Ondn343quykhoahocChanging(System.Nullable<double> value);
+    partial void Ondn343quykhoahocChanged();
+    partial void Ondn411vongopcshChanging(System.Nullable<double> value);
+    partial void Ondn411vongopcshChanged();
+    partial void Ondn411bcpudaiChanging(System.Nullable<double> value);
+    partial void Ondn411bcpudaiChanged();
+    partial void Ondn412thangduvonChanging(System.Nullable<double> value);
+    partial void Ondn412thangduvonChanged();
+    partial void Ondn413traiphieuChanging(System.Nullable<double> value);
+    partial void Ondn413traiphieuChanged();
+    partial void Ondn414voncshkhacChanging(System.Nullable<double> value);
+    partial void Ondn414voncshkhacChanged();
+    partial void Ondn415cphieuquyChanging(System.Nullable<double> value);
+    partial void Ondn415cphieuquyChanged();
+    partial void Ondn416chenhlechtsChanging(System.Nullable<double> value);
+    partial void Ondn416chenhlechtsChanged();
+    partial void Ondn417tygiaChanging(System.Nullable<double> value);
+    partial void Ondn417tygiaChanged();
+    partial void Ondn418dautuptrienChanging(System.Nullable<double> value);
+    partial void Ondn418dautuptrienChanged();
+    partial void Ondn419quyxxdnChanging(System.Nullable<double> value);
+    partial void Ondn419quyxxdnChanged();
+    partial void Ondn420quykhacshChanging(System.Nullable<double> value);
+    partial void Ondn420quykhacshChanged();
+    partial void Ondn421lnsauthueChanging(System.Nullable<double> value);
+    partial void Ondn421lnsauthueChanged();
+    partial void Ondn421alnkytruocChanging(System.Nullable<double> value);
+    partial void Ondn421alnkytruocChanged();
+    partial void Ondn421blnkynayChanging(System.Nullable<double> value);
+    partial void Ondn421blnkynayChanged();
+    partial void Ondn422vonxdcbChanging(System.Nullable<double> value);
+    partial void Ondn422vonxdcbChanged();
+    partial void Ondn431nkinhphiChanging(System.Nullable<double> value);
+    partial void Ondn431nkinhphiChanged();
+    partial void Ondn432kpthanhtscdChanging(System.Nullable<double> value);
+    partial void Ondn432kpthanhtscdChanged();
+    partial void Ondn411acophieuptChanging(System.Nullable<double> value);
+    partial void Ondn411acophieuptChanged();
     partial void OnidChanging(int value);
     partial void OnidChanged();
     partial void OnusernameChanging(string value);
     partial void OnusernameChanged();
-    partial void Oncn411acophieuptChanging(System.Nullable<double> value);
-    partial void Oncn411acophieuptChanged();
     #endregion
 		
 		public RPtdetailCDKT200lientuc()
@@ -5054,6 +5429,1846 @@ namespace BEEACCOUNT
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_cn411acophieupt", DbType="Float")]
+		public System.Nullable<double> cn411acophieupt
+		{
+			get
+			{
+				return this._cn411acophieupt;
+			}
+			set
+			{
+				if ((this._cn411acophieupt != value))
+				{
+					this.Oncn411acophieuptChanging(value);
+					this.SendPropertyChanging();
+					this._cn411acophieupt = value;
+					this.SendPropertyChanged("cn411acophieupt");
+					this.Oncn411acophieuptChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dn111tien", DbType="Float")]
+		public System.Nullable<double> dn111tien
+		{
+			get
+			{
+				return this._dn111tien;
+			}
+			set
+			{
+				if ((this._dn111tien != value))
+				{
+					this.Ondn111tienChanging(value);
+					this.SendPropertyChanging();
+					this._dn111tien = value;
+					this.SendPropertyChanged("dn111tien");
+					this.Ondn111tienChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dn112tientduong", DbType="Float")]
+		public System.Nullable<double> dn112tientduong
+		{
+			get
+			{
+				return this._dn112tientduong;
+			}
+			set
+			{
+				if ((this._dn112tientduong != value))
+				{
+					this.Ondn112tientduongChanging(value);
+					this.SendPropertyChanging();
+					this._dn112tientduong = value;
+					this.SendPropertyChanged("dn112tientduong");
+					this.Ondn112tientduongChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dn121chungkhoan", DbType="Float")]
+		public System.Nullable<double> dn121chungkhoan
+		{
+			get
+			{
+				return this._dn121chungkhoan;
+			}
+			set
+			{
+				if ((this._dn121chungkhoan != value))
+				{
+					this.Ondn121chungkhoanChanging(value);
+					this.SendPropertyChanging();
+					this._dn121chungkhoan = value;
+					this.SendPropertyChanged("dn121chungkhoan");
+					this.Ondn121chungkhoanChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dn122ckduphong", DbType="Float")]
+		public System.Nullable<double> dn122ckduphong
+		{
+			get
+			{
+				return this._dn122ckduphong;
+			}
+			set
+			{
+				if ((this._dn122ckduphong != value))
+				{
+					this.Ondn122ckduphongChanging(value);
+					this.SendPropertyChanging();
+					this._dn122ckduphong = value;
+					this.SendPropertyChanged("dn122ckduphong");
+					this.Ondn122ckduphongChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dn123dtdenngay", DbType="Float")]
+		public System.Nullable<double> dn123dtdenngay
+		{
+			get
+			{
+				return this._dn123dtdenngay;
+			}
+			set
+			{
+				if ((this._dn123dtdenngay != value))
+				{
+					this.Ondn123dtdenngayChanging(value);
+					this.SendPropertyChanging();
+					this._dn123dtdenngay = value;
+					this.SendPropertyChanged("dn123dtdenngay");
+					this.Ondn123dtdenngayChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dn131ptkhach", DbType="Float")]
+		public System.Nullable<double> dn131ptkhach
+		{
+			get
+			{
+				return this._dn131ptkhach;
+			}
+			set
+			{
+				if ((this._dn131ptkhach != value))
+				{
+					this.Ondn131ptkhachChanging(value);
+					this.SendPropertyChanging();
+					this._dn131ptkhach = value;
+					this.SendPropertyChanged("dn131ptkhach");
+					this.Ondn131ptkhachChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dn132tratruoc", DbType="Float")]
+		public System.Nullable<double> dn132tratruoc
+		{
+			get
+			{
+				return this._dn132tratruoc;
+			}
+			set
+			{
+				if ((this._dn132tratruoc != value))
+				{
+					this.Ondn132tratruocChanging(value);
+					this.SendPropertyChanging();
+					this._dn132tratruoc = value;
+					this.SendPropertyChanged("dn132tratruoc");
+					this.Ondn132tratruocChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dn133pthunbnganh", DbType="Float")]
+		public System.Nullable<double> dn133pthunbnganh
+		{
+			get
+			{
+				return this._dn133pthunbnganh;
+			}
+			set
+			{
+				if ((this._dn133pthunbnganh != value))
+				{
+					this.Ondn133pthunbnganhChanging(value);
+					this.SendPropertyChanging();
+					this._dn133pthunbnganh = value;
+					this.SendPropertyChanged("dn133pthunbnganh");
+					this.Ondn133pthunbnganhChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dn134pthutiendokh", DbType="Float")]
+		public System.Nullable<double> dn134pthutiendokh
+		{
+			get
+			{
+				return this._dn134pthutiendokh;
+			}
+			set
+			{
+				if ((this._dn134pthutiendokh != value))
+				{
+					this.Ondn134pthutiendokhChanging(value);
+					this.SendPropertyChanging();
+					this._dn134pthutiendokh = value;
+					this.SendPropertyChanged("dn134pthutiendokh");
+					this.Ondn134pthutiendokhChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dn135pthuchovay", DbType="Float")]
+		public System.Nullable<double> dn135pthuchovay
+		{
+			get
+			{
+				return this._dn135pthuchovay;
+			}
+			set
+			{
+				if ((this._dn135pthuchovay != value))
+				{
+					this.Ondn135pthuchovayChanging(value);
+					this.SendPropertyChanging();
+					this._dn135pthuchovay = value;
+					this.SendPropertyChanged("dn135pthuchovay");
+					this.Ondn135pthuchovayChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dn136ptnganhan", DbType="Float")]
+		public System.Nullable<double> dn136ptnganhan
+		{
+			get
+			{
+				return this._dn136ptnganhan;
+			}
+			set
+			{
+				if ((this._dn136ptnganhan != value))
+				{
+					this.Ondn136ptnganhanChanging(value);
+					this.SendPropertyChanging();
+					this._dn136ptnganhan = value;
+					this.SendPropertyChanged("dn136ptnganhan");
+					this.Ondn136ptnganhanChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dn137dpptnganhan", DbType="Float")]
+		public System.Nullable<double> dn137dpptnganhan
+		{
+			get
+			{
+				return this._dn137dpptnganhan;
+			}
+			set
+			{
+				if ((this._dn137dpptnganhan != value))
+				{
+					this.Ondn137dpptnganhanChanging(value);
+					this.SendPropertyChanging();
+					this._dn137dpptnganhan = value;
+					this.SendPropertyChanged("dn137dpptnganhan");
+					this.Ondn137dpptnganhanChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dn139tsthieucho", DbType="Float")]
+		public System.Nullable<double> dn139tsthieucho
+		{
+			get
+			{
+				return this._dn139tsthieucho;
+			}
+			set
+			{
+				if ((this._dn139tsthieucho != value))
+				{
+					this.Ondn139tsthieuchoChanging(value);
+					this.SendPropertyChanging();
+					this._dn139tsthieucho = value;
+					this.SendPropertyChanged("dn139tsthieucho");
+					this.Ondn139tsthieuchoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dn141hangton", DbType="Float")]
+		public System.Nullable<double> dn141hangton
+		{
+			get
+			{
+				return this._dn141hangton;
+			}
+			set
+			{
+				if ((this._dn141hangton != value))
+				{
+					this.Ondn141hangtonChanging(value);
+					this.SendPropertyChanging();
+					this._dn141hangton = value;
+					this.SendPropertyChanged("dn141hangton");
+					this.Ondn141hangtonChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dn149duphonght", DbType="Float")]
+		public System.Nullable<double> dn149duphonght
+		{
+			get
+			{
+				return this._dn149duphonght;
+			}
+			set
+			{
+				if ((this._dn149duphonght != value))
+				{
+					this.Ondn149duphonghtChanging(value);
+					this.SendPropertyChanging();
+					this._dn149duphonght = value;
+					this.SendPropertyChanged("dn149duphonght");
+					this.Ondn149duphonghtChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dn151cftratruoc", DbType="Float")]
+		public System.Nullable<double> dn151cftratruoc
+		{
+			get
+			{
+				return this._dn151cftratruoc;
+			}
+			set
+			{
+				if ((this._dn151cftratruoc != value))
+				{
+					this.Ondn151cftratruocChanging(value);
+					this.SendPropertyChanging();
+					this._dn151cftratruoc = value;
+					this.SendPropertyChanged("dn151cftratruoc");
+					this.Ondn151cftratruocChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dn152vatkhautru", DbType="Float")]
+		public System.Nullable<double> dn152vatkhautru
+		{
+			get
+			{
+				return this._dn152vatkhautru;
+			}
+			set
+			{
+				if ((this._dn152vatkhautru != value))
+				{
+					this.Ondn152vatkhautruChanging(value);
+					this.SendPropertyChanging();
+					this._dn152vatkhautru = value;
+					this.SendPropertyChanged("dn152vatkhautru");
+					this.Ondn152vatkhautruChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dn153thuepthukac", DbType="Float")]
+		public System.Nullable<double> dn153thuepthukac
+		{
+			get
+			{
+				return this._dn153thuepthukac;
+			}
+			set
+			{
+				if ((this._dn153thuepthukac != value))
+				{
+					this.Ondn153thuepthukacChanging(value);
+					this.SendPropertyChanging();
+					this._dn153thuepthukac = value;
+					this.SendPropertyChanged("dn153thuepthukac");
+					this.Ondn153thuepthukacChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dn154traiphieu", DbType="Float")]
+		public System.Nullable<double> dn154traiphieu
+		{
+			get
+			{
+				return this._dn154traiphieu;
+			}
+			set
+			{
+				if ((this._dn154traiphieu != value))
+				{
+					this.Ondn154traiphieuChanging(value);
+					this.SendPropertyChanging();
+					this._dn154traiphieu = value;
+					this.SendPropertyChanged("dn154traiphieu");
+					this.Ondn154traiphieuChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dn155tskhacnh", DbType="Float")]
+		public System.Nullable<double> dn155tskhacnh
+		{
+			get
+			{
+				return this._dn155tskhacnh;
+			}
+			set
+			{
+				if ((this._dn155tskhacnh != value))
+				{
+					this.Ondn155tskhacnhChanging(value);
+					this.SendPropertyChanging();
+					this._dn155tskhacnh = value;
+					this.SendPropertyChanged("dn155tskhacnh");
+					this.Ondn155tskhacnhChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dn211ptkhach", DbType="Float")]
+		public System.Nullable<double> dn211ptkhach
+		{
+			get
+			{
+				return this._dn211ptkhach;
+			}
+			set
+			{
+				if ((this._dn211ptkhach != value))
+				{
+					this.Ondn211ptkhachChanging(value);
+					this.SendPropertyChanging();
+					this._dn211ptkhach = value;
+					this.SendPropertyChanged("dn211ptkhach");
+					this.Ondn211ptkhachChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dn212tratruocdh", DbType="Float")]
+		public System.Nullable<double> dn212tratruocdh
+		{
+			get
+			{
+				return this._dn212tratruocdh;
+			}
+			set
+			{
+				if ((this._dn212tratruocdh != value))
+				{
+					this.Ondn212tratruocdhChanging(value);
+					this.SendPropertyChanging();
+					this._dn212tratruocdh = value;
+					this.SendPropertyChanged("dn212tratruocdh");
+					this.Ondn212tratruocdhChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dn213vonodonvi", DbType="Float")]
+		public System.Nullable<double> dn213vonodonvi
+		{
+			get
+			{
+				return this._dn213vonodonvi;
+			}
+			set
+			{
+				if ((this._dn213vonodonvi != value))
+				{
+					this.Ondn213vonodonviChanging(value);
+					this.SendPropertyChanging();
+					this._dn213vonodonvi = value;
+					this.SendPropertyChanged("dn213vonodonvi");
+					this.Ondn213vonodonviChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dn214pthunbo", DbType="Float")]
+		public System.Nullable<double> dn214pthunbo
+		{
+			get
+			{
+				return this._dn214pthunbo;
+			}
+			set
+			{
+				if ((this._dn214pthunbo != value))
+				{
+					this.Ondn214pthunboChanging(value);
+					this.SendPropertyChanging();
+					this._dn214pthunbo = value;
+					this.SendPropertyChanged("dn214pthunbo");
+					this.Ondn214pthunboChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dn215pthuchovay", DbType="Float")]
+		public System.Nullable<double> dn215pthuchovay
+		{
+			get
+			{
+				return this._dn215pthuchovay;
+			}
+			set
+			{
+				if ((this._dn215pthuchovay != value))
+				{
+					this.Ondn215pthuchovayChanging(value);
+					this.SendPropertyChanging();
+					this._dn215pthuchovay = value;
+					this.SendPropertyChanged("dn215pthuchovay");
+					this.Ondn215pthuchovayChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dn216pthukhac", DbType="Float")]
+		public System.Nullable<double> dn216pthukhac
+		{
+			get
+			{
+				return this._dn216pthukhac;
+			}
+			set
+			{
+				if ((this._dn216pthukhac != value))
+				{
+					this.Ondn216pthukhacChanging(value);
+					this.SendPropertyChanging();
+					this._dn216pthukhac = value;
+					this.SendPropertyChanged("dn216pthukhac");
+					this.Ondn216pthukhacChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dn219duphongpt", DbType="Float")]
+		public System.Nullable<double> dn219duphongpt
+		{
+			get
+			{
+				return this._dn219duphongpt;
+			}
+			set
+			{
+				if ((this._dn219duphongpt != value))
+				{
+					this.Ondn219duphongptChanging(value);
+					this.SendPropertyChanging();
+					this._dn219duphongpt = value;
+					this.SendPropertyChanged("dn219duphongpt");
+					this.Ondn219duphongptChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dn222tscdngia", DbType="Float")]
+		public System.Nullable<double> dn222tscdngia
+		{
+			get
+			{
+				return this._dn222tscdngia;
+			}
+			set
+			{
+				if ((this._dn222tscdngia != value))
+				{
+					this.Ondn222tscdngiaChanging(value);
+					this.SendPropertyChanging();
+					this._dn222tscdngia = value;
+					this.SendPropertyChanged("dn222tscdngia");
+					this.Ondn222tscdngiaChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dn223tskhauh", DbType="Float")]
+		public System.Nullable<double> dn223tskhauh
+		{
+			get
+			{
+				return this._dn223tskhauh;
+			}
+			set
+			{
+				if ((this._dn223tskhauh != value))
+				{
+					this.Ondn223tskhauhChanging(value);
+					this.SendPropertyChanging();
+					this._dn223tskhauh = value;
+					this.SendPropertyChanged("dn223tskhauh");
+					this.Ondn223tskhauhChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dn225tscdthung", DbType="Float")]
+		public System.Nullable<double> dn225tscdthung
+		{
+			get
+			{
+				return this._dn225tscdthung;
+			}
+			set
+			{
+				if ((this._dn225tscdthung != value))
+				{
+					this.Ondn225tscdthungChanging(value);
+					this.SendPropertyChanging();
+					this._dn225tscdthung = value;
+					this.SendPropertyChanged("dn225tscdthung");
+					this.Ondn225tscdthungChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dn226tscdthuekha", DbType="Float")]
+		public System.Nullable<double> dn226tscdthuekha
+		{
+			get
+			{
+				return this._dn226tscdthuekha;
+			}
+			set
+			{
+				if ((this._dn226tscdthuekha != value))
+				{
+					this.Ondn226tscdthuekhaChanging(value);
+					this.SendPropertyChanging();
+					this._dn226tscdthuekha = value;
+					this.SendPropertyChanged("dn226tscdthuekha");
+					this.Ondn226tscdthuekhaChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dn228tscdvohnggia", DbType="Float")]
+		public System.Nullable<double> dn228tscdvohnggia
+		{
+			get
+			{
+				return this._dn228tscdvohnggia;
+			}
+			set
+			{
+				if ((this._dn228tscdvohnggia != value))
+				{
+					this.Ondn228tscdvohnggiaChanging(value);
+					this.SendPropertyChanging();
+					this._dn228tscdvohnggia = value;
+					this.SendPropertyChanged("dn228tscdvohnggia");
+					this.Ondn228tscdvohnggiaChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dn229tscdvhkhauh", DbType="Float")]
+		public System.Nullable<double> dn229tscdvhkhauh
+		{
+			get
+			{
+				return this._dn229tscdvhkhauh;
+			}
+			set
+			{
+				if ((this._dn229tscdvhkhauh != value))
+				{
+					this.Ondn229tscdvhkhauhChanging(value);
+					this.SendPropertyChanging();
+					this._dn229tscdvhkhauh = value;
+					this.SendPropertyChanged("dn229tscdvhkhauh");
+					this.Ondn229tscdvhkhauhChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dn231bdsngia", DbType="Float")]
+		public System.Nullable<double> dn231bdsngia
+		{
+			get
+			{
+				return this._dn231bdsngia;
+			}
+			set
+			{
+				if ((this._dn231bdsngia != value))
+				{
+					this.Ondn231bdsngiaChanging(value);
+					this.SendPropertyChanging();
+					this._dn231bdsngia = value;
+					this.SendPropertyChanged("dn231bdsngia");
+					this.Ondn231bdsngiaChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dn232bdshaomon", DbType="Float")]
+		public System.Nullable<double> dn232bdshaomon
+		{
+			get
+			{
+				return this._dn232bdshaomon;
+			}
+			set
+			{
+				if ((this._dn232bdshaomon != value))
+				{
+					this.Ondn232bdshaomonChanging(value);
+					this.SendPropertyChanging();
+					this._dn232bdshaomon = value;
+					this.SendPropertyChanged("dn232bdshaomon");
+					this.Ondn232bdshaomonChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dn241cfkddd", DbType="Float")]
+		public System.Nullable<double> dn241cfkddd
+		{
+			get
+			{
+				return this._dn241cfkddd;
+			}
+			set
+			{
+				if ((this._dn241cfkddd != value))
+				{
+					this.Ondn241cfkdddChanging(value);
+					this.SendPropertyChanging();
+					this._dn241cfkddd = value;
+					this.SendPropertyChanged("dn241cfkddd");
+					this.Ondn241cfkdddChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dn242cfxddd", DbType="Float")]
+		public System.Nullable<double> dn242cfxddd
+		{
+			get
+			{
+				return this._dn242cfxddd;
+			}
+			set
+			{
+				if ((this._dn242cfxddd != value))
+				{
+					this.Ondn242cfxdddChanging(value);
+					this.SendPropertyChanging();
+					this._dn242cfxddd = value;
+					this.SendPropertyChanged("dn242cfxddd");
+					this.Ondn242cfxdddChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dn251dtuctycon", DbType="Float")]
+		public System.Nullable<double> dn251dtuctycon
+		{
+			get
+			{
+				return this._dn251dtuctycon;
+			}
+			set
+			{
+				if ((this._dn251dtuctycon != value))
+				{
+					this.Ondn251dtuctyconChanging(value);
+					this.SendPropertyChanging();
+					this._dn251dtuctycon = value;
+					this.SendPropertyChanged("dn251dtuctycon");
+					this.Ondn251dtuctyconChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dn252dtuctylienket", DbType="Float")]
+		public System.Nullable<double> dn252dtuctylienket
+		{
+			get
+			{
+				return this._dn252dtuctylienket;
+			}
+			set
+			{
+				if ((this._dn252dtuctylienket != value))
+				{
+					this.Ondn252dtuctylienketChanging(value);
+					this.SendPropertyChanging();
+					this._dn252dtuctylienket = value;
+					this.SendPropertyChanged("dn252dtuctylienket");
+					this.Ondn252dtuctylienketChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dn253dtukhac", DbType="Float")]
+		public System.Nullable<double> dn253dtukhac
+		{
+			get
+			{
+				return this._dn253dtukhac;
+			}
+			set
+			{
+				if ((this._dn253dtukhac != value))
+				{
+					this.Ondn253dtukhacChanging(value);
+					this.SendPropertyChanging();
+					this._dn253dtukhac = value;
+					this.SendPropertyChanged("dn253dtukhac");
+					this.Ondn253dtukhacChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dn254duphongdt", DbType="Float")]
+		public System.Nullable<double> dn254duphongdt
+		{
+			get
+			{
+				return this._dn254duphongdt;
+			}
+			set
+			{
+				if ((this._dn254duphongdt != value))
+				{
+					this.Ondn254duphongdtChanging(value);
+					this.SendPropertyChanging();
+					this._dn254duphongdt = value;
+					this.SendPropertyChanged("dn254duphongdt");
+					this.Ondn254duphongdtChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dn255dtudaohan", DbType="Float")]
+		public System.Nullable<double> dn255dtudaohan
+		{
+			get
+			{
+				return this._dn255dtudaohan;
+			}
+			set
+			{
+				if ((this._dn255dtudaohan != value))
+				{
+					this.Ondn255dtudaohanChanging(value);
+					this.SendPropertyChanging();
+					this._dn255dtudaohan = value;
+					this.SendPropertyChanged("dn255dtudaohan");
+					this.Ondn255dtudaohanChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dn261cftratruocdn", DbType="Float")]
+		public System.Nullable<double> dn261cftratruocdn
+		{
+			get
+			{
+				return this._dn261cftratruocdn;
+			}
+			set
+			{
+				if ((this._dn261cftratruocdn != value))
+				{
+					this.Ondn261cftratruocdnChanging(value);
+					this.SendPropertyChanging();
+					this._dn261cftratruocdn = value;
+					this.SendPropertyChanged("dn261cftratruocdn");
+					this.Ondn261cftratruocdnChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dn262thuetndnhl", DbType="Float")]
+		public System.Nullable<double> dn262thuetndnhl
+		{
+			get
+			{
+				return this._dn262thuetndnhl;
+			}
+			set
+			{
+				if ((this._dn262thuetndnhl != value))
+				{
+					this.Ondn262thuetndnhlChanging(value);
+					this.SendPropertyChanging();
+					this._dn262thuetndnhl = value;
+					this.SendPropertyChanged("dn262thuetndnhl");
+					this.Ondn262thuetndnhlChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dn263vtuthietbidn", DbType="Float")]
+		public System.Nullable<double> dn263vtuthietbidn
+		{
+			get
+			{
+				return this._dn263vtuthietbidn;
+			}
+			set
+			{
+				if ((this._dn263vtuthietbidn != value))
+				{
+					this.Ondn263vtuthietbidnChanging(value);
+					this.SendPropertyChanging();
+					this._dn263vtuthietbidn = value;
+					this.SendPropertyChanged("dn263vtuthietbidn");
+					this.Ondn263vtuthietbidnChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dn268tskhac", DbType="Float")]
+		public System.Nullable<double> dn268tskhac
+		{
+			get
+			{
+				return this._dn268tskhac;
+			}
+			set
+			{
+				if ((this._dn268tskhac != value))
+				{
+					this.Ondn268tskhacChanging(value);
+					this.SendPropertyChanging();
+					this._dn268tskhac = value;
+					this.SendPropertyChanged("dn268tskhac");
+					this.Ondn268tskhacChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dn311ptnbannh", DbType="Float")]
+		public System.Nullable<double> dn311ptnbannh
+		{
+			get
+			{
+				return this._dn311ptnbannh;
+			}
+			set
+			{
+				if ((this._dn311ptnbannh != value))
+				{
+					this.Ondn311ptnbannhChanging(value);
+					this.SendPropertyChanging();
+					this._dn311ptnbannh = value;
+					this.SendPropertyChanged("dn311ptnbannh");
+					this.Ondn311ptnbannhChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dn312ngmuatratr", DbType="Float")]
+		public System.Nullable<double> dn312ngmuatratr
+		{
+			get
+			{
+				return this._dn312ngmuatratr;
+			}
+			set
+			{
+				if ((this._dn312ngmuatratr != value))
+				{
+					this.Ondn312ngmuatratrChanging(value);
+					this.SendPropertyChanging();
+					this._dn312ngmuatratr = value;
+					this.SendPropertyChanged("dn312ngmuatratr");
+					this.Ondn312ngmuatratrChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dn313thuephainop", DbType="Float")]
+		public System.Nullable<double> dn313thuephainop
+		{
+			get
+			{
+				return this._dn313thuephainop;
+			}
+			set
+			{
+				if ((this._dn313thuephainop != value))
+				{
+					this.Ondn313thuephainopChanging(value);
+					this.SendPropertyChanging();
+					this._dn313thuephainop = value;
+					this.SendPropertyChanged("dn313thuephainop");
+					this.Ondn313thuephainopChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dn314ptracnhan", DbType="Float")]
+		public System.Nullable<double> dn314ptracnhan
+		{
+			get
+			{
+				return this._dn314ptracnhan;
+			}
+			set
+			{
+				if ((this._dn314ptracnhan != value))
+				{
+					this.Ondn314ptracnhanChanging(value);
+					this.SendPropertyChanging();
+					this._dn314ptracnhan = value;
+					this.SendPropertyChanged("dn314ptracnhan");
+					this.Ondn314ptracnhanChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dn315cphiptranh", DbType="Float")]
+		public System.Nullable<double> dn315cphiptranh
+		{
+			get
+			{
+				return this._dn315cphiptranh;
+			}
+			set
+			{
+				if ((this._dn315cphiptranh != value))
+				{
+					this.Ondn315cphiptranhChanging(value);
+					this.SendPropertyChanging();
+					this._dn315cphiptranh = value;
+					this.SendPropertyChanged("dn315cphiptranh");
+					this.Ondn315cphiptranhChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dn316cfptranbonh", DbType="Float")]
+		public System.Nullable<double> dn316cfptranbonh
+		{
+			get
+			{
+				return this._dn316cfptranbonh;
+			}
+			set
+			{
+				if ((this._dn316cfptranbonh != value))
+				{
+					this.Ondn316cfptranbonhChanging(value);
+					this.SendPropertyChanging();
+					this._dn316cfptranbonh = value;
+					this.SendPropertyChanged("dn316cfptranbonh");
+					this.Ondn316cfptranbonhChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dn317ptrtheoluong", DbType="Float")]
+		public System.Nullable<double> dn317ptrtheoluong
+		{
+			get
+			{
+				return this._dn317ptrtheoluong;
+			}
+			set
+			{
+				if ((this._dn317ptrtheoluong != value))
+				{
+					this.Ondn317ptrtheoluongChanging(value);
+					this.SendPropertyChanging();
+					this._dn317ptrtheoluong = value;
+					this.SendPropertyChanged("dn317ptrtheoluong");
+					this.Ondn317ptrtheoluongChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dn318pthuchunhan", DbType="Float")]
+		public System.Nullable<double> dn318pthuchunhan
+		{
+			get
+			{
+				return this._dn318pthuchunhan;
+			}
+			set
+			{
+				if ((this._dn318pthuchunhan != value))
+				{
+					this.Ondn318pthuchunhanChanging(value);
+					this.SendPropertyChanging();
+					this._dn318pthuchunhan = value;
+					this.SendPropertyChanged("dn318pthuchunhan");
+					this.Ondn318pthuchunhanChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dn319ptranhan", DbType="Float")]
+		public System.Nullable<double> dn319ptranhan
+		{
+			get
+			{
+				return this._dn319ptranhan;
+			}
+			set
+			{
+				if ((this._dn319ptranhan != value))
+				{
+					this.Ondn319ptranhanChanging(value);
+					this.SendPropertyChanging();
+					this._dn319ptranhan = value;
+					this.SendPropertyChanged("dn319ptranhan");
+					this.Ondn319ptranhanChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dn320vaynotcnhan", DbType="Float")]
+		public System.Nullable<double> dn320vaynotcnhan
+		{
+			get
+			{
+				return this._dn320vaynotcnhan;
+			}
+			set
+			{
+				if ((this._dn320vaynotcnhan != value))
+				{
+					this.Ondn320vaynotcnhanChanging(value);
+					this.SendPropertyChanging();
+					this._dn320vaynotcnhan = value;
+					this.SendPropertyChanged("dn320vaynotcnhan");
+					this.Ondn320vaynotcnhanChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dn321duphptranh", DbType="Float")]
+		public System.Nullable<double> dn321duphptranh
+		{
+			get
+			{
+				return this._dn321duphptranh;
+			}
+			set
+			{
+				if ((this._dn321duphptranh != value))
+				{
+					this.Ondn321duphptranhChanging(value);
+					this.SendPropertyChanging();
+					this._dn321duphptranh = value;
+					this.SendPropertyChanged("dn321duphptranh");
+					this.Ondn321duphptranhChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dn322quykhen", DbType="Float")]
+		public System.Nullable<double> dn322quykhen
+		{
+			get
+			{
+				return this._dn322quykhen;
+			}
+			set
+			{
+				if ((this._dn322quykhen != value))
+				{
+					this.Ondn322quykhenChanging(value);
+					this.SendPropertyChanging();
+					this._dn322quykhen = value;
+					this.SendPropertyChanged("dn322quykhen");
+					this.Ondn322quykhenChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dn323quygia", DbType="Float")]
+		public System.Nullable<double> dn323quygia
+		{
+			get
+			{
+				return this._dn323quygia;
+			}
+			set
+			{
+				if ((this._dn323quygia != value))
+				{
+					this.Ondn323quygiaChanging(value);
+					this.SendPropertyChanging();
+					this._dn323quygia = value;
+					this.SendPropertyChanged("dn323quygia");
+					this.Ondn323quygiaChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dn324bantraiphieu", DbType="Float")]
+		public System.Nullable<double> dn324bantraiphieu
+		{
+			get
+			{
+				return this._dn324bantraiphieu;
+			}
+			set
+			{
+				if ((this._dn324bantraiphieu != value))
+				{
+					this.Ondn324bantraiphieuChanging(value);
+					this.SendPropertyChanging();
+					this._dn324bantraiphieu = value;
+					this.SendPropertyChanged("dn324bantraiphieu");
+					this.Ondn324bantraiphieuChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dn331nodnngban", DbType="Float")]
+		public System.Nullable<double> dn331nodnngban
+		{
+			get
+			{
+				return this._dn331nodnngban;
+			}
+			set
+			{
+				if ((this._dn331nodnngban != value))
+				{
+					this.Ondn331nodnngbanChanging(value);
+					this.SendPropertyChanging();
+					this._dn331nodnngban = value;
+					this.SendPropertyChanged("dn331nodnngban");
+					this.Ondn331nodnngbanChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dn332ngmuatratdn", DbType="Float")]
+		public System.Nullable<double> dn332ngmuatratdn
+		{
+			get
+			{
+				return this._dn332ngmuatratdn;
+			}
+			set
+			{
+				if ((this._dn332ngmuatratdn != value))
+				{
+					this.Ondn332ngmuatratdnChanging(value);
+					this.SendPropertyChanging();
+					this._dn332ngmuatratdn = value;
+					this.SendPropertyChanged("dn332ngmuatratdn");
+					this.Ondn332ngmuatratdnChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dn333cphiphaitra", DbType="Float")]
+		public System.Nullable<double> dn333cphiphaitra
+		{
+			get
+			{
+				return this._dn333cphiphaitra;
+			}
+			set
+			{
+				if ((this._dn333cphiphaitra != value))
+				{
+					this.Ondn333cphiphaitraChanging(value);
+					this.SendPropertyChanging();
+					this._dn333cphiphaitra = value;
+					this.SendPropertyChanged("dn333cphiphaitra");
+					this.Ondn333cphiphaitraChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dn334ptranbvevon", DbType="Float")]
+		public System.Nullable<double> dn334ptranbvevon
+		{
+			get
+			{
+				return this._dn334ptranbvevon;
+			}
+			set
+			{
+				if ((this._dn334ptranbvevon != value))
+				{
+					this.Ondn334ptranbvevonChanging(value);
+					this.SendPropertyChanging();
+					this._dn334ptranbvevon = value;
+					this.SendPropertyChanged("dn334ptranbvevon");
+					this.Ondn334ptranbvevonChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dn335ptranbdaihan", DbType="Float")]
+		public System.Nullable<double> dn335ptranbdaihan
+		{
+			get
+			{
+				return this._dn335ptranbdaihan;
+			}
+			set
+			{
+				if ((this._dn335ptranbdaihan != value))
+				{
+					this.Ondn335ptranbdaihanChanging(value);
+					this.SendPropertyChanging();
+					this._dn335ptranbdaihan = value;
+					this.SendPropertyChanged("dn335ptranbdaihan");
+					this.Ondn335ptranbdaihanChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dn336dthuchthdn", DbType="Float")]
+		public System.Nullable<double> dn336dthuchthdn
+		{
+			get
+			{
+				return this._dn336dthuchthdn;
+			}
+			set
+			{
+				if ((this._dn336dthuchthdn != value))
+				{
+					this.Ondn336dthuchthdnChanging(value);
+					this.SendPropertyChanging();
+					this._dn336dthuchthdn = value;
+					this.SendPropertyChanged("dn336dthuchthdn");
+					this.Ondn336dthuchthdnChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dn337ptradnkhac", DbType="Float")]
+		public System.Nullable<double> dn337ptradnkhac
+		{
+			get
+			{
+				return this._dn337ptradnkhac;
+			}
+			set
+			{
+				if ((this._dn337ptradnkhac != value))
+				{
+					this.Ondn337ptradnkhacChanging(value);
+					this.SendPropertyChanging();
+					this._dn337ptradnkhac = value;
+					this.SendPropertyChanged("dn337ptradnkhac");
+					this.Ondn337ptradnkhacChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dn338vaynodn", DbType="Float")]
+		public System.Nullable<double> dn338vaynodn
+		{
+			get
+			{
+				return this._dn338vaynodn;
+			}
+			set
+			{
+				if ((this._dn338vaynodn != value))
+				{
+					this.Ondn338vaynodnChanging(value);
+					this.SendPropertyChanging();
+					this._dn338vaynodn = value;
+					this.SendPropertyChanged("dn338vaynodn");
+					this.Ondn338vaynodnChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dn339traiphieu", DbType="Float")]
+		public System.Nullable<double> dn339traiphieu
+		{
+			get
+			{
+				return this._dn339traiphieu;
+			}
+			set
+			{
+				if ((this._dn339traiphieu != value))
+				{
+					this.Ondn339traiphieuChanging(value);
+					this.SendPropertyChanging();
+					this._dn339traiphieu = value;
+					this.SendPropertyChanged("dn339traiphieu");
+					this.Ondn339traiphieuChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dn340cophieu", DbType="Float")]
+		public System.Nullable<double> dn340cophieu
+		{
+			get
+			{
+				return this._dn340cophieu;
+			}
+			set
+			{
+				if ((this._dn340cophieu != value))
+				{
+					this.Ondn340cophieuChanging(value);
+					this.SendPropertyChanging();
+					this._dn340cophieu = value;
+					this.SendPropertyChanged("dn340cophieu");
+					this.Ondn340cophieuChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dn341tnhoanlai", DbType="Float")]
+		public System.Nullable<double> dn341tnhoanlai
+		{
+			get
+			{
+				return this._dn341tnhoanlai;
+			}
+			set
+			{
+				if ((this._dn341tnhoanlai != value))
+				{
+					this.Ondn341tnhoanlaiChanging(value);
+					this.SendPropertyChanging();
+					this._dn341tnhoanlai = value;
+					this.SendPropertyChanged("dn341tnhoanlai");
+					this.Ondn341tnhoanlaiChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dn342duphongdn", DbType="Float")]
+		public System.Nullable<double> dn342duphongdn
+		{
+			get
+			{
+				return this._dn342duphongdn;
+			}
+			set
+			{
+				if ((this._dn342duphongdn != value))
+				{
+					this.Ondn342duphongdnChanging(value);
+					this.SendPropertyChanging();
+					this._dn342duphongdn = value;
+					this.SendPropertyChanged("dn342duphongdn");
+					this.Ondn342duphongdnChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dn343quykhoahoc", DbType="Float")]
+		public System.Nullable<double> dn343quykhoahoc
+		{
+			get
+			{
+				return this._dn343quykhoahoc;
+			}
+			set
+			{
+				if ((this._dn343quykhoahoc != value))
+				{
+					this.Ondn343quykhoahocChanging(value);
+					this.SendPropertyChanging();
+					this._dn343quykhoahoc = value;
+					this.SendPropertyChanged("dn343quykhoahoc");
+					this.Ondn343quykhoahocChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dn411vongopcsh", DbType="Float")]
+		public System.Nullable<double> dn411vongopcsh
+		{
+			get
+			{
+				return this._dn411vongopcsh;
+			}
+			set
+			{
+				if ((this._dn411vongopcsh != value))
+				{
+					this.Ondn411vongopcshChanging(value);
+					this.SendPropertyChanging();
+					this._dn411vongopcsh = value;
+					this.SendPropertyChanged("dn411vongopcsh");
+					this.Ondn411vongopcshChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dn411bcpudai", DbType="Float")]
+		public System.Nullable<double> dn411bcpudai
+		{
+			get
+			{
+				return this._dn411bcpudai;
+			}
+			set
+			{
+				if ((this._dn411bcpudai != value))
+				{
+					this.Ondn411bcpudaiChanging(value);
+					this.SendPropertyChanging();
+					this._dn411bcpudai = value;
+					this.SendPropertyChanged("dn411bcpudai");
+					this.Ondn411bcpudaiChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dn412thangduvon", DbType="Float")]
+		public System.Nullable<double> dn412thangduvon
+		{
+			get
+			{
+				return this._dn412thangduvon;
+			}
+			set
+			{
+				if ((this._dn412thangduvon != value))
+				{
+					this.Ondn412thangduvonChanging(value);
+					this.SendPropertyChanging();
+					this._dn412thangduvon = value;
+					this.SendPropertyChanged("dn412thangduvon");
+					this.Ondn412thangduvonChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dn413traiphieu", DbType="Float")]
+		public System.Nullable<double> dn413traiphieu
+		{
+			get
+			{
+				return this._dn413traiphieu;
+			}
+			set
+			{
+				if ((this._dn413traiphieu != value))
+				{
+					this.Ondn413traiphieuChanging(value);
+					this.SendPropertyChanging();
+					this._dn413traiphieu = value;
+					this.SendPropertyChanged("dn413traiphieu");
+					this.Ondn413traiphieuChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dn414voncshkhac", DbType="Float")]
+		public System.Nullable<double> dn414voncshkhac
+		{
+			get
+			{
+				return this._dn414voncshkhac;
+			}
+			set
+			{
+				if ((this._dn414voncshkhac != value))
+				{
+					this.Ondn414voncshkhacChanging(value);
+					this.SendPropertyChanging();
+					this._dn414voncshkhac = value;
+					this.SendPropertyChanged("dn414voncshkhac");
+					this.Ondn414voncshkhacChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dn415cphieuquy", DbType="Float")]
+		public System.Nullable<double> dn415cphieuquy
+		{
+			get
+			{
+				return this._dn415cphieuquy;
+			}
+			set
+			{
+				if ((this._dn415cphieuquy != value))
+				{
+					this.Ondn415cphieuquyChanging(value);
+					this.SendPropertyChanging();
+					this._dn415cphieuquy = value;
+					this.SendPropertyChanged("dn415cphieuquy");
+					this.Ondn415cphieuquyChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dn416chenhlechts", DbType="Float")]
+		public System.Nullable<double> dn416chenhlechts
+		{
+			get
+			{
+				return this._dn416chenhlechts;
+			}
+			set
+			{
+				if ((this._dn416chenhlechts != value))
+				{
+					this.Ondn416chenhlechtsChanging(value);
+					this.SendPropertyChanging();
+					this._dn416chenhlechts = value;
+					this.SendPropertyChanged("dn416chenhlechts");
+					this.Ondn416chenhlechtsChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dn417tygia", DbType="Float")]
+		public System.Nullable<double> dn417tygia
+		{
+			get
+			{
+				return this._dn417tygia;
+			}
+			set
+			{
+				if ((this._dn417tygia != value))
+				{
+					this.Ondn417tygiaChanging(value);
+					this.SendPropertyChanging();
+					this._dn417tygia = value;
+					this.SendPropertyChanged("dn417tygia");
+					this.Ondn417tygiaChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dn418dautuptrien", DbType="Float")]
+		public System.Nullable<double> dn418dautuptrien
+		{
+			get
+			{
+				return this._dn418dautuptrien;
+			}
+			set
+			{
+				if ((this._dn418dautuptrien != value))
+				{
+					this.Ondn418dautuptrienChanging(value);
+					this.SendPropertyChanging();
+					this._dn418dautuptrien = value;
+					this.SendPropertyChanged("dn418dautuptrien");
+					this.Ondn418dautuptrienChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dn419quyxxdn", DbType="Float")]
+		public System.Nullable<double> dn419quyxxdn
+		{
+			get
+			{
+				return this._dn419quyxxdn;
+			}
+			set
+			{
+				if ((this._dn419quyxxdn != value))
+				{
+					this.Ondn419quyxxdnChanging(value);
+					this.SendPropertyChanging();
+					this._dn419quyxxdn = value;
+					this.SendPropertyChanged("dn419quyxxdn");
+					this.Ondn419quyxxdnChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dn420quykhacsh", DbType="Float")]
+		public System.Nullable<double> dn420quykhacsh
+		{
+			get
+			{
+				return this._dn420quykhacsh;
+			}
+			set
+			{
+				if ((this._dn420quykhacsh != value))
+				{
+					this.Ondn420quykhacshChanging(value);
+					this.SendPropertyChanging();
+					this._dn420quykhacsh = value;
+					this.SendPropertyChanged("dn420quykhacsh");
+					this.Ondn420quykhacshChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dn421lnsauthue", DbType="Float")]
+		public System.Nullable<double> dn421lnsauthue
+		{
+			get
+			{
+				return this._dn421lnsauthue;
+			}
+			set
+			{
+				if ((this._dn421lnsauthue != value))
+				{
+					this.Ondn421lnsauthueChanging(value);
+					this.SendPropertyChanging();
+					this._dn421lnsauthue = value;
+					this.SendPropertyChanged("dn421lnsauthue");
+					this.Ondn421lnsauthueChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dn421alnkytruoc", DbType="Float")]
+		public System.Nullable<double> dn421alnkytruoc
+		{
+			get
+			{
+				return this._dn421alnkytruoc;
+			}
+			set
+			{
+				if ((this._dn421alnkytruoc != value))
+				{
+					this.Ondn421alnkytruocChanging(value);
+					this.SendPropertyChanging();
+					this._dn421alnkytruoc = value;
+					this.SendPropertyChanged("dn421alnkytruoc");
+					this.Ondn421alnkytruocChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dn421blnkynay", DbType="Float")]
+		public System.Nullable<double> dn421blnkynay
+		{
+			get
+			{
+				return this._dn421blnkynay;
+			}
+			set
+			{
+				if ((this._dn421blnkynay != value))
+				{
+					this.Ondn421blnkynayChanging(value);
+					this.SendPropertyChanging();
+					this._dn421blnkynay = value;
+					this.SendPropertyChanged("dn421blnkynay");
+					this.Ondn421blnkynayChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dn422vonxdcb", DbType="Float")]
+		public System.Nullable<double> dn422vonxdcb
+		{
+			get
+			{
+				return this._dn422vonxdcb;
+			}
+			set
+			{
+				if ((this._dn422vonxdcb != value))
+				{
+					this.Ondn422vonxdcbChanging(value);
+					this.SendPropertyChanging();
+					this._dn422vonxdcb = value;
+					this.SendPropertyChanged("dn422vonxdcb");
+					this.Ondn422vonxdcbChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dn431nkinhphi", DbType="Float")]
+		public System.Nullable<double> dn431nkinhphi
+		{
+			get
+			{
+				return this._dn431nkinhphi;
+			}
+			set
+			{
+				if ((this._dn431nkinhphi != value))
+				{
+					this.Ondn431nkinhphiChanging(value);
+					this.SendPropertyChanging();
+					this._dn431nkinhphi = value;
+					this.SendPropertyChanged("dn431nkinhphi");
+					this.Ondn431nkinhphiChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dn432kpthanhtscd", DbType="Float")]
+		public System.Nullable<double> dn432kpthanhtscd
+		{
+			get
+			{
+				return this._dn432kpthanhtscd;
+			}
+			set
+			{
+				if ((this._dn432kpthanhtscd != value))
+				{
+					this.Ondn432kpthanhtscdChanging(value);
+					this.SendPropertyChanging();
+					this._dn432kpthanhtscd = value;
+					this.SendPropertyChanged("dn432kpthanhtscd");
+					this.Ondn432kpthanhtscdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dn411acophieupt", DbType="Float")]
+		public System.Nullable<double> dn411acophieupt
+		{
+			get
+			{
+				return this._dn411acophieupt;
+			}
+			set
+			{
+				if ((this._dn411acophieupt != value))
+				{
+					this.Ondn411acophieuptChanging(value);
+					this.SendPropertyChanging();
+					this._dn411acophieupt = value;
+					this.SendPropertyChanged("dn411acophieupt");
+					this.Ondn411acophieuptChanged();
+				}
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
 		public int id
 		{
@@ -5090,26 +7305,6 @@ namespace BEEACCOUNT
 					this._username = value;
 					this.SendPropertyChanged("username");
 					this.OnusernameChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_cn411acophieupt", DbType="Float")]
-		public System.Nullable<double> cn411acophieupt
-		{
-			get
-			{
-				return this._cn411acophieupt;
-			}
-			set
-			{
-				if ((this._cn411acophieupt != value))
-				{
-					this.Oncn411acophieuptChanging(value);
-					this.SendPropertyChanging();
-					this._cn411acophieupt = value;
-					this.SendPropertyChanged("cn411acophieupt");
-					this.Oncn411acophieuptChanged();
 				}
 			}
 		}
@@ -22582,6 +24777,212 @@ namespace BEEACCOUNT
 					this._Sophieu = value;
 					this.SendPropertyChanged("Sophieu");
 					this.OnSophieuChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.LTTT200Dauky")]
+	public partial class LTTT200Dauky : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private System.Nullable<int> _nam;
+		
+		private System.Nullable<int> _Machitieu;
+		
+		private string _Tenchitieu;
+		
+		private string _Cachghi;
+		
+		private System.Nullable<double> _Sotien;
+		
+		private int _id;
+		
+		private string _username;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnnamChanging(System.Nullable<int> value);
+    partial void OnnamChanged();
+    partial void OnMachitieuChanging(System.Nullable<int> value);
+    partial void OnMachitieuChanged();
+    partial void OnTenchitieuChanging(string value);
+    partial void OnTenchitieuChanged();
+    partial void OnCachghiChanging(string value);
+    partial void OnCachghiChanged();
+    partial void OnSotienChanging(System.Nullable<double> value);
+    partial void OnSotienChanged();
+    partial void OnidChanging(int value);
+    partial void OnidChanged();
+    partial void OnusernameChanging(string value);
+    partial void OnusernameChanged();
+    #endregion
+		
+		public LTTT200Dauky()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_nam", DbType="Int")]
+		public System.Nullable<int> nam
+		{
+			get
+			{
+				return this._nam;
+			}
+			set
+			{
+				if ((this._nam != value))
+				{
+					this.OnnamChanging(value);
+					this.SendPropertyChanging();
+					this._nam = value;
+					this.SendPropertyChanged("nam");
+					this.OnnamChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Machitieu", DbType="Int")]
+		public System.Nullable<int> Machitieu
+		{
+			get
+			{
+				return this._Machitieu;
+			}
+			set
+			{
+				if ((this._Machitieu != value))
+				{
+					this.OnMachitieuChanging(value);
+					this.SendPropertyChanging();
+					this._Machitieu = value;
+					this.SendPropertyChanged("Machitieu");
+					this.OnMachitieuChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Tenchitieu", DbType="NVarChar(225)")]
+		public string Tenchitieu
+		{
+			get
+			{
+				return this._Tenchitieu;
+			}
+			set
+			{
+				if ((this._Tenchitieu != value))
+				{
+					this.OnTenchitieuChanging(value);
+					this.SendPropertyChanging();
+					this._Tenchitieu = value;
+					this.SendPropertyChanged("Tenchitieu");
+					this.OnTenchitieuChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cachghi", DbType="NVarChar(225)")]
+		public string Cachghi
+		{
+			get
+			{
+				return this._Cachghi;
+			}
+			set
+			{
+				if ((this._Cachghi != value))
+				{
+					this.OnCachghiChanging(value);
+					this.SendPropertyChanging();
+					this._Cachghi = value;
+					this.SendPropertyChanged("Cachghi");
+					this.OnCachghiChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Sotien", DbType="Float")]
+		public System.Nullable<double> Sotien
+		{
+			get
+			{
+				return this._Sotien;
+			}
+			set
+			{
+				if ((this._Sotien != value))
+				{
+					this.OnSotienChanging(value);
+					this.SendPropertyChanging();
+					this._Sotien = value;
+					this.SendPropertyChanged("Sotien");
+					this.OnSotienChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int id
+		{
+			get
+			{
+				return this._id;
+			}
+			set
+			{
+				if ((this._id != value))
+				{
+					this.OnidChanging(value);
+					this.SendPropertyChanging();
+					this._id = value;
+					this.SendPropertyChanged("id");
+					this.OnidChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_username", DbType="NVarChar(50)")]
+		public string username
+		{
+			get
+			{
+				return this._username;
+			}
+			set
+			{
+				if ((this._username != value))
+				{
+					this.OnusernameChanging(value);
+					this.SendPropertyChanging();
+					this._username = value;
+					this.SendPropertyChanged("username");
+					this.OnusernameChanged();
 				}
 			}
 		}

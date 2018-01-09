@@ -42,9 +42,9 @@
             // 
             // bt_thuchien
             // 
-            this.bt_thuchien.Location = new System.Drawing.Point(253, 175);
+            this.bt_thuchien.Location = new System.Drawing.Point(261, 170);
             this.bt_thuchien.Name = "bt_thuchien";
-            this.bt_thuchien.Size = new System.Drawing.Size(93, 29);
+            this.bt_thuchien.Size = new System.Drawing.Size(84, 23);
             this.bt_thuchien.TabIndex = 3;
             this.bt_thuchien.Text = "Chọn";
             this.bt_thuchien.UseVisualStyleBackColor = true;
@@ -65,7 +65,7 @@
             this.pkfromdate.CustomFormat = "dd.MM.yyyy";
             this.pkfromdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pkfromdate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.pkfromdate.Location = new System.Drawing.Point(167, 76);
+            this.pkfromdate.Location = new System.Drawing.Point(138, 76);
             this.pkfromdate.Name = "pkfromdate";
             this.pkfromdate.Size = new System.Drawing.Size(122, 24);
             this.pkfromdate.TabIndex = 1;
@@ -87,7 +87,7 @@
             this.pk_todate.CustomFormat = "dd.MM.yyyy";
             this.pk_todate.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pk_todate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.pk_todate.Location = new System.Drawing.Point(167, 107);
+            this.pk_todate.Location = new System.Drawing.Point(138, 107);
             this.pk_todate.Name = "pk_todate";
             this.pk_todate.Size = new System.Drawing.Size(122, 24);
             this.pk_todate.TabIndex = 2;
@@ -141,7 +141,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(395, 219);
+            this.ClientSize = new System.Drawing.Size(395, 205);
             this.Controls.Add(this.lb_machitietno);
             this.Controls.Add(this.lbtenchitietno);
             this.Controls.Add(this.cbtk);

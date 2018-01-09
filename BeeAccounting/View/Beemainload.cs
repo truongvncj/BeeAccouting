@@ -1021,7 +1021,16 @@ namespace BEEACCOUNT.View
 
             LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
             //bangsoducd
-            //    
+            //     bangnhapsodulctt
+
+            #region//xem nhập số dư dầu lctt
+            if (name == "bangnhapsodulctt")
+            {
+                Model.Soketoan.nhapsodudaukylctt();
+
+
+            }
+            #endregion
 
             #region//xem bangsoducd
             if (name == "bcluuchuyentien")

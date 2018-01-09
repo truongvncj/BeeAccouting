@@ -48,10 +48,11 @@ namespace BEEACCOUNT.View
             //}
             txtTongno.Text = phieuchi.pssotienno.ToString("#,#", CultureInfo.InvariantCulture);
             txtTongco.Text = phieuchi.pssotienco.ToString("#,#", CultureInfo.InvariantCulture);
+
             this.pssotienco = phieuchi.pssotienco;
             this.pssotienno = phieuchi.pssotienno;
 
-            txtChenlech.Text = (this.pssotienno - this.pssotienco).ToString("#,#", CultureInfo.InvariantCulture);
+            txtChenlech.Text = (-this.pssotienno + this.pssotienco).ToString("#,#", CultureInfo.InvariantCulture);
 
             #region clearr to new
 
@@ -476,10 +477,12 @@ namespace BEEACCOUNT.View
             this.phieuchi.add_detailGridviewTkNophieuchi(socaitemp);
 
             txtTongco.Text = phieuchi.pssotienco.ToString("#,#", CultureInfo.InvariantCulture);
+            txtTongno.Text = phieuchi.pssotienno.ToString("#,#", CultureInfo.InvariantCulture);
+
             this.pssotienco = phieuchi.pssotienco;
             this.pssotienno = phieuchi.pssotienno;
 
-            txtChenlech.Text = (this.pssotienno - this.pssotienco).ToString("#,#", CultureInfo.InvariantCulture);
+            txtChenlech.Text = (-phieuchi.pssotienno + phieuchi.pssotienco).ToString("#,#", CultureInfo.InvariantCulture);
 
             #region clearr to new
 

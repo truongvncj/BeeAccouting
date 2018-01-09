@@ -28,7 +28,7 @@
         <rd:DefaultName>Textbox2</rd:DefaultName>
         <Top>0.06819in</Top>
         <Left>0.15995in</Left>
-        <Height>0.25in</Height>
+        <Height>0.19445in</Height>
         <Width>3.875in</Width>
         <Style>
           <Border>
@@ -5279,7 +5279,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!nt21chitsan.Value+Fields!nt22thutaisan.Value+Fields!nt23chichovay.Value+Fields!nt24thuchovay.Value+Fields!nt25chidtdonvikhac.Value+Fields!nt26thudtdonvikhac.Value+Fields!nt27thulaicotuc.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -7257,7 +7257,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!nt31thucophieu.Value+Fields!nt32chitravon.Value+Fields!nt33thudivay.Value+Fields!nt34tragoc.Value+Fields!nt35tragocthue.Value+Fields!nt36tracotuc.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -7520,7 +7520,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!nt50lltrongky.Value</Value>
+                              <Value>=Fields!nt31thucophieu.Value+Fields!nt32chitravon.Value+Fields!nt33thudivay.Value+Fields!nt34tragoc.Value+Fields!nt35tragocthue.Value+Fields!nt36tracotuc.Value+Fields!nt21chitsan.Value+Fields!nt22thutaisan.Value+Fields!nt23chichovay.Value+Fields!nt24thuchovay.Value+Fields!nt25chidtdonvikhac.Value+Fields!nt26thudtdonvikhac.Value+Fields!nt27thulaicotuc.Value+Fields!nt01thudthu.Value+Fields!nt02chiccap.Value+Fields!nt03chilaodong.Value+Fields!nt04chilaivay.Value+Fields!nt05chithuetndn.Value+Fields!nt06thukhac.Value+Fields!nt07chikhac.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -7773,7 +7773,6 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -8268,14 +8267,14 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox228">
+                    <Textbox Name="Textbox19">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!nt70tiencuoiky.Value</Value>
+                              <Value>=Fields!nt31thucophieu.Value+Fields!nt32chitravon.Value+Fields!nt33thudivay.Value+Fields!nt34tragoc.Value+Fields!nt35tragocthue.Value+Fields!nt36tracotuc.Value+Fields!nt21chitsan.Value+Fields!nt22thutaisan.Value+Fields!nt23chichovay.Value+Fields!nt24thuchovay.Value+Fields!nt25chidtdonvikhac.Value+Fields!nt26thudtdonvikhac.Value+Fields!nt27thulaicotuc.Value+Fields!nt01thudthu.Value+Fields!nt02chiccap.Value+Fields!nt03chilaodong.Value+Fields!nt04chilaivay.Value+Fields!nt05chithuetndn.Value+Fields!nt06thukhac.Value+Fields!nt07chikhac.Value +Fields!nt60tiendauky.Value+Fields!nt61tientygia.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -8288,7 +8287,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox228</rd:DefaultName>
+                      <rd:DefaultName>Textbox19</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>Solid</Style>
@@ -8385,7 +8384,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
         <Top>1.48293in</Top>
-        <Left>2.66532in</Left>
+        <Left>2.91532in</Left>
         <Height>0.22222in</Height>
         <Width>0.40336in</Width>
         <ZIndex>7</ZIndex>
@@ -8422,7 +8421,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
         <Top>1.48155in</Top>
-        <Left>3.06868in</Left>
+        <Left>3.31868in</Left>
         <Height>0.2111in</Height>
         <Width>1.24776in</Width>
         <ZIndex>8</ZIndex>
