@@ -288,7 +288,8 @@ namespace BEEACCOUNT.Model
                          p.tentuyen,
                          p.giahoadon,
                          p.giathue,
-                      
+                         p.ngayapdung,
+                         p.ngayhethan,
 
                          ID = p.id,
                      };

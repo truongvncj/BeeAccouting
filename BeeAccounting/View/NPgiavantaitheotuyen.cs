@@ -41,6 +41,10 @@ namespace BEEACCOUNT.View
         public float bocxep { get; set; } // item.bocxep.ToString();
         public float chiphicauduong { get; set; } // item.cfcauduong.ToString();
 
+        public DateTime apdungtungay { get; set; }
+
+        public DateTime apdungdenngay { get; set; }
+
         public bool chon { get; set; }
         public int id { get; set; }
 
@@ -124,27 +128,27 @@ namespace BEEACCOUNT.View
                     cbkhachhang.Enabled = false;
 
 
-                   // txttrichdoitac.Text = item.trichdoitac.ToString();
+                    // txttrichdoitac.Text = item.trichdoitac.ToString();
 
                     //txttrichcongty.Text = item.trichcongty.ToString();
-                   // txttongchiphi.Text = item.tongcfuoctinh.ToString();
+                    // txttongchiphi.Text = item.tongcfuoctinh.ToString();
                     txttentuyen.Text = item.tentuyen;
                     txtmatuyen.Text = item.matuyen;
-                   // txtloinhuantuyen.Text = item.lntuyen.ToString();
+                    // txtloinhuantuyen.Text = item.lntuyen.ToString();
                     txtloaidon.Text = item.loaidonxe.ToString();
                     txtkm.Text = item.km.ToString();
-                  //  txtkhauhao.Text = item.cfkhauhao.ToString();
+                    //  txtkhauhao.Text = item.cfkhauhao.ToString();
                     txtgiathue.Text = item.giathue.ToString();
                     txtgiahoadon.Text = item.giahoadon.ToString();
-                   // txtgiadauhientai.Text = item.giadau.ToString();
-                  //  txtghichu.Text = item.ghichucf;
-                  //  txtphiphac.Text = item.dtkhac.ToString();
-                   // txtdinhmucdau.Text = item.dinhmucdau.ToString();
-                  //  txtchiphilaixe.Text = item.cflaixe.ToString();
-                   // txtchiphidau.Text = item.cfxang.ToString();
-                  //  txtchiphicongan.Text = item.cfcongan.ToString();
-                  //  txtbocxep.Text = item.bocxep.ToString();
-                  //  txtchiphicauduong.Text = item.cfcauduong.ToString();
+                    // txtgiadauhientai.Text = item.giadau.ToString();
+                    //  txtghichu.Text = item.ghichucf;
+                    //  txtphiphac.Text = item.dtkhac.ToString();
+                    // txtdinhmucdau.Text = item.dinhmucdau.ToString();
+                    //  txtchiphilaixe.Text = item.cflaixe.ToString();
+                    // txtchiphidau.Text = item.cfxang.ToString();
+                    //  txtchiphicongan.Text = item.cfcongan.ToString();
+                    //  txtbocxep.Text = item.bocxep.ToString();
+                    //  txtchiphicauduong.Text = item.cfcauduong.ToString();
 
 
 
@@ -307,7 +311,7 @@ namespace BEEACCOUNT.View
                 return;
             }
 
-        
+
 
             if (txtloaidon.Text == "" || Utils.IsValidnumber(txtloaidon.Text) == false)
             {
@@ -321,7 +325,7 @@ namespace BEEACCOUNT.View
                 txtkm.Focus();
                 return;
             }
-         
+
             if (txtgiathue.Text == "" || Utils.IsValidnumber(txtgiathue.Text) == false)
             {
                 MessageBox.Show("Kiểm tra lại giá thuê ", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -335,32 +339,36 @@ namespace BEEACCOUNT.View
                 return;
             }
 
-         
+
 
             #endregion
 
 
-         //   this.trichdoitac = float.Parse(txttrichdoitac.Text);
+            //   this.trichdoitac = float.Parse(txttrichdoitac.Text);
 
-           // this.trichcongty = float.Parse(txttrichcongty.Text);
-          //  this.tongchiphi = float.Parse(txttongchiphi.Text);
+            // this.trichcongty = float.Parse(txttrichcongty.Text);
+            //  this.tongchiphi = float.Parse(txttongchiphi.Text);
             this.tentuyen = txttentuyen.Text;
             this.matuyen = txtmatuyen.Text;
-          //  this.loinhuantuyen = float.Parse(txtloinhuantuyen.Text);
+            //  this.loinhuantuyen = float.Parse(txtloinhuantuyen.Text);
             this.loaidon = float.Parse(txtloaidon.Text);
             this.km = float.Parse(txtkm.Text);
-           // this.khauhao = float.Parse(txtkhauhao.Text);
+            // this.khauhao = float.Parse(txtkhauhao.Text);
             this.giathue = float.Parse(txtgiathue.Text);
             this.giahoadon = float.Parse(txtgiahoadon.Text);
-          //  this.giadauhientai = float.Parse(txtgiadauhientai.Text);
-           // this.ghichu = txtghichu.Text;
-          //  this.dtkhac = float.Parse(txtphiphac.Text); // item.ghepdiem.ToString();
-           // this.dinhmucdau = float.Parse(txtdinhmucdau.Text);
-           // this.chiphilaixe = float.Parse(txtchiphilaixe.Text);
-          //  this.chiphidau = float.Parse(txtchiphidau.Text);
-           // this.chiphicongan = float.Parse(txtchiphicongan.Text);
-           // this.bocxep = float.Parse(txtbocxep.Text);
-           // this.chiphicauduong = float.Parse(txtchiphicauduong.Text);
+
+            this.apdungtungay = pk_ngaybatdau.Value;
+            this.apdungdenngay = pk_ngaybatdau.Value.AddYears(100);
+
+            //  this.giadauhientai = float.Parse(txtgiadauhientai.Text);
+            // this.ghichu = txtghichu.Text;
+            //  this.dtkhac = float.Parse(txtphiphac.Text); // item.ghepdiem.ToString();
+            // this.dinhmucdau = float.Parse(txtdinhmucdau.Text);
+            // this.chiphilaixe = float.Parse(txtchiphilaixe.Text);
+            //  this.chiphidau = float.Parse(txtchiphidau.Text);
+            // this.chiphicongan = float.Parse(txtchiphicongan.Text);
+            // this.bocxep = float.Parse(txtbocxep.Text);
+            // this.chiphicauduong = float.Parse(txtchiphicauduong.Text);
             this.makh = (string)(cbkhachhang.SelectedItem as ComboboxItem).Value;
 
 
@@ -368,56 +376,58 @@ namespace BEEACCOUNT.View
 
             //if (matuyen != "")
             //{
-                chon = true;
-                string connection_string = Utils.getConnectionstr();
-                LinqtoSQLDataContext db = new LinqtoSQLDataContext(connection_string);
+            chon = true;
+            string connection_string = Utils.getConnectionstr();
+            LinqtoSQLDataContext db = new LinqtoSQLDataContext(connection_string);
 
-                //   tbl_dstaikhoan tk = new tbl_dstaikhoan();
-
-
-                //    MeasureItemEventArgs.re
-                var rs = (from p in db.tbl_NP_giavantaitheotuyens
-                       //   where p.maKH == makh && p.matuyen == matuyen
-                          where p.id == this.id
-                          //  orderby tbl_dstaikhoan.matk
-                          select p).FirstOrDefault();
+            //   tbl_dstaikhoan tk = new tbl_dstaikhoan();
 
 
-                if (rs != null)
-                {
-                 
-                    rs.trichdoitac=    this.trichdoitac ;// float.Parse(txttrichdoitac.Text);
+            //    MeasureItemEventArgs.re
+            var rs = (from p in db.tbl_NP_giavantaitheotuyens
+                          //   where p.maKH == makh && p.matuyen == matuyen
+                      where p.id == this.id
+                      //  orderby tbl_dstaikhoan.matk
+                      select p).FirstOrDefault();
 
-                    rs.trichcongty =    this.trichcongty ;// float.Parse(txttrichcongty.Text);
-                    rs.tongcfuoctinh =      this.tongchiphi ;// float.Parse(txttongchiphi.Text);
-                    rs.tentuyen = this.tentuyen ;// txttentuyen.Text;
-                    rs.matuyen = this.matuyen ;// txtmatuyen.Text;
-                    rs.lntuyen = this.loinhuantuyen ;// float.Parse(txtloinhuantuyen.Text);
-                    rs.loaidonxe = this.loaidon ;// float.Parse(txtloaidon.Text);
-                    rs.km = this.km ;// float.Parse(txtkm.Text);
-                    rs.cfkhauhao = this.khauhao ;// float.Parse(txtkhauhao.Text);
-                    rs.giathue = this.giathue ;// float.Parse(txtgiathue.Text);
-                    rs.giahoadon = this.giahoadon ;// float.Parse(txtgiahoadon.Text);
-                    rs.giadau = this.giadauhientai ;// float.Parse(txtgiadauhientai.Text);
-                    rs.ghichucf = this.ghichu ;// txtghichu.Text;
-                    rs.dtkhac = this.dtkhac ;// float.Parse(txtphiphac.Text); ;// item.ghepdiem.ToString();
-                    rs.dinhmucdau = this.dinhmucdau ;// float.Parse(txtdinhmucdau.Text);
-                    rs.cflaixe = this.chiphilaixe ;// float.Parse(txtchiphilaixe.Text);
-                    rs.cfxang = this.chiphidau ;// float.Parse(txtchiphidau.Text);
-                    rs.cfcongan = this.chiphicongan ;// float.Parse(txtchiphicongan.Text);
-                    rs.bocxep = this.bocxep ;// float.Parse(txtbocxep.Text);
-                    rs.cfcauduong = this.chiphicauduong ;// float.Parse(txtchiphicauduong.Text);
-                    rs.maKH = this.makh ;// (string)(cbkhachhang.SelectedItem as ComboboxItem).Value;
 
-                    
+            if (rs != null)
+            {
 
-                    db.SubmitChanges();
-                    this.Close();
-                }
+                rs.trichdoitac = this.trichdoitac;// float.Parse(txttrichdoitac.Text);
+
+                rs.trichcongty = this.trichcongty;// float.Parse(txttrichcongty.Text);
+                rs.tongcfuoctinh = this.tongchiphi;// float.Parse(txttongchiphi.Text);
+                rs.tentuyen = this.tentuyen;// txttentuyen.Text;
+                rs.matuyen = this.matuyen;// txtmatuyen.Text;
+                rs.lntuyen = this.loinhuantuyen;// float.Parse(txtloinhuantuyen.Text);
+                rs.loaidonxe = this.loaidon;// float.Parse(txtloaidon.Text);
+                rs.km = this.km;// float.Parse(txtkm.Text);
+                rs.cfkhauhao = this.khauhao;// float.Parse(txtkhauhao.Text);
+                rs.giathue = this.giathue;// float.Parse(txtgiathue.Text);
+                rs.giahoadon = this.giahoadon;// float.Parse(txtgiahoadon.Text);
+                rs.giadau = this.giadauhientai;// float.Parse(txtgiadauhientai.Text);
+                rs.ghichucf = this.ghichu;// txtghichu.Text;
+                rs.dtkhac = this.dtkhac;// float.Parse(txtphiphac.Text); ;// item.ghepdiem.ToString();
+                rs.dinhmucdau = this.dinhmucdau;// float.Parse(txtdinhmucdau.Text);
+                rs.cflaixe = this.chiphilaixe;// float.Parse(txtchiphilaixe.Text);
+                rs.cfxang = this.chiphidau;// float.Parse(txtchiphidau.Text);
+                rs.cfcongan = this.chiphicongan;// float.Parse(txtchiphicongan.Text);
+                rs.bocxep = this.bocxep;// float.Parse(txtbocxep.Text);
+                rs.cfcauduong = this.chiphicauduong;// float.Parse(txtchiphicauduong.Text);
+                rs.maKH = this.makh;// (string)(cbkhachhang.SelectedItem as ComboboxItem).Value;
+                rs.ngayapdung = this.apdungtungay;// = pk_ngaybatdau.Value;
+                rs.ngayhethan = this.apdungdenngay;// = pk_ngaybatdau.Value.AddYears(100);
 
 
 
-       //     }
+                db.SubmitChanges();
+                this.Close();
+            }
+
+
+
+            //     }
 
 
 
@@ -447,7 +457,7 @@ namespace BEEACCOUNT.View
                 cbkhachhang.Focus();
                 return;
             }
-        
+
             if (txttentuyen.Text == "" || txttentuyen.Text == null)
             {
                 MessageBox.Show("Kiểm tra lại tên tuyến !", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -462,7 +472,7 @@ namespace BEEACCOUNT.View
                 return;
             }
 
-         
+
             if (txtloaidon.Text == "" || Utils.IsValidnumber(txtloaidon.Text) == false)
             {
                 MessageBox.Show("Kiểm tra lại loại đơn !", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -475,7 +485,7 @@ namespace BEEACCOUNT.View
                 txtkm.Focus();
                 return;
             }
-         
+
             if (txtgiathue.Text == "" || Utils.IsValidnumber(txtgiathue.Text) == false)
             {
                 MessageBox.Show("Kiểm tra lại giá thuê ", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -489,32 +499,37 @@ namespace BEEACCOUNT.View
                 return;
             }
 
-         
-            
+
+
             #endregion
 
 
-//            this.trichdoitac = float.Parse(txttrichdoitac.Text);
+            //            this.trichdoitac = float.Parse(txttrichdoitac.Text);
 
-  //          this.trichcongty = float.Parse(txttrichcongty.Text);
-    //        this.tongchiphi = float.Parse(txttongchiphi.Text);
+            //          this.trichcongty = float.Parse(txttrichcongty.Text);
+            //        this.tongchiphi = float.Parse(txttongchiphi.Text);
             this.tentuyen = txttentuyen.Text;
             this.matuyen = txtmatuyen.Text;
-      //      this.loinhuantuyen = float.Parse(txtloinhuantuyen.Text);
+            //      this.loinhuantuyen = float.Parse(txtloinhuantuyen.Text);
             this.loaidon = float.Parse(txtloaidon.Text);
             this.km = float.Parse(txtkm.Text);
-        //    this.khauhao = float.Parse(txtkhauhao.Text);
+            //    this.khauhao = float.Parse(txtkhauhao.Text);
             this.giathue = float.Parse(txtgiathue.Text);
             this.giahoadon = float.Parse(txtgiahoadon.Text);
-          //  this.giadauhientai = float.Parse(txtgiadauhientai.Text);
-          //  this.ghichu = txtghichu.Text;
-         //   this.dtkhac = float.Parse(txtphiphac.Text); // item.ghepdiem.ToString();
-         //   this.dinhmucdau = float.Parse(txtdinhmucdau.Text);
-         //   this.chiphilaixe = float.Parse(txtchiphilaixe.Text);
-         //   this.chiphidau = float.Parse(txtchiphidau.Text);
-         //   this.chiphicongan = float.Parse(txtchiphicongan.Text);
-         //   this.bocxep = float.Parse(txtbocxep.Text);
-        //    this.chiphicauduong = float.Parse(txtchiphicauduong.Text);
+
+            this.apdungtungay = pk_ngaybatdau.Value;
+
+            this.apdungdenngay = DateTime.Today.AddYears(100);// + 2000;
+
+            //  this.giadauhientai = float.Parse(txtgiadauhientai.Text);
+            //  this.ghichu = txtghichu.Text;
+            //   this.dtkhac = float.Parse(txtphiphac.Text); // item.ghepdiem.ToString();
+            //   this.dinhmucdau = float.Parse(txtdinhmucdau.Text);
+            //   this.chiphilaixe = float.Parse(txtchiphilaixe.Text);
+            //   this.chiphidau = float.Parse(txtchiphidau.Text);
+            //   this.chiphicongan = float.Parse(txtchiphicongan.Text);
+            //   this.bocxep = float.Parse(txtbocxep.Text);
+            //    this.chiphicauduong = float.Parse(txtchiphicauduong.Text);
             this.makh = (string)(cbkhachhang.SelectedItem as ComboboxItem).Value;
 
 
@@ -547,7 +562,8 @@ namespace BEEACCOUNT.View
             p.bocxep = this.bocxep;
             p.cfcauduong = this.chiphicauduong;
             p.maKH = this.makh;
-
+            p.ngayapdung = this.apdungtungay;
+            p.ngayhethan = this.apdungdenngay;
 
 
 

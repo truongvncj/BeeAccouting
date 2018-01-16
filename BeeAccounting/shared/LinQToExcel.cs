@@ -135,14 +135,14 @@ namespace BEEACCOUNT
 
             //     xlWorkBook.Close(true, missing, missing);
 
-            xlWorkSheet = null;
+       //     xlWorkSheet = null;
        //     xlWorkBook = null;
-            xlApp = null;
+       //     xlApp = null;
             xlApp.Quit();
 
-            //releaseObject(xlWorkSheet);
+           releaseObject(xlWorkSheet);
             //releaseObject(xlWorkBook);
-            //releaseObject(xlApp);
+           releaseObject(xlApp);
             return mainDt;
         }
         //-- get string dâttaable

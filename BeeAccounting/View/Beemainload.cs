@@ -1374,9 +1374,7 @@ namespace BEEACCOUNT.View
             #region//dsloaitk
             if (name == "dsloaitk")
             {
-
-           
-
+                
                 var rs8 = Model.loaitaikhoanketoan.danhsachloaitaikhoan(dc);
                 Viewtable viewtblrs8 = new Viewtable(rs8, dc, "DANH SÁCH LOẠI TÀI KHOẢN", 1, "tk");// danh sach loại tài khoản kế toán
 
@@ -1450,19 +1448,14 @@ namespace BEEACCOUNT.View
             #region//btoanth
             if (name == "btoanth")
             {
-                //    Beebuttoantonghop
-
-                //  Main.clearpannel();
+                
 
                 main1.clearpannel();
 
 
                 View.BeeButtoantonghop buttoantonghop = new BeeButtoantonghop(main1);
                 main1.clearpannelload(buttoantonghop);
-                //    accsup.TopLevel = false;
-                //  accsup.AutoScroll = true;
-                //    panelmain.Controls.Add(accsup);
-                //    accsup.Show();
+               
 
             }
             #endregion
