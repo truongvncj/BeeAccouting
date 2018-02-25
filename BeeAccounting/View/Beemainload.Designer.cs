@@ -993,9 +993,9 @@
             this.label1.ForeColor = System.Drawing.Color.Magenta;
             this.label1.Location = new System.Drawing.Point(746, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(163, 59);
+            this.label1.Size = new System.Drawing.Size(216, 59);
             this.label1.TabIndex = 53;
-            this.label1.Text = "iproca";
+            this.label1.Text = "imicapro";
             // 
             // label2
             // 
