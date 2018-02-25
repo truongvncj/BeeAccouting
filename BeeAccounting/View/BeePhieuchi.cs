@@ -577,6 +577,7 @@ namespace BEEACCOUNT.View
 
 
             bool checkdinhkhoanno = true;
+
             #region  check từng dong sổ tk Có
             for (int idrow = 0; idrow < dataGridViewTkNo.RowCount - 1; idrow++) // 'dataGridViewTkNo'
             {
@@ -1169,25 +1170,14 @@ namespace BEEACCOUNT.View
 
 
                 #endregion add new phieu thu
-
-
-
-
+                
                 MessageBox.Show("Số phiếu vừa lưu: " + this.sophieuchi, "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-
+                
             }
-
-
-
-
-
+            
 
             this.cleartoblankphieu();
-
-
-        //    dataGridViewTkNo = Model.Phieuthuchi.reloadnewdetailtaikhoanNo(dataGridViewTkNo);
-
+            
             dataGridViewListphieuchi.DataSource = Model.Phieuthuchi.LisDanhSachphieuchi("PC");
 
         }
