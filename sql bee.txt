@@ -1,3 +1,37 @@
+
+USE  [BEE];
+GO
+-- Truncate the log by changing the database recovery model to SIMPLE.
+ALTER DATABASE [BEE]
+SET RECOVERY SIMPLE;
+GO
+-- Shrink the truncated log file to 1 MB.
+DBCC SHRINKFILE (POSM_log, 1);
+GO
+-- Reset the database recovery model.
+ALTER DATABASE [BEE]
+SET RECOVERY FULL;
+GO
+
+
+
+USE  [BEE];
+GO
+-- Truncate the log by changing the database recovery model to SIMPLE.
+ALTER DATABASE [BEE]
+SET RECOVERY SIMPLE;
+GO
+-- Shrink the truncated log file to 1 MB.
+DBCC SHRINKFILE (POSM, 1);
+GO
+-- Reset the database recovery model.
+ALTER DATABASE [BEE]
+SET RECOVERY FULL;
+GO
+
+
+
+
 USE [BEE]
 GO
 
