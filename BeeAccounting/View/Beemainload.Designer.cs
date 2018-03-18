@@ -256,7 +256,7 @@
             this.groupBox4.Controls.Add(this.button7);
             this.groupBox4.Controls.Add(this.button5);
             this.groupBox4.Controls.Add(this.btdanhsachnhavantai);
-            this.groupBox4.Location = new System.Drawing.Point(488, 12);
+            this.groupBox4.Location = new System.Drawing.Point(208, 12);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(184, 299);
             this.groupBox4.TabIndex = 43;
@@ -368,7 +368,7 @@
             this.groupBox6.Controls.Add(this.button21);
             this.groupBox6.Controls.Add(this.button22);
             this.groupBox6.Controls.Add(this.button23);
-            this.groupBox6.Location = new System.Drawing.Point(265, 12);
+            this.groupBox6.Location = new System.Drawing.Point(12, 12);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(184, 135);
             this.groupBox6.TabIndex = 43;
@@ -423,7 +423,7 @@
             this.groupBox7.Controls.Add(this.button26);
             this.groupBox7.Controls.Add(this.button45);
             this.groupBox7.Controls.Add(this.button27);
-            this.groupBox7.Location = new System.Drawing.Point(265, 170);
+            this.groupBox7.Location = new System.Drawing.Point(12, 170);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Size = new System.Drawing.Size(190, 131);
             this.groupBox7.TabIndex = 44;
@@ -482,7 +482,7 @@
             this.groupBox9.Controls.Add(this.button36);
             this.groupBox9.Controls.Add(this.button37);
             this.groupBox9.Controls.Add(this.button38);
-            this.groupBox9.Location = new System.Drawing.Point(265, 325);
+            this.groupBox9.Location = new System.Drawing.Point(429, 157);
             this.groupBox9.Name = "groupBox9";
             this.groupBox9.Size = new System.Drawing.Size(190, 154);
             this.groupBox9.TabIndex = 47;
@@ -538,7 +538,7 @@
             this.groupBox12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox12.Controls.Add(this.button43);
             this.groupBox12.Controls.Add(this.button44);
-            this.groupBox12.Location = new System.Drawing.Point(689, 192);
+            this.groupBox12.Location = new System.Drawing.Point(15, 34);
             this.groupBox12.Name = "groupBox12";
             this.groupBox12.Size = new System.Drawing.Size(184, 77);
             this.groupBox12.TabIndex = 45;
@@ -572,7 +572,7 @@
             this.groupBox13.Controls.Add(this.button48);
             this.groupBox13.Controls.Add(this.button49);
             this.groupBox13.Controls.Add(this.button50);
-            this.groupBox13.Location = new System.Drawing.Point(888, 367);
+            this.groupBox13.Location = new System.Drawing.Point(163, 316);
             this.groupBox13.Name = "groupBox13";
             this.groupBox13.Size = new System.Drawing.Size(197, 154);
             this.groupBox13.TabIndex = 48;
@@ -629,7 +629,7 @@
             this.groupBox10.Controls.Add(this.button3);
             this.groupBox10.Controls.Add(this.button2);
             this.groupBox10.Controls.Add(this.button33);
-            this.groupBox10.Location = new System.Drawing.Point(888, 97);
+            this.groupBox10.Location = new System.Drawing.Point(223, 6);
             this.groupBox10.Name = "groupBox10";
             this.groupBox10.Size = new System.Drawing.Size(191, 173);
             this.groupBox10.TabIndex = 50;
@@ -674,7 +674,7 @@
             this.groupBox17.Controls.Add(this.button31);
             this.groupBox17.Controls.Add(this.button30);
             this.groupBox17.Controls.Add(this.button6);
-            this.groupBox17.Location = new System.Drawing.Point(488, 420);
+            this.groupBox17.Location = new System.Drawing.Point(411, 317);
             this.groupBox17.Name = "groupBox17";
             this.groupBox17.Size = new System.Drawing.Size(178, 167);
             this.groupBox17.TabIndex = 51;
@@ -740,7 +740,7 @@
             this.treeView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.treeView1.ForeColor = System.Drawing.SystemColors.MenuText;
             this.treeView1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(228)))), ((int)(((byte)(242)))));
-            this.treeView1.Location = new System.Drawing.Point(4, 5);
+            this.treeView1.Location = new System.Drawing.Point(4, 188);
             this.treeView1.Name = "treeView1";
             treeNode1.Name = "thongtin";
             treeNode1.Text = "Thông tin doanh nghiệp";
@@ -970,7 +970,7 @@
             treeNode74,
             treeNode81,
             treeNode88});
-            this.treeView1.Size = new System.Drawing.Size(237, 595);
+            this.treeView1.Size = new System.Drawing.Size(368, 202);
             this.treeView1.TabIndex = 52;
             this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
             this.treeView1.NodeMouseDoubleClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.treeView1_NodeMouseDoubleClick);
@@ -981,28 +981,31 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.panel1.Controls.Add(this.treeView1);
-            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.groupBox12);
+            this.panel1.Controls.Add(this.groupBox10);
+            this.panel1.Location = new System.Drawing.Point(635, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(247, 603);
+            this.panel1.Size = new System.Drawing.Size(450, 393);
             this.panel1.TabIndex = 52;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 38F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Magenta;
-            this.label1.Location = new System.Drawing.Point(746, 9);
+            this.label1.Location = new System.Drawing.Point(60, 6);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(216, 59);
+            this.label1.Size = new System.Drawing.Size(91, 20);
             this.label1.TabIndex = 53;
-            this.label1.Text = "imicapro";
+            this.label1.Text = "khu dự định";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Magenta;
-            this.label2.Location = new System.Drawing.Point(725, 61);
+            this.label2.Location = new System.Drawing.Point(407, 12);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(195, 20);
             this.label2.TabIndex = 54;
@@ -1012,15 +1015,12 @@
             // Beemainload
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(1097, 617);
+            this.ClientSize = new System.Drawing.Size(1097, 482);
             this.ControlBox = false;
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox17);
-            this.Controls.Add(this.groupBox10);
             this.Controls.Add(this.groupBox13);
-            this.Controls.Add(this.groupBox12);
             this.Controls.Add(this.groupBox9);
             this.Controls.Add(this.groupBox7);
             this.Controls.Add(this.groupBox6);
@@ -1046,6 +1046,7 @@
             this.groupBox10.ResumeLayout(false);
             this.groupBox17.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

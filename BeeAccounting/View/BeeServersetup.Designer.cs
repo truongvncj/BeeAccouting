@@ -81,7 +81,7 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(210, 20);
             this.textBox3.TabIndex = 6;
-            this.textBox3.Text = "SA";
+            this.textBox3.Text = "Sa";
             // 
             // label3
             // 
@@ -99,7 +99,7 @@
             this.textBox2.PasswordChar = '*';
             this.textBox2.Size = new System.Drawing.Size(210, 20);
             this.textBox2.TabIndex = 4;
-            this.textBox2.Text = "123123";
+            this.textBox2.Text = "tienmat1$";
             // 
             // label2
             // 
@@ -116,7 +116,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(210, 20);
             this.textBox1.TabIndex = 2;
-            this.textBox1.Text = "DESKTOP-8D4F853\\SQLEXPRESS";
+            this.textBox1.Text = "HAN-L-3PFF7H2";
             // 
             // button1
             // 
@@ -148,7 +148,7 @@
             this.MinimizeBox = false;
             this.Name = "BeeServersetup";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Server Setup";
+            this.Text = "Server setup";
             this.Deactivate += new System.EventHandler(this.Serversetup_Deactivate);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

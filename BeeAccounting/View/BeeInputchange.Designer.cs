@@ -99,11 +99,11 @@ namespace BEEACCOUNT.View
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial Unicode MS", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Red;
             this.label1.Location = new System.Drawing.Point(20, 10);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(171, 24);
+            this.label1.Size = new System.Drawing.Size(172, 22);
             this.label1.TabIndex = 55;
             this.label1.Text = "BEE ACCOUNTING";
             // 
@@ -113,9 +113,9 @@ namespace BEEACCOUNT.View
             this.pictureBox1.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.ErrorImage")));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(528, 10);
+            this.pictureBox1.Location = new System.Drawing.Point(533, 10);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(98, 43);
+            this.pictureBox1.Size = new System.Drawing.Size(93, 38);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 54;
             this.pictureBox1.TabStop = false;
@@ -127,11 +127,11 @@ namespace BEEACCOUNT.View
             // 
             this.lbseachedit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lbseachedit.AutoSize = true;
-            this.lbseachedit.Font = new System.Drawing.Font("Microsoft MHei", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbseachedit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbseachedit.ForeColor = System.Drawing.Color.Red;
             this.lbseachedit.Location = new System.Drawing.Point(224, 461);
             this.lbseachedit.Name = "lbseachedit";
-            this.lbseachedit.Size = new System.Drawing.Size(64, 17);
+            this.lbseachedit.Size = new System.Drawing.Size(77, 16);
             this.lbseachedit.TabIndex = 51;
             this.lbseachedit.Text = "F3 :Seach";
             // 

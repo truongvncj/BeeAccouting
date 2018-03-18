@@ -23,6 +23,9 @@ namespace BEEACCOUNT.View
 
             Model.Username used = new Username();
             this.main1 = Main;
+            treeView1.Visible = false;
+            panel1.Visible = false;
+
             //if (used.masterbegin)
             //{
             //    begin.Enabled = true;
