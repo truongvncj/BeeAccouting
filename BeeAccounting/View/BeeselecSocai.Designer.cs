@@ -51,8 +51,8 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(14, 75);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(7, 75);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(64, 18);
             this.label4.TabIndex = 15;
@@ -61,9 +61,9 @@
             // pkfromdate
             // 
             this.pkfromdate.CustomFormat = "dd.MM.yyyy";
-            this.pkfromdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pkfromdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pkfromdate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.pkfromdate.Location = new System.Drawing.Point(155, 75);
+            this.pkfromdate.Location = new System.Drawing.Point(93, 69);
             this.pkfromdate.Name = "pkfromdate";
             this.pkfromdate.Size = new System.Drawing.Size(122, 24);
             this.pkfromdate.TabIndex = 1;
@@ -73,8 +73,8 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(14, 106);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(7, 107);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(74, 18);
             this.label5.TabIndex = 17;
@@ -83,9 +83,9 @@
             // pk_todate
             // 
             this.pk_todate.CustomFormat = "dd.MM.yyyy";
-            this.pk_todate.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pk_todate.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pk_todate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.pk_todate.Location = new System.Drawing.Point(155, 106);
+            this.pk_todate.Location = new System.Drawing.Point(93, 101);
             this.pk_todate.Name = "pk_todate";
             this.pk_todate.Size = new System.Drawing.Size(122, 24);
             this.pk_todate.TabIndex = 2;
@@ -95,19 +95,19 @@
             // 
             this.cbtk.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbtk.DropDownWidth = 350;
-            this.cbtk.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbtk.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbtk.FormattingEnabled = true;
             this.cbtk.Location = new System.Drawing.Point(93, 25);
             this.cbtk.Name = "cbtk";
-            this.cbtk.Size = new System.Drawing.Size(278, 26);
+            this.cbtk.Size = new System.Drawing.Size(278, 28);
             this.cbtk.TabIndex = 0;
             this.cbtk.SelectionChangeCommitted += new System.EventHandler(this.cbtk_SelectionChangeCommitted);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(14, 28);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(5, 35);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(73, 18);
             this.label3.TabIndex = 62;
@@ -131,7 +131,7 @@
             this.MinimizeBox = false;
             this.Name = "BeeselecSocai";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Chọn tài khoản";
+            this.Text = "Tài khoản";
             this.ResumeLayout(false);
             this.PerformLayout();
 

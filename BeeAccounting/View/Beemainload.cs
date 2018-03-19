@@ -864,7 +864,7 @@ namespace BEEACCOUNT.View
 
         private void button32_Click(object sender, EventArgs e)
         {
-       
+
 
         }
 
@@ -968,7 +968,7 @@ namespace BEEACCOUNT.View
 
         private void button56_Click(object sender, EventArgs e)
         {
-          
+
 
         }
 
@@ -1097,7 +1097,7 @@ namespace BEEACCOUNT.View
             {
                 Model.Soketoan.xemvaupdatekqkd200();
 
-               
+
             }
             #endregion
 
@@ -1105,7 +1105,7 @@ namespace BEEACCOUNT.View
             #region//xem báo cóa ckqkd
             if (name == "bckqkdview")
             {
-        
+
                 Model.Soketoan.baocaokqkd();
             }
             #endregion
@@ -1114,9 +1114,9 @@ namespace BEEACCOUNT.View
             #region//dskhachhangvantai
             if (name == "dskhachhangvantai")
             {
-             //   string connection_string = Utils.getConnectionstr();
+                //   string connection_string = Utils.getConnectionstr();
 
-             //   LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+                //   LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
 
                 var rs1 = Model.Nhacungcap.danhsachkhachhangvantai(dc);
                 Viewtable viewtbl = new Viewtable(rs1, dc, "DANH SÁCH KHÁCH HÀNG VẬN TẢI", 10, "tk");// mã 8 là danh sach nha nha van tai
@@ -1134,9 +1134,9 @@ namespace BEEACCOUNT.View
             #region//npdanhsachxe
             if (name == "npdanhsachxe")
             {
-              //  string connection_string = Utils.getConnectionstr();
+                //  string connection_string = Utils.getConnectionstr();
 
-             //   LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+                //   LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
 
                 var rs1 = Model.Nhacungcap.danhsachxe(dc);
                 Viewtable viewtbl = new Viewtable(rs1, dc, "DANH SÁCH XE", 9, "tk");// mã 8 là danh sach nha nha van tai
@@ -1158,9 +1158,9 @@ namespace BEEACCOUNT.View
             {
 
                 //    NPDanhsachnhavantai
-            //    string connection_string = Utils.getConnectionstr();
+                //    string connection_string = Utils.getConnectionstr();
 
-         //       LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+                //       LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
 
                 var rs1 = Model.Nhacungcap.danhsachNVT(dc);
                 Viewtable viewtbl = new Viewtable(rs1, dc, "DANH SÁCH NHÀ VẬN TẢI", 8, "tk");// mã 8 là danh sach nha nha van tai
@@ -1172,99 +1172,8 @@ namespace BEEACCOUNT.View
             #endregion
 
 
-            #region//thongtin dn
-            if (name == "thongtin")
-            {
 
 
-                View.BeeThongtindoanhnghiep doanhnghiep = new BeeThongtindoanhnghiep();
-                doanhnghiep.ShowDialog();
-
-            }
-            #endregion
-
-
-            #region//tmphieuthu
-            if (name == "tmphieuthu")
-            {
-
-                //  Main.clearpannel();
-
-                main1.clearpannel();
-
-
-                View.BeePhieuThu accsup = new BeePhieuThu(main1);
-                main1.clearpannelload(accsup);
-                //    accsup.TopLevel = false;
-                //  accsup.AutoScroll = true;
-                //    panelmain.Controls.Add(accsup);
-                //    accsup.Show();
-
-            }
-            #endregion
-
-
-
-            #region//tmphieuchi
-            if (name == "tmphieuchi")
-            {
-
-                //  Main.clearpannel();
-
-                main1.clearpannel();
-
-
-                View.BeePhieuchi accsup = new BeePhieuchi(main1);
-                main1.clearpannelload(accsup);
-                //    accsup.TopLevel = false;
-                //  accsup.AutoScroll = true;
-                //    panelmain.Controls.Add(accsup);
-                //    accsup.Show();
-
-            }
-            #endregion
-
-
-            #region//soquy
-            if (name == "bcsoquy")
-            {
-
-                Model.Soketoan.soQuy();
-
-            }
-            #endregion
-
-            #region// khophieunhap
-            if (name == "khophieunhap")
-            {
-
-
-                main1.clearpannel();
-
-
-                View.BeeKhophieunhap accsup = new BeeKhophieunhap(main1);
-                main1.clearpannelload(accsup);
-
-            }
-            #endregion
-
-            #region//khophieuxuat
-            if (name == "khophieuxuat")
-            {
-                //  Main.clearpannel();
-
-                main1.clearpannel();
-
-
-                View.BeeKhophieuxuat accsup = new BeeKhophieuxuat(main1);
-                main1.clearpannelload(accsup);
-                //    accsup.TopLevel = false;
-                //  accsup.AutoScroll = true;
-                //    panelmain.Controls.Add(accsup);
-                //    accsup.Show();
-
-            }
-            #endregion
 
 
             #region//khodskho
@@ -1315,26 +1224,6 @@ namespace BEEACCOUNT.View
             }
             #endregion
 
-            #region  // bcsocai
-            if (name == "bcsocai")
-            {
-
-                Model.Soketoan.socaitaikhoan();
-
-            }
-            #endregion
-
-
-            #region// bcsotonghop
-
-            if (name == "bcsotonghop")
-            {
-
-                Model.Soketoan.sotonghoptaikhoanchitiet();
-
-            }
-
-            #endregion
 
             #region//bcxuatnhapton
             if (name == "bcxuatnhapton")
@@ -1344,124 +1233,21 @@ namespace BEEACCOUNT.View
             }
             #endregion
 
-            #region//bcsonhatkychung
-            if (name == "bcsonhatkychung")
-            {
-
-                Model.Soketoan.sonhatkychung();
-
-            }
-            #endregion
-
-            #region//bcsochitiet
-            if (name == "bcsochitiet")
-            {
-
-                Model.Soketoan.sochitiettaikhoan();
-
-            }
-            #endregion
-
-            #region//bcbangcandoitaikhoan
-            if (name == "bcbangcandoitaikhoan")
-            {
-
-                Model.Soketoan.bangcandoiphatsinhtaikhoan();
-
-            }
-            #endregion
 
 
             //            dsloaitk
 
-            #region//dsloaitk
-            if (name == "dsloaitk")
-            {
-                
-                var rs8 = Model.loaitaikhoanketoan.danhsachloaitaikhoan(dc);
-                Viewtable viewtblrs8 = new Viewtable(rs8, dc, "DANH SÁCH LOẠI TÀI KHOẢN", 1, "tk");// danh sach loại tài khoản kế toán
-
-                viewtblrs8.Show();
-
-            }
-            #endregion
-
             //            dstaikhoanketoan
 
-            #region//dstaikhoanketoan
-            if (name == "dstaikhoanketoan")
-            {
-
-             
-
-                var rs = Model.Taikhoanketoan.danhsachtaikhoan(dc);
-                Viewtable viewtblrs55 = new Viewtable(rs, dc, "DANH SÁCH TÀI KHOẢN KẾ TOÁN", 0, "tk");// view code 0 la danh sach tai khoan ke toan
-
-                viewtblrs55.Show();
-
-            }
-            #endregion
-
+         
             //hethongtk
-
-            #region//hethongtk
-            if (name == "hethongtk")
-            {
-                main1.clearpannel();
-
-                View.BeeAccountsetup accsup = new BeeAccountsetup(main1);
-                main1.clearpannelload(accsup);
-             
-            }
-            #endregion
 
             //phanquyen
 
-            #region//phanquyen
-            if (name == "phanquyen")
-            {
-
-
-                var typeff = typeof(tbl_Temp);
-
-                BeeInputchange inputcdata = new BeeInputchange("", "USERNAME AND PASSWORD CONFIG ! ", dc, "tbl_Temp", "tbl_Temp", typeff, typeff, "id", "id", "");
-                inputcdata.TopLevel = false;
-                inputcdata.AutoScroll = true;
-
-                //    main1.clearpannel();
-
-
-                main1.Controls.Add(inputcdata);
-                inputcdata.Show();
-
-
-                //Formload.TopLevel = false;
-                //Formload.AutoScroll = true;
-                //panelmain.Controls.Add(Formload);
-                //Formload.Show();
-
-
-
-            }
-            #endregion
-
+          
 
             //btoanth
 
-            #region//btoanth
-            if (name == "btoanth")
-            {
-                
-
-                main1.clearpannel();
-
-
-                View.BeeButtoantonghop buttoantonghop = new BeeButtoantonghop(main1);
-                main1.clearpannelload(buttoantonghop);
-               
-
-            }
-            #endregion
 
             #region//sochitiet
             if (name == "sochitiet")
@@ -1482,9 +1268,9 @@ namespace BEEACCOUNT.View
             #region//dsnhacungcap
             if (name == "dsnhacungcap")
             {
-               // string connection_string = Utils.getConnectionstr();
+                // string connection_string = Utils.getConnectionstr();
 
-               // LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+                // LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
 
                 var rs1 = Model.Nhacungcap.danhsachNhacungcap(dc);
                 Viewtable viewtbl = new Viewtable(rs1, dc, "DANH SÁCH NHÀ CUNG CẤP", 5, "tk");// mã 5 là danh sach nha cung cap
@@ -1528,7 +1314,7 @@ namespace BEEACCOUNT.View
             LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
 
             var rs = from p in dc.tbl_NP_khachhangvanchuyens
-                //     where p.Code != "DIS"
+                         //     where p.Code != "DIS"
                      orderby p.maKH
                      select p;
             foreach (var item2 in rs)
@@ -1540,7 +1326,7 @@ namespace BEEACCOUNT.View
             }
 
 
-            beeselectinput choosesl = new beeselectinput("Chọn khách hàng vận tải" , CombomCollection);
+            beeselectinput choosesl = new beeselectinput("Chọn khách hàng vận tải", CombomCollection);
             choosesl.ShowDialog();
 
             if (choosesl.kq == true)
@@ -1556,7 +1342,7 @@ namespace BEEACCOUNT.View
 
                 viewtbl.Show();
             }
-          
+
         }
 
         private void button4_Click_3(object sender, EventArgs e)
@@ -1566,9 +1352,9 @@ namespace BEEACCOUNT.View
             //if (name == "bcsonhatkychung")
             //{
 
-                Model.Soketoan.baocaokqkd();
+            Model.Soketoan.baocaokqkd();
 
-          //  }
+            //  }
             #endregion
 
         }
@@ -1594,6 +1380,108 @@ namespace BEEACCOUNT.View
 
             //  }
             #endregion
+        }
+
+        private void tiềnMặtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void phiếuThuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+
+
+
+        }
+
+        private void phiếuChiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+
+
+
+
+        }
+
+        private void sổQuỹToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+
+
+
+
+
+        }
+
+        private void bútToánTổngHợpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+           
+
+        }
+
+        private void sổTàiKhoảnTổngHợpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+          
+        }
+
+        private void bảnCấnĐốiTàiKhoảnPhátSinhToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            #region//bcbangcandoitaikhoan
+
+
+            Model.Soketoan.bangcandoiphatsinhtaikhoan();
+
+
+            #endregion
+
+        }
+
+        private void sổChiTiếtTàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void sổNhậtKýChungToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+          
+        }
+
+        private void sổCáiTàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        
+        }
+
+        private void danhSáchLoạiTàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+       
+        }
+
+        private void phiếuNhậpKhoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            
+        }
+
+        private void phiếuXuấtKhoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+          
+        }
+
+        private void sổKhoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void sổQuỹToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

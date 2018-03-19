@@ -32,8 +32,8 @@ namespace BEEACCOUNT.View
             messageinfor.BackColor = colornen;
 
         }
-     
-        public void clearpannel()  
+
+        public void clearpannel()
         {
 
 
@@ -143,15 +143,15 @@ namespace BEEACCOUNT.View
             }
             else
             {
-              //  
+                //  
                 this.Close();
-              //  return;
-               
+                //  return;
+
             }
 
             //posm
-     //       panelmain.Controls.Clear();
-     //       panelmain.Controls.Add(orig_form);
+            //       panelmain.Controls.Clear();
+            //       panelmain.Controls.Add(orig_form);
         }
 
 
@@ -499,340 +499,340 @@ namespace BEEACCOUNT.View
 
 
 
-    //    private void dataCheckToolStripMenuItem_Click(object sender, EventArgs e)
-    //    {
-    //        string connection_string = Utils.getConnectionstr();
+        //    private void dataCheckToolStripMenuItem_Click(object sender, EventArgs e)
+        //    {
+        //        string connection_string = Utils.getConnectionstr();
 
-    ////        LinqtoSQLDataContext db = new LinqtoSQLDataContext(connection_string);
-    //        LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+        ////        LinqtoSQLDataContext db = new LinqtoSQLDataContext(connection_string);
+        //        LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
 
 
-    //        Control_ac ct = new Control_ac(); 
-    //        DialogResult Kq = MessageBox.Show("Bạn xóa workingdata bởi bản mới hay chỉ add thêm ?" + "\n" + "                 Xóa->Yes/ Add thêm->No !", "Thông báo !", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+        //        Control_ac ct = new Control_ac(); 
+        //        DialogResult Kq = MessageBox.Show("Bạn xóa workingdata bởi bản mới hay chỉ add thêm ?" + "\n" + "                 Xóa->Yes/ Add thêm->No !", "Thông báo !", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
 
 
-    //        switch (Kq)
-    //        {
-    //            case DialogResult.None:
-    //                break;
-    //            case DialogResult.OK:
-    //                break;
-    //            case DialogResult.Cancel:
-    //                //  this.Close();
-    //                break;
-    //            case DialogResult.Abort:
-    //                break;
-    //            case DialogResult.Retry:
-    //                break;
-    //            case DialogResult.Ignore:
-    //                break;
-    //            case DialogResult.Yes:
-    //                {
+        //        switch (Kq)
+        //        {
+        //            case DialogResult.None:
+        //                break;
+        //            case DialogResult.OK:
+        //                break;
+        //            case DialogResult.Cancel:
+        //                //  this.Close();
+        //                break;
+        //            case DialogResult.Abort:
+        //                break;
+        //            case DialogResult.Retry:
+        //                break;
+        //            case DialogResult.Ignore:
+        //                break;
+        //            case DialogResult.Yes:
+        //                {
 
 
-    //                    #region // XÓA toàn bộ xóa data cũ
-    //                    dc.ExecuteCommand("DELETE FROM tblFBL5Nnewthisperiod");
-    //                    //    dc.tblFBL5Nnewthisperiods.DeleteAllOnSubmit(rsthisperiod);
-    //                    dc.SubmitChanges();
+        //                    #region // XÓA toàn bộ xóa data cũ
+        //                    dc.ExecuteCommand("DELETE FROM tblFBL5Nnewthisperiod");
+        //                    //    dc.tblFBL5Nnewthisperiods.DeleteAllOnSubmit(rsthisperiod);
+        //                    dc.SubmitChanges();
 
-    //                    #endregion
+        //                    #endregion
 
 
 
-    //                    #region    ClearABbelanceZezoinFbl5n
+        //                    #region    ClearABbelanceZezoinFbl5n
 
-    //                    SqlConnection conn2 = null;
-    //                    SqlDataReader rdr1 = null;
-    //                    string destConnString = Utils.getConnectionstr();
-    //                    try
-    //                    {
+        //                    SqlConnection conn2 = null;
+        //                    SqlDataReader rdr1 = null;
+        //                    string destConnString = Utils.getConnectionstr();
+        //                    try
+        //                    {
 
-    //                        conn2 = new SqlConnection(destConnString);
-    //                        conn2.Open();
-    //                        SqlCommand cmd1 = new SqlCommand("ClearABbelanceZezo", conn2);
-    //                        cmd1.CommandType = CommandType.StoredProcedure;
-    //                        //  cmd1.Parameters.Add("@name", SqlDbType.VarChar).Value = userupdate;
+        //                        conn2 = new SqlConnection(destConnString);
+        //                        conn2.Open();
+        //                        SqlCommand cmd1 = new SqlCommand("ClearABbelanceZezo", conn2);
+        //                        cmd1.CommandType = CommandType.StoredProcedure;
+        //                        //  cmd1.Parameters.Add("@name", SqlDbType.VarChar).Value = userupdate;
 
-    //                        rdr1 = cmd1.ExecuteReader();
+        //                        rdr1 = cmd1.ExecuteReader();
 
 
 
-    //                        //       rdr1 = cmd1.ExecuteReader();
+        //                        //       rdr1 = cmd1.ExecuteReader();
 
-    //                    }
-    //                    finally
-    //                    {
-    //                        if (conn2 != null)
-    //                        {
-    //                            conn2.Close();
-    //                        }
-    //                        if (rdr1 != null)
-    //                        {
-    //                            rdr1.Close();
-    //                        }
-    //                    }
-    //                    //     MessageBox.Show("ok", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        //                    }
+        //                    finally
+        //                    {
+        //                        if (conn2 != null)
+        //                        {
+        //                            conn2.Close();
+        //                        }
+        //                        if (rdr1 != null)
+        //                        {
+        //                            rdr1.Close();
+        //                        }
+        //                    }
+        //                    //     MessageBox.Show("ok", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
 
 
 
-    //                    #endregion
+        //                    #endregion
 
 
 
-    //                    bool kq1 = ct.checkVATandFBL5n();
+        //                    bool kq1 = ct.checkVATandFBL5n();
 
 
-    //                    if (kq1)
-    //                    {
+        //                    if (kq1)
+        //                    {
 
-    //                        ct.UpdateVATregionFromFBL5Nregion();
+        //                        ct.UpdateVATregionFromFBL5Nregion();
 
-    //                        bool kq2 = ct.checkVATnameanddtodata();
-    //                        // nếu không ok data khong có data trong  fbl5new
+        //                        bool kq2 = ct.checkVATnameanddtodata();
+        //                        // nếu không ok data khong có data trong  fbl5new
 
-    //                        if (kq1 && kq2)// new data ok thi updload data
-    //                        {
+        //                        if (kq1 && kq2)// new data ok thi updload data
+        //                        {
 
-    //                            Thread t1 = new Thread(new ThreadStart(ct.inputVATandFBL5toFBL5newthisperiod));
+        //                            Thread t1 = new Thread(new ThreadStart(ct.inputVATandFBL5toFBL5newthisperiod));
 
-    //                            t1.Start();
+        //                            t1.Start();
 
 
-    //                            Thread t2 = new Thread(showwait);
-    //                            t2.Start();
+        //                            Thread t2 = new Thread(showwait);
+        //                            t2.Start();
 
-    //                            t1.Join();
-    //                            if (t1.ThreadState != ThreadState.Running)
-    //                            {
-    //                                Thread.Sleep(555);
-    //                                t2.Abort();
+        //                            t1.Join();
+        //                            if (t1.ThreadState != ThreadState.Running)
+        //                            {
+        //                                Thread.Sleep(555);
+        //                                t2.Abort();
 
-    //                            }
+        //                            }
 
 
-    //                        }
+        //                        }
 
-    //                        //---kiểm tra data nếu khác thì showmessage/ deleted toadn bộ các dòng đó trên thispreriod
+        //                        //---kiểm tra data nếu khác thì showmessage/ deleted toadn bộ các dòng đó trên thispreriod
 
 
-    //                        var eror = from tblFBL5Nnewthisperiod in dc.tblFBL5Nnewthisperiods
-    //                                   where tblFBL5Nnewthisperiod.COL_value != tblFBL5Nnewthisperiod.Empty_Amount
-    //                                   select new
-    //                                   {
-    //                                       Account_Group = tblFBL5Nnewthisperiod.codeGroup,
-    //                                       Account = tblFBL5Nnewthisperiod.Account,
-    //                                       Doc_Number = tblFBL5Nnewthisperiod.Document_Number,
-    //                                       Customer_Name = tblFBL5Nnewthisperiod.name,
-    //                                       coL_EDLP_Value = tblFBL5Nnewthisperiod.COL_value,
-    //                                       Empty_AmountinVAT = tblFBL5Nnewthisperiod.Empty_Amount,
+        //                        var eror = from tblFBL5Nnewthisperiod in dc.tblFBL5Nnewthisperiods
+        //                                   where tblFBL5Nnewthisperiod.COL_value != tblFBL5Nnewthisperiod.Empty_Amount
+        //                                   select new
+        //                                   {
+        //                                       Account_Group = tblFBL5Nnewthisperiod.codeGroup,
+        //                                       Account = tblFBL5Nnewthisperiod.Account,
+        //                                       Doc_Number = tblFBL5Nnewthisperiod.Document_Number,
+        //                                       Customer_Name = tblFBL5Nnewthisperiod.name,
+        //                                       coL_EDLP_Value = tblFBL5Nnewthisperiod.COL_value,
+        //                                       Empty_AmountinVAT = tblFBL5Nnewthisperiod.Empty_Amount,
 
 
-    //                                   };
-    //                        if (eror.Count() > 0)
-    //                        {
-    //                            Viewtable viewtbl = new Viewtable(eror, dc, "List các doc chưa update được do có lệch giữ data FBL5n Và VAT/Edlp về phần vỏ , please check !");
-    //                        }
+        //                                   };
+        //                        if (eror.Count() > 0)
+        //                        {
+        //                            Viewtable viewtbl = new Viewtable(eror, dc, "List các doc chưa update được do có lệch giữ data FBL5n Và VAT/Edlp về phần vỏ , please check !");
+        //                        }
 
 
-    //                        //     xóa trên deleteLisColandEmptydifferentinThis các list không update đuocwj
+        //                        //     xóa trên deleteLisColandEmptydifferentinThis các list không update đuocwj
 
 
-    //                        #region    deleteLisColandEmptydifferentinThis
+        //                        #region    deleteLisColandEmptydifferentinThis
 
-    //                        //     SqlConnection conn2 = null;
-    //                        //       SqlDataReader rdr1 = null;
-    //                        //    string destConnString = Utils.getConnectionstr();
-    //                        try
-    //                        {
+        //                        //     SqlConnection conn2 = null;
+        //                        //       SqlDataReader rdr1 = null;
+        //                        //    string destConnString = Utils.getConnectionstr();
+        //                        try
+        //                        {
 
-    //                            conn2 = new SqlConnection(destConnString);
-    //                            conn2.Open();
-    //                            SqlCommand cmd1 = new SqlCommand("deleteLisColandEmptydifferentinThis", conn2);
-    //                            cmd1.CommandType = CommandType.StoredProcedure;
-    //                            //  cmd1.Parameters.Add("@name", SqlDbType.VarChar).Value = userupdate;
+        //                            conn2 = new SqlConnection(destConnString);
+        //                            conn2.Open();
+        //                            SqlCommand cmd1 = new SqlCommand("deleteLisColandEmptydifferentinThis", conn2);
+        //                            cmd1.CommandType = CommandType.StoredProcedure;
+        //                            //  cmd1.Parameters.Add("@name", SqlDbType.VarChar).Value = userupdate;
 
-    //                            rdr1 = cmd1.ExecuteReader();
+        //                            rdr1 = cmd1.ExecuteReader();
 
 
 
-    //                            //       rdr1 = cmd1.ExecuteReader();
+        //                            //       rdr1 = cmd1.ExecuteReader();
 
-    //                        }
-    //                        finally
-    //                        {
-    //                            if (conn2 != null)
-    //                            {
-    //                                conn2.Close();
-    //                            }
-    //                            if (rdr1 != null)
-    //                            {
-    //                                rdr1.Close();
-    //                            }
-    //                        }
-    //                        //     MessageBox.Show("ok", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        //                        }
+        //                        finally
+        //                        {
+        //                            if (conn2 != null)
+        //                            {
+        //                                conn2.Close();
+        //                            }
+        //                            if (rdr1 != null)
+        //                            {
+        //                                rdr1.Close();
+        //                            }
+        //                        }
+        //                        //     MessageBox.Show("ok", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
 
 
 
-    //                        #endregion
+        //                        #endregion
 
-    //                        //  updatetblFBL5NTempRPtview
+        //                        //  updatetblFBL5NTempRPtview
 
-    //                        #region    updatetblFBL5NTempRPtview tinh tong va so du luon
+        //                        #region    updatetblFBL5NTempRPtview tinh tong va so du luon
 
-    //                        //     SqlConnection conn2 = null;
-    //                        //       SqlDataReader rdr1 = null;
-    //                        //    string destConnString = Utils.getConnectionstr();
-    //                        try
-    //                        {
+        //                        //     SqlConnection conn2 = null;
+        //                        //       SqlDataReader rdr1 = null;
+        //                        //    string destConnString = Utils.getConnectionstr();
+        //                        try
+        //                        {
 
-    //                            conn2 = new SqlConnection(destConnString);
-    //                            conn2.Open();
-    //                            SqlCommand cmd1 = new SqlCommand("updatetblFBL5NTempRPtview", conn2);
-    //                            cmd1.CommandType = CommandType.StoredProcedure;
-    //                            //  cmd1.Parameters.Add("@name", SqlDbType.VarChar).Value = userupdate;
+        //                            conn2 = new SqlConnection(destConnString);
+        //                            conn2.Open();
+        //                            SqlCommand cmd1 = new SqlCommand("updatetblFBL5NTempRPtview", conn2);
+        //                            cmd1.CommandType = CommandType.StoredProcedure;
+        //                            //  cmd1.Parameters.Add("@name", SqlDbType.VarChar).Value = userupdate;
 
-    //                            rdr1 = cmd1.ExecuteReader();
+        //                            rdr1 = cmd1.ExecuteReader();
 
 
 
-    //                            //       rdr1 = cmd1.ExecuteReader();
+        //                            //       rdr1 = cmd1.ExecuteReader();
 
-    //                        }
-    //                        finally
-    //                        {
-    //                            if (conn2 != null)
-    //                            {
-    //                                conn2.Close();
-    //                            }
-    //                            if (rdr1 != null)
-    //                            {
-    //                                rdr1.Close();
-    //                            }
-    //                        }
-    //                        //     MessageBox.Show("ok", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        //                        }
+        //                        finally
+        //                        {
+        //                            if (conn2 != null)
+        //                            {
+        //                                conn2.Close();
+        //                            }
+        //                            if (rdr1 != null)
+        //                            {
+        //                                rdr1.Close();
+        //                            }
+        //                        }
+        //                        //     MessageBox.Show("ok", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
 
 
 
-    //                        #endregion
-    //                        //    xóa trên tblFBL5Nnewthisperiod
+        //                        #endregion
+        //                        //    xóa trên tblFBL5Nnewthisperiod
 
 
-    //                        ///-kiểm tra data
+        //                        ///-kiểm tra data
 
-    //                    }
+        //                    }
 
-    //                    //---------
+        //                    //---------
 
 
 
 
 
-    //                    break;
-    //                }
-    //            case DialogResult.No:
+        //                    break;
+        //                }
+        //            case DialogResult.No:
 
-    //                {
+        //                {
 
 
-    //                    #region    ClearABbelanceZezoinFbl5n
+        //                    #region    ClearABbelanceZezoinFbl5n
 
-    //                    SqlConnection conn2 = null;
-    //                    SqlDataReader rdr1 = null;
-    //                    string destConnString = Utils.getConnectionstr();
-    //                    try
-    //                    {
+        //                    SqlConnection conn2 = null;
+        //                    SqlDataReader rdr1 = null;
+        //                    string destConnString = Utils.getConnectionstr();
+        //                    try
+        //                    {
 
-    //                        conn2 = new SqlConnection(destConnString);
-    //                        conn2.Open();
-    //                        SqlCommand cmd1 = new SqlCommand("ClearABbelanceZezo", conn2);
-    //                        cmd1.CommandType = CommandType.StoredProcedure;
-    //                        //  cmd1.Parameters.Add("@name", SqlDbType.VarChar).Value = userupdate;
+        //                        conn2 = new SqlConnection(destConnString);
+        //                        conn2.Open();
+        //                        SqlCommand cmd1 = new SqlCommand("ClearABbelanceZezo", conn2);
+        //                        cmd1.CommandType = CommandType.StoredProcedure;
+        //                        //  cmd1.Parameters.Add("@name", SqlDbType.VarChar).Value = userupdate;
 
-    //                        rdr1 = cmd1.ExecuteReader();
+        //                        rdr1 = cmd1.ExecuteReader();
 
 
 
-    //                        //       rdr1 = cmd1.ExecuteReader();
+        //                        //       rdr1 = cmd1.ExecuteReader();
 
-    //                    }
-    //                    finally
-    //                    {
-    //                        if (conn2 != null)
-    //                        {
-    //                            conn2.Close();
-    //                        }
-    //                        if (rdr1 != null)
-    //                        {
-    //                            rdr1.Close();
-    //                        }
-    //                    }
-    //                    //     MessageBox.Show("ok", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        //                    }
+        //                    finally
+        //                    {
+        //                        if (conn2 != null)
+        //                        {
+        //                            conn2.Close();
+        //                        }
+        //                        if (rdr1 != null)
+        //                        {
+        //                            rdr1.Close();
+        //                        }
+        //                    }
+        //                    //     MessageBox.Show("ok", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
 
 
 
-    //                    #endregion
+        //                    #endregion
 
-    //                    // loại toàn bộ các doc trùng trong thispreiod tại cá bảng fbl5m/ vat/ edln
+        //                    // loại toàn bộ các doc trùng trong thispreiod tại cá bảng fbl5m/ vat/ edln
 
-    //                    ct.xoavatEDLPandFBL5nDochaveinFbl5nthis();
+        //                    ct.xoavatEDLPandFBL5nDochaveinFbl5nthis();
 
 
-    //                    // loại toàn bộ các doc trùng trong thispreiod
+        //                    // loại toàn bộ các doc trùng trong thispreiod
 
 
-    //                    bool kq1 = ct.checkVATandFBL5n();
+        //                    bool kq1 = ct.checkVATandFBL5n();
 
 
-    //                    if (kq1)
-    //                    {
+        //                    if (kq1)
+        //                    {
 
-    //                        ct.UpdateVATregionFromFBL5Nregion();
+        //                        ct.UpdateVATregionFromFBL5Nregion();
 
-    //                        bool kq2 = ct.checkVATnameanddtodata();
+        //                        bool kq2 = ct.checkVATnameanddtodata();
 
 
-    //                        if (kq1 && kq2)// new data ok thi updload data
-    //                        {
+        //                        if (kq1 && kq2)// new data ok thi updload data
+        //                        {
 
-    //                            Thread t1 = new Thread(new ThreadStart(ct.inputVATandFBL5toFBL5newthisperiod));
+        //                            Thread t1 = new Thread(new ThreadStart(ct.inputVATandFBL5toFBL5newthisperiod));
 
-    //                            t1.Start();
+        //                            t1.Start();
 
 
-    //                            Thread t2 = new Thread(showwait);
-    //                            t2.Start();
+        //                            Thread t2 = new Thread(showwait);
+        //                            t2.Start();
 
-    //                            t1.Join();
-    //                            if (t1.ThreadState != ThreadState.Running)
-    //                            {
-    //                                Thread.Sleep(555);
-    //                                t2.Abort();
+        //                            t1.Join();
+        //                            if (t1.ThreadState != ThreadState.Running)
+        //                            {
+        //                                Thread.Sleep(555);
+        //                                t2.Abort();
 
-    //                            }
+        //                            }
 
 
-    //                        }
+        //                        }
 
 
 
-    //                    }
+        //                    }
 
-    //                    //---------
+        //                    //---------
 
 
-    //                    break;
-    //                }
-    //            default:
-    //                break;
-    //        }
+        //                    break;
+        //                }
+        //            default:
+        //                break;
+        //        }
 
 
 
@@ -840,11 +840,11 @@ namespace BEEACCOUNT.View
 
 
 
-    //    }
+        //    }
 
         private void uploadCustomerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-         
+
 
 
 
@@ -952,7 +952,7 @@ namespace BEEACCOUNT.View
 
             //}
 
-            
+
 
 
         }
@@ -1011,7 +1011,7 @@ namespace BEEACCOUNT.View
         private void groupCustomerSentARLetterToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
-          
+
 
         }
 
@@ -1909,11 +1909,11 @@ namespace BEEACCOUNT.View
         }
 
 
-      
+
         private void userAndRightToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
-          
+
         }
 
         private void serverNameToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1998,324 +1998,324 @@ namespace BEEACCOUNT.View
 
         }
 
-     //   private void pRINTREPORTSBYOPTIONToolStripMenuItem_Click(object sender, EventArgs e)
-     //   {
-     //       PrintLetterOption PrintOption = new PrintLetterOption();
-     //       // Control_ac ctrac = new Control_ac();
+        //   private void pRINTREPORTSBYOPTIONToolStripMenuItem_Click(object sender, EventArgs e)
+        //   {
+        //       PrintLetterOption PrintOption = new PrintLetterOption();
+        //       // Control_ac ctrac = new Control_ac();
 
-     //       PrintOption.ShowDialog();
+        //       PrintOption.ShowDialog();
 
 
-     // //      int choice = PrintOption.choice;
+        // //      int choice = PrintOption.choice;
 
-     ////       double onlycode = PrintOption.onlycode;
-     ////       double fromcode = PrintOption.fromcode;
-     // //      double tocode = PrintOption.tocode;
+        ////       double onlycode = PrintOption.onlycode;
+        ////       double fromcode = PrintOption.fromcode;
+        // //      double tocode = PrintOption.tocode;
 
-     // //      string groupsending = PrintOption.groupsending;
+        // //      string groupsending = PrintOption.groupsending;
 
 
-     //       if (choice == 1)//grooup print
-     //       {
-     //           // string groupsending = PrintOption.groupsending;
-     //           //    MessageBox.Show(groupsending + "-groupprint--" );
+        //       if (choice == 1)//grooup print
+        //       {
+        //           // string groupsending = PrintOption.groupsending;
+        //           //    MessageBox.Show(groupsending + "-groupprint--" );
 
-     //           string connection_string = Utils.getConnectionstr();
+        //           string connection_string = Utils.getConnectionstr();
 
 
-     //      //     MessageBox.Show(groupsending + "-groupprint--");
+        //      //     MessageBox.Show(groupsending + "-groupprint--");
 
 
-     //           #region  updatepriterinvoice grouppriter
-     //           SqlConnection conn2 = null;
-     //           SqlDataReader rdr1 = null;
+        //           #region  updatepriterinvoice grouppriter
+        //           SqlConnection conn2 = null;
+        //           SqlDataReader rdr1 = null;
 
-     //           string destConnString = Utils.getConnectionstr();
-     //           try
-     //           {
+        //           string destConnString = Utils.getConnectionstr();
+        //           try
+        //           {
 
-     //               conn2 = new SqlConnection(destConnString);
-     //               conn2.Open();
-     //               SqlCommand cmd1 = new SqlCommand("updategroupprintletterChoice", conn2);
-     //               cmd1.CommandType = CommandType.StoredProcedure;
-     //               cmd1.Parameters.Add("@groupsending", SqlDbType.VarChar).Value = groupsending;
+        //               conn2 = new SqlConnection(destConnString);
+        //               conn2.Open();
+        //               SqlCommand cmd1 = new SqlCommand("updategroupprintletterChoice", conn2);
+        //               cmd1.CommandType = CommandType.StoredProcedure;
+        //               cmd1.Parameters.Add("@groupsending", SqlDbType.VarChar).Value = groupsending;
 
-     //               rdr1 = cmd1.ExecuteReader();
+        //               rdr1 = cmd1.ExecuteReader();
 
 
 
-     //               //       rdr1 = cmd1.ExecuteReader();
+        //               //       rdr1 = cmd1.ExecuteReader();
 
-     //           }
-     //           finally
-     //           {
-     //               if (conn2 != null)
-     //               {
-     //                   conn2.Close();
-     //               }
-     //               if (rdr1 != null)
-     //               {
-     //                   rdr1.Close();
-     //               }
-     //           }
-     //           //     MessageBox.Show("ok", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        //           }
+        //           finally
+        //           {
+        //               if (conn2 != null)
+        //               {
+        //                   conn2.Close();
+        //               }
+        //               if (rdr1 != null)
+        //               {
+        //                   rdr1.Close();
+        //               }
+        //           }
+        //           //     MessageBox.Show("ok", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-     //           #endregion
+        //           #endregion
 
 
-     //       }
-     //       if (choice == 2)//fromcode to code print
-     //       {
+        //       }
+        //       if (choice == 2)//fromcode to code print
+        //       {
 
-     //           //double fromcode = PrintOption.fromcode;
-     //           //double tocode = PrintOption.tocode;
-     //           //         MessageBox.Show(fromcode.ToString() + "-fromto--" + tocode.ToString());
+        //           //double fromcode = PrintOption.fromcode;
+        //           //double tocode = PrintOption.tocode;
+        //           //         MessageBox.Show(fromcode.ToString() + "-fromto--" + tocode.ToString());
 
 
-     //           #region  updatepriterinvoice grouppriter
-     //           SqlConnection conn2 = null;
-     //           SqlDataReader rdr1 = null;
+        //           #region  updatepriterinvoice grouppriter
+        //           SqlConnection conn2 = null;
+        //           SqlDataReader rdr1 = null;
 
-     //           string destConnString = Utils.getConnectionstr();
-     //           try
-     //           {
+        //           string destConnString = Utils.getConnectionstr();
+        //           try
+        //           {
 
-     //               conn2 = new SqlConnection(destConnString);
-     //               conn2.Open();
-     //               SqlCommand cmd1 = new SqlCommand("updategroupprintletterfromcodetocodeChoice", conn2);
-     //               cmd1.CommandType = CommandType.StoredProcedure;
-     //               cmd1.Parameters.Add("@fromcode", SqlDbType.Float).Value = fromcode;
-     //               cmd1.Parameters.Add("@tocode", SqlDbType.Float).Value = tocode;
+        //               conn2 = new SqlConnection(destConnString);
+        //               conn2.Open();
+        //               SqlCommand cmd1 = new SqlCommand("updategroupprintletterfromcodetocodeChoice", conn2);
+        //               cmd1.CommandType = CommandType.StoredProcedure;
+        //               cmd1.Parameters.Add("@fromcode", SqlDbType.Float).Value = fromcode;
+        //               cmd1.Parameters.Add("@tocode", SqlDbType.Float).Value = tocode;
 
-     //               rdr1 = cmd1.ExecuteReader();
+        //               rdr1 = cmd1.ExecuteReader();
 
 
 
-     //               //       rdr1 = cmd1.ExecuteReader();
+        //               //       rdr1 = cmd1.ExecuteReader();
 
-     //           }
-     //           finally
-     //           {
-     //               if (conn2 != null)
-     //               {
-     //                   conn2.Close();
-     //               }
-     //               if (rdr1 != null)
-     //               {
-     //                   rdr1.Close();
-     //               }
-     //           }
-     //           //     MessageBox.Show("ok", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        //           }
+        //           finally
+        //           {
+        //               if (conn2 != null)
+        //               {
+        //                   conn2.Close();
+        //               }
+        //               if (rdr1 != null)
+        //               {
+        //                   rdr1.Close();
+        //               }
+        //           }
+        //           //     MessageBox.Show("ok", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-     //           #endregion
+        //           #endregion
 
 
 
 
 
 
-     //       }
+        //       }
 
-     //       if (choice == 3)   //only code
-     //       {
-     //           //   MessageBox.Show(onlycode.ToString() + "-onlycepde--");
+        //       if (choice == 3)   //only code
+        //       {
+        //           //   MessageBox.Show(onlycode.ToString() + "-onlycepde--");
 
-     //           #region  updatepriterinvoice grouppriter
-     //           SqlConnection conn2 = null;
-     //           SqlDataReader rdr1 = null;
+        //           #region  updatepriterinvoice grouppriter
+        //           SqlConnection conn2 = null;
+        //           SqlDataReader rdr1 = null;
 
-     //           string destConnString = Utils.getConnectionstr();
-     //           try
-     //           {
+        //           string destConnString = Utils.getConnectionstr();
+        //           try
+        //           {
 
-     //               conn2 = new SqlConnection(destConnString);
-     //               conn2.Open();
-     //               SqlCommand cmd1 = new SqlCommand("updategroupprintletterOnlycodeChoice", conn2);
-     //               cmd1.CommandType = CommandType.StoredProcedure;
-     //               cmd1.Parameters.Add("@onlycode", SqlDbType.Float).Value = onlycode;
+        //               conn2 = new SqlConnection(destConnString);
+        //               conn2.Open();
+        //               SqlCommand cmd1 = new SqlCommand("updategroupprintletterOnlycodeChoice", conn2);
+        //               cmd1.CommandType = CommandType.StoredProcedure;
+        //               cmd1.Parameters.Add("@onlycode", SqlDbType.Float).Value = onlycode;
 
-     //               rdr1 = cmd1.ExecuteReader();
+        //               rdr1 = cmd1.ExecuteReader();
 
 
 
-     //               //       rdr1 = cmd1.ExecuteReader();
+        //               //       rdr1 = cmd1.ExecuteReader();
 
-     //           }
-     //           finally
-     //           {
-     //               if (conn2 != null)
-     //               {
-     //                   conn2.Close();
-     //               }
-     //               if (rdr1 != null)
-     //               {
-     //                   rdr1.Close();
-     //               }
-     //           }
-     //           //     MessageBox.Show("ok", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        //           }
+        //           finally
+        //           {
+        //               if (conn2 != null)
+        //               {
+        //                   conn2.Close();
+        //               }
+        //               if (rdr1 != null)
+        //               {
+        //                   rdr1.Close();
+        //               }
+        //           }
+        //           //     MessageBox.Show("ok", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-     //           #endregion
+        //           #endregion
 
 
 
 
-     //       }
-     //       if (choice == 4)   //all code
-     //       {
+        //       }
+        //       if (choice == 4)   //all code
+        //       {
 
 
 
-     //           #region update cho view heet baso caso
+        //           #region update cho view heet baso caso
 
-     //           //     updategroupprintletterChoiceALL
+        //           //     updategroupprintletterChoiceALL
 
-     //           #region  updatepriterinvoice updategroupprintletterChoiceALL
-     //           SqlConnection conn2 = null;
-     //       SqlDataReader rdr1 = null;
+        //           #region  updatepriterinvoice updategroupprintletterChoiceALL
+        //           SqlConnection conn2 = null;
+        //       SqlDataReader rdr1 = null;
 
-     //       string destConnString = Utils.getConnectionstr();
-     //       try
-     //       {
+        //       string destConnString = Utils.getConnectionstr();
+        //       try
+        //       {
 
-     //           conn2 = new SqlConnection(destConnString);
-     //           conn2.Open();
-     //           SqlCommand cmd1 = new SqlCommand("updategroupprintletterChoiceALL", conn2);
-     //           cmd1.CommandType = CommandType.StoredProcedure;
-     //           //    cmd1.Parameters.Add("@groupsending", SqlDbType.VarChar).Value = groupsending;
+        //           conn2 = new SqlConnection(destConnString);
+        //           conn2.Open();
+        //           SqlCommand cmd1 = new SqlCommand("updategroupprintletterChoiceALL", conn2);
+        //           cmd1.CommandType = CommandType.StoredProcedure;
+        //           //    cmd1.Parameters.Add("@groupsending", SqlDbType.VarChar).Value = groupsending;
 
-     //           rdr1 = cmd1.ExecuteReader();
+        //           rdr1 = cmd1.ExecuteReader();
 
 
 
-     //           //       rdr1 = cmd1.ExecuteReader();
+        //           //       rdr1 = cmd1.ExecuteReader();
 
-     //       }
-     //       finally
-     //       {
-     //           if (conn2 != null)
-     //           {
-     //               conn2.Close();
-     //           }
-     //           if (rdr1 != null)
-     //           {
-     //               rdr1.Close();
-     //           }
-     //       }
-     //           //     MessageBox.Show("ok", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        //       }
+        //       finally
+        //       {
+        //           if (conn2 != null)
+        //           {
+        //               conn2.Close();
+        //           }
+        //           if (rdr1 != null)
+        //           {
+        //               rdr1.Close();
+        //           }
+        //       }
+        //           //     MessageBox.Show("ok", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-     //           #endregion
+        //           #endregion
 
 
-     //           #endregion
+        //           #endregion
 
 
-     //       }
+        //       }
 
 
 
-     //       if (choice ==1 || choice == 2 || choice == 3 || choice == 4)
-     //       {
-     //           #region print invoce
+        //       if (choice ==1 || choice == 2 || choice == 3 || choice == 4)
+        //       {
+        //           #region print invoce
 
-                
-     //           string connection_string = Utils.getConnectionstr();
 
-     //           var db = new LinqtoSQLDataContext(connection_string);
+        //           string connection_string = Utils.getConnectionstr();
 
-     //           Control_ac ctrac = new Control_ac();
+        //           var db = new LinqtoSQLDataContext(connection_string);
 
-     //           rs1 = ctrac.KArptdataset1(db);
-     //           rs2 = ctrac.KArptdataset2(db);
+        //           Control_ac ctrac = new Control_ac();
 
+        //           rs1 = ctrac.KArptdataset1(db);
+        //           rs2 = ctrac.KArptdataset2(db);
 
 
 
 
-     //           if (rs1 != null && rs2 != null)
-     //           {
 
-     //               Utils ut = new Utils();
-     //               var dataset1 = ut.ToDataTable(db, rs1);
-     //               var dataset2 = ut.ToDataTable(db, rs2);
-     //               Reportsview rpt = new Reportsview(dataset1, dataset2, "ARletter.rdlc");
-     //               rpt.Show();
+        //           if (rs1 != null && rs2 != null)
+        //           {
 
-     //           }
+        //               Utils ut = new Utils();
+        //               var dataset1 = ut.ToDataTable(db, rs1);
+        //               var dataset2 = ut.ToDataTable(db, rs2);
+        //               Reportsview rpt = new Reportsview(dataset1, dataset2, "ARletter.rdlc");
+        //               rpt.Show();
 
+        //           }
 
-     //           #endregion
 
-     //           #region print detail
+        //           #endregion
 
-     //        //   string connection_string = Utils.getConnectionstr();
+        //           #region print detail
 
-     //           //    var db = new LinqtoSQLDataContext(connection_string);
-     //      //     var db = new LinqtoSQLDataContext(connection_string);
+        //        //   string connection_string = Utils.getConnectionstr();
 
+        //           //    var db = new LinqtoSQLDataContext(connection_string);
+        //      //     var db = new LinqtoSQLDataContext(connection_string);
 
-     //        //   string rptname = "ARletterdetail.rdlc";
-     //           //      string rptname = "SubARletterdetail.rdlc";
-     //       //    Control_ac ctrac = new Control_ac();
 
-     //           var rs3 = ctrac.letterdetaildataset1(db);
-     //           var rs4 = ctrac.letterdetaildataset2(db);
+        //        //   string rptname = "ARletterdetail.rdlc";
+        //           //      string rptname = "SubARletterdetail.rdlc";
+        //       //    Control_ac ctrac = new Control_ac();
 
+        //           var rs3 = ctrac.letterdetaildataset1(db);
+        //           var rs4 = ctrac.letterdetaildataset2(db);
 
-     //           if (rs1 != null && rs2 != null)
-     //           {
-     //               //      var db = new LinqtoSQLDataContext(connection_string);
-     //               Utils ut = new Utils();
-     //               var dataset1 = ut.ToDataTable(db, rs3);
-     //               var dataset2 = ut.ToDataTable(db, rs4);
-     //               Reportsview rpt = new Reportsview(dataset1, dataset2, "ARletterdetail.rdlc");
-     //               rpt.Show();
 
-     //           }
+        //           if (rs1 != null && rs2 != null)
+        //           {
+        //               //      var db = new LinqtoSQLDataContext(connection_string);
+        //               Utils ut = new Utils();
+        //               var dataset1 = ut.ToDataTable(db, rs3);
+        //               var dataset2 = ut.ToDataTable(db, rs4);
+        //               Reportsview rpt = new Reportsview(dataset1, dataset2, "ARletterdetail.rdlc");
+        //               rpt.Show();
 
-     //           #endregion
+        //           }
 
-     //           #region print col
-     //      //     string connection_string = Utils.getConnectionstr();
+        //           #endregion
 
-     //           //  var db = new LinqtoSQLDataContext(connection_string);
-     //           //    LinqtoSQLDataContext db = new LinqtoSQLDataContext(connection_string);
+        //           #region print col
+        //      //     string connection_string = Utils.getConnectionstr();
 
+        //           //  var db = new LinqtoSQLDataContext(connection_string);
+        //           //    LinqtoSQLDataContext db = new LinqtoSQLDataContext(connection_string);
 
 
-     //         //  var db = new LinqtoSQLDataContext(connection_string);
 
+        //         //  var db = new LinqtoSQLDataContext(connection_string);
 
-     //        //   string rptname3 = "ARCOLrpt.rdlc";
-     //           //      string rptname = "SubARletterdetail.rdlc";
-     //     //      Control_ac ctrac = new Control_ac();
 
-     //           var rs5 = ctrac.ARcoldataset1(db);
-     //           var rs6 = ctrac.ARcoldataset2(db);
+        //        //   string rptname3 = "ARCOLrpt.rdlc";
+        //           //      string rptname = "SubARletterdetail.rdlc";
+        //     //      Control_ac ctrac = new Control_ac();
 
+        //           var rs5 = ctrac.ARcoldataset1(db);
+        //           var rs6 = ctrac.ARcoldataset2(db);
 
-     //           if (rs1 != null && rs2 != null)
-     //           {
-     //               //      var db = new LinqtoSQLDataContext(connection_string);
-     //               Utils ut = new Utils();
-     //               var dataset1 = ut.ToDataTable(db, rs5);
-     //               var dataset2 = ut.ToDataTable(db, rs6);
-     //               Reportsview rpt = new Reportsview(dataset1, dataset2, "ARCOLrpt.rdlc");
-     //               rpt.Show();
 
+        //           if (rs1 != null && rs2 != null)
+        //           {
+        //               //      var db = new LinqtoSQLDataContext(connection_string);
+        //               Utils ut = new Utils();
+        //               var dataset1 = ut.ToDataTable(db, rs5);
+        //               var dataset2 = ut.ToDataTable(db, rs6);
+        //               Reportsview rpt = new Reportsview(dataset1, dataset2, "ARCOLrpt.rdlc");
+        //               rpt.Show();
 
 
-     //           }
 
+        //           }
 
 
-     //           #endregion
 
-     //       }
+        //           #endregion
 
+        //       }
 
 
 
-     //   }
+
+        //   }
 
         //private void lETTERRETURNUPDATEToolStripMenuItem_Click(object sender, EventArgs e)
         //{
@@ -2358,7 +2358,7 @@ namespace BEEACCOUNT.View
 
 
         //    }
-        
+
 
 
 
@@ -2368,7 +2368,7 @@ namespace BEEACCOUNT.View
 
         //    //  var db = new LinqtoSQLDataContext(connection_string);
         ////    LinqtoSQLDataContext db = new LinqtoSQLDataContext(connection_string);
-           
+
 
         //}
 
@@ -2386,10 +2386,10 @@ namespace BEEACCOUNT.View
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-         
+
         }
 
-    
+
         //private void pictureBox1_MouseHover(object sender, EventArgs e)
         //{
         //   this.inputcontract.Image = global::BEEACCOUNT.Properties.Resources.input21;
@@ -2444,7 +2444,7 @@ namespace BEEACCOUNT.View
         {
 
 
-        
+
 
 
 
@@ -2458,9 +2458,9 @@ namespace BEEACCOUNT.View
             foreach (Form frm in fc)
             {
                 ///  KAcontractlisting
-            ///    if (frm.Text == "CreatenewContract")
-                    if (frm.Text == "KAcontractlisting")
-                    {
+                ///    if (frm.Text == "CreatenewContract")
+                if (frm.Text == "KAcontractlisting")
+                {
                     kq = true;
                     frm.Focus();
 
@@ -2574,7 +2574,7 @@ namespace BEEACCOUNT.View
             if (!kq)
             {
 
-           
+
 
 
                 View.Kasalesuploadandreports KaSalesupLoad = new View.Kasalesuploadandreports();
@@ -2616,7 +2616,7 @@ namespace BEEACCOUNT.View
             if (!kq)
             {
 
-           View.kareportsform kareportsform = new View.kareportsform();
+                View.kareportsform kareportsform = new View.kareportsform();
 
 
                 kareportsform.Show();
@@ -2629,20 +2629,20 @@ namespace BEEACCOUNT.View
         private void button1_Click_1(object sender, EventArgs e)
         {
 
-       //     View.kapricingcheck pricecheck = new kapricingcheck();
+            //     View.kapricingcheck pricecheck = new kapricingcheck();
 
-       //     pricecheck.ShowDialog();
+            //     pricecheck.ShowDialog();
 
         }
 
         private void btusersetup_Click(object sender, EventArgs e)
         {
-        
+
         }
 
         private void btMasterdata_Click(object sender, EventArgs e)
         {
-         
+
 
 
         }
@@ -2654,13 +2654,13 @@ namespace BEEACCOUNT.View
 
         private void dfasfToolStripMenuItem_Click(object sender, EventArgs e)
         {
-         
+
         }
 
         private void ádfasdfToolStripMenuItem_Click(object sender, EventArgs e)
         {
-       
-          
+
+
 
         }
 
@@ -2686,7 +2686,7 @@ namespace BEEACCOUNT.View
 
         private void configMasterToolStripMenuItem_Click(object sender, EventArgs e)
         {
-        //    panelmain.Controls.Clear();  //PosmCreateTK
+            //    panelmain.Controls.Clear();  //PosmCreateTK
 
 
             View.Beestorereciept KAmasterinput = new View.Beestorereciept();
@@ -2700,7 +2700,7 @@ namespace BEEACCOUNT.View
 
         private void usersSetupToolStripMenuItem_Click(object sender, EventArgs e)
         {
-       
+
         }
 
         private void mKTLoadToolStripMenuItem_Click(object sender, EventArgs e)
@@ -2750,13 +2750,13 @@ namespace BEEACCOUNT.View
 
                        select new
 
-                             {
-                                matk = tbl_dstaikhoan.matk,
+                       {
+                           matk = tbl_dstaikhoan.matk,
 
-                                tentk = tbl_dstaikhoan.tentk,
+                           tentk = tbl_dstaikhoan.tentk,
 
 
-                             };
+                       };
 
 
             Viewtable viewtbl = new Viewtable(rstk, dc, "DANH SÁCH TÀI KHOẢN", 3, "tk");// view code 1 la can viet them lenh
@@ -2826,14 +2826,14 @@ namespace BEEACCOUNT.View
 
         private void button7_Click(object sender, EventArgs e)
         {
-           //panelmain.Controls.Clear();
+            //panelmain.Controls.Clear();
 
-           // View.BeePhieuThu accsup = new BeePhieuThu();
+            // View.BeePhieuThu accsup = new BeePhieuThu();
 
-           // accsup.TopLevel = false;
-           // accsup.AutoScroll = true;
-           // panelmain.Controls.Add(accsup);
-           // accsup.Show();
+            // accsup.TopLevel = false;
+            // accsup.AutoScroll = true;
+            // panelmain.Controls.Add(accsup);
+            // accsup.Show();
 
             // Beemainload
 
@@ -2881,6 +2881,298 @@ namespace BEEACCOUNT.View
 
         private void pHẦNHÀNHKẾTOÁNToolStripMenuItem_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void phiếuThuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            #region//tmphieuthu
+            //if (name == "tmphieuthu")
+            //{
+
+            //  Main.clearpannel();
+            //   Formload.
+            // clearpannel();
+            clearpannel();
+
+
+            View.BeePhieuThu accsup = new BeePhieuThu(this);
+            clearpannelload(accsup);
+            //    accsup.TopLevel = false;
+            //  accsup.AutoScroll = true;
+            //    panelmain.Controls.Add(accsup);
+            //    accsup.Show();
+
+            //   }
+            #endregion
+
+
+
+
+
+
+        }
+
+        private void phiếuChiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            #region//tmphieuchi
+
+
+            //  Main.clearpannel();
+
+            clearpannel();
+
+
+            View.BeePhieuchi accsup = new BeePhieuchi(this);
+            clearpannelload(accsup);
+            //    accsup.TopLevel = false;
+            //  accsup.AutoScroll = true;
+            //    panelmain.Controls.Add(accsup);
+            //    accsup.Show();
+
+
+            #endregion
+
+        }
+
+        private void sổQuỹToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            #region//soquy
+
+
+            Model.Soketoan.soQuy();
+
+
+            #endregion
+
+
+        }
+
+        private void phiếuNhậpKhoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            #region// khophieunhap
+
+
+            clearpannel();
+
+
+            View.BeeKhophieunhap accsup = new BeeKhophieunhap(this);
+            clearpannelload(accsup);
+
+
+            #endregion
+
+        }
+
+        private void phiếuXuấtKhoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            #region//khophieuxuat
+
+            //  Main.clearpannel();
+
+            clearpannel();
+
+
+            View.BeeKhophieuxuat accsup = new BeeKhophieuxuat(this);
+            clearpannelload(accsup);
+            //    accsup.TopLevel = false;
+            //  accsup.AutoScroll = true;
+            //    panelmain.Controls.Add(accsup);
+            //    accsup.Show();
+
+
+            #endregion
+
+        }
+
+        private void bútToánTổngHợpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            #region//btoanth
+
+
+
+            clearpannel();
+
+
+            View.BeeButtoantonghop buttoantonghop = new BeeButtoantonghop(this);
+            clearpannelload(buttoantonghop);
+
+
+
+            #endregion
+
+        }
+
+        private void sổCáiTàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            #region  // bcsocai
+
+
+            Model.Soketoan.socaitaikhoan();
+
+            #endregion
+
+        }
+
+        private void sổTàiKhoảnTổngHợpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            #region// bcsotonghop
+
+
+            Model.Soketoan.sotonghoptaikhoanchitiet();
+
+
+
+            #endregion
+
+        }
+
+        private void sổChiTiếtTàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            #region//bcsochitiet
+
+
+            Model.Soketoan.sochitiettaikhoan();
+
+
+            #endregion
+
+        }
+
+        private void sổNhậtKýChungToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            #region//bcsonhatkychung
+
+
+            Model.Soketoan.sonhatkychung();
+
+
+            #endregion
+
+        }
+
+        private void sổQuỹToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            #region//soquy
+
+
+            Model.Soketoan.soQuy();
+
+
+            #endregion
+
+        }
+
+        private void danhSáchLoạiTàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            #region//dsloaitk
+            string connection_string = Utils.getConnectionstr();
+
+            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+            var rs8 = Model.loaitaikhoanketoan.danhsachloaitaikhoan(dc);
+            Viewtable viewtblrs8 = new Viewtable(rs8, dc, "DANH SÁCH LOẠI TÀI KHOẢN", 1, "tk");// danh sach loại tài khoản kế toán
+
+            viewtblrs8.Show();
+
+
+            #endregion
+
+        }
+
+        private void thôngTinDoanhNghiệpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            View.BeeThongtindoanhnghiep view = new BeeThongtindoanhnghiep();
+            view.ShowDialog();
+        }
+
+        private void danhSáchTàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            #region//dstaikhoanketoan
+            string connection_string = Utils.getConnectionstr();
+
+            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+
+            var rs = Model.Taikhoanketoan.danhsachtaikhoan(dc);
+            Viewtable viewtblrs55 = new Viewtable(rs, dc, "DANH SÁCH TÀI KHOẢN KẾ TOÁN", 0, "tk");// view code 0 la danh sach tai khoan ke toan
+
+            viewtblrs55.Show();
+
+            #endregion
+
+            
+
+
+
+        }
+
+        private void hệThốngTàiKhoảnKếToánToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+
+
+            #region//hethongtk
+        
+                clearpannel();
+
+                View.BeeAccountsetup accsup = new BeeAccountsetup(this);
+                clearpannelload(accsup);
+
+        
+            #endregion
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        }
+
+        private void phânQuyềnNgườiDùngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            #region//phanquyen
+
+            string connection_string = Utils.getConnectionstr();
+
+            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+            var typeff = typeof(tbl_Temp);
+
+                BeeInputchange inputcdata = new BeeInputchange("", "USERNAME AND PASSWORD CONFIG ! ", dc, "tbl_Temp", "tbl_Temp", typeff, typeff, "id", "id", "");
+                inputcdata.TopLevel = false;
+                inputcdata.AutoScroll = true;
+
+                //    main1.clearpannel();
+
+
+                Controls.Add(inputcdata);
+                inputcdata.Show();
+
+
+                //Formload.TopLevel = false;
+                //Formload.AutoScroll = true;
+                //panelmain.Controls.Add(Formload);
+                //Formload.Show();
+
+
+
+        
+            #endregion
 
         }
     }

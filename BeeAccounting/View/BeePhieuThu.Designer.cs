@@ -369,9 +369,9 @@
             this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.btsua);
             this.panel2.Controls.Add(this.btluu);
-            this.panel2.Location = new System.Drawing.Point(4, 0);
+            this.panel2.Location = new System.Drawing.Point(4, 6);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1099, 45);
+            this.panel2.Size = new System.Drawing.Size(1099, 39);
             this.panel2.TabIndex = 1;
             // 
             // button6
@@ -404,7 +404,7 @@
             this.pictureBox1.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.ErrorImage")));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(998, 6);
+            this.pictureBox1.Location = new System.Drawing.Point(998, 2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(82, 34);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
