@@ -255,12 +255,6 @@
     <Compile Include="View\Beemainload.Designer.cs">
       <DependentUpon>Beemainload.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\xBeeAccountsetup.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\xBeeAccountsetup.Designer.cs">
-      <DependentUpon>xBeeAccountsetup.cs</DependentUpon>
-    </Compile>
     <Compile Include="View\BeePhieuchi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -566,9 +560,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Beemainload.resx">
       <DependentUpon>Beemainload.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\xBeeAccountsetup.resx">
-      <DependentUpon>xBeeAccountsetup.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\BeePhieuchi.resx">
       <DependentUpon>BeePhieuchi.cs</DependentUpon>

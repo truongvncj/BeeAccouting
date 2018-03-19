@@ -286,4 +286,3 @@ D:\GitHub\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.NPdanhsachxe.
 D:\GitHub\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.NPDanhsachnhavantai.resources
 D:\GitHub\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.BeeButtoantonghop.resources
 D:\GitHub\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.Beeseleckhobcxnt.resources
-D:\GitHub\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.xBeeAccountsetup.resources

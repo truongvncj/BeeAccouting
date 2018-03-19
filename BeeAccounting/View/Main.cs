@@ -2814,12 +2814,7 @@ namespace BEEACCOUNT.View
         private void button12_Click(object sender, EventArgs e)
         {
 
-            View.xBeeAccountsetup accsup = new xBeeAccountsetup(this);
-
-            accsup.TopLevel = false;
-            accsup.AutoScroll = true;
-            panelmain.Controls.Add(accsup);
-            accsup.Show();
+        
 
 
         }
