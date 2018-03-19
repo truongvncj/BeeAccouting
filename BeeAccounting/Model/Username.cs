@@ -52,7 +52,7 @@ namespace BEEACCOUNT.Model
             LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
 
             var rs = (from tbl_Temp in dc.tbl_Temps
-                      where tbl_Temp.username == Name
+                      where tbl_Temp.Username == Name
 
                       select tbl_Temp).FirstOrDefault();
             if (rs != null)
@@ -60,7 +60,7 @@ namespace BEEACCOUNT.Model
                 right = true;
 
                 Version = (int)rs.Version;
-                inputcontract = rs.inputcontract;
+                inputcontract = rs.Inputcontract;
               
             }
             else

@@ -27,7 +27,7 @@ namespace BEEACCOUNT.Model
 
                          Mã_tài_khoản = tbl_dstaikhoan.matk,
                          Tên_tài_khoản= tbl_dstaikhoan.tentk,
-                         Loại_tài_khoản = tbl_dstaikhoan.loaitkid,
+                    //     Loại_tài_khoản = tbl_dstaikhoan.loaitkid,
                          Mã_tài_khoản_cấp_trên =  tbl_dstaikhoan.matktren,
                          Cấp_tài_khoản =  tbl_dstaikhoan.captk,
                          Theo_dõi_chi_tiết =  tbl_dstaikhoan.loaichitiet,

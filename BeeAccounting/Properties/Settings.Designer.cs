@@ -66,5 +66,16 @@ namespace BEEACCOUNT.Properties {
                 return ((string)(this["BEEConnectionString3"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=HAN-L-3PFF7H2;Initial Catalog=BEE;Persist Security Info=True;User ID=" +
+            "sa;Password=tienmat1$")]
+        public string BEEConnectionString4 {
+            get {
+                return ((string)(this["BEEConnectionString4"]));
+            }
+        }
     }
 }

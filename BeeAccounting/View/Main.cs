@@ -2814,7 +2814,7 @@ namespace BEEACCOUNT.View
         private void button12_Click(object sender, EventArgs e)
         {
 
-            View.BeeAccountsetup accsup = new BeeAccountsetup(this);
+            View.xBeeAccountsetup accsup = new xBeeAccountsetup(this);
 
             accsup.TopLevel = false;
             accsup.AutoScroll = true;
@@ -3033,6 +3033,8 @@ namespace BEEACCOUNT.View
         private void sổChiTiếtTàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+
+
             #region//bcsochitiet
 
 
@@ -3069,43 +3071,16 @@ namespace BEEACCOUNT.View
 
         private void danhSáchLoạiTàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            #region//dsloaitk
-            string connection_string = Utils.getConnectionstr();
-
-            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
-
-            var rs8 = Model.loaitaikhoanketoan.danhsachloaitaikhoan(dc);
-            Viewtable viewtblrs8 = new Viewtable(rs8, dc, "DANH SÁCH LOẠI TÀI KHOẢN", 1, "tk");// danh sach loại tài khoản kế toán
-
-            viewtblrs8.Show();
-
-
-            #endregion
 
         }
 
         private void thôngTinDoanhNghiệpToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            View.BeeThongtindoanhnghiep view = new BeeThongtindoanhnghiep();
-            view.ShowDialog();
+
         }
 
         private void danhSáchTàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            #region//dstaikhoanketoan
-            string connection_string = Utils.getConnectionstr();
-
-            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
-
-
-            var rs = Model.Taikhoanketoan.danhsachtaikhoan(dc);
-            Viewtable viewtblrs55 = new Viewtable(rs, dc, "DANH SÁCH TÀI KHOẢN KẾ TOÁN", 0, "tk");// view code 0 la danh sach tai khoan ke toan
-
-            viewtblrs55.Show();
-
-            #endregion
-
-            
 
 
 
@@ -3115,16 +3090,6 @@ namespace BEEACCOUNT.View
         {
 
 
-
-            #region//hethongtk
-        
-                clearpannel();
-
-                View.BeeAccountsetup accsup = new BeeAccountsetup(this);
-                clearpannelload(accsup);
-
-        
-            #endregion
 
 
 
@@ -3153,25 +3118,406 @@ namespace BEEACCOUNT.View
 
             var typeff = typeof(tbl_Temp);
 
-                BeeInputchange inputcdata = new BeeInputchange("", "USERNAME AND PASSWORD CONFIG ! ", dc, "tbl_Temp", "tbl_Temp", typeff, typeff, "id", "id", "");
-                inputcdata.TopLevel = false;
-                inputcdata.AutoScroll = true;
+            BeeInputchange inputcdata = new BeeInputchange("", "Thiết lập và phân quyền người dùng", dc, "tbl_Temp", "tbl_Temp", typeff, typeff, "id", "id", "");
+            inputcdata.TopLevel = false;
+            inputcdata.AutoScroll = true;
 
-                //    main1.clearpannel();
-
-
-                Controls.Add(inputcdata);
-                inputcdata.Show();
+            //    main1.clearpannel();
 
 
-                //Formload.TopLevel = false;
-                //Formload.AutoScroll = true;
-                //panelmain.Controls.Add(Formload);
-                //Formload.Show();
+            Controls.Add(inputcdata);
+            inputcdata.Show();
+
+
+            //Formload.TopLevel = false;
+            //Formload.AutoScroll = true;
+            //panelmain.Controls.Add(Formload);
+            //Formload.Show();
 
 
 
-        
+
+            #endregion
+
+        }
+
+        private void danhSáchKhoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+
+            #region//khodskho
+            string connection_string = Utils.getConnectionstr();
+
+            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+            var rs5 = Model.Khohang.Danhsachkho(dc);
+            Viewtable viewtbl66 = new Viewtable(rs5, dc, "DANH SÁCH KHO HÀNG", 4, "tk");// mã 4 là danh sách kho
+
+            viewtbl66.Show();
+
+            //  }
+            #endregion
+
+
+
+
+        }
+
+        private void danhSáchNhómSảnPhẩmToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            #region//khonhomsanpham
+
+            string connection_string = Utils.getConnectionstr();
+
+            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+            var rs6 = Model.Khohang.danhsachnhomsanpham(dc);
+            Viewtable viewtbl2 = new Viewtable(rs6, dc, "DANH SÁCH NHÓM SẢN PHẨM", 6, "tk");// mã 6 là danh sách nhóm sản phẩm
+
+            viewtbl2.Show();
+
+            #endregion
+        }
+
+        private void danhSáchSảnPhẩmToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            #region//khodssanpham
+
+            string connection_string = Utils.getConnectionstr();
+
+            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+            var rs7 = Model.Khohang.danhsachsanpham(dc);
+            Viewtable viewtb77l = new Viewtable(rs7, dc, "DANH SÁCH SẢN PHẨM", 7, "tk");// mã 7 là danh sách nhóm sản phẩm
+
+            viewtb77l.Show();
+
+
+
+
+            #endregion
+
+        }
+
+        private void thôngTínDoanhNghiệpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            View.BeeThongtindoanhnghiep view = new BeeThongtindoanhnghiep();
+            view.ShowDialog();
+        }
+
+        private void danhSáchLoạiTàiKhoảnToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void danhSáchLoạiTàiKhoảnToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            #region//dsloaitk
+            string connection_string = Utils.getConnectionstr();
+
+            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+            var rs8 = Model.loaitaikhoanketoan.danhsachloaitaikhoan(dc);
+            Viewtable viewtblrs8 = new Viewtable(rs8, dc, "DANH SÁCH LOẠI TÀI KHOẢN", 1, "tk");// danh sach loại tài khoản kế toán
+
+            viewtblrs8.Show();
+
+
+            #endregion
+
+        }
+
+        private void danhSáchTàiKhoảnKếToánToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            #region//dstaikhoanketoan
+            string connection_string = Utils.getConnectionstr();
+
+            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+
+            var rs = Model.Taikhoanketoan.danhsachtaikhoan(dc);
+            Viewtable viewtblrs55 = new Viewtable(rs, dc, "DANH SÁCH TÀI KHOẢN KẾ TOÁN", 0, "tk");// view code 0 la danh sach tai khoan ke toan
+
+            viewtblrs55.Show();
+
+            #endregion
+
+
+        }
+
+        private void hệThốngTàiKhoảnKếToánToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void mởSổTheoDõiChiTiếtTàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            #region//sochitiet
+            string connection_string = Utils.getConnectionstr();
+
+            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+            var rs1 = Model.Danhsachtkchitiet.danhsachtaikhoanchitiet(dc);
+
+            Viewtable viewtbl = new Viewtable(rs1, dc, "DANH SÁCH MÃ CHI TIẾT TÀI KHOẢN", 2, "tk");// view code 2 mo so chi tiet tai khoan
+            viewtbl.Show();
+
+
+
+            #endregion
+
+        }
+
+        private void báoCáoNhậpXuấtTồnKhoToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+
+            #region//bcxuatnhapton
+
+
+            Model.Soketoan.sotonghopbaocaonhapxuatton();
+
+            #endregion
+
+        }
+
+        private void sổKhoToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+            //   Model.Soketoan();
+
+        }
+
+        private void danhSáchNhàCungCấpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+
+            //    Model.Soketoan.sotonghopbaocaonhapxuatton();
+
+        }
+
+        private void báoCáoKQKDToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            #region//xem báo cóa ckqkd
+
+
+            Model.Soketoan.baocaokqkd();
+
+            #endregion
+
+        }
+
+        private void nhậpSốĐầuKỳKQKDToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+
+            #region//xem nhập số dư dầu bckqkd
+
+            Model.Soketoan.xemvaupdatekqkd200();
+
+
+            #endregion
+
+
+
+
+        }
+
+        private void nhậpSốĐầuKỳCĐKTToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            #region//xem nhập số dư dầu bckqkd
+
+            Model.Soketoan.xemvaupdauCDKT200();
+
+
+            #endregion
+        }
+
+        private void bảngCĐKTToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+
+            #region//bccan doi ke toan
+            //if (name == "bcsonhatkychung")
+            //{
+
+            Model.Soketoan.baocaocandoiketoantt200lientuc();
+
+            //  }
+            #endregion
+
+
+        }
+
+        private void bảnCấnĐốiTàiKhoảnPhátSinhToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+
+            #region//bangsoducd
+            //if (name == "bcsonhatkychung")
+            //{
+
+            Model.Soketoan.Bangcandoiphatsinhketoantt200lientuc();
+
+            //  }
+            #endregion
+
+
+        }
+
+        private void báoCáoLCTTToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            #region//bangsoducd
+            //if (name == "bcsonhatkychung")
+            //{
+
+            Model.Soketoan.baocaoluuchuyentiente();
+
+            //  }
+            #endregion
+
+
+        }
+
+        private void nhậpSốĐầuKỳLCTTToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+
+            Model.Soketoan.nhapsodudaukylctt();
+
+
+
+
+        }
+
+        private void danhSáchNhàXeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            #region//dsxenp
+
+            //    NPDanhsachnhavantai
+            string connection_string = Utils.getConnectionstr();
+
+            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+            var rs1 = Model.Nhacungcap.danhsachNVT(dc);
+            Viewtable viewtbl = new Viewtable(rs1, dc, "DANH SÁCH NHÀ VẬN TẢI", 8, "tk");// mã 8 là danh sach nha nha van tai
+
+            viewtbl.Show();
+
+
+            #endregion
+
+
+        }
+
+        private void danhSáchXeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            string connection_string = Utils.getConnectionstr();
+
+            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+            var rs1 = Model.Nhacungcap.danhsachxe(dc);
+            Viewtable viewtbl = new Viewtable(rs1, dc, "DANH SÁCH XE", 9, "tk");// mã 8 là danh sach nha nha van tai
+
+            viewtbl.Show();
+
+
+
+
+
+        }
+
+        private void danhSáchKháchHàngVậnTảiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            #region//dskhachhangvantai
+
+            string connection_string = Utils.getConnectionstr();
+
+            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+            var rs1 = Model.Nhacungcap.danhsachkhachhangvantai(dc);
+            Viewtable viewtbl = new Viewtable(rs1, dc, "DANH SÁCH KHÁCH HÀNG VẬN TẢI", 10, "tk");// mã 8 là danh sach nha nha van tai
+
+            viewtbl.Show();
+
+
+
+            #endregion
+
+
+        }
+
+        private void báoCáoNhậpXuấtTồnKhoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            #region//bcxuatnhapton
+
+
+            Model.Soketoan.sotonghopbaocaonhapxuatton();
+
+            #endregion
+
+        }
+
+        private void bảngGiáVậnTảiTheoTuyếnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            List<View.beeselectinput.ComboboxItem> CombomCollection = new List<View.beeselectinput.ComboboxItem>();
+            string connection_string = Utils.getConnectionstr();
+
+            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+            var rs = from p in dc.tbl_NP_khachhangvanchuyens
+                         //     where p.Code != "DIS"
+                     orderby p.maKH
+                     select p;
+            foreach (var item2 in rs)
+            {
+                View.beeselectinput.ComboboxItem cb = new View.beeselectinput.ComboboxItem();
+                cb.Value = item2.maKH.Trim();
+                cb.Text = item2.maKH.Trim() + ": " + item2.tenKH.Trim();// + "    || Example: " + item2.Example;
+                CombomCollection.Add(cb);
+            }
+
+
+            beeselectinput choosesl = new beeselectinput("Chọn khách hàng vận tải", CombomCollection);
+            choosesl.ShowDialog();
+
+            if (choosesl.kq == true)
+            {
+                string makh = choosesl.value;
+                String tenkh = choosesl.valuetext;
+                //string connection_string = Utils.getConnectionstr();
+
+                //LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+                var rs1 = Model.Nhacungcap.danhsachgiatheotuyenvamanhavantai(dc, makh);
+                Viewtable viewtbl = new Viewtable(rs1, dc, "DANH SÁCH GIÁ THEO TUYẾN CỦA KHÁCH HÀNG " + tenkh.ToUpper(), 11, makh);// mã 8 là danh sach nha nha van tai
+
+                viewtbl.Show();
+            }
+        }
+
+        private void danhSáchNhàCungCấpToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+            #region//dsnhacungcap
+
+            string connection_string = Utils.getConnectionstr();
+
+            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+            var rs1 = Model.Nhacungcap.danhsachNhacungcap(dc);
+            Viewtable viewtbl = new Viewtable(rs1, dc, "DANH SÁCH NHÀ CUNG CẤP", 5, "tk");// mã 5 là danh sach nha cung cap
+
+            viewtbl.Show();
+
+
             #endregion
 
         }

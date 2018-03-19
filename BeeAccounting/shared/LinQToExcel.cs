@@ -70,17 +70,17 @@ namespace BEEACCOUNT
                 GC.Collect();
             }
         }
-        public  DataTable GetDataFromExcel(string filename)
+        public DataTable GetDataFromExcel(string filename)
         {
-                           
+
             var missing = System.Reflection.Missing.Value;
 
-      
+
             cExcel.Application xlApp = new cExcel.Application();
             //cExcel.Workbooks xlWorkBook = null;
-          
+
             cExcel.Worksheet xlWorkSheet = GetworksheetObject(filename);
-        
+
             cExcel.Range xlRange = xlWorkSheet.UsedRange;
 
             Array myValues = (Array)xlRange.Cells.Value2;
@@ -103,7 +103,7 @@ namespace BEEACCOUNT
                 {
                     mainDt.Columns.Add(new DataColumn(myValues.GetValue(1, i).ToString()));
                 }
-               
+
             }
 
             // Get the row information
@@ -135,14 +135,15 @@ namespace BEEACCOUNT
 
             //     xlWorkBook.Close(true, missing, missing);
 
-       //     xlWorkSheet = null;
-       //     xlWorkBook = null;
-       //     xlApp = null;
+            //     xlWorkSheet = null;
+            //     xlWorkBook = null;
+            //     xlApp = null;
             xlApp.Quit();
+            releaseObject(xlRange);
+            releaseObject(xlWorkSheet);
+            releaseObject(xlApp);
+            GC.Collect();
 
-           releaseObject(xlWorkSheet);
-            //releaseObject(xlWorkBook);
-           releaseObject(xlApp);
             return mainDt;
         }
         //-- get string dâttaable
@@ -160,10 +161,10 @@ namespace BEEACCOUNT
 
         //    table.Columns.Add("Valid_From", typeof(DateTime));
         //    table.Columns.Add("Valid_to", typeof(DateTime));
-         
-         
-         
-            
+
+
+
+
         //    //... add as many columns as your excel file has!!
 
         //    string connString = SetConnectionString(filePath);
@@ -184,7 +185,7 @@ namespace BEEACCOUNT
         //        headindex = 1;
         //        for (int columid = 0; columid <= 30; columid++)
         //          {
-               
+
         //            string value = Utils.GetValueOfCellInExcel(worksheet, rowid, columid);
 
         //            if (value != null)
@@ -204,7 +205,7 @@ namespace BEEACCOUNT
         //                        columpmaterial = columid;
         //                        headindex = 0;
         //                    }
-                      
+
         //                }
 
 
@@ -216,7 +217,7 @@ namespace BEEACCOUNT
         //                        headindex = 0;
         //                    }
 
-                         
+
         //                }
 
 
@@ -272,8 +273,8 @@ namespace BEEACCOUNT
         //                    dr["Valid_From"] = Utils.GetValueOfCellInExcel(worksheet, rowid, columValid_From);
         //                    dr["Valid_to"] = Utils.GetValueOfCellInExcel(worksheet, rowid, columValid_to);
 
-                            
-                          
+
+
         //                    table.Rows.Add(dr);
 
 
@@ -300,115 +301,115 @@ namespace BEEACCOUNT
 
         //    }
 
-        
-           
+
+
 
 
         //    return table;
         //}
 
 
-     //   public static DataTable GetDataFromExcel3(string fileName)
-     //   {
-     //       //        private DataTable GetExcelTable(string fileName, string sheetName)
-     //       //  {
-     //       // sheetName = sheetName.Replace(".", "#");
-     //       string sConnection = SetConnectionString(fileName);
-     //        string sSheetName = GetworksheetObject(fileName).Name;
-     //       //     string strSelect = string.Format("select * from [{0}$]", sheetName);
+        //   public static DataTable GetDataFromExcel3(string fileName)
+        //   {
+        //       //        private DataTable GetExcelTable(string fileName, string sheetName)
+        //       //  {
+        //       // sheetName = sheetName.Replace(".", "#");
+        //       string sConnection = SetConnectionString(fileName);
+        //        string sSheetName = GetworksheetObject(fileName).Name;
+        //       //     string strSelect = string.Format("select * from [{0}$]", sheetName);
 
-     //       DataTable table = new DataTable();
-     //       //table.Columns.Add("PriceList", typeof(string));
-     //       //table.Columns.Add("Material", typeof(string));
-     //       //table.Columns.Add("MaterialNAme", typeof(string));
-     //       //table.Columns.Add("Amount", typeof(double));
+        //       DataTable table = new DataTable();
+        //       //table.Columns.Add("PriceList", typeof(string));
+        //       //table.Columns.Add("Material", typeof(string));
+        //       //table.Columns.Add("MaterialNAme", typeof(string));
+        //       //table.Columns.Add("Amount", typeof(double));
 
-     //       //table.Columns.Add("Unit", typeof(string));
-     //       //table.Columns.Add("UoM", typeof(string));
+        //       //table.Columns.Add("Unit", typeof(string));
+        //       //table.Columns.Add("UoM", typeof(string));
 
-     //       //table.Columns.Add("Valid_From", typeof(DateTime));
-     //       //table.Columns.Add("Valid_to", typeof(DateTime));
+        //       //table.Columns.Add("Valid_From", typeof(DateTime));
+        //       //table.Columns.Add("Valid_to", typeof(DateTime));
 
-     //       cExcel.Application ExcelObj = new cExcel.Application();
-
-            
-     //       OleDbCommand oleExcelCommand = default(OleDbCommand);
-     //       OleDbDataReader oleExcelReader = default(OleDbDataReader);
-     //       OleDbConnection oleExcelConnection = default(OleDbConnection);
-
-     //   //    sConnection = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\\Test.xls;Extended Properties=\"Excel 12.0;HDR=No;IMEX=1\"";
-
-     //       oleExcelConnection = new OleDbConnection(sConnection);
-     //       oleExcelConnection.Open();
-
-     ////       dtTablesList = oleExcelConnection.GetSchema("Tables");
-
-     //       //if (table.Rows.Count > 0)
-     //       //{
-     //       //    sSheetName = table.Rows[0]["TABLE_NAME"].ToString();
-     //       //}
-
-     //       table.Clear();
-     //       table.Dispose();
+        //       cExcel.Application ExcelObj = new cExcel.Application();
 
 
-     //       if (!string.IsNullOrEmpty(sSheetName))
-     //       {
-     //           oleExcelCommand = oleExcelConnection.CreateCommand();
-     //           oleExcelCommand.CommandText = "Select * From [" + sSheetName + "]";
-     //           oleExcelCommand.CommandType = CommandType.Text;
-     //           oleExcelReader = oleExcelCommand.ExecuteReader();
-     //       //    nowputRow = 0;
+        //       OleDbCommand oleExcelCommand = default(OleDbCommand);
+        //       OleDbDataReader oleExcelReader = default(OleDbDataReader);
+        //       OleDbConnection oleExcelConnection = default(OleDbConnection);
 
-     //           while (oleExcelReader.Read())
-     //           {
+        //   //    sConnection = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\\Test.xls;Extended Properties=\"Excel 12.0;HDR=No;IMEX=1\"";
 
-                  
-     //               for (int i = 0; i < oleExcelReader.FieldCount; i++)
-     //               {
-     //                   if (oleExcelReader[i] != DBNull.Value )
-     //                   {
+        //       oleExcelConnection = new OleDbConnection(sConnection);
+        //       oleExcelConnection.Open();
 
-     //            //           dr[i.ToString()] = (oleExcelReader[i]).ToString();
-     //                   }
-     //                   else
-     //                {
-     //          //             dr[i.ToString()] = "";
-     //                   }
-                    
-     //               }
+        ////       dtTablesList = oleExcelConnection.GetSchema("Tables");
+
+        //       //if (table.Rows.Count > 0)
+        //       //{
+        //       //    sSheetName = table.Rows[0]["TABLE_NAME"].ToString();
+        //       //}
+
+        //       table.Clear();
+        //       table.Dispose();
 
 
-     //               DataRow dr = table.NewRow();
-     //               //dr["Material"] = Utils.GetValueOfCellInExcel(worksheet, rowid, columpmaterial);
-     //               //dr["MaterialNAme"] = Utils.GetValueOfCellInExcel(worksheet, rowid, columname);
-     //               //dr["Amount"] = Utils.GetValueOfCellInExcel(worksheet, rowid, columpamount);
-     //               //dr["Unit"] = Utils.GetValueOfCellInExcel(worksheet, rowid, columunit);
-     //               //dr["UoM"] = Utils.GetValueOfCellInExcel(worksheet, rowid, columUoM);
-     //               //dr["Valid_From"] = Utils.GetValueOfCellInExcel(worksheet, rowid, columValid_From);
-     //               //dr["Valid_to"] = Utils.GetValueOfCellInExcel(worksheet, rowid, columValid_to);
+        //       if (!string.IsNullOrEmpty(sSheetName))
+        //       {
+        //           oleExcelCommand = oleExcelConnection.CreateCommand();
+        //           oleExcelCommand.CommandText = "Select * From [" + sSheetName + "]";
+        //           oleExcelCommand.CommandType = CommandType.Text;
+        //           oleExcelReader = oleExcelCommand.ExecuteReader();
+        //       //    nowputRow = 0;
+
+        //           while (oleExcelReader.Read())
+        //           {
 
 
+        //               for (int i = 0; i < oleExcelReader.FieldCount; i++)
+        //               {
+        //                   if (oleExcelReader[i] != DBNull.Value )
+        //                   {
 
-     //               table.Rows.Add(dr);
+        //            //           dr[i.ToString()] = (oleExcelReader[i]).ToString();
+        //                   }
+        //                   else
+        //                {
+        //          //             dr[i.ToString()] = "";
+        //                   }
+
+        //               }
+
+
+        //               DataRow dr = table.NewRow();
+        //               //dr["Material"] = Utils.GetValueOfCellInExcel(worksheet, rowid, columpmaterial);
+        //               //dr["MaterialNAme"] = Utils.GetValueOfCellInExcel(worksheet, rowid, columname);
+        //               //dr["Amount"] = Utils.GetValueOfCellInExcel(worksheet, rowid, columpamount);
+        //               //dr["Unit"] = Utils.GetValueOfCellInExcel(worksheet, rowid, columunit);
+        //               //dr["UoM"] = Utils.GetValueOfCellInExcel(worksheet, rowid, columUoM);
+        //               //dr["Valid_From"] = Utils.GetValueOfCellInExcel(worksheet, rowid, columValid_From);
+        //               //dr["Valid_to"] = Utils.GetValueOfCellInExcel(worksheet, rowid, columValid_to);
 
 
 
+        //               table.Rows.Add(dr);
 
 
-     //           }
-     //           oleExcelReader.Close();
-     //       }
-     //       oleExcelConnection.Close();
 
-     //       ExcelObj.Quit();
 
-     //       //releaseObject(xlWorkSheet);
-     //       //releaseObject(xlWorkBook);
-     //       //releaseObject.(ExcelObj);
 
-     //       return table;
-     //   }
+        //           }
+        //           oleExcelReader.Close();
+        //       }
+        //       oleExcelConnection.Close();
+
+        //       ExcelObj.Quit();
+
+        //       //releaseObject(xlWorkSheet);
+        //       //releaseObject(xlWorkBook);
+        //       //releaseObject.(ExcelObj);
+
+        //       return table;
+        //   }
 
 
         // public static DataTable GetDataFromExcel(string filePath)
@@ -444,29 +445,29 @@ namespace BEEACCOUNT
 
 
 
-    //    //getstring datatable
-    //    public static string SetConnectionString(string fileName)
-    //{
-    //    //string ConnectionStringTemplate;
-    //    //if (fileName.Contains(".xlsx"))
-    //    //{
-    //    //    ConnectionStringTemplate = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + fileName + ";" + "Extended Properties=Excel 12.0;";
-    //    //}
-    //    //else
-    //    //{
-    //    //    ConnectionStringTemplate = "Provider=Microsoft.Jet.OLEDB.4.0; Data Source= " + fileName + ";" + "Extended Properties=Excel 8.0;";
-    //    //}
+        //    //getstring datatable
+        //    public static string SetConnectionString(string fileName)
+        //{
+        //    //string ConnectionStringTemplate;
+        //    //if (fileName.Contains(".xlsx"))
+        //    //{
+        //    //    ConnectionStringTemplate = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + fileName + ";" + "Extended Properties=Excel 12.0;";
+        //    //}
+        //    //else
+        //    //{
+        //    //    ConnectionStringTemplate = "Provider=Microsoft.Jet.OLEDB.4.0; Data Source= " + fileName + ";" + "Extended Properties=Excel 8.0;";
+        //    //}
 
-    //    //return ConnectionStringTemplate;
-    //}
+        //    //return ConnectionStringTemplate;
+        //}
 
-  
+
 
         public static cExcel.Worksheet GetworksheetObject(string FileName)
         {
 
 
-     //       SetConnectionString();
+            //       SetConnectionString();
             // tim sheetName
             cExcel.Application ExcelObj = new cExcel.Application();
 
@@ -480,7 +481,7 @@ namespace BEEACCOUNT
             cExcel.Worksheet worksheet = (cExcel.Worksheet)sheets.get_Item(1);//Get the reference of second worksheet
 
 
-          
+
 
             return worksheet;
             //  string sheetName =  worksheet.Name;//Get the name of worksheet.

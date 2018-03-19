@@ -12,10 +12,10 @@ using System.Windows.Forms;
 
 namespace BEEACCOUNT.View
 {
-    public partial class BeeAccountsetup : Form
+    public partial class xBeeAccountsetup : Form
     {
         public View.Main main1;
-        public BeeAccountsetup(View.Main Main)
+        public xBeeAccountsetup(View.Main Main)
         {
             InitializeComponent();
 

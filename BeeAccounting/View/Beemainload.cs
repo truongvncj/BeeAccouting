@@ -1026,212 +1026,22 @@ namespace BEEACCOUNT.View
             //bangsoducd
             //     bangnhapsodulctt
 
-            #region//xem nhập số dư dầu lctt
-            if (name == "bangnhapsodulctt")
-            {
-                Model.Soketoan.nhapsodudaukylctt();
 
+           
 
-            }
-            #endregion
-
-            #region//xem bangsoducd
-            if (name == "bcluuchuyentien")
-            {
-                #region//bangsoducd
-                //if (name == "bcsonhatkychung")
-                //{
-
-                Model.Soketoan.baocaoluuchuyentiente();
-
-                //  }
-                #endregion
-
-            }
-            #endregion
-
-
-            #region//xem bangsoducd
-            if (name == "bangsoducd")
-            {
-                #region//bangsoducd
-                //if (name == "bcsonhatkychung")
-                //{
-
-                Model.Soketoan.Bangcandoiphatsinhketoantt200lientuc();
-
-                //  }
-                #endregion
-
-            }
-            #endregion
-
-            #region//xem nhập số dư dầu bckqkd
-            if (name == "bangnhapsoducdkt")
-            {
-                Model.Soketoan.xemvaupdauCDKT200();
-
-
-            }
-            #endregion
-
-
-            #region//xem bangcdkt200
-            if (name == "bangcdkt200")
-            {
-                #region//bccan doi ke toan
-                //if (name == "bcsonhatkychung")
-                //{
-
-                Model.Soketoan.baocaocandoiketoantt200lientuc();
-
-                //  }
-                #endregion
-
-            }
-            #endregion
-
-
-            #region//xem nhập số dư dầu bckqkd
-            if (name == "nhapdaukybckdkd")
-            {
-                Model.Soketoan.xemvaupdatekqkd200();
-
-
-            }
-            #endregion
-
-
-            #region//xem báo cóa ckqkd
-            if (name == "bckqkdview")
-            {
-
-                Model.Soketoan.baocaokqkd();
-            }
-            #endregion
-
-
-            #region//dskhachhangvantai
-            if (name == "dskhachhangvantai")
-            {
-                //   string connection_string = Utils.getConnectionstr();
-
-                //   LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
-
-                var rs1 = Model.Nhacungcap.danhsachkhachhangvantai(dc);
-                Viewtable viewtbl = new Viewtable(rs1, dc, "DANH SÁCH KHÁCH HÀNG VẬN TẢI", 10, "tk");// mã 8 là danh sach nha nha van tai
-
-                viewtbl.Show();
-
-
-            }
-            #endregion
 
 
             //     npdanhsachxe
 
 
-            #region//npdanhsachxe
-            if (name == "npdanhsachxe")
-            {
-                //  string connection_string = Utils.getConnectionstr();
-
-                //   LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
-
-                var rs1 = Model.Nhacungcap.danhsachxe(dc);
-                Viewtable viewtbl = new Viewtable(rs1, dc, "DANH SÁCH XE", 9, "tk");// mã 8 là danh sach nha nha van tai
-
-                viewtbl.Show();
-
-
-
-
-            }
-            #endregion
-
 
             //dsxenp
 
 
-            #region//dsxenp
-            if (name == "dsxenp")
-            {
-
-                //    NPDanhsachnhavantai
-                //    string connection_string = Utils.getConnectionstr();
-
-                //       LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
-
-                var rs1 = Model.Nhacungcap.danhsachNVT(dc);
-                Viewtable viewtbl = new Viewtable(rs1, dc, "DANH SÁCH NHÀ VẬN TẢI", 8, "tk");// mã 8 là danh sach nha nha van tai
-
-                viewtbl.Show();
-
-
-            }
-            #endregion
 
 
 
 
-
-
-            #region//khodskho
-            if (name == "khodskho")
-            {
-                //     string connection_string = Utils.getConnectionstr();
-
-                //        LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
-
-                var rs5 = Model.Khohang.Danhsachkho(dc);
-                Viewtable viewtbl66 = new Viewtable(rs5, dc, "DANH SÁCH KHO HÀNG", 4, "tk");// mã 4 là danh sách kho
-
-                viewtbl66.Show();
-
-            }
-            #endregion
-
-
-            #region//khonhomsanpham
-            if (name == "khonhomsanpham")
-            {
-                //       string connection_string = Utils.getConnectionstr();
-
-                //    LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
-
-                var rs6 = Model.Khohang.danhsachnhomsanpham(dc);
-                Viewtable viewtbl2 = new Viewtable(rs6, dc, "DANH SÁCH NHÓM SẢN PHẨM", 6, "tk");// mã 6 là danh sách nhóm sản phẩm
-
-                viewtbl2.Show();
-
-            }
-            #endregion
-
-            #region//khodssanpham
-            if (name == "khodssanpham")
-            {
-                //      string connection_string = Utils.getConnectionstr();
-
-                //    LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
-
-                var rs7 = Model.Khohang.danhsachsanpham(dc);
-                Viewtable viewtb77l = new Viewtable(rs7, dc, "DANH SÁCH SẢN PHẨM", 7, "tk");// mã 7 là danh sách nhóm sản phẩm
-
-                viewtb77l.Show();
-
-
-
-            }
-            #endregion
-
-
-            #region//bcxuatnhapton
-            if (name == "bcxuatnhapton")
-            {
-
-                Model.Soketoan.sotonghopbaocaonhapxuatton();
-            }
-            #endregion
 
 
 
@@ -1249,37 +1059,7 @@ namespace BEEACCOUNT.View
             //btoanth
 
 
-            #region//sochitiet
-            if (name == "sochitiet")
-            {
-                var rs1 = Model.Danhsachtkchitiet.danhsachtaikhoanchitiet(dc);
-
-                Viewtable viewtbl = new Viewtable(rs1, dc, "DANH SÁCH MÃ CHI TIẾT TÀI KHOẢN", 2, "tk");// view code 2 mo so chi tiet tai khoan
-                viewtbl.Show();
-
-
-            }
-            #endregion
-
-
             // dsnhacungcap
-
-
-            #region//dsnhacungcap
-            if (name == "dsnhacungcap")
-            {
-                // string connection_string = Utils.getConnectionstr();
-
-                // LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
-
-                var rs1 = Model.Nhacungcap.danhsachNhacungcap(dc);
-                Viewtable viewtbl = new Viewtable(rs1, dc, "DANH SÁCH NHÀ CUNG CẤP", 5, "tk");// mã 5 là danh sach nha cung cap
-
-                viewtbl.Show();
-
-
-            }
-            #endregion
 
 
 
@@ -1308,40 +1088,7 @@ namespace BEEACCOUNT.View
 
         private void button8_Click_1(object sender, EventArgs e)
         {
-            List<View.beeselectinput.ComboboxItem> CombomCollection = new List<View.beeselectinput.ComboboxItem>();
-            string connection_string = Utils.getConnectionstr();
-
-            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
-
-            var rs = from p in dc.tbl_NP_khachhangvanchuyens
-                         //     where p.Code != "DIS"
-                     orderby p.maKH
-                     select p;
-            foreach (var item2 in rs)
-            {
-                View.beeselectinput.ComboboxItem cb = new View.beeselectinput.ComboboxItem();
-                cb.Value = item2.maKH.Trim();
-                cb.Text = item2.maKH.Trim() + ": " + item2.tenKH.Trim();// + "    || Example: " + item2.Example;
-                CombomCollection.Add(cb);
-            }
-
-
-            beeselectinput choosesl = new beeselectinput("Chọn khách hàng vận tải", CombomCollection);
-            choosesl.ShowDialog();
-
-            if (choosesl.kq == true)
-            {
-                string makh = choosesl.value;
-                String tenkh = choosesl.valuetext;
-                //string connection_string = Utils.getConnectionstr();
-
-                //LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
-
-                var rs1 = Model.Nhacungcap.danhsachgiatheotuyenvamanhavantai(dc, makh);
-                Viewtable viewtbl = new Viewtable(rs1, dc, "DANH SÁCH GIÁ THEO TUYẾN CỦA KHÁCH HÀNG " + tenkh.ToUpper(), 11, makh);// mã 8 là danh sach nha nha van tai
-
-                viewtbl.Show();
-            }
+         
 
         }
 

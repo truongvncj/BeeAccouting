@@ -550,7 +550,7 @@ namespace BEEACCOUNT.Model
             foreach (Form frm in fc)
             {
 
-                if (frm.Text == "Chọn tài khoản")
+                if (frm.Text == "Tài khoản")
                 {
                     kq = true;
                     frm.Focus();

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="BEE" Class="LinqtoSQLDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-8D4F853\SQLEXPRESS;Initial Catalog=BEE;Persist Security Info=True;User ID=sa" SettingsObjectName="BEEACCOUNT.Properties.Settings" SettingsPropertyName="BEEConnectionString3" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=HAN-L-3PFF7H2;Initial Catalog=BEE;Persist Security Info=True;User ID=sa" SettingsObjectName="BEEACCOUNT.Properties.Settings" SettingsPropertyName="BEEConnectionString4" Provider="System.Data.SqlClient" />
   <Table Name="dbo.CDKT200Dauky" Member="CDKT200Daukies">
     <Type Name="CDKT200Dauky">
       <Column Name="nam" Type="System.Int32" DbType="Int" CanBeNull="true" />
@@ -17,12 +17,12 @@
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="Version" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="RegionCode" Type="System.String" DbType="NChar(225)" CanBeNull="true" />
-      <Column Name="username" Type="System.String" DbType="NChar(225)" CanBeNull="true" />
-      <Column Name="password" Type="System.String" DbType="NChar(225)" CanBeNull="true" />
-      <Column Name="userright" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="note" Type="System.String" DbType="NChar(225)" CanBeNull="true" />
-      <Column Name="inputcontract" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
-      <Column Name="name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Username" Type="System.String" DbType="NChar(225)" CanBeNull="true" />
+      <Column Name="Password" Type="System.String" DbType="NChar(225)" CanBeNull="true" />
+      <Column Name="Userright" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Note" Type="System.String" DbType="NChar(225)" CanBeNull="true" />
+      <Column Name="Inputcontract" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.KQKD200Dauky" Member="KQKD200Daukies">
@@ -42,6 +42,17 @@
       <Column Name="cfdnhoanlai" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Column Name="laicbcophieu" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Column Name="laigiaomtrencphieu" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="username" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LTTT200Dauky" Member="LTTT200Daukies">
+    <Type Name="LTTT200Dauky">
+      <Column Name="nam" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Machitieu" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Tenchitieu" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="Cachghi" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="Sotien" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="username" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
     </Type>
@@ -1138,17 +1149,6 @@
       <Column Name="TKdoiung" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
       <Column Name="TenchitietTM" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
       <Column Name="Sophieu" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.LTTT200Dauky" Member="LTTT200Daukies">
-    <Type Name="LTTT200Dauky">
-      <Column Name="nam" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="Machitieu" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="Tenchitieu" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
-      <Column Name="Cachghi" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
-      <Column Name="Sotien" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="username" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
     </Type>
   </Table>
 </Database>

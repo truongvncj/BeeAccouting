@@ -30,7 +30,7 @@ namespace BEEACCOUNT.View
          
 
             var pasonsr = (from tbl_Temp in dc.tbl_Temps
-                             where tbl_Temp.username.Trim() == txtusername.Text && tbl_Temp.password.Trim() == txtoldpass.Text
+                             where tbl_Temp.Username.Trim() == txtusername.Text && tbl_Temp.Password.Trim() == txtoldpass.Text
                            select tbl_Temp);
 
             if (pasonsr.Count() >0)
@@ -40,12 +40,12 @@ namespace BEEACCOUNT.View
                 {
 
               
-                    if (txtoldpass.Text == item.password.Trim() && item.username.Trim() == txtusername.Text)
+                    if (txtoldpass.Text == item.Password.Trim() && item.Username.Trim() == txtusername.Text)
                     {
 
                         if (txtnewpass.Text == txtnewconfpass.Text)
                         {
-                            item.password = txtnewconfpass.Text;
+                            item.Password = txtnewconfpass.Text;
                             dc.SubmitChanges();
                             MessageBox.Show("Password Change !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }

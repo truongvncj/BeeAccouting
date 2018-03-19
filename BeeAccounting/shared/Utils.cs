@@ -236,9 +236,9 @@ namespace BEEACCOUNT
             LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
 
             var rs = (from tbl_Temp in dc.tbl_Temps
-                      where tbl_Temp.username == username
+                      where tbl_Temp.Username == username
 
-                      select tbl_Temp.userright).FirstOrDefault();
+                      select tbl_Temp.Userright).FirstOrDefault();
             if (rs == null)
             {
                 return 0;
@@ -257,9 +257,9 @@ namespace BEEACCOUNT
             LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
 
             var rs = (from tbl_Temp in dc.tbl_Temps
-                      where tbl_Temp.username.Trim() == username.Trim()
+                      where tbl_Temp.Username.Trim() == username.Trim()
 
-                      select tbl_Temp.name).FirstOrDefault();
+                      select tbl_Temp.Name).FirstOrDefault();
             if (rs == null)
             {
                 return "";
