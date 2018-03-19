@@ -143,8 +143,7 @@ namespace BEEACCOUNT.View
 
                 if (rs1 != null)
                 {
-                    this.txt_nametk.Text = rs1.tentk;
-
+                
                     if (rs1.loaitkid != null)
                     {
                         foreach (var item in cbloaitk.Items)
@@ -162,14 +161,15 @@ namespace BEEACCOUNT.View
 
                    
                     }
-                    
-                    this.txtcaptaikhoan.Text = rs1.captk.ToString();
+                    this.txt_nametk.Text = rs1.tentk.ToString().Trim();
 
-                    this.cbtkmother.Text = rs1.matktren;
+                    this.txtcaptaikhoan.Text = rs1.captk.ToString().Trim();
+
+                    this.cbtkmother.Text = rs1.matktren.Trim();
                     this.checkbookchitiet.Checked = rs1.loaichitiet;
                     txtCodauky.Text = rs1.codk.ToString();
                     txtNodauky.Text = rs1.nodk.ToString();
-
+                
 
                 }
 
