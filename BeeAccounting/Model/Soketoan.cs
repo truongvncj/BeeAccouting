@@ -1488,7 +1488,7 @@ namespace BEEACCOUNT.Model
                                   Tên_chi_tiết = p.tenchitiet,
                                   Phát_sinh_có = p.tPSCo,
                                   Phát_sinh_nợ = p.tPSNo,
-                                  Số_dư_phát_sinh = p.tPsNotruPSco,
+                              //    Số_dư_phát_sinh = p.tPsNotruPSco,
 
 
 
@@ -2168,71 +2168,49 @@ namespace BEEACCOUNT.Model
                     Utils ut = new Utils();
                     var dataset1 = ut.ToDataTable(dc, header);
 
-                    var dstaikhoan = from p in dc.tbl_dstaikhoans
-                                         //    where p.matk == mataikhoan
-                                     select p;
 
-                    if (dstaikhoan.Count() > 0)
+
+
+                    #region caculation cdkt200 lien tuc
+                    SqlConnection conn2 = null;
+                    SqlDataReader rdr1 = null;
+
+                    string destConnString = Utils.getConnectionstr();
+                    try
                     {
-                        //   int stt = 0;
-                        foreach (var item in dstaikhoan)
-                        {
-                            //   stt = stt + 1;
 
-                            RptdetaiCDP detail = new RptdetaiCDP();
-
-
-                            detail.matk = item.matk;
-                            detail.tentk = item.tentk.Trim();
-
-                            detail.Codk = (from tbl_Socai in dc.tbl_Socais
-                                           where tbl_Socai.Ngayctu < fromdate
-                                           && tbl_Socai.TkCo.Trim() == item.matk.Trim()
-
-                                           select tbl_Socai.PsCo).Sum().GetValueOrDefault(0) + item.codk.GetValueOrDefault(0);
-
-                            detail.Nodk = (from tbl_Socai in dc.tbl_Socais
-                                           where tbl_Socai.Ngayctu < fromdate
-                                           && tbl_Socai.TkNo.Trim() == item.matk.Trim()
-
-                                           select tbl_Socai.PsNo).Sum().GetValueOrDefault(0) + item.nodk.GetValueOrDefault(0);
-
-                            detail.Psco = (from tbl_Socai in dc.tbl_Socais
-                                           where tbl_Socai.Ngayctu >= fromdate
-                                           && tbl_Socai.Ngayctu <= todate
-                                           && tbl_Socai.TkCo.Trim() == item.matk
-
-                                           select tbl_Socai.PsCo).Sum().GetValueOrDefault(0);
-
-                            detail.Psno = (from tbl_Socai in dc.tbl_Socais
-                                           where tbl_Socai.Ngayctu >= fromdate
-                                           && tbl_Socai.Ngayctu <= todate
-                                           && tbl_Socai.TkNo.Trim() == item.matk
-
-                                           select tbl_Socai.PsNo).Sum().GetValueOrDefault(0);
-
-
-                            detail.Cock = detail.Codk + detail.Psco;
-
-                            detail.Nock = detail.Nodk + detail.Psno;
-
-                            detail.username = username;
-
-
-                            dc.RptdetaiCDPs.InsertOnSubmit(detail);
-                            dc.SubmitChanges();
+                        conn2 = new SqlConnection(destConnString);
+                        conn2.Open();
+                        SqlCommand cmd1 = new SqlCommand("calulationCDPStoRptdetaiCDP", conn2);
+                        cmd1.CommandType = CommandType.StoredProcedure;
+                        cmd1.CommandTimeout = 0;
+                        cmd1.Parameters.Add("@username", SqlDbType.VarChar).Value = Utils.getusername();
+                        cmd1.Parameters.Add("@yearchon", SqlDbType.Int).Value = int.Parse(yearchon);
+                        //   cmd1.Parameters.Add("@todate", SqlDbType.DateTime).Value = todate;
 
 
 
 
+                        rdr1 = cmd1.ExecuteReader();
 
-
-
-
-                        }
 
 
                     }
+                    finally
+                    {
+                        if (conn2 != null)
+                        {
+                            conn2.Close();
+                        }
+                        if (rdr1 != null)
+                        {
+                            rdr1.Close();
+                        }
+                    }
+                    //     MessageBox.Show("ok", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    #endregion
+
 
 
 
@@ -2241,7 +2219,19 @@ namespace BEEACCOUNT.Model
                                     where p.username == username
                                     orderby p.matk
 
-                                    select p;
+                                    select new {
+                                            p.Codk,
+                                            p.Nodk,
+                                            p.matk,
+                                        tentk =     p.tentk.Trim(),
+                                        Psco =        p.Psco.GetValueOrDefault(0),
+                                        Psno =      p.Psno.GetValueOrDefault(0),
+                                        Nock =     p.Nock.GetValueOrDefault(0),
+                                        Cock =   p.Cock.GetValueOrDefault(0),
+
+
+
+                                    } ;
 
 
 
