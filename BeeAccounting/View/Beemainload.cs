@@ -161,7 +161,7 @@ namespace BEEACCOUNT.View
             //        }
 
 
-            //        ctract.inputcontract();
+            //        ctract.phanquyen();
 
 
 
@@ -191,7 +191,7 @@ namespace BEEACCOUNT.View
 
 
 
-            //        ctract.inputcontract();
+            //        ctract.phanquyen();
 
 
             //        rscustemp2 = from tbl_kacontractmasterdata in dc.tbl_kacontractbegindatas

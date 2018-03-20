@@ -26,7 +26,7 @@ namespace BEEACCOUNT.Model
 
 
                          Mã_tài_khoản = tbl_dstaikhoan.matk,
-                         Tên_tài_khoản= tbl_dstaikhoan.tentk,
+                         Tên_tài_khoản= tbl_dstaikhoan.tentk.Trim(),
                     //     Loại_tài_khoản = tbl_dstaikhoan.loaitkid,
                          Mã_tài_khoản_cấp_trên =  tbl_dstaikhoan.matktren,
                          Cấp_tài_khoản =  tbl_dstaikhoan.captk,
@@ -152,6 +152,48 @@ namespace BEEACCOUNT.Model
 
             db.tbl_Socais.InsertOnSubmit(socaips);
             db.SubmitChanges();
+        }
+
+        public static IQueryable danhsachtaikhoandangkychitiet(LinqtoSQLDataContext dc)
+        {
+
+            //// string connection_string = Utils.getConnectionstr();
+
+            //   LinqtoSQLDataContext db = new LinqtoSQLDataContext(connection_string);
+            LinqtoSQLDataContext db = dc;
+            var rs = from tbl_dstaikhoan in db.tbl_dstaikhoans
+                     orderby tbl_dstaikhoan.matk, tbl_dstaikhoan.matktren
+                     select new
+                     {
+
+
+                         Mã_tài_khoản = tbl_dstaikhoan.matk,
+                         Tên_tài_khoản = tbl_dstaikhoan.tentk.Trim(),
+                         //     Loại_tài_khoản = tbl_dstaikhoan.loaitkid,
+                     //    Mã_tài_khoản_cấp_trên = tbl_dstaikhoan.matktren,
+                     //    Cấp_tài_khoản = tbl_dstaikhoan.captk,
+                         Theo_dõi_chi_tiết = tbl_dstaikhoan.loaichitiet,
+                     //    Dư_Nợ_đầu_kỳ = tbl_dstaikhoan.nodk,
+                      //   Dư_Có_đầu_kỳ = tbl_dstaikhoan.codk,
+                         ID = tbl_dstaikhoan.id,
+                     };
+
+            //    grviewlisttk.DataSource = rs;
+
+
+
+
+
+
+
+            return rs;
+
+
+
+
+
+
+            // throw new NotImplementedException();
         }
     }
 }

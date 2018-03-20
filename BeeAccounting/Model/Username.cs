@@ -16,7 +16,7 @@ namespace BEEACCOUNT.Model
         public string Name { get; set; }
         public Boolean right { get; set; }
         public int Version { get; set; }
-        public Boolean inputcontract { get; set; }
+        public bool phanquyen { get; set; }
         public Boolean inputcontractconfirm { get; set; }
         public Boolean paymentdisplay { get; set; }
         public Boolean paymentcreate { get; set; }
@@ -40,6 +40,7 @@ namespace BEEACCOUNT.Model
         public Boolean changeitem { get; set; }
 
         public Boolean btaddnewItem { get; set; }
+
         public Username()
         {
 
@@ -47,31 +48,65 @@ namespace BEEACCOUNT.Model
 
 
 
+
+        }
+        //  public int Version { get; set; }
+
+        public static int getVersion()
+        {
+
             string connection_string = Utils.getConnectionstr();
 
             LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
 
-            var rs = (from tbl_Temp in dc.tbl_Temps
-                      where tbl_Temp.Username == Name
 
-                      select tbl_Temp).FirstOrDefault();
-            if (rs != null)
-            {
-                right = true;
+            int rs = (int)(from tbl_Temp in dc.tbl_Temps
+                             select tbl_Temp.Version).FirstOrDefault();
 
-                Version = (int)rs.Version;
-                inputcontract = rs.Inputcontract;
-              
-            }
-            else
-            {
 
-                right = false;
-            }
+
+
+
+            return rs;
 
 
 
         }
+
+
+
+        public static bool getphanquyen()
+        {
+
+
+
+            string connection_string = Utils.getConnectionstr();
+
+            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+
+            var rs = (from tbl_Temp in dc.tbl_Temps
+                             select tbl_Temp.Phân_quyền).FirstOrDefault();
+
+
+
+
+            if (rs != null)
+            {
+                return (bool)rs;
+            }
+            else
+            {
+                return false;
+            }
+        
+
+
+
+
+        }
+
+
 
     }
 

@@ -51,10 +51,10 @@
             // 
             this.formlabelED.AutoSize = true;
             this.formlabelED.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.formlabelED.Font = new System.Drawing.Font("Microsoft MHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.formlabelED.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.formlabelED.Location = new System.Drawing.Point(208, 16);
             this.formlabelED.Name = "formlabelED";
-            this.formlabelED.Size = new System.Drawing.Size(186, 17);
+            this.formlabelED.Size = new System.Drawing.Size(210, 16);
             this.formlabelED.TabIndex = 87;
             this.formlabelED.Text = "THÔNG TIN DOANH NGHIỆP";
             // 
@@ -73,7 +73,7 @@
             this.groupBox4.Controls.Add(this.label1);
             this.groupBox4.Location = new System.Drawing.Point(7, -2);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(619, 255);
+            this.groupBox4.Size = new System.Drawing.Size(619, 221);
             this.groupBox4.TabIndex = 102;
             this.groupBox4.TabStop = false;
             // 
@@ -190,7 +190,7 @@
             this.btchangecontractitem.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.btchangecontractitem.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btchangecontractitem.ForeColor = System.Drawing.Color.Red;
-            this.btchangecontractitem.Location = new System.Drawing.Point(285, 259);
+            this.btchangecontractitem.Location = new System.Drawing.Point(285, 238);
             this.btchangecontractitem.Name = "btchangecontractitem";
             this.btchangecontractitem.Size = new System.Drawing.Size(78, 23);
             this.btchangecontractitem.TabIndex = 101;

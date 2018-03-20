@@ -141,7 +141,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(364, 181);
+            this.ClientSize = new System.Drawing.Size(380, 181);
             this.Controls.Add(this.lb_machitietno);
             this.Controls.Add(this.lbtenchitietno);
             this.Controls.Add(this.cbtk);

@@ -944,6 +944,8 @@ namespace BEEACCOUNT
 		
 		private string _Name;
 		
+		private System.Nullable<bool> _Phân_quyền;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -966,6 +968,8 @@ namespace BEEACCOUNT
     partial void OnInputcontractChanged();
     partial void OnNameChanging(string value);
     partial void OnNameChanged();
+    partial void OnPhân_quyềnChanging(System.Nullable<bool> value);
+    partial void OnPhân_quyềnChanged();
     #endregion
 		
 		public tbl_Temp()
@@ -1149,6 +1153,26 @@ namespace BEEACCOUNT
 					this._Name = value;
 					this.SendPropertyChanged("Name");
 					this.OnNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Phân_quyền", DbType="Bit")]
+		public System.Nullable<bool> Phân_quyền
+		{
+			get
+			{
+				return this._Phân_quyền;
+			}
+			set
+			{
+				if ((this._Phân_quyền != value))
+				{
+					this.OnPhân_quyềnChanging(value);
+					this.SendPropertyChanging();
+					this._Phân_quyền = value;
+					this.SendPropertyChanged("Phân_quyền");
+					this.OnPhân_quyềnChanged();
 				}
 			}
 		}
@@ -13992,6 +14016,8 @@ namespace BEEACCOUNT
 		
 		private string _tenchitiet;
 		
+		private string _tentk;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -14016,6 +14042,8 @@ namespace BEEACCOUNT
     partial void OnuseRptChanged();
     partial void OntenchitietChanging(string value);
     partial void OntenchitietChanged();
+    partial void OntentkChanging(string value);
+    partial void OntentkChanged();
     #endregion
 		
 		public RptPhatsinhcdkt200()
@@ -14219,6 +14247,26 @@ namespace BEEACCOUNT
 					this._tenchitiet = value;
 					this.SendPropertyChanged("tenchitiet");
 					this.OntenchitietChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tentk", DbType="NVarChar(225)")]
+		public string tentk
+		{
+			get
+			{
+				return this._tentk;
+			}
+			set
+			{
+				if ((this._tentk != value))
+				{
+					this.OntentkChanging(value);
+					this.SendPropertyChanging();
+					this._tentk = value;
+					this.SendPropertyChanged("tentk");
+					this.OntentkChanged();
 				}
 			}
 		}

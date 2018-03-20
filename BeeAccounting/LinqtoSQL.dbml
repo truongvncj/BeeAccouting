@@ -23,6 +23,7 @@
       <Column Name="Note" Type="System.String" DbType="NChar(225)" CanBeNull="true" />
       <Column Name="Inputcontract" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
       <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Phân_quyền" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.KQKD200Dauky" Member="KQKD200Daukies">
@@ -628,6 +629,7 @@
       <Column Name="username" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="useRpt" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
       <Column Name="tenchitiet" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="tentk" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.Rptphieunhapkhodetail01" Member="Rptphieunhapkhodetail01s">

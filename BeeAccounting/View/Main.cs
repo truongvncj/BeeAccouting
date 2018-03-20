@@ -58,10 +58,7 @@ namespace BEEACCOUNT.View
         }
         public Main()
         {
-            Model.Username used = new Username();
-
-            if (used.right == true)
-            {
+           
 
                 InitializeComponent();
 
@@ -82,76 +79,6 @@ namespace BEEACCOUNT.View
 
 
 
-
-                // Beemainload
-
-                //  panelmain.Controls.Add(inputcdata);
-                // inputcdata.Show();
-
-                ////reports
-                //if (used.reports)
-                //{
-                //    reports.Enabled = true;
-                //}
-                //else
-                //{
-                //    reports.Enabled = false;
-                //}
-                //// inputcontract
-
-                //if (used.inputcontract)
-                //{
-                //    inputcontract.Enabled = true;
-                //}
-                //else
-                //{
-                //    inputcontract.Enabled = false;
-                //}
-
-                ////input payment
-
-                //if (used.paymentdisplay)
-                //{
-                //    inputpayment.Enabled = true;
-                //}
-                //else
-                //{
-                //    inputpayment.Enabled = false;
-                //}
-                //// salse update
-                //if (used.saleupdate)
-                //{
-                //    inpucvolume.Enabled = true;
-                //}
-                //else
-                //{
-                //    inpucvolume.Enabled = false;
-                //}
-
-                //// pricingcheckview
-
-
-                //// // masterdate          
-                //if (used.masterdata == true)
-                //{
-                //    inputmarterdata.Enabled = true;
-                //}
-                //else
-                //{
-                //    inputmarterdata.Enabled = false;
-                //}
-            }
-            else
-            {
-                //  
-                this.Close();
-                //  return;
-
-            }
-
-            //posm
-            //       panelmain.Controls.Clear();
-            //       panelmain.Controls.Add(orig_form);
         }
 
 
@@ -2392,12 +2319,12 @@ namespace BEEACCOUNT.View
 
         //private void pictureBox1_MouseHover(object sender, EventArgs e)
         //{
-        //   this.inputcontract.Image = global::BEEACCOUNT.Properties.Resources.input21;
+        //   this.phanquyen.Image = global::BEEACCOUNT.Properties.Resources.input21;
         //}
 
         //private void pictureBox1_MouseLeave(object sender, EventArgs e)
         //{
-        // this.inputcontract.Image = global::BEEACCOUNT.Properties.Resources.input1;
+        // this.phanquyen.Image = global::BEEACCOUNT.Properties.Resources.input1;
         //}
 
         //private void pictureBox4_MouseHover(object sender, EventArgs e)
@@ -3105,6 +3032,14 @@ namespace BEEACCOUNT.View
 
         private void phânQuyềnNgườiDùngToolStripMenuItem_Click(object sender, EventArgs e)
         {
+
+            if (!Username.getphanquyen())
+            {
+                View.Noouthourise view = new Noouthourise();
+                view.ShowDialog();
+                return;
+            }
+
             #region//phanquyen
 
             string connection_string = Utils.getConnectionstr();
@@ -3514,6 +3449,40 @@ namespace BEEACCOUNT.View
 
 
             #endregion
+
+        }
+
+        private void đăngKýTàiKhoảnTheoDõiChiTiếtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            #region//dstaikhoanketoan
+            string connection_string = Utils.getConnectionstr();
+
+            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+
+            var rs = Model.Taikhoanketoan.danhsachtaikhoandangkychitiet(dc);
+            Viewtable viewtblrs55 = new Viewtable(rs, dc, "DANH SÁCH TÀI KHOẢN KẾ TOÁN ĐĂNG KÝ THEO DÕI CHI TIẾT", 114, "tk");// view code 114 la dang ký tài khoản kế toán
+
+            viewtblrs55.Show();
+
+            #endregion
+
+        }
+
+        private void sổCânĐốiTàiKhoảnPhátSinhToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            #region//bccan doi ke toan
+            //if (name == "bcsonhatkychung")
+            //{
+
+            Model.Soketoan.bangcandoiphatsinhtaikhoan();
+
+            //  }
+            #endregion
+
+
+
 
         }
     }

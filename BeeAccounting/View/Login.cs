@@ -116,8 +116,8 @@ namespace BEEACCOUNT.View
 
 
 
-                        Model.Username user = new Model.Username();
-                        int Ver = user.Version;
+                       Model.Username user = new Model.Username();
+                        int Ver = Model.Username.getVersion();
                         if (Ver == 55)
                         {
 

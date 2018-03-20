@@ -166,7 +166,7 @@
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
         <Top>0.64874in</Top>
-        <Left>3.13463in</Left>
+        <Left>3.63463in</Left>
         <Height>0.30208in</Height>
         <Width>3.73138in</Width>
         <ZIndex>3</ZIndex>
@@ -271,7 +271,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
         <Top>0.99247in</Top>
-        <Left>3.37213in</Left>
+        <Left>3.74713in</Left>
         <Height>0.22222in</Height>
         <Width>0.75625in</Width>
         <ZIndex>6</ZIndex>
@@ -310,7 +310,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
         <Top>0.99109in</Top>
-        <Left>4.17282in</Left>
+        <Left>4.54782in</Left>
         <Height>0.22222in</Height>
         <Width>0.99486in</Width>
         <ZIndex>7</ZIndex>
@@ -346,7 +346,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
         <Top>0.99109in</Top>
-        <Left>5.19546in</Left>
+        <Left>5.57046in</Left>
         <Height>0.22222in</Height>
         <Width>0.75625in</Width>
         <ZIndex>8</ZIndex>
@@ -385,7 +385,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
         <Top>0.98971in</Top>
-        <Left>5.99615in</Left>
+        <Left>6.37115in</Left>
         <Height>0.22222in</Height>
         <Width>0.99486in</Width>
         <ZIndex>9</ZIndex>
@@ -405,25 +405,25 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
               <Width>1.88203cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>7.42773cm</Width>
+              <Width>5.87432cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.48162cm</Width>
+              <Width>3.8509cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.93844cm</Width>
+              <Width>3.23202cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.295cm</Width>
+              <Width>3.60716cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.7512cm</Width>
+              <Width>3.01578cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>3.39056cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.7899cm</Width>
+              <Width>3.10935cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -919,7 +919,7 @@ Tài khoản</Value>
         <Top>3.40466cm</Top>
         <Left>0.28576cm</Left>
         <Height>1.2cm</Height>
-        <Width>27.95648cm</Width>
+        <Width>27.96212cm</Width>
         <ZIndex>10</ZIndex>
         <Style>
           <Border>
@@ -934,25 +934,25 @@ Tài khoản</Value>
               <Width>1.88766cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>7.47086cm</Width>
+              <Width>5.86869cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.48162cm</Width>
+              <Width>3.85653cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.93281cm</Width>
+              <Width>3.22639cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.25187cm</Width>
+              <Width>3.60153cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.7512cm</Width>
+              <Width>3.01578cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>3.39619cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.78427cm</Width>
+              <Width>3.10935cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -1530,7 +1530,7 @@ Tài khoản</Value>
         <Top>4.60494cm</Top>
         <Left>0.28576cm</Left>
         <Height>1.2cm</Height>
-        <Width>27.95648cm</Width>
+        <Width>27.96212cm</Width>
         <ZIndex>11</ZIndex>
         <Style>
           <Border>

@@ -256,7 +256,7 @@ namespace BEEACCOUNT.View
             this.db = dc;
             this.viewcode = viewcode;
             this.rs = rs;
-            this.lb_seach.Text = "F3 TÌM KIẾM";
+            //  this.lb_seach.Text = "F3 TÌM KIẾM";
             //      this.bt_sendinggroup.Visible = false;
             //     this.lb_seach.Visible = false;
             this.Pl_endview.Visible = false;
@@ -277,13 +277,19 @@ namespace BEEACCOUNT.View
 
             if (this.viewcode == 12)
             {
-                lb_seach.Visible = false;
+                //lb_seach.Visible = false;
 
                 bt_themmoi.Visible = false;
 
                 bt_sua.Visible = false;
             }
 
+            if (this.viewcode == 114) // dang ky tai khoan chi tiet thì cho edit
+            {
+                //lb_seach.Visible = false;
+
+                dataGridView1.ReadOnly = false;
+            }
             #endregion
 
         }
@@ -499,7 +505,7 @@ namespace BEEACCOUNT.View
 
                 // Model.Khohang.themmoinhomsanpham();
                 //   var rs = Model.Khohang.danhsachnhomsanpham(this.db);
-                Model.Nhacungcap.themmoiNVT(3,0);
+                Model.Nhacungcap.themmoiNVT(3, 0);
                 var rs = Model.Nhacungcap.danhsachNVT(dc);
                 dataGridView1.DataSource = rs;
 
@@ -625,7 +631,7 @@ namespace BEEACCOUNT.View
                 if (rs != null)
                 {
 
-               //     string taikhoan = rs.matk;
+                    //     string taikhoan = rs.matk;
 
                     ////View.BeeCreatenewaccount createacc = new BeeCreatenewaccount(4, taikhoan); // int = 1 xóa; int = 2 sửa ; int = 3 tao mới; int = 4 vừa sửa+ xóa
 
@@ -990,11 +996,70 @@ namespace BEEACCOUNT.View
 
         private void Viewtable_FormClosed(object sender, FormClosedEventArgs e)
         {
-       
+
         }
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+
+            #region  viewcode = 114 update thêm là edit và update vào hê thống code status
+
+
+            if (this.viewcode == 114)  // viewcode ==0  la danh sách tài k khoản kê toán
+            {
+
+
+
+                int idtk = 0;
+                try
+                {
+                    idtk = (int)this.dataGridView1.Rows[this.dataGridView1.CurrentCell.RowIndex].Cells["ID"].Value;
+                }
+                catch (Exception)
+                {
+
+                    //    MessageBox.Show("Bạn phải chọn một tuyến !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    //  return;
+                }
+
+                string connection_string = Utils.getConnectionstr();
+
+                LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+
+                var rs = (from p in dc.tbl_dstaikhoans
+                          where p.id == idtk
+                          select p).FirstOrDefault();
+                if (rs != null)
+                {
+
+                    rs.loaichitiet = !rs.loaichitiet;
+                    if (rs.loaichitiet)
+                    {
+                        MessageBox.Show("Đăng ký sổ theo dõi chi tiết !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Bỏ theo dõi chi tiết !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                   
+                    // return;
+                }
+                dc.SubmitChanges();
+
+
+                var rs1 = Model.Taikhoanketoan.danhsachtaikhoandangkychitiet(dc);
+                dataGridView1.DataSource = rs1;
+
+            }
+
+
+
+
+            #endregion viewcode = 114 dnah muc tai khoan ke toan
+
+
+
 
             #region  viewcode = 11 danh sahch giá vân tải theo tuyến
 

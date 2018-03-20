@@ -37,7 +37,6 @@ namespace BEEACCOUNT.View
             this.bt_exporttoex = new System.Windows.Forms.Button();
             this.bt_themmoi = new System.Windows.Forms.Button();
             this.formlabel = new System.Windows.Forms.Label();
-            this.lb_seach = new System.Windows.Forms.Label();
             this.statussum = new System.Windows.Forms.Label();
             this.lb_totalrecord = new System.Windows.Forms.Label();
             this.Pl_endview = new System.Windows.Forms.Panel();
@@ -66,7 +65,6 @@ namespace BEEACCOUNT.View
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.formlabel);
-            this.panel1.Controls.Add(this.lb_seach);
             this.panel1.Controls.Add(this.statussum);
             this.panel1.Controls.Add(this.lb_totalrecord);
             this.panel1.Controls.Add(this.Pl_endview);
@@ -137,20 +135,6 @@ namespace BEEACCOUNT.View
             this.formlabel.Size = new System.Drawing.Size(211, 22);
             this.formlabel.TabIndex = 8;
             this.formlabel.Text = "VIEW TABLE REPORTS";
-            // 
-            // lb_seach
-            // 
-            this.lb_seach.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.lb_seach.AutoSize = true;
-            this.lb_seach.Font = new System.Drawing.Font("Microsoft JhengHei Light", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            this.lb_seach.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.lb_seach.Location = new System.Drawing.Point(1012, 464);
-            this.lb_seach.Name = "lb_seach";
-            this.lb_seach.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lb_seach.Size = new System.Drawing.Size(90, 15);
-            this.lb_seach.TabIndex = 6;
-            this.lb_seach.Text = "F3: Seach Code";
-            this.lb_seach.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // statussum
             // 
@@ -313,6 +297,7 @@ namespace BEEACCOUNT.View
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridView1.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dataGridView1.Location = new System.Drawing.Point(0, 57);
@@ -374,7 +359,6 @@ namespace BEEACCOUNT.View
         private System.Windows.Forms.Label Status;
         private System.Windows.Forms.Label lb_uc;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label lb_seach;
         private System.Windows.Forms.Label formlabel;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button bt_sua;
