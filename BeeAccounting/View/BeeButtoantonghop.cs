@@ -374,20 +374,12 @@ namespace BEEACCOUNT.View
         {
             if (e.KeyChar == (char)Keys.Enter)
             {
-                // datepickngayphieu.
-                e.Handled = true;
-                //     txtquyenso.Focus();
-
-                //    string valueinput = cb_customerka.Text;
-
-                //    string connection_string = Utils.getConnectionstr();
-                //    LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
-
-                //    string username = Utils.getusername();
+                //  cbsophieu.
+                //   e.Handled = true;
+                txtsophieu.Focus();
 
 
             }
-
 
 
 
@@ -1231,17 +1223,10 @@ namespace BEEACCOUNT.View
             if (e.KeyChar == (char)Keys.Enter)
             {
                 //  cbsophieu.
-                e.Handled = true;
-                //   txttennguoigiao.Focus();
+             //   e.Handled = true;
+                txtsotien.Focus();
 
-                //    string valueinput = cb_customerka.Text;
-
-                //    string connection_string = Utils.getConnectionstr();
-                //    LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
-
-                //    string username = Utils.getusername();
-
-
+            
             }
         }
 
@@ -2907,6 +2892,24 @@ namespace BEEACCOUNT.View
 
             //#endregion
 
+
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtsotien_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                //  cbsophieu.
+                //   e.Handled = true;
+                txtdiengiai.Focus();
+
+
+            }
 
         }
     }

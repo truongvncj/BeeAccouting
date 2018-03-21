@@ -2809,27 +2809,6 @@ namespace BEEACCOUNT.View
         private void phiếuThuToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
-            #region//tmphieuthu
-            //if (name == "tmphieuthu")
-            //{
-
-            //  Main.clearpannel();
-            //   Formload.
-            // clearpannel();
-            clearpannel();
-
-
-            View.BeePhieuThu accsup = new BeePhieuThu(this);
-            clearpannelload(accsup);
-            //    accsup.TopLevel = false;
-            //  accsup.AutoScroll = true;
-            //    panelmain.Controls.Add(accsup);
-            //    accsup.Show();
-
-            //   }
-            #endregion
-
-
 
 
 
@@ -2839,93 +2818,25 @@ namespace BEEACCOUNT.View
         private void phiếuChiToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
-            #region//tmphieuchi
-
-
-            //  Main.clearpannel();
-
-            clearpannel();
-
-
-            View.BeePhieuchi accsup = new BeePhieuchi(this);
-            clearpannelload(accsup);
-            //    accsup.TopLevel = false;
-            //  accsup.AutoScroll = true;
-            //    panelmain.Controls.Add(accsup);
-            //    accsup.Show();
-
-
-            #endregion
 
         }
 
         private void sổQuỹToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
-            #region//soquy
-
-
-            Model.Soketoan.soQuy();
-
-
-            #endregion
-
 
         }
 
         private void phiếuNhậpKhoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            #region// khophieunhap
-
-
-            clearpannel();
-
-
-            View.BeeKhophieunhap accsup = new BeeKhophieunhap(this);
-            clearpannelload(accsup);
-
-
-            #endregion
-
         }
 
         private void phiếuXuấtKhoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            #region//khophieuxuat
-
-            //  Main.clearpannel();
-
-            clearpannel();
-
-
-            View.BeeKhophieuxuat accsup = new BeeKhophieuxuat(this);
-            clearpannelload(accsup);
-            //    accsup.TopLevel = false;
-            //  accsup.AutoScroll = true;
-            //    panelmain.Controls.Add(accsup);
-            //    accsup.Show();
-
-
-            #endregion
-
         }
 
         private void bútToánTổngHợpToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            #region//btoanth
-
-
-
-            clearpannel();
-
-
-            View.BeeButtoantonghop buttoantonghop = new BeeButtoantonghop(this);
-            clearpannelload(buttoantonghop);
-
-
-
-            #endregion
-
         }
 
         private void sổCáiTàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
@@ -3075,59 +2986,17 @@ namespace BEEACCOUNT.View
         {
 
 
-            #region//khodskho
-            string connection_string = Utils.getConnectionstr();
-
-            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
-
-            var rs5 = Model.Khohang.Danhsachkho(dc);
-            Viewtable viewtbl66 = new Viewtable(rs5, dc, "DANH SÁCH KHO HÀNG", 4, "tk");// mã 4 là danh sách kho
-
-            viewtbl66.Show();
-
-            //  }
-            #endregion
-
-
-
 
         }
 
         private void danhSáchNhómSảnPhẩmToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
-            #region//khonhomsanpham
 
-            string connection_string = Utils.getConnectionstr();
-
-            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
-
-            var rs6 = Model.Khohang.danhsachnhomsanpham(dc);
-            Viewtable viewtbl2 = new Viewtable(rs6, dc, "DANH SÁCH NHÓM SẢN PHẨM", 6, "tk");// mã 6 là danh sách nhóm sản phẩm
-
-            viewtbl2.Show();
-
-            #endregion
         }
 
         private void danhSáchSảnPhẩmToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
-            #region//khodssanpham
-
-            string connection_string = Utils.getConnectionstr();
-
-            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
-
-            var rs7 = Model.Khohang.danhsachsanpham(dc);
-            Viewtable viewtb77l = new Viewtable(rs7, dc, "DANH SÁCH SẢN PHẨM", 7, "tk");// mã 7 là danh sách nhóm sản phẩm
-
-            viewtb77l.Show();
-
-
-
-
-            #endregion
 
         }
 
@@ -3386,13 +3255,6 @@ namespace BEEACCOUNT.View
 
         private void báoCáoNhậpXuấtTồnKhoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            #region//bcxuatnhapton
-
-
-            Model.Soketoan.sotonghopbaocaonhapxuatton();
-
-            #endregion
-
         }
 
         private void bảngGiáVậnTảiTheoTuyếnToolStripMenuItem_Click(object sender, EventArgs e)
@@ -3483,6 +3345,226 @@ namespace BEEACCOUNT.View
 
 
 
+
+        }
+
+        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+
+
+
+        }
+
+        private void toolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+
+
+        }
+
+        private void hạchToánKếToánToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripMenuItem4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void hệThốngKhoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void hệThốngTàiKhoảnKếToánToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void sổQuỹToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+
+            #region//soquy
+
+
+            Model.Soketoan.soQuy();
+
+
+            #endregion
+
+        }
+
+        private void phiếuChiToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+            #region//tmphieuchi
+
+
+            //  Main.clearpannel();
+
+            clearpannel();
+
+
+            View.BeePhieuchi accsup = new BeePhieuchi(this);
+            clearpannelload(accsup);
+            //    accsup.TopLevel = false;
+            //  accsup.AutoScroll = true;
+            //    panelmain.Controls.Add(accsup);
+            //    accsup.Show();
+
+
+            #endregion
+        }
+
+        private void phiếuThuToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+            #region//tmphieuthu
+            //if (name == "tmphieuthu")
+            //{
+
+            //  Main.clearpannel();
+            //   Formload.
+            // clearpannel();
+            clearpannel();
+
+
+            View.BeePhieuThu accsup = new BeePhieuThu(this);
+            clearpannelload(accsup);
+            //    accsup.TopLevel = false;
+            //  accsup.AutoScroll = true;
+            //    panelmain.Controls.Add(accsup);
+            //    accsup.Show();
+
+            //   }
+            #endregion
+
+
+        }
+
+        private void bútToánTổngHợpToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+            #region//btoanth
+
+
+
+            clearpannel();
+
+
+            View.BeeButtoantonghop buttoantonghop = new BeeButtoantonghop(this);
+            clearpannelload(buttoantonghop);
+
+
+
+            #endregion
+
+        }
+
+        private void danhSáchKhoToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+
+            #region//khodskho
+            string connection_string = Utils.getConnectionstr();
+
+            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+            var rs5 = Model.Khohang.Danhsachkho(dc);
+            Viewtable viewtbl66 = new Viewtable(rs5, dc, "DANH SÁCH KHO HÀNG", 4, "tk");// mã 4 là danh sách kho
+
+            viewtbl66.Show();
+
+            //  }
+            #endregion
+
+        }
+
+        private void danhSáchNhómSảnPhẩmToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+
+            #region//khonhomsanpham
+
+            string connection_string = Utils.getConnectionstr();
+
+            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+            var rs6 = Model.Khohang.danhsachnhomsanpham(dc);
+            Viewtable viewtbl2 = new Viewtable(rs6, dc, "DANH SÁCH NHÓM SẢN PHẨM", 6, "tk");// mã 6 là danh sách nhóm sản phẩm
+
+            viewtbl2.Show();
+
+            #endregion
+        }
+
+        private void danhSáchSảnPhẩmToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+
+            #region//khodssanpham
+
+            string connection_string = Utils.getConnectionstr();
+
+            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+            var rs7 = Model.Khohang.danhsachsanpham(dc);
+            Viewtable viewtb77l = new Viewtable(rs7, dc, "DANH SÁCH SẢN PHẨM", 7, "tk");// mã 7 là danh sách nhóm sản phẩm
+
+            viewtb77l.Show();
+
+
+
+
+            #endregion
+
+        }
+
+        private void phiếuNhậpKhoToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+            #region// khophieunhap
+
+
+            clearpannel();
+
+
+            View.BeeKhophieunhap accsup = new BeeKhophieunhap(this);
+            clearpannelload(accsup);
+
+
+            #endregion
+
+        }
+
+        private void phiếuXuấtKhoToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+            #region//khophieuxuat
+
+            //  Main.clearpannel();
+
+            clearpannel();
+
+
+            View.BeeKhophieuxuat accsup = new BeeKhophieuxuat(this);
+            clearpannelload(accsup);
+            //    accsup.TopLevel = false;
+            //  accsup.AutoScroll = true;
+            //    panelmain.Controls.Add(accsup);
+            //    accsup.Show();
+
+
+            #endregion
+
+        }
+
+        private void báoCáoNhậpXuấtTồnToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+
+            #region//bcxuatnhapton
+
+
+            Model.Soketoan.sotonghopbaocaonhapxuatton();
+
+            #endregion
 
         }
     }
