@@ -2560,5 +2560,10 @@ namespace BEEACCOUNT.View
 
 
         }
+
+        private void dataGridViewListphieuchi_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
