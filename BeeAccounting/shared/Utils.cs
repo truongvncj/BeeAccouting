@@ -975,6 +975,10 @@ namespace BEEACCOUNT
             finally
             {
                 GC.Collect();
+             
+                GC.WaitForPendingFinalizers();
+
+
             }
         }
 

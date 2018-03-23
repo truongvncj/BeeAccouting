@@ -2543,7 +2543,7 @@ namespace BEEACCOUNT.Control
             //   datagridview1.datasource = datagrid.datasource;
 
             thedialog.Title = "export to excel file";
-            thedialog.Filter = "excel files|*.xlsx";
+            thedialog.Filter = "excel files|*.xlsx; *.xls";
             thedialog.InitialDirectory = @"c:\";
 
         
