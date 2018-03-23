@@ -79,7 +79,7 @@ namespace BEEACCOUNT.View
 
             drToAdd["Ngày_chứng_từ"] = socai.Ngayctu;
             drToAdd["Số_chứng_từ"] = socai.Sohieuchungtu;
-            drToAdd["Diễn_giải"] = socai.Diengiai;
+            drToAdd["Diễn_giải"] = socai.Diengiai.Trim();
 
             drToAdd["Nợ_TK"] = socai.TkNo;
 
@@ -598,8 +598,8 @@ namespace BEEACCOUNT.View
                     detail.Diengiai = dataGridViewdetail.Rows[idrow].Cells["Diễn_giải"].Value.ToString();
                     detail.TkNo = dataGridViewdetail.Rows[idrow].Cells["Nợ_TK"].Value.ToString();
                     detail.TkCo = dataGridViewdetail.Rows[idrow].Cells["Có_TK"].Value.ToString();
-                    detail.PsCo = float.Parse(dataGridViewdetail.Rows[idrow].Cells["Số_tiền"].Value.ToString());
-                    detail.PsNo = float.Parse(dataGridViewdetail.Rows[idrow].Cells["Số_tiền"].Value.ToString());
+                    detail.PsCo = double.Parse(dataGridViewdetail.Rows[idrow].Cells["Số_tiền"].Value.ToString());
+                    detail.PsNo = double.Parse(dataGridViewdetail.Rows[idrow].Cells["Số_tiền"].Value.ToString());
 
                     if (dataGridViewdetail.Rows[idrow].Cells["Mã_chi_tiết_TK_Có"].Value != null && Utils.IsValidnumber(dataGridViewdetail.Rows[idrow].Cells["Mã_chi_tiết_TK_Có"].Value.ToString()))
                     {
@@ -1023,7 +1023,7 @@ namespace BEEACCOUNT.View
                     txtsophieu.Text = buttoanth.Sohieuchungtu.ToString();
 
                     this.sobuttoan = buttoanth.Sohieuchungtu.ToString();  // để tìm số chứng từ
-                    txtdiengiai.Text = buttoanth.Diengiai;
+                    txtdiengiai.Text = buttoanth.Diengiai.Trim();
 
                     if (buttoanth.PsCo != null)
                     {
@@ -2523,8 +2523,8 @@ namespace BEEACCOUNT.View
 
             if (Utils.IsValidnumber(txtsotien.Text))
             {
-                socai.PsCo = float.Parse(txtsotien.Text.ToString());
-                socai.PsNo = float.Parse(txtsotien.Text.ToString());
+                socai.PsCo = double.Parse(txtsotien.Text.ToString());
+                socai.PsNo = double.Parse(txtsotien.Text.ToString());
 
             }
 
@@ -2664,9 +2664,9 @@ namespace BEEACCOUNT.View
 
                 buttoanth.Ngayctu = (DateTime)dataGridViewdetail.Rows[i].Cells["Ngày_chứng_từ"].Value;
                 buttoanth.Sohieuchungtu = dataGridViewdetail.Rows[i].Cells["Số_chứng_từ"].Value.ToString();
-                buttoanth.PsCo = float.Parse(dataGridViewdetail.Rows[i].Cells["Số_tiền"].Value.ToString());
+                buttoanth.PsCo = double.Parse(dataGridViewdetail.Rows[i].Cells["Số_tiền"].Value.ToString());
 
-                buttoanth.PsNo = float.Parse(dataGridViewdetail.Rows[i].Cells["Số_tiền"].Value.ToString());
+                buttoanth.PsNo = double.Parse(dataGridViewdetail.Rows[i].Cells["Số_tiền"].Value.ToString());
                 if (Utils.IsValidnumber(dataGridViewdetail.Rows[i].Cells["Mã_chi_tiết_TK_Nợ"].Value.ToString()))
                 {
                     buttoanth.MaCTietTKNo = int.Parse(dataGridViewdetail.Rows[i].Cells["Mã_chi_tiết_TK_Nợ"].Value.ToString());

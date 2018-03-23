@@ -281,7 +281,7 @@ namespace BEEACCOUNT.Model
                          Nợ_TK = p.TkNo,
                          Có_TK = p.TkCo,
                          Số_tiền = p.PsCo,
-                         Diễn_giải = p.Diengiai,
+                         Diễn_giải = p.Diengiai.Trim(),
                          Mã_chi_tiết_TK_Có = p.MaCTietTKCo,
                          Mã_chi_tiết_TK_Nợ = p.MaCTietTKNo,
 
