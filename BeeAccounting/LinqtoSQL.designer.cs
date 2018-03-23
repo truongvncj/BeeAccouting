@@ -944,7 +944,9 @@ namespace BEEACCOUNT
 		
 		private string _Name;
 		
-		private System.Nullable<bool> _Phân_quyền;
+		private bool _Phân_quyền;
+		
+		private bool _Thiết_lập_tài_khoản;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -968,8 +970,10 @@ namespace BEEACCOUNT
     partial void OnInputcontractChanged();
     partial void OnNameChanging(string value);
     partial void OnNameChanged();
-    partial void OnPhân_quyềnChanging(System.Nullable<bool> value);
+    partial void OnPhân_quyềnChanging(bool value);
     partial void OnPhân_quyềnChanged();
+    partial void OnThiết_lập_tài_khoảnChanging(bool value);
+    partial void OnThiết_lập_tài_khoảnChanged();
     #endregion
 		
 		public tbl_Temp()
@@ -1157,8 +1161,8 @@ namespace BEEACCOUNT
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Phân_quyền", DbType="Bit")]
-		public System.Nullable<bool> Phân_quyền
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Phân_quyền", DbType="Bit NOT NULL")]
+		public bool Phân_quyền
 		{
 			get
 			{
@@ -1173,6 +1177,26 @@ namespace BEEACCOUNT
 					this._Phân_quyền = value;
 					this.SendPropertyChanged("Phân_quyền");
 					this.OnPhân_quyềnChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Thiết_lập_tài_khoản", DbType="Bit NOT NULL")]
+		public bool Thiết_lập_tài_khoản
+		{
+			get
+			{
+				return this._Thiết_lập_tài_khoản;
+			}
+			set
+			{
+				if ((this._Thiết_lập_tài_khoản != value))
+				{
+					this.OnThiết_lập_tài_khoảnChanging(value);
+					this.SendPropertyChanging();
+					this._Thiết_lập_tài_khoản = value;
+					this.SendPropertyChanged("Thiết_lập_tài_khoản");
+					this.OnThiết_lập_tài_khoảnChanged();
 				}
 			}
 		}

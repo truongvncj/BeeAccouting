@@ -746,7 +746,6 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -1671,8 +1670,8 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>4.06391in</Top>
-        <Left>0.125in</Left>
+        <Top>4.03474in</Top>
+        <Left>0.225in</Left>
         <Height>0.25in</Height>
         <Width>1.5657in</Width>
         <ZIndex>20</ZIndex>

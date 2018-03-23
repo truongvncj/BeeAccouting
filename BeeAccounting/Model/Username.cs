@@ -91,15 +91,9 @@ namespace BEEACCOUNT.Model
 
 
 
-            if (rs != null)
-            {
+       
                 return (bool)rs;
-            }
-            else
-            {
-                return false;
-            }
-        
+         
 
 
 

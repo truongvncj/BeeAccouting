@@ -23,7 +23,8 @@
       <Column Name="Note" Type="System.String" DbType="NChar(225)" CanBeNull="true" />
       <Column Name="Inputcontract" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
       <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="Phân_quyền" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Phân_quyền" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Thiết_lập_tài_khoản" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
     </Type>
   </Table>
   <Table Name="dbo.KQKD200Dauky" Member="KQKD200Daukies">
