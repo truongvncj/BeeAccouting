@@ -554,7 +554,7 @@ namespace BEEACCOUNT.View
         {
 
 
-            kaPriodmake makepriod = new kaPriodmake();
+            Beekyketoan makepriod = new Beekyketoan();
 
             makepriod.ShowDialog();
 

@@ -356,11 +356,11 @@
     <Compile Include="View\Viewdatatable.Designer.cs">
       <DependentUpon>Viewdatatable.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\kaPriodmake.cs">
+    <Compile Include="View\Beekyketoan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\kaPriodmake.Designer.cs">
-      <DependentUpon>kaPriodmake.cs</DependentUpon>
+    <Compile Include="View\Beekyketoan.Designer.cs">
+      <DependentUpon>Beekyketoan.cs</DependentUpon>
     </Compile>
     <Compile Include="View\kareportsform.cs">
       <SubType>Form</SubType>
@@ -612,8 +612,8 @@
     <EmbeddedResource Include="View\Viewdatatable.resx">
       <DependentUpon>Viewdatatable.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\kaPriodmake.resx">
-      <DependentUpon>kaPriodmake.cs</DependentUpon>
+    <EmbeddedResource Include="View\Beekyketoan.resx">
+      <DependentUpon>Beekyketoan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\kareportsform.resx">
       <DependentUpon>kareportsform.cs</DependentUpon>

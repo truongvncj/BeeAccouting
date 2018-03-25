@@ -1653,6 +1653,20 @@ namespace BEEACCOUNT.View
 
         }
 
+        private void dataGridView1_Paint(object sender, PaintEventArgs e)
+        {
+            //   Private Sub DataGridView1_Paint(ByVal sender As Object, ByVal e As System.Windows.Forms.PaintEventArgs) Handles DataGridView1.Paint
+            //  For Each c As DataGridViewColumn In dataGridViewListphieuthu.Columns
+
+            foreach (var c in dataGridView1.Columns)
+            {
+                DataGridViewColumn clm = (DataGridViewColumn)c;
+                clm.HeaderText = clm.HeaderText.Replace("_", " ");
+            }
+
+            // Next
+        }
+
 
 
         //private void button1_Click(object sender, EventArgs e)

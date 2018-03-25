@@ -221,7 +221,6 @@ D:\GitHub\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.Noouthourise.
 D:\GitHub\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.Passwordchange.resources
 D:\GitHub\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.beeselectinput.resources
 D:\GitHub\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.Viewdatatable.resources
-D:\GitHub\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.kaPriodmake.resources
 D:\GitHub\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.kareportsform.resources
 D:\GitHub\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.Kasalesuploadandreports.resources
 D:\GitHub\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.Datepick.resources
@@ -370,3 +369,4 @@ C:\Users\mtruong\Documents\GitHub\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEAC
 C:\Users\mtruong\Documents\GitHub\BeeAccouting\BeeAccounting\obj\x86\Debug\BeeAccounting.csproj.GenerateResource.Cache
 C:\Users\mtruong\Documents\GitHub\BeeAccouting\BeeAccounting\obj\x86\Debug\RdlCompile.cache
 C:\Users\mtruong\Documents\GitHub\BeeAccouting\BeeAccounting\obj\x86\Debug\RdlCompile.compiled
+D:\GitHub\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.Beekyketoan.resources

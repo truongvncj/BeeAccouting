@@ -162,7 +162,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>PHIẾU KẾ TOÁN TỔNG HỢP</Value>
+                                  <Value>PHIẾU KẾ TOÁN </Value>
                                   <Style>
                                     <FontStyle>Normal</FontStyle>
                                     <FontFamily>Times New Roman</FontFamily>
@@ -177,10 +177,10 @@
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox2</rd:DefaultName>
-                          <Top>0.81806in</Top>
-                          <Left>1.97106in</Left>
+                          <Top>0.80695in</Top>
+                          <Left>2.56893in</Left>
                           <Height>0.30208in</Height>
-                          <Width>3.46875in</Width>
+                          <Width>2.25in</Width>
                           <ZIndex>3</ZIndex>
                           <Style>
                             <Border>
@@ -397,6 +397,7 @@
                         </Border>
                       </Style>
                     </Rectangle>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
               </TablixCells>

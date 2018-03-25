@@ -3567,6 +3567,17 @@ namespace BEEACCOUNT.View
             #endregion
 
         }
+
+        private void bánHàngTạiCửaHàngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void mởKỳKếToánToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            View.Beekyketoan view = new Beekyketoan();
+            view.ShowDialog();
+        }
     }
 
 
