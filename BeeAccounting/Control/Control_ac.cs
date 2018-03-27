@@ -2424,12 +2424,56 @@ namespace BEEACCOUNT.Control
             public string tittle { get; set; }
         }
 
-      
 
 
 
 
         public static void exportsexcel(object objextoEl)
+        {
+
+            datatoExport dat = (datatoExport)objextoEl;
+
+
+            //      DataTable table, string filename
+            DataTable dt = dat.dataGrid1;
+            string filename = dat.filename;
+            //   SpreadsheetDocument spse = SpreadsheetDocument.Create(filename, SpreadsheetDocumentType.Workbook);
+            //Exporting to Excel
+
+            DataSet ds = new DataSet();
+            ds.Tables.Add(dt);
+
+            //ExcelDocument xls = new ExcelDocument();
+            //xls.easy_WriteXLSFile_FromDataSet("datatable.xls", ds,
+            //           new ExcelAutoFormat(DocumentFormat.OpenXml.Wordprocessing.Styles.AUTOFORMAT_EASYXLS1), "DataTable");
+
+
+            //string folderPath = "C:\\Excel\\";
+            //if (!Directory.Exists(folderPath))
+            //{
+            //    Directory.CreateDirectory(folderPath);
+            //}
+            try
+            {
+                //using (XLWorkbook wb = new XLWorkbook())
+                //{
+
+                ExportToExcel.ExportToExcel.ExportDataSet(ds, filename);
+                //    wb.Worksheets.Add(ds);
+                //    wb.SaveAs(filename);
+                //}
+                MessageBox.Show(filename + " exported !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString(), "Thông báo không excel export được ! ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+        }
+
+
+        public static void exportsexcel2old(object objextoEl)
         {
 
             datatoExport dat = (datatoExport)objextoEl;
@@ -2445,6 +2489,8 @@ namespace BEEACCOUNT.Control
 
             int sheetIndex = 0;
             System.Data.DataTable dt = dat.dataGrid1;
+
+
             var tittle = dat.tittle;
             var filename = dat.filename;
 
