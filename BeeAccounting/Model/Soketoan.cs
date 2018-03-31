@@ -1488,7 +1488,7 @@ namespace BEEACCOUNT.Model
                                   Tên_chi_tiết = p.tenchitiet,
                                   Phát_sinh_có = p.tPSCo,
                                   Phát_sinh_nợ = p.tPSNo,
-                              //    Số_dư_phát_sinh = p.tPsNotruPSco,
+                                  Số_dư        = p.tPsNotruPSco,
 
 
 
