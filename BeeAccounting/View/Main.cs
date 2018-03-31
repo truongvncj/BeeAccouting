@@ -3578,6 +3578,11 @@ namespace BEEACCOUNT.View
             View.Beekyketoan view = new Beekyketoan();
             view.ShowDialog();
         }
+
+        private void phiếuTínhGiáVàXácNhậnSảnPhẩmHoànThànhToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
 
