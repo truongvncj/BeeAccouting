@@ -247,6 +247,7 @@ namespace BEEACCOUNT.View
         }
 
         public View.Main main1;
+
         public BeeButtoantonghop(View.Main Main)
         {
             InitializeComponent();
@@ -330,6 +331,9 @@ namespace BEEACCOUNT.View
 
             dataGridViewListBTTH.DataSource = Model.hachtoantonghop.danhsachbuttoantonghop(dc);
 
+
+            dataGridViewListBTTH.Columns["Số_tiền"].DefaultCellStyle.Format = "N0";
+            dataGridViewListBTTH.Columns["Số_tiền"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight; // để hiện số có dấu phảy
 
 
             #endregion load datanew
