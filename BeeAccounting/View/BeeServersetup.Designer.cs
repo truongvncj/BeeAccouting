@@ -99,7 +99,7 @@
             this.textBox2.PasswordChar = '*';
             this.textBox2.Size = new System.Drawing.Size(210, 20);
             this.textBox2.TabIndex = 4;
-            this.textBox2.Text = "tienmat1$";
+            this.textBox2.Text = "Tienmat102$";
             // 
             // label2
             // 
