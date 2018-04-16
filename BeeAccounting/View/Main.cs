@@ -3631,6 +3631,11 @@ namespace BEEACCOUNT.View
 
             #endregion
         }
+
+        private void toolStripMenuItem2_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 
 
