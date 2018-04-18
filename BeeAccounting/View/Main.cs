@@ -3636,6 +3636,20 @@ namespace BEEACCOUNT.View
         {
 
         }
+
+        private void danhSáchNhàCungỨngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //    NPDanhsachnhavantai
+            string connection_string = Utils.getConnectionstr();
+
+            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+            var rs1 = Model.Nhacungcap.danhsachNhacungcap(dc);
+            Viewtable viewtbl = new Viewtable(rs1, dc, "DANH SÁCH NHÀ CUNG CẤP", 5, "tk");// mã 5 là danh sach nha nha ccaaps
+
+           viewtbl.Show();
+
+        }
     }
 
 

@@ -367,9 +367,9 @@
             this.groupBox6.Controls.Add(this.button21);
             this.groupBox6.Controls.Add(this.button22);
             this.groupBox6.Controls.Add(this.button23);
-            this.groupBox6.Location = new System.Drawing.Point(90, 182);
+            this.groupBox6.Location = new System.Drawing.Point(26, 190);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(184, 88);
+            this.groupBox6.Size = new System.Drawing.Size(184, 203);
             this.groupBox6.TabIndex = 43;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Bán hàng";
@@ -377,7 +377,7 @@
             // button24
             // 
             this.button24.BackColor = System.Drawing.Color.Red;
-            this.button24.Location = new System.Drawing.Point(6, 103);
+            this.button24.Location = new System.Drawing.Point(0, 125);
             this.button24.Name = "button24";
             this.button24.Size = new System.Drawing.Size(166, 22);
             this.button24.TabIndex = 16;
@@ -389,7 +389,7 @@
             // 
             this.button21.Location = new System.Drawing.Point(6, 75);
             this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(166, 22);
+            this.button21.Size = new System.Drawing.Size(166, 33);
             this.button21.TabIndex = 15;
             this.button21.TabStop = false;
             this.button21.Text = "Hóa đơn bán hàng";
@@ -422,7 +422,7 @@
             this.groupBox7.Controls.Add(this.button26);
             this.groupBox7.Controls.Add(this.button45);
             this.groupBox7.Controls.Add(this.button27);
-            this.groupBox7.Location = new System.Drawing.Point(132, 290);
+            this.groupBox7.Location = new System.Drawing.Point(295, 293);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Size = new System.Drawing.Size(190, 131);
             this.groupBox7.TabIndex = 44;
@@ -739,7 +739,7 @@
             this.treeView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.treeView1.ForeColor = System.Drawing.SystemColors.MenuText;
             this.treeView1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(228)))), ((int)(((byte)(242)))));
-            this.treeView1.Location = new System.Drawing.Point(768, 290);
+            this.treeView1.Location = new System.Drawing.Point(798, 266);
             this.treeView1.Name = "treeView1";
             treeNode1.Name = "thongtin";
             treeNode1.Text = "Thông tin doanh nghiệp";
