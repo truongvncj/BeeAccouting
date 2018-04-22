@@ -1622,13 +1622,30 @@ namespace BEEACCOUNT.Control
 
         //}
 
-        public static void showwait()
+        class datashowwait
         {
-            View.BeeCaculating wat = new View.BeeCaculating();
+
+            public View.BeeCaculating wat { get; set; }
+
+
+        }
+
+
+
+        private void showwait(object obj)
+        {
+            // View.Caculating wat = new View.Caculating();
+
+            //            View.Caculating wat = (View.Caculating)obj;
+            datashowwait obshow = (datashowwait)obj;
+
+            View.BeeCaculating wat = obshow.wat;
+
             wat.ShowDialog();
 
 
         }
+
 
         //     // ARlettermakebyGroupcodeRegion
         //     //public static void VolumeupdateperContract(string Contractno)
@@ -2410,7 +2427,7 @@ namespace BEEACCOUNT.Control
         // }
 
 
-      
+
 
 
 

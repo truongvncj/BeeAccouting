@@ -12,14 +12,20 @@ namespace BEEACCOUNT.View
     public partial class BeeCaculating : Form
     {
 
-     //   public delegate void CloseFormDelegate();
-      //  public CloseFormDelegate myDelegate;
+        public void CloseMyForm()
+        {
+            this.Close();
+        }
+        public delegate void CloseFormDelegate();
+        public CloseFormDelegate myDelegate;
+
+
 
         public BeeCaculating()
         {
             InitializeComponent();
 
-           
+            myDelegate = new CloseFormDelegate(CloseMyForm);
 
         }
 
