@@ -70,7 +70,7 @@ namespace BEEACCOUNT.View
             int i = dataTable.Rows.Count - 1;
 
             DataGridViewComboBoxCell cb = (DataGridViewComboBoxCell)dataGridViewTkCo.Rows[i].Cells["Mã_sản_phẩm"];
-            DataGridViewCell dgvc = (DataGridViewCell)dataGridViewTkCo.Rows[i].Cells["Mã_sản_phẩm"];
+          //  DataGridViewCell dgvc = (DataGridViewCell)dataGridViewTkCo.Rows[i].Cells["Mã_sản_phẩm"];
 
             #region tim item comboboc
 
@@ -81,8 +81,9 @@ namespace BEEACCOUNT.View
                 {
 
                     dataGridViewTkCo.Rows[i].Cells["Mã_sản_phẩm"].Value = item.Value;
-                    //      cb.Selected = true;
-                    //  cb.inde = true;
+
+                    cb.Selected = true;
+                  
                 }
 
 
@@ -98,7 +99,7 @@ namespace BEEACCOUNT.View
 
         }
 
-        public void blankphieutonew()
+        public void blankphieutonew(string makho)
         {
             #region  list black phiếu
             datepickngayphieu.Enabled = true;
@@ -136,15 +137,15 @@ namespace BEEACCOUNT.View
             //    txttaikhoanco.Text = "";
             lb_machitietco.Text = "";
             lbtenchitietco.Text = "";
-            this.makho = null;
+         //   this.makho = null;
             txtsophieu.Focus();
             txthoadonkemtheo.Text = "";
 
             this.phieuxuatid = -1;
 
             this.statusphieuxuat = 1; // tạo mới
-            dataGridViewTkCo = Model.Khohang.reloaddetailnewPXK(dataGridViewTkCo, this.makho);
             #endregion
+         dataGridViewTkCo = Model.Khohang.reloaddetailnewPXK(dataGridViewTkCo, makho);
 
         }
 
@@ -855,9 +856,9 @@ namespace BEEACCOUNT.View
             Model.Taikhoanketoan.ghisocaitk(socai);
 
             #endregion// save so cái phiếu nhập
-
+            this.makho = (cbkhohang.SelectedItem as ComboboxItem).Value.ToString();
             this.sophieuxuat = txtsophieu.Text.Trim();
-            this.blankphieutonew();
+            this.blankphieutonew(this.makho);
 
             dataGridViewListPNK.DataSource = Model.Khohang.danhsachphieuxuatkho(dc);
             MessageBox.Show("Số phiếu vừa lưu: " + this.sophieuxuat, "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -1007,7 +1008,7 @@ namespace BEEACCOUNT.View
 
         private void button6_Click(object sender, EventArgs e)
         {
-            this.blankphieutonew();
+            this.blankphieutonew(this.makho);
 
             tabControl1.SelectedTab = tabPage1;
             //      dataGridViewTkCo = Model.Phieuthuchi.reloadnewdetailtaikhoanco(dataGridViewTkCo);
@@ -1180,6 +1181,8 @@ namespace BEEACCOUNT.View
 
 
             #endregion
+
+
             #region load tk nợ
             List<ComboboxItem> cbcolectiontkno = new List<ComboboxItem>();
             var rs = from p in dc.tbl_dstaikhoans
@@ -1259,6 +1262,7 @@ namespace BEEACCOUNT.View
                                      tenchitietno = p.TenCTietTKNo,
                                      tenchitietco = p.TenCTietTKCo,
                                      tenkho = p.tenkho,
+                                     makho = p.makho,
                                      //   tentkchitietno =p.
                                      //    tentkchitiet = p.,
                                      //      tkno = tbl_SoQuy.TKtienmat,
@@ -1302,7 +1306,13 @@ namespace BEEACCOUNT.View
                         }
                     }
 
-
+                    foreach (ComboboxItem item in (List<ComboboxItem>)cbkhohang.DataSource)
+                    {
+                        if (item.Value.ToString().Trim() == phieuxuat.makho.Trim())
+                        {
+                            cbkhohang.SelectedItem = item;
+                        }
+                    }
 
 
 
@@ -1336,6 +1346,8 @@ namespace BEEACCOUNT.View
 
                     btsua.Enabled = true;
                     cbkhohang.Enabled = false;
+
+
                     cbtkno.Enabled = false;
                     cbtkco.Enabled = false;
 

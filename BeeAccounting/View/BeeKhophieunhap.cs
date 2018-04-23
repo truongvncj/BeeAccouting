@@ -1274,6 +1274,7 @@ namespace BEEACCOUNT.View
                                      tenchitietno = p.TenCTietTKNo,
                                      tenchitietco = p.TenCTietTKCo,
                                      tenkho = p.tenkho,
+                                     makho =p.makho,
                                      //   tentkchitietno =p.
                                      //    tentkchitiet = p.,
                                      //      tkno = tbl_SoQuy.TKtienmat,
@@ -1313,6 +1314,14 @@ namespace BEEACCOUNT.View
                         if (item.Value.ToString().Trim() == phieunhap.cotk.Trim())
                         {
                             cbtkco.SelectedItem = item;
+                        }
+                    }
+
+                    foreach (ComboboxItem item in (List<ComboboxItem>)cbkhohang.DataSource)
+                    {
+                        if (item.Value.ToString().Trim() == phieunhap.makho.Trim())
+                        {
+                            cbkhohang.SelectedItem = item;
                         }
                     }
 

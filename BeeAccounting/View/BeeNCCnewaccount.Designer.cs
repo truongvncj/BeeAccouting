@@ -137,7 +137,7 @@
             this.groupBox2.Controls.Add(this.txttennganhang);
             this.groupBox2.Controls.Add(this.label12);
             this.groupBox2.Controls.Add(this.txtsotaikhoannganhang);
-            this.groupBox2.Location = new System.Drawing.Point(7, 443);
+            this.groupBox2.Location = new System.Drawing.Point(7, 471);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(555, 93);
             this.groupBox2.TabIndex = 71;
