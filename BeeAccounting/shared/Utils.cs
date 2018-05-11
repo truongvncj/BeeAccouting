@@ -296,7 +296,7 @@ namespace BEEACCOUNT
                     string st2 = parts[1].Trim();
                     string st3 = parts[2].Trim();
                     //        string st4 = parts[3].Trim();
-
+                    // chua8923_BEE  BEE
                     connection_string = ("Data Source =" + st1 + "; Initial Catalog = BEE; User Id =" + st2 + "; Password =" + st3).Trim();
                     return connection_string;
 

@@ -52,13 +52,13 @@ namespace BEEACCOUNT.View
                      st1 = parts[0].Trim();
                      st2 = parts[1].Trim();
                      st3 = parts[2].Trim();
-               
 
 
-                 
-                 //   if (st4 =="cn")
-                 //   {
-                        connection_string = ("Data Source =" + st1 + "; Initial Catalog = BEE; User Id =" + st2 + "; Password =" + st3).Trim();
+
+
+                    //   if (st4 =="cn") tam thoi thay server  = chua8923_BEE  còn mặc định là BEE
+                    //   {
+                    connection_string = ("Data Source =" + st1 + "; Initial Catalog = BEE; User Id =" + st2 + "; Password =" + st3).Trim();
                 //    }
               // /
                     //       connection_string = "Data Source = DESKTOP-8D4F853\\SQLEXPRESS; Initial Catalog = BEEACCOUNT; User Id = SA; Password = 123123";
