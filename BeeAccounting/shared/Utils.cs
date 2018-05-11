@@ -202,7 +202,7 @@ namespace BEEACCOUNT
                     string[] parts = line.Split(';');
                     if (parts.Count() >= 4)
                     {
-                        st4 = parts[3].Trim();
+                        st4 = parts[4].Trim();
                     }
                     else
                     {
@@ -295,9 +295,9 @@ namespace BEEACCOUNT
                     string st1 = parts[0].Trim();
                     string st2 = parts[1].Trim();
                     string st3 = parts[2].Trim();
-                    //        string st4 = parts[3].Trim();
+                    string st4 = parts[3].Trim();
                     // chua8923_BEE  BEE
-                    connection_string = ("Data Source =" + st1 + "; Initial Catalog = BEE; User Id =" + st2 + "; Password =" + st3).Trim();
+                    connection_string = ("Data Source =" + st1 + "; Initial Catalog = " + st4+"; User Id =" + st2 + "; Password =" + st3).Trim();
                     return connection_string;
 
 

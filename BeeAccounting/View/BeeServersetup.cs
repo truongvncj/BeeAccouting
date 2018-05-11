@@ -29,7 +29,7 @@ namespace BEEACCOUNT.View
 
 
                 //   string[] names = new string[] { "Zara Ali", "Nuha Ali" };
-                string s = textBox1.Text + ";" + textBox3.Text + ";" + textBox2.Text;
+                string s = textBox1.Text + ";" + textBox3.Text + ";" + textBox2.Text+";"+ textBox4.Text;
             
             using (StreamWriter sw = new StreamWriter(fileName))
             {
