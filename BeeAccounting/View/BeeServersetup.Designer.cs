@@ -64,7 +64,7 @@
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(210, 20);
             this.textBox4.TabIndex = 8;
-            this.textBox4.Text = "BEE";
+            this.textBox4.Text = "chua8923_BEE";
             // 
             // label4
             // 
@@ -81,7 +81,7 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(210, 20);
             this.textBox3.TabIndex = 6;
-            this.textBox3.Text = "SA";
+            this.textBox3.Text = "chua8923_BEE";
             // 
             // label3
             // 
@@ -99,7 +99,7 @@
             this.textBox2.PasswordChar = '*';
             this.textBox2.Size = new System.Drawing.Size(210, 20);
             this.textBox2.TabIndex = 4;
-            this.textBox2.Text = "Tienmat102$";
+            this.textBox2.Text = "Tienmat1$la!";
             // 
             // label2
             // 
@@ -116,7 +116,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(210, 20);
             this.textBox1.TabIndex = 2;
-            this.textBox1.Text = "HAN-L-3PFF7H2";
+            this.textBox1.Text = "112.78.2.130,1433";
             // 
             // button1
             // 
