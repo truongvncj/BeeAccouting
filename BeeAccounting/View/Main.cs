@@ -58,23 +58,24 @@ namespace BEEACCOUNT.View
         }
         public Main()
         {
-           
-
-                InitializeComponent();
-
-                string username = Utils.getusername();
-                lbusername.Text = username;
 
 
+            InitializeComponent();
 
-                panelmain.Controls.Clear();
+            string username = Utils.getusername();
+            lbusername.Text = username;
 
-                View.Beemainload accsup = new Beemainload(this);
+            string tencty = Model.Username.getnamecty();
+            lbtencty.Text = tencty;
 
-                accsup.TopLevel = false;
-                accsup.AutoScroll = true;
-                panelmain.Controls.Add(accsup);
-                accsup.Show();
+            panelmain.Controls.Clear();
+
+            View.Beemainload accsup = new Beemainload(this);
+
+            accsup.TopLevel = false;
+            accsup.AutoScroll = true;
+            panelmain.Controls.Add(accsup);
+            accsup.Show();
 
 
 
@@ -2741,7 +2742,7 @@ namespace BEEACCOUNT.View
         private void button12_Click(object sender, EventArgs e)
         {
 
-        
+
 
 
         }
@@ -3394,7 +3395,7 @@ namespace BEEACCOUNT.View
         private void phiếuThuToolStripMenuItem1_Click(object sender, EventArgs e)
         {
 
-           
+
 
         }
 
@@ -3647,7 +3648,7 @@ namespace BEEACCOUNT.View
             var rs1 = Model.Nhacungcap.danhsachNhacungcap(dc);
             Viewtable viewtbl = new Viewtable(rs1, dc, "DANH SÁCH NHÀ CUNG CẤP", 5, "tk");// mã 5 là danh sach nha nha ccaaps
 
-           viewtbl.Show();
+            viewtbl.Show();
 
         }
     }

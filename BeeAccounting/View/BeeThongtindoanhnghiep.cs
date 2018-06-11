@@ -34,11 +34,12 @@ namespace BEEACCOUNT.View
             string connection_string = Utils.getConnectionstr();
 
             LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
-
+            string macty = Model.Username.getmacty();
 
             //        tbl_congty cty = new tbl_congty();
 
             var cty = (from ctyi in dc.tbl_congties
+                       where ctyi.macty == macty
                        select ctyi).FirstOrDefault();
             if (cty != null)
             {
@@ -48,6 +49,7 @@ namespace BEEACCOUNT.View
                 txtmasothue.Text = cty.Masothue;
                 txttengiamdoc.Text = cty.tengiamdoc;
                 txttenketoantruong.Text = cty.tenketoantruong;
+                txtmacty.Text = cty.macty;
                 //txtmasothue.Text = cty.Masothue;
                 //txtmasothue.Text = cty.Masothue;
                 //txtmasothue.Text = cty.Masothue;
@@ -211,11 +213,12 @@ namespace BEEACCOUNT.View
             string connection_string = Utils.getConnectionstr();
 
             LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
-
+            string macty = Model.Username.getmacty();
             //   tbl_congty cty = new tbl_congty();
             //        tbl_congty cty = new tbl_congty();
 
             var cty = (from ctyi in dc.tbl_congties
+                       where ctyi.macty == macty
                        select ctyi).FirstOrDefault();
             if (cty != null)
             {
@@ -225,7 +228,7 @@ namespace BEEACCOUNT.View
                 cty.Masothue = txtmasothue.Text;
                 cty.tengiamdoc = txttengiamdoc.Text;
                 cty.tenketoantruong = txttenketoantruong.Text;
-
+                cty.macty = macty;
 
                 dc.SubmitChanges();
             }
@@ -238,6 +241,7 @@ namespace BEEACCOUNT.View
                 p.Masothue = txtmasothue.Text;
                 p.tengiamdoc = txttengiamdoc.Text;
                 p.tenketoantruong = txttenketoantruong.Text;
+                p.macty = macty;
                 dc.tbl_congties.InsertOnSubmit(p);
                 dc.SubmitChanges();
 

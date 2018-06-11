@@ -137,8 +137,13 @@
             this.báoCáoLCTTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nhậpSốĐầuKỳLCTTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sổCânĐốiTàiKhoảnPhátSinhToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lbtencty = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            this.panelmain.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -146,6 +151,8 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.lbtencty);
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.messageinfor);
             this.panel1.Controls.Add(this.webBrowser1);
             this.panel1.Controls.Add(this.lbusername);
@@ -198,9 +205,9 @@
             this.lb_user.AutoSize = true;
             this.lb_user.Location = new System.Drawing.Point(3, 627);
             this.lb_user.Name = "lb_user";
-            this.lb_user.Size = new System.Drawing.Size(58, 13);
+            this.lb_user.Size = new System.Drawing.Size(65, 13);
             this.lb_user.TabIndex = 23;
-            this.lb_user.Text = "User name";
+            this.lb_user.Text = "Người dùng:";
             // 
             // panelmain
             // 
@@ -210,6 +217,7 @@
             this.panelmain.AutoScroll = true;
             this.panelmain.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panelmain.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panelmain.Controls.Add(this.pictureBox1);
             this.panelmain.Location = new System.Drawing.Point(6, 0);
             this.panelmain.Name = "panelmain";
             this.panelmain.Size = new System.Drawing.Size(1106, 624);
@@ -345,21 +353,21 @@
             // toolStripMenuItem15
             // 
             this.toolStripMenuItem15.Name = "toolStripMenuItem15";
-            this.toolStripMenuItem15.Size = new System.Drawing.Size(152, 24);
+            this.toolStripMenuItem15.Size = new System.Drawing.Size(139, 24);
             this.toolStripMenuItem15.Text = "Phiếu thu";
             this.toolStripMenuItem15.Click += new System.EventHandler(this.toolStripMenuItem15_Click);
             // 
             // toolStripMenuItem16
             // 
             this.toolStripMenuItem16.Name = "toolStripMenuItem16";
-            this.toolStripMenuItem16.Size = new System.Drawing.Size(152, 24);
+            this.toolStripMenuItem16.Size = new System.Drawing.Size(139, 24);
             this.toolStripMenuItem16.Text = "Phiếu chi";
             this.toolStripMenuItem16.Click += new System.EventHandler(this.toolStripMenuItem16_Click);
             // 
             // toolStripMenuItem14
             // 
             this.toolStripMenuItem14.Name = "toolStripMenuItem14";
-            this.toolStripMenuItem14.Size = new System.Drawing.Size(152, 24);
+            this.toolStripMenuItem14.Size = new System.Drawing.Size(139, 24);
             this.toolStripMenuItem14.Text = "Sổ quỹ";
             this.toolStripMenuItem14.Click += new System.EventHandler(this.toolStripMenuItem14_Click);
             // 
@@ -955,6 +963,35 @@
             this.sổCânĐốiTàiKhoảnPhátSinhToolStripMenuItem.Text = "Sổ cân đối tài khoản phát sinh";
             this.sổCânĐốiTàiKhoảnPhátSinhToolStripMenuItem.Click += new System.EventHandler(this.sổCânĐốiTàiKhoảnPhátSinhToolStripMenuItem_Click);
             // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(215, 627);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(41, 13);
+            this.label1.TabIndex = 32;
+            this.label1.Text = "Đơn vị:";
+            // 
+            // lbtencty
+            // 
+            this.lbtencty.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lbtencty.AutoSize = true;
+            this.lbtencty.ForeColor = System.Drawing.Color.Red;
+            this.lbtencty.Location = new System.Drawing.Point(267, 627);
+            this.lbtencty.Name = "lbtencty";
+            this.lbtencty.Size = new System.Drawing.Size(35, 13);
+            this.lbtencty.TabIndex = 33;
+            this.lbtencty.Text = "label2";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(84, 50);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(130, 87);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -970,8 +1007,10 @@
             this.Load += new System.EventHandler(this.Main_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panelmain.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1082,6 +1121,9 @@
         private ToolStripMenuItem ủyNhiệmChiToolStripMenuItem;
         private ToolStripMenuItem thanhToánLươngToolStripMenuItem;
         private ToolStripMenuItem thanhToánTạmỨngToolStripMenuItem;
+        private Label lbtencty;
+        private Label label1;
+        private PictureBox pictureBox1;
     }
 }
 

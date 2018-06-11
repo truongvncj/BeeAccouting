@@ -74,6 +74,53 @@ namespace BEEACCOUNT.Model
         }
 
 
+        public static string getmacty()
+        {
+            string Username = Utils.getusername();
+
+            string connection_string = Utils.getConnectionstr();
+
+            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+
+            string rs = (from tbl_Temp in dc.tbl_Temps
+                           where tbl_Temp.Username == Username
+                           select tbl_Temp.Macty).FirstOrDefault();
+
+
+
+
+
+            return rs;
+
+
+
+        }
+
+
+        public static string getnamecty()
+        {
+            string macty = getmacty();
+
+            string connection_string = Utils.getConnectionstr();
+
+            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+
+            string rs = (from p in dc.tbl_congties
+                         where p.macty == macty
+                         select p.tencongty).FirstOrDefault();
+
+
+
+
+
+            return rs;
+
+
+
+        }
+
 
         public static bool getphanquyen()
         {

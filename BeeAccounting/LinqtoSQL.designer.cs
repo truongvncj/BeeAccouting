@@ -948,6 +948,8 @@ namespace BEEACCOUNT
 		
 		private bool _Thiết_lập_tài_khoản;
 		
+		private string _Macty;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -974,6 +976,8 @@ namespace BEEACCOUNT
     partial void OnPhân_quyềnChanged();
     partial void OnThiết_lập_tài_khoảnChanging(bool value);
     partial void OnThiết_lập_tài_khoảnChanged();
+    partial void OnMactyChanging(string value);
+    partial void OnMactyChanged();
     #endregion
 		
 		public tbl_Temp()
@@ -1197,6 +1201,26 @@ namespace BEEACCOUNT
 					this._Thiết_lập_tài_khoản = value;
 					this.SendPropertyChanged("Thiết_lập_tài_khoản");
 					this.OnThiết_lập_tài_khoảnChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Macty", DbType="NVarChar(50)")]
+		public string Macty
+		{
+			get
+			{
+				return this._Macty;
+			}
+			set
+			{
+				if ((this._Macty != value))
+				{
+					this.OnMactyChanging(value);
+					this.SendPropertyChanging();
+					this._Macty = value;
+					this.SendPropertyChanged("Macty");
+					this.OnMactyChanged();
 				}
 			}
 		}
@@ -16302,6 +16326,8 @@ namespace BEEACCOUNT
 		
 		private string _tenketoantruong;
 		
+		private string _macty;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -16320,6 +16346,8 @@ namespace BEEACCOUNT
     partial void OnchedoketoanapdungChanged();
     partial void OntenketoantruongChanging(string value);
     partial void OntenketoantruongChanged();
+    partial void OnmactyChanging(string value);
+    partial void OnmactyChanged();
     #endregion
 		
 		public tbl_congty()
@@ -16463,6 +16491,26 @@ namespace BEEACCOUNT
 					this._tenketoantruong = value;
 					this.SendPropertyChanged("tenketoantruong");
 					this.OntenketoantruongChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_macty", DbType="NVarChar(50)")]
+		public string macty
+		{
+			get
+			{
+				return this._macty;
+			}
+			set
+			{
+				if ((this._macty != value))
+				{
+					this.OnmactyChanging(value);
+					this.SendPropertyChanging();
+					this._macty = value;
+					this.SendPropertyChanged("macty");
+					this.OnmactyChanged();
 				}
 			}
 		}
@@ -24674,6 +24722,16 @@ namespace BEEACCOUNT
 		
 		private string _Sophieu;
 		
+		private bool _requestAproval;
+		
+		private bool _fundcheckout;
+		
+		private bool _cashavancerequest;
+		
+		private bool _cashadvandapproval1;
+		
+		private bool _cashadvanapproval2;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -24712,6 +24770,16 @@ namespace BEEACCOUNT
     partial void OnTenchitietTMChanged();
     partial void OnSophieuChanging(string value);
     partial void OnSophieuChanged();
+    partial void OnrequestAprovalChanging(bool value);
+    partial void OnrequestAprovalChanged();
+    partial void OnfundcheckoutChanging(bool value);
+    partial void OnfundcheckoutChanged();
+    partial void OncashavancerequestChanging(bool value);
+    partial void OncashavancerequestChanged();
+    partial void Oncashadvandapproval1Changing(bool value);
+    partial void Oncashadvandapproval1Changed();
+    partial void Oncashadvanapproval2Changing(bool value);
+    partial void Oncashadvanapproval2Changed();
     #endregion
 		
 		public tbl_SoQuy()
@@ -25055,6 +25123,106 @@ namespace BEEACCOUNT
 					this._Sophieu = value;
 					this.SendPropertyChanged("Sophieu");
 					this.OnSophieuChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_requestAproval", DbType="Bit NOT NULL")]
+		public bool requestAproval
+		{
+			get
+			{
+				return this._requestAproval;
+			}
+			set
+			{
+				if ((this._requestAproval != value))
+				{
+					this.OnrequestAprovalChanging(value);
+					this.SendPropertyChanging();
+					this._requestAproval = value;
+					this.SendPropertyChanged("requestAproval");
+					this.OnrequestAprovalChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fundcheckout", DbType="Bit NOT NULL")]
+		public bool fundcheckout
+		{
+			get
+			{
+				return this._fundcheckout;
+			}
+			set
+			{
+				if ((this._fundcheckout != value))
+				{
+					this.OnfundcheckoutChanging(value);
+					this.SendPropertyChanging();
+					this._fundcheckout = value;
+					this.SendPropertyChanged("fundcheckout");
+					this.OnfundcheckoutChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_cashavancerequest", DbType="Bit NOT NULL")]
+		public bool cashavancerequest
+		{
+			get
+			{
+				return this._cashavancerequest;
+			}
+			set
+			{
+				if ((this._cashavancerequest != value))
+				{
+					this.OncashavancerequestChanging(value);
+					this.SendPropertyChanging();
+					this._cashavancerequest = value;
+					this.SendPropertyChanged("cashavancerequest");
+					this.OncashavancerequestChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_cashadvandapproval1", DbType="Bit NOT NULL")]
+		public bool cashadvandapproval1
+		{
+			get
+			{
+				return this._cashadvandapproval1;
+			}
+			set
+			{
+				if ((this._cashadvandapproval1 != value))
+				{
+					this.Oncashadvandapproval1Changing(value);
+					this.SendPropertyChanging();
+					this._cashadvandapproval1 = value;
+					this.SendPropertyChanged("cashadvandapproval1");
+					this.Oncashadvandapproval1Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_cashadvanapproval2", DbType="Bit NOT NULL")]
+		public bool cashadvanapproval2
+		{
+			get
+			{
+				return this._cashadvanapproval2;
+			}
+			set
+			{
+				if ((this._cashadvanapproval2 != value))
+				{
+					this.Oncashadvanapproval2Changing(value);
+					this.SendPropertyChanging();
+					this._cashadvanapproval2 = value;
+					this.SendPropertyChanged("cashadvanapproval2");
+					this.Oncashadvanapproval2Changed();
 				}
 			}
 		}
