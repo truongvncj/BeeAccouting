@@ -33,6 +33,8 @@
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.formlabelED = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.txtmacty = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.txttenketoantruong = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txttengiamdoc = new System.Windows.Forms.ComboBox();
@@ -44,8 +46,6 @@
             this.txtten = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btchangecontractitem = new System.Windows.Forms.Button();
-            this.txtmacty = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -80,6 +80,27 @@
             this.groupBox4.Size = new System.Drawing.Size(619, 272);
             this.groupBox4.TabIndex = 102;
             this.groupBox4.TabStop = false;
+            // 
+            // txtmacty
+            // 
+            this.txtmacty.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
+            this.txtmacty.FormattingEnabled = true;
+            this.txtmacty.Location = new System.Drawing.Point(116, 209);
+            this.txtmacty.Name = "txtmacty";
+            this.txtmacty.Size = new System.Drawing.Size(240, 21);
+            this.txtmacty.TabIndex = 98;
+            // 
+            // label6
+            // 
+            this.label6.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label6.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(9, 210);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(101, 19);
+            this.label6.TabIndex = 97;
+            this.label6.Text = "Mã công ty";
             // 
             // txttenketoantruong
             // 
@@ -201,28 +222,6 @@
             this.btchangecontractitem.Text = "Lưu";
             this.btchangecontractitem.UseVisualStyleBackColor = false;
             this.btchangecontractitem.Click += new System.EventHandler(this.btchangecontractitem_Click);
-            // 
-            // txtmacty
-            // 
-            this.txtmacty.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
-            this.txtmacty.Enabled = false;
-            this.txtmacty.FormattingEnabled = true;
-            this.txtmacty.Location = new System.Drawing.Point(116, 209);
-            this.txtmacty.Name = "txtmacty";
-            this.txtmacty.Size = new System.Drawing.Size(240, 21);
-            this.txtmacty.TabIndex = 98;
-            // 
-            // label6
-            // 
-            this.label6.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label6.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(9, 210);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(101, 19);
-            this.label6.TabIndex = 97;
-            this.label6.Text = "Mã công ty";
             // 
             // BeeThongtindoanhnghiep
             // 

@@ -23,28 +23,10 @@ namespace BEEACCOUNT.View
 
             Model.Username used = new Username();
             this.main1 = Main;
-            treeView1.Visible = false;
-            panel1.Visible = false;
+            //    treeView1.Visible = false;
+            //     panel1.Visible = false;
 
-            //if (used.masterbegin)
-            //{
-            //    begin.Enabled = true;
-            //}
-            //else
-            //{
-            //    begin.Enabled = false;
-            //}
 
-            ////  masterdatafuction
-
-            //if (used.masterdatafuction)
-            //{
-            //    masterdatafuction.Enabled = true;
-            //}
-            //else
-            //{
-            //    masterdatafuction.Enabled = false;
-            //}
 
 
         }
@@ -1027,7 +1009,7 @@ namespace BEEACCOUNT.View
             //     bangnhapsodulctt
 
 
-           
+
 
 
 
@@ -1049,12 +1031,12 @@ namespace BEEACCOUNT.View
 
             //            dstaikhoanketoan
 
-         
+
             //hethongtk
 
             //phanquyen
 
-          
+
 
             //btoanth
 
@@ -1088,7 +1070,7 @@ namespace BEEACCOUNT.View
 
         private void button8_Click_1(object sender, EventArgs e)
         {
-         
+
 
         }
 
@@ -1164,14 +1146,14 @@ namespace BEEACCOUNT.View
         private void bútToánTổngHợpToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
-           
+
 
         }
 
         private void sổTàiKhoảnTổngHợpToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
-          
+
         }
 
         private void bảnCấnĐốiTàiKhoảnPhátSinhToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1194,31 +1176,31 @@ namespace BEEACCOUNT.View
         private void sổNhậtKýChungToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
-          
+
         }
 
         private void sổCáiTàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
-        
+
         }
 
         private void danhSáchLoạiTàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
-       
+
         }
 
         private void phiếuNhậpKhoToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
-            
+
         }
 
         private void phiếuXuấtKhoToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
-          
+
         }
 
         private void sổKhoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1229,6 +1211,58 @@ namespace BEEACCOUNT.View
         private void sổQuỹToolStripMenuItem1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBox1_MouseHover(object sender, EventArgs e)
+        {
+            this.pictureBox1.BorderStyle = BorderStyle.FixedSingle;
+        }
+
+        private void pictureBox2_MouseHover(object sender, EventArgs e)
+        {
+            this.pictureBox2.BorderStyle = BorderStyle.FixedSingle;
+        }
+
+        private void pictureBox2_MouseLeave(object sender, EventArgs e)
+        {
+            this.pictureBox2.BorderStyle = BorderStyle.None;
+        }
+
+        private void pictureBox2_MouseClick(object sender, MouseEventArgs e)
+        {
+            this.pictureBox2.BorderStyle = BorderStyle.Fixed3D;
+        }
+
+        private void pictureBox1_MouseClick(object sender, MouseEventArgs e)
+        {
+            this.pictureBox1.BorderStyle = BorderStyle.Fixed3D;
+        }
+
+        private void pictureBox1_MouseLeave(object sender, EventArgs e)
+        {
+            this.pictureBox1.BorderStyle = BorderStyle.None;
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            //    string connection_string = Utils.getConnectionstr();
+
+            //   LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+            //   var rs1 = Model.Nhacungcap.danhsachNVT(dc);
+            //    Viewtable viewtbl = new Viewtable(rs1, dc, "DANH SÁCH NHÀ VẬN TẢI", 8, "tk");// mã 8 là danh sach nha nha van tai
+            //   Viewtable viewtbl = new
+            View.beektth viewtbl = new beektth(this.main1);
+
+            viewtbl.Show();
+
+        }
+
+        private void pictureBox2_Click_1(object sender, EventArgs e)
+        {
+            View.bedieuvan viewtbl = new bedieuvan(this.main1);
+
+            viewtbl.Show();
         }
     }
 }
