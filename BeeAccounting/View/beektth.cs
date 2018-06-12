@@ -897,5 +897,28 @@ namespace BEEACCOUNT.View
             #endregion
 
         }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            #region//tmphieuchi
+
+
+            //  Main.clearpannel();
+
+            this.main.clearpannel();
+
+
+            View.BeePhieuchi accsup = new BeePhieuchi(this.main);
+            this.main.clearpannelload(accsup);
+            //    accsup.TopLevel = false;
+            //  accsup.AutoScroll = true;
+            //    panelmain.Controls.Add(accsup);
+            //    accsup.Show();
+            this.Close();
+
+            #endregion
+
+
+        }
     }
 }
