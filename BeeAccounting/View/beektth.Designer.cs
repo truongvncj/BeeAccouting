@@ -104,6 +104,7 @@
             this.button3.TabIndex = 2;
             this.button3.Text = "Sổ quỹ";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click_2);
             // 
             // button2
             // 
@@ -278,7 +279,7 @@
             this.Name = "beektth";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Kế toán tổng hợp";
+            this.Text = "Bee Accounting";
             this.Deactivate += new System.EventHandler(this.KAmasterinput_Deactivate);
             this.Load += new System.EventHandler(this.KAmasterinput_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

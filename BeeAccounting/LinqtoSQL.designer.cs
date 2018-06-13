@@ -24298,6 +24298,8 @@ namespace BEEACCOUNT
 		
 		private System.Nullable<bool> _nganhan;
 		
+		private string _macty;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -24334,6 +24336,8 @@ namespace BEEACCOUNT
     partial void OnSohieuchungtuChanged();
     partial void OnnganhanChanging(System.Nullable<bool> value);
     partial void OnnganhanChanged();
+    partial void OnmactyChanging(string value);
+    partial void OnmactyChanged();
     #endregion
 		
 		public tbl_Socai()
@@ -24661,6 +24665,26 @@ namespace BEEACCOUNT
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_macty", DbType="NVarChar(50)")]
+		public string macty
+		{
+			get
+			{
+				return this._macty;
+			}
+			set
+			{
+				if ((this._macty != value))
+				{
+					this.OnmactyChanging(value);
+					this.SendPropertyChanging();
+					this._macty = value;
+					this.SendPropertyChanged("macty");
+					this.OnmactyChanged();
+				}
+			}
+		}
+		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -24732,6 +24756,8 @@ namespace BEEACCOUNT
 		
 		private bool _cashadvanapproval2;
 		
+		private string _macty;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -24780,6 +24806,8 @@ namespace BEEACCOUNT
     partial void Oncashadvandapproval1Changed();
     partial void Oncashadvanapproval2Changing(bool value);
     partial void Oncashadvanapproval2Changed();
+    partial void OnmactyChanging(string value);
+    partial void OnmactyChanged();
     #endregion
 		
 		public tbl_SoQuy()
@@ -25223,6 +25251,26 @@ namespace BEEACCOUNT
 					this._cashadvanapproval2 = value;
 					this.SendPropertyChanged("cashadvanapproval2");
 					this.Oncashadvanapproval2Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_macty", DbType="NVarChar(50)")]
+		public string macty
+		{
+			get
+			{
+				return this._macty;
+			}
+			set
+			{
+				if ((this._macty != value))
+				{
+					this.OnmactyChanging(value);
+					this.SendPropertyChanging();
+					this._macty = value;
+					this.SendPropertyChanged("macty");
+					this.OnmactyChanged();
 				}
 			}
 		}

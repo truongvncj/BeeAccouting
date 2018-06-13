@@ -1133,6 +1133,7 @@
       <Column Name="PsCo" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Column Name="Sohieuchungtu" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="nganhan" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="macty" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.tbl_SoQuy" Member="tbl_SoQuys">
@@ -1159,6 +1160,7 @@
       <Column Name="cashavancerequest" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
       <Column Name="cashadvandapproval1" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
       <Column Name="cashadvanapproval2" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="macty" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
     </Type>
   </Table>
 </Database>

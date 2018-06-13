@@ -625,7 +625,7 @@
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewListphieuchi.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.dataGridViewListphieuchi.Size = new System.Drawing.Size(1073, 515);
+            this.dataGridViewListphieuchi.Size = new System.Drawing.Size(1073, 500);
             this.dataGridViewListphieuchi.TabIndex = 0;
             this.dataGridViewListphieuchi.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewListphieuthu_CellClick);
             this.dataGridViewListphieuchi.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewListphieuchi_CellContentClick);

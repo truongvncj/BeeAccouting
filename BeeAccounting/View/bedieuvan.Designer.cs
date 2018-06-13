@@ -41,9 +41,9 @@
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -180,6 +180,16 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Khách hàng vận tải";
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(24, 94);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(150, 21);
+            this.button3.TabIndex = 2;
+            this.button3.Text = "Bảng giá theo sản phẩm";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click_2);
+            // 
             // button13
             // 
             this.button13.Location = new System.Drawing.Point(24, 67);
@@ -200,16 +210,6 @@
             this.button14.UseVisualStyleBackColor = true;
             this.button14.Click += new System.EventHandler(this.button14_Click_1);
             // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(24, 94);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(150, 21);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Bảng giá theo sản phẩm";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click_2);
-            // 
             // bedieuvan
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -224,7 +224,7 @@
             this.Name = "bedieuvan";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Điều vận";
+            this.Text = "Bee Accounting";
             this.TopMost = true;
             this.Deactivate += new System.EventHandler(this.KAmasterinput_Deactivate);
             this.Load += new System.EventHandler(this.KAmasterinput_Load);

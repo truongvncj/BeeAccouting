@@ -18,6 +18,7 @@ namespace BEEACCOUNT.Model
             //  Beeyearsellect
             string connection_string = Utils.getConnectionstr();
             string urs = Utils.getusername();
+            string macty = Model.Username.getmacty();
             //  var db = new LinqtoSQLDataContext(connection_string);
             LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
 
@@ -79,15 +80,15 @@ namespace BEEACCOUNT.Model
 
 
                     HeadHKC.nam = yearchon;
-                    HeadHKC.tencongty = Model.Congty.getnamecongty();
+                    HeadHKC.tencongty = Model.Congty.getnamecongty(macty);
                     HeadHKC.username = username;
-                    HeadHKC.diachicongty = Model.Congty.getdiachicongty();
-                    HeadHKC.masothue = Model.Congty.getmasothuecongty();
+                    HeadHKC.diachicongty = Model.Congty.getdiachicongty(macty);
+                    HeadHKC.masothue = Model.Congty.getmasothuecongty(macty);
                     //      pt.tencongty = Model.Congty.getnamecongty();
                     //    pt.diachicongty = Model.Congty.getdiachicongty();
                     //  pt.masothue = Model.Congty.getmasothuecongty();
-                    HeadHKC.giamdoc = Model.Congty.gettengiamdoccongty();
-                    HeadHKC.ketoantruong = Model.Congty.gettenketoantruongcongty();
+                    HeadHKC.giamdoc = Model.Congty.gettengiamdoccongty(macty);
+                    HeadHKC.ketoantruong = Model.Congty.gettenketoantruongcongty(macty);
                     HeadHKC.nguoighiso = Utils.getname();
 
 
@@ -263,7 +264,7 @@ namespace BEEACCOUNT.Model
         {
             string connection_string = Utils.getConnectionstr();
             string urs = Utils.getusername();
-            //  var db = new LinqtoSQLDataContext(connection_string);
+            string macty = Model.Username.getmacty();
             LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
 
 
@@ -333,10 +334,10 @@ namespace BEEACCOUNT.Model
 
 
                     headSocai.taikhoan = tentaikhoan.Trim(); //mataikhoan.Trim() + "-" + 
-                    headSocai.tencongty = Model.Congty.getnamecongty();
+                    headSocai.tencongty = Model.Congty.getnamecongty(macty);
                     headSocai.username = username;
-                    headSocai.diachicongty = Model.Congty.getdiachicongty();
-                    headSocai.masothue = Model.Congty.getmasothuecongty();
+                    headSocai.diachicongty = Model.Congty.getdiachicongty(macty);
+                    headSocai.masothue = Model.Congty.getmasothuecongty(macty);
                     headSocai.tungay = fromdate;
                     headSocai.denngay = todate;
 
@@ -574,7 +575,7 @@ namespace BEEACCOUNT.Model
                 string tentaikhoan = Beeselecttk.tentaikhoan;
                 int machitiettaikhoan = Beeselecttk.machitiettaikhoan;
                 string tentaikhoanchitiet = Beeselecttk.tentaikhoanchitiet;
-
+                string macty = Model.Username.getmacty();
 
                 if (chon)
                 {
@@ -585,6 +586,8 @@ namespace BEEACCOUNT.Model
 
                     var listRptdetailSoQuy = from RptdetailSoQuy in dc.RptdetailSoQuys
                                              where RptdetailSoQuy.username == username
+                                             // &&  RptdetailSoQuy.macty == macty
+
                                              select RptdetailSoQuy;
 
                     dc.RptdetailSoQuys.DeleteAllOnSubmit(listRptdetailSoQuy);
@@ -607,10 +610,10 @@ namespace BEEACCOUNT.Model
 
                     headSoquy.taikhoan = tentaikhoan.Trim(); //mataikhoan.Trim() + "-" + 
                     headSoquy.loaiquy = tentaikhoanchitiet;
-                    headSoquy.tencongty = Model.Congty.getnamecongty();
+                    headSoquy.tencongty = Model.Congty.getnamecongty(macty);
                     headSoquy.username = username;
-                    headSoquy.diachicongty = Model.Congty.getdiachicongty();
-                    headSoquy.masothue = Model.Congty.getmasothuecongty();
+                    headSoquy.diachicongty = Model.Congty.getdiachicongty(macty);
+                    headSoquy.masothue = Model.Congty.getmasothuecongty(macty);
                     headSoquy.tungay = fromdate;
                     headSoquy.denngay = todate;
 
@@ -841,7 +844,8 @@ namespace BEEACCOUNT.Model
         {
             string connection_string = Utils.getConnectionstr();
             string urs = Utils.getusername();
-            //  var db = new LinqtoSQLDataContext(connection_string);
+            string macty = Model.Username.getmacty();
+
             LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
 
 
@@ -909,10 +913,10 @@ namespace BEEACCOUNT.Model
 
 
                     headSocai.taikhoan = tentaikhoan.Trim(); //mataikhoan.Trim() + "-" + 
-                    headSocai.tencongty = Model.Congty.getnamecongty();
+                    headSocai.tencongty = Model.Congty.getnamecongty(macty);
                     headSocai.username = username;
-                    headSocai.diachicongty = Model.Congty.getdiachicongty();
-                    headSocai.masothue = Model.Congty.getmasothuecongty();
+                    headSocai.diachicongty = Model.Congty.getdiachicongty(macty);
+                    headSocai.masothue = Model.Congty.getmasothuecongty(macty);
                     headSocai.tungay = fromdate;
                     headSocai.denngay = todate;
                     headSocai.tenchitiettk = tentaikhoanchitiet;
@@ -1270,18 +1274,18 @@ namespace BEEACCOUNT.Model
 
 
                     RPtheadLCTTTtiep headrpt = new RPtheadLCTTTtiep();
-
+                    string macty = Model.Username.getmacty();
 
                     headrpt.nam = yearchon;
-                    headrpt.tencongty = Model.Congty.getnamecongty();
+                    headrpt.tencongty = Model.Congty.getnamecongty(macty);
                     headrpt.username = username;
-                    headrpt.diachicongty = Model.Congty.getdiachicongty();
-                    headrpt.masothue = Model.Congty.getmasothuecongty();
+                    headrpt.diachicongty = Model.Congty.getdiachicongty(macty);
+                    headrpt.masothue = Model.Congty.getmasothuecongty(macty);
                     //      pt.tencongty = Model.Congty.getnamecongty();
                     //    pt.diachicongty = Model.Congty.getdiachicongty();
                     //  pt.masothue = Model.Congty.getmasothuecongty();
-                    headrpt.giamdoc = Model.Congty.gettengiamdoccongty();
-                    headrpt.ketoantruong = Model.Congty.gettenketoantruongcongty();
+                    headrpt.giamdoc = Model.Congty.gettengiamdoccongty(macty);
+                    headrpt.ketoantruong = Model.Congty.gettenketoantruongcongty(macty);
                     headrpt.nguoighiso = Utils.getname();
 
 
@@ -1488,9 +1492,9 @@ namespace BEEACCOUNT.Model
                                   Tên_chi_tiết = p.tenchitiet,
                                   Phát_sinh_có = p.tPSCo,
                                   Phát_sinh_nợ = p.tPSNo,
-                                  Số_dư_Nợ        = p.tPsNotruPSco,
-                                  Phân_loại_ngắn_hạn =  p.loainganhan,
-                                 
+                                  Số_dư_Nợ = p.tPsNotruPSco,
+                                  Phân_loại_ngắn_hạn = p.loainganhan,
+
 
 
 
@@ -1577,13 +1581,13 @@ namespace BEEACCOUNT.Model
 
 
                     RPtheadTHchitiet headTHchitiet = new RPtheadTHchitiet();
-
+                    string macty = Model.Username.getmacty();
 
                     headTHchitiet.taikhoan = tentaikhoan.Trim(); //mataikhoan.Trim() + "-" + 
-                    headTHchitiet.tencongty = Model.Congty.getnamecongty();
+                    headTHchitiet.tencongty = Model.Congty.getnamecongty(macty);
                     headTHchitiet.username = username;
-                    headTHchitiet.diachicongty = Model.Congty.getdiachicongty();
-                    headTHchitiet.masothue = Model.Congty.getmasothuecongty();
+                    headTHchitiet.diachicongty = Model.Congty.getdiachicongty(macty);
+                    headTHchitiet.masothue = Model.Congty.getmasothuecongty(macty);
                     headTHchitiet.tungay = fromdate;
                     headTHchitiet.denngay = todate;
 
@@ -1781,17 +1785,17 @@ namespace BEEACCOUNT.Model
 
                     RPtheadCDKT200mau01 headrpt = new RPtheadCDKT200mau01();
 
-
+                    string macty = Model.Username.getmacty();
                     headrpt.nam = yearchon;
-                    headrpt.tencongty = Model.Congty.getnamecongty();
+                    headrpt.tencongty = Model.Congty.getnamecongty(macty);
                     headrpt.username = username;
-                    headrpt.diachicongty = Model.Congty.getdiachicongty();
-                    headrpt.masothue = Model.Congty.getmasothuecongty();
+                    headrpt.diachicongty = Model.Congty.getdiachicongty(macty);
+                    headrpt.masothue = Model.Congty.getmasothuecongty(macty);
                     //      pt.tencongty = Model.Congty.getnamecongty();
                     //    pt.diachicongty = Model.Congty.getdiachicongty();
                     //  pt.masothue = Model.Congty.getmasothuecongty();
-                    headrpt.giamdoc = Model.Congty.gettengiamdoccongty();
-                    headrpt.ketoantruong = Model.Congty.gettenketoantruongcongty();
+                    headrpt.giamdoc = Model.Congty.gettengiamdoccongty(macty);
+                    headrpt.ketoantruong = Model.Congty.gettenketoantruongcongty(macty);
                     headrpt.nguoighiso = Utils.getname();
 
 
@@ -2008,17 +2012,18 @@ namespace BEEACCOUNT.Model
 
                     RPtheadKQKD200 headrpt = new RPtheadKQKD200();
 
+                    string macty = Model.Username.getmacty();
 
                     headrpt.nam = yearchon;
-                    headrpt.tencongty = Model.Congty.getnamecongty();
+                    headrpt.tencongty = Model.Congty.getnamecongty(macty);
                     headrpt.username = username;
-                    headrpt.diachicongty = Model.Congty.getdiachicongty();
-                    headrpt.masothue = Model.Congty.getmasothuecongty();
+                    headrpt.diachicongty = Model.Congty.getdiachicongty(macty);
+                    headrpt.masothue = Model.Congty.getmasothuecongty(macty);
                     //      pt.tencongty = Model.Congty.getnamecongty();
                     //    pt.diachicongty = Model.Congty.getdiachicongty();
                     //  pt.masothue = Model.Congty.getmasothuecongty();
-                    headrpt.giamdoc = Model.Congty.gettengiamdoccongty();
-                    headrpt.ketoantruong = Model.Congty.gettenketoantruongcongty();
+                    headrpt.giamdoc = Model.Congty.gettengiamdoccongty(macty);
+                    headrpt.ketoantruong = Model.Congty.gettenketoantruongcongty(macty);
                     headrpt.nguoighiso = Utils.getname();
 
 
@@ -2145,15 +2150,16 @@ namespace BEEACCOUNT.Model
 
                     DateTime fromdate = Utils.chageExceldatetoData("01/01/" + yearchon);
                     DateTime todate = Utils.chageExceldatetoData("31/12/" + yearchon);
+                    string macty = Model.Username.getmacty();
 
-                    headCDPS.tencongty = Model.Congty.getnamecongty();
+                    headCDPS.tencongty = Model.Congty.getnamecongty(macty);
                     headCDPS.username = username;
-                    headCDPS.diachicongty = Model.Congty.getdiachicongty();
-                    headCDPS.masothue = Model.Congty.getmasothuecongty();
+                    headCDPS.diachicongty = Model.Congty.getdiachicongty(macty);
+                    headCDPS.masothue = Model.Congty.getmasothuecongty(macty);
                     headCDPS.tungay = fromdate;
                     headCDPS.denngay = todate;
-                    headCDPS.giamdoc = Model.Congty.gettengiamdoccongty();
-                    headCDPS.ketoantruong = Model.Congty.gettenketoantruongcongty();
+                    headCDPS.giamdoc = Model.Congty.gettengiamdoccongty(macty);
+                    headCDPS.ketoantruong = Model.Congty.gettenketoantruongcongty(macty);
                     headCDPS.nguoighiso = Utils.getname();
 
                     dc.RPtheadCDPs.InsertOnSubmit(headCDPS);
@@ -2220,19 +2226,20 @@ namespace BEEACCOUNT.Model
                                     where p.username == username
                                     orderby p.matk
 
-                                    select new {
-                                            p.Codk,
-                                            p.Nodk,
-                                            p.matk,
-                                        tentk =     p.tentk.Trim(),
-                                        Psco =        p.Psco.GetValueOrDefault(0),
-                                        Psno =      p.Psno.GetValueOrDefault(0),
-                                        Nock =     p.Nock.GetValueOrDefault(0),
-                                        Cock =   p.Cock.GetValueOrDefault(0),
+                                    select new
+                                    {
+                                        p.Codk,
+                                        p.Nodk,
+                                        p.matk,
+                                        tentk = p.tentk.Trim(),
+                                        Psco = p.Psco.GetValueOrDefault(0),
+                                        Psno = p.Psno.GetValueOrDefault(0),
+                                        Nock = p.Nock.GetValueOrDefault(0),
+                                        Cock = p.Cock.GetValueOrDefault(0),
 
 
 
-                                    } ;
+                                    };
 
 
 
@@ -2328,13 +2335,13 @@ namespace BEEACCOUNT.Model
 
 
                     RPtheadTHxuatnhapton headTHxnhapton = new RPtheadTHxuatnhapton();
-
+                    string macty = Model.Username.getmacty();
 
                     headTHxnhapton.kho = tenkho.Trim(); //mataikhoan.Trim() + "-" + 
-                    headTHxnhapton.tencongty = Model.Congty.getnamecongty();
+                    headTHxnhapton.tencongty = Model.Congty.getnamecongty(macty);
                     headTHxnhapton.username = username;
-                    headTHxnhapton.diachicongty = Model.Congty.getdiachicongty();
-                    headTHxnhapton.masothue = Model.Congty.getmasothuecongty();
+                    headTHxnhapton.diachicongty = Model.Congty.getdiachicongty(macty);
+                    headTHxnhapton.masothue = Model.Congty.getmasothuecongty(macty);
                     headTHxnhapton.tungay = fromdate;
                     headTHxnhapton.denngay = todate;
 

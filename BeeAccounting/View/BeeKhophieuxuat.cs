@@ -1056,11 +1056,13 @@ namespace BEEACCOUNT.View
                 #region  insert vao rpt head
 
                 Rptphieuxuatkhohead pxk = new Rptphieuxuatkhohead();
-                pxk.tencongty = Model.Congty.getnamecongty();
-                pxk.diachicongty = Model.Congty.getdiachicongty();
-                pxk.masothue = Model.Congty.getmasothuecongty();
-                pxk.tengiamdoc = Model.Congty.gettengiamdoccongty();
-                pxk.tenketoantruong = Model.Congty.gettenketoantruongcongty();
+                string macty = Model.Username.getmacty();
+
+                pxk.tencongty = Model.Congty.getnamecongty(macty);
+                pxk.diachicongty = Model.Congty.getdiachicongty(macty);
+                pxk.masothue = Model.Congty.getmasothuecongty(macty);
+                pxk.tengiamdoc = Model.Congty.gettengiamdoccongty(macty);
+                pxk.tenketoantruong = Model.Congty.gettenketoantruongcongty(macty);
                 pxk.phieuso = phieuxuat.phieuso;
                 pxk.ngaychungtu = phieuxuat.ngayphieuxuat;
                 pxk.nguoinhan = phieuxuat.nguoinhanhang;
