@@ -929,5 +929,13 @@ namespace BEEACCOUNT.View
         {
 
         }
+
+        private void button6_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+            Model.dieuvan dv = new dieuvan();
+            dv.donhangnetcoinput();
+           
+        }
     }
 }

@@ -1052,6 +1052,42 @@
       <Column Name="codk" Type="System.Double" DbType="Float" CanBeNull="true" />
     </Type>
   </Table>
+  <Table Name="dbo.tbl_netcoDonhang" Member="tbl_netcoDonhangs">
+    <Type Name="tbl_netcoDonhang">
+      <Column Name="So_van_don" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="[A/R_Amount]" Member="A_R_Amount" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Material" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Seri" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="TEN_HANG" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="ShipTo_Name" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="ShipTo_Tel" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="City" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Deadline" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="NOTE" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="District" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Dia_chi" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Delivery_Qty" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Username" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_netcoDonhangTMP" Member="tbl_netcoDonhangTMPs">
+    <Type Name="tbl_netcoDonhangTMP">
+      <Column Name="So_van_don" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="[A/R_Amount]" Member="A_R_Amount" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Material" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Seri" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="TEN_HANG" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="ShipTo_Name" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="ShipTo_Tel" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="City" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Deadline" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="NOTE" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="District" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Dia_chi" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Delivery_Qty" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Username" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
   <Table Name="dbo.tbl_NP_danhsachxe" Member="tbl_NP_danhsachxes">
     <Type Name="tbl_NP_danhsachxe">
       <Column Name="maNVT" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />

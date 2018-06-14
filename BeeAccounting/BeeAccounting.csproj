@@ -109,6 +109,7 @@
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
     </Compile>
+    <Compile Include="Model\dieuvan.cs" />
     <Compile Include="Model\Khohang.cs" />
     <Compile Include="Model\Soketoan.cs" />
     <Compile Include="Model\Congty.cs" />

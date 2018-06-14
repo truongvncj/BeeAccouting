@@ -641,6 +641,22 @@ namespace BEEACCOUNT
 			}
 		}
 		
+		public System.Data.Linq.Table<tbl_netcoDonhang> tbl_netcoDonhangs
+		{
+			get
+			{
+				return this.GetTable<tbl_netcoDonhang>();
+			}
+		}
+		
+		public System.Data.Linq.Table<tbl_netcoDonhangTMP> tbl_netcoDonhangTMPs
+		{
+			get
+			{
+				return this.GetTable<tbl_netcoDonhangTMP>();
+			}
+		}
+		
 		public System.Data.Linq.Table<tbl_NP_danhsachxe> tbl_NP_danhsachxes
 		{
 			get
@@ -22976,6 +22992,528 @@ namespace BEEACCOUNT
 			if ((this.PropertyChanged != null))
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tbl_netcoDonhang")]
+	public partial class tbl_netcoDonhang
+	{
+		
+		private string _So_van_don;
+		
+		private System.Nullable<double> _A_R_Amount;
+		
+		private string _Material;
+		
+		private string _Seri;
+		
+		private string _TEN_HANG;
+		
+		private string _ShipTo_Name;
+		
+		private string _ShipTo_Tel;
+		
+		private string _City;
+		
+		private string _Deadline;
+		
+		private string _NOTE;
+		
+		private string _District;
+		
+		private string _Dia_chi;
+		
+		private System.Nullable<double> _Delivery_Qty;
+		
+		private string _Username;
+		
+		public tbl_netcoDonhang()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_So_van_don", DbType="NVarChar(255)")]
+		public string So_van_don
+		{
+			get
+			{
+				return this._So_van_don;
+			}
+			set
+			{
+				if ((this._So_van_don != value))
+				{
+					this._So_van_don = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[A/R_Amount]", Storage="_A_R_Amount", DbType="Float")]
+		public System.Nullable<double> A_R_Amount
+		{
+			get
+			{
+				return this._A_R_Amount;
+			}
+			set
+			{
+				if ((this._A_R_Amount != value))
+				{
+					this._A_R_Amount = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Material", DbType="NVarChar(255)")]
+		public string Material
+		{
+			get
+			{
+				return this._Material;
+			}
+			set
+			{
+				if ((this._Material != value))
+				{
+					this._Material = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Seri", DbType="NVarChar(255)")]
+		public string Seri
+		{
+			get
+			{
+				return this._Seri;
+			}
+			set
+			{
+				if ((this._Seri != value))
+				{
+					this._Seri = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TEN_HANG", DbType="NVarChar(255)")]
+		public string TEN_HANG
+		{
+			get
+			{
+				return this._TEN_HANG;
+			}
+			set
+			{
+				if ((this._TEN_HANG != value))
+				{
+					this._TEN_HANG = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ShipTo_Name", DbType="NVarChar(255)")]
+		public string ShipTo_Name
+		{
+			get
+			{
+				return this._ShipTo_Name;
+			}
+			set
+			{
+				if ((this._ShipTo_Name != value))
+				{
+					this._ShipTo_Name = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ShipTo_Tel", DbType="NVarChar(255)")]
+		public string ShipTo_Tel
+		{
+			get
+			{
+				return this._ShipTo_Tel;
+			}
+			set
+			{
+				if ((this._ShipTo_Tel != value))
+				{
+					this._ShipTo_Tel = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_City", DbType="NVarChar(255)")]
+		public string City
+		{
+			get
+			{
+				return this._City;
+			}
+			set
+			{
+				if ((this._City != value))
+				{
+					this._City = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Deadline", DbType="NVarChar(255)")]
+		public string Deadline
+		{
+			get
+			{
+				return this._Deadline;
+			}
+			set
+			{
+				if ((this._Deadline != value))
+				{
+					this._Deadline = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NOTE", DbType="NVarChar(255)")]
+		public string NOTE
+		{
+			get
+			{
+				return this._NOTE;
+			}
+			set
+			{
+				if ((this._NOTE != value))
+				{
+					this._NOTE = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_District", DbType="NVarChar(255)")]
+		public string District
+		{
+			get
+			{
+				return this._District;
+			}
+			set
+			{
+				if ((this._District != value))
+				{
+					this._District = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Dia_chi", DbType="NVarChar(255)")]
+		public string Dia_chi
+		{
+			get
+			{
+				return this._Dia_chi;
+			}
+			set
+			{
+				if ((this._Dia_chi != value))
+				{
+					this._Dia_chi = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Delivery_Qty", DbType="Float")]
+		public System.Nullable<double> Delivery_Qty
+		{
+			get
+			{
+				return this._Delivery_Qty;
+			}
+			set
+			{
+				if ((this._Delivery_Qty != value))
+				{
+					this._Delivery_Qty = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Username", DbType="NVarChar(50)")]
+		public string Username
+		{
+			get
+			{
+				return this._Username;
+			}
+			set
+			{
+				if ((this._Username != value))
+				{
+					this._Username = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tbl_netcoDonhangTMP")]
+	public partial class tbl_netcoDonhangTMP
+	{
+		
+		private string _So_van_don;
+		
+		private System.Nullable<double> _A_R_Amount;
+		
+		private string _Material;
+		
+		private string _Seri;
+		
+		private string _TEN_HANG;
+		
+		private string _ShipTo_Name;
+		
+		private string _ShipTo_Tel;
+		
+		private string _City;
+		
+		private string _Deadline;
+		
+		private string _NOTE;
+		
+		private string _District;
+		
+		private string _Dia_chi;
+		
+		private System.Nullable<double> _Delivery_Qty;
+		
+		private string _Username;
+		
+		public tbl_netcoDonhangTMP()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_So_van_don", DbType="NVarChar(255)")]
+		public string So_van_don
+		{
+			get
+			{
+				return this._So_van_don;
+			}
+			set
+			{
+				if ((this._So_van_don != value))
+				{
+					this._So_van_don = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[A/R_Amount]", Storage="_A_R_Amount", DbType="Float")]
+		public System.Nullable<double> A_R_Amount
+		{
+			get
+			{
+				return this._A_R_Amount;
+			}
+			set
+			{
+				if ((this._A_R_Amount != value))
+				{
+					this._A_R_Amount = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Material", DbType="NVarChar(255)")]
+		public string Material
+		{
+			get
+			{
+				return this._Material;
+			}
+			set
+			{
+				if ((this._Material != value))
+				{
+					this._Material = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Seri", DbType="NVarChar(255)")]
+		public string Seri
+		{
+			get
+			{
+				return this._Seri;
+			}
+			set
+			{
+				if ((this._Seri != value))
+				{
+					this._Seri = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TEN_HANG", DbType="NVarChar(255)")]
+		public string TEN_HANG
+		{
+			get
+			{
+				return this._TEN_HANG;
+			}
+			set
+			{
+				if ((this._TEN_HANG != value))
+				{
+					this._TEN_HANG = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ShipTo_Name", DbType="NVarChar(255)")]
+		public string ShipTo_Name
+		{
+			get
+			{
+				return this._ShipTo_Name;
+			}
+			set
+			{
+				if ((this._ShipTo_Name != value))
+				{
+					this._ShipTo_Name = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ShipTo_Tel", DbType="NVarChar(255)")]
+		public string ShipTo_Tel
+		{
+			get
+			{
+				return this._ShipTo_Tel;
+			}
+			set
+			{
+				if ((this._ShipTo_Tel != value))
+				{
+					this._ShipTo_Tel = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_City", DbType="NVarChar(255)")]
+		public string City
+		{
+			get
+			{
+				return this._City;
+			}
+			set
+			{
+				if ((this._City != value))
+				{
+					this._City = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Deadline", DbType="NVarChar(255)")]
+		public string Deadline
+		{
+			get
+			{
+				return this._Deadline;
+			}
+			set
+			{
+				if ((this._Deadline != value))
+				{
+					this._Deadline = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NOTE", DbType="NVarChar(255)")]
+		public string NOTE
+		{
+			get
+			{
+				return this._NOTE;
+			}
+			set
+			{
+				if ((this._NOTE != value))
+				{
+					this._NOTE = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_District", DbType="NVarChar(255)")]
+		public string District
+		{
+			get
+			{
+				return this._District;
+			}
+			set
+			{
+				if ((this._District != value))
+				{
+					this._District = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Dia_chi", DbType="NVarChar(255)")]
+		public string Dia_chi
+		{
+			get
+			{
+				return this._Dia_chi;
+			}
+			set
+			{
+				if ((this._Dia_chi != value))
+				{
+					this._Dia_chi = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Delivery_Qty", DbType="Float")]
+		public System.Nullable<double> Delivery_Qty
+		{
+			get
+			{
+				return this._Delivery_Qty;
+			}
+			set
+			{
+				if ((this._Delivery_Qty != value))
+				{
+					this._Delivery_Qty = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Username", DbType="NVarChar(50)")]
+		public string Username
+		{
+			get
+			{
+				return this._Username;
+			}
+			set
+			{
+				if ((this._Username != value))
+				{
+					this._Username = value;
+				}
 			}
 		}
 	}

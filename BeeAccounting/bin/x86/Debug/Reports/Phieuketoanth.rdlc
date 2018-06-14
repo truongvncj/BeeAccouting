@@ -397,7 +397,6 @@
                         </Border>
                       </Style>
                     </Rectangle>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
               </TablixCells>
@@ -776,7 +775,7 @@
                                     </TextRun>
                                   </TextRuns>
                                   <Style>
-                                    <TextAlign>Center</TextAlign>
+                                    <TextAlign>Left</TextAlign>
                                   </Style>
                                 </Paragraph>
                               </Paragraphs>
@@ -784,7 +783,7 @@
                               <Top>1.66735in</Top>
                               <Left>0.00767in</Left>
                               <Height>0.25in</Height>
-                              <Width>1.27963in</Width>
+                              <Width>1.62338in</Width>
                               <ZIndex>7</ZIndex>
                               <Style>
                                 <Border>
@@ -820,9 +819,9 @@
                               </Paragraphs>
                               <rd:DefaultName>Textbox2</rd:DefaultName>
                               <Top>1.65693in</Top>
-                              <Left>5.55301in</Left>
+                              <Left>5.17801in</Left>
                               <Height>0.2375in</Height>
-                              <Width>1.50861in</Width>
+                              <Width>1.88361in</Width>
                               <ZIndex>8</ZIndex>
                               <Style>
                                 <Border>
@@ -852,15 +851,15 @@
                                     </TextRun>
                                   </TextRuns>
                                   <Style>
-                                    <TextAlign>Center</TextAlign>
+                                    <TextAlign>Left</TextAlign>
                                   </Style>
                                 </Paragraph>
                               </Paragraphs>
                               <rd:DefaultName>Textbox2</rd:DefaultName>
                               <Top>1.64443in</Top>
-                              <Left>2.73547in</Left>
+                              <Left>2.53263in</Left>
                               <Height>0.25in</Height>
-                              <Width>1.26396in</Width>
+                              <Width>2.25in</Width>
                               <ZIndex>9</ZIndex>
                               <Style>
                                 <Border>

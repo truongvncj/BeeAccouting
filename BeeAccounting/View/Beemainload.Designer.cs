@@ -30,18 +30,18 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Beemainload));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button30 = new System.Windows.Forms.Button();
-            this.button31 = new System.Windows.Forms.Button();
-            this.button34 = new System.Windows.Forms.Button();
-            this.button35 = new System.Windows.Forms.Button();
-            this.groupBox17 = new System.Windows.Forms.GroupBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.groupBox17 = new System.Windows.Forms.GroupBox();
+            this.button35 = new System.Windows.Forms.Button();
+            this.button34 = new System.Windows.Forms.Button();
+            this.button31 = new System.Windows.Forms.Button();
+            this.button30 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            this.groupBox17.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.groupBox17.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -56,55 +56,41 @@
             this.panel1.Size = new System.Drawing.Size(1088, 452);
             this.panel1.TabIndex = 52;
             // 
-            // button6
+            // pictureBox2
             // 
-            this.button6.Location = new System.Drawing.Point(6, 19);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(160, 22);
-            this.button6.TabIndex = 13;
-            this.button6.TabStop = false;
-            this.button6.Text = "Gửi email";
-            this.button6.UseVisualStyleBackColor = true;
+            this.pictureBox2.ErrorImage = global::BEEACCOUNT.Properties.Resources.DIEUVAN;
+            this.pictureBox2.Image = global::BEEACCOUNT.Properties.Resources.DIEUVAN;
+            this.pictureBox2.Location = new System.Drawing.Point(184, 117);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(283, 107);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 54;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click_1);
+            this.pictureBox2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox2_MouseClick);
+            this.pictureBox2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox2_MouseDown);
+            this.pictureBox2.MouseLeave += new System.EventHandler(this.pictureBox2_MouseLeave);
+            this.pictureBox2.MouseHover += new System.EventHandler(this.pictureBox2_MouseHover);
+            this.pictureBox2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox2_MouseMove);
+            this.pictureBox2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox2_MouseUp);
             // 
-            // button30
+            // pictureBox1
             // 
-            this.button30.Location = new System.Drawing.Point(6, 47);
-            this.button30.Name = "button30";
-            this.button30.Size = new System.Drawing.Size(160, 22);
-            this.button30.TabIndex = 14;
-            this.button30.TabStop = false;
-            this.button30.Text = "Gửi  EMS";
-            this.button30.UseVisualStyleBackColor = true;
-            // 
-            // button31
-            // 
-            this.button31.Location = new System.Drawing.Point(6, 75);
-            this.button31.Name = "button31";
-            this.button31.Size = new System.Drawing.Size(160, 22);
-            this.button31.TabIndex = 15;
-            this.button31.TabStop = false;
-            this.button31.Text = "Gửi  ZAlo/ facebook";
-            this.button31.UseVisualStyleBackColor = true;
-            // 
-            // button34
-            // 
-            this.button34.Location = new System.Drawing.Point(6, 103);
-            this.button34.Name = "button34";
-            this.button34.Size = new System.Drawing.Size(160, 22);
-            this.button34.TabIndex = 16;
-            this.button34.TabStop = false;
-            this.button34.Text = "Thực hiện từ điện thoại";
-            this.button34.UseVisualStyleBackColor = true;
-            // 
-            // button35
-            // 
-            this.button35.Location = new System.Drawing.Point(6, 131);
-            this.button35.Name = "button35";
-            this.button35.Size = new System.Drawing.Size(160, 22);
-            this.button35.TabIndex = 17;
-            this.button35.TabStop = false;
-            this.button35.Text = "Xem báo cáo từ web";
-            this.button35.UseVisualStyleBackColor = true;
+            this.pictureBox1.ErrorImage = global::BEEACCOUNT.Properties.Resources.KETOANTONGHOP;
+            this.pictureBox1.Image = global::BEEACCOUNT.Properties.Resources.KETOANTONGHOP;
+            this.pictureBox1.Location = new System.Drawing.Point(350, 8);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(283, 107);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 53;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.pictureBox1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseClick);
+            this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
+            this.pictureBox1.MouseLeave += new System.EventHandler(this.pictureBox1_MouseLeave);
+            this.pictureBox1.MouseHover += new System.EventHandler(this.pictureBox1_MouseHover);
+            this.pictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseMove);
+            this.pictureBox1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseUp);
             // 
             // groupBox17
             // 
@@ -121,35 +107,55 @@
             this.groupBox17.TabStop = false;
             this.groupBox17.Text = "Tính năng";
             // 
-            // pictureBox2
+            // button35
             // 
-            this.pictureBox2.ErrorImage = global::BEEACCOUNT.Properties.Resources.DIEUVAN;
-            this.pictureBox2.Image = global::BEEACCOUNT.Properties.Resources.DIEUVAN;
-            this.pictureBox2.Location = new System.Drawing.Point(184, 117);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(283, 107);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 54;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click_1);
-            this.pictureBox2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox2_MouseClick);
-            this.pictureBox2.MouseLeave += new System.EventHandler(this.pictureBox2_MouseLeave);
-            this.pictureBox2.MouseHover += new System.EventHandler(this.pictureBox2_MouseHover);
+            this.button35.Location = new System.Drawing.Point(6, 131);
+            this.button35.Name = "button35";
+            this.button35.Size = new System.Drawing.Size(160, 22);
+            this.button35.TabIndex = 17;
+            this.button35.TabStop = false;
+            this.button35.Text = "Xem báo cáo từ web";
+            this.button35.UseVisualStyleBackColor = true;
             // 
-            // pictureBox1
+            // button34
             // 
-            this.pictureBox1.ErrorImage = global::BEEACCOUNT.Properties.Resources.KETOANTONGHOP;
-            this.pictureBox1.Image = global::BEEACCOUNT.Properties.Resources.KETOANTONGHOP;
-            this.pictureBox1.Location = new System.Drawing.Point(350, 8);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(283, 107);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 53;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            this.pictureBox1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseClick);
-            this.pictureBox1.MouseLeave += new System.EventHandler(this.pictureBox1_MouseLeave);
-            this.pictureBox1.MouseHover += new System.EventHandler(this.pictureBox1_MouseHover);
+            this.button34.Location = new System.Drawing.Point(6, 103);
+            this.button34.Name = "button34";
+            this.button34.Size = new System.Drawing.Size(160, 22);
+            this.button34.TabIndex = 16;
+            this.button34.TabStop = false;
+            this.button34.Text = "Thực hiện từ điện thoại";
+            this.button34.UseVisualStyleBackColor = true;
+            // 
+            // button31
+            // 
+            this.button31.Location = new System.Drawing.Point(6, 75);
+            this.button31.Name = "button31";
+            this.button31.Size = new System.Drawing.Size(160, 22);
+            this.button31.TabIndex = 15;
+            this.button31.TabStop = false;
+            this.button31.Text = "Gửi  ZAlo/ facebook";
+            this.button31.UseVisualStyleBackColor = true;
+            // 
+            // button30
+            // 
+            this.button30.Location = new System.Drawing.Point(6, 47);
+            this.button30.Name = "button30";
+            this.button30.Size = new System.Drawing.Size(160, 22);
+            this.button30.TabIndex = 14;
+            this.button30.TabStop = false;
+            this.button30.Text = "Gửi  EMS";
+            this.button30.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(6, 19);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(160, 22);
+            this.button6.TabIndex = 13;
+            this.button6.TabStop = false;
+            this.button6.Text = "Gửi email";
+            this.button6.UseVisualStyleBackColor = true;
             // 
             // Beemainload
             // 
@@ -170,9 +176,9 @@
             this.Deactivate += new System.EventHandler(this.KAmasterinput_Deactivate);
             this.Load += new System.EventHandler(this.KAmasterinput_Load);
             this.panel1.ResumeLayout(false);
-            this.groupBox17.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.groupBox17.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

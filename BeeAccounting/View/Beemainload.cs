@@ -1230,12 +1230,14 @@ namespace BEEACCOUNT.View
 
         private void pictureBox2_MouseClick(object sender, MouseEventArgs e)
         {
-            this.pictureBox2.BorderStyle = BorderStyle.Fixed3D;
+        
+          
         }
 
         private void pictureBox1_MouseClick(object sender, MouseEventArgs e)
         {
-            this.pictureBox1.BorderStyle = BorderStyle.Fixed3D;
+          
+            this.pictureBox1.BorderStyle = BorderStyle.None;
         }
 
         private void pictureBox1_MouseLeave(object sender, EventArgs e)
@@ -1263,6 +1265,36 @@ namespace BEEACCOUNT.View
             View.bedieuvan viewtbl = new bedieuvan(this.main1);
 
             viewtbl.Show();
+        }
+
+        private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
+        {
+      
+        }
+
+        private void pictureBox2_MouseMove(object sender, MouseEventArgs e)
+        {
+        
+        }
+
+        private void pictureBox2_MouseUp(object sender, MouseEventArgs e)
+        {
+            this.pictureBox2.BorderStyle = BorderStyle.None;
+        }
+
+        private void pictureBox1_MouseUp(object sender, MouseEventArgs e)
+        {
+            this.pictureBox1.BorderStyle = BorderStyle.None;
+        }
+
+        private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
+        {
+            this.pictureBox1.BorderStyle = BorderStyle.Fixed3D;
+        }
+
+        private void pictureBox2_MouseDown(object sender, MouseEventArgs e)
+        {
+            this.pictureBox2.BorderStyle = BorderStyle.Fixed3D;
         }
     }
 }
