@@ -933,5 +933,29 @@ namespace BEEACCOUNT.View
             #endregion
 
         }
+
+        private void button15_Click_1(object sender, EventArgs e)
+        {
+
+            #region//btoanth
+
+
+            this.Close();
+            this.main.clearpannel();
+
+
+            View.BeeButtoantonghop buttoantonghop = new BeeButtoantonghop(this.main);
+            this.main.clearpannelload(buttoantonghop);
+
+
+
+            #endregion
+
+        }
+
+        private void button6_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

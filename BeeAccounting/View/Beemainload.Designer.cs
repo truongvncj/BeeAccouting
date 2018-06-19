@@ -38,6 +38,7 @@
             this.button31 = new System.Windows.Forms.Button();
             this.button30 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -58,8 +59,8 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.ErrorImage = global::BEEACCOUNT.Properties.Resources.DIEUVAN;
-            this.pictureBox2.Image = global::BEEACCOUNT.Properties.Resources.DIEUVAN;
+            this.pictureBox2.ErrorImage = global::BEEACCOUNT.Properties.Resources.DIEUVAN1;
+            this.pictureBox2.Image = global::BEEACCOUNT.Properties.Resources.DIEUVAN1;
             this.pictureBox2.Location = new System.Drawing.Point(184, 117);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(283, 107);
@@ -76,8 +77,8 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.ErrorImage = global::BEEACCOUNT.Properties.Resources.KETOANTONGHOP;
-            this.pictureBox1.Image = global::BEEACCOUNT.Properties.Resources.KETOANTONGHOP;
+            this.pictureBox1.ErrorImage = global::BEEACCOUNT.Properties.Resources.KETOANTONGHOP1;
+            this.pictureBox1.Image = global::BEEACCOUNT.Properties.Resources.KETOANTONGHOP1;
             this.pictureBox1.Location = new System.Drawing.Point(350, 8);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(283, 107);
@@ -95,6 +96,7 @@
             // groupBox17
             // 
             this.groupBox17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox17.Controls.Add(this.button1);
             this.groupBox17.Controls.Add(this.button35);
             this.groupBox17.Controls.Add(this.button34);
             this.groupBox17.Controls.Add(this.button31);
@@ -102,7 +104,7 @@
             this.groupBox17.Controls.Add(this.button6);
             this.groupBox17.Location = new System.Drawing.Point(856, 8);
             this.groupBox17.Name = "groupBox17";
-            this.groupBox17.Size = new System.Drawing.Size(225, 167);
+            this.groupBox17.Size = new System.Drawing.Size(225, 228);
             this.groupBox17.TabIndex = 51;
             this.groupBox17.TabStop = false;
             this.groupBox17.Text = "Tính năng";
@@ -157,6 +159,16 @@
             this.button6.Text = "Gửi email";
             this.button6.UseVisualStyleBackColor = true;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(6, 159);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(160, 22);
+            this.button1.TabIndex = 18;
+            this.button1.TabStop = false;
+            this.button1.Text = "einvoice- 8/2018";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // Beemainload
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -193,5 +205,6 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button button1;
     }
 }

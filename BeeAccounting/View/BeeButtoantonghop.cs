@@ -593,6 +593,7 @@ namespace BEEACCOUNT.View
 
 
                     //       detail.Ngayctu = Utils.ChageExceldatetoDate( dataGridViewdetail.Rows[idrow].Cells["Ngày_chứng_từ"].Value.ToString());
+                    detail.macty = Model.Username.getmacty();
                     detail.Ngayghiso = DateTime.Today;
                     detail.username = Utils.getusername();
                     detail.manghiepvu = "TH";

@@ -126,6 +126,7 @@ namespace BEEACCOUNT.Model
 
             tbl_Socai socaips = new tbl_Socai();
 
+            socaips.macty = Model.Username.getmacty();
             socaips.TkNo = socai.TkNo;
             socaips.MaCTietTKCo = socai.MaCTietTKCo;
             socaips.MaCTietTKNo = socai.MaCTietTKNo;

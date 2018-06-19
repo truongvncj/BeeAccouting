@@ -368,3 +368,4 @@ C:\Users\mtruong\Documents\GitHub\BeeAccouting\BeeAccounting\obj\x86\Debug\RdlCo
 D:\GitHub\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.Beekyketoan.resources
 D:\GitHub\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.beektth.resources
 D:\GitHub\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.bedieuvan.resources
+D:\GitHub\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.Beedieudongxe.resources

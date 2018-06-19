@@ -143,6 +143,12 @@
     <Compile Include="shared\ExtractToDataTableOptions.cs" />
     <Compile Include="shared\LinQToExcel.cs" />
     <Compile Include="shared\StringExtensions.cs" />
+    <Compile Include="View\Beedieudongxe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Beedieudongxe.Designer.cs">
+      <DependentUpon>Beedieudongxe.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\bedieuvan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -518,6 +524,9 @@
     <EmbeddedResource Include="Reports\Paymentrequest.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\Beedieudongxe.resx">
+      <DependentUpon>Beedieudongxe.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\bedieuvan.resx">
       <DependentUpon>bedieuvan.cs</DependentUpon>
     </EmbeddedResource>
@@ -751,6 +760,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="giphyipg_Pb0_3.ico" />
+    <None Include="Resources\DIEUVAN1.png" />
+    <None Include="Resources\KETOANTONGHOP1.jpg" />
     <None Include="Resources\DIEUVAN.png" />
     <None Include="Resources\KETOANTONGHOP.jpg" />
   </ItemGroup>
