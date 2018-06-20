@@ -33,6 +33,7 @@ namespace BEEACCOUNT.View
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BeeInputchange));
             this.lb_headersub = new System.Windows.Forms.Label();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.btnhaplieu = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lbseachedit = new System.Windows.Forms.Label();
@@ -46,7 +47,6 @@ namespace BEEACCOUNT.View
             this.bt_detletedsetlectmain = new System.Windows.Forms.Button();
             this.lb_headermain = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
@@ -77,7 +77,7 @@ namespace BEEACCOUNT.View
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.button1);
+            this.splitContainer1.Panel1.Controls.Add(this.btnhaplieu);
             this.splitContainer1.Panel1.Controls.Add(this.label1);
             this.splitContainer1.Panel1.Controls.Add(this.pictureBox1);
             this.splitContainer1.Panel1.Controls.Add(this.lbseachedit);
@@ -97,6 +97,17 @@ namespace BEEACCOUNT.View
             this.splitContainer1.SplitterIncrement = 15;
             this.splitContainer1.SplitterWidth = 5;
             this.splitContainer1.TabIndex = 33;
+            // 
+            // btnhaplieu
+            // 
+            this.btnhaplieu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnhaplieu.Location = new System.Drawing.Point(385, 51);
+            this.btnhaplieu.Name = "btnhaplieu";
+            this.btnhaplieu.Size = new System.Drawing.Size(110, 26);
+            this.btnhaplieu.TabIndex = 56;
+            this.btnhaplieu.Text = "Nhập liệu";
+            this.btnhaplieu.UseVisualStyleBackColor = true;
+            this.btnhaplieu.Click += new System.EventHandler(this.btnhaplieu_Click);
             // 
             // label1
             // 
@@ -257,16 +268,6 @@ namespace BEEACCOUNT.View
             this.dataGridView2.Size = new System.Drawing.Size(504, 369);
             this.dataGridView2.TabIndex = 45;
             // 
-            // button1
-            // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(385, 51);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(110, 26);
-            this.button1.TabIndex = 56;
-            this.button1.Text = "Nhập liệu";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // BeeInputchange
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
@@ -315,6 +316,6 @@ namespace BEEACCOUNT.View
         private System.Windows.Forms.Label lbseachedit;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnhaplieu;
     }
 }

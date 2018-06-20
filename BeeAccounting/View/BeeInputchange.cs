@@ -154,11 +154,11 @@ namespace BEEACCOUNT.View
 
             this.Username = Username;
 
-      //      this.btrigh.Visible = false;
-   
+            //      this.btrigh.Visible = false;
 
+            this.btnhaplieu.Visible = false;
             this.lbseachedit.Visible = false;
-          
+
 
 
 
@@ -185,6 +185,16 @@ namespace BEEACCOUNT.View
 
                 this.Bt_Adddata.Visible = false;
 
+            }
+            //    tbl_netcoDonhangTMP
+            if (tblnamemain == "tbl_netcoDonhangTMP")
+            {
+
+                this.Bt_Adddata.Visible = false;
+                this.Bt_Deleteddata.Visible = false;
+                this.bt_updatedata.Visible = false;
+                this.export.Visible = false;
+                this.btnhaplieu.Visible = true;
             }
 
             // lbseachedit
@@ -371,8 +381,8 @@ namespace BEEACCOUNT.View
 
 
                 //// "tbl_Temp")
-               
-             
+
+
 
                 //#region if tbl_Temp null
 
@@ -469,7 +479,7 @@ namespace BEEACCOUNT.View
             this.dataGridView2.ClipboardCopyMode = DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
 
 
-         
+
         }
 
 
@@ -570,7 +580,7 @@ namespace BEEACCOUNT.View
 
             #region tbl_KaCustomer
 
-         
+
 
             if (tblnamesub == "tbl_kacontractsdatadetail")
             {
@@ -659,7 +669,7 @@ namespace BEEACCOUNT.View
                                 }
 
 
-                                if (IDType.ToString().Contains("String")|| IDType.ToString().Contains("Bool"))
+                                if (IDType.ToString().Contains("String") || IDType.ToString().Contains("Bool"))
                                 {
 
                                     valueid = "'" + valueid + "'";
@@ -1625,9 +1635,9 @@ namespace BEEACCOUNT.View
         {
 
 
-          //  View.kAuserRightsetup userset = new kAuserRightsetup();
+            //  View.kAuserRightsetup userset = new kAuserRightsetup();
 
-//            userset.ShowDialog();
+            //            userset.ShowDialog();
 
 
 
@@ -1667,32 +1677,57 @@ namespace BEEACCOUNT.View
             // Next
         }
 
+        private void btnhaplieu_Click(object sender, EventArgs e)
+        {
+            //  copy tu 
+
+            string connection_string = Utils.getConnectionstr();
+            var dc = new LinqtoSQLDataContext(connection_string);
+            string username = Utils.getusername();
+
+            var tempdata = from pp in dc.tbl_netcoDonhangTMPs
+                           where pp.Username == username
+
+                           select pp;
+            if (tempdata.Count() > 0)
+            {
+                foreach (var item in tempdata)
+                {
 
 
-        //private void button1_Click(object sender, EventArgs e)
-        //{
+                    tbl_netcoDonhang newdon = new tbl_netcoDonhang();
+                    newdon.Username = item.Username;
+                    newdon.A_R_Amount = item.A_R_Amount;
+                    newdon.City = item.City;
+                    newdon.Deadline = item.Deadline;
+                    newdon.Delivery_Qty = item.Delivery_Qty;
+                    newdon.Dia_chi = item.Dia_chi;
+                    newdon.District = item.District;
+                    newdon.Material = item.Material;
+                    newdon.NOTE = item.NOTE;
+                    newdon.Seri = item.Seri;
+                    newdon.ShipTo_Name = item.ShipTo_Name;
+                    newdon.ShipTo_Tel = item.ShipTo_Tel;
+                    newdon.So_van_don = item.So_van_don;
+                    newdon.TEN_HANG = item.TEN_HANG;
 
-        //    string connection_string = Utils.getConnectionstr();
-        //    var db = new LinqtoSQLDataContext(connection_string);
-        //    // var rs = from tbl_Remark in db.tbl_Remarks
-        //    //            select tbl_Remark;
+                    dc.tbl_netcoDonhangs.InsertOnSubmit(newdon);
+                    dc.SubmitChanges();
 
-
-        //    //IQueryable querydata = db.("select * FROM " + tblnamesub);
-        //    ////    dc.tblFBL5Nnewthisperiods.DeleteAllOnSubmit(rsthisperiod);
-        //    //db.SubmitChanges();
-
-
-        //    //MethodInfo mi = typeof(Queryable).GetMethod("AsQueryable", BindingFlags.Static | BindingFlags.Public, null, new[] { typeof(IEnumerable<tblnamesub>) }, null);
-        //    //Expression buff = Expression.Call(mi, new[] { collection });
-        //    //Expression final = Expression.Convert(buff, typeof(IQueryable<RelatedEntity>));
+                    item.Uploadstatus = "Ok done ";
+                    dc.SubmitChanges();
+                }
 
 
 
 
+            }
 
 
-        //}
+        }
+
+
+
 
 
 

@@ -183,6 +183,12 @@ namespace BEEACCOUNT
     partial void Inserttbl_machitiettk(tbl_machitiettk instance);
     partial void Updatetbl_machitiettk(tbl_machitiettk instance);
     partial void Deletetbl_machitiettk(tbl_machitiettk instance);
+    partial void Inserttbl_netcoDonhang(tbl_netcoDonhang instance);
+    partial void Updatetbl_netcoDonhang(tbl_netcoDonhang instance);
+    partial void Deletetbl_netcoDonhang(tbl_netcoDonhang instance);
+    partial void Inserttbl_netcoDonhangTMP(tbl_netcoDonhangTMP instance);
+    partial void Updatetbl_netcoDonhangTMP(tbl_netcoDonhangTMP instance);
+    partial void Deletetbl_netcoDonhangTMP(tbl_netcoDonhangTMP instance);
     partial void Inserttbl_NP_danhsachxe(tbl_NP_danhsachxe instance);
     partial void Updatetbl_NP_danhsachxe(tbl_NP_danhsachxe instance);
     partial void Deletetbl_NP_danhsachxe(tbl_NP_danhsachxe instance);
@@ -23141,8 +23147,10 @@ namespace BEEACCOUNT
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tbl_netcoDonhang")]
-	public partial class tbl_netcoDonhang
+	public partial class tbl_netcoDonhang : INotifyPropertyChanging, INotifyPropertyChanged
 	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
 		private string _So_van_don;
 		
@@ -23170,10 +23178,49 @@ namespace BEEACCOUNT
 		
 		private System.Nullable<double> _Delivery_Qty;
 		
+		private int _id;
+		
 		private string _Username;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnSo_van_donChanging(string value);
+    partial void OnSo_van_donChanged();
+    partial void OnA_R_AmountChanging(System.Nullable<double> value);
+    partial void OnA_R_AmountChanged();
+    partial void OnMaterialChanging(string value);
+    partial void OnMaterialChanged();
+    partial void OnSeriChanging(string value);
+    partial void OnSeriChanged();
+    partial void OnTEN_HANGChanging(string value);
+    partial void OnTEN_HANGChanged();
+    partial void OnShipTo_NameChanging(string value);
+    partial void OnShipTo_NameChanged();
+    partial void OnShipTo_TelChanging(string value);
+    partial void OnShipTo_TelChanged();
+    partial void OnCityChanging(string value);
+    partial void OnCityChanged();
+    partial void OnDeadlineChanging(string value);
+    partial void OnDeadlineChanged();
+    partial void OnNOTEChanging(string value);
+    partial void OnNOTEChanged();
+    partial void OnDistrictChanging(string value);
+    partial void OnDistrictChanged();
+    partial void OnDia_chiChanging(string value);
+    partial void OnDia_chiChanged();
+    partial void OnDelivery_QtyChanging(System.Nullable<double> value);
+    partial void OnDelivery_QtyChanged();
+    partial void OnidChanging(int value);
+    partial void OnidChanged();
+    partial void OnUsernameChanging(string value);
+    partial void OnUsernameChanged();
+    #endregion
 		
 		public tbl_netcoDonhang()
 		{
+			OnCreated();
 		}
 		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_So_van_don", DbType="NVarChar(255)")]
@@ -23187,7 +23234,11 @@ namespace BEEACCOUNT
 			{
 				if ((this._So_van_don != value))
 				{
+					this.OnSo_van_donChanging(value);
+					this.SendPropertyChanging();
 					this._So_van_don = value;
+					this.SendPropertyChanged("So_van_don");
+					this.OnSo_van_donChanged();
 				}
 			}
 		}
@@ -23203,7 +23254,11 @@ namespace BEEACCOUNT
 			{
 				if ((this._A_R_Amount != value))
 				{
+					this.OnA_R_AmountChanging(value);
+					this.SendPropertyChanging();
 					this._A_R_Amount = value;
+					this.SendPropertyChanged("A_R_Amount");
+					this.OnA_R_AmountChanged();
 				}
 			}
 		}
@@ -23219,7 +23274,11 @@ namespace BEEACCOUNT
 			{
 				if ((this._Material != value))
 				{
+					this.OnMaterialChanging(value);
+					this.SendPropertyChanging();
 					this._Material = value;
+					this.SendPropertyChanged("Material");
+					this.OnMaterialChanged();
 				}
 			}
 		}
@@ -23235,7 +23294,11 @@ namespace BEEACCOUNT
 			{
 				if ((this._Seri != value))
 				{
+					this.OnSeriChanging(value);
+					this.SendPropertyChanging();
 					this._Seri = value;
+					this.SendPropertyChanged("Seri");
+					this.OnSeriChanged();
 				}
 			}
 		}
@@ -23251,7 +23314,11 @@ namespace BEEACCOUNT
 			{
 				if ((this._TEN_HANG != value))
 				{
+					this.OnTEN_HANGChanging(value);
+					this.SendPropertyChanging();
 					this._TEN_HANG = value;
+					this.SendPropertyChanged("TEN_HANG");
+					this.OnTEN_HANGChanged();
 				}
 			}
 		}
@@ -23267,7 +23334,11 @@ namespace BEEACCOUNT
 			{
 				if ((this._ShipTo_Name != value))
 				{
+					this.OnShipTo_NameChanging(value);
+					this.SendPropertyChanging();
 					this._ShipTo_Name = value;
+					this.SendPropertyChanged("ShipTo_Name");
+					this.OnShipTo_NameChanged();
 				}
 			}
 		}
@@ -23283,7 +23354,11 @@ namespace BEEACCOUNT
 			{
 				if ((this._ShipTo_Tel != value))
 				{
+					this.OnShipTo_TelChanging(value);
+					this.SendPropertyChanging();
 					this._ShipTo_Tel = value;
+					this.SendPropertyChanged("ShipTo_Tel");
+					this.OnShipTo_TelChanged();
 				}
 			}
 		}
@@ -23299,7 +23374,11 @@ namespace BEEACCOUNT
 			{
 				if ((this._City != value))
 				{
+					this.OnCityChanging(value);
+					this.SendPropertyChanging();
 					this._City = value;
+					this.SendPropertyChanged("City");
+					this.OnCityChanged();
 				}
 			}
 		}
@@ -23315,7 +23394,11 @@ namespace BEEACCOUNT
 			{
 				if ((this._Deadline != value))
 				{
+					this.OnDeadlineChanging(value);
+					this.SendPropertyChanging();
 					this._Deadline = value;
+					this.SendPropertyChanged("Deadline");
+					this.OnDeadlineChanged();
 				}
 			}
 		}
@@ -23331,7 +23414,11 @@ namespace BEEACCOUNT
 			{
 				if ((this._NOTE != value))
 				{
+					this.OnNOTEChanging(value);
+					this.SendPropertyChanging();
 					this._NOTE = value;
+					this.SendPropertyChanged("NOTE");
+					this.OnNOTEChanged();
 				}
 			}
 		}
@@ -23347,7 +23434,11 @@ namespace BEEACCOUNT
 			{
 				if ((this._District != value))
 				{
+					this.OnDistrictChanging(value);
+					this.SendPropertyChanging();
 					this._District = value;
+					this.SendPropertyChanged("District");
+					this.OnDistrictChanged();
 				}
 			}
 		}
@@ -23363,7 +23454,11 @@ namespace BEEACCOUNT
 			{
 				if ((this._Dia_chi != value))
 				{
+					this.OnDia_chiChanging(value);
+					this.SendPropertyChanging();
 					this._Dia_chi = value;
+					this.SendPropertyChanged("Dia_chi");
+					this.OnDia_chiChanged();
 				}
 			}
 		}
@@ -23379,7 +23474,31 @@ namespace BEEACCOUNT
 			{
 				if ((this._Delivery_Qty != value))
 				{
+					this.OnDelivery_QtyChanging(value);
+					this.SendPropertyChanging();
 					this._Delivery_Qty = value;
+					this.SendPropertyChanged("Delivery_Qty");
+					this.OnDelivery_QtyChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int id
+		{
+			get
+			{
+				return this._id;
+			}
+			set
+			{
+				if ((this._id != value))
+				{
+					this.OnidChanging(value);
+					this.SendPropertyChanging();
+					this._id = value;
+					this.SendPropertyChanged("id");
+					this.OnidChanged();
 				}
 			}
 		}
@@ -23395,15 +23514,41 @@ namespace BEEACCOUNT
 			{
 				if ((this._Username != value))
 				{
+					this.OnUsernameChanging(value);
+					this.SendPropertyChanging();
 					this._Username = value;
+					this.SendPropertyChanged("Username");
+					this.OnUsernameChanged();
 				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
 		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tbl_netcoDonhangTMP")]
-	public partial class tbl_netcoDonhangTMP
+	public partial class tbl_netcoDonhangTMP : INotifyPropertyChanging, INotifyPropertyChanged
 	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
 		private string _So_van_don;
 		
@@ -23433,8 +23578,51 @@ namespace BEEACCOUNT
 		
 		private string _Username;
 		
+		private string _Uploadstatus;
+		
+		private int _id;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnSo_van_donChanging(string value);
+    partial void OnSo_van_donChanged();
+    partial void OnA_R_AmountChanging(System.Nullable<double> value);
+    partial void OnA_R_AmountChanged();
+    partial void OnMaterialChanging(string value);
+    partial void OnMaterialChanged();
+    partial void OnSeriChanging(string value);
+    partial void OnSeriChanged();
+    partial void OnTEN_HANGChanging(string value);
+    partial void OnTEN_HANGChanged();
+    partial void OnShipTo_NameChanging(string value);
+    partial void OnShipTo_NameChanged();
+    partial void OnShipTo_TelChanging(string value);
+    partial void OnShipTo_TelChanged();
+    partial void OnCityChanging(string value);
+    partial void OnCityChanged();
+    partial void OnDeadlineChanging(string value);
+    partial void OnDeadlineChanged();
+    partial void OnNOTEChanging(string value);
+    partial void OnNOTEChanged();
+    partial void OnDistrictChanging(string value);
+    partial void OnDistrictChanged();
+    partial void OnDia_chiChanging(string value);
+    partial void OnDia_chiChanged();
+    partial void OnDelivery_QtyChanging(System.Nullable<double> value);
+    partial void OnDelivery_QtyChanged();
+    partial void OnUsernameChanging(string value);
+    partial void OnUsernameChanged();
+    partial void OnUploadstatusChanging(string value);
+    partial void OnUploadstatusChanged();
+    partial void OnidChanging(int value);
+    partial void OnidChanged();
+    #endregion
+		
 		public tbl_netcoDonhangTMP()
 		{
+			OnCreated();
 		}
 		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_So_van_don", DbType="NVarChar(255)")]
@@ -23448,7 +23636,11 @@ namespace BEEACCOUNT
 			{
 				if ((this._So_van_don != value))
 				{
+					this.OnSo_van_donChanging(value);
+					this.SendPropertyChanging();
 					this._So_van_don = value;
+					this.SendPropertyChanged("So_van_don");
+					this.OnSo_van_donChanged();
 				}
 			}
 		}
@@ -23464,7 +23656,11 @@ namespace BEEACCOUNT
 			{
 				if ((this._A_R_Amount != value))
 				{
+					this.OnA_R_AmountChanging(value);
+					this.SendPropertyChanging();
 					this._A_R_Amount = value;
+					this.SendPropertyChanged("A_R_Amount");
+					this.OnA_R_AmountChanged();
 				}
 			}
 		}
@@ -23480,7 +23676,11 @@ namespace BEEACCOUNT
 			{
 				if ((this._Material != value))
 				{
+					this.OnMaterialChanging(value);
+					this.SendPropertyChanging();
 					this._Material = value;
+					this.SendPropertyChanged("Material");
+					this.OnMaterialChanged();
 				}
 			}
 		}
@@ -23496,7 +23696,11 @@ namespace BEEACCOUNT
 			{
 				if ((this._Seri != value))
 				{
+					this.OnSeriChanging(value);
+					this.SendPropertyChanging();
 					this._Seri = value;
+					this.SendPropertyChanged("Seri");
+					this.OnSeriChanged();
 				}
 			}
 		}
@@ -23512,7 +23716,11 @@ namespace BEEACCOUNT
 			{
 				if ((this._TEN_HANG != value))
 				{
+					this.OnTEN_HANGChanging(value);
+					this.SendPropertyChanging();
 					this._TEN_HANG = value;
+					this.SendPropertyChanged("TEN_HANG");
+					this.OnTEN_HANGChanged();
 				}
 			}
 		}
@@ -23528,7 +23736,11 @@ namespace BEEACCOUNT
 			{
 				if ((this._ShipTo_Name != value))
 				{
+					this.OnShipTo_NameChanging(value);
+					this.SendPropertyChanging();
 					this._ShipTo_Name = value;
+					this.SendPropertyChanged("ShipTo_Name");
+					this.OnShipTo_NameChanged();
 				}
 			}
 		}
@@ -23544,7 +23756,11 @@ namespace BEEACCOUNT
 			{
 				if ((this._ShipTo_Tel != value))
 				{
+					this.OnShipTo_TelChanging(value);
+					this.SendPropertyChanging();
 					this._ShipTo_Tel = value;
+					this.SendPropertyChanged("ShipTo_Tel");
+					this.OnShipTo_TelChanged();
 				}
 			}
 		}
@@ -23560,7 +23776,11 @@ namespace BEEACCOUNT
 			{
 				if ((this._City != value))
 				{
+					this.OnCityChanging(value);
+					this.SendPropertyChanging();
 					this._City = value;
+					this.SendPropertyChanged("City");
+					this.OnCityChanged();
 				}
 			}
 		}
@@ -23576,7 +23796,11 @@ namespace BEEACCOUNT
 			{
 				if ((this._Deadline != value))
 				{
+					this.OnDeadlineChanging(value);
+					this.SendPropertyChanging();
 					this._Deadline = value;
+					this.SendPropertyChanged("Deadline");
+					this.OnDeadlineChanged();
 				}
 			}
 		}
@@ -23592,7 +23816,11 @@ namespace BEEACCOUNT
 			{
 				if ((this._NOTE != value))
 				{
+					this.OnNOTEChanging(value);
+					this.SendPropertyChanging();
 					this._NOTE = value;
+					this.SendPropertyChanged("NOTE");
+					this.OnNOTEChanged();
 				}
 			}
 		}
@@ -23608,7 +23836,11 @@ namespace BEEACCOUNT
 			{
 				if ((this._District != value))
 				{
+					this.OnDistrictChanging(value);
+					this.SendPropertyChanging();
 					this._District = value;
+					this.SendPropertyChanged("District");
+					this.OnDistrictChanged();
 				}
 			}
 		}
@@ -23624,7 +23856,11 @@ namespace BEEACCOUNT
 			{
 				if ((this._Dia_chi != value))
 				{
+					this.OnDia_chiChanging(value);
+					this.SendPropertyChanging();
 					this._Dia_chi = value;
+					this.SendPropertyChanged("Dia_chi");
+					this.OnDia_chiChanged();
 				}
 			}
 		}
@@ -23640,7 +23876,11 @@ namespace BEEACCOUNT
 			{
 				if ((this._Delivery_Qty != value))
 				{
+					this.OnDelivery_QtyChanging(value);
+					this.SendPropertyChanging();
 					this._Delivery_Qty = value;
+					this.SendPropertyChanged("Delivery_Qty");
+					this.OnDelivery_QtyChanged();
 				}
 			}
 		}
@@ -23656,8 +23896,72 @@ namespace BEEACCOUNT
 			{
 				if ((this._Username != value))
 				{
+					this.OnUsernameChanging(value);
+					this.SendPropertyChanging();
 					this._Username = value;
+					this.SendPropertyChanged("Username");
+					this.OnUsernameChanged();
 				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Uploadstatus", DbType="NVarChar(50)")]
+		public string Uploadstatus
+		{
+			get
+			{
+				return this._Uploadstatus;
+			}
+			set
+			{
+				if ((this._Uploadstatus != value))
+				{
+					this.OnUploadstatusChanging(value);
+					this.SendPropertyChanging();
+					this._Uploadstatus = value;
+					this.SendPropertyChanged("Uploadstatus");
+					this.OnUploadstatusChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int id
+		{
+			get
+			{
+				return this._id;
+			}
+			set
+			{
+				if ((this._id != value))
+				{
+					this.OnidChanging(value);
+					this.SendPropertyChanging();
+					this._id = value;
+					this.SendPropertyChanged("id");
+					this.OnidChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
 		}
 	}
