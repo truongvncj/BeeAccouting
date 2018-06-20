@@ -16,6 +16,16 @@ namespace BEEACCOUNT.View
     {
 
         View.Main main { get; set; }
+        public class ComboboxItem
+        {
+            public string Text { get; set; }
+            public object Value { get; set; }
+
+            public override string ToString()
+            {
+                return Text;
+            }
+        }
 
 
         public Beedieudongxe(Main main)
@@ -25,7 +35,30 @@ namespace BEEACCOUNT.View
             Model.Username used = new Username();
 
             this.main = main;
+            cbngaythang.Value = DateTime.Today;
+
+            string connection_string = Utils.getConnectionstr();
+            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
             //  masterdatafuction
+            // load cbkhach hang
+            
+            var rs2 = from kh in dc.tbl_NP_khachhangvanchuyens
+                   //   where kh.ma
+                      select kh;
+
+
+            foreach (var item in rs2)
+            {
+                ComboboxItem cb = new ComboboxItem();
+                cb.Value = item.maKH;
+                cb.Text = item.maKH + ":" + item.tenKH;
+                this.cbkhachhang.Items.Add(cb); // CombomCollection.Add(cb);
+
+            }
+
+
+
 
 
 
@@ -834,6 +867,10 @@ namespace BEEACCOUNT.View
         private void pictureBox2_Click_1(object sender, EventArgs e)
         {
             this.Close();
+            this.main.clearpannel();
+            View.Beemainload main = new Beemainload(this.main);
+
+            this.main.clearpannelload(main);
         }
 
         private void pictureBox2_MouseHover(object sender, EventArgs e)

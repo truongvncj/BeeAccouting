@@ -754,6 +754,7 @@ namespace BEEACCOUNT.View
                 headphieuxuat.phieuso = txtsophieu.Text.Trim();
 
                 //       headphieuxuat.diengiai = txtlydoxuat.Text;
+                headphieuxuat.macty = Model.Username.getmacty();
                 headphieuxuat.createby = Utils.getusername();
                 headphieuxuat.createdate = DateTime.Today;
                 headphieuxuat.diengiai = txtlydoxuat.Text.Trim();
@@ -802,7 +803,7 @@ namespace BEEACCOUNT.View
             {
 
                 tbl_kho_phieuxuat_detail detail = new tbl_kho_phieuxuat_detail();
-
+                detail.macty = Model.Username.getmacty();
                 detail.ngayphieuxuat = datepickngayphieu.Value;
 
                 detail.makho = (cbkhohang.SelectedItem as ComboboxItem).Value.ToString();

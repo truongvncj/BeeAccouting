@@ -36,6 +36,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.button9 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
@@ -45,7 +46,6 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -114,6 +114,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.button9);
             this.groupBox2.Controls.Add(this.groupBox4);
             this.groupBox2.Controls.Add(this.button8);
             this.groupBox2.Controls.Add(this.button7);
@@ -128,23 +129,34 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.button9);
             this.groupBox4.Controls.Add(this.button6);
             this.groupBox4.Location = new System.Drawing.Point(352, 19);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(161, 129);
+            this.groupBox4.Size = new System.Drawing.Size(161, 57);
             this.groupBox4.TabIndex = 5;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Netco";
             // 
+            // button9
+            // 
+            this.button9.BackColor = System.Drawing.Color.Orange;
+            this.button9.Location = new System.Drawing.Point(395, 94);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(150, 21);
+            this.button9.TabIndex = 7;
+            this.button9.Text = "Lệnh điều động xe";
+            this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.button9_Click_1);
+            // 
             // button6
             // 
+            this.button6.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button6.Location = new System.Drawing.Point(6, 19);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(150, 21);
             this.button6.TabIndex = 6;
             this.button6.Text = "Upload Đơn Netco";
-            this.button6.UseVisualStyleBackColor = true;
+            this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click_1);
             // 
             // button8
@@ -224,15 +236,6 @@
             this.button14.Text = "Danh sách khách hàng";
             this.button14.UseVisualStyleBackColor = true;
             this.button14.Click += new System.EventHandler(this.button14_Click_1);
-            // 
-            // button9
-            // 
-            this.button9.Location = new System.Drawing.Point(5, 54);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(150, 21);
-            this.button9.TabIndex = 7;
-            this.button9.Text = "Lệnh điều động xe";
-            this.button9.UseVisualStyleBackColor = true;
             // 
             // bedieuvan
             // 

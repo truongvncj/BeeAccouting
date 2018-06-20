@@ -3451,6 +3451,8 @@ namespace BEEACCOUNT.View
             viewtbl2.Show();
 
             #endregion
+
+
         }
 
         private void danhSáchSảnPhẩmToolStripMenuItem_Click_1(object sender, EventArgs e)

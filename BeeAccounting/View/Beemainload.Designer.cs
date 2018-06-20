@@ -59,8 +59,8 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.ErrorImage = global::BEEACCOUNT.Properties.Resources.DIEUVAN1;
-            this.pictureBox2.Image = global::BEEACCOUNT.Properties.Resources.DIEUVAN1;
+            this.pictureBox2.ErrorImage = global::BEEACCOUNT.Properties.Resources.DIEUVAN3;
+            this.pictureBox2.Image = global::BEEACCOUNT.Properties.Resources.DIEUVAN3;
             this.pictureBox2.Location = new System.Drawing.Point(184, 117);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(283, 107);
@@ -77,8 +77,8 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.ErrorImage = global::BEEACCOUNT.Properties.Resources.KETOANTONGHOP1;
-            this.pictureBox1.Image = global::BEEACCOUNT.Properties.Resources.KETOANTONGHOP1;
+            this.pictureBox1.ErrorImage = global::BEEACCOUNT.Properties.Resources.KETOANTONGHOP2;
+            this.pictureBox1.Image = global::BEEACCOUNT.Properties.Resources.KETOANTONGHOP2;
             this.pictureBox1.Location = new System.Drawing.Point(350, 8);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(283, 107);

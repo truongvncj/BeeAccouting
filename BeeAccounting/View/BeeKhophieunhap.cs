@@ -750,6 +750,8 @@ namespace BEEACCOUNT.View
 
                 tbl_kho_phieunhap_head headphieunhap = new tbl_kho_phieunhap_head();
                 headphieunhap.phieuso = txtsophieu.Text.Trim();
+                headphieunhap.macty = Model.Username.getmacty();
+
 
                 headphieunhap.diengiai = txtdiengiai.Text;
                 headphieunhap.createby = Utils.getusername();
@@ -807,6 +809,7 @@ namespace BEEACCOUNT.View
                 detail.tenhang = dataGridViewTkCo.Rows[idrow].Cells["Tên_sản_phẩm"].Value.ToString();
                 detail.thanhtien = float.Parse(dataGridViewTkCo.Rows[idrow].Cells["Thành_tiền"].Value.ToString());
 
+                detail.macty = Model.Username.getmacty();
 
                 dc.tbl_kho_phieunhap_details.InsertOnSubmit(detail);
                 dc.SubmitChanges();

@@ -63,19 +63,9 @@ namespace BEEACCOUNT.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap DIEUVAN {
+        internal static System.Drawing.Bitmap DIEUVAN3 {
             get {
-                object obj = ResourceManager.GetObject("DIEUVAN", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap DIEUVAN1 {
-            get {
-                object obj = ResourceManager.GetObject("DIEUVAN1", resourceCulture);
+                object obj = ResourceManager.GetObject("DIEUVAN3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,19 +103,9 @@ namespace BEEACCOUNT.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap KETOANTONGHOP {
+        internal static System.Drawing.Bitmap KETOANTONGHOP2 {
             get {
-                object obj = ResourceManager.GetObject("KETOANTONGHOP", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap KETOANTONGHOP1 {
-            get {
-                object obj = ResourceManager.GetObject("KETOANTONGHOP1", resourceCulture);
+                object obj = ResourceManager.GetObject("KETOANTONGHOP2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -16,6 +16,16 @@ namespace BEEACCOUNT.View
     {
 
         View.Main main { get; set; }
+        //public class ComboboxItem
+        //{
+        //    public string Text { get; set; }
+        //    public object Value { get; set; }
+
+        //    public override string ToString()
+        //    {
+        //        return Text;
+        //    }
+        //}
 
 
         public bedieuvan(Main main)
@@ -936,6 +946,26 @@ namespace BEEACCOUNT.View
             Model.dieuvan dv = new dieuvan();
             dv.donhangnetcoinput();
            
+        }
+
+        private void button9_Click_1(object sender, EventArgs e)
+        {
+             this.Close();
+            this.main.clearpannel();
+            View.Beedieudongxe dieuxe = new Beedieudongxe(this.main);
+          
+            this.main.clearpannelload(dieuxe);
+            //     string connection_string = Utils.getConnectionstr();
+            //  //PosmCreateTK
+
+
+            //View.Beemainload Beemainload = new View.Beemainload();
+
+            //Beemainload.TopLevel = false;
+            //Beemainload.AutoScroll = true;
+            //panelmain.Controls.Add(Beemainload);
+            //Beemainload.Show();
+
         }
     }
 }

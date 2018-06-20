@@ -956,6 +956,115 @@ namespace BEEACCOUNT.View
         private void button6_Click_1(object sender, EventArgs e)
         {
 
+            #region// khophieunhap
+            this.Close();
+
+            this.main.clearpannel();
+
+
+            View.BeeKhophieunhap accsup = new BeeKhophieunhap(this.main);
+            this.main.clearpannelload(accsup);
+
+
+            #endregion
+
+
+
+
+        }
+
+        private void button5_Click_1(object sender, EventArgs e)
+        {
+
+            #region//khophieuxuat
+
+            //  Main.clearpannel();
+            this.Close();
+            this.main.clearpannel();
+
+
+            View.BeeKhophieuxuat accsup = new BeeKhophieuxuat(this.main);
+            this.main.clearpannelload(accsup);
+            //    accsup.TopLevel = false;
+            //  accsup.AutoScroll = true;
+            //    panelmain.Controls.Add(accsup);
+            //    accsup.Show();
+
+
+            #endregion
+
+        }
+
+        private void button4_Click_3(object sender, EventArgs e)
+        {
+
+            #region//bcxuatnhapton
+
+
+            Model.Soketoan.sotonghopbaocaonhapxuatton();
+
+            #endregion
+
+        }
+
+        private void button8_Click_1(object sender, EventArgs e)
+        {
+
+            #region//khodskho
+            string connection_string = Utils.getConnectionstr();
+
+            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+            var rs5 = Model.Khohang.Danhsachkho(dc);
+            Viewtable viewtbl66 = new Viewtable(rs5, dc, "DANH SÁCH KHO HÀNG", 4, "tk");// mã 4 là danh sách kho
+
+            viewtbl66.Show();
+
+            //  }
+            #endregion
+
+        }
+
+        private void button7_Click_3(object sender, EventArgs e)
+        {
+
+            #region//khonhomsanpham
+
+            string connection_string = Utils.getConnectionstr();
+
+            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+            var rs6 = Model.Khohang.danhsachnhomsanpham(dc);
+            Viewtable viewtbl2 = new Viewtable(rs6, dc, "DANH SÁCH NHÓM SẢN PHẨM", 6, "tk");// mã 6 là danh sách nhóm sản phẩm
+
+            viewtbl2.Show();
+
+            #endregion
+
+        }
+
+        private void button9_Click_1(object sender, EventArgs e)
+        {
+
+            #region//khodssanpham
+
+            string connection_string = Utils.getConnectionstr();
+
+            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+            var rs7 = Model.Khohang.danhsachsanpham(dc);
+            Viewtable viewtb77l = new Viewtable(rs7, dc, "DANH SÁCH SẢN PHẨM", 7, "tk");// mã 7 là danh sách nhóm sản phẩm
+
+            viewtb77l.Show();
+
+
+
+
+            #endregion
+
+
+
+
         }
     }
 }

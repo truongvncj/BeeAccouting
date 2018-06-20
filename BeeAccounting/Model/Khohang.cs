@@ -210,12 +210,13 @@ namespace BEEACCOUNT.Model
 
         public static IQueryable danhsachphieunhapkho(LinqtoSQLDataContext dc)
         {
-
+            string macty = Model.Username.getmacty();
 
             LinqtoSQLDataContext db = dc;
 
 
-            var rs = from p in dc.tbl_kho_phieunhap_heads
+            var rs = from p in dc.tbl_kho_phieunhap_heads 
+                     where p.macty == macty
 
                      select new
                      {
@@ -258,11 +259,12 @@ namespace BEEACCOUNT.Model
         public static IQueryable danhsachphieuxuatkho(LinqtoSQLDataContext dc)
         {
 
-
+            string macty = Model.Username.getmacty();
             LinqtoSQLDataContext db = dc;
 
 
             var rs = from p in dc.tbl_kho_phieuxuat_heads
+                     where p.macty == macty
 
                      select new
                      {

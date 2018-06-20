@@ -20610,6 +20610,8 @@ namespace BEEACCOUNT
 		
 		private System.Nullable<System.DateTime> _ngayphieunhap;
 		
+		private string _macty;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -20638,6 +20640,8 @@ namespace BEEACCOUNT
     partial void OnmakhoChanged();
     partial void OnngayphieunhapChanging(System.Nullable<System.DateTime> value);
     partial void OnngayphieunhapChanged();
+    partial void OnmactyChanging(string value);
+    partial void OnmactyChanged();
     #endregion
 		
 		public tbl_kho_phieunhap_detail()
@@ -20885,6 +20889,26 @@ namespace BEEACCOUNT
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_macty", DbType="NVarChar(50)")]
+		public string macty
+		{
+			get
+			{
+				return this._macty;
+			}
+			set
+			{
+				if ((this._macty != value))
+				{
+					this.OnmactyChanging(value);
+					this.SendPropertyChanging();
+					this._macty = value;
+					this.SendPropertyChanged("macty");
+					this.OnmactyChanged();
+				}
+			}
+		}
+		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -20948,6 +20972,8 @@ namespace BEEACCOUNT
 		
 		private string _tenkho;
 		
+		private string _macty;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -20988,6 +21014,8 @@ namespace BEEACCOUNT
     partial void OnTenCTietTKNoChanged();
     partial void OntenkhoChanging(string value);
     partial void OntenkhoChanged();
+    partial void OnmactyChanging(string value);
+    partial void OnmactyChanged();
     #endregion
 		
 		public tbl_kho_phieunhap_head()
@@ -21355,6 +21383,26 @@ namespace BEEACCOUNT
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_macty", DbType="NVarChar(50)")]
+		public string macty
+		{
+			get
+			{
+				return this._macty;
+			}
+			set
+			{
+				if ((this._macty != value))
+				{
+					this.OnmactyChanging(value);
+					this.SendPropertyChanging();
+					this._macty = value;
+					this.SendPropertyChanged("macty");
+					this.OnmactyChanged();
+				}
+			}
+		}
+		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -21406,6 +21454,8 @@ namespace BEEACCOUNT
 		
 		private System.Nullable<System.DateTime> _ngayphieuxuat;
 		
+		private string _macty;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -21434,6 +21484,8 @@ namespace BEEACCOUNT
     partial void OnmakhoChanged();
     partial void OnngayphieuxuatChanging(System.Nullable<System.DateTime> value);
     partial void OnngayphieuxuatChanged();
+    partial void OnmactyChanging(string value);
+    partial void OnmactyChanged();
     #endregion
 		
 		public tbl_kho_phieuxuat_detail()
@@ -21681,6 +21733,26 @@ namespace BEEACCOUNT
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_macty", DbType="NVarChar(50)")]
+		public string macty
+		{
+			get
+			{
+				return this._macty;
+			}
+			set
+			{
+				if ((this._macty != value))
+				{
+					this.OnmactyChanging(value);
+					this.SendPropertyChanging();
+					this._macty = value;
+					this.SendPropertyChanged("macty");
+					this.OnmactyChanged();
+				}
+			}
+		}
+		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -21744,6 +21816,8 @@ namespace BEEACCOUNT
 		
 		private string _tenkho;
 		
+		private string _macty;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -21784,6 +21858,8 @@ namespace BEEACCOUNT
     partial void OnTenCTietTKNoChanged();
     partial void OntenkhoChanging(string value);
     partial void OntenkhoChanged();
+    partial void OnmactyChanging(string value);
+    partial void OnmactyChanged();
     #endregion
 		
 		public tbl_kho_phieuxuat_head()
@@ -22151,6 +22227,26 @@ namespace BEEACCOUNT
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_macty", DbType="NVarChar(50)")]
+		public string macty
+		{
+			get
+			{
+				return this._macty;
+			}
+			set
+			{
+				if ((this._macty != value))
+				{
+					this.OnmactyChanging(value);
+					this.SendPropertyChanging();
+					this._macty = value;
+					this.SendPropertyChanged("macty");
+					this.OnmactyChanged();
+				}
+			}
+		}
+		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -22204,6 +22300,8 @@ namespace BEEACCOUNT
 		
 		private string _tenkho;
 		
+		private string _macty;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -22234,6 +22332,8 @@ namespace BEEACCOUNT
     partial void OnmakhoChanged();
     partial void OntenkhoChanging(string value);
     partial void OntenkhoChanged();
+    partial void OnmactyChanging(string value);
+    partial void OnmactyChanged();
     #endregion
 		
 		public tbl_kho_sanpham()
@@ -22501,6 +22601,26 @@ namespace BEEACCOUNT
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_macty", DbType="NVarChar(50)")]
+		public string macty
+		{
+			get
+			{
+				return this._macty;
+			}
+			set
+			{
+				if ((this._macty != value))
+				{
+					this.OnmactyChanging(value);
+					this.SendPropertyChanging();
+					this._macty = value;
+					this.SendPropertyChanged("macty");
+					this.OnmactyChanged();
+				}
+			}
+		}
+		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -22538,6 +22658,8 @@ namespace BEEACCOUNT
 		
 		private string _ghichu;
 		
+		private string _macty;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -22552,6 +22674,8 @@ namespace BEEACCOUNT
     partial void OndiachikhoChanged();
     partial void OnghichuChanging(string value);
     partial void OnghichuChanged();
+    partial void OnmactyChanging(string value);
+    partial void OnmactyChanged();
     #endregion
 		
 		public tbl_khohang()
@@ -22655,6 +22779,26 @@ namespace BEEACCOUNT
 					this._ghichu = value;
 					this.SendPropertyChanged("ghichu");
 					this.OnghichuChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_macty", DbType="NVarChar(50)")]
+		public string macty
+		{
+			get
+			{
+				return this._macty;
+			}
+			set
+			{
+				if ((this._macty != value))
+				{
+					this.OnmactyChanging(value);
+					this.SendPropertyChanging();
+					this._macty = value;
+					this.SendPropertyChanged("macty");
+					this.OnmactyChanged();
 				}
 			}
 		}
