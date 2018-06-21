@@ -23182,6 +23182,22 @@ namespace BEEACCOUNT
 		
 		private string _Username;
 		
+		private string _macty;
+		
+		private string _makhachhang;
+		
+		private string _biensoxe;
+		
+		private System.Nullable<System.DateTime> _ngayghepdon;
+		
+		private string _manhaxe;
+		
+		private string _tennhaxe;
+		
+		private string _loaidon;
+		
+		private string _loadnumber;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -23216,6 +23232,22 @@ namespace BEEACCOUNT
     partial void OnidChanged();
     partial void OnUsernameChanging(string value);
     partial void OnUsernameChanged();
+    partial void OnmactyChanging(string value);
+    partial void OnmactyChanged();
+    partial void OnmakhachhangChanging(string value);
+    partial void OnmakhachhangChanged();
+    partial void OnbiensoxeChanging(string value);
+    partial void OnbiensoxeChanged();
+    partial void OnngayghepdonChanging(System.Nullable<System.DateTime> value);
+    partial void OnngayghepdonChanged();
+    partial void OnmanhaxeChanging(string value);
+    partial void OnmanhaxeChanged();
+    partial void OntennhaxeChanging(string value);
+    partial void OntennhaxeChanged();
+    partial void OnloaidonChanging(string value);
+    partial void OnloaidonChanged();
+    partial void OnloadnumberChanging(string value);
+    partial void OnloadnumberChanged();
     #endregion
 		
 		public tbl_netcoDonhang()
@@ -23519,6 +23551,166 @@ namespace BEEACCOUNT
 					this._Username = value;
 					this.SendPropertyChanged("Username");
 					this.OnUsernameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_macty", DbType="NVarChar(50)")]
+		public string macty
+		{
+			get
+			{
+				return this._macty;
+			}
+			set
+			{
+				if ((this._macty != value))
+				{
+					this.OnmactyChanging(value);
+					this.SendPropertyChanging();
+					this._macty = value;
+					this.SendPropertyChanged("macty");
+					this.OnmactyChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_makhachhang", DbType="NVarChar(50)")]
+		public string makhachhang
+		{
+			get
+			{
+				return this._makhachhang;
+			}
+			set
+			{
+				if ((this._makhachhang != value))
+				{
+					this.OnmakhachhangChanging(value);
+					this.SendPropertyChanging();
+					this._makhachhang = value;
+					this.SendPropertyChanged("makhachhang");
+					this.OnmakhachhangChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_biensoxe", DbType="NVarChar(50)")]
+		public string biensoxe
+		{
+			get
+			{
+				return this._biensoxe;
+			}
+			set
+			{
+				if ((this._biensoxe != value))
+				{
+					this.OnbiensoxeChanging(value);
+					this.SendPropertyChanging();
+					this._biensoxe = value;
+					this.SendPropertyChanged("biensoxe");
+					this.OnbiensoxeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ngayghepdon", DbType="DateTime")]
+		public System.Nullable<System.DateTime> ngayghepdon
+		{
+			get
+			{
+				return this._ngayghepdon;
+			}
+			set
+			{
+				if ((this._ngayghepdon != value))
+				{
+					this.OnngayghepdonChanging(value);
+					this.SendPropertyChanging();
+					this._ngayghepdon = value;
+					this.SendPropertyChanged("ngayghepdon");
+					this.OnngayghepdonChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_manhaxe", DbType="NVarChar(50)")]
+		public string manhaxe
+		{
+			get
+			{
+				return this._manhaxe;
+			}
+			set
+			{
+				if ((this._manhaxe != value))
+				{
+					this.OnmanhaxeChanging(value);
+					this.SendPropertyChanging();
+					this._manhaxe = value;
+					this.SendPropertyChanged("manhaxe");
+					this.OnmanhaxeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tennhaxe", DbType="NVarChar(50)")]
+		public string tennhaxe
+		{
+			get
+			{
+				return this._tennhaxe;
+			}
+			set
+			{
+				if ((this._tennhaxe != value))
+				{
+					this.OntennhaxeChanging(value);
+					this.SendPropertyChanging();
+					this._tennhaxe = value;
+					this.SendPropertyChanged("tennhaxe");
+					this.OntennhaxeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_loaidon", DbType="NVarChar(50)")]
+		public string loaidon
+		{
+			get
+			{
+				return this._loaidon;
+			}
+			set
+			{
+				if ((this._loaidon != value))
+				{
+					this.OnloaidonChanging(value);
+					this.SendPropertyChanging();
+					this._loaidon = value;
+					this.SendPropertyChanged("loaidon");
+					this.OnloaidonChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_loadnumber", DbType="NVarChar(50)")]
+		public string loadnumber
+		{
+			get
+			{
+				return this._loadnumber;
+			}
+			set
+			{
+				if ((this._loadnumber != value))
+				{
+					this.OnloadnumberChanging(value);
+					this.SendPropertyChanging();
+					this._loadnumber = value;
+					this.SendPropertyChanged("loadnumber");
+					this.OnloadnumberChanged();
 				}
 			}
 		}

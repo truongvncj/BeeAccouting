@@ -42,9 +42,9 @@ namespace BEEACCOUNT.View
 
             //  masterdatafuction
             // load cbkhach hang
-            
+
             var rs2 = from kh in dc.tbl_NP_khachhangvanchuyens
-                   //   where kh.ma
+                          //   where kh.ma
                       select kh;
 
 
@@ -972,7 +972,30 @@ namespace BEEACCOUNT.View
             this.Close();
             Model.dieuvan dv = new dieuvan();
             dv.donhangnetcoinput();
-           
+
+        }
+
+        private void cbkhachhang_SelectedValueChanged(object sender, EventArgs e)
+        {
+
+
+            if ((cbkhachhang.SelectedItem as ComboboxItem).Value.ToString() == "02") //  netco
+            {
+                string connection_string = Utils.getConnectionstr();
+                string username = Utils.getusername();
+
+                LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+                var rs = from p in dc.tbl_netcoDonhangs
+                         where p.Username == username&& p.loadnumber==""
+                         select p;
+
+                griddonpending.DataSource = rs;
+                //       (cbtkco.SelectedItem as ComboboxItem).Value.ToString();
+            }
+
+
+
+
         }
     }
 }

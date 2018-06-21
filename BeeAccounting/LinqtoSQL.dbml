@@ -1075,6 +1075,14 @@
       <Column Name="Delivery_Qty" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="Username" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="macty" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="makhachhang" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="biensoxe" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ngayghepdon" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="manhaxe" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="tennhaxe" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="loaidon" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="loadnumber" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.tbl_netcoDonhangTMP" Member="tbl_netcoDonhangTMPs">
