@@ -16,6 +16,49 @@ namespace BEEACCOUNT.View
     {
 
         View.Main main { get; set; }
+
+
+        void Control_KeyPress(object sender, KeyEventArgs e)
+        {
+            // if (viewcode == 2)// nuew la bàng salsetemp update
+
+            //if ((viewcode == 2) && e.KeyCode == Keys.F3)
+            //{
+
+            if (e.KeyCode == Keys.F3)
+            {
+                FormCollection fc = System.Windows.Forms.Application.OpenForms;
+
+                bool kq = false;
+                foreach (Form frm in fc)
+                {
+                    if (frm.Text == "Tìm kiếm")
+
+
+                    {
+                        kq = true;
+                        frm.Focus();
+
+                    }
+                }
+
+                if (!kq)
+                {
+                    BeeSeachdieuvan sheaching = new BeeSeachdieuvan();
+                    sheaching.Show();
+                }
+
+
+
+
+
+            }
+
+
+        }
+
+
+
         public class ComboboxItem
         {
             public string Text { get; set; }
@@ -32,8 +75,12 @@ namespace BEEACCOUNT.View
         {
             InitializeComponent();
 
-            Model.Username used = new Username();
 
+            this.KeyPreview = true;
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(Control_KeyPress);
+
+            //     Model.Username used = new Username();
+            string username = Utils.getusername();
             this.main = main;
             cbngaythang.Value = DateTime.Today;
 
@@ -44,7 +91,8 @@ namespace BEEACCOUNT.View
             // load cbkhach hang
 
             var rs2 = from kh in dc.tbl_NP_khachhangvanchuyens
-                          //   where kh.ma
+                      orderby kh.maKH
+                      //   where kh.ma
                       select kh;
 
 
@@ -56,11 +104,11 @@ namespace BEEACCOUNT.View
                 this.cbkhachhang.Items.Add(cb); // CombomCollection.Add(cb);
 
             }
+            // xóa các đơn temp
 
+            Model.dieuvan.deleteAlldonhangtmp(dc);
 
-
-
-
+            gripghepxe.DataSource = Model.dieuvan.selectDonhangghep(dc);
 
         }
 
@@ -977,16 +1025,16 @@ namespace BEEACCOUNT.View
 
         private void cbkhachhang_SelectedValueChanged(object sender, EventArgs e)
         {
+            string connection_string = Utils.getConnectionstr();
+            string username = Utils.getusername();
 
+            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
 
-            if ((cbkhachhang.SelectedItem as ComboboxItem).Value.ToString() == "02") //  netco
+            if ((cbkhachhang.SelectedItem as ComboboxItem).Value.ToString() == "04") //  netco
             {
-                string connection_string = Utils.getConnectionstr();
-                string username = Utils.getusername();
-
-                LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+              
                 var rs = from p in dc.tbl_netcoDonhangs
-                         where p.Username == username&& p.loadnumber==""
+                         where p.Username == username && p.loadnumber == ""
                          select p;
 
                 griddonpending.DataSource = rs;
@@ -994,8 +1042,92 @@ namespace BEEACCOUNT.View
             }
 
 
+            Model.dieuvan.deleteAlldonhangtmp(dc);
+            gripghepxe.DataSource = Model.dieuvan.selectDonhangghep(dc);
+
+        }
+
+        private void griddonpending_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
 
 
+
+            int idtk = 0;
+            try
+            {
+                idtk = (int)this.griddonpending.Rows[this.griddonpending.CurrentCell.RowIndex].Cells["id"].Value;
+            }
+            catch (Exception)
+            {
+
+                //    MessageBox.Show("Bạn phải chọn một tuyến !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //  return;
+            }
+
+            string connection_string = Utils.getConnectionstr();
+            string username = Utils.getusername();
+
+            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+
+            var rs = (from p in dc.tbl_netcoDonhangs
+                      where p.id == idtk
+                      select p).FirstOrDefault();
+            if (rs != null)
+            {
+                tbl_netcoDonhangTMP temp = new tbl_netcoDonhangTMP();
+
+                temp.Dia_chi = rs.Dia_chi;
+                temp.District = rs.District;
+                temp.Delivery_Qty = rs.Delivery_Qty;
+                temp.id = rs.id;
+                temp.Material = rs.Material;
+                temp.So_van_don = rs.So_van_don;
+                temp.TEN_HANG = rs.TEN_HANG;
+                temp.ShipTo_Name = rs.ShipTo_Name;
+                temp.A_R_Amount = rs.A_R_Amount;
+                temp.City = rs.City;
+
+
+                temp.Username = username;
+
+                dc.tbl_netcoDonhangTMPs.InsertOnSubmit(temp);
+
+
+
+                dc.SubmitChanges();
+            }
+
+            gripghepxe.DataSource = Model.dieuvan.selectDonhangghep(dc);
+
+
+
+            //  var rs1 = Model.Taikhoanketoan.danhsachtaikhoandangkychitiet(dc);
+            //  dataGridView1.DataSource = rs1;
+
+
+
+
+
+
+
+
+
+
+
+
+        }
+
+        private void button3_Click_3(object sender, EventArgs e)
+        {
+            //this.Close();
+            Model.dieuvan dv = new dieuvan();
+            dv.donhangnetcoinput();
+            string connection_string = Utils.getConnectionstr();
+
+            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+            Model.dieuvan.deleteAlldonhangtmp(dc);
         }
     }
 }

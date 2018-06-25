@@ -1691,6 +1691,8 @@ namespace BEEACCOUNT.View
                            select pp;
             if (tempdata.Count() > 0)
             {
+                #region  if
+
                 foreach (var item in tempdata)
                 {
 
@@ -1710,6 +1712,9 @@ namespace BEEACCOUNT.View
                     newdon.ShipTo_Tel = item.ShipTo_Tel;
                     newdon.So_van_don = item.So_van_don;
                     newdon.TEN_HANG = item.TEN_HANG;
+                    newdon.macty = item.macty;
+                    newdon.makhachhang = item.makhachhang;
+                    newdon.loadnumber = "";
 
                     dc.tbl_netcoDonhangs.InsertOnSubmit(newdon);
                     dc.SubmitChanges();
@@ -1719,9 +1724,13 @@ namespace BEEACCOUNT.View
                 }
 
 
-
+                #endregion if
 
             }
+
+            this.Close();
+            MessageBox.Show("Đã nhập liệu xong !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
 
 
         }

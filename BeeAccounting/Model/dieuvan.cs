@@ -17,17 +17,46 @@ namespace BEEACCOUNT.Model
     {
 
 
-        //public IQueryable customersetlect_all(LinqtoSQLDataContext db)
-        //{
+        public static IQueryable selectDonhangghep(LinqtoSQLDataContext db)
+        {
+            string Username = Utils.getusername();
 
-        //    //  var db = new LinqtoSQLDataContext(connection_string);
-        //    var rs = from tbl_PosCustomer in db.tbl_PosCustomers
-        //             orderby tbl_PosCustomer.Customer
-        //             select tbl_PosCustomer;
+            var rs = from dh in db.tbl_netcoDonhangTMPs
+                     where dh.Username == Username
+                     select new
+                     {
+                         dh.So_van_don,
+                         dh.TEN_HANG,
+                         dh.ShipTo_Name,
 
-        //    return rs;
+                         dh.A_R_Amount,
+                         dh.City,
+                         dh.Dia_chi,
+                         dh.District,
+                         dh.Material,
+                         dh.Delivery_Qty,
+                         dh.id,
 
-        //}
+
+
+                     };
+
+            return rs;
+
+        }
+        public static void deleteAlldonhangtmp(LinqtoSQLDataContext db)
+        {
+            string Username = Utils.getusername();
+
+            var rs = from dh in db.tbl_netcoDonhangTMPs
+                     where dh.Username == Username
+                     select dh;
+                   
+            db.tbl_netcoDonhangTMPs.DeleteAllOnSubmit(rs);
+            db.SubmitChanges();
+
+
+        }
 
         //public bool customerdeleted()
         //{
@@ -89,7 +118,7 @@ namespace BEEACCOUNT.Model
             System.Data.DataTable sourceData = ExcelProvide.GetDataFromExcel(filename);
 
             System.Data.DataTable batable = new System.Data.DataTable();
-         //   batable.Columns.Add("Delivery_No", typeof(double));
+            //   batable.Columns.Add("Delivery_No", typeof(double));
             batable.Columns.Add("So_van_don", typeof(string));
             batable.Columns.Add("A/R_Amount", typeof(double));
             batable.Columns.Add("Material", typeof(string));
@@ -107,8 +136,16 @@ namespace BEEACCOUNT.Model
             batable.Columns.Add("Dia_chi", typeof(string));
             batable.Columns.Add("Delivery_Qty", typeof(double));
             batable.Columns.Add("Username", typeof(string));
+            batable.Columns.Add("macty", typeof(string));
+
+            batable.Columns.Add("makhachhang", typeof(string));
+            //     batable.Columns.Add("Username", typeof(string));
+            //      batable.Columns.Add("Username", typeof(string));
+            //   batable.Columns.Add("Username", typeof(string));
+
+
             //   " where " + tblnamesub + ".Username ='" + Username + "'"
-       //     int Delivery_Noid = 0;
+            //     int Delivery_Noid = 0;
             int So_van_donid = 0;
             int Amountid = 0;
             int Materialid = 0;
@@ -229,7 +266,7 @@ namespace BEEACCOUNT.Model
                             Dia_chiid = columid;
 
                         }
-                        if (value.Trim().Contains("Delivery Qty") || value.Trim().Contains("Total")  )
+                        if (value.Trim().Contains("Delivery Qty") || value.Trim().Contains("Total"))
                         {
                             Delivery_Qtyid = columid;
 
@@ -257,7 +294,7 @@ namespace BEEACCOUNT.Model
 
 
                     DataRow dr = batable.NewRow();
-                  //  dr["Delivery_No"] = double.Parse(sourceData.Rows[rowixd][Delivery_Noid].ToString());
+                    //  dr["Delivery_No"] = double.Parse(sourceData.Rows[rowixd][Delivery_Noid].ToString());
                     dr["So_van_don"] = sourceData.Rows[rowixd][So_van_donid].ToString().Trim();
 
                     if (Utils.IsValidnumber(sourceData.Rows[rowixd][Amountid].ToString()))
@@ -288,6 +325,10 @@ namespace BEEACCOUNT.Model
 
                     dr["Delivery_Qty"] = double.Parse(sourceData.Rows[rowixd][Delivery_Qtyid].ToString()); //sourceData.Rows[rowixd][Delivery_Qtyid].ToString().Trim();
                     dr["Username"] = Username1; // double.Parse(sourceData.Rows[rowixd][Delivery_Qtyid].ToString()); //sourceData.Rows[rowixd][Delivery_Qtyid].ToString().Trim();
+                    dr["macty"] = Model.Username.getmacty();// Username1; // double.Parse(sourceData.Rows[rowixd][Delivery_Qtyid].ToString()); //sourceData.Rows[rowixd][Delivery_Qtyid].ToString().Trim();
+                    dr["makhachhang"] = "04";// Model.Username.getmacty();// Username1; // double.Parse(sourceData.Rows[rowixd][Delivery_Qtyid].ToString()); //sourceData.Rows[rowixd][Delivery_Qtyid].ToString().Trim();
+
+
 
                     //   " where " + tblnamesub + ".Username ='" + Username + "'"
                     batable.Rows.Add(dr);
@@ -310,7 +351,7 @@ namespace BEEACCOUNT.Model
                 // Write from the source to the destination.
                 bulkCopy.BulkCopyTimeout = 0;
 
-         //       bulkCopy.ColumnMappings.Add("Delivery_No", "Delivery_No");
+                //       bulkCopy.ColumnMappings.Add("Delivery_No", "Delivery_No");
                 bulkCopy.ColumnMappings.Add("So_van_don", "So_van_don");
                 bulkCopy.ColumnMappings.Add("A/R_Amount", "A/R_Amount");
 
@@ -328,6 +369,8 @@ namespace BEEACCOUNT.Model
                 bulkCopy.ColumnMappings.Add("Dia_chi", "Dia_chi");
                 bulkCopy.ColumnMappings.Add("Delivery_Qty", "Delivery_Qty");
                 bulkCopy.ColumnMappings.Add("Username", "Username");
+                bulkCopy.ColumnMappings.Add("macty", "macty");
+                bulkCopy.ColumnMappings.Add("makhachhang", "makhachhang");
 
 
                 try
