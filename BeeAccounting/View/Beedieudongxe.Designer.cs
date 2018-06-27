@@ -36,6 +36,12 @@
             this.cbkhachhang = new System.Windows.Forms.ComboBox();
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.cbngaythang = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
@@ -47,13 +53,9 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.gripghepxe = new System.Windows.Forms.DataGridView();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
             this.bt_nhapdonhangnetco = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.griddonpending)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gripghepxe)).BeginInit();
@@ -120,6 +122,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button4);
+            this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.label13);
             this.groupBox1.Controls.Add(this.label10);
@@ -142,6 +146,66 @@
             this.groupBox1.TabIndex = 71;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Lệnh điều xe";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.Red;
+            this.label12.Location = new System.Drawing.Point(662, 196);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(45, 20);
+            this.label12.TabIndex = 85;
+            this.label12.Text = "0000";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(586, 201);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(43, 13);
+            this.label13.TabIndex = 84;
+            this.label13.Text = "Phải trả";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.Red;
+            this.label10.Location = new System.Drawing.Point(662, 166);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(45, 20);
+            this.label10.TabIndex = 83;
+            this.label10.Text = "0000";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(584, 171);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(58, 13);
+            this.label11.TabIndex = 82;
+            this.label11.Text = "Thành tiền";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Red;
+            this.label9.Location = new System.Drawing.Point(662, 134);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(45, 20);
+            this.label9.TabIndex = 81;
+            this.label9.Text = "0000";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(585, 139);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(51, 13);
+            this.label8.TabIndex = 80;
+            this.label8.Text = "Shipment";
             // 
             // label7
             // 
@@ -246,66 +310,6 @@
             this.pictureBox2.MouseLeave += new System.EventHandler(this.pictureBox2_MouseLeave);
             this.pictureBox2.MouseHover += new System.EventHandler(this.pictureBox2_MouseHover);
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(585, 139);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(51, 13);
-            this.label8.TabIndex = 80;
-            this.label8.Text = "Shipment";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Red;
-            this.label9.Location = new System.Drawing.Point(662, 134);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(45, 20);
-            this.label9.TabIndex = 81;
-            this.label9.Text = "0000";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.Red;
-            this.label10.Location = new System.Drawing.Point(662, 166);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(45, 20);
-            this.label10.TabIndex = 83;
-            this.label10.Text = "0000";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(584, 171);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(58, 13);
-            this.label11.TabIndex = 82;
-            this.label11.Text = "Thành tiền";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.Red;
-            this.label12.Location = new System.Drawing.Point(662, 196);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(45, 20);
-            this.label12.TabIndex = 85;
-            this.label12.Text = "0000";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(586, 201);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(43, 13);
-            this.label13.TabIndex = 84;
-            this.label13.Text = "Phải trả";
-            // 
             // bt_nhapdonhangnetco
             // 
             this.bt_nhapdonhangnetco.Location = new System.Drawing.Point(18, 53);
@@ -315,6 +319,26 @@
             this.bt_nhapdonhangnetco.Text = "Nhập đơn hàng Netco";
             this.bt_nhapdonhangnetco.UseVisualStyleBackColor = true;
             this.bt_nhapdonhangnetco.Click += new System.EventHandler(this.button3_Click_3);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(920, 171);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(96, 23);
+            this.button3.TabIndex = 86;
+            this.button3.Text = "Thêm xe";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click_4);
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(920, 206);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(96, 23);
+            this.button4.TabIndex = 87;
+            this.button4.Text = "Thêm nhà xe";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click_3);
             // 
             // Beedieudongxe
             // 
@@ -379,5 +403,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button bt_nhapdonhangnetco;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
     }
 }

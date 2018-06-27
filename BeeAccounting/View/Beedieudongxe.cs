@@ -107,77 +107,10 @@ namespace BEEACCOUNT.View
             // xóa các đơn temp
 
             Model.dieuvan.deleteAlldonhangtmp(dc);
-
-            #region  tìm các san pham và quan huyen chua có
-
-            #region q8 List các document có deposit trong fbl5n  không có trong tblEDLP
-
-    //        group c by new
-    //        {
-    //            c.School,
-    //            c.Friend,
-    //            c.FavoriteColor,
-    //        } into gcs
-    //select new ConsolidatedChild()
-    //{
-    //    School = gcs.Key.School,
-    //    Friend = gcs.Key.Friend,
-    //    FavoriteColor = gcs.Key.FavoriteColor,
-    //    Children = gcs.ToList(),
-    //};
-
-
-
-            var q8 = from sp in dc.tbl_netcoDonhangs
-                     where  !(from sp1 in dc.tbl_netcoGiaHDs
-                                                   select sp1.TENHANG
-                                       ).Contains(sp.TEN_HANG)
-                                       group sp by new {
-                                           sp.TEN_HANG,
-                                           sp.City,
-                                       
-
-                                       }  into p
-
-                     select p;
-
-
-            if (q8.Count() != 0)
-            {
-                foreach (var item in q8)
-                {
-                    tbl_netcoGiaHDTemp temp = new tbl_netcoGiaHDTemp();
-
-                    temp.macty = Model.Username.getmacty();
-                    temp.Username = Utils.getusername();
-                    temp.TENHANG = item.Key.TEN_HANG;
-                    temp.Fromdate = DateTime.Today;
-                    temp.Todate = DateTime.Today.AddYears(100);
-                    temp.City = item.Key.City;
-                    temp.Gia = 0;
-
-                    dc.tbl_netcoGiaHDTemps.InsertOnSubmit(temp);
-                    dc.SubmitChanges();
-
-                }
-
-
-             
-
-                var typeff = typeof(tbl_netcoGiaHDTemp);
-                var typeff2 = typeof(tbl_netcoGiaHD);
-                //     LinqtoSQLDataContext dbx = new LinqtoSQLDataContext(connection_string);
-
-
-                View.BeeInputchange inputcdata = new View.BeeInputchange("BẢNG GIÁ ", "LIST SẢN PHẨM CHƯA CÓ GIÁ HÓA ĐƠN ", dc, "tbl_netcoGiaHD", "tbl_netcoGiaHDTemp", typeff, typeff2, "id", "id", username);
-                inputcdata.ShowDialog();// = false;
-            
-            }
-
-            #endregion List các document có trong tblEDLP không có trong VAT
-
-            #endregion
-
+            Model.dieuvan.deleteAllnecoPricetmp(dc);
+            Model.dieuvan.listsanphamNetcochuacogia(dc);
+        
+          
             gripghepxe.DataSource = Model.dieuvan.selectDonhangghep(dc);
 
 
@@ -1102,19 +1035,40 @@ namespace BEEACCOUNT.View
 
             LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
 
+        
+
             if ((cbkhachhang.SelectedItem as ComboboxItem).Value.ToString() == "04") //  netco
             {
-              
+                Model.dieuvan.listsanphamNetcochuacogia(dc);
+                
+
                 var rs = from p in dc.tbl_netcoDonhangs
                          where p.Username == username && p.loadnumber == ""
                          select p;
 
-                griddonpending.DataSource = rs;
+                foreach (var item in rs)
+                {
+                    item.Gia_VChuyen = Model.dieuvan.getnetcogia(dc, item.TEN_HANG, item.City);
+                    dc.SubmitChanges();
+                }
+
+
+                var rs1 = from p in dc.tbl_netcoDonhangs
+                         where p.Username == username && p.loadnumber == ""
+                         select p;
+
+                griddonpending.DataSource = rs1;
+
+
+
+
                 //       (cbtkco.SelectedItem as ComboboxItem).Value.ToString();
             }
 
 
             Model.dieuvan.deleteAlldonhangtmp(dc);
+          
+          //  getnetcogia
             gripghepxe.DataSource = Model.dieuvan.selectDonhangghep(dc);
 
         }
@@ -1159,7 +1113,8 @@ namespace BEEACCOUNT.View
                 temp.ShipTo_Name = rs.ShipTo_Name;
                 temp.A_R_Amount = rs.A_R_Amount;
                 temp.City = rs.City;
-
+                temp.Gia_VChuyen = rs.Gia_VChuyen;
+                temp.mainid = rs.id;
 
                 temp.Username = username;
 
@@ -1200,6 +1155,34 @@ namespace BEEACCOUNT.View
             LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
 
             Model.dieuvan.deleteAlldonhangtmp(dc);
+        }
+
+        private void button3_Click_4(object sender, EventArgs e)
+        {
+            string connection_string = Utils.getConnectionstr();
+
+            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+            var rs1 = Model.Nhacungcap.danhsachxe(dc);
+            Viewtable viewtbl = new Viewtable(rs1, dc, "DANH SÁCH XE", 9, "tk");// mã 8 là danh sach nha nha van tai
+
+            viewtbl.Show();
+           // this.Close();
+        }
+
+        private void button4_Click_3(object sender, EventArgs e)
+        {
+            //    NPDanhsachnhavantai
+            string connection_string = Utils.getConnectionstr();
+
+            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+            var rs1 = Model.Nhacungcap.danhsachNVT(dc);
+            Viewtable viewtbl = new Viewtable(rs1, dc, "DANH SÁCH NHÀ VẬN TẢI", 8, "tk");// mã 8 là danh sach nha nha van tai
+
+            viewtbl.Show();
+
+        //    this.Close();
         }
     }
 }

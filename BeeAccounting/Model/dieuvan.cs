@@ -27,6 +27,8 @@ namespace BEEACCOUNT.Model
                      {
                          dh.So_van_don,
                          dh.TEN_HANG,
+                         dh.Gia_VChuyen,
+
                          dh.ShipTo_Name,
 
                          dh.A_R_Amount,
@@ -36,7 +38,7 @@ namespace BEEACCOUNT.Model
                          dh.Material,
                          dh.Delivery_Qty,
                          dh.id,
-
+                         dh.mainid,
 
 
                      };
@@ -44,6 +46,8 @@ namespace BEEACCOUNT.Model
             return rs;
 
         }
+
+
         public static void deleteAlldonhangtmp(LinqtoSQLDataContext db)
         {
             string Username = Utils.getusername();
@@ -51,29 +55,112 @@ namespace BEEACCOUNT.Model
             var rs = from dh in db.tbl_netcoDonhangTMPs
                      where dh.Username == Username
                      select dh;
-                   
+
             db.tbl_netcoDonhangTMPs.DeleteAllOnSubmit(rs);
             db.SubmitChanges();
 
 
         }
 
-        //public bool customerdeleted()
-        //{
-        //    #region // xóa data bảng tblCustomer
-        //    string connection_string = Utils.getConnectionstr();
-        //    var db = new LinqtoSQLDataContext(connection_string);
+        public static void deleteAllnecoPricetmp(LinqtoSQLDataContext db)
+        {
+            string Username = Utils.getusername();
 
-        //    db.ExecuteCommand("DELETE FROM tbl_PosCustomer");
-        //    //    dc.tblFBL5Nnewthisperiods.DeleteAllOnSubmit(rsthisperiod);
-        //    db.SubmitChanges();
+            var rs = from dh in db.tbl_netcoGiaHDTemps
+                     where dh.Username == Username
+                     select dh;
+
+            db.tbl_netcoGiaHDTemps.DeleteAllOnSubmit(rs);
+            db.SubmitChanges();
+
+
+        }
+
+        public static void listsanphamNetcochuacogia(LinqtoSQLDataContext dc)
+        {
+
+            #region q8 List các document có deposit trong fbl5n  không có trong tblEDLP
 
 
 
-        //    return true;
-        //    #endregion
+            var q8 = from sp in dc.tbl_netcoDonhangs
+                     where !(from sp1 in dc.tbl_netcoGiaHDs
+                             select sp1.TENHANG
+                                       ).Contains(sp.TEN_HANG)
+                     group sp by new
+                     {
+                         sp.TEN_HANG,
+                         sp.City,
 
-        //}
+
+                     }
+                 into p
+
+                     select p;
+
+
+            if (q8.Count() != 0)
+            {
+                foreach (var item in q8)
+                {
+                    tbl_netcoGiaHDTemp temp = new tbl_netcoGiaHDTemp();
+
+                    temp.macty = Model.Username.getmacty();
+                    temp.Username = Utils.getusername();
+                    temp.TENHANG = item.Key.TEN_HANG;
+                    temp.Fromdate = DateTime.Today;
+                    temp.Todate = DateTime.Today.AddYears(100);
+                    temp.City = item.Key.City;
+                    temp.District = item.FirstOrDefault().District;
+                    temp.Gia = 0;
+
+                    dc.tbl_netcoGiaHDTemps.InsertOnSubmit(temp);
+                    dc.SubmitChanges();
+
+                }
+
+
+
+
+                var typeff2 = typeof(tbl_netcoGiaHDTemp);
+                var typeff = typeof(tbl_netcoGiaHD);
+                string username = Utils.getusername();
+
+                View.BeeInputchange inputcdata = new View.BeeInputchange("BẢNG GIÁ ", "LIST SẢN PHẨM CHƯA CÓ GIÁ HÓA ĐƠN ", dc, "tbl_netcoGiaHD", "tbl_netcoGiaHDTemp", typeff, typeff2, "id", "id", username);
+                inputcdata.ShowDialog();// = false;
+
+            }
+
+            #endregion List các document có trong tblEDLP không có trong VAT
+        }
+
+
+        public static double getnetcogia(LinqtoSQLDataContext dc, string tensanpham, string city)
+        {
+
+            var kq = (from sp1 in dc.tbl_netcoGiaHDs
+                      where sp1.TENHANG.Contains(tensanpham)
+                      select sp1.Gia).FirstOrDefault();
+
+
+            if (kq != null)
+            {
+                return kq.Value;
+            }
+            else
+            {
+                return 0;
+            }
+          
+
+
+
+
+
+        }
+
+
+
 
 
         class datainportF
@@ -217,7 +304,7 @@ namespace BEEACCOUNT.Model
 
                         }
 
-                        if (value.Trim().Contains("seri"))
+                        if (value.Trim().Contains("seri") || value.Trim().Contains("MA HANG"))
                         {
                             Seriid = columid;
 
@@ -229,19 +316,19 @@ namespace BEEACCOUNT.Model
 
                         }
 
-                        if (value.Trim().Contains("ShipTo Name"))
+                        if (value.Trim().Contains("ShipTo Name") || value.Trim().Contains("ten up"))
                         {
                             ShipTo_Nameid = columid;
                             // headindex = 0;
                         }
 
-                        if (value.Trim().Contains("ShipTo Tel."))
+                        if (value.Trim().Contains("ShipTo Tel.") || value.Trim().Contains("Shipping_Phone"))
                         {
                             ShipTo_Telid = columid;
 
                         }
 
-                        if (value.Trim().Contains("City"))
+                        if (value.Trim().Contains("City") || value.Trim().Contains("Shipping_Region"))
                         {
                             Cityid = columid;
 

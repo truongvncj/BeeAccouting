@@ -79,7 +79,6 @@ namespace BEEACCOUNT.View
             // 
             this.splitContainer1.Panel1.Controls.Add(this.btnhaplieu);
             this.splitContainer1.Panel1.Controls.Add(this.label1);
-            this.splitContainer1.Panel1.Controls.Add(this.pictureBox1);
             this.splitContainer1.Panel1.Controls.Add(this.lbseachedit);
             this.splitContainer1.Panel1.Controls.Add(this.export);
             this.splitContainer1.Panel1.Controls.Add(this.bnt_adddataselected);
@@ -92,6 +91,7 @@ namespace BEEACCOUNT.View
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.mainpanel);
+            this.splitContainer1.Panel2.Controls.Add(this.pictureBox1);
             this.splitContainer1.Size = new System.Drawing.Size(1153, 485);
             this.splitContainer1.SplitterDistance = 629;
             this.splitContainer1.SplitterIncrement = 15;
@@ -126,7 +126,7 @@ namespace BEEACCOUNT.View
             this.pictureBox1.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.ErrorImage")));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(533, 10);
+            this.pictureBox1.Location = new System.Drawing.Point(416, 3);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(93, 38);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -226,15 +226,15 @@ namespace BEEACCOUNT.View
             this.mainpanel.Controls.Add(this.bt_detletedsetlectmain);
             this.mainpanel.Controls.Add(this.lb_headermain);
             this.mainpanel.Controls.Add(this.dataGridView2);
-            this.mainpanel.Location = new System.Drawing.Point(3, 3);
+            this.mainpanel.Location = new System.Drawing.Point(3, 51);
             this.mainpanel.Name = "mainpanel";
-            this.mainpanel.Size = new System.Drawing.Size(513, 482);
+            this.mainpanel.Size = new System.Drawing.Size(513, 434);
             this.mainpanel.TabIndex = 0;
             // 
             // bt_detletedsetlectmain
             // 
             this.bt_detletedsetlectmain.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.bt_detletedsetlectmain.Location = new System.Drawing.Point(372, 454);
+            this.bt_detletedsetlectmain.Location = new System.Drawing.Point(372, 406);
             this.bt_detletedsetlectmain.Name = "bt_detletedsetlectmain";
             this.bt_detletedsetlectmain.Size = new System.Drawing.Size(118, 25);
             this.bt_detletedsetlectmain.TabIndex = 48;
@@ -248,7 +248,7 @@ namespace BEEACCOUNT.View
             this.lb_headermain.AutoSize = true;
             this.lb_headermain.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_headermain.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lb_headermain.Location = new System.Drawing.Point(3, 54);
+            this.lb_headermain.Location = new System.Drawing.Point(3, 10);
             this.lb_headermain.Name = "lb_headermain";
             this.lb_headermain.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.lb_headermain.Size = new System.Drawing.Size(157, 18);
@@ -262,7 +262,7 @@ namespace BEEACCOUNT.View
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(2, 80);
+            this.dataGridView2.Location = new System.Drawing.Point(2, 32);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
             this.dataGridView2.Size = new System.Drawing.Size(504, 369);

@@ -23848,6 +23848,8 @@ namespace BEEACCOUNT
 		
 		private System.Nullable<double> _Gia_VChuyen;
 		
+		private System.Nullable<int> _mainid;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -23890,6 +23892,8 @@ namespace BEEACCOUNT
     partial void OnmakhachhangChanged();
     partial void OnGia_VChuyenChanging(System.Nullable<double> value);
     partial void OnGia_VChuyenChanged();
+    partial void OnmainidChanging(System.Nullable<int> value);
+    partial void OnmainidChanged();
     #endregion
 		
 		public tbl_netcoDonhangTMP()
@@ -24273,6 +24277,26 @@ namespace BEEACCOUNT
 					this._Gia_VChuyen = value;
 					this.SendPropertyChanged("Gia_VChuyen");
 					this.OnGia_VChuyenChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_mainid", DbType="Int")]
+		public System.Nullable<int> mainid
+		{
+			get
+			{
+				return this._mainid;
+			}
+			set
+			{
+				if ((this._mainid != value))
+				{
+					this.OnmainidChanging(value);
+					this.SendPropertyChanging();
+					this._mainid = value;
+					this.SendPropertyChanged("mainid");
+					this.OnmainidChanged();
 				}
 			}
 		}
