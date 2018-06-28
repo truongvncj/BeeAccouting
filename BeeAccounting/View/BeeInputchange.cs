@@ -158,7 +158,7 @@ namespace BEEACCOUNT.View
 
             this.btnhaplieu.Visible = false;
             this.lbseachedit.Visible = false;
-            
+
             this.bnt_adddataselected.Visible = false;
             this.Bt_Adddata.Visible = true;
             if (lbheader == "")
@@ -258,12 +258,12 @@ namespace BEEACCOUNT.View
             source1.AllowNew = true;
 
             this.dataGridView1.DataSource = source1;
-      
+
 
             if (source1.Count == 0)
             {
 
-               
+
 
 
 
@@ -1491,54 +1491,67 @@ namespace BEEACCOUNT.View
             string connection_string = Utils.getConnectionstr();
             var dc = new LinqtoSQLDataContext(connection_string);
             string username = Utils.getusername();
+            var tempdata1 = from pp in dc.tbl_netcoDonhangTMPs
+                            where pp.Username == username && (pp.TEN_HANG == null || pp.TEN_HANG == "")
 
-            var tempdata = from pp in dc.tbl_netcoDonhangTMPs
-                           where pp.Username == username
+                            select pp;
 
-                           select pp;
-            if (tempdata.Count() > 0)
+            if (tempdata1.Count() > 0)
             {
-                #region  if
-
-                foreach (var item in tempdata)
-                {
+                MessageBox.Show("Không upload vào được do có các dòng sản phẩm chưa có tên sản phẩm !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
-                    tbl_netcoDonhang newdon = new tbl_netcoDonhang();
-                    newdon.Username = item.Username;
-                    newdon.A_R_Amount = item.A_R_Amount;
-                    newdon.City = item.City;
-                    newdon.Deadline = item.Deadline;
-                    newdon.Delivery_Qty = item.Delivery_Qty;
-                    newdon.Dia_chi = item.Dia_chi;
-                    newdon.District = item.District;
-                    newdon.Material = item.Material;
-                    newdon.NOTE = item.NOTE;
-                    newdon.Seri = item.Seri;
-                    newdon.ShipTo_Name = item.ShipTo_Name;
-                    newdon.ShipTo_Tel = item.ShipTo_Tel;
-                    newdon.So_van_don = item.So_van_don;
-                    newdon.TEN_HANG = item.TEN_HANG;
-                    newdon.macty = item.macty;
-                    newdon.makhachhang = item.makhachhang;
-                    newdon.loadnumber = "";
-
-                    dc.tbl_netcoDonhangs.InsertOnSubmit(newdon);
-                    dc.SubmitChanges();
-
-                    item.Uploadstatus = "Ok done ";
-                    dc.SubmitChanges();
-                }
-
-
-                #endregion if
 
             }
+            else
+            {
+                var tempdata = from pp in dc.tbl_netcoDonhangTMPs
+                               where pp.Username == username
 
-            this.Close();
-            MessageBox.Show("Đã nhập liệu xong !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                               select pp;
+                if (tempdata.Count() > 0)
+                {
+                    #region  if
+
+                    foreach (var item in tempdata)
+                    {
 
 
+                        tbl_netcoDonhang newdon = new tbl_netcoDonhang();
+                        newdon.Username = item.Username;
+                        newdon.A_R_Amount = item.A_R_Amount;
+                        newdon.City = item.City;
+                        newdon.Deadline = item.Deadline;
+                        newdon.Delivery_Qty = item.Delivery_Qty;
+                        newdon.Dia_chi = item.Dia_chi;
+                        newdon.District = item.District;
+                        newdon.Material = item.Material;
+                        newdon.NOTE = item.NOTE;
+                        newdon.Seri = item.Seri;
+                        newdon.ShipTo_Name = item.ShipTo_Name;
+                        newdon.ShipTo_Tel = item.ShipTo_Tel;
+                        newdon.So_van_don = item.So_van_don;
+                        newdon.TEN_HANG = item.TEN_HANG;
+                        newdon.macty = item.macty;
+                        newdon.makhachhang = item.makhachhang;
+                        newdon.loadnumber = "";
+                        newdon.Tempview = 1;
+                        dc.tbl_netcoDonhangs.InsertOnSubmit(newdon);
+                        dc.SubmitChanges();
+
+                        item.Uploadstatus = "Ok done ";
+                        dc.SubmitChanges();
+                    }
+
+
+                    #endregion if
+
+                }
+
+                this.Close();
+                MessageBox.Show("Đã nhập liệu xong !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
 
         }
 

@@ -23244,6 +23244,8 @@ namespace BEEACCOUNT
 		
 		private System.Nullable<double> _Gia_VChuyen;
 		
+		private int _Tempview;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -23296,6 +23298,8 @@ namespace BEEACCOUNT
     partial void OnloadnumberChanged();
     partial void OnGia_VChuyenChanging(System.Nullable<double> value);
     partial void OnGia_VChuyenChanged();
+    partial void OnTempviewChanging(int value);
+    partial void OnTempviewChanged();
     #endregion
 		
 		public tbl_netcoDonhang()
@@ -23779,6 +23783,26 @@ namespace BEEACCOUNT
 					this._Gia_VChuyen = value;
 					this.SendPropertyChanged("Gia_VChuyen");
 					this.OnGia_VChuyenChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Tempview", DbType="Int NOT NULL")]
+		public int Tempview
+		{
+			get
+			{
+				return this._Tempview;
+			}
+			set
+			{
+				if ((this._Tempview != value))
+				{
+					this.OnTempviewChanging(value);
+					this.SendPropertyChanging();
+					this._Tempview = value;
+					this.SendPropertyChanged("Tempview");
+					this.OnTempviewChanged();
 				}
 			}
 		}
@@ -25130,6 +25154,8 @@ namespace BEEACCOUNT
 		
 		private System.Nullable<double> _sokhoithungxe;
 		
+		private string _tenNVT;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -25150,6 +25176,8 @@ namespace BEEACCOUNT
     partial void OnsotantaiChanged();
     partial void OnsokhoithungxeChanging(System.Nullable<double> value);
     partial void OnsokhoithungxeChanged();
+    partial void OntenNVTChanging(string value);
+    partial void OntenNVTChanged();
     #endregion
 		
 		public tbl_NP_danhsachxe()
@@ -25313,6 +25341,26 @@ namespace BEEACCOUNT
 					this._sokhoithungxe = value;
 					this.SendPropertyChanged("sokhoithungxe");
 					this.OnsokhoithungxeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tenNVT", DbType="NVarChar(225)")]
+		public string tenNVT
+		{
+			get
+			{
+				return this._tenNVT;
+			}
+			set
+			{
+				if ((this._tenNVT != value))
+				{
+					this.OntenNVTChanging(value);
+					this.SendPropertyChanging();
+					this._tenNVT = value;
+					this.SendPropertyChanged("tenNVT");
+					this.OntenNVTChanged();
 				}
 			}
 		}

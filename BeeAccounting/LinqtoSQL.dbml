@@ -1084,6 +1084,7 @@
       <Column Name="loaidon" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="loadnumber" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="Gia_VChuyen" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Tempview" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
     </Type>
   </Table>
   <Table Name="dbo.tbl_netcoDonhangTMP" Member="tbl_netcoDonhangTMPs">
@@ -1160,6 +1161,7 @@
       <Column Name="dienthoailaixe" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="sotantai" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Column Name="sokhoithungxe" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="tenNVT" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.tbl_NP_giavantaitheotuyen" Member="tbl_NP_giavantaitheotuyens">

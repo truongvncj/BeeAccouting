@@ -88,7 +88,7 @@ namespace BEEACCOUNT.View
             LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
 
             //  masterdatafuction
-            // load cbkhach hang
+            #region  // load cbkhach hang
 
             var rs2 = from kh in dc.tbl_NP_khachhangvanchuyens
                       orderby kh.maKH
@@ -104,11 +104,49 @@ namespace BEEACCOUNT.View
                 this.cbkhachhang.Items.Add(cb); // CombomCollection.Add(cb);
 
             }
-            // xóa các đơn temp
+
+            #endregion
+
+            #region    //cbbiensoxe
+            var rs3 = from kh in dc.tbl_NP_danhsachxes
+                      orderby kh.maNVT
+                      //   where kh.ma
+                      select kh;
+
+
+            foreach (var item in rs3)
+            {
+                ComboboxItem cb = new ComboboxItem();
+                cb.Value = item.bienso;
+                cb.Text = item.bienso + ":" + item.maNVT+ "-"+ item.tenNVT;
+                this.cbbiensoxe.Items.Add(cb); // CombomCollection.Add(cb);
+
+            }
+            #endregion cbbiensoxe
+
+
+
+            #region    //cbnahxe
+            var rs4 = from kh in dc.tbl_NP_Nhacungungvantais
+                      orderby kh.maNVT
+                      //   where kh.ma
+                      select kh;
+
+
+            foreach (var item in rs4)
+            {
+                ComboboxItem cb = new ComboboxItem();
+                cb.Value = item.maNVT;
+                cb.Text = item.maNVT + ":" + item.tenNVT;
+                this.cbnhaxe.Items.Add(cb); // CombomCollection.Add(cb);
+
+            }
+            #endregion cbnahxe
+
 
             Model.dieuvan.deleteAlldonhangtmp(dc);
             Model.dieuvan.deleteAllnecoPricetmp(dc);
-            Model.dieuvan.listsanphamNetcochuacogia(dc);
+         //   Model.dieuvan.listsanphamNetcochuacogia(dc);
         
           
             gripghepxe.DataSource = Model.dieuvan.selectDonhangghep(dc);
@@ -1053,9 +1091,7 @@ namespace BEEACCOUNT.View
                 }
 
 
-                var rs1 = from p in dc.tbl_netcoDonhangs
-                         where p.Username == username && p.loadnumber == ""
-                         select p;
+                var rs1 = Model.dieuvan.selectDonhangNetcoPendingChuaghep(dc);
 
                 griddonpending.DataSource = rs1;
 
@@ -1076,61 +1112,80 @@ namespace BEEACCOUNT.View
         private void griddonpending_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
 
+            //   DataGridViewRow rowid = new DataGridViewRow
+            string connection_string = Utils.getConnectionstr();
+            string username = Utils.getusername();
 
-
+            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
             int idtk = 0;
             try
             {
                 idtk = (int)this.griddonpending.Rows[this.griddonpending.CurrentCell.RowIndex].Cells["id"].Value;
-            }
+                //    parent.rows[currentRowIndex].style.backgroundColor = "#FFFFD6";
+              //  int x = griddonpending.CurrentRow.Index;
+
+                this.griddonpending.Rows.Remove(griddonpending.CurrentRow);
+
+                if ((cbkhachhang.SelectedItem as ComboboxItem).Value.ToString() == "04") //  netco
+                {
+                    // chuyen data thành view =0
+
+                    Model.dieuvan.updatehidedonhangnetcotheoID(dc, idtk);
+                }
+                    //   this.griddonpending.Rows[currentRowIndex].
+                }
             catch (Exception)
             {
 
                 //    MessageBox.Show("Bạn phải chọn một tuyến !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 //  return;
             }
+           
 
-            string connection_string = Utils.getConnectionstr();
-            string username = Utils.getusername();
-
-            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
-
-
-            var rs = (from p in dc.tbl_netcoDonhangs
-                      where p.id == idtk
-                      select p).FirstOrDefault();
-            if (rs != null)
+            if ((cbkhachhang.SelectedItem as ComboboxItem).Value.ToString() == "04") //  netco
             {
-                tbl_netcoDonhangTMP temp = new tbl_netcoDonhangTMP();
+                #region  nếu là netco them vao temp
+              
 
-                temp.Dia_chi = rs.Dia_chi;
-                temp.District = rs.District;
-                temp.Delivery_Qty = rs.Delivery_Qty;
-                temp.id = rs.id;
-                temp.Material = rs.Material;
-                temp.So_van_don = rs.So_van_don;
-                temp.TEN_HANG = rs.TEN_HANG;
-                temp.ShipTo_Name = rs.ShipTo_Name;
-                temp.A_R_Amount = rs.A_R_Amount;
-                temp.City = rs.City;
-                temp.Gia_VChuyen = rs.Gia_VChuyen;
-                temp.mainid = rs.id;
+                var rs = (from p in dc.tbl_netcoDonhangs
+                          where p.id == idtk
+                          select p).FirstOrDefault();
+                if (rs != null)
+                {
+                    tbl_netcoDonhangTMP temp = new tbl_netcoDonhangTMP();
 
-                temp.Username = username;
+                    temp.Dia_chi = rs.Dia_chi;
+                    temp.District = rs.District;
+                    temp.Delivery_Qty = rs.Delivery_Qty;
+                    temp.id = rs.id;
+                    temp.Material = rs.Material;
+                    temp.So_van_don = rs.So_van_don;
+                    temp.TEN_HANG = rs.TEN_HANG;
+                    temp.ShipTo_Name = rs.ShipTo_Name;
+                    temp.A_R_Amount = rs.A_R_Amount;
+                    temp.City = rs.City;
+                    temp.Gia_VChuyen = rs.Gia_VChuyen*rs.Delivery_Qty;
+                    temp.mainid = rs.id;
 
-                dc.tbl_netcoDonhangTMPs.InsertOnSubmit(temp);
+                    temp.Username = username;
+
+                    dc.tbl_netcoDonhangTMPs.InsertOnSubmit(temp);
 
 
 
-                dc.SubmitChanges();
+                    dc.SubmitChanges();
+                }
+
+
+                #endregion nếu là netco
             }
+
 
             gripghepxe.DataSource = Model.dieuvan.selectDonhangghep(dc);
 
 
 
-            //  var rs1 = Model.Taikhoanketoan.danhsachtaikhoandangkychitiet(dc);
-            //  dataGridView1.DataSource = rs1;
+            txttienhoadon.Text = Model.dieuvan.tinhgiaDonhangvanchuyenHD(dc).ToString();
 
 
 
@@ -1183,6 +1238,56 @@ namespace BEEACCOUNT.View
             viewtbl.Show();
 
         //    this.Close();
+        }
+
+        private void gripghepxe_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int idtk = 0;
+            int mainid = 0;
+            string connection_string = Utils.getConnectionstr();
+
+            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+            try
+            {
+                idtk = (int)this.gripghepxe.Rows[this.gripghepxe.CurrentCell.RowIndex].Cells["id"].Value;
+                mainid = (int)this.gripghepxe.Rows[this.gripghepxe.CurrentCell.RowIndex].Cells["mainid"].Value;
+
+                this.gripghepxe.Rows.Remove(gripghepxe.CurrentRow);
+                if ((cbkhachhang.SelectedItem as ComboboxItem).Value.ToString() == "04") //  netco
+                {
+                    // chuyen data thành view =0
+
+                    Model.dieuvan.updateunhidedonhangnetcotheoID(dc, mainid);
+                    griddonpending.DataSource = Model.dieuvan.selectDonhangNetcoPendingChuaghep(dc);
+                }
+
+                Model.dieuvan.deleteAlldonhangtmptheoID(dc, idtk);
+            }
+            catch (Exception)
+            {
+
+                //    MessageBox.Show("Bạn phải chọn một tuyến !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //  return;
+            }
+
+            txttienhoadon.Text = Model.dieuvan.tinhgiaDonhangvanchuyenHD(dc).ToString();
+
+
+
+        }
+
+        private void gripghepxe_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
+        {
+
+          
+
+          
+        }
+
+        private void gripghepxe_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
+        {
+          
         }
     }
 }

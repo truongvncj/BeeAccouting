@@ -61,6 +61,64 @@ namespace BEEACCOUNT.Model
 
 
         }
+        public static void deleteAlldonhangtmptheoID(LinqtoSQLDataContext db, int id)
+        {
+            string Username = Utils.getusername();
+
+            var rs = from dh in db.tbl_netcoDonhangTMPs
+                     where dh.Username == Username && dh.id == id
+                     select dh;
+            if (rs.Count() > 0)
+            {
+                db.tbl_netcoDonhangTMPs.DeleteAllOnSubmit(rs);
+                db.SubmitChanges();
+
+            }
+
+
+        }
+        public static void updatehidedonhangnetcotheoID(LinqtoSQLDataContext db, int id)
+        {
+            string Username = Utils.getusername();
+
+            var rs = from dh in db.tbl_netcoDonhangs
+                     where dh.Username == Username && dh.id == id
+                     select dh;
+            if (rs.Count() > 0)
+            {
+                foreach (var item in rs)
+                {
+                    item.Tempview = 0;
+                    db.SubmitChanges();
+                }
+
+
+
+            }
+
+
+        }
+        public static void updateunhidedonhangnetcotheoID(LinqtoSQLDataContext db, int id)
+        {
+            string Username = Utils.getusername();
+
+            var rs = from dh in db.tbl_netcoDonhangs
+                     where dh.Username == Username && dh.id == id
+                     select dh;
+            if (rs.Count() > 0)
+            {
+                foreach (var item in rs)
+                {
+                    item.Tempview = 1;
+                    db.SubmitChanges();
+                }
+
+
+
+            }
+
+
+        }
 
         public static void deleteAllnecoPricetmp(LinqtoSQLDataContext db)
         {
@@ -76,9 +134,37 @@ namespace BEEACCOUNT.Model
 
         }
 
+        public static IQueryable selectDonhangNetcoPendingChuaghep(LinqtoSQLDataContext db)
+        {
+            string username = Utils.getusername();
+
+            var rs1 = from p in db.tbl_netcoDonhangs
+                      where p.Username == username && p.loadnumber == "" && p.Tempview == 1
+                      select new {
+                          p.So_van_don,
+                          p.TEN_HANG,
+                          p.Delivery_Qty,
+                          p.A_R_Amount,
+                          p.City,
+                          p.Gia_VChuyen,
+                          p.Dia_chi,
+                          p.District,
+                          p.id,
+                      
+
+
+                      };
+
+
+
+            return rs1;
+        }
+
+
+
         public static void listsanphamNetcochuacogia(LinqtoSQLDataContext dc)
         {
-
+            Model.dieuvan.deleteAllnecoPricetmp(dc);
             #region q8 List các document có deposit trong fbl5n  không có trong tblEDLP
 
 
@@ -137,7 +223,10 @@ namespace BEEACCOUNT.Model
 
         public static double getnetcogia(LinqtoSQLDataContext dc, string tensanpham, string city)
         {
-
+            if (tensanpham == null)
+            {
+                tensanpham = "";
+            }
             var kq = (from sp1 in dc.tbl_netcoGiaHDs
                       where sp1.TENHANG.Contains(tensanpham)
                       select sp1.Gia).FirstOrDefault();
@@ -151,7 +240,7 @@ namespace BEEACCOUNT.Model
             {
                 return 0;
             }
-          
+
 
 
 
@@ -159,6 +248,21 @@ namespace BEEACCOUNT.Model
 
         }
 
+
+        public static double tinhgiaDonhangvanchuyenHD(LinqtoSQLDataContext dc)
+        {
+            string username = Utils.getusername();
+
+            var kq = (from sp1 in dc.tbl_netcoDonhangTMPs
+                         where sp1.Username == username
+                         select sp1.Gia_VChuyen).Sum().GetValueOrDefault(0);
+           
+                return kq;
+           
+
+
+
+        }
 
 
 
@@ -233,23 +337,23 @@ namespace BEEACCOUNT.Model
 
             //   " where " + tblnamesub + ".Username ='" + Username + "'"
             //     int Delivery_Noid = 0;
-            int So_van_donid = 0;
-            int Amountid = 0;
-            int Materialid = 0;
-            int Seriid = 0;
-            int TEN_HANGid = 0;
-            int ShipTo_Nameid = 0;
-            int ShipTo_Telid = 0;
-            int Cityid = 0;
+            int So_van_donid = -1;
+            int Amountid = -1;
+            int Materialid = -1;
+            int Seriid = -1;
+            int TEN_HANGid = -1;
+            int ShipTo_Nameid = -1;
+            int ShipTo_Telid = -1;
+            int Cityid = -1;
 
-            int Deadlineid = 0;
+            int Deadlineid = -1;
 
-            int NOTEid = 0;
+            int NOTEid = -1;
 
-            int Districtid = 0;
+            int Districtid = -1;
 
-            int Dia_chiid = 0;
-            int Delivery_Qtyid = 0;
+            int Dia_chiid = -1;
+            int Delivery_Qtyid = -1;
 
 
 
@@ -298,19 +402,19 @@ namespace BEEACCOUNT.Model
                         }
 
 
-                        if (value.Trim().Contains("Material"))
+                        if (value.Trim().Contains("Material")) //seri up
                         {
                             Materialid = columid;
 
                         }
 
-                        if (value.Trim().Contains("seri") || value.Trim().Contains("MA HANG"))
+                        if (value.Trim().Contains("seri") || value.Trim().Contains("MA HANG") || value.Trim().Contains("ma hang up"))
                         {
                             Seriid = columid;
 
                         }
 
-                        if (value.Trim().Contains("TEN HANG"))
+                        if (value.Trim().Contains("TEN HANG") || value.Trim().Contains("ten hang"))    //ten hang
                         {
                             TEN_HANGid = columid;
 
@@ -348,7 +452,7 @@ namespace BEEACCOUNT.Model
                             Districtid = columid;
 
                         }
-                        if (value.Trim().Contains("dia chi"))
+                        if (value.Trim().Contains("dia chi") || value.Trim().Contains("DIA CHI")) //dia chi
                         {
                             Dia_chiid = columid;
 
@@ -382,38 +486,84 @@ namespace BEEACCOUNT.Model
 
                     DataRow dr = batable.NewRow();
                     //  dr["Delivery_No"] = double.Parse(sourceData.Rows[rowixd][Delivery_Noid].ToString());
-                    dr["So_van_don"] = sourceData.Rows[rowixd][So_van_donid].ToString().Trim();
-
-                    if (Utils.IsValidnumber(sourceData.Rows[rowixd][Amountid].ToString()))
+                    if (So_van_donid >= 0)
                     {
-                        dr["A/R_Amount"] = double.Parse(sourceData.Rows[rowixd][Amountid].ToString());
+                        dr["So_van_don"] = sourceData.Rows[rowixd][So_van_donid].ToString().Trim();
+
                     }
-                    else
+                    if (Amountid >= 0)
                     {
-                        dr["A/R_Amount"] = 0;
+                        if (Utils.IsValidnumber(sourceData.Rows[rowixd][Amountid].ToString()))
+                        {
+                            dr["A/R_Amount"] = double.Parse(sourceData.Rows[rowixd][Amountid].ToString());
+                        }
+                        else
+                        {
+                            dr["A/R_Amount"] = 0;
+                        }
+                    }
+                    if (Materialid >= 0)
+                    {
+                        dr["Material"] = sourceData.Rows[rowixd][Materialid].ToString().Trim();
                     }
 
-                    dr["Material"] = sourceData.Rows[rowixd][Materialid].ToString().Trim();
-                    dr["Seri"] = sourceData.Rows[rowixd][Seriid].ToString().Trim();
-                    dr["TEN_HANG"] = sourceData.Rows[rowixd][TEN_HANGid].ToString().Trim();
-                    dr["ShipTo_Name"] = sourceData.Rows[rowixd][ShipTo_Nameid].ToString().Trim();
+                    if (Seriid >= 0)
+                    {
+                        dr["Seri"] = sourceData.Rows[rowixd][Seriid].ToString().Trim();
+                    }
 
-                    dr["ShipTo_Tel"] = sourceData.Rows[rowixd][ShipTo_Telid].ToString().Trim();
+                    if (TEN_HANGid >= 0)
+                    {
+                        dr["TEN_HANG"] = sourceData.Rows[rowixd][TEN_HANGid].ToString().Trim();
+                    }
+                    if (ShipTo_Nameid >= 0)
+                    {
+                        dr["ShipTo_Name"] = sourceData.Rows[rowixd][ShipTo_Nameid].ToString().Trim();
+                    }
+                    if (ShipTo_Telid >= 0)
+                    {
+                        dr["ShipTo_Tel"] = sourceData.Rows[rowixd][ShipTo_Telid].ToString().Trim();
+                    }
 
-                    dr["City"] = sourceData.Rows[rowixd][Cityid].ToString().Trim();
 
-                    dr["Deadline"] = sourceData.Rows[rowixd][Deadlineid].ToString().Trim();
+                    if (Cityid >= 0)
+                    {
+                        dr["City"] = sourceData.Rows[rowixd][Cityid].ToString().Trim();
+                    }
+                    if (Deadlineid >= 0)
+                    {
+                        dr["Deadline"] = sourceData.Rows[rowixd][Deadlineid].ToString().Trim();
+                    }
+                    if (NOTEid >= 0)
+                    {
+                        dr["NOTE"] = sourceData.Rows[rowixd][NOTEid].ToString().Trim();
+                    }
 
-                    dr["NOTE"] = sourceData.Rows[rowixd][NOTEid].ToString().Trim();
+                    if (Districtid >= 0)
+                    {
 
-                    dr["District"] = sourceData.Rows[rowixd][Districtid].ToString();//.Trim();
+                        dr["District"] = sourceData.Rows[rowixd][Districtid].ToString();//.Trim();
 
-                    dr["Dia_chi"] = sourceData.Rows[rowixd][Dia_chiid].ToString().Trim();
+                    }
 
-                    dr["Delivery_Qty"] = double.Parse(sourceData.Rows[rowixd][Delivery_Qtyid].ToString()); //sourceData.Rows[rowixd][Delivery_Qtyid].ToString().Trim();
+                    if (Dia_chiid >= 0)
+                    {
+
+                        dr["Dia_chi"] = sourceData.Rows[rowixd][Dia_chiid].ToString().Trim();
+
+                    }
+
+                    if (Delivery_Qtyid >= 0)
+                    {
+                        dr["Delivery_Qty"] = double.Parse(sourceData.Rows[rowixd][Delivery_Qtyid].ToString()); //sourceData.Rows[rowixd][Delivery_Qtyid].ToString().Trim();
+
+                    }
                     dr["Username"] = Username1; // double.Parse(sourceData.Rows[rowixd][Delivery_Qtyid].ToString()); //sourceData.Rows[rowixd][Delivery_Qtyid].ToString().Trim();
                     dr["macty"] = Model.Username.getmacty();// Username1; // double.Parse(sourceData.Rows[rowixd][Delivery_Qtyid].ToString()); //sourceData.Rows[rowixd][Delivery_Qtyid].ToString().Trim();
                     dr["makhachhang"] = "04";// Model.Username.getmacty();// Username1; // double.Parse(sourceData.Rows[rowixd][Delivery_Qtyid].ToString()); //sourceData.Rows[rowixd][Delivery_Qtyid].ToString().Trim();
+
+
+
 
 
 

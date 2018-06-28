@@ -36,26 +36,26 @@
             this.cbkhachhang = new System.Windows.Forms.ComboBox();
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.txttienhoadon = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.cbngaythang = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.cbloaidon = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cbnhaxe = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbbiensoxe = new System.Windows.Forms.ComboBox();
             this.gripghepxe = new System.Windows.Forms.DataGridView();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.bt_nhapdonhangnetco = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.griddonpending)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gripghepxe)).BeginInit();
@@ -126,19 +126,19 @@
             this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.label13);
-            this.groupBox1.Controls.Add(this.label10);
+            this.groupBox1.Controls.Add(this.txttienhoadon);
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.cbngaythang);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.comboBox3);
+            this.groupBox1.Controls.Add(this.cbloaidon);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.comboBox2);
+            this.groupBox1.Controls.Add(this.cbnhaxe);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.cbbiensoxe);
             this.groupBox1.Controls.Add(this.gripghepxe);
             this.groupBox1.Location = new System.Drawing.Point(12, 375);
             this.groupBox1.Name = "groupBox1";
@@ -146,6 +146,26 @@
             this.groupBox1.TabIndex = 71;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Lệnh điều xe";
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(920, 206);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(96, 23);
+            this.button4.TabIndex = 87;
+            this.button4.Text = "Thêm nhà xe";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click_3);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(920, 171);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(96, 23);
+            this.button3.TabIndex = 86;
+            this.button3.Text = "Thêm xe";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click_4);
             // 
             // label12
             // 
@@ -167,16 +187,16 @@
             this.label13.TabIndex = 84;
             this.label13.Text = "Phải trả";
             // 
-            // label10
+            // txttienhoadon
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.Red;
-            this.label10.Location = new System.Drawing.Point(662, 166);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(45, 20);
-            this.label10.TabIndex = 83;
-            this.label10.Text = "0000";
+            this.txttienhoadon.AutoSize = true;
+            this.txttienhoadon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txttienhoadon.ForeColor = System.Drawing.Color.Red;
+            this.txttienhoadon.Location = new System.Drawing.Point(662, 166);
+            this.txttienhoadon.Name = "txttienhoadon";
+            this.txttienhoadon.Size = new System.Drawing.Size(45, 20);
+            this.txttienhoadon.TabIndex = 83;
+            this.txttienhoadon.Text = "0000";
             // 
             // label11
             // 
@@ -236,13 +256,13 @@
             this.label6.TabIndex = 77;
             this.label6.Text = "Loại đơn";
             // 
-            // comboBox3
+            // cbloaidon
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(663, 104);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(149, 21);
-            this.comboBox3.TabIndex = 76;
+            this.cbloaidon.FormattingEnabled = true;
+            this.cbloaidon.Location = new System.Drawing.Point(663, 104);
+            this.cbloaidon.Name = "cbloaidon";
+            this.cbloaidon.Size = new System.Drawing.Size(149, 21);
+            this.cbloaidon.TabIndex = 76;
             // 
             // button1
             // 
@@ -262,13 +282,14 @@
             this.label3.TabIndex = 74;
             this.label3.Text = "Nhà xe";
             // 
-            // comboBox2
+            // cbnhaxe
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(662, 72);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(149, 21);
-            this.comboBox2.TabIndex = 73;
+            this.cbnhaxe.DropDownWidth = 250;
+            this.cbnhaxe.FormattingEnabled = true;
+            this.cbnhaxe.Location = new System.Drawing.Point(662, 72);
+            this.cbnhaxe.Name = "cbnhaxe";
+            this.cbnhaxe.Size = new System.Drawing.Size(149, 21);
+            this.cbnhaxe.TabIndex = 73;
             // 
             // label2
             // 
@@ -279,13 +300,14 @@
             this.label2.TabIndex = 72;
             this.label2.Text = "Biển số xe";
             // 
-            // comboBox1
+            // cbbiensoxe
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(662, 43);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(149, 21);
-            this.comboBox1.TabIndex = 71;
+            this.cbbiensoxe.DropDownWidth = 250;
+            this.cbbiensoxe.FormattingEnabled = true;
+            this.cbbiensoxe.Location = new System.Drawing.Point(662, 43);
+            this.cbbiensoxe.Name = "cbbiensoxe";
+            this.cbbiensoxe.Size = new System.Drawing.Size(149, 21);
+            this.cbbiensoxe.TabIndex = 71;
             // 
             // gripghepxe
             // 
@@ -294,6 +316,9 @@
             this.gripghepxe.Name = "gripghepxe";
             this.gripghepxe.Size = new System.Drawing.Size(533, 210);
             this.gripghepxe.TabIndex = 58;
+            this.gripghepxe.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gripghepxe_CellDoubleClick);
+            this.gripghepxe.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.gripghepxe_RowsAdded);
+            this.gripghepxe.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.gripghepxe_RowsRemoved);
             // 
             // pictureBox2
             // 
@@ -319,26 +344,6 @@
             this.bt_nhapdonhangnetco.Text = "Nhập đơn hàng Netco";
             this.bt_nhapdonhangnetco.UseVisualStyleBackColor = true;
             this.bt_nhapdonhangnetco.Click += new System.EventHandler(this.button3_Click_3);
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(920, 171);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(96, 23);
-            this.button3.TabIndex = 86;
-            this.button3.Text = "Thêm xe";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click_4);
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(920, 206);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(96, 23);
-            this.button4.TabIndex = 87;
-            this.button4.Text = "Thêm nhà xe";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click_3);
             // 
             // Beedieudongxe
             // 
@@ -389,16 +394,16 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DateTimePicker cbngaythang;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox cbloaidon;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cbnhaxe;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbbiensoxe;
         private System.Windows.Forms.DataGridView gripghepxe;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label txttienhoadon;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
