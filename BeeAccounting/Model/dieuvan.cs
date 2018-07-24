@@ -479,8 +479,8 @@ namespace BEEACCOUNT.Model
 
                 #region setvalue of pricelist
                 //   string valuepricelist = Utils.GetValueOfCellInExcel(worksheet, rowid, columpricelist);
-                string Sovandon = sourceData.Rows[rowixd][So_van_donid].ToString();
-                if (Sovandon != "" && rowheadindex != rowixd)
+                string quanTyti = sourceData.Rows[rowixd][Delivery_Qtyid].ToString();
+                if (Utils.IsValidnumber(quanTyti) && rowheadindex != rowixd)
                 {
 
 

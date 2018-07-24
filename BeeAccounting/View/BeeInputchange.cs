@@ -1499,7 +1499,12 @@ namespace BEEACCOUNT.View
             if (tempdata1.Count() > 0)
             {
                 MessageBox.Show("Không upload vào được do có các dòng sản phẩm chưa có tên sản phẩm !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //var q8 = from fbl5n in dc.tblFBL5Ns
+                //         where fbl5n.Deposit != 0 && !(from tblEDLP in dc.tblEDLPs
+                //                                       select tblEDLP.Invoice_Doc_Nr
+                //                           ).Contains(fbl5n.Document_Number)
 
+                //         select fbl5n;
 
 
             }
@@ -1507,7 +1512,8 @@ namespace BEEACCOUNT.View
             {
                 var tempdata = from pp in dc.tbl_netcoDonhangTMPs
                                where pp.Username == username
-
+                               && !(from dh in dc.tbl_netcoDonhangs
+                                    select dh.So_van_don).Contains(pp.So_van_don)
                                select pp;
                 if (tempdata.Count() > 0)
                 {

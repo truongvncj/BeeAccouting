@@ -36,8 +36,6 @@
             this.cbkhachhang = new System.Windows.Forms.ComboBox();
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.txttienhoadon = new System.Windows.Forms.Label();
@@ -54,6 +52,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.cbbiensoxe = new System.Windows.Forms.ComboBox();
             this.gripghepxe = new System.Windows.Forms.DataGridView();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.bt_nhapdonhangnetco = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.griddonpending)).BeginInit();
@@ -113,7 +113,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(932, 84);
+            this.button2.Location = new System.Drawing.Point(148, 53);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(96, 23);
             this.button2.TabIndex = 66;
@@ -123,9 +123,9 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.button4);
-            this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.label13);
+            this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.txttienhoadon);
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.label9);
@@ -146,26 +146,6 @@
             this.groupBox1.TabIndex = 71;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Lệnh điều xe";
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(920, 206);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(96, 23);
-            this.button4.TabIndex = 87;
-            this.button4.Text = "Thêm nhà xe";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click_3);
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(920, 171);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(96, 23);
-            this.button3.TabIndex = 86;
-            this.button3.Text = "Thêm xe";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click_4);
             // 
             // label12
             // 
@@ -266,11 +246,11 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(920, 19);
+            this.button1.Location = new System.Drawing.Point(885, 166);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(96, 23);
+            this.button1.Size = new System.Drawing.Size(117, 23);
             this.button1.TabIndex = 75;
-            this.button1.Text = "Tạo lệnh ";
+            this.button1.Text = "TẠO LỆNH ĐIỀU XE\'";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // label3
@@ -319,6 +299,26 @@
             this.gripghepxe.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gripghepxe_CellDoubleClick);
             this.gripghepxe.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.gripghepxe_RowsAdded);
             this.gripghepxe.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.gripghepxe_RowsRemoved);
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(885, 70);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(117, 23);
+            this.button4.TabIndex = 87;
+            this.button4.Text = "Thêm nhà xe";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click_3);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(885, 41);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(117, 23);
+            this.button3.TabIndex = 86;
+            this.button3.Text = "Thêm xe";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click_4);
             // 
             // pictureBox2
             // 
