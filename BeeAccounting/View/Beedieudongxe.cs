@@ -1289,5 +1289,103 @@ namespace BEEACCOUNT.View
         {
           
         }
+
+        private void cbnhaxe_SelectedValueChanged(object sender, EventArgs e)
+        {
+
+            this.cbbiensoxe.Items.Clear();
+            string connection_string = Utils.getConnectionstr();
+
+            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+            #region    //cbbiensoxe
+            var rs3 = from kh in dc.tbl_NP_danhsachxes
+                      orderby kh.maNVT
+                      where kh.maNVT == (cbnhaxe.SelectedItem as ComboboxItem).Value.ToString()
+                      select kh;
+
+
+            foreach (var item in rs3)
+            {
+                ComboboxItem cb = new ComboboxItem();
+                cb.Value = item.bienso;
+                cb.Text = item.bienso + ":" + item.maNVT + "-" + item.tenNVT;
+                this.cbbiensoxe.Items.Add(cb); // CombomCollection.Add(cb);
+
+            }
+            #endregion cbbiensoxe
+            this.cbbiensoxe.SelectedIndex = 0;
+
+
+            //#region    //cbnahxe
+            //var rs4 = from kh in dc.tbl_NP_Nhacungungvantais
+            //          orderby kh.maNVT
+            //          //   where kh.ma
+            //          select kh;
+
+
+            //foreach (var item in rs4)
+            //{
+            //    ComboboxItem cb = new ComboboxItem();
+            //    cb.Value = item.maNVT;
+            //    cb.Text = item.maNVT + ":" + item.tenNVT;
+            //    this.cbnhaxe.Items.Add(cb); // CombomCollection.Add(cb);
+
+            //}
+            //#endregion cbnahxe
+
+
+
+
+
+
+
+
+
+
+
+
+        }
+
+        private void cbbiensoxe_SelectedValueChanged(object sender, EventArgs e)
+        {
+            string connection_string = Utils.getConnectionstr();
+
+            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+            
+            var rs3 = (from kh in dc.tbl_NP_danhsachxes
+                      orderby kh.bienso
+                      where kh.bienso == (cbbiensoxe.SelectedItem as ComboboxItem).Value.ToString()
+                      select kh.maNVT).FirstOrDefault();
+            if (rs3 != null)
+            {
+                foreach (var item in this.cbnhaxe.Items)
+                {
+
+                    if (((ComboboxItem)item).Value.ToString() == rs3)
+                    {
+
+
+                        this.cbnhaxe.SelectedItem = item;
+
+                    }   
+
+
+
+                }
+            }
+
+          
+
+
+
+
+
+
+
+
+
+        }
     }
 }
