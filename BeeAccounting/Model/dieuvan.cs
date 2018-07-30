@@ -159,6 +159,33 @@ namespace BEEACCOUNT.Model
 
             return rs1;
         }
+        public static IQueryable selectDonhangNetcoPendingOK(LinqtoSQLDataContext db)
+        {
+            string username = Utils.getusername();
+
+            var rs1 = from p in db.tbl_netcoDonhangs
+                      where p.Username == username && p.loadnumber == "" && p.Tempview == 0
+                      select p;
+            //new
+            //          {
+            //              p.So_van_don,
+            //              p.TEN_HANG,
+            //              p.Delivery_Qty,
+            //              p.A_R_Amount,
+            //              p.City,
+            //              p.Gia_VChuyen,
+            //              p.Dia_chi,
+            //              p.District,
+            //              p.id,
+
+
+
+            //          };
+
+
+
+            return rs1;
+        }
 
 
 

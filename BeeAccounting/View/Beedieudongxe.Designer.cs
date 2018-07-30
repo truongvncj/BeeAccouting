@@ -54,6 +54,7 @@
             this.gripghepxe = new System.Windows.Forms.DataGridView();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.bt_nhapdonhangnetco = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.griddonpending)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gripghepxe)).BeginInit();
@@ -251,6 +252,7 @@
             this.button1.TabIndex = 75;
             this.button1.Text = "TẠO LỆNH ĐIỀU XE\'";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_2);
             // 
             // label3
             // 
@@ -326,10 +328,21 @@
             this.bt_nhapdonhangnetco.UseVisualStyleBackColor = true;
             this.bt_nhapdonhangnetco.Click += new System.EventHandler(this.button3_Click_3);
             // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(806, 53);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(117, 23);
+            this.button5.TabIndex = 76;
+            this.button5.Text = "Xem đơn hàng";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click_1);
+            // 
             // Beedieudongxe
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1095, 641);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.bt_nhapdonhangnetco);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button2);
@@ -389,5 +402,6 @@
         private System.Windows.Forms.Button bt_nhapdonhangnetco;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
     }
 }

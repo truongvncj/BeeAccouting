@@ -118,7 +118,7 @@ namespace BEEACCOUNT.View
             {
                 ComboboxItem cb = new ComboboxItem();
                 cb.Value = item.bienso;
-                cb.Text = item.bienso + ":" + item.maNVT+ "-"+ item.tenNVT;
+                cb.Text = item.bienso + ":" + item.maNVT + "-" + item.tenNVT;
                 this.cbbiensoxe.Items.Add(cb); // CombomCollection.Add(cb);
 
             }
@@ -146,9 +146,9 @@ namespace BEEACCOUNT.View
 
             Model.dieuvan.deleteAlldonhangtmp(dc);
             Model.dieuvan.deleteAllnecoPricetmp(dc);
-         //   Model.dieuvan.listsanphamNetcochuacogia(dc);
-        
-          
+            //   Model.dieuvan.listsanphamNetcochuacogia(dc);
+
+
             gripghepxe.DataSource = Model.dieuvan.selectDonhangghep(dc);
 
 
@@ -1073,12 +1073,12 @@ namespace BEEACCOUNT.View
 
             LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
 
-        
+
 
             if ((cbkhachhang.SelectedItem as ComboboxItem).Value.ToString() == "04") //  netco
             {
                 Model.dieuvan.listsanphamNetcochuacogia(dc);
-                
+
 
                 var rs = from p in dc.tbl_netcoDonhangs
                          where p.Username == username && p.loadnumber == ""
@@ -1103,8 +1103,8 @@ namespace BEEACCOUNT.View
 
 
             Model.dieuvan.deleteAlldonhangtmp(dc);
-          
-          //  getnetcogia
+
+            //  getnetcogia
             gripghepxe.DataSource = Model.dieuvan.selectDonhangghep(dc);
 
         }
@@ -1122,7 +1122,7 @@ namespace BEEACCOUNT.View
             {
                 idtk = (int)this.griddonpending.Rows[this.griddonpending.CurrentCell.RowIndex].Cells["id"].Value;
                 //    parent.rows[currentRowIndex].style.backgroundColor = "#FFFFD6";
-              //  int x = griddonpending.CurrentRow.Index;
+                //  int x = griddonpending.CurrentRow.Index;
 
                 this.griddonpending.Rows.Remove(griddonpending.CurrentRow);
 
@@ -1132,20 +1132,20 @@ namespace BEEACCOUNT.View
 
                     Model.dieuvan.updatehidedonhangnetcotheoID(dc, idtk);
                 }
-                    //   this.griddonpending.Rows[currentRowIndex].
-                }
+                //   this.griddonpending.Rows[currentRowIndex].
+            }
             catch (Exception)
             {
 
                 //    MessageBox.Show("Bạn phải chọn một tuyến !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 //  return;
             }
-           
+
 
             if ((cbkhachhang.SelectedItem as ComboboxItem).Value.ToString() == "04") //  netco
             {
                 #region  nếu là netco them vao temp
-              
+
 
                 var rs = (from p in dc.tbl_netcoDonhangs
                           where p.id == idtk
@@ -1164,7 +1164,7 @@ namespace BEEACCOUNT.View
                     temp.ShipTo_Name = rs.ShipTo_Name;
                     temp.A_R_Amount = rs.A_R_Amount;
                     temp.City = rs.City;
-                    temp.Gia_VChuyen = rs.Gia_VChuyen*rs.Delivery_Qty;
+                    temp.Gia_VChuyen = rs.Gia_VChuyen * rs.Delivery_Qty;
                     temp.mainid = rs.id;
 
                     temp.Username = username;
@@ -1222,7 +1222,7 @@ namespace BEEACCOUNT.View
             Viewtable viewtbl = new Viewtable(rs1, dc, "DANH SÁCH XE", 9, "tk");// mã 8 là danh sach nha nha van tai
 
             viewtbl.Show();
-           // this.Close();
+            // this.Close();
         }
 
         private void button4_Click_3(object sender, EventArgs e)
@@ -1237,7 +1237,7 @@ namespace BEEACCOUNT.View
 
             viewtbl.Show();
 
-        //    this.Close();
+            //    this.Close();
         }
 
         private void gripghepxe_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -1280,14 +1280,14 @@ namespace BEEACCOUNT.View
         private void gripghepxe_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
         {
 
-          
 
-          
+
+
         }
 
         private void gripghepxe_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
         {
-          
+
         }
 
         private void cbnhaxe_SelectedValueChanged(object sender, EventArgs e)
@@ -1353,11 +1353,11 @@ namespace BEEACCOUNT.View
 
             LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
 
-            
+
             var rs3 = (from kh in dc.tbl_NP_danhsachxes
-                      orderby kh.bienso
-                      where kh.bienso == (cbbiensoxe.SelectedItem as ComboboxItem).Value.ToString()
-                      select kh.maNVT).FirstOrDefault();
+                       orderby kh.bienso
+                       where kh.bienso == (cbbiensoxe.SelectedItem as ComboboxItem).Value.ToString()
+                       select kh.maNVT).FirstOrDefault();
             if (rs3 != null)
             {
                 foreach (var item in this.cbnhaxe.Items)
@@ -1369,19 +1369,82 @@ namespace BEEACCOUNT.View
 
                         this.cbnhaxe.SelectedItem = item;
 
-                    }   
+                    }
 
 
 
                 }
             }
 
-          
 
 
 
 
 
+
+
+
+
+
+        }
+
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+
+            string connection_string = Utils.getConnectionstr();
+
+            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+            string Username = Utils.getusername();
+
+            var rs = from dh in dc.tbl_netcoDonhangTMPs
+                     where dh.Username == Username
+                     select dh;
+
+
+            foreach (var item in rs)
+            {
+                var rs2 = from dh in dc.tbl_netcoDonhangs
+                          where dh.So_van_don == item.So_van_don
+
+                          select dh;
+                foreach (var item2 in rs2)
+                {
+                    item2.tennhaxe = (cbnhaxe.SelectedItem as ComboboxItem).Text.ToString();
+                    item2.manhaxe = (cbnhaxe.SelectedItem as ComboboxItem).Value.ToString();
+                    item2.biensoxe = (cbbiensoxe.SelectedItem as ComboboxItem).Value.ToString();
+                    item2.Gia_VChuyen = double.Parse(txttienhoadon.Text.ToString());
+                    item2.Tempview = 0;
+                    dc.SubmitChanges();
+
+                }
+
+
+                dc.tbl_netcoDonhangTMPs.DeleteOnSubmit(item);
+                dc.SubmitChanges();
+
+
+            }
+
+
+
+            gripghepxe.DataSource = Model.dieuvan.selectDonhangghep(dc);
+
+
+
+
+        }
+
+        private void button5_Click_1(object sender, EventArgs e)
+        {
+            string connection_string = Utils.getConnectionstr();
+
+            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+          var rs1 =   Model.dieuvan.selectDonhangNetcoPendingOK(dc);
+
+            Viewtable viewtbl = new Viewtable(rs1, dc, "DANH SÁCH ĐƠN HÀNG ĐÃ TẠO" , 101, "044");// mã 12 là danh sach BẢNG CÂN ĐỐI PHÁT SINH
+            viewtbl.Show();
 
 
 
