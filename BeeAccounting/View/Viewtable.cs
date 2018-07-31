@@ -275,6 +275,16 @@ namespace BEEACCOUNT.View
             #region  // viewcode ==12  la view bang tong hop phat sinh
 
 
+            if (this.valuesave == "1") // view đơn hang netco
+            {
+                //lb_seach.Visible = false;
+
+                bt_themmoi.Visible = false;
+
+                bt_sua.Visible = false;
+            }
+
+
             if (this.viewcode == 12)
             {
                 //lb_seach.Visible = false;

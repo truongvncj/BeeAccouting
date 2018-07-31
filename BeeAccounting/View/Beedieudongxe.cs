@@ -1391,6 +1391,17 @@ namespace BEEACCOUNT.View
         private void button1_Click_2(object sender, EventArgs e)
         {
 
+            if (cbnhaxe.SelectedItem == null)
+            {
+                MessageBox.Show("Phải chọn nhà xe trước khi ghép !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (cbbiensoxe.SelectedItem == null)
+            {
+                MessageBox.Show("Phải chọn  xe trước khi ghép !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             string connection_string = Utils.getConnectionstr();
 
             LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
@@ -1415,6 +1426,8 @@ namespace BEEACCOUNT.View
                     item2.biensoxe = (cbbiensoxe.SelectedItem as ComboboxItem).Value.ToString();
                     item2.Gia_VChuyen = double.Parse(txttienhoadon.Text.ToString());
                     item2.Tempview = 0;
+                    item2.ngayghepdon = cbngaythang.Value;
+
                     dc.SubmitChanges();
 
                 }
@@ -1437,14 +1450,33 @@ namespace BEEACCOUNT.View
 
         private void button5_Click_1(object sender, EventArgs e)
         {
-            string connection_string = Utils.getConnectionstr();
+            View.Beefromdatetodate chondate = new Beefromdatetodate();
+            chondate.ShowDialog();
 
-            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+            DateTime fromdate = chondate.fromdate;
+            DateTime todate = chondate.todate;
+            bool chon = chondate.chon;
 
-          var rs1 =   Model.dieuvan.selectDonhangNetcoPendingOK(dc);
+            if (chon)
+            {
 
-            Viewtable viewtbl = new Viewtable(rs1, dc, "DANH SÁCH ĐƠN HÀNG ĐÃ TẠO" , 101, "044");// mã 12 là danh sach BẢNG CÂN ĐỐI PHÁT SINH
-            viewtbl.Show();
+                #region  view
+                string connection_string = Utils.getConnectionstr();
+
+                LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+                var rs1 = Model.dieuvan.selectDonhangNetcodaghep(dc,fromdate,todate);
+
+                Viewtable viewtbl = new Viewtable(rs1, dc, "DANH SÁCH ĐƠN HÀNG", 101, "1");// mã 1 là view đươn hàn netco
+                viewtbl.Show();
+                #endregion view
+
+
+
+            }
+
+
+
 
 
 

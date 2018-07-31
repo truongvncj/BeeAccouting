@@ -185,6 +185,12 @@
     <Compile Include="View\BeeSeachdieuvan.Designer.cs">
       <DependentUpon>BeeSeachdieuvan.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Beefromdatetodate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Beefromdatetodate.Designer.cs">
+      <DependentUpon>Beefromdatetodate.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\NPgiavantaitheotuyen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -551,6 +557,9 @@
     <EmbeddedResource Include="View\BeeSeachdieuvan.resx">
       <DependentUpon>BeeSeachdieuvan.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\Beefromdatetodate.resx">
+      <DependentUpon>Beefromdatetodate.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\NPgiavantaitheotuyen.resx">
       <DependentUpon>NPgiavantaitheotuyen.cs</DependentUpon>
     </EmbeddedResource>
@@ -769,6 +778,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="giphyipg_Pb0_3.ico" />
+    <None Include="Resources\jelly-fluid-loader.gif" />
     <None Include="Resources\DIEUVAN3.png" />
     <None Include="Resources\KETOANTONGHOP2.jpg" />
   </ItemGroup>

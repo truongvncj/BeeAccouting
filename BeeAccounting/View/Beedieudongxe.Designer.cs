@@ -55,6 +55,8 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.bt_nhapdonhangnetco = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.griddonpending)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gripghepxe)).BeginInit();
@@ -94,7 +96,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(390, 94);
+            this.label5.Location = new System.Drawing.Point(325, 63);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(65, 13);
             this.label5.TabIndex = 65;
@@ -104,7 +106,7 @@
             // 
             this.cbkhachhang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbkhachhang.FormattingEnabled = true;
-            this.cbkhachhang.Location = new System.Drawing.Point(468, 87);
+            this.cbkhachhang.Location = new System.Drawing.Point(403, 56);
             this.cbkhachhang.Name = "cbkhachhang";
             this.cbkhachhang.Size = new System.Drawing.Size(237, 21);
             this.cbkhachhang.TabIndex = 64;
@@ -137,9 +139,9 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.cbbiensoxe);
             this.groupBox1.Controls.Add(this.gripghepxe);
-            this.groupBox1.Location = new System.Drawing.Point(12, 375);
+            this.groupBox1.Location = new System.Drawing.Point(12, 405);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1078, 254);
+            this.groupBox1.Size = new System.Drawing.Size(1078, 224);
             this.groupBox1.TabIndex = 71;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Lệnh điều xe";
@@ -338,10 +340,29 @@
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click_1);
             // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(403, 375);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(237, 26);
+            this.textBox1.TabIndex = 77;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(337, 384);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(49, 13);
+            this.label6.TabIndex = 78;
+            this.label6.Text = "Tìm kiếm";
+            // 
             // Beedieudongxe
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1095, 641);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.bt_nhapdonhangnetco);
             this.Controls.Add(this.groupBox1);
@@ -403,5 +424,7 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label6;
     }
 }

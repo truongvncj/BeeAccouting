@@ -1542,6 +1542,7 @@ namespace BEEACCOUNT.View
                         newdon.makhachhang = item.makhachhang;
                         newdon.loadnumber = "";
                         newdon.Tempview = 1;
+                        newdon.Ngayvanchuyen = item.Ngayvanchuyen;
                         dc.tbl_netcoDonhangs.InsertOnSubmit(newdon);
                         dc.SubmitChanges();
 

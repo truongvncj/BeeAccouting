@@ -1085,6 +1085,8 @@
       <Column Name="loadnumber" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="Gia_VChuyen" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Column Name="Tempview" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Gia_Thue" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Ngayvanchuyen" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.tbl_netcoDonhangTMP" Member="tbl_netcoDonhangTMPs">
@@ -1109,6 +1111,8 @@
       <Column Name="makhachhang" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="Gia_VChuyen" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Column Name="mainid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Gia_thue" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Ngayvanchuyen" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.tbl_netcoGiaHD" Member="tbl_netcoGiaHDs">

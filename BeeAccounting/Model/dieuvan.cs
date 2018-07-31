@@ -140,17 +140,19 @@ namespace BEEACCOUNT.Model
 
             var rs1 = from p in db.tbl_netcoDonhangs
                       where p.Username == username && p.loadnumber == "" && p.Tempview == 1
-                      select new {
-                          p.So_van_don,
-                          p.TEN_HANG,
-                          p.Delivery_Qty,
+                      select new
+                      {
+                          Ngày_tháng = p.Ngayvanchuyen,
+                          Số_vận_đơn = p.So_van_don,
+                          Tên_hàng = p.TEN_HANG,
+                          Số_lượng = p.Delivery_Qty,
                           p.A_R_Amount,
                           p.City,
-                          p.Gia_VChuyen,
-                          p.Dia_chi,
-                          p.District,
+                          Giá_vận_chuyển = p.Gia_VChuyen,
+                          Địa_chỉ = p.Dia_chi,
+                          Quận_huyện = p.District,
                           p.id,
-                      
+
 
 
                       };
@@ -159,28 +161,34 @@ namespace BEEACCOUNT.Model
 
             return rs1;
         }
-        public static IQueryable selectDonhangNetcoPendingOK(LinqtoSQLDataContext db)
+        public static IQueryable selectDonhangNetcodaghep(LinqtoSQLDataContext db, DateTime fromdate, DateTime todate)
         {
             string username = Utils.getusername();
 
             var rs1 = from p in db.tbl_netcoDonhangs
                       where p.Username == username && p.loadnumber == "" && p.Tempview == 0
-                      select p;
-            //new
-            //          {
-            //              p.So_van_don,
-            //              p.TEN_HANG,
-            //              p.Delivery_Qty,
-            //              p.A_R_Amount,
-            //              p.City,
-            //              p.Gia_VChuyen,
-            //              p.Dia_chi,
-            //              p.District,
-            //              p.id,
+                      && p.Ngayvanchuyen >= fromdate && p.Ngayvanchuyen <= todate
+                      select
+                        new
+                        {
+                            Số_vận_đơn = p.So_van_don,
+                            Ngày_tháng = p.ngayghepdon,
+                            Biển_số_xe = p.biensoxe,
+                            Nhà_xe = p.tennhaxe,
+                            Tên_hàng = p.TEN_HANG,
+                            Số_lượng = p.Delivery_Qty,
+                            p.A_R_Amount,
+                            p.City,
+                            Giá_vận_chuyển = p.Gia_VChuyen,
+                            Giá_nội_bộ = p.Gia_Thue,
+                            Địa_chỉ = p.Dia_chi,
+                            Quận = p.District,
+
+                            p.id,
 
 
 
-            //          };
+                        };
 
 
 
@@ -281,11 +289,11 @@ namespace BEEACCOUNT.Model
             string username = Utils.getusername();
 
             var kq = (from sp1 in dc.tbl_netcoDonhangTMPs
-                         where sp1.Username == username
-                         select sp1.Gia_VChuyen).Sum().GetValueOrDefault(0);
-           
-                return kq;
-           
+                      where sp1.Username == username
+                      select sp1.Gia_VChuyen).Sum().GetValueOrDefault(0);
+
+            return kq;
+
 
 
 
@@ -357,7 +365,7 @@ namespace BEEACCOUNT.Model
             batable.Columns.Add("macty", typeof(string));
 
             batable.Columns.Add("makhachhang", typeof(string));
-            //     batable.Columns.Add("Username", typeof(string));
+            batable.Columns.Add("Ngaytaodon", typeof(DateTime));
             //      batable.Columns.Add("Username", typeof(string));
             //   batable.Columns.Add("Username", typeof(string));
 
@@ -372,7 +380,7 @@ namespace BEEACCOUNT.Model
             int ShipTo_Nameid = -1;
             int ShipTo_Telid = -1;
             int Cityid = -1;
-
+            int Ngaytaodonid = -1;
             int Deadlineid = -1;
 
             int NOTEid = -1;
@@ -417,7 +425,14 @@ namespace BEEACCOUNT.Model
 
                         }
 
+                        if (value.Trim().Contains("Date"))
+                        {
 
+                            Ngaytaodonid = columid;
+                            //  rowheadindex = rowid;
+                            //    headindex = 0;
+
+                        }
                         if (value.Trim().Contains("A/R Amount"))
                         {
 
@@ -580,6 +595,9 @@ namespace BEEACCOUNT.Model
 
                     }
 
+                    dr["Ngaytaodon"] = Utils.chageExceldatetoData(sourceData.Rows[rowixd][Ngaytaodonid].ToString().Trim());
+
+
                     if (Delivery_Qtyid >= 0)
                     {
                         dr["Delivery_Qty"] = double.Parse(sourceData.Rows[rowixd][Delivery_Qtyid].ToString()); //sourceData.Rows[rowixd][Delivery_Qtyid].ToString().Trim();
@@ -635,6 +653,7 @@ namespace BEEACCOUNT.Model
                 bulkCopy.ColumnMappings.Add("Username", "Username");
                 bulkCopy.ColumnMappings.Add("macty", "macty");
                 bulkCopy.ColumnMappings.Add("makhachhang", "makhachhang");
+                bulkCopy.ColumnMappings.Add("Ngaytaodon", "Ngayvanchuyen");
 
 
                 try

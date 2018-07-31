@@ -23246,6 +23246,10 @@ namespace BEEACCOUNT
 		
 		private int _Tempview;
 		
+		private System.Nullable<double> _Gia_Thue;
+		
+		private System.Nullable<System.DateTime> _Ngayvanchuyen;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -23300,6 +23304,10 @@ namespace BEEACCOUNT
     partial void OnGia_VChuyenChanged();
     partial void OnTempviewChanging(int value);
     partial void OnTempviewChanged();
+    partial void OnGia_ThueChanging(System.Nullable<double> value);
+    partial void OnGia_ThueChanged();
+    partial void OnNgayvanchuyenChanging(System.Nullable<System.DateTime> value);
+    partial void OnNgayvanchuyenChanged();
     #endregion
 		
 		public tbl_netcoDonhang()
@@ -23807,6 +23815,46 @@ namespace BEEACCOUNT
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Gia_Thue", DbType="Float")]
+		public System.Nullable<double> Gia_Thue
+		{
+			get
+			{
+				return this._Gia_Thue;
+			}
+			set
+			{
+				if ((this._Gia_Thue != value))
+				{
+					this.OnGia_ThueChanging(value);
+					this.SendPropertyChanging();
+					this._Gia_Thue = value;
+					this.SendPropertyChanged("Gia_Thue");
+					this.OnGia_ThueChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Ngayvanchuyen", DbType="DateTime")]
+		public System.Nullable<System.DateTime> Ngayvanchuyen
+		{
+			get
+			{
+				return this._Ngayvanchuyen;
+			}
+			set
+			{
+				if ((this._Ngayvanchuyen != value))
+				{
+					this.OnNgayvanchuyenChanging(value);
+					this.SendPropertyChanging();
+					this._Ngayvanchuyen = value;
+					this.SendPropertyChanged("Ngayvanchuyen");
+					this.OnNgayvanchuyenChanged();
+				}
+			}
+		}
+		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -23874,6 +23922,10 @@ namespace BEEACCOUNT
 		
 		private System.Nullable<int> _mainid;
 		
+		private System.Nullable<double> _Gia_thue;
+		
+		private System.Nullable<System.DateTime> _Ngayvanchuyen;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -23918,6 +23970,10 @@ namespace BEEACCOUNT
     partial void OnGia_VChuyenChanged();
     partial void OnmainidChanging(System.Nullable<int> value);
     partial void OnmainidChanged();
+    partial void OnGia_thueChanging(System.Nullable<double> value);
+    partial void OnGia_thueChanged();
+    partial void OnNgayvanchuyenChanging(System.Nullable<System.DateTime> value);
+    partial void OnNgayvanchuyenChanged();
     #endregion
 		
 		public tbl_netcoDonhangTMP()
@@ -24321,6 +24377,46 @@ namespace BEEACCOUNT
 					this._mainid = value;
 					this.SendPropertyChanged("mainid");
 					this.OnmainidChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Gia_thue", DbType="Float")]
+		public System.Nullable<double> Gia_thue
+		{
+			get
+			{
+				return this._Gia_thue;
+			}
+			set
+			{
+				if ((this._Gia_thue != value))
+				{
+					this.OnGia_thueChanging(value);
+					this.SendPropertyChanging();
+					this._Gia_thue = value;
+					this.SendPropertyChanged("Gia_thue");
+					this.OnGia_thueChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Ngayvanchuyen", DbType="DateTime")]
+		public System.Nullable<System.DateTime> Ngayvanchuyen
+		{
+			get
+			{
+				return this._Ngayvanchuyen;
+			}
+			set
+			{
+				if ((this._Ngayvanchuyen != value))
+				{
+					this.OnNgayvanchuyenChanging(value);
+					this.SendPropertyChanging();
+					this._Ngayvanchuyen = value;
+					this.SendPropertyChanged("Ngayvanchuyen");
+					this.OnNgayvanchuyenChanged();
 				}
 			}
 		}

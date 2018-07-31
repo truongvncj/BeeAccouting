@@ -103,6 +103,16 @@ namespace BEEACCOUNT.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap jelly_fluid_loader {
+            get {
+                object obj = ResourceManager.GetObject("jelly-fluid-loader", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap KETOANTONGHOP2 {
             get {
                 object obj = ResourceManager.GetObject("KETOANTONGHOP2", resourceCulture);
