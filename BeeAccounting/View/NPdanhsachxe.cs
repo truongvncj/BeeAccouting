@@ -285,7 +285,7 @@ namespace BEEACCOUNT.View
 
 
 
-            if (_biensoxe != "" && _biensoxe != null)
+            if (this._biensoxe != "" && this._biensoxe != null)
             {
                 chon = true;
                 string connection_string = Utils.getConnectionstr();

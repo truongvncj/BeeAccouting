@@ -1314,7 +1314,7 @@ namespace BEEACCOUNT.View
 
             }
             #endregion cbbiensoxe
-            this.cbbiensoxe.SelectedIndex = 0;
+            //this.cbbiensoxe.SelectedIndex = 0;
 
 
             //#region    //cbnahxe
@@ -1475,6 +1475,58 @@ namespace BEEACCOUNT.View
 
             }
 
+
+
+
+
+
+
+        }
+
+        private void button6_Click_2(object sender, EventArgs e)
+        {
+
+            string connection_string = Utils.getConnectionstr();
+
+            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+            string Username = Utils.getusername();
+
+            var rs = from dh in dc.tbl_netcoDonhangTMPs
+                     where dh.Username == Username
+                     select dh;
+
+
+            foreach (var item in rs)
+            {
+                var rs2 = from dh in dc.tbl_netcoDonhangs
+                          where dh.So_van_don == item.So_van_don
+
+                          select dh;
+                foreach (var item2 in rs2)
+                {
+                    item2.tennhaxe = "Hủy đơn";// (cbnhaxe.SelectedItem as ComboboxItem).Text.ToString();
+                    item2.manhaxe = "Hủy đơn";// (cbnhaxe.SelectedItem as ComboboxItem).Value.ToString();
+                    item2.biensoxe  = "Hủy đơn";// (cbbiensoxe.SelectedItem as ComboboxItem).Value.ToString();
+                    item2.Gia_VChuyen = 0;// double.Parse(txttienhoadon.Text.ToString());
+                    item2.Gia_Thue = 0;// double.Parse(txttienhoadon.Text.ToString());
+                    item2.Tempview = 0;
+                    item2.ngayghepdon = cbngaythang.Value;
+
+                    dc.SubmitChanges();
+
+                }
+
+
+                dc.tbl_netcoDonhangTMPs.DeleteOnSubmit(item);
+                dc.SubmitChanges();
+
+
+            }
+
+
+
+            gripghepxe.DataSource = Model.dieuvan.selectDonhangghep(dc);
 
 
 

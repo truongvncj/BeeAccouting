@@ -57,6 +57,7 @@
             this.button5 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.button6 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.griddonpending)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gripghepxe)).BeginInit();
@@ -78,7 +79,7 @@
             // griddonpending
             // 
             this.griddonpending.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.griddonpending.Location = new System.Drawing.Point(12, 114);
+            this.griddonpending.Location = new System.Drawing.Point(12, 127);
             this.griddonpending.Name = "griddonpending";
             this.griddonpending.Size = new System.Drawing.Size(1078, 255);
             this.griddonpending.TabIndex = 56;
@@ -123,6 +124,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button6);
             this.groupBox1.Controls.Add(this.button4);
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.label13);
@@ -248,12 +250,13 @@
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.button1.Location = new System.Drawing.Point(885, 166);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(117, 23);
             this.button1.TabIndex = 75;
             this.button1.Text = "TẠO LỆNH ĐIỀU XE\'";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click_2);
             // 
             // label3
@@ -343,7 +346,7 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(403, 375);
+            this.textBox1.Location = new System.Drawing.Point(403, 96);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(237, 26);
             this.textBox1.TabIndex = 77;
@@ -351,11 +354,22 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(337, 384);
+            this.label6.Location = new System.Drawing.Point(337, 105);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(49, 13);
             this.label6.TabIndex = 78;
             this.label6.Text = "Tìm kiếm";
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button6.Location = new System.Drawing.Point(885, 124);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(117, 23);
+            this.button6.TabIndex = 88;
+            this.button6.Text = "HỦY ĐƠN";
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click_2);
             // 
             // Beedieudongxe
             // 
@@ -426,5 +440,6 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button button6;
     }
 }
