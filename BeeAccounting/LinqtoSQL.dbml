@@ -901,6 +901,78 @@
       <Column Name="ngaytao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
     </Type>
   </Table>
+  <Table Name="dbo.tbl_DonhangtheoSPvaMKH" Member="tbl_DonhangtheoSPvaMKHs">
+    <Type Name="tbl_DonhangtheoSPvaMKH">
+      <Column Name="So_van_don" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="[A/R_Amount]" Member="A_R_Amount" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Material" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Seri" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="TEN_HANG" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="ShipTo_Name" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="ShipTo_Tel" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="City" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Deadline" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="NOTE" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="District" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Dia_chi" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Delivery_Qty" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Username" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="macty" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="biensoxe" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ngayghepdon" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="manhaxe" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="tennhaxe" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="loaidon" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="loadnumber" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Gia_VChuyen" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Tempview" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Gia_Thue" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Ngayvanchuyen" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="maKH" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_DonhangtheoSPvaMKHTemp" Member="tbl_DonhangtheoSPvaMKHTemps">
+    <Type Name="tbl_DonhangtheoSPvaMKHTemp">
+      <Column Name="So_van_don" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="[A/R_Amount]" Member="A_R_Amount" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Material" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Seri" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="TEN_HANG" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="ShipTo_Name" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="ShipTo_Tel" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="City" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Deadline" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="NOTE" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="District" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Dia_chi" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Delivery_Qty" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Username" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Uploadstatus" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="macty" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="makhachhang" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Gia_VChuyen" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="mainid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Gia_thue" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Ngayvanchuyen" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="maKH" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_DonhangtheoSPvaMKHThauPhu" Member="tbl_DonhangtheoSPvaMKHThauPhus">
+    <Type Name="tbl_DonhangtheoSPvaMKHThauPhu">
+      <Column Name="City" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Ma_NVT" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="District" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="TEN_HANG" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Cuoc_Van_Chuyen" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Fromdate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Todate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Username" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="macty" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+    </Type>
+  </Table>
   <Table Name="dbo.tbl_dstaikhoan" Member="tbl_dstaikhoans">
     <Type Name="tbl_dstaikhoan">
       <Column Name="matk" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
@@ -912,6 +984,32 @@
       <Column Name="loaichitiet" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
       <Column Name="nodk" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Column Name="codk" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_GiaHDtheoMCTvaSP" Member="tbl_GiaHDtheoMCTvaSPs">
+    <Type Name="tbl_GiaHDtheoMCTvaSP">
+      <Column Name="City" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="District" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="TENHANG" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Gia" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Fromdate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Todate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Username" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="macty" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_GiaHDtheoMCTvaSPTemp" Member="tbl_GiaHDtheoMCTvaSPTemps">
+    <Type Name="tbl_GiaHDtheoMCTvaSPTemp">
+      <Column Name="City" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="District" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="TENHANG" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Gia" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Fromdate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Todate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Username" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="macty" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
     </Type>
   </Table>
   <Table Name="dbo.tbl_kho_dichvu" Member="tbl_kho_dichvus">
@@ -1056,103 +1154,6 @@
       <Column Name="ghichu" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
       <Column Name="nodk" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Column Name="codk" Type="System.Double" DbType="Float" CanBeNull="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.tbl_netcoDonhang" Member="tbl_netcoDonhangs">
-    <Type Name="tbl_netcoDonhang">
-      <Column Name="So_van_don" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="[A/R_Amount]" Member="A_R_Amount" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="Material" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Seri" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="TEN_HANG" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="ShipTo_Name" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="ShipTo_Tel" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="City" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Deadline" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="NOTE" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="District" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Dia_chi" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Delivery_Qty" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="Username" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="macty" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="makhachhang" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="biensoxe" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="ngayghepdon" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="manhaxe" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="tennhaxe" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="loaidon" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="loadnumber" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="Gia_VChuyen" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="Tempview" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="Gia_Thue" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="Ngayvanchuyen" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.tbl_netcoDonhangTMP" Member="tbl_netcoDonhangTMPs">
-    <Type Name="tbl_netcoDonhangTMP">
-      <Column Name="So_van_don" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="[A/R_Amount]" Member="A_R_Amount" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="Material" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Seri" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="TEN_HANG" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="ShipTo_Name" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="ShipTo_Tel" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="City" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Deadline" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="NOTE" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="District" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Dia_chi" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Delivery_Qty" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="Username" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="Uploadstatus" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="macty" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="makhachhang" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="Gia_VChuyen" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="mainid" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="Gia_thue" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="Ngayvanchuyen" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.tbl_netcoGiaHD" Member="tbl_netcoGiaHDs">
-    <Type Name="tbl_netcoGiaHD">
-      <Column Name="City" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="District" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="TENHANG" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Gia" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="Fromdate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="Todate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="Username" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="macty" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-    </Type>
-  </Table>
-  <Table Name="dbo.tbl_netcoGiaHDTemp" Member="tbl_netcoGiaHDTemps">
-    <Type Name="tbl_netcoGiaHDTemp">
-      <Column Name="City" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="District" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="TENHANG" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Gia" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="Fromdate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="Todate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="Username" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="macty" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-    </Type>
-  </Table>
-  <Table Name="dbo.tbl_netcoGiaNhaThau" Member="tbl_netcoGiaNhaThaus">
-    <Type Name="tbl_netcoGiaNhaThau">
-      <Column Name="City" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Ma_NVT" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="District" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="TEN_HANG" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Cuoc_Van_Chuyen" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="Fromdate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="Todate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="Username" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="macty" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
     </Type>
   </Table>
   <Table Name="dbo.tbl_NP_danhsachxe" Member="tbl_NP_danhsachxes">

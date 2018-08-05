@@ -184,7 +184,7 @@ namespace BEEACCOUNT.View
 
             }
             //    tbl_netcoDonhangTMP
-            if (tblnamemain == "tbl_netcoDonhangTMP")
+            if (tblnamemain == "tbl_DonhangtheoSPvaMKHTemp")
             {
 
                 this.Bt_Adddata.Visible = false;
@@ -1491,7 +1491,7 @@ namespace BEEACCOUNT.View
             string connection_string = Utils.getConnectionstr();
             var dc = new LinqtoSQLDataContext(connection_string);
             string username = Utils.getusername();
-            var tempdata1 = from pp in dc.tbl_netcoDonhangTMPs
+            var tempdata1 = from pp in dc.tbl_DonhangtheoSPvaMKHTemps
                             where pp.Username == username && (pp.TEN_HANG == null || pp.TEN_HANG == "")
 
                             select pp;
@@ -1510,9 +1510,9 @@ namespace BEEACCOUNT.View
             }
             else
             {
-                var tempdata = from pp in dc.tbl_netcoDonhangTMPs
+                var tempdata = from pp in dc.tbl_DonhangtheoSPvaMKHTemps
                                where pp.Username == username
-                               && !(from dh in dc.tbl_netcoDonhangs
+                               && !(from dh in dc.tbl_DonhangtheoSPvaMKHs
                                     select dh.So_van_don).Contains(pp.So_van_don)
                                select pp;
                 if (tempdata.Count() > 0)
@@ -1523,7 +1523,7 @@ namespace BEEACCOUNT.View
                     {
 
 
-                        tbl_netcoDonhang newdon = new tbl_netcoDonhang();
+                        tbl_DonhangtheoSPvaMKH newdon = new tbl_DonhangtheoSPvaMKH();
                         newdon.Username = item.Username;
                         newdon.A_R_Amount = item.A_R_Amount;
                         newdon.City = item.City;
@@ -1539,11 +1539,12 @@ namespace BEEACCOUNT.View
                         newdon.So_van_don = item.So_van_don;
                         newdon.TEN_HANG = item.TEN_HANG;
                         newdon.macty = item.macty;
-                        newdon.makhachhang = item.makhachhang;
+                        newdon.maKH = item.makhachhang;
                         newdon.loadnumber = "";
+                        newdon.maKH = item.maKH;
                         newdon.Tempview = 1;
                         newdon.Ngayvanchuyen = item.Ngayvanchuyen;
-                        dc.tbl_netcoDonhangs.InsertOnSubmit(newdon);
+                        dc.tbl_DonhangtheoSPvaMKHs.InsertOnSubmit(newdon);
                         dc.SubmitChanges();
 
                         item.Uploadstatus = "Ok done ";

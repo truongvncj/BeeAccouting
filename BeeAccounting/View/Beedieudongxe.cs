@@ -1075,13 +1075,17 @@ namespace BEEACCOUNT.View
 
 
 
-            if ((cbkhachhang.SelectedItem as ComboboxItem).Value.ToString() == "04") //  netco
-            {
+            //if ((cbkhachhang.SelectedItem as ComboboxItem).Value.ToString() == "04") //  netco
+            //{
+
+                // (cbkhachhang.SelectedItem as ComboboxItem).Value.ToString() ="04" là net co
+
                 Model.dieuvan.listsanphamNetcochuacogia(dc);
 
 
-                var rs = from p in dc.tbl_netcoDonhangs
+                var rs = from p in dc.tbl_DonhangtheoSPvaMKHs
                          where p.Username == username && p.loadnumber == ""
+                         && p.maKH == (cbkhachhang.SelectedItem as ComboboxItem).Value.ToString()
                          select p;
 
                 foreach (var item in rs)
@@ -1091,7 +1095,7 @@ namespace BEEACCOUNT.View
                 }
 
 
-                var rs1 = Model.dieuvan.selectDonhangNetcoPendingChuaghep(dc);
+                var rs1 = Model.dieuvan.selectDonhangtheoSPPendingChuaghep(dc, (cbkhachhang.SelectedItem as ComboboxItem).Value.ToString());
 
                 griddonpending.DataSource = rs1;
 
@@ -1099,7 +1103,7 @@ namespace BEEACCOUNT.View
 
 
                 //       (cbtkco.SelectedItem as ComboboxItem).Value.ToString();
-            }
+       //     }
 
 
             Model.dieuvan.deleteAlldonhangtmp(dc);
@@ -1147,12 +1151,12 @@ namespace BEEACCOUNT.View
                 #region  nếu là netco them vao temp
 
 
-                var rs = (from p in dc.tbl_netcoDonhangs
+                var rs = (from p in dc.tbl_DonhangtheoSPvaMKHs
                           where p.id == idtk
                           select p).FirstOrDefault();
                 if (rs != null)
                 {
-                    tbl_netcoDonhangTMP temp = new tbl_netcoDonhangTMP();
+                    tbl_DonhangtheoSPvaMKHTemp temp = new tbl_DonhangtheoSPvaMKHTemp();
 
                     temp.Dia_chi = rs.Dia_chi;
                     temp.District = rs.District;
@@ -1169,7 +1173,7 @@ namespace BEEACCOUNT.View
 
                     temp.Username = username;
 
-                    dc.tbl_netcoDonhangTMPs.InsertOnSubmit(temp);
+                    dc.tbl_DonhangtheoSPvaMKHTemps.InsertOnSubmit(temp);
 
 
 
@@ -1254,13 +1258,13 @@ namespace BEEACCOUNT.View
                 mainid = (int)this.gripghepxe.Rows[this.gripghepxe.CurrentCell.RowIndex].Cells["mainid"].Value;
 
                 this.gripghepxe.Rows.Remove(gripghepxe.CurrentRow);
-                if ((cbkhachhang.SelectedItem as ComboboxItem).Value.ToString() == "04") //  netco
-                {
+                //if ((cbkhachhang.SelectedItem as ComboboxItem).Value.ToString() == "04") //  netco
+                //{
                     // chuyen data thành view =0
 
                     Model.dieuvan.updateunhidedonhangnetcotheoID(dc, mainid);
-                    griddonpending.DataSource = Model.dieuvan.selectDonhangNetcoPendingChuaghep(dc);
-                }
+                    griddonpending.DataSource = Model.dieuvan.selectDonhangtheoSPPendingChuaghep(dc, (cbkhachhang.SelectedItem as ComboboxItem).Value.ToString());
+             //   }
 
                 Model.dieuvan.deleteAlldonhangtmptheoID(dc, idtk);
             }
@@ -1314,6 +1318,11 @@ namespace BEEACCOUNT.View
 
             }
             #endregion cbbiensoxe
+            if (this.cbbiensoxe.Items.Count >=0)
+            {
+                this.cbbiensoxe.SelectedIndex = 0;
+
+            }
             //this.cbbiensoxe.SelectedIndex = 0;
 
 
@@ -1408,14 +1417,14 @@ namespace BEEACCOUNT.View
 
             string Username = Utils.getusername();
 
-            var rs = from dh in dc.tbl_netcoDonhangTMPs
+            var rs = from dh in dc.tbl_DonhangtheoSPvaMKHTemps
                      where dh.Username == Username
                      select dh;
 
 
             foreach (var item in rs)
             {
-                var rs2 = from dh in dc.tbl_netcoDonhangs
+                var rs2 = from dh in dc.tbl_DonhangtheoSPvaMKHs
                           where dh.So_van_don == item.So_van_don
 
                           select dh;
@@ -1433,7 +1442,7 @@ namespace BEEACCOUNT.View
                 }
 
 
-                dc.tbl_netcoDonhangTMPs.DeleteOnSubmit(item);
+                dc.tbl_DonhangtheoSPvaMKHTemps.DeleteOnSubmit(item);
                 dc.SubmitChanges();
 
 
@@ -1492,14 +1501,14 @@ namespace BEEACCOUNT.View
 
             string Username = Utils.getusername();
 
-            var rs = from dh in dc.tbl_netcoDonhangTMPs
+            var rs = from dh in dc.tbl_DonhangtheoSPvaMKHTemps
                      where dh.Username == Username
                      select dh;
 
 
             foreach (var item in rs)
             {
-                var rs2 = from dh in dc.tbl_netcoDonhangs
+                var rs2 = from dh in dc.tbl_DonhangtheoSPvaMKHs
                           where dh.So_van_don == item.So_van_don
 
                           select dh;
@@ -1518,7 +1527,7 @@ namespace BEEACCOUNT.View
                 }
 
 
-                dc.tbl_netcoDonhangTMPs.DeleteOnSubmit(item);
+                dc.tbl_DonhangtheoSPvaMKHTemps.DeleteOnSubmit(item);
                 dc.SubmitChanges();
 
 

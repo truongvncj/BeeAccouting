@@ -21,7 +21,7 @@ namespace BEEACCOUNT.Model
         {
             string Username = Utils.getusername();
 
-            var rs = from dh in db.tbl_netcoDonhangTMPs
+            var rs = from dh in db.tbl_DonhangtheoSPvaMKHTemps
                      where dh.Username == Username
                      select new
                      {
@@ -52,11 +52,11 @@ namespace BEEACCOUNT.Model
         {
             string Username = Utils.getusername();
 
-            var rs = from dh in db.tbl_netcoDonhangTMPs
+            var rs = from dh in db.tbl_DonhangtheoSPvaMKHTemps
                      where dh.Username == Username
                      select dh;
 
-            db.tbl_netcoDonhangTMPs.DeleteAllOnSubmit(rs);
+            db.tbl_DonhangtheoSPvaMKHTemps.DeleteAllOnSubmit(rs);
             db.SubmitChanges();
 
 
@@ -65,12 +65,12 @@ namespace BEEACCOUNT.Model
         {
             string Username = Utils.getusername();
 
-            var rs = from dh in db.tbl_netcoDonhangTMPs
+            var rs = from dh in db.tbl_DonhangtheoSPvaMKHTemps
                      where dh.Username == Username && dh.id == id
                      select dh;
             if (rs.Count() > 0)
             {
-                db.tbl_netcoDonhangTMPs.DeleteAllOnSubmit(rs);
+                db.tbl_DonhangtheoSPvaMKHTemps.DeleteAllOnSubmit(rs);
                 db.SubmitChanges();
 
             }
@@ -81,7 +81,7 @@ namespace BEEACCOUNT.Model
         {
             string Username = Utils.getusername();
 
-            var rs = from dh in db.tbl_netcoDonhangs
+            var rs = from dh in db.tbl_DonhangtheoSPvaMKHs
                      where dh.Username == Username && dh.id == id
                      select dh;
             if (rs.Count() > 0)
@@ -102,7 +102,7 @@ namespace BEEACCOUNT.Model
         {
             string Username = Utils.getusername();
 
-            var rs = from dh in db.tbl_netcoDonhangs
+            var rs = from dh in db.tbl_DonhangtheoSPvaMKHs
                      where dh.Username == Username && dh.id == id
                      select dh;
             if (rs.Count() > 0)
@@ -124,22 +124,23 @@ namespace BEEACCOUNT.Model
         {
             string Username = Utils.getusername();
 
-            var rs = from dh in db.tbl_netcoGiaHDTemps
+            var rs = from dh in db.tbl_DonhangtheoSPvaMKHTemps
                      where dh.Username == Username
                      select dh;
 
-            db.tbl_netcoGiaHDTemps.DeleteAllOnSubmit(rs);
+            db.tbl_DonhangtheoSPvaMKHTemps.DeleteAllOnSubmit(rs);
             db.SubmitChanges();
 
 
         }
 
-        public static IQueryable selectDonhangNetcoPendingChuaghep(LinqtoSQLDataContext db)
+        public static IQueryable selectDonhangtheoSPPendingChuaghep(LinqtoSQLDataContext db, string maKH)
         {
             string username = Utils.getusername();
 
-            var rs1 = from p in db.tbl_netcoDonhangs
+            var rs1 = from p in db.tbl_DonhangtheoSPvaMKHs
                       where p.Username == username && p.loadnumber == "" && p.Tempview == 1
+                      && p.maKH == maKH
                       select new
                       {
                           Ngày_tháng = p.Ngayvanchuyen,
@@ -165,7 +166,7 @@ namespace BEEACCOUNT.Model
         {
             string username = Utils.getusername();
 
-            var rs1 = from p in db.tbl_netcoDonhangs
+            var rs1 = from p in db.tbl_DonhangtheoSPvaMKHs
                       where p.Username == username && p.loadnumber == "" && p.Tempview == 0
                       && p.Ngayvanchuyen >= fromdate && p.Ngayvanchuyen <= todate
                       select
@@ -204,8 +205,8 @@ namespace BEEACCOUNT.Model
 
 
 
-            var q8 = from sp in dc.tbl_netcoDonhangs
-                     where !(from sp1 in dc.tbl_netcoGiaHDs
+            var q8 = from sp in dc.tbl_DonhangtheoSPvaMKHs
+                     where !(from sp1 in dc.tbl_GiaHDtheoMCTvaSPs
                              select sp1.TENHANG
                                        ).Contains(sp.TEN_HANG)
                      group sp by new
@@ -224,7 +225,7 @@ namespace BEEACCOUNT.Model
             {
                 foreach (var item in q8)
                 {
-                    tbl_netcoGiaHDTemp temp = new tbl_netcoGiaHDTemp();
+                    tbl_GiaHDtheoMCTvaSPTemp temp = new tbl_GiaHDtheoMCTvaSPTemp();
 
                     temp.macty = Model.Username.getmacty();
                     temp.Username = Utils.getusername();
@@ -235,7 +236,7 @@ namespace BEEACCOUNT.Model
                     temp.District = item.FirstOrDefault().District;
                     temp.Gia = 0;
 
-                    dc.tbl_netcoGiaHDTemps.InsertOnSubmit(temp);
+                    dc.tbl_GiaHDtheoMCTvaSPTemps.InsertOnSubmit(temp);
                     dc.SubmitChanges();
 
                 }
@@ -243,8 +244,8 @@ namespace BEEACCOUNT.Model
 
 
 
-                var typeff2 = typeof(tbl_netcoGiaHDTemp);
-                var typeff = typeof(tbl_netcoGiaHD);
+                var typeff2 = typeof(tbl_GiaHDtheoMCTvaSPTemp);
+                var typeff = typeof(tbl_GiaHDtheoMCTvaSP);
                 string username = Utils.getusername();
 
                 View.BeeInputchange inputcdata = new View.BeeInputchange("BẢNG GIÁ ", "LIST SẢN PHẨM CHƯA CÓ GIÁ HÓA ĐƠN ", dc, "tbl_netcoGiaHD", "tbl_netcoGiaHDTemp", typeff, typeff2, "id", "id", username);
@@ -262,7 +263,7 @@ namespace BEEACCOUNT.Model
             {
                 tensanpham = "";
             }
-            var kq = (from sp1 in dc.tbl_netcoGiaHDs
+            var kq = (from sp1 in dc.tbl_GiaHDtheoMCTvaSPs
                       where sp1.TENHANG.Contains(tensanpham)
                       select sp1.Gia).FirstOrDefault();
 
@@ -288,7 +289,7 @@ namespace BEEACCOUNT.Model
         {
             string username = Utils.getusername();
 
-            var kq = (from sp1 in dc.tbl_netcoDonhangTMPs
+            var kq = (from sp1 in dc.tbl_DonhangtheoSPvaMKHTemps
                       where sp1.Username == username
                       select sp1.Gia_VChuyen).Sum().GetValueOrDefault(0);
 
@@ -331,7 +332,7 @@ namespace BEEACCOUNT.Model
             LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
             string Username1 = Utils.getusername();
 
-            dc.ExecuteCommand("DELETE FROM tbl_netcoDonhangTMP   where  tbl_netcoDonhangTMP.Username = '" + Username1 + "'");
+            dc.ExecuteCommand("DELETE FROM tbl_DonhangtheoSPvaMKHTemp   where  tbl_DonhangtheoSPvaMKHTemp.Username = '" + Username1 + "'");
             //    dc.tblFBL5Nnewthisperiods.DeleteAllOnSubmit(rsthisperiod);
             dc.CommandTimeout = 0;
             dc.SubmitChanges();
@@ -629,7 +630,7 @@ namespace BEEACCOUNT.Model
             {
 
 
-                bulkCopy.DestinationTableName = "tbl_netcoDonhangTMP";
+                bulkCopy.DestinationTableName = "tbl_DonhangtheoSPvaMKHTemp";
                 // Write from the source to the destination.
                 bulkCopy.BulkCopyTimeout = 0;
 
@@ -652,7 +653,7 @@ namespace BEEACCOUNT.Model
                 bulkCopy.ColumnMappings.Add("Delivery_Qty", "Delivery_Qty");
                 bulkCopy.ColumnMappings.Add("Username", "Username");
                 bulkCopy.ColumnMappings.Add("macty", "macty");
-                bulkCopy.ColumnMappings.Add("makhachhang", "makhachhang");
+                bulkCopy.ColumnMappings.Add("makhachhang", "maKH");
                 bulkCopy.ColumnMappings.Add("Ngaytaodon", "Ngayvanchuyen");
 
 
@@ -674,10 +675,10 @@ namespace BEEACCOUNT.Model
 
             //   LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
 
-            var typeffmain = typeof(tbl_netcoDonhangTMP);
-            var typeffsub = typeof(tbl_netcoDonhangTMP);
+            var typeffmain = typeof(tbl_DonhangtheoSPvaMKHTemp);
+            var typeffsub = typeof(tbl_DonhangtheoSPvaMKHTemp);
 
-            View.BeeInputchange inputcdata1 = new View.BeeInputchange("", "ĐƠN HÀNG NETCO ", dc, "tbl_netcoDonhangTMP", "tbl_netcoDonhangTMP", typeffmain, typeffsub, "id", "id", Username1);
+            View.BeeInputchange inputcdata1 = new View.BeeInputchange("", "ĐƠN HÀNG NETCO ", dc, "tbl_DonhangtheoSPvaMKHTemp", "tbl_DonhangtheoSPvaMKHTemp", typeffmain, typeffsub, "id", "id", Username1);
             inputcdata1.ShowDialog();
 
 
