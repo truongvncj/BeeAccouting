@@ -1078,32 +1078,32 @@ namespace BEEACCOUNT.View
             //if ((cbkhachhang.SelectedItem as ComboboxItem).Value.ToString() == "04") //  netco
             //{
 
-                // (cbkhachhang.SelectedItem as ComboboxItem).Value.ToString() ="04" là net co
+            // (cbkhachhang.SelectedItem as ComboboxItem).Value.ToString() ="04" là net co
 
-                Model.dieuvan.listsanphamNetcochuacogia(dc);
-
-
-                var rs = from p in dc.tbl_DonhangtheoSPvaMKHs
-                         where p.Username == username && p.loadnumber == ""
-                         && p.maKH == (cbkhachhang.SelectedItem as ComboboxItem).Value.ToString()
-                         select p;
-
-                foreach (var item in rs)
-                {
-                    item.Gia_VChuyen = Model.dieuvan.getnetcogia(dc, item.TEN_HANG, item.City);
-                    dc.SubmitChanges();
-                }
+            Model.dieuvan.listsanphamNetcochuacogia(dc);
 
 
-                var rs1 = Model.dieuvan.selectDonhangtheoSPPendingChuaghep(dc, (cbkhachhang.SelectedItem as ComboboxItem).Value.ToString());
+            var rs = from p in dc.tbl_DonhangtheoSPvaMKHs
+                     where p.Username == username && p.loadnumber == ""
+                     && p.maKH == (cbkhachhang.SelectedItem as ComboboxItem).Value.ToString()
+                     select p;
 
-                griddonpending.DataSource = rs1;
+            foreach (var item in rs)
+            {
+                item.Gia_VChuyen = Model.dieuvan.getnetcogia(dc, item.TEN_HANG, item.City);
+                dc.SubmitChanges();
+            }
+
+
+            var rs1 = Model.dieuvan.selectDonhangtheoSPPendingChuaghep(dc, (cbkhachhang.SelectedItem as ComboboxItem).Value.ToString());
+
+            griddonpending.DataSource = rs1;
 
 
 
 
-                //       (cbtkco.SelectedItem as ComboboxItem).Value.ToString();
-       //     }
+            //       (cbtkco.SelectedItem as ComboboxItem).Value.ToString();
+            //     }
 
 
             Model.dieuvan.deleteAlldonhangtmp(dc);
@@ -1260,11 +1260,11 @@ namespace BEEACCOUNT.View
                 this.gripghepxe.Rows.Remove(gripghepxe.CurrentRow);
                 //if ((cbkhachhang.SelectedItem as ComboboxItem).Value.ToString() == "04") //  netco
                 //{
-                    // chuyen data thành view =0
+                // chuyen data thành view =0
 
-                    Model.dieuvan.updateunhidedonhangnetcotheoID(dc, mainid);
-                    griddonpending.DataSource = Model.dieuvan.selectDonhangtheoSPPendingChuaghep(dc, (cbkhachhang.SelectedItem as ComboboxItem).Value.ToString());
-             //   }
+                Model.dieuvan.updateunhidedonhangnetcotheoID(dc, mainid);
+                griddonpending.DataSource = Model.dieuvan.selectDonhangtheoSPPendingChuaghep(dc, (cbkhachhang.SelectedItem as ComboboxItem).Value.ToString());
+                //   }
 
                 Model.dieuvan.deleteAlldonhangtmptheoID(dc, idtk);
             }
@@ -1318,7 +1318,7 @@ namespace BEEACCOUNT.View
 
             }
             #endregion cbbiensoxe
-            if (this.cbbiensoxe.Items.Count >=0)
+            if (this.cbbiensoxe.Items.Count >= 0)
             {
                 this.cbbiensoxe.SelectedIndex = 0;
 
@@ -1474,7 +1474,7 @@ namespace BEEACCOUNT.View
 
                 LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
 
-                var rs1 = Model.dieuvan.selectDonhangNetcodaghep(dc,fromdate,todate);
+                var rs1 = Model.dieuvan.selectDonhangNetcodaghep(dc, fromdate, todate);
 
                 Viewtable viewtbl = new Viewtable(rs1, dc, "DANH SÁCH ĐƠN HÀNG", 101, "1");// mã 1 là view đươn hàn netco
                 viewtbl.Show();
@@ -1516,7 +1516,7 @@ namespace BEEACCOUNT.View
                 {
                     item2.tennhaxe = "Hủy đơn";// (cbnhaxe.SelectedItem as ComboboxItem).Text.ToString();
                     item2.manhaxe = "Hủy đơn";// (cbnhaxe.SelectedItem as ComboboxItem).Value.ToString();
-                    item2.biensoxe  = "Hủy đơn";// (cbbiensoxe.SelectedItem as ComboboxItem).Value.ToString();
+                    item2.biensoxe = "Hủy đơn";// (cbbiensoxe.SelectedItem as ComboboxItem).Value.ToString();
                     item2.Gia_VChuyen = 0;// double.Parse(txttienhoadon.Text.ToString());
                     item2.Gia_Thue = 0;// double.Parse(txttienhoadon.Text.ToString());
                     item2.Tempview = 0;
@@ -1541,6 +1541,58 @@ namespace BEEACCOUNT.View
 
 
 
+
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+
+        }
+
+        private void textBox1_Enter(object sender, EventArgs e)
+        {
+
+
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+
+
+
+
+
+
+        }
+
+        private void textBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+
+            {
+                string findtext = textBox1.Text;
+                string connection_string = Utils.getConnectionstr();
+
+                LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+                string Username = Utils.getusername();
+
+                var rs = from dh in dc.tbl_DonhangtheoSPvaMKHs
+                         where dh.Username == Username
+                         && dh.So_van_don.Contains(findtext)
+                         select dh;
+
+                Beeviewandchoose findid = new Beeviewandchoose("  ", rs, dc);
+                findid.ShowDialog();
+
+                int idvalue = findid.value;
+                bool ketqua = findid.kq;
+
+                // MessageBox.Show("Pressed enter.");
+            }
 
         }
     }
