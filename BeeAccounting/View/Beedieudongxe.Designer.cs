@@ -55,9 +55,11 @@
             this.gripghepxe = new System.Windows.Forms.DataGridView();
             this.bt_nhapdonhangnetco = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtfind = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.cbloaidon = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.griddonpending)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gripghepxe)).BeginInit();
@@ -331,7 +333,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(806, 53);
+            this.button5.Location = new System.Drawing.Point(966, 94);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(117, 23);
             this.button5.TabIndex = 76;
@@ -339,17 +341,17 @@
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click_1);
             // 
-            // textBox1
+            // txtfind
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(403, 96);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(237, 26);
-            this.textBox1.TabIndex = 77;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            this.textBox1.Enter += new System.EventHandler(this.textBox1_Enter);
-            this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
-            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
+            this.txtfind.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtfind.Location = new System.Drawing.Point(403, 96);
+            this.txtfind.Name = "txtfind";
+            this.txtfind.Size = new System.Drawing.Size(237, 26);
+            this.txtfind.TabIndex = 77;
+            this.txtfind.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtfind.Enter += new System.EventHandler(this.textBox1_Enter);
+            this.txtfind.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
+            this.txtfind.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // label6
             // 
@@ -375,12 +377,32 @@
             this.pictureBox2.MouseLeave += new System.EventHandler(this.pictureBox2_MouseLeave);
             this.pictureBox2.MouseHover += new System.EventHandler(this.pictureBox2_MouseHover);
             // 
+            // cbloaidon
+            // 
+            this.cbloaidon.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbloaidon.FormattingEnabled = true;
+            this.cbloaidon.Location = new System.Drawing.Point(403, 29);
+            this.cbloaidon.Name = "cbloaidon";
+            this.cbloaidon.Size = new System.Drawing.Size(237, 21);
+            this.cbloaidon.TabIndex = 79;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(337, 37);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(49, 13);
+            this.label10.TabIndex = 80;
+            this.label10.Text = "Loại đơn";
+            // 
             // Beedieudongxe
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1095, 641);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.cbloaidon);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtfind);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.bt_nhapdonhangnetco);
             this.Controls.Add(this.groupBox1);
@@ -442,8 +464,10 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtfind;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.ComboBox cbloaidon;
+        private System.Windows.Forms.Label label10;
     }
 }

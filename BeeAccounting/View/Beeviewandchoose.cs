@@ -9,22 +9,45 @@ using System.Windows.Forms;
 
 namespace BEEACCOUNT.View
 {
+
+
     public partial class Beeviewandchoose : Form
     {
 
         public int value;
         public bool kq;
-        //  public string value;
-        //public class ComboboxItem
-        //{
-        //    public string Text { get; set; }
-        //    public object Value { get; set; }
 
-        //    public override string ToString()
-        //    {
-        //        return Text;
-        //    }
-        //}
+        void Control_KeyPress(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+            {
+
+                if (this.dataGridView1.CurrentCell != null)
+                {
+
+                    if (this.dataGridView1.CurrentCell.RowIndex >= 0)
+                    {
+
+
+                        this.value = int.Parse(this.dataGridView1.Rows[this.dataGridView1.CurrentCell.RowIndex].Cells["id"].Value.ToString());
+
+                        kq = true;
+                    }
+
+                }
+
+                this.Close();
+            }
+
+            if (e.KeyData == Keys.Escape)
+            {
+                this.Close();
+              
+            }
+
+
+            }
+
 
 
 
@@ -34,6 +57,8 @@ namespace BEEACCOUNT.View
 
             this.label1.Text = headcolumname;
 
+            this.KeyPreview = true;
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(Control_KeyPress);
 
             dataGridView1.DataSource = rs;
             // cbselect.DataSource = CombomCollection;
@@ -50,7 +75,7 @@ namespace BEEACCOUNT.View
         private void button1_Click(object sender, EventArgs e)
         {
 
-          
+
 
 
         }
@@ -62,14 +87,14 @@ namespace BEEACCOUNT.View
 
         private void textBox1_KeyPress(object sender, KeyEventArgs e)
         {
-          
+
 
 
         }
 
         private void textBox1_KeyDown(object sender, KeyEventArgs e)
         {
-           
+
         }
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -86,12 +111,12 @@ namespace BEEACCOUNT.View
 
         private void dataGridView1_Enter(object sender, EventArgs e)
         {
-           
+
         }
 
         private void dataGridView1_CellEnter(object sender, DataGridViewCellEventArgs e)
         {
-          
+
         }
     }
 }

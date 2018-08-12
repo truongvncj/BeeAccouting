@@ -125,6 +125,24 @@ namespace BEEACCOUNT.View
             #endregion cbbiensoxe
 
 
+            #region   //cbloaidon
+
+
+
+
+            ComboboxItem cb1 = new ComboboxItem();
+            cb1.Value = 1;
+            cb1.Text = 1 + ":" + "- Đơn hàng theo sản phẩm";
+            this.cbloaidon.Items.Add(cb1); // CombomCollection.Add(cb);
+
+
+            ComboboxItem cb2 = new ComboboxItem();
+            cb2.Value = 2;
+            cb2.Text = 2 + ":" + "- Đơn hàng theo chuyến";
+            this.cbloaidon.Items.Add(cb2); // CombomCollection.Add(cb);
+
+
+            #endregion cbloaidon
 
             #region    //cbnahxe
             var rs4 = from kh in dc.tbl_NP_Nhacungungvantais
@@ -145,8 +163,8 @@ namespace BEEACCOUNT.View
 
 
             Model.dieuvan.deleteAlldonhangtmp(dc);
-            Model.dieuvan.deleteAllnecoPricetmp(dc);
-            //   Model.dieuvan.listsanphamNetcochuacogia(dc);
+            Model.dieuvan.deleteAlltheoSPPricetmp(dc);
+            //   Model.dieuvan.listsanphamtheoSPchuacogia(dc);
 
 
             gripghepxe.DataSource = Model.dieuvan.selectDonhangghep(dc);
@@ -1072,45 +1090,44 @@ namespace BEEACCOUNT.View
             string username = Utils.getusername();
 
             LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
-
-
-
-            //if ((cbkhachhang.SelectedItem as ComboboxItem).Value.ToString() == "04") //  netco
-            //{
-
-            // (cbkhachhang.SelectedItem as ComboboxItem).Value.ToString() ="04" là net co
-
-            Model.dieuvan.listsanphamNetcochuacogia(dc);
-
-
-            var rs = from p in dc.tbl_DonhangtheoSPvaMKHs
-                     where p.Username == username && p.loadnumber == ""
-                     && p.maKH == (cbkhachhang.SelectedItem as ComboboxItem).Value.ToString()
-                     select p;
-
-            foreach (var item in rs)
+            if (cbkhachhang.SelectedItem != null && cbloaidon.SelectedItem != null)
             {
-                item.Gia_VChuyen = Model.dieuvan.getnetcogia(dc, item.TEN_HANG, item.City);
-                dc.SubmitChanges();
+                #region nếu là đơn hàng theo sản phẩm
+
+
+
+
+                if ((cbloaidon.SelectedItem as ComboboxItem).Value.ToString() == "1") // Nếu là đơn hàng theo sản phẩm
+                {
+
+                    Model.dieuvan.listsanphamtheoSPchuacogia(dc);
+
+
+                    var rs = from p in dc.tbl_DonhangtheoSPvaMKHs
+                             where p.Username == username && p.loadnumber == ""
+                             && p.maKH == (cbkhachhang.SelectedItem as ComboboxItem).Value.ToString()
+                             select p;
+
+                    foreach (var item in rs)
+                    {
+                        item.Gia_VChuyen = Model.dieuvan.getpriceHDtheosanphamvamacty(dc, item.TEN_HANG, item.City);
+                        dc.SubmitChanges();
+                    }
+
+
+                    var rs1 = Model.dieuvan.selectDonhangtheoSPPendingChuaghep(dc, (cbkhachhang.SelectedItem as ComboboxItem).Value.ToString());
+
+                    griddonpending.DataSource = rs1;
+
+                    Model.dieuvan.deleteAlldonhangtmp(dc);
+
+                    gripghepxe.DataSource = Model.dieuvan.selectDonhangghep(dc);
+
+
+                }
+
+                #endregion nếu là đơn hàng theo sản phẩm
             }
-
-
-            var rs1 = Model.dieuvan.selectDonhangtheoSPPendingChuaghep(dc, (cbkhachhang.SelectedItem as ComboboxItem).Value.ToString());
-
-            griddonpending.DataSource = rs1;
-
-
-
-
-            //       (cbtkco.SelectedItem as ComboboxItem).Value.ToString();
-            //     }
-
-
-            Model.dieuvan.deleteAlldonhangtmp(dc);
-
-            //  getnetcogia
-            gripghepxe.DataSource = Model.dieuvan.selectDonhangghep(dc);
-
         }
 
         private void griddonpending_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -1128,14 +1145,14 @@ namespace BEEACCOUNT.View
                 //    parent.rows[currentRowIndex].style.backgroundColor = "#FFFFD6";
                 //  int x = griddonpending.CurrentRow.Index;
 
-                this.griddonpending.Rows.Remove(griddonpending.CurrentRow);
+                // this.griddonpending.Rows.Remove(griddonpending.CurrentRow);
 
-                if ((cbkhachhang.SelectedItem as ComboboxItem).Value.ToString() == "04") //  netco
-                {
-                    // chuyen data thành view =0
+                //if ((cbkhachhang.SelectedItem as ComboboxItem).Value.ToString() == "04") //  netco
+                //{
+                // chuyen data thành view =0
 
-                    Model.dieuvan.updatehidedonhangnetcotheoID(dc, idtk);
-                }
+                Model.dieuvan.updatehidedonhangtheoSPvaID(dc, idtk);
+                // }
                 //   this.griddonpending.Rows[currentRowIndex].
             }
             catch (Exception)
@@ -1146,47 +1163,15 @@ namespace BEEACCOUNT.View
             }
 
 
-            if ((cbkhachhang.SelectedItem as ComboboxItem).Value.ToString() == "04") //  netco
-            {
-                #region  nếu là netco them vao temp
+            //if ((cbkhachhang.SelectedItem as ComboboxItem).Value.ToString() == "04") //  netco
+            //{
 
+            Model.dieuvan.themvaodonhangTEMPtheoSPvaID(dc, idtk);
 
-                var rs = (from p in dc.tbl_DonhangtheoSPvaMKHs
-                          where p.id == idtk
-                          select p).FirstOrDefault();
-                if (rs != null)
-                {
-                    tbl_DonhangtheoSPvaMKHTemp temp = new tbl_DonhangtheoSPvaMKHTemp();
-
-                    temp.Dia_chi = rs.Dia_chi;
-                    temp.District = rs.District;
-                    temp.Delivery_Qty = rs.Delivery_Qty;
-                    temp.id = rs.id;
-                    temp.Material = rs.Material;
-                    temp.So_van_don = rs.So_van_don;
-                    temp.TEN_HANG = rs.TEN_HANG;
-                    temp.ShipTo_Name = rs.ShipTo_Name;
-                    temp.A_R_Amount = rs.A_R_Amount;
-                    temp.City = rs.City;
-                    temp.Gia_VChuyen = rs.Gia_VChuyen * rs.Delivery_Qty;
-                    temp.mainid = rs.id;
-
-                    temp.Username = username;
-
-                    dc.tbl_DonhangtheoSPvaMKHTemps.InsertOnSubmit(temp);
-
-
-
-                    dc.SubmitChanges();
-                }
-
-
-                #endregion nếu là netco
-            }
-
+            string maKH = (cbkhachhang.SelectedItem as ComboboxItem).Value.ToString();
 
             gripghepxe.DataSource = Model.dieuvan.selectDonhangghep(dc);
-
+            griddonpending.DataSource = Model.dieuvan.selectDonhangtheoSPPendingChuaghep(dc, maKH);
 
 
             txttienhoadon.Text = Model.dieuvan.tinhgiaDonhangvanchuyenHD(dc).ToString();
@@ -1262,7 +1247,7 @@ namespace BEEACCOUNT.View
                 //{
                 // chuyen data thành view =0
 
-                Model.dieuvan.updateunhidedonhangnetcotheoID(dc, mainid);
+                Model.dieuvan.updateunhidedonhangtheoSanphamvaID(dc, mainid);
                 griddonpending.DataSource = Model.dieuvan.selectDonhangtheoSPPendingChuaghep(dc, (cbkhachhang.SelectedItem as ComboboxItem).Value.ToString());
                 //   }
 
@@ -1313,14 +1298,14 @@ namespace BEEACCOUNT.View
             {
                 ComboboxItem cb = new ComboboxItem();
                 cb.Value = item.bienso;
-                cb.Text = item.bienso + ":" + item.maNVT + "-" + item.tenNVT;
+                cb.Text = item.bienso + " : " + item.tenlaixe;
                 this.cbbiensoxe.Items.Add(cb); // CombomCollection.Add(cb);
 
             }
             #endregion cbbiensoxe
             if (this.cbbiensoxe.Items.Count >= 0)
             {
-                this.cbbiensoxe.SelectedIndex = 0;
+                this.cbbiensoxe.SelectedIndex = -1;
 
             }
             //this.cbbiensoxe.SelectedIndex = 0;
@@ -1452,7 +1437,7 @@ namespace BEEACCOUNT.View
 
             gripghepxe.DataSource = Model.dieuvan.selectDonhangghep(dc);
 
-
+            txtfind.Focus();
 
 
         }
@@ -1474,7 +1459,7 @@ namespace BEEACCOUNT.View
 
                 LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
 
-                var rs1 = Model.dieuvan.selectDonhangNetcodaghep(dc, fromdate, todate);
+                var rs1 = Model.dieuvan.selectDonhangtheoSPdaghep(dc, fromdate, todate);
 
                 Viewtable viewtbl = new Viewtable(rs1, dc, "DANH SÁCH ĐƠN HÀNG", 101, "1");// mã 1 là view đươn hàn netco
                 viewtbl.Show();
@@ -1571,27 +1556,79 @@ namespace BEEACCOUNT.View
         private void textBox1_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyData == Keys.Enter)
-
             {
-                string findtext = textBox1.Text;
-                string connection_string = Utils.getConnectionstr();
 
-                LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
 
-                string Username = Utils.getusername();
+                if (cbkhachhang.SelectedItem != null)
 
-                var rs = from dh in dc.tbl_DonhangtheoSPvaMKHs
-                         where dh.Username == Username
-                         && dh.So_van_don.Contains(findtext)
-                         select dh;
+                {
 
-                Beeviewandchoose findid = new Beeviewandchoose("  ", rs, dc);
-                findid.ShowDialog();
+                    string findtext = txtfind.Text;
+                    string connection_string = Utils.getConnectionstr();
 
-                int idvalue = findid.value;
-                bool ketqua = findid.kq;
+                    LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
 
-                // MessageBox.Show("Pressed enter.");
+                    string Username = Utils.getusername();
+
+                    var rs = from dh in dc.tbl_DonhangtheoSPvaMKHs
+                             where dh.Username == Username
+                             && dh.So_van_don.Contains(findtext)
+                             select dh;
+
+                    if (rs.Count() > 0)
+                    {
+                        int idvalue;
+                             bool ketqua;
+                        if (rs.Count() == 1 && rs.FirstOrDefault().So_van_don == findtext)
+                        {
+                            
+                            idvalue = rs.FirstOrDefault().id;
+                            ketqua = true;
+                        }
+                        else
+                        {
+                            Beeviewandchoose findid = new Beeviewandchoose("  ", rs, dc);
+                            findid.ShowDialog();
+
+                             idvalue = findid.value;  //id
+                             ketqua = findid.kq;
+                        }
+                      
+
+                        if (ketqua) // có select  
+                        {
+                           
+
+                            // loai o tren voi id
+                            Model.dieuvan.updatehidedonhangtheoSPvaID(dc, idvalue);
+                            Model.dieuvan.themvaodonhangTEMPtheoSPvaID(dc, idvalue);
+                            string maKH = (cbkhachhang.SelectedItem as ComboboxItem).Value.ToString();
+
+                            gripghepxe.DataSource = Model.dieuvan.selectDonhangghep(dc);
+                            griddonpending.DataSource = Model.dieuvan.selectDonhangtheoSPPendingChuaghep(dc, maKH);
+                            txttienhoadon.Text = Model.dieuvan.tinhgiaDonhangvanchuyenHD(dc).ToString();
+
+                        }
+
+
+                      
+
+
+
+                    }
+
+                }
+                else
+                {
+                    MessageBox.Show("Please chọn code khách hàng !");
+
+
+                }
+
+                txtfind.Focus();
+                txtfind.Text = "";
+
+
             }
 
         }

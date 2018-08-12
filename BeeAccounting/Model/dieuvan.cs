@@ -77,7 +77,7 @@ namespace BEEACCOUNT.Model
 
 
         }
-        public static void updatehidedonhangnetcotheoID(LinqtoSQLDataContext db, int id)
+        public static void updatehidedonhangtheoSPvaID(LinqtoSQLDataContext db, int id)
         {
             string Username = Utils.getusername();
 
@@ -98,7 +98,49 @@ namespace BEEACCOUNT.Model
 
 
         }
-        public static void updateunhidedonhangnetcotheoID(LinqtoSQLDataContext db, int id)
+
+        public static void themvaodonhangTEMPtheoSPvaID(LinqtoSQLDataContext dc, int id)
+        {
+            string username = Utils.getusername();
+
+           
+
+            var rs = (from p in dc.tbl_DonhangtheoSPvaMKHs
+                      where p.id == id && !(from tep in dc.tbl_DonhangtheoSPvaMKHTemps
+                                           where tep.mainid == id
+                                           select tep.mainid).Contains(p.id)
+                      select p).FirstOrDefault();
+            if (rs != null)
+            {
+                tbl_DonhangtheoSPvaMKHTemp temp = new tbl_DonhangtheoSPvaMKHTemp();
+
+                temp.Dia_chi = rs.Dia_chi;
+                temp.District = rs.District;
+                temp.Delivery_Qty = rs.Delivery_Qty;
+                temp.id = rs.id;
+                temp.Material = rs.Material;
+                temp.So_van_don = rs.So_van_don;
+                temp.TEN_HANG = rs.TEN_HANG;
+                temp.ShipTo_Name = rs.ShipTo_Name;
+                temp.A_R_Amount = rs.A_R_Amount;
+                temp.City = rs.City;
+                temp.Gia_VChuyen = rs.Gia_VChuyen * rs.Delivery_Qty;
+                temp.mainid = rs.id;
+
+                temp.Username = username;
+
+                dc.tbl_DonhangtheoSPvaMKHTemps.InsertOnSubmit(temp);
+
+
+
+                dc.SubmitChanges();
+            }
+
+
+
+        }
+
+        public static void updateunhidedonhangtheoSanphamvaID(LinqtoSQLDataContext db, int id)
         {
             string Username = Utils.getusername();
 
@@ -120,7 +162,7 @@ namespace BEEACCOUNT.Model
 
         }
 
-        public static void deleteAllnecoPricetmp(LinqtoSQLDataContext db)
+        public static void deleteAlltheoSPPricetmp(LinqtoSQLDataContext db)
         {
             string Username = Utils.getusername();
 
@@ -162,7 +204,7 @@ namespace BEEACCOUNT.Model
 
             return rs1;
         }
-        public static IQueryable selectDonhangNetcodaghep(LinqtoSQLDataContext db, DateTime fromdate, DateTime todate)
+        public static IQueryable selectDonhangtheoSPdaghep(LinqtoSQLDataContext db, DateTime fromdate, DateTime todate)
         {
             string username = Utils.getusername();
 
@@ -172,8 +214,9 @@ namespace BEEACCOUNT.Model
                       select
                         new
                         {
+                            Ngày_vận_chuyển = p.Ngayvanchuyen,
                             Số_vận_đơn = p.So_van_don,
-                            Ngày_tháng = p.ngayghepdon,
+                      //      Ngày_tháng = p.ngayghepdon,
                             Biển_số_xe = p.biensoxe,
                             Nhà_xe = p.tennhaxe,
                             Tên_hàng = p.TEN_HANG,
@@ -198,9 +241,9 @@ namespace BEEACCOUNT.Model
 
 
 
-        public static void listsanphamNetcochuacogia(LinqtoSQLDataContext dc)
+        public static void listsanphamtheoSPchuacogia(LinqtoSQLDataContext dc)
         {
-            Model.dieuvan.deleteAllnecoPricetmp(dc);
+            Model.dieuvan.deleteAlltheoSPPricetmp(dc);
             #region q8 List các document có deposit trong fbl5n  không có trong tblEDLP
 
 
@@ -248,7 +291,7 @@ namespace BEEACCOUNT.Model
                 var typeff = typeof(tbl_GiaHDtheoMCTvaSP);
                 string username = Utils.getusername();
 
-                View.BeeInputchange inputcdata = new View.BeeInputchange("BẢNG GIÁ ", "LIST SẢN PHẨM CHƯA CÓ GIÁ HÓA ĐƠN ", dc, "tbl_netcoGiaHD", "tbl_netcoGiaHDTemp", typeff, typeff2, "id", "id", username);
+                View.BeeInputchange inputcdata = new View.BeeInputchange("BẢNG GIÁ ", "LIST SẢN PHẨM CHƯA CÓ GIÁ HÓA ĐƠN ", dc, "tbl_GiaHDtheoMCTvaSP", "tbl_GiaHDtheoMCTvaSPTemp", typeff, typeff2, "id", "id", username);
                 inputcdata.ShowDialog();// = false;
 
             }
@@ -257,7 +300,7 @@ namespace BEEACCOUNT.Model
         }
 
 
-        public static double getnetcogia(LinqtoSQLDataContext dc, string tensanpham, string city)
+        public static double getpriceHDtheosanphamvamacty(LinqtoSQLDataContext dc, string tensanpham, string city)
         {
             if (tensanpham == null)
             {

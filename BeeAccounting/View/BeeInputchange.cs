@@ -155,7 +155,7 @@ namespace BEEACCOUNT.View
             this.Username = Username;
 
             //      this.btrigh.Visible = false;
-
+            txtrecord.Text = "";
             this.btnhaplieu.Visible = false;
             this.lbseachedit.Visible = false;
 
@@ -192,6 +192,15 @@ namespace BEEACCOUNT.View
                 this.bt_updatedata.Visible = false;
                 this.export.Visible = false;
                 this.btnhaplieu.Visible = true;
+
+                string connection_string = Utils.getConnectionstr();
+                var dc = new LinqtoSQLDataContext(connection_string);
+                string username = Utils.getusername();
+
+                txtrecord.Text = (from pp in dc.tbl_DonhangtheoSPvaMKHTemps
+                                                 where pp.Username == username
+                                                   select pp).Count().ToString();
+                //  tbl_DonhangtheoSPvaMKHTemp.
             }
 
             // lbseachedit
