@@ -149,22 +149,28 @@
     <Compile Include="View\BarcodeSample.Designer.cs">
       <DependentUpon>BarcodeSample.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Dieuvan\Donhangtheosp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Dieuvan\Donhangtheosp.Designer.cs">
+      <DependentUpon>Donhangtheosp.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Beeviewandchoose.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\Beeviewandchoose.Designer.cs">
       <DependentUpon>Beeviewandchoose.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Beedieudongxe.cs">
+    <Compile Include="View\Dieuvan\Beedieudongxe.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Beedieudongxe.Designer.cs">
+    <Compile Include="View\Dieuvan\Beedieudongxe.Designer.cs">
       <DependentUpon>Beedieudongxe.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\bedieuvan.cs">
+    <Compile Include="View\Dieuvan\bedieuvan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\bedieuvan.Designer.cs">
+    <Compile Include="View\Dieuvan\bedieuvan.Designer.cs">
       <DependentUpon>bedieuvan.cs</DependentUpon>
     </Compile>
     <Compile Include="View\BeeLCTT200dauky.cs">
@@ -551,13 +557,16 @@
     <EmbeddedResource Include="View\BarcodeSample.resx">
       <DependentUpon>BarcodeSample.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\Dieuvan\Donhangtheosp.resx">
+      <DependentUpon>Donhangtheosp.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Beeviewandchoose.resx">
       <DependentUpon>Beeviewandchoose.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Beedieudongxe.resx">
+    <EmbeddedResource Include="View\Dieuvan\Beedieudongxe.resx">
       <DependentUpon>Beedieudongxe.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\bedieuvan.resx">
+    <EmbeddedResource Include="View\Dieuvan\bedieuvan.resx">
       <DependentUpon>bedieuvan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\BeeLCTT200dauky.resx">
