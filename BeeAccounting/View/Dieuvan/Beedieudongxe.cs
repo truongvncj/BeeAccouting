@@ -17,6 +17,7 @@ namespace BEEACCOUNT.View
 
         View.Main main { get; set; }
 
+      
 
         void Control_KeyPress(object sender, KeyEventArgs e)
         {
@@ -628,157 +629,8 @@ namespace BEEACCOUNT.View
 
         }
 
-        private void button15_Click(object sender, EventArgs e)
-        {
-
-
-            Beekyketoan makepriod = new Beekyketoan();
-
-            makepriod.ShowDialog();
-
-
-
-
-            string connection_string = Utils.getConnectionstr();
-            //    string urs = Utils.getusername();
-            //  var db = new LinqtoSQLDataContext(connection_string);
-            LinqtoSQLDataContext db = new LinqtoSQLDataContext(connection_string);
-            //    tbl_karegion
-
-            //    var typeff = typeof(tbl_Kapriod);
-            //     VInputchange inputcdata = new VInputchange("", "LIST PRIOD", db, "tbl_Kapriod", "tbl_Kapriod", typeff, typeff, "id", "id", "");
-            // inputcdata.Show();
-
-
-
-
-        }
-
-        private void button16_Click(object sender, EventArgs e)
-        {
-
-            string connection_string = Utils.getConnectionstr();
-
-            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
-
-            //       var typeff = typeof(tbl_kacontractsdatadetail);
-
-            //      VInputchange inputcdata = new VInputchange("", "LIST DATA CONTRACTS DETAIL ", dc, "tbl_kacontractsdatadetail", "tbl_kacontractsdatadetail", typeff, typeff, "id", "id", "");
-            //    inputcdata.Show();
-
-
-            //#region
-
-
-            //Contract ctract = new Contract();
-            //DialogResult kq1 = MessageBox.Show("Delete all begin contract detail ? ", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            ////      bool kq;
-            //string connection_string = Utils.getConnectionstr();
-
-            //LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
-
-
-            //var typeff = typeof(tbl_kacontractbegindatadetail);
-            //switch (kq1)
-            //{
-
-            //    case DialogResult.None:
-            //        break;
-            //    case DialogResult.Yes:
-            //        DialogResult kq2 = MessageBox.Show("YEs là xóa dữ liệu begin Contract, bạn định xóa ? ", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            //        if (kq2 == DialogResult.Yes)
-            //        {
-            //            Contract Rm = new Contract();
-            //            bool kq = Rm.deleteallcontractbegindetail();
-
-
-            //        }
-
-
-
-
-            //        ctract.inputcontractdetail();
-
-            //        //VInputchange inputcdata = new VInputchange("", "LIST DATA CONTRACTS DETAIL ", dc, "tbl_kacontractmasterdatadetail", "tbl_kacontractmasterdatadetail", typeff, typeff, "id", "id", "");
-            //        //inputcdata.Show();
-
-            //        var rscustemp2 = from tbl_kacontractmasterdatadetail in dc.tbl_kacontractbegindatadetails
-
-
-            //                         select tbl_kacontractmasterdatadetail;
-            //        Viewtable viewtbl = new Viewtable(rscustemp2, dc, "LIST DATA CONTRACTS DETAIL", 3);// view code 1 la can viet them lenh
-
-            //        viewtbl.Show();
-
-
-
-            //        break;
-            //    case DialogResult.Cancel:
-            //        break;
-            //    case DialogResult.Abort:
-            //        break;
-            //    case DialogResult.Retry:
-            //        break;
-            //    case DialogResult.Ignore:
-            //        break;
-            //    case DialogResult.OK:
-            //        break;
-            //    case DialogResult.No:
-            //        ctract.inputcontractdetail();
-
-            //        rscustemp2 = from tbl_kacontractmasterdatadetail in dc.tbl_kacontractbegindatadetails
-            //                     select tbl_kacontractmasterdatadetail;
-
-            //        viewtbl = new Viewtable(rscustemp2, dc, "LIST DATA CONTRACTS DETAIL", 3);// view code 1 la can viet them lenh
-
-            //        viewtbl.Show();
-
-            //        break;
-            //    default:
-            //        break;
-            //}
-
-
-            //#endregion
-
-
-
-        }
-
-        private void button17_Click(object sender, EventArgs e)
-        {
-            string connection_string = Utils.getConnectionstr();
-            //     LinqtoSQLDataContext db = new LinqtoSQLDataContext(connection_string);
-            //   LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
-            SqlConnection conn2 = null;
-            SqlDataReader rdr1 = null;
-            try
-            {
-
-                conn2 = new SqlConnection(connection_string);
-                conn2.Open();
-                SqlCommand cmd1 = new SqlCommand("KaFillfullnameofmasterContractbyCustomerName", conn2);
-                cmd1.CommandType = CommandType.StoredProcedure;
-                //      cmd1.Parameters.Add("@name", SqlDbType.VarChar).Value = userupdate;
-                cmd1.CommandTimeout = 0;
-                rdr1 = cmd1.ExecuteReader();
-
-                MessageBox.Show("Fill name done !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            }
-            finally
-            {
-                if (conn2 != null)
-                {
-                    conn2.Close();
-                }
-                if (rdr1 != null)
-                {
-                    rdr1.Close();
-                }
-            }
-        }
-
+       
+       
 
         public void converttonew()
         {
@@ -1568,10 +1420,10 @@ namespace BEEACCOUNT.View
 
                     LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
 
-                    string Username = Utils.getusername();
-
+                    string maCty = Model.Username.getmacty();
+                    string maKH = (cbkhachhang.SelectedItem as ComboboxItem).Value.ToString();
                     var rs = from dh in dc.tbl_DonhangtheoSPvaMKHs
-                             where dh.Username == Username
+                             where dh.macty == maCty && dh.maKH == maKH
                              && dh.So_van_don.Contains(findtext)
                              select dh;
 
@@ -1602,7 +1454,7 @@ namespace BEEACCOUNT.View
                             // loai o tren voi id
                             Model.dieuvan.updatehidedonhangtheoSPvaID(dc, idvalue);
                             Model.dieuvan.themvaodonhangTEMPtheoSPvaID(dc, idvalue);
-                            string maKH = (cbkhachhang.SelectedItem as ComboboxItem).Value.ToString();
+                          //  string maKH = (cbkhachhang.SelectedItem as ComboboxItem).Value.ToString();
 
                             gripghepxe.DataSource = Model.dieuvan.selectDonhangghep(dc);
                             griddonpending.DataSource = Model.dieuvan.selectDonhangtheoSPPendingChuaghep(dc, maKH);
@@ -1620,7 +1472,8 @@ namespace BEEACCOUNT.View
                 }
                 else
                 {
-                    MessageBox.Show("Please chọn code khách hàng !");
+                  
+                    MessageBox.Show("Please chọn code khách hàng !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
                 }
@@ -1630,6 +1483,38 @@ namespace BEEACCOUNT.View
 
 
             }
+
+        }
+
+        private void button2_Click_2(object sender, EventArgs e)
+        {
+            if (cbloaidon.SelectedItem == null)
+            {
+                MessageBox.Show("Please chọn loại đơn hàng !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+             
+                return;
+            }
+            if (cbkhachhang.SelectedItem == null)
+            {
+                MessageBox.Show("Please chọn khách hàng !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+                return;
+            }
+            if ((cbloaidon.SelectedItem as ComboboxItem).Value.ToString()=="1")// neu là đơn hàng theo san phẩm
+            {
+                string macty = Model.Username.getmacty();
+                string maKH = (cbkhachhang.SelectedItem as ComboboxItem).Value.ToString();
+
+                View.TaodonDHtheoSP taodonhangtheosp = new TaodonDHtheoSP(this.main, macty, maKH);
+                taodonhangtheosp.ShowDialog();
+            }
+        
+
+
+
+
 
         }
     }

@@ -36,12 +36,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button9 = new System.Windows.Forms.Button();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
@@ -49,7 +43,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -115,11 +108,6 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.button9);
-            this.groupBox2.Controls.Add(this.groupBox4);
-            this.groupBox2.Controls.Add(this.button8);
-            this.groupBox2.Controls.Add(this.button7);
-            this.groupBox2.Controls.Add(this.button4);
-            this.groupBox2.Controls.Add(this.button5);
             this.groupBox2.Location = new System.Drawing.Point(12, 235);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(683, 438);
@@ -130,70 +118,13 @@
             // button9
             // 
             this.button9.BackColor = System.Drawing.Color.Orange;
-            this.button9.Location = new System.Drawing.Point(395, 94);
+            this.button9.Location = new System.Drawing.Point(24, 38);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(150, 21);
             this.button9.TabIndex = 7;
             this.button9.Text = "Lệnh điều động xe";
             this.button9.UseVisualStyleBackColor = false;
             this.button9.Click += new System.EventHandler(this.button9_Click_1);
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.button6);
-            this.groupBox4.Location = new System.Drawing.Point(352, 19);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(161, 57);
-            this.groupBox4.TabIndex = 5;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Netco";
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button6.Location = new System.Drawing.Point(6, 19);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(150, 21);
-            this.button6.TabIndex = 6;
-            this.button6.Text = "Upload Đơn Netco";
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.button6_Click_1);
-            // 
-            // button8
-            // 
-            this.button8.Location = new System.Drawing.Point(24, 121);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(150, 21);
-            this.button8.TabIndex = 4;
-            this.button8.Text = "Đệm";
-            this.button8.UseVisualStyleBackColor = true;
-            // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(24, 150);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(150, 21);
-            this.button7.TabIndex = 3;
-            this.button7.Text = "Bột giặt ABA";
-            this.button7.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(24, 94);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(150, 21);
-            this.button4.TabIndex = 2;
-            this.button4.Text = "Mistu";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(24, 67);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(150, 21);
-            this.button5.TabIndex = 1;
-            this.button5.Text = "Sunhouse";
-            this.button5.UseVisualStyleBackColor = true;
             // 
             // groupBox3
             // 
@@ -260,7 +191,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
-            this.groupBox4.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -275,16 +205,10 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Button button14;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button9;
     }
 }

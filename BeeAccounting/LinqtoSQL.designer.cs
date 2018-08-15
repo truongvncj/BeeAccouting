@@ -20120,6 +20120,8 @@ namespace BEEACCOUNT
 		
 		private string _maKH;
 		
+		private string _NhomSP;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -20178,6 +20180,8 @@ namespace BEEACCOUNT
     partial void OnNgayvanchuyenChanged();
     partial void OnmaKHChanging(string value);
     partial void OnmaKHChanged();
+    partial void OnNhomSPChanging(string value);
+    partial void OnNhomSPChanged();
     #endregion
 		
 		public tbl_DonhangtheoSPvaMKH()
@@ -20725,6 +20729,26 @@ namespace BEEACCOUNT
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NhomSP", DbType="NVarChar(50)")]
+		public string NhomSP
+		{
+			get
+			{
+				return this._NhomSP;
+			}
+			set
+			{
+				if ((this._NhomSP != value))
+				{
+					this.OnNhomSPChanging(value);
+					this.SendPropertyChanging();
+					this._NhomSP = value;
+					this.SendPropertyChanged("NhomSP");
+					this.OnNhomSPChanged();
+				}
+			}
+		}
+		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -20798,6 +20822,8 @@ namespace BEEACCOUNT
 		
 		private string _maKH;
 		
+		private string _NhomSP;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -20848,6 +20874,8 @@ namespace BEEACCOUNT
     partial void OnNgayvanchuyenChanged();
     partial void OnmaKHChanging(string value);
     partial void OnmaKHChanged();
+    partial void OnNhomSPChanging(string value);
+    partial void OnNhomSPChanged();
     #endregion
 		
 		public tbl_DonhangtheoSPvaMKHTemp()
@@ -21311,6 +21339,26 @@ namespace BEEACCOUNT
 					this._maKH = value;
 					this.SendPropertyChanged("maKH");
 					this.OnmaKHChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NhomSP", DbType="NVarChar(50)")]
+		public string NhomSP
+		{
+			get
+			{
+				return this._NhomSP;
+			}
+			set
+			{
+				if ((this._NhomSP != value))
+				{
+					this.OnNhomSPChanging(value);
+					this.SendPropertyChanging();
+					this._NhomSP = value;
+					this.SendPropertyChanged("NhomSP");
+					this.OnNhomSPChanged();
 				}
 			}
 		}
@@ -21892,6 +21940,12 @@ namespace BEEACCOUNT
 		
 		private int _id;
 		
+		private string _maKH;
+		
+		private string _NhomSP;
+		
+		private string _maSP;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -21914,6 +21968,12 @@ namespace BEEACCOUNT
     partial void OnmactyChanged();
     partial void OnidChanging(int value);
     partial void OnidChanged();
+    partial void OnmaKHChanging(string value);
+    partial void OnmaKHChanged();
+    partial void OnNhomSPChanging(string value);
+    partial void OnNhomSPChanged();
+    partial void OnmaSPChanging(string value);
+    partial void OnmaSPChanged();
     #endregion
 		
 		public tbl_GiaHDtheoMCTvaSP()
@@ -22097,6 +22157,66 @@ namespace BEEACCOUNT
 					this._id = value;
 					this.SendPropertyChanged("id");
 					this.OnidChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_maKH", DbType="NVarChar(50)")]
+		public string maKH
+		{
+			get
+			{
+				return this._maKH;
+			}
+			set
+			{
+				if ((this._maKH != value))
+				{
+					this.OnmaKHChanging(value);
+					this.SendPropertyChanging();
+					this._maKH = value;
+					this.SendPropertyChanged("maKH");
+					this.OnmaKHChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NhomSP", DbType="NVarChar(50)")]
+		public string NhomSP
+		{
+			get
+			{
+				return this._NhomSP;
+			}
+			set
+			{
+				if ((this._NhomSP != value))
+				{
+					this.OnNhomSPChanging(value);
+					this.SendPropertyChanging();
+					this._NhomSP = value;
+					this.SendPropertyChanged("NhomSP");
+					this.OnNhomSPChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_maSP", DbType="NVarChar(50)")]
+		public string maSP
+		{
+			get
+			{
+				return this._maSP;
+			}
+			set
+			{
+				if ((this._maSP != value))
+				{
+					this.OnmaSPChanging(value);
+					this.SendPropertyChanging();
+					this._maSP = value;
+					this.SendPropertyChanged("maSP");
+					this.OnmaSPChanged();
 				}
 			}
 		}
