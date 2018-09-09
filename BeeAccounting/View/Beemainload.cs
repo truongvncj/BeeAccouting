@@ -1296,5 +1296,11 @@ namespace BEEACCOUNT.View
         {
             this.pictureBox2.BorderStyle = BorderStyle.Fixed3D;
         }
+
+        private void button2_Click_2(object sender, EventArgs e)
+        {
+            View.BarcodeSample bc = new BarcodeSample();
+            bc.ShowDialog();
+        }
     }
 }
