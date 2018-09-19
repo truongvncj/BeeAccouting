@@ -212,7 +212,6 @@ D:\GitHub\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.Beechooseslec
 D:\GitHub\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.BeeHtoansocaidoiungphieuthu.resources
 D:\GitHub\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.BeeselecSocai.resources
 D:\GitHub\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.BeeCaculating.resources
-D:\GitHub\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.BeeCreatenewaccount.resources
 D:\GitHub\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.BeeSeachtwofield.resources
 D:\GitHub\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.Beeselecttk.resources
 D:\GitHub\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.BeeThongtindoanhnghiep.resources
@@ -222,13 +221,9 @@ D:\GitHub\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.Passwordchang
 D:\GitHub\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.beeselectinput.resources
 D:\GitHub\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.Viewdatatable.resources
 D:\GitHub\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.kareportsform.resources
-D:\GitHub\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.Kasalesuploadandreports.resources
 D:\GitHub\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.Datepick.resources
-D:\GitHub\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.Beestorereciept.resources
 D:\GitHub\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.kaPriodpicker.resources
 D:\GitHub\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.Login.resources
-D:\GitHub\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.PrintLetterOption.resources
-D:\GitHub\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.KASeachcontract.resources
 D:\GitHub\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.Seachcode.resources
 D:\GitHub\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.BeeServersetup.resources
 D:\GitHub\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.valueinput.resources
@@ -372,5 +367,5 @@ D:\GitHub\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.Beedieudongxe
 D:\GitHub\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.BeeSeachdieuvan.resources
 D:\GitHub\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.Beefromdatetodate.resources
 D:\GitHub\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.Beeviewandchoose.resources
-D:\GitHub\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.BarcodeSample.resources
 D:\GitHub\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.TaodonDHtheoSP.resources
+D:\GitHub\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.Beetaotaikhoanketoan.resources

@@ -1,6 +1,6 @@
 ﻿namespace BEEACCOUNT.View
 {
-    partial class BeeCreatenewaccount
+    partial class Beetaotaikhoanketoan
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BeeCreatenewaccount));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Beetaotaikhoanketoan));
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtCodauky = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();

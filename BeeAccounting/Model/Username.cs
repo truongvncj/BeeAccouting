@@ -108,7 +108,7 @@ namespace BEEACCOUNT.Model
 
 
             string rs = (from p in dc.tbl_congties
-                         where p.macty == macty
+                      //   where p.macty == macty
                          select p.tencongty).FirstOrDefault();
 
 

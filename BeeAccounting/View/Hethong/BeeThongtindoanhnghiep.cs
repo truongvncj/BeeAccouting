@@ -39,7 +39,7 @@ namespace BEEACCOUNT.View
             //        tbl_congty cty = new tbl_congty();
 
             var cty = (from ctyi in dc.tbl_congties
-                       where ctyi.macty == macty
+                      // where ctyi.macty == macty
                        select ctyi).FirstOrDefault();
             if (cty != null)
             {
@@ -49,7 +49,7 @@ namespace BEEACCOUNT.View
                 txtmasothue.Text = cty.Masothue;
                 txttengiamdoc.Text = cty.tengiamdoc;
                 txttenketoantruong.Text = cty.tenketoantruong;
-                txtmacty.Text = cty.macty;
+                //txtmacty.Text = cty.macty;
                 //txtmasothue.Text = cty.Masothue;
                 //txtmasothue.Text = cty.Masothue;
                 //txtmasothue.Text = cty.Masothue;
@@ -218,7 +218,7 @@ namespace BEEACCOUNT.View
             //        tbl_congty cty = new tbl_congty();
 
             var cty = (from ctyi in dc.tbl_congties
-                       where ctyi.macty == macty
+                     //  where ctyi.macty == macty
                        select ctyi).FirstOrDefault();
             if (cty != null)
             {
@@ -228,7 +228,7 @@ namespace BEEACCOUNT.View
                 cty.Masothue = txtmasothue.Text;
                 cty.tengiamdoc = txttengiamdoc.Text;
                 cty.tenketoantruong = txttenketoantruong.Text;
-                cty.macty = macty;
+              //  cty.macty = macty;
 
                 dc.SubmitChanges();
             }
@@ -241,7 +241,7 @@ namespace BEEACCOUNT.View
                 p.Masothue = txtmasothue.Text;
                 p.tengiamdoc = txttengiamdoc.Text;
                 p.tenketoantruong = txttenketoantruong.Text;
-                p.macty = macty;
+              //  p.macty = macty;
                 dc.tbl_congties.InsertOnSubmit(p);
                 dc.SubmitChanges();
 

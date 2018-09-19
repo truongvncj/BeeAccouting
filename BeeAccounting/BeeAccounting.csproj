@@ -143,22 +143,16 @@
     <Compile Include="shared\ExtractToDataTableOptions.cs" />
     <Compile Include="shared\LinQToExcel.cs" />
     <Compile Include="shared\StringExtensions.cs" />
-    <Compile Include="View\BarcodeSample.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\BarcodeSample.Designer.cs">
-      <DependentUpon>BarcodeSample.cs</DependentUpon>
-    </Compile>
     <Compile Include="View\Dieuvan\TaodonDHtheoSP.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\Dieuvan\TaodonDHtheoSP.Designer.cs">
       <DependentUpon>TaodonDHtheoSP.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Beeviewandchoose.cs">
+    <Compile Include="View\Formview\Beeviewandchoose.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Beeviewandchoose.Designer.cs">
+    <Compile Include="View\Formview\Beeviewandchoose.Designer.cs">
       <DependentUpon>Beeviewandchoose.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Dieuvan\Beedieudongxe.cs">
@@ -173,22 +167,22 @@
     <Compile Include="View\Dieuvan\bedieuvan.Designer.cs">
       <DependentUpon>bedieuvan.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\BeeLCTT200dauky.cs">
+    <Compile Include="View\BCTC\BeeLCTT200dauky.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\BeeLCTT200dauky.Designer.cs">
+    <Compile Include="View\BCTC\BeeLCTT200dauky.Designer.cs">
       <DependentUpon>BeeLCTT200dauky.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\BeeCDKT200nhapsocho.cs">
+    <Compile Include="View\BCTC\BeeCDKT200nhapsocho.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\BeeCDKT200nhapsocho.Designer.cs">
+    <Compile Include="View\BCTC\BeeCDKT200nhapsocho.Designer.cs">
       <DependentUpon>BeeCDKT200nhapsocho.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\BeeBCKQKD200updatechotso.cs">
+    <Compile Include="View\BCTC\BeeBCKQKD200updatechotso.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\BeeBCKQKD200updatechotso.Designer.cs">
+    <Compile Include="View\BCTC\BeeBCKQKD200updatechotso.Designer.cs">
       <DependentUpon>BeeBCKQKD200updatechotso.cs</DependentUpon>
     </Compile>
     <Compile Include="View\beektth.cs">
@@ -197,106 +191,106 @@
     <Compile Include="View\beektth.Designer.cs">
       <DependentUpon>beektth.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\BeeSeachdieuvan.cs">
+    <Compile Include="View\Dieuvan\BeeSeachdieuvan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\BeeSeachdieuvan.Designer.cs">
+    <Compile Include="View\Dieuvan\BeeSeachdieuvan.Designer.cs">
       <DependentUpon>BeeSeachdieuvan.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Beefromdatetodate.cs">
+    <Compile Include="View\Formview\Beefromdatetodate.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Beefromdatetodate.Designer.cs">
+    <Compile Include="View\Formview\Beefromdatetodate.Designer.cs">
       <DependentUpon>Beefromdatetodate.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\NPgiavantaitheotuyen.cs">
+    <Compile Include="View\Dieuvan\NPgiavantaitheotuyen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\NPgiavantaitheotuyen.Designer.cs">
+    <Compile Include="View\Dieuvan\NPgiavantaitheotuyen.Designer.cs">
       <DependentUpon>NPgiavantaitheotuyen.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\NPDanhsackhachhangvantai.cs">
+    <Compile Include="View\Dieuvan\NPDanhsackhachhangvantai.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\NPDanhsackhachhangvantai.Designer.cs">
+    <Compile Include="View\Dieuvan\NPDanhsackhachhangvantai.Designer.cs">
       <DependentUpon>NPDanhsackhachhangvantai.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\NPdanhsachxe.cs">
+    <Compile Include="View\Dieuvan\NPdanhsachxe.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\NPdanhsachxe.Designer.cs">
+    <Compile Include="View\Dieuvan\NPdanhsachxe.Designer.cs">
       <DependentUpon>NPdanhsachxe.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\NPDanhsachnhavantai.cs">
+    <Compile Include="View\Dieuvan\NPDanhsachnhavantai.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\NPDanhsachnhavantai.Designer.cs">
+    <Compile Include="View\Dieuvan\NPDanhsachnhavantai.Designer.cs">
       <DependentUpon>NPDanhsachnhavantai.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\BeeDanhsachsanpham.cs">
+    <Compile Include="View\Khothanhpham\BeeDanhsachsanpham.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\BeeDanhsachsanpham.Designer.cs">
+    <Compile Include="View\Khothanhpham\BeeDanhsachsanpham.Designer.cs">
       <DependentUpon>BeeDanhsachsanpham.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\BeeDanhsachnhomsanpham.cs">
+    <Compile Include="View\Khothanhpham\BeeDanhsachnhomsanpham.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\BeeDanhsachnhomsanpham.Designer.cs">
+    <Compile Include="View\Khothanhpham\BeeDanhsachnhomsanpham.Designer.cs">
       <DependentUpon>BeeDanhsachnhomsanpham.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\BeeDanhsachkho.cs">
+    <Compile Include="View\Khothanhpham\BeeDanhsachkho.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\BeeDanhsachkho.Designer.cs">
+    <Compile Include="View\Khothanhpham\BeeDanhsachkho.Designer.cs">
       <DependentUpon>BeeDanhsachkho.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\BeeHtdoiungphieuxuatkho.cs">
+    <Compile Include="View\Khothanhpham\BeeHtdoiungphieuxuatkho.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\BeeHtdoiungphieuxuatkho.Designer.cs">
+    <Compile Include="View\Khothanhpham\BeeHtdoiungphieuxuatkho.Designer.cs">
       <DependentUpon>BeeHtdoiungphieuxuatkho.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\BeeHtdoiungphieunhapkho.cs">
+    <Compile Include="View\Khothanhpham\BeeHtdoiungphieunhapkho.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\BeeHtdoiungphieunhapkho.Designer.cs">
+    <Compile Include="View\Khothanhpham\BeeHtdoiungphieunhapkho.Designer.cs">
       <DependentUpon>BeeHtdoiungphieunhapkho.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\BeeButtoantonghop.cs">
+    <Compile Include="View\Ketoantonghop\BeeButtoantonghop.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\BeeButtoantonghop.Designer.cs">
+    <Compile Include="View\Ketoantonghop\BeeButtoantonghop.Designer.cs">
       <DependentUpon>BeeButtoantonghop.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\BeeKhophieuxuat.cs">
+    <Compile Include="View\Khothanhpham\BeeKhophieuxuat.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\BeeKhophieuxuat.Designer.cs">
+    <Compile Include="View\Khothanhpham\BeeKhophieuxuat.Designer.cs">
       <DependentUpon>BeeKhophieuxuat.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\BeeNCCnewaccount.cs">
+    <Compile Include="View\Muahang\BeeNCCnewaccount.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\BeeNCCnewaccount.Designer.cs">
+    <Compile Include="View\Muahang\BeeNCCnewaccount.Designer.cs">
       <DependentUpon>BeeNCCnewaccount.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\BeeHtoansocaiphieuchi.cs">
+    <Compile Include="View\Tienmat\BeeHtoansocaiphieuchi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\BeeHtoansocaiphieuchi.Designer.cs">
+    <Compile Include="View\Tienmat\BeeHtoansocaiphieuchi.Designer.cs">
       <DependentUpon>BeeHtoansocaiphieuchi.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Beeloaitaikhoan.cs">
+    <Compile Include="View\Taikhoanketoan\Beeloaitaikhoan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Beeloaitaikhoan.Designer.cs">
+    <Compile Include="View\Taikhoanketoan\Beeloaitaikhoan.Designer.cs">
       <DependentUpon>Beeloaitaikhoan.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Beemosochitiettaikhoan.cs">
+    <Compile Include="View\Taikhoanketoan\Beemosochitiettaikhoan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Beemosochitiettaikhoan.Designer.cs">
+    <Compile Include="View\Taikhoanketoan\Beemosochitiettaikhoan.Designer.cs">
       <DependentUpon>Beemosochitiettaikhoan.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Beemainload.cs">
@@ -305,142 +299,130 @@
     <Compile Include="View\Beemainload.Designer.cs">
       <DependentUpon>Beemainload.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\BeePhieuchi.cs">
+    <Compile Include="View\Tienmat\BeePhieuchi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\BeePhieuchi.Designer.cs">
+    <Compile Include="View\Tienmat\BeePhieuchi.Designer.cs">
       <DependentUpon>BeePhieuchi.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\BeeKhophieunhap.cs">
+    <Compile Include="View\Khothanhpham\BeeKhophieunhap.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\BeeKhophieunhap.Designer.cs">
+    <Compile Include="View\Khothanhpham\BeeKhophieunhap.Designer.cs">
       <DependentUpon>BeeKhophieunhap.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\BeePhieuThu.cs">
+    <Compile Include="View\Tienmat\BeePhieuThu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\BeePhieuThu.Designer.cs">
+    <Compile Include="View\Tienmat\BeePhieuThu.Designer.cs">
       <DependentUpon>BeePhieuThu.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Beechooseslect.cs">
+    <Compile Include="View\Formview\Beechooseslect.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Beechooseslect.Designer.cs">
+    <Compile Include="View\Formview\Beechooseslect.Designer.cs">
       <DependentUpon>Beechooseslect.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\BeeHtoansocaidoiungphieuthu.cs">
+    <Compile Include="View\Tienmat\BeeHtoansocaidoiungphieuthu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\BeeHtoansocaidoiungphieuthu.Designer.cs">
+    <Compile Include="View\Tienmat\BeeHtoansocaidoiungphieuthu.Designer.cs">
       <DependentUpon>BeeHtoansocaidoiungphieuthu.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Beeseleckhobcxnt.cs">
+    <Compile Include="View\Khothanhpham\Beeseleckhobcxnt.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Beeseleckhobcxnt.Designer.cs">
+    <Compile Include="View\Khothanhpham\Beeseleckhobcxnt.Designer.cs">
       <DependentUpon>Beeseleckhobcxnt.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\BeeselecSocai.cs">
+    <Compile Include="View\Ketoantonghop\BeeselecSocai.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\BeeselecSocai.Designer.cs">
+    <Compile Include="View\Ketoantonghop\BeeselecSocai.Designer.cs">
       <DependentUpon>BeeselecSocai.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\BeeCaculating.cs">
+    <Compile Include="View\Formview\BeeCaculating.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\BeeCaculating.Designer.cs">
+    <Compile Include="View\Formview\BeeCaculating.Designer.cs">
       <DependentUpon>BeeCaculating.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\BeeCreatenewaccount.cs">
+    <Compile Include="View\Taikhoanketoan\Beetaotaikhoanketoan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\BeeCreatenewaccount.Designer.cs">
-      <DependentUpon>BeeCreatenewaccount.cs</DependentUpon>
+    <Compile Include="View\Taikhoanketoan\Beetaotaikhoanketoan.Designer.cs">
+      <DependentUpon>Beetaotaikhoanketoan.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\BeeSeachtwofield.cs">
+    <Compile Include="View\Formview\BeeSeachtwofield.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\BeeSeachtwofield.Designer.cs">
+    <Compile Include="View\Formview\BeeSeachtwofield.Designer.cs">
       <DependentUpon>BeeSeachtwofield.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Beeselecttk.cs">
+    <Compile Include="View\Formview\Beeselecttk.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Beeselecttk.Designer.cs">
+    <Compile Include="View\Formview\Beeselecttk.Designer.cs">
       <DependentUpon>Beeselecttk.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\BeeThongtindoanhnghiep.cs">
+    <Compile Include="View\Hethong\BeeThongtindoanhnghiep.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\BeeThongtindoanhnghiep.Designer.cs">
+    <Compile Include="View\Hethong\BeeThongtindoanhnghiep.Designer.cs">
       <DependentUpon>BeeThongtindoanhnghiep.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Beeyearsellect.cs">
+    <Compile Include="View\Formview\Beeyearsellect.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Beeyearsellect.Designer.cs">
+    <Compile Include="View\Formview\Beeyearsellect.Designer.cs">
       <DependentUpon>Beeyearsellect.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Noouthourise.cs">
+    <Compile Include="View\Formview\Noouthourise.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Noouthourise.Designer.cs">
+    <Compile Include="View\Formview\Noouthourise.Designer.cs">
       <DependentUpon>Noouthourise.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Passwordchange.cs">
+    <Compile Include="View\Hethong\Passwordchange.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Passwordchange.Designer.cs">
+    <Compile Include="View\Hethong\Passwordchange.Designer.cs">
       <DependentUpon>Passwordchange.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\beeselectinput.cs">
+    <Compile Include="View\Formview\beeselectinput.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\beeselectinput.Designer.cs">
+    <Compile Include="View\Formview\beeselectinput.Designer.cs">
       <DependentUpon>beeselectinput.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Viewdatatable.cs">
+    <Compile Include="View\Formview\Viewdatatable.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Viewdatatable.Designer.cs">
+    <Compile Include="View\Formview\Viewdatatable.Designer.cs">
       <DependentUpon>Viewdatatable.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Beekyketoan.cs">
+    <Compile Include="View\Formview\Beekyketoan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Beekyketoan.Designer.cs">
+    <Compile Include="View\Formview\Beekyketoan.Designer.cs">
       <DependentUpon>Beekyketoan.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\kareportsform.cs">
+    <Compile Include="View\KASample\kareportsform.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\kareportsform.Designer.cs">
+    <Compile Include="View\KASample\kareportsform.Designer.cs">
       <DependentUpon>kareportsform.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\kasaleupload.cs">
+    <Compile Include="View\Formview\Datepick.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\kasaleupload.Designer.cs">
-      <DependentUpon>kasaleupload.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\Datepick.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\Datepick.Designer.cs">
+    <Compile Include="View\Formview\Datepick.Designer.cs">
       <DependentUpon>Datepick.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Beemasterinput.cs">
+    <Compile Include="View\KASample\kaPriodpicker.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Beemasterinput.Designer.cs">
-      <DependentUpon>Beemasterinput.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\kaPriodpicker.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\kaPriodpicker.Designer.cs">
+    <Compile Include="View\KASample\kaPriodpicker.Designer.cs">
       <DependentUpon>kaPriodpicker.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Login.cs">
@@ -449,40 +431,28 @@
     <Compile Include="View\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\PrintLetterOption.cs">
+    <Compile Include="View\Formview\Seachcode.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\PrintLetterOption.Designer.cs">
-      <DependentUpon>PrintLetterOption.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\KASeachcontract.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\KASeachcontract.Designer.cs">
-      <DependentUpon>KASeachcontract.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\Seachcode.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\Seachcode.Designer.cs">
+    <Compile Include="View\Formview\Seachcode.Designer.cs">
       <DependentUpon>Seachcode.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\BeeServersetup.cs">
+    <Compile Include="View\Hethong\BeeServersetup.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\BeeServersetup.Designer.cs">
+    <Compile Include="View\Hethong\BeeServersetup.Designer.cs">
       <DependentUpon>BeeServersetup.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\valueinput.cs">
+    <Compile Include="View\Formview\valueinput.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\valueinput.Designer.cs">
+    <Compile Include="View\Formview\valueinput.Designer.cs">
       <DependentUpon>valueinput.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\BeeInputchange.cs">
+    <Compile Include="View\Formview\BeeInputchange.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\BeeInputchange.Designer.cs">
+    <Compile Include="View\Formview\BeeInputchange.Designer.cs">
       <DependentUpon>BeeInputchange.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Main.cs">
@@ -494,16 +464,16 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="shared\Utils.cs" />
-    <Compile Include="View\Reportsview.cs">
+    <Compile Include="View\Formview\Reportsview.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Reportsview.Designer.cs">
+    <Compile Include="View\Formview\Reportsview.Designer.cs">
       <DependentUpon>Reportsview.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Viewtable.cs">
+    <Compile Include="View\Formview\Viewtable.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Viewtable.Designer.cs">
+    <Compile Include="View\Formview\Viewtable.Designer.cs">
       <DependentUpon>Viewtable.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Reports\BangCDKToant200lt.rdlc">
@@ -554,13 +524,10 @@
     <EmbeddedResource Include="Reports\Paymentrequest.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\BarcodeSample.resx">
-      <DependentUpon>BarcodeSample.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="View\Dieuvan\TaodonDHtheoSP.resx">
       <DependentUpon>TaodonDHtheoSP.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Beeviewandchoose.resx">
+    <EmbeddedResource Include="View\Formview\Beeviewandchoose.resx">
       <DependentUpon>Beeviewandchoose.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Dieuvan\Beedieudongxe.resx">
@@ -569,167 +536,155 @@
     <EmbeddedResource Include="View\Dieuvan\bedieuvan.resx">
       <DependentUpon>bedieuvan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\BeeLCTT200dauky.resx">
+    <EmbeddedResource Include="View\BCTC\BeeLCTT200dauky.resx">
       <DependentUpon>BeeLCTT200dauky.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\BeeCDKT200nhapsocho.resx">
+    <EmbeddedResource Include="View\BCTC\BeeCDKT200nhapsocho.resx">
       <DependentUpon>BeeCDKT200nhapsocho.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\BeeBCKQKD200updatechotso.resx">
+    <EmbeddedResource Include="View\BCTC\BeeBCKQKD200updatechotso.resx">
       <DependentUpon>BeeBCKQKD200updatechotso.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\beektth.resx">
       <DependentUpon>beektth.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\BeeSeachdieuvan.resx">
+    <EmbeddedResource Include="View\Dieuvan\BeeSeachdieuvan.resx">
       <DependentUpon>BeeSeachdieuvan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Beefromdatetodate.resx">
+    <EmbeddedResource Include="View\Formview\Beefromdatetodate.resx">
       <DependentUpon>Beefromdatetodate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\NPgiavantaitheotuyen.resx">
+    <EmbeddedResource Include="View\Dieuvan\NPgiavantaitheotuyen.resx">
       <DependentUpon>NPgiavantaitheotuyen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\NPDanhsackhachhangvantai.resx">
+    <EmbeddedResource Include="View\Dieuvan\NPDanhsackhachhangvantai.resx">
       <DependentUpon>NPDanhsackhachhangvantai.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\NPdanhsachxe.resx">
+    <EmbeddedResource Include="View\Dieuvan\NPdanhsachxe.resx">
       <DependentUpon>NPdanhsachxe.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\NPDanhsachnhavantai.resx">
+    <EmbeddedResource Include="View\Dieuvan\NPDanhsachnhavantai.resx">
       <DependentUpon>NPDanhsachnhavantai.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\BeeDanhsachsanpham.resx">
+    <EmbeddedResource Include="View\Khothanhpham\BeeDanhsachsanpham.resx">
       <DependentUpon>BeeDanhsachsanpham.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\BeeDanhsachnhomsanpham.resx">
+    <EmbeddedResource Include="View\Khothanhpham\BeeDanhsachnhomsanpham.resx">
       <DependentUpon>BeeDanhsachnhomsanpham.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\BeeDanhsachkho.resx">
+    <EmbeddedResource Include="View\Khothanhpham\BeeDanhsachkho.resx">
       <DependentUpon>BeeDanhsachkho.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\BeeHtdoiungphieuxuatkho.resx">
+    <EmbeddedResource Include="View\Khothanhpham\BeeHtdoiungphieuxuatkho.resx">
       <DependentUpon>BeeHtdoiungphieuxuatkho.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\BeeHtdoiungphieunhapkho.resx">
+    <EmbeddedResource Include="View\Khothanhpham\BeeHtdoiungphieunhapkho.resx">
       <DependentUpon>BeeHtdoiungphieunhapkho.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\BeeButtoantonghop.resx">
+    <EmbeddedResource Include="View\Ketoantonghop\BeeButtoantonghop.resx">
       <DependentUpon>BeeButtoantonghop.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\BeeKhophieuxuat.resx">
+    <EmbeddedResource Include="View\Khothanhpham\BeeKhophieuxuat.resx">
       <DependentUpon>BeeKhophieuxuat.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\BeeNCCnewaccount.resx">
+    <EmbeddedResource Include="View\Muahang\BeeNCCnewaccount.resx">
       <DependentUpon>BeeNCCnewaccount.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\BeeHtoansocaiphieuchi.resx">
+    <EmbeddedResource Include="View\Tienmat\BeeHtoansocaiphieuchi.resx">
       <DependentUpon>BeeHtoansocaiphieuchi.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Beeloaitaikhoan.resx">
+    <EmbeddedResource Include="View\Taikhoanketoan\Beeloaitaikhoan.resx">
       <DependentUpon>Beeloaitaikhoan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Beemosochitiettaikhoan.resx">
+    <EmbeddedResource Include="View\Taikhoanketoan\Beemosochitiettaikhoan.resx">
       <DependentUpon>Beemosochitiettaikhoan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Beemainload.resx">
       <DependentUpon>Beemainload.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\BeePhieuchi.resx">
+    <EmbeddedResource Include="View\Tienmat\BeePhieuchi.resx">
       <DependentUpon>BeePhieuchi.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\BeeKhophieunhap.resx">
+    <EmbeddedResource Include="View\Khothanhpham\BeeKhophieunhap.resx">
       <DependentUpon>BeeKhophieunhap.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\BeePhieuThu.resx">
+    <EmbeddedResource Include="View\Tienmat\BeePhieuThu.resx">
       <DependentUpon>BeePhieuThu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Beechooseslect.resx">
+    <EmbeddedResource Include="View\Formview\Beechooseslect.resx">
       <DependentUpon>Beechooseslect.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\BeeHtoansocaidoiungphieuthu.resx">
+    <EmbeddedResource Include="View\Tienmat\BeeHtoansocaidoiungphieuthu.resx">
       <DependentUpon>BeeHtoansocaidoiungphieuthu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Beeseleckhobcxnt.resx">
+    <EmbeddedResource Include="View\Khothanhpham\Beeseleckhobcxnt.resx">
       <DependentUpon>Beeseleckhobcxnt.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\BeeselecSocai.resx">
+    <EmbeddedResource Include="View\Ketoantonghop\BeeselecSocai.resx">
       <DependentUpon>BeeselecSocai.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\BeeCaculating.resx">
+    <EmbeddedResource Include="View\Formview\BeeCaculating.resx">
       <DependentUpon>BeeCaculating.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\BeeCreatenewaccount.resx">
-      <DependentUpon>BeeCreatenewaccount.cs</DependentUpon>
+    <EmbeddedResource Include="View\Taikhoanketoan\Beetaotaikhoanketoan.resx">
+      <DependentUpon>Beetaotaikhoanketoan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\BeeSeachtwofield.resx">
+    <EmbeddedResource Include="View\Formview\BeeSeachtwofield.resx">
       <DependentUpon>BeeSeachtwofield.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Beeselecttk.resx">
+    <EmbeddedResource Include="View\Formview\Beeselecttk.resx">
       <DependentUpon>Beeselecttk.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\BeeThongtindoanhnghiep.resx">
+    <EmbeddedResource Include="View\Hethong\BeeThongtindoanhnghiep.resx">
       <DependentUpon>BeeThongtindoanhnghiep.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Beeyearsellect.resx">
+    <EmbeddedResource Include="View\Formview\Beeyearsellect.resx">
       <DependentUpon>Beeyearsellect.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Noouthourise.resx">
+    <EmbeddedResource Include="View\Formview\Noouthourise.resx">
       <DependentUpon>Noouthourise.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Passwordchange.resx">
+    <EmbeddedResource Include="View\Hethong\Passwordchange.resx">
       <DependentUpon>Passwordchange.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\beeselectinput.resx">
+    <EmbeddedResource Include="View\Formview\beeselectinput.resx">
       <DependentUpon>beeselectinput.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Viewdatatable.resx">
+    <EmbeddedResource Include="View\Formview\Viewdatatable.resx">
       <DependentUpon>Viewdatatable.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Beekyketoan.resx">
+    <EmbeddedResource Include="View\Formview\Beekyketoan.resx">
       <DependentUpon>Beekyketoan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\kareportsform.resx">
+    <EmbeddedResource Include="View\KASample\kareportsform.resx">
       <DependentUpon>kareportsform.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\kasaleupload.resx">
-      <DependentUpon>kasaleupload.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\Datepick.resx">
+    <EmbeddedResource Include="View\Formview\Datepick.resx">
       <DependentUpon>Datepick.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Beemasterinput.resx">
-      <DependentUpon>Beemasterinput.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\kaPriodpicker.resx">
+    <EmbeddedResource Include="View\KASample\kaPriodpicker.resx">
       <DependentUpon>kaPriodpicker.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\PrintLetterOption.resx">
-      <DependentUpon>PrintLetterOption.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\KASeachcontract.resx">
-      <DependentUpon>KASeachcontract.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\Seachcode.resx">
+    <EmbeddedResource Include="View\Formview\Seachcode.resx">
       <DependentUpon>Seachcode.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\BeeServersetup.resx">
+    <EmbeddedResource Include="View\Hethong\BeeServersetup.resx">
       <DependentUpon>BeeServersetup.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\valueinput.resx">
+    <EmbeddedResource Include="View\Formview\valueinput.resx">
       <DependentUpon>valueinput.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\BeeInputchange.resx">
+    <EmbeddedResource Include="View\Formview\BeeInputchange.resx">
       <DependentUpon>BeeInputchange.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Reportsview.resx">
+    <EmbeddedResource Include="View\Formview\Reportsview.resx">
       <DependentUpon>Reportsview.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Viewtable.resx">
+    <EmbeddedResource Include="View\Formview\Viewtable.resx">
       <DependentUpon>Viewtable.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config">

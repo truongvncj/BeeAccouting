@@ -12,7 +12,7 @@ namespace BEEACCOUNT.View
 {
 
 
-    public partial class BeeCreatenewaccount : Form
+    public partial class Beetaotaikhoanketoan : Form
     {
         // public View.CreatenewContract contractnew;
         public string matk { get; set; }
@@ -41,7 +41,7 @@ namespace BEEACCOUNT.View
         }
 
 
-        public BeeCreatenewaccount(int loai, string matk) // int = 1 xóa; int = 2 sửa ; int = 3 tao mới; int = 4 vừa sửa+ xóa
+        public Beetaotaikhoanketoan(int loai, string matk) // int = 1 xóa; int = 2 sửa ; int = 3 tao mới; int = 4 vừa sửa+ xóa
         {
             InitializeComponent();
             this.matk = matk;

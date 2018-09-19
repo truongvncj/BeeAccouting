@@ -9,7 +9,7 @@ namespace BEEACCOUNT.Model
     class Taikhoanketoan
     {
         public IQueryable Danhsach { get; set; }
-        
+
         public static IQueryable danhsachtaikhoan(LinqtoSQLDataContext dc)
         {
 
@@ -20,23 +20,36 @@ namespace BEEACCOUNT.Model
 
             //   LinqtoSQLDataContext db = new LinqtoSQLDataContext(connection_string);
             LinqtoSQLDataContext db = dc;
-              var rs = from tbl_dstaikhoan in db.tbl_dstaikhoans
+            var rs = from tbl_dstaikhoan in db.tbl_dstaikhoans
                      orderby tbl_dstaikhoan.matk, tbl_dstaikhoan.matktren
-                     select new {
+                     select new
+                     {
 
 
                          Mã_tài_khoản = tbl_dstaikhoan.matk,
-                         Tên_tài_khoản= tbl_dstaikhoan.tentk.Trim(),
-                    //     Loại_tài_khoản = tbl_dstaikhoan.loaitkid,
-                         Mã_tài_khoản_cấp_trên =  tbl_dstaikhoan.matktren,
-                         Cấp_tài_khoản =  tbl_dstaikhoan.captk,
-                         Theo_dõi_chi_tiết =  tbl_dstaikhoan.loaichitiet,
+                         Tên_tài_khoản = tbl_dstaikhoan.tentk.Trim(),
+                         //     Loại_tài_khoản = tbl_dstaikhoan.loaitkid,
+                         Mã_tài_khoản_cấp_trên = tbl_dstaikhoan.matktren,
+                         Cấp_tài_khoản = tbl_dstaikhoan.captk,
+                         Theo_dõi_chi_tiết = tbl_dstaikhoan.loaichitiet,
                          Dư_Nợ_đầu_kỳ = tbl_dstaikhoan.nodk,
                          Dư_Có_đầu_kỳ = tbl_dstaikhoan.codk,
+
+                         CDKT_Mã_PS_Nợ = tbl_dstaikhoan.CDKTMaCTPSCo,
+                         CDKT_Mã_PS_Có = tbl_dstaikhoan.CDKTMaCTPSNo,
+
+                         KQKD_Mã_PS_Nợ = tbl_dstaikhoan.KQKDMACTPSNo,
+                         KQKD_Mã_PS_Có = tbl_dstaikhoan.KQKDMACTPSCo,
+
+                         LCTT_Mã_PS_Nợ = tbl_dstaikhoan.LCTTMACTPSNO,
+                         LCTT_Mã_PS_Có = tbl_dstaikhoan.LCTTMACTPSCO,
+
+
+
                          ID = tbl_dstaikhoan.id,
                      };
 
-        //    grviewlisttk.DataSource = rs;
+            //    grviewlisttk.DataSource = rs;
 
 
 
@@ -55,7 +68,7 @@ namespace BEEACCOUNT.Model
         public static void themmoitaikhoan()
         {
 
-            View.BeeCreatenewaccount createacc = new BeeCreatenewaccount(3, "");
+            View.Beetaotaikhoanketoan createacc = new Beetaotaikhoanketoan(3, "");
 
             createacc.ShowDialog();
             bool chitiettheodoi = createacc.tkchitiet;
@@ -92,8 +105,8 @@ namespace BEEACCOUNT.Model
                 db.SubmitChanges();
 
                 //    MeasureItemEventArgs.re
-            //    var rs = Model.Taikhoanketoan.danhsachtaikhoan();
-              //  dataGridView1.DataSource = rs;
+                //    var rs = Model.Taikhoanketoan.danhsachtaikhoan();
+                //  dataGridView1.DataSource = rs;
 
 
             }
@@ -106,9 +119,9 @@ namespace BEEACCOUNT.Model
         public static void suataikhoan(string matk)
         {
 
-          //  string taikhoan = rs.matk;
+            //  string taikhoan = rs.matk;
 
-            View.BeeCreatenewaccount createacc = new BeeCreatenewaccount(4, matk); // int = 1 xóa; int = 2 sửa ; int = 3 tao mới; int = 4 vừa sửa+ xóa
+            View.Beetaotaikhoanketoan createacc = new Beetaotaikhoanketoan(4, matk); // int = 1 xóa; int = 2 sửa ; int = 3 tao mới; int = 4 vừa sửa+ xóa
 
             createacc.ShowDialog();
 
@@ -139,14 +152,14 @@ namespace BEEACCOUNT.Model
             socaips.Diengiai = socai.Diengiai;
             socaips.manghiepvu = socai.manghiepvu;
             socaips.manghiepvu = socai.manghiepvu;
-      
+
             socaips.Ngayghiso = socai.Ngayghiso;
             socaips.username = socai.username;
-       
+
 
             socaips.Sohieuchungtu = socai.Sohieuchungtu;
             socaips.Ngayctu = socai.Ngayctu;
-          //  socaips.Soctu = socai.Soctu;
+            //  socaips.Soctu = socai.Soctu;
 
             // socaips.Soctu = socai.Soctu;
             // socaips.Soctu = socai.Soctu;
@@ -171,11 +184,11 @@ namespace BEEACCOUNT.Model
                          Mã_tài_khoản = tbl_dstaikhoan.matk,
                          Tên_tài_khoản = tbl_dstaikhoan.tentk.Trim(),
                          //     Loại_tài_khoản = tbl_dstaikhoan.loaitkid,
-                     //    Mã_tài_khoản_cấp_trên = tbl_dstaikhoan.matktren,
-                     //    Cấp_tài_khoản = tbl_dstaikhoan.captk,
+                         //    Mã_tài_khoản_cấp_trên = tbl_dstaikhoan.matktren,
+                         //    Cấp_tài_khoản = tbl_dstaikhoan.captk,
                          Theo_dõi_chi_tiết = tbl_dstaikhoan.loaichitiet,
-                     //    Dư_Nợ_đầu_kỳ = tbl_dstaikhoan.nodk,
-                      //   Dư_Có_đầu_kỳ = tbl_dstaikhoan.codk,
+                         //    Dư_Nợ_đầu_kỳ = tbl_dstaikhoan.nodk,
+                         //   Dư_Có_đầu_kỳ = tbl_dstaikhoan.codk,
                          ID = tbl_dstaikhoan.id,
                      };
 

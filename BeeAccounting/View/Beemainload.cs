@@ -1299,8 +1299,8 @@ namespace BEEACCOUNT.View
 
         private void button2_Click_2(object sender, EventArgs e)
         {
-            View.BarcodeSample bc = new BarcodeSample();
-            bc.ShowDialog();
+        //    View.BarcodeSample bc = new BarcodeSample();
+       //     bc.ShowDialog();
         }
     }
 }

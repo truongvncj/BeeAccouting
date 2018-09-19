@@ -2476,47 +2476,7 @@ namespace BEEACCOUNT.View
             //}
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            // savolume update
-
-            //  KaSalesupLoad
-            //     kaPriodpicker
-
-
-            FormCollection fc = System.Windows.Forms.Application.OpenForms;
-
-            bool kq = false;
-            foreach (Form frm in fc)
-            {
-                ///  KAcontractlisting
-                ///    if (frm.Text == "CreatenewContract")
-                if (frm.Text == "KaSalesupLoad")
-                {
-                    kq = true;
-                    frm.Focus();
-
-                }
-            }
-
-            if (!kq)
-            {
-
-
-
-
-                View.Kasalesuploadandreports KaSalesupLoad = new View.Kasalesuploadandreports();
-
-
-                KaSalesupLoad.Show();
-            }
-
-
-
-
-
-        }
-
+   
         private void iNPUTPERIODDEPOSITAMOUNTToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
@@ -2612,20 +2572,7 @@ namespace BEEACCOUNT.View
             this.Close();
         }
 
-        private void configMasterToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            //    panelmain.Controls.Clear();  //PosmCreateTK
-
-
-            View.Beestorereciept KAmasterinput = new View.Beestorereciept();
-
-            KAmasterinput.TopLevel = false;
-            KAmasterinput.AutoScroll = true;
-            panelmain.Controls.Add(KAmasterinput);
-            KAmasterinput.Show();
-
-        }
-
+    
         private void usersSetupToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
@@ -3003,8 +2950,7 @@ namespace BEEACCOUNT.View
 
         private void thôngTínDoanhNghiệpToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            View.BeeThongtindoanhnghiep view = new BeeThongtindoanhnghiep();
-            view.ShowDialog();
+         
         }
 
         private void danhSáchLoạiTàiKhoảnToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -3013,36 +2959,12 @@ namespace BEEACCOUNT.View
 
         private void danhSáchLoạiTàiKhoảnToolStripMenuItem2_Click(object sender, EventArgs e)
         {
-            #region//dsloaitk
-            string connection_string = Utils.getConnectionstr();
-
-            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
-
-            var rs8 = Model.loaitaikhoanketoan.danhsachloaitaikhoan(dc);
-            Viewtable viewtblrs8 = new Viewtable(rs8, dc, "DANH SÁCH LOẠI TÀI KHOẢN", 1, "tk");// danh sach loại tài khoản kế toán
-
-            viewtblrs8.Show();
-
-
-            #endregion
+         
 
         }
 
         private void danhSáchTàiKhoảnKếToánToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
-            #region//dstaikhoanketoan
-            string connection_string = Utils.getConnectionstr();
-
-            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
-
-
-            var rs = Model.Taikhoanketoan.danhsachtaikhoan(dc);
-            Viewtable viewtblrs55 = new Viewtable(rs, dc, "DANH SÁCH TÀI KHOẢN KẾ TOÁN", 0, "tk");// view code 0 la danh sach tai khoan ke toan
-
-            viewtblrs55.Show();
-
-            #endregion
 
 
         }
@@ -3054,20 +2976,6 @@ namespace BEEACCOUNT.View
 
         private void mởSổTheoDõiChiTiếtTàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            #region//sochitiet
-            string connection_string = Utils.getConnectionstr();
-
-            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
-
-            var rs1 = Model.Danhsachtkchitiet.danhsachtaikhoanchitiet(dc);
-
-            Viewtable viewtbl = new Viewtable(rs1, dc, "DANH SÁCH MÃ CHI TIẾT TÀI KHOẢN", 2, "tk");// view code 2 mo so chi tiet tai khoan
-            viewtbl.Show();
-
-
-
-            #endregion
-
         }
 
         private void báoCáoNhậpXuấtTồnKhoToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -3317,19 +3225,6 @@ namespace BEEACCOUNT.View
 
         private void đăngKýTàiKhoảnTheoDõiChiTiếtToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            #region//dstaikhoanketoan
-            string connection_string = Utils.getConnectionstr();
-
-            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
-
-
-            var rs = Model.Taikhoanketoan.danhsachtaikhoandangkychitiet(dc);
-            Viewtable viewtblrs55 = new Viewtable(rs, dc, "DANH SÁCH TÀI KHOẢN KẾ TOÁN ĐĂNG KÝ THEO DÕI CHI TIẾT", 114, "tk");// view code 114 la dang ký tài khoản kế toán
-
-            viewtblrs55.Show();
-
-            #endregion
-
         }
 
         private void sổCânĐốiTàiKhoảnPhátSinhToolStripMenuItem_Click(object sender, EventArgs e)
@@ -3659,6 +3554,83 @@ namespace BEEACCOUNT.View
         private void pictureBox1_MouseHover(object sender, EventArgs e)
         {
             
+        }
+
+        private void thôngTínDoanhNghiệpToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            View.BeeThongtindoanhnghiep view = new BeeThongtindoanhnghiep();
+            view.ShowDialog();
+        }
+
+        private void danhSáchLoạiTàiKhoảnToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            #region//dsloaitk
+            string connection_string = Utils.getConnectionstr();
+
+            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+            var rs8 = Model.loaitaikhoanketoan.danhsachloaitaikhoan(dc);
+            Viewtable viewtblrs8 = new Viewtable(rs8, dc, "DANH SÁCH LOẠI TÀI KHOẢN", 1, "tk");// danh sach loại tài khoản kế toán
+
+            viewtblrs8.Show();
+
+
+            #endregion
+        }
+
+        private void hệThốngTàiKhoảnKếToánToolStripMenuItem2_Click_1(object sender, EventArgs e)
+        {
+
+            #region//dstaikhoanketoan
+            string connection_string = Utils.getConnectionstr();
+
+            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+
+            var rs = Model.Taikhoanketoan.danhsachtaikhoan(dc);
+            Viewtable viewtblrs55 = new Viewtable(rs, dc, "DANH SÁCH TÀI KHOẢN KẾ TOÁN", 0, "tk");// view code 0 la danh sach tai khoan ke toan
+
+            viewtblrs55.Show();
+
+            #endregion
+
+        }
+
+        private void đăngKýTàiKhoảnTheoDõiChiTiếtToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+            #region//dstaikhoanketoan
+            string connection_string = Utils.getConnectionstr();
+
+            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+
+            var rs = Model.Taikhoanketoan.danhsachtaikhoandangkychitiet(dc);
+            Viewtable viewtblrs55 = new Viewtable(rs, dc, "DANH SÁCH TÀI KHOẢN KẾ TOÁN ĐĂNG KÝ THEO DÕI CHI TIẾT", 114, "tk");// view code 114 la dang ký tài khoản kế toán
+
+            viewtblrs55.Show();
+
+            #endregion
+
+        }
+
+        private void mởSốChiTiếtTàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            #region//sochitiet
+            string connection_string = Utils.getConnectionstr();
+
+            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+            var rs1 = Model.Danhsachtkchitiet.danhsachtaikhoanchitiet(dc);
+
+            Viewtable viewtbl = new Viewtable(rs1, dc, "DANH SÁCH MÃ CHI TIẾT TÀI KHOẢN", 2, "tk");// view code 2 mo so chi tiet tai khoan
+            viewtbl.Show();
+
+
+
+            #endregion
+
         }
     }
 

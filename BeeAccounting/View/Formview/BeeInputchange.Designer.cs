@@ -33,6 +33,7 @@ namespace BEEACCOUNT.View
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BeeInputchange));
             this.lb_headersub = new System.Windows.Forms.Label();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.txtrecord = new System.Windows.Forms.Label();
             this.btnhaplieu = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.lbseachedit = new System.Windows.Forms.Label();
@@ -47,7 +48,6 @@ namespace BEEACCOUNT.View
             this.lb_headermain = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.txtrecord = new System.Windows.Forms.Label();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
@@ -99,6 +99,15 @@ namespace BEEACCOUNT.View
             this.splitContainer1.SplitterIncrement = 15;
             this.splitContainer1.SplitterWidth = 5;
             this.splitContainer1.TabIndex = 33;
+            // 
+            // txtrecord
+            // 
+            this.txtrecord.AutoSize = true;
+            this.txtrecord.Location = new System.Drawing.Point(522, 61);
+            this.txtrecord.Name = "txtrecord";
+            this.txtrecord.Size = new System.Drawing.Size(42, 13);
+            this.txtrecord.TabIndex = 57;
+            this.txtrecord.Text = "Record";
             // 
             // btnhaplieu
             // 
@@ -194,7 +203,7 @@ namespace BEEACCOUNT.View
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(19, 83);
             this.dataGridView1.Name = "dataGridView1";
@@ -269,15 +278,6 @@ namespace BEEACCOUNT.View
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             this.pictureBox1.MouseLeave += new System.EventHandler(this.pictureBox1_MouseLeave);
             this.pictureBox1.MouseHover += new System.EventHandler(this.pictureBox1_MouseHover);
-            // 
-            // txtrecord
-            // 
-            this.txtrecord.AutoSize = true;
-            this.txtrecord.Location = new System.Drawing.Point(522, 61);
-            this.txtrecord.Name = "txtrecord";
-            this.txtrecord.Size = new System.Drawing.Size(42, 13);
-            this.txtrecord.TabIndex = 57;
-            this.txtrecord.Text = "Record";
             // 
             // BeeInputchange
             // 

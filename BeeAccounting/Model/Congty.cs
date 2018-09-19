@@ -14,7 +14,7 @@ namespace BEEACCOUNT.Model
             LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
 
             var rs = (from tbl_congty in dc.tbl_congties
-                     where tbl_congty.macty == macty
+                    // where tbl_congty.macty == macty
 
                       select tbl_congty.tencongty).FirstOrDefault();
             if (rs == null)
@@ -35,7 +35,7 @@ namespace BEEACCOUNT.Model
             LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
 
             var rs = (from tbl_congty in dc.tbl_congties
-                          where tbl_congty.macty == macty
+                     //     where tbl_congty.macty == macty
 
                       select tbl_congty.Masothue).FirstOrDefault();
             if (rs == null)
@@ -57,7 +57,7 @@ namespace BEEACCOUNT.Model
             LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
 
             var rs = (from tbl_congty in dc.tbl_congties
-                         where  tbl_congty.macty == macty
+                     //    where  tbl_congty.macty == macty
 
                       select tbl_congty.diachicoty).FirstOrDefault();
             if (rs == null)
@@ -79,7 +79,7 @@ namespace BEEACCOUNT.Model
             LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
 
             var rs = (from tbl_congty in dc.tbl_congties
-                             where tbl_congty.macty == macty
+                        //     where tbl_congty.macty == macty
 
                       select tbl_congty.tengiamdoc).FirstOrDefault();
             if (rs == null)
@@ -100,7 +100,7 @@ namespace BEEACCOUNT.Model
             LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
 
             var rs = (from tbl_congty in dc.tbl_congties
-                          where tbl_congty.macty == macty
+                     //     where tbl_congty.macty == macty
 
                       select tbl_congty.tenketoantruong).FirstOrDefault();
             if (rs == null)

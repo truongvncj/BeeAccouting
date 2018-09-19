@@ -737,7 +737,6 @@
       <Column Name="Masothue" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="chedoketoanapdung" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
       <Column Name="tenketoantruong" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="macty" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.tbl_ctkhachhang" Member="tbl_ctkhachhangs">
@@ -986,6 +985,12 @@
       <Column Name="loaichitiet" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
       <Column Name="nodk" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Column Name="codk" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="CDKTMaCTPSNo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CDKTMaCTPSCo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="KQKDMACTPSNo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="KQKDMACTPSCo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LCTTMACTPSNO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LCTTMACTPSCO" Type="System.Int32" DbType="Int" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.tbl_GiaHDtheoMCTvaSP" Member="tbl_GiaHDtheoMCTvaSPs">
