@@ -36,6 +36,9 @@ namespace BEEACCOUNT
     partial void Inserttbl_Temp(tbl_Temp instance);
     partial void Updatetbl_Temp(tbl_Temp instance);
     partial void Deletetbl_Temp(tbl_Temp instance);
+    partial void InsertCDKT200P(CDKT200P instance);
+    partial void UpdateCDKT200P(CDKT200P instance);
+    partial void DeleteCDKT200P(CDKT200P instance);
     partial void InsertKQKD200Dauky(KQKD200Dauky instance);
     partial void UpdateKQKD200Dauky(KQKD200Dauky instance);
     partial void DeleteKQKD200Dauky(KQKD200Dauky instance);
@@ -264,6 +267,14 @@ namespace BEEACCOUNT
 			get
 			{
 				return this.GetTable<tbl_Temp>();
+			}
+		}
+		
+		public System.Data.Linq.Table<CDKT200P> CDKT200Ps
+		{
+			get
+			{
+				return this.GetTable<CDKT200P>();
 			}
 		}
 		
@@ -1287,6 +1298,212 @@ namespace BEEACCOUNT
 					this._Macty = value;
 					this.SendPropertyChanged("Macty");
 					this.OnMactyChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.CDKT200PS")]
+	public partial class CDKT200P : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private System.Nullable<int> _nam;
+		
+		private System.Nullable<int> _Machitieu;
+		
+		private string _Tenchitieu;
+		
+		private System.Nullable<double> _Sotien;
+		
+		private System.Nullable<int> _stat;
+		
+		private int _id;
+		
+		private string _username;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnnamChanging(System.Nullable<int> value);
+    partial void OnnamChanged();
+    partial void OnMachitieuChanging(System.Nullable<int> value);
+    partial void OnMachitieuChanged();
+    partial void OnTenchitieuChanging(string value);
+    partial void OnTenchitieuChanged();
+    partial void OnSotienChanging(System.Nullable<double> value);
+    partial void OnSotienChanged();
+    partial void OnstatChanging(System.Nullable<int> value);
+    partial void OnstatChanged();
+    partial void OnidChanging(int value);
+    partial void OnidChanged();
+    partial void OnusernameChanging(string value);
+    partial void OnusernameChanged();
+    #endregion
+		
+		public CDKT200P()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_nam", DbType="Int")]
+		public System.Nullable<int> nam
+		{
+			get
+			{
+				return this._nam;
+			}
+			set
+			{
+				if ((this._nam != value))
+				{
+					this.OnnamChanging(value);
+					this.SendPropertyChanging();
+					this._nam = value;
+					this.SendPropertyChanged("nam");
+					this.OnnamChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Machitieu", DbType="Int")]
+		public System.Nullable<int> Machitieu
+		{
+			get
+			{
+				return this._Machitieu;
+			}
+			set
+			{
+				if ((this._Machitieu != value))
+				{
+					this.OnMachitieuChanging(value);
+					this.SendPropertyChanging();
+					this._Machitieu = value;
+					this.SendPropertyChanged("Machitieu");
+					this.OnMachitieuChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Tenchitieu", DbType="NVarChar(225)")]
+		public string Tenchitieu
+		{
+			get
+			{
+				return this._Tenchitieu;
+			}
+			set
+			{
+				if ((this._Tenchitieu != value))
+				{
+					this.OnTenchitieuChanging(value);
+					this.SendPropertyChanging();
+					this._Tenchitieu = value;
+					this.SendPropertyChanged("Tenchitieu");
+					this.OnTenchitieuChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Sotien", DbType="Float")]
+		public System.Nullable<double> Sotien
+		{
+			get
+			{
+				return this._Sotien;
+			}
+			set
+			{
+				if ((this._Sotien != value))
+				{
+					this.OnSotienChanging(value);
+					this.SendPropertyChanging();
+					this._Sotien = value;
+					this.SendPropertyChanged("Sotien");
+					this.OnSotienChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_stat", DbType="Int")]
+		public System.Nullable<int> stat
+		{
+			get
+			{
+				return this._stat;
+			}
+			set
+			{
+				if ((this._stat != value))
+				{
+					this.OnstatChanging(value);
+					this.SendPropertyChanging();
+					this._stat = value;
+					this.SendPropertyChanged("stat");
+					this.OnstatChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int id
+		{
+			get
+			{
+				return this._id;
+			}
+			set
+			{
+				if ((this._id != value))
+				{
+					this.OnidChanging(value);
+					this.SendPropertyChanging();
+					this._id = value;
+					this.SendPropertyChanged("id");
+					this.OnidChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_username", DbType="NVarChar(50)")]
+		public string username
+		{
+			get
+			{
+				return this._username;
+			}
+			set
+			{
+				if ((this._username != value))
+				{
+					this.OnusernameChanging(value);
+					this.SendPropertyChanging();
+					this._username = value;
+					this.SendPropertyChanged("username");
+					this.OnusernameChanged();
 				}
 			}
 		}
@@ -21662,17 +21879,17 @@ namespace BEEACCOUNT
 		
 		private System.Nullable<double> _codk;
 		
-		private System.Nullable<int> _CDKTMaCTPSNo;
+		private string _MCT_CDKT_PSNO;
 		
-		private System.Nullable<int> _CDKTMaCTPSCo;
+		private string _MCT_CDKT_PSCO;
 		
-		private System.Nullable<int> _KQKDMACTPSNo;
+		private string _MCT_LCTT_PSNO;
 		
-		private System.Nullable<int> _KQKDMACTPSCo;
+		private string _MCT_LCTT_PSCO;
 		
-		private System.Nullable<int> _LCTTMACTPSNO;
+		private string _MCT_KQKD_PSNO;
 		
-		private System.Nullable<int> _LCTTMACTPSCO;
+		private string _MCT_KQKD_PSCO;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -21696,18 +21913,18 @@ namespace BEEACCOUNT
     partial void OnnodkChanged();
     partial void OncodkChanging(System.Nullable<double> value);
     partial void OncodkChanged();
-    partial void OnCDKTMaCTPSNoChanging(System.Nullable<int> value);
-    partial void OnCDKTMaCTPSNoChanged();
-    partial void OnCDKTMaCTPSCoChanging(System.Nullable<int> value);
-    partial void OnCDKTMaCTPSCoChanged();
-    partial void OnKQKDMACTPSNoChanging(System.Nullable<int> value);
-    partial void OnKQKDMACTPSNoChanged();
-    partial void OnKQKDMACTPSCoChanging(System.Nullable<int> value);
-    partial void OnKQKDMACTPSCoChanged();
-    partial void OnLCTTMACTPSNOChanging(System.Nullable<int> value);
-    partial void OnLCTTMACTPSNOChanged();
-    partial void OnLCTTMACTPSCOChanging(System.Nullable<int> value);
-    partial void OnLCTTMACTPSCOChanged();
+    partial void OnMCT_CDKT_PSNOChanging(string value);
+    partial void OnMCT_CDKT_PSNOChanged();
+    partial void OnMCT_CDKT_PSCOChanging(string value);
+    partial void OnMCT_CDKT_PSCOChanged();
+    partial void OnMCT_LCTT_PSNOChanging(string value);
+    partial void OnMCT_LCTT_PSNOChanged();
+    partial void OnMCT_LCTT_PSCOChanging(string value);
+    partial void OnMCT_LCTT_PSCOChanged();
+    partial void OnMCT_KQKD_PSNOChanging(string value);
+    partial void OnMCT_KQKD_PSNOChanged();
+    partial void OnMCT_KQKD_PSCOChanging(string value);
+    partial void OnMCT_KQKD_PSCOChanged();
     #endregion
 		
 		public tbl_dstaikhoan()
@@ -21895,122 +22112,122 @@ namespace BEEACCOUNT
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CDKTMaCTPSNo", DbType="Int")]
-		public System.Nullable<int> CDKTMaCTPSNo
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MCT_CDKT_PSNO", DbType="NVarChar(10)")]
+		public string MCT_CDKT_PSNO
 		{
 			get
 			{
-				return this._CDKTMaCTPSNo;
+				return this._MCT_CDKT_PSNO;
 			}
 			set
 			{
-				if ((this._CDKTMaCTPSNo != value))
+				if ((this._MCT_CDKT_PSNO != value))
 				{
-					this.OnCDKTMaCTPSNoChanging(value);
+					this.OnMCT_CDKT_PSNOChanging(value);
 					this.SendPropertyChanging();
-					this._CDKTMaCTPSNo = value;
-					this.SendPropertyChanged("CDKTMaCTPSNo");
-					this.OnCDKTMaCTPSNoChanged();
+					this._MCT_CDKT_PSNO = value;
+					this.SendPropertyChanged("MCT_CDKT_PSNO");
+					this.OnMCT_CDKT_PSNOChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CDKTMaCTPSCo", DbType="Int")]
-		public System.Nullable<int> CDKTMaCTPSCo
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MCT_CDKT_PSCO", DbType="NVarChar(10)")]
+		public string MCT_CDKT_PSCO
 		{
 			get
 			{
-				return this._CDKTMaCTPSCo;
+				return this._MCT_CDKT_PSCO;
 			}
 			set
 			{
-				if ((this._CDKTMaCTPSCo != value))
+				if ((this._MCT_CDKT_PSCO != value))
 				{
-					this.OnCDKTMaCTPSCoChanging(value);
+					this.OnMCT_CDKT_PSCOChanging(value);
 					this.SendPropertyChanging();
-					this._CDKTMaCTPSCo = value;
-					this.SendPropertyChanged("CDKTMaCTPSCo");
-					this.OnCDKTMaCTPSCoChanged();
+					this._MCT_CDKT_PSCO = value;
+					this.SendPropertyChanged("MCT_CDKT_PSCO");
+					this.OnMCT_CDKT_PSCOChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_KQKDMACTPSNo", DbType="Int")]
-		public System.Nullable<int> KQKDMACTPSNo
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MCT_LCTT_PSNO", DbType="NVarChar(10)")]
+		public string MCT_LCTT_PSNO
 		{
 			get
 			{
-				return this._KQKDMACTPSNo;
+				return this._MCT_LCTT_PSNO;
 			}
 			set
 			{
-				if ((this._KQKDMACTPSNo != value))
+				if ((this._MCT_LCTT_PSNO != value))
 				{
-					this.OnKQKDMACTPSNoChanging(value);
+					this.OnMCT_LCTT_PSNOChanging(value);
 					this.SendPropertyChanging();
-					this._KQKDMACTPSNo = value;
-					this.SendPropertyChanged("KQKDMACTPSNo");
-					this.OnKQKDMACTPSNoChanged();
+					this._MCT_LCTT_PSNO = value;
+					this.SendPropertyChanged("MCT_LCTT_PSNO");
+					this.OnMCT_LCTT_PSNOChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_KQKDMACTPSCo", DbType="Int")]
-		public System.Nullable<int> KQKDMACTPSCo
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MCT_LCTT_PSCO", DbType="NVarChar(10)")]
+		public string MCT_LCTT_PSCO
 		{
 			get
 			{
-				return this._KQKDMACTPSCo;
+				return this._MCT_LCTT_PSCO;
 			}
 			set
 			{
-				if ((this._KQKDMACTPSCo != value))
+				if ((this._MCT_LCTT_PSCO != value))
 				{
-					this.OnKQKDMACTPSCoChanging(value);
+					this.OnMCT_LCTT_PSCOChanging(value);
 					this.SendPropertyChanging();
-					this._KQKDMACTPSCo = value;
-					this.SendPropertyChanged("KQKDMACTPSCo");
-					this.OnKQKDMACTPSCoChanged();
+					this._MCT_LCTT_PSCO = value;
+					this.SendPropertyChanged("MCT_LCTT_PSCO");
+					this.OnMCT_LCTT_PSCOChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LCTTMACTPSNO", DbType="Int")]
-		public System.Nullable<int> LCTTMACTPSNO
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MCT_KQKD_PSNO", DbType="NVarChar(10)")]
+		public string MCT_KQKD_PSNO
 		{
 			get
 			{
-				return this._LCTTMACTPSNO;
+				return this._MCT_KQKD_PSNO;
 			}
 			set
 			{
-				if ((this._LCTTMACTPSNO != value))
+				if ((this._MCT_KQKD_PSNO != value))
 				{
-					this.OnLCTTMACTPSNOChanging(value);
+					this.OnMCT_KQKD_PSNOChanging(value);
 					this.SendPropertyChanging();
-					this._LCTTMACTPSNO = value;
-					this.SendPropertyChanged("LCTTMACTPSNO");
-					this.OnLCTTMACTPSNOChanged();
+					this._MCT_KQKD_PSNO = value;
+					this.SendPropertyChanged("MCT_KQKD_PSNO");
+					this.OnMCT_KQKD_PSNOChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LCTTMACTPSCO", DbType="Int")]
-		public System.Nullable<int> LCTTMACTPSCO
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MCT_KQKD_PSCO", DbType="NVarChar(10)")]
+		public string MCT_KQKD_PSCO
 		{
 			get
 			{
-				return this._LCTTMACTPSCO;
+				return this._MCT_KQKD_PSCO;
 			}
 			set
 			{
-				if ((this._LCTTMACTPSCO != value))
+				if ((this._MCT_KQKD_PSCO != value))
 				{
-					this.OnLCTTMACTPSCOChanging(value);
+					this.OnMCT_KQKD_PSCOChanging(value);
 					this.SendPropertyChanging();
-					this._LCTTMACTPSCO = value;
-					this.SendPropertyChanged("LCTTMACTPSCO");
-					this.OnLCTTMACTPSCOChanged();
+					this._MCT_KQKD_PSCO = value;
+					this.SendPropertyChanged("MCT_KQKD_PSCO");
+					this.OnMCT_KQKD_PSCOChanged();
 				}
 			}
 		}
