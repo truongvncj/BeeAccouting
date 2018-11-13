@@ -100,16 +100,16 @@
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.datepickngayphieu);
-            this.panel1.Location = new System.Drawing.Point(3, 72);
+            this.panel1.Location = new System.Drawing.Point(6, 6);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(476, 462);
+            this.panel1.Size = new System.Drawing.Size(1073, 226);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // button1
             // 
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.button1.Location = new System.Drawing.Point(322, 13);
+            this.button1.Location = new System.Drawing.Point(115, 188);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(146, 25);
             this.button1.TabIndex = 58;
@@ -147,7 +147,7 @@
             this.groupBox1.Controls.Add(this.cbtkco);
             this.groupBox1.Controls.Add(this.lb_machitietno);
             this.groupBox1.Controls.Add(this.label16);
-            this.groupBox1.Location = new System.Drawing.Point(6, 197);
+            this.groupBox1.Location = new System.Drawing.Point(556, 18);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(462, 156);
             this.groupBox1.TabIndex = 70;
@@ -520,7 +520,7 @@
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewdetail.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.dataGridViewdetail.Size = new System.Drawing.Size(573, 476);
+            this.dataGridViewdetail.Size = new System.Drawing.Size(1063, 273);
             this.dataGridViewdetail.TabIndex = 3;
             this.dataGridViewdetail.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewTkCo_CellEndEdit);
             this.dataGridViewdetail.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewdetail_CellDoubleClick);
@@ -553,9 +553,9 @@
             this.panel4.Controls.Add(this.label15);
             this.panel4.Controls.Add(this.label5);
             this.panel4.Controls.Add(this.dataGridViewdetail);
-            this.panel4.Location = new System.Drawing.Point(496, 35);
+            this.panel4.Location = new System.Drawing.Point(6, 238);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(587, 531);
+            this.panel4.Size = new System.Drawing.Size(1077, 328);
             this.panel4.TabIndex = 64;
             // 
             // txttongtien
