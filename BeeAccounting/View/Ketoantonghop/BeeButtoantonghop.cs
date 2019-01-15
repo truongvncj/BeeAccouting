@@ -291,7 +291,7 @@ namespace BEEACCOUNT.View
             {
                 ComboboxItem cb = new ComboboxItem();
                 cb.Value = item.matk;
-                cb.Text = item.matk.Trim() + ": " + item.tentk;
+                cb.Text = item.matk.Trim() + ": " + item.tentk.Trim();
                 this.cbtkno.Items.Add(cb); // CombomCollection.Add(cb);
 
             }
@@ -316,7 +316,7 @@ namespace BEEACCOUNT.View
             {
                 ComboboxItem cb = new ComboboxItem();
                 cb.Value = item.matk;
-                cb.Text = item.matk.Trim() + ": " + item.tentk;
+                cb.Text = item.matk.Trim() + ": " + item.tentk.Trim();
                 this.cbtkco.Items.Add(cb); // CombomCollection.Add(cb);
 
             }
@@ -475,7 +475,7 @@ namespace BEEACCOUNT.View
             {
                 //  e.Handled = true;
                 //  cbtaikhoanco.Focus();
-
+                cbtkco.Focus();
                 //    string valueinput = cb_customerka.Text;
 
                 //    string connection_string = Utils.getConnectionstr();
@@ -2918,6 +2918,24 @@ namespace BEEACCOUNT.View
 
             }
 
+        }
+
+        private void cbtkco_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                //  e.Handled = true;
+                //  cbtaikhoanco.Focus();
+                txtsophieu.Focus();
+                //    string valueinput = cb_customerka.Text;
+
+                //    string connection_string = Utils.getConnectionstr();
+                //    LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+                //    string username = Utils.getusername();
+
+
+            }
         }
     }
 }
