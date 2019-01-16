@@ -470,6 +470,24 @@
     <Compile Include="View\Formview\Viewtable.Designer.cs">
       <DependentUpon>Viewtable.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Utility\Emailsend.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Utility\Emailsend.Designer.cs">
+      <DependentUpon>Emailsend.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Utility\SMSsend.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Utility\SMSsend.Designer.cs">
+      <DependentUpon>SMSsend.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Utility\Zalosend.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Utility\Zalosend.Designer.cs">
+      <DependentUpon>Zalosend.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Reports\BangCDKToant200lt.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>

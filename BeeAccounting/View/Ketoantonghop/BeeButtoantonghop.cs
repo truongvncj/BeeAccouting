@@ -473,7 +473,7 @@ namespace BEEACCOUNT.View
         {
             if (e.KeyChar == (char)Keys.Enter)
             {
-                //  e.Handled = true;
+                  e.Handled = true;
                 //  cbtaikhoanco.Focus();
                 cbtkco.Focus();
                 //    string valueinput = cb_customerka.Text;
@@ -491,9 +491,9 @@ namespace BEEACCOUNT.View
         {
             if (e.KeyChar == (char)Keys.Enter)
             {
-                //  e.Handled = true;
+                 e.Handled = true;
                 //   datepickngayphieu.Focus();
-
+                cbtkno.Focus();
                 //    string valueinput = cb_customerka.Text;
 
                 //    string connection_string = Utils.getConnectionstr();
@@ -2934,6 +2934,11 @@ namespace BEEACCOUNT.View
 
 
             }
+        }
+
+        private void cbtkno_SelectedValueChanged(object sender, EventArgs e)
+        {
+            cbtkno.Focus();
         }
     }
 }
