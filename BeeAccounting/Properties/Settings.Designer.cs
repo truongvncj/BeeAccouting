@@ -77,5 +77,16 @@ namespace BEEACCOUNT.Properties {
                 return ((string)(this["BEEConnectionString4"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=112.78.2.130,1433;Initial Catalog=chua8923_BEE;Persist Security Info=" +
+            "True;User ID=chua8923_BEE;Password=Tienmat1$la!")]
+        public string chua8923_BEEConnectionString {
+            get {
+                return ((string)(this["chua8923_BEEConnectionString"]));
+            }
+        }
     }
 }

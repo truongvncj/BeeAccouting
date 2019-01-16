@@ -184,24 +184,7 @@ namespace BEEACCOUNT.View
 
             }
             //    tbl_netcoDonhangTMP
-            if (tblnamemain == "tbl_DonhangtheoSPvaMKHTemp")
-            {
-
-                this.Bt_Adddata.Visible = false;
-                this.Bt_Deleteddata.Visible = false;
-                this.bt_updatedata.Visible = false;
-                this.export.Visible = false;
-                this.btnhaplieu.Visible = true;
-
-                string connection_string = Utils.getConnectionstr();
-                var dc = new LinqtoSQLDataContext(connection_string);
-                string username = Utils.getusername();
-
-                txtrecord.Text = (from pp in dc.tbl_DonhangtheoSPvaMKHTemps
-                                                 where pp.Username == username
-                                                   select pp).Count().ToString();
-                //  tbl_DonhangtheoSPvaMKHTemp.
-            }
+        
 
             // lbseachedit
             if (tblnamemain == "tbl_kacontractbegindata" || tblnamemain == "tbl_kacontractsdatadetail")
@@ -1495,80 +1478,8 @@ namespace BEEACCOUNT.View
 
         private void btnhaplieu_Click(object sender, EventArgs e)
         {
-            //  copy tu 
-
-            string connection_string = Utils.getConnectionstr();
-            var dc = new LinqtoSQLDataContext(connection_string);
-            string username = Utils.getusername();
-            var tempdata1 = from pp in dc.tbl_DonhangtheoSPvaMKHTemps
-                            where pp.Username == username && (pp.TEN_HANG == null || pp.TEN_HANG == "")
-
-                            select pp;
-
-            if (tempdata1.Count() > 0)
-            {
-                MessageBox.Show("Không upload vào được do có các dòng sản phẩm chưa có tên sản phẩm !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                //var q8 = from fbl5n in dc.tblFBL5Ns
-                //         where fbl5n.Deposit != 0 && !(from tblEDLP in dc.tblEDLPs
-                //                                       select tblEDLP.Invoice_Doc_Nr
-                //                           ).Contains(fbl5n.Document_Number)
-
-                //         select fbl5n;
-
-
-            }
-            else
-            {
-                var tempdata = from pp in dc.tbl_DonhangtheoSPvaMKHTemps
-                               where pp.Username == username
-                               && !(from dh in dc.tbl_DonhangtheoSPvaMKHs
-                                    select dh.So_van_don).Contains(pp.So_van_don)
-                               select pp;
-                if (tempdata.Count() > 0)
-                {
-                    #region  if
-
-                    foreach (var item in tempdata)
-                    {
-
-
-                        tbl_DonhangtheoSPvaMKH newdon = new tbl_DonhangtheoSPvaMKH();
-                        newdon.Username = item.Username;
-                        newdon.A_R_Amount = item.A_R_Amount;
-                        newdon.City = item.City;
-                        newdon.Deadline = item.Deadline;
-                        newdon.Delivery_Qty = item.Delivery_Qty;
-                        newdon.Dia_chi = item.Dia_chi;
-                        newdon.District = item.District;
-                        newdon.Material = item.Material;
-                        newdon.NOTE = item.NOTE;
-                        newdon.Seri = item.Seri;
-                        newdon.ShipTo_Name = item.ShipTo_Name;
-                        newdon.ShipTo_Tel = item.ShipTo_Tel;
-                        newdon.So_van_don = item.So_van_don;
-                        newdon.TEN_HANG = item.TEN_HANG;
-                        newdon.macty = item.macty;
-                        newdon.maKH = item.makhachhang;
-                        newdon.loadnumber = "";
-                        newdon.maKH = item.maKH;
-                        newdon.Tempview = 1;
-                        newdon.Ngayvanchuyen = item.Ngayvanchuyen;
-                        dc.tbl_DonhangtheoSPvaMKHs.InsertOnSubmit(newdon);
-                        dc.SubmitChanges();
-
-                        item.Uploadstatus = "Ok done ";
-                        dc.SubmitChanges();
-                    }
-
-
-                    #endregion if
-
-                }
-
-                this.Close();
-                MessageBox.Show("Đã nhập liệu xong !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            }
+         
+         
 
         }
 

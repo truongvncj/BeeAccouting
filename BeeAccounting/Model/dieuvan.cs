@@ -17,331 +17,102 @@ namespace BEEACCOUNT.Model
     {
 
 
-        public static IQueryable selectDonhangghep(LinqtoSQLDataContext db)
-        {
-            string Username = Utils.getusername();
-
-            var rs = from dh in db.tbl_DonhangtheoSPvaMKHTemps
-                     where dh.Username == Username
-                     select new
-                     {
-                         dh.So_van_don,
-                         dh.TEN_HANG,
-                         dh.Gia_VChuyen,
-
-                         dh.ShipTo_Name,
-
-                         dh.A_R_Amount,
-                         dh.City,
-                         dh.Dia_chi,
-                         dh.District,
-                         dh.Material,
-                         dh.Delivery_Qty,
-                         dh.id,
-                         dh.mainid,
-
-
-                     };
-
-            return rs;
-
-        }
-
-
         public static void deleteAlldonhangtmp(LinqtoSQLDataContext db)
         {
-            string Username = Utils.getusername();
-
-            var rs = from dh in db.tbl_DonhangtheoSPvaMKHTemps
-                     where dh.Username == Username
-                     select dh;
-
-            db.tbl_DonhangtheoSPvaMKHTemps.DeleteAllOnSubmit(rs);
-            db.SubmitChanges();
-
+       
 
         }
         public static void deleteAlldonhangtmptheoID(LinqtoSQLDataContext db, int id)
         {
-            string Username = Utils.getusername();
-
-            var rs = from dh in db.tbl_DonhangtheoSPvaMKHTemps
-                     where dh.Username == Username && dh.id == id
-                     select dh;
-            if (rs.Count() > 0)
-            {
-                db.tbl_DonhangtheoSPvaMKHTemps.DeleteAllOnSubmit(rs);
-                db.SubmitChanges();
-
-            }
-
+           
 
         }
         public static void updatehidedonhangtheoSPvaID(LinqtoSQLDataContext db, int id)
         {
-            string Username = Utils.getusername();
-
-            var rs = from dh in db.tbl_DonhangtheoSPvaMKHs
-                     where dh.Username == Username && dh.id == id
-                     select dh;
-            if (rs.Count() > 0)
-            {
-                foreach (var item in rs)
-                {
-                    item.Tempview = 0;
-                    db.SubmitChanges();
-                }
-
-
-
-            }
-
+     
 
         }
 
         public static void themvaodonhangTEMPtheoSPvaID(LinqtoSQLDataContext dc, int id)
         {
-            string username = Utils.getusername();
-
-           
-
-            var rs = (from p in dc.tbl_DonhangtheoSPvaMKHs
-                      where p.id == id && !(from tep in dc.tbl_DonhangtheoSPvaMKHTemps
-                                           where tep.mainid == id
-                                           select tep.mainid).Contains(p.id)
-                      select p).FirstOrDefault();
-            if (rs != null)
-            {
-                tbl_DonhangtheoSPvaMKHTemp temp = new tbl_DonhangtheoSPvaMKHTemp();
-
-                temp.Dia_chi = rs.Dia_chi;
-                temp.District = rs.District;
-                temp.Delivery_Qty = rs.Delivery_Qty;
-                temp.id = rs.id;
-                temp.Material = rs.Material;
-                temp.So_van_don = rs.So_van_don;
-                temp.TEN_HANG = rs.TEN_HANG;
-                temp.ShipTo_Name = rs.ShipTo_Name;
-                temp.A_R_Amount = rs.A_R_Amount;
-                temp.City = rs.City;
-                temp.Gia_VChuyen = rs.Gia_VChuyen * rs.Delivery_Qty;
-                temp.mainid = rs.id;
-
-                temp.Username = username;
-
-                dc.tbl_DonhangtheoSPvaMKHTemps.InsertOnSubmit(temp);
-
-
-
-                dc.SubmitChanges();
-            }
-
-
+          
 
         }
 
         public static void updateunhidedonhangtheoSanphamvaID(LinqtoSQLDataContext db, int id)
         {
-            string Username = Utils.getusername();
-
-            var rs = from dh in db.tbl_DonhangtheoSPvaMKHs
-                     where dh.Username == Username && dh.id == id
-                     select dh;
-            if (rs.Count() > 0)
-            {
-                foreach (var item in rs)
-                {
-                    item.Tempview = 1;
-                    db.SubmitChanges();
-                }
-
-
-
-            }
+           
 
 
         }
 
         public static void deleteAlltheoSPPricetmp(LinqtoSQLDataContext db)
         {
-            string Username = Utils.getusername();
-
-            var rs = from dh in db.tbl_DonhangtheoSPvaMKHTemps
-                     where dh.Username == Username
-                     select dh;
-
-            db.tbl_DonhangtheoSPvaMKHTemps.DeleteAllOnSubmit(rs);
-            db.SubmitChanges();
-
-
+           
         }
 
-        public static IQueryable selectDonhangtheoSPPendingChuaghep(LinqtoSQLDataContext db, string maKH)
-        {
-            string username = Utils.getusername();
-
-            var rs1 = from p in db.tbl_DonhangtheoSPvaMKHs
-                      where p.Username == username && p.loadnumber == "" && p.Tempview == 1
-                      && p.maKH == maKH
-                      select new
-                      {
-                          Ngày_tháng = p.Ngayvanchuyen,
-                          Số_vận_đơn = p.So_van_don,
-                          Tên_hàng = p.TEN_HANG,
-                          Số_lượng = p.Delivery_Qty,
-                          p.A_R_Amount,
-                          p.City,
-                          Giá_vận_chuyển = p.Gia_VChuyen,
-                          Địa_chỉ = p.Dia_chi,
-                          Quận_huyện = p.District,
-                          p.id,
-
-
-
-                      };
-
-
-
-            return rs1;
-        }
-        public static IQueryable selectDonhangtheoSPdaghep(LinqtoSQLDataContext db, DateTime fromdate, DateTime todate)
-        {
-            string username = Utils.getusername();
-
-            var rs1 = from p in db.tbl_DonhangtheoSPvaMKHs
-                      where p.Username == username && p.loadnumber == "" && p.Tempview == 0
-                      && p.Ngayvanchuyen >= fromdate && p.Ngayvanchuyen <= todate
-                      select
-                        new
-                        {
-                            Ngày_vận_chuyển = p.Ngayvanchuyen,
-                            Số_vận_đơn = p.So_van_don,
-                      //      Ngày_tháng = p.ngayghepdon,
-                            Biển_số_xe = p.biensoxe,
-                            Nhà_xe = p.tennhaxe,
-                            Tên_hàng = p.TEN_HANG,
-                            Số_lượng = p.Delivery_Qty,
-                            p.A_R_Amount,
-                            p.City,
-                            Giá_vận_chuyển = p.Gia_VChuyen,
-                            Giá_nội_bộ = p.Gia_Thue,
-                            Địa_chỉ = p.Dia_chi,
-                            Quận = p.District,
-
-                            p.id,
-
-
-
-                        };
-
-
-
-            return rs1;
-        }
-
-
+     
 
         public static void listsanphamtheoSPchuacogia(LinqtoSQLDataContext dc)
         {
-            Model.dieuvan.deleteAlltheoSPPricetmp(dc);
-            #region q8 List các document có deposit trong fbl5n  không có trong tblEDLP
+            //Model.dieuvan.deleteAlltheoSPPricetmp(dc);
+            //#region q8 List các document có deposit trong fbl5n  không có trong tblEDLP
 
 
 
-            var q8 = from sp in dc.tbl_DonhangtheoSPvaMKHs
-                     where !(from sp1 in dc.tbl_GiaHDtheoMCTvaSPs
-                             select sp1.TENHANG
-                                       ).Contains(sp.TEN_HANG)
-                     group sp by new
-                     {
-                         sp.TEN_HANG,
-                         sp.City,
+            //var q8 = from sp in dc.tbl_DonhangtheoSPvaMKHs
+            //         where !(from sp1 in dc.tbl_GiaHDtheoMCTvaSPs
+            //                 select sp1.TENHANG
+            //                           ).Contains(sp.TEN_HANG)
+            //         group sp by new
+            //         {
+            //             sp.TEN_HANG,
+            //             sp.City,
 
 
-                     }
-                 into p
+            //         }
+            //     into p
 
-                     select p;
-
-
-            if (q8.Count() != 0)
-            {
-                foreach (var item in q8)
-                {
-                    tbl_GiaHDtheoMCTvaSPTemp temp = new tbl_GiaHDtheoMCTvaSPTemp();
-
-                    temp.macty = Model.Username.getmacty();
-                    temp.Username = Utils.getusername();
-                    temp.TENHANG = item.Key.TEN_HANG;
-                    temp.Fromdate = DateTime.Today;
-                    temp.Todate = DateTime.Today.AddYears(100);
-                    temp.City = item.Key.City;
-                    temp.District = item.FirstOrDefault().District;
-                    temp.Gia = 0;
-
-                    dc.tbl_GiaHDtheoMCTvaSPTemps.InsertOnSubmit(temp);
-                    dc.SubmitChanges();
-
-                }
+            //         select p;
 
 
+            //if (q8.Count() != 0)
+            //{
+            //    foreach (var item in q8)
+            //    {
+            //        tbl_GiaHDtheoMCTvaSPTemp temp = new tbl_GiaHDtheoMCTvaSPTemp();
 
+            //        temp.macty = Model.Username.getmacty();
+            //        temp.Username = Utils.getusername();
+            //        temp.TENHANG = item.Key.TEN_HANG;
+            //        temp.Fromdate = DateTime.Today;
+            //        temp.Todate = DateTime.Today.AddYears(100);
+            //        temp.City = item.Key.City;
+            //        temp.District = item.FirstOrDefault().District;
+            //        temp.Gia = 0;
 
-                var typeff2 = typeof(tbl_GiaHDtheoMCTvaSPTemp);
-                var typeff = typeof(tbl_GiaHDtheoMCTvaSP);
-                string username = Utils.getusername();
+            //        dc.tbl_GiaHDtheoMCTvaSPTemps.InsertOnSubmit(temp);
+            //        dc.SubmitChanges();
 
-                View.BeeInputchange inputcdata = new View.BeeInputchange("BẢNG GIÁ ", "LIST SẢN PHẨM CHƯA CÓ GIÁ HÓA ĐƠN ", dc, "tbl_GiaHDtheoMCTvaSP", "tbl_GiaHDtheoMCTvaSPTemp", typeff, typeff2, "id", "id", username);
-                inputcdata.ShowDialog();// = false;
-
-            }
-
-            #endregion List các document có trong tblEDLP không có trong VAT
-        }
-
-
-        public static double getpriceHDtheosanphamvamacty(LinqtoSQLDataContext dc, string tensanpham, string city)
-        {
-            if (tensanpham == null)
-            {
-                tensanpham = "";
-            }
-            var kq = (from sp1 in dc.tbl_GiaHDtheoMCTvaSPs
-                      where sp1.TENHANG.Contains(tensanpham)
-                      select sp1.Gia).FirstOrDefault();
-
-
-            if (kq != null)
-            {
-                return kq.Value;
-            }
-            else
-            {
-                return 0;
-            }
+            //    }
 
 
 
 
+            //    var typeff2 = typeof(tbl_GiaHDtheoMCTvaSPTemp);
+            //    var typeff = typeof(tbl_GiaHDtheoMCTvaSP);
+            //    string username = Utils.getusername();
+
+            //    View.BeeInputchange inputcdata = new View.BeeInputchange("BẢNG GIÁ ", "LIST SẢN PHẨM CHƯA CÓ GIÁ HÓA ĐƠN ", dc, "tbl_GiaHDtheoMCTvaSP", "tbl_GiaHDtheoMCTvaSPTemp", typeff, typeff2, "id", "id", username);
+            //    inputcdata.ShowDialog();// = false;
+
+            //}
+
+            //#endregion List các document có trong tblEDLP không có trong VAT
 
 
         }
 
-
-        public static double tinhgiaDonhangvanchuyenHD(LinqtoSQLDataContext dc)
-        {
-            string username = Utils.getusername();
-
-            var kq = (from sp1 in dc.tbl_DonhangtheoSPvaMKHTemps
-                      where sp1.Username == username
-                      select sp1.Gia_VChuyen).Sum().GetValueOrDefault(0);
-
-            return kq;
-
-
-
-
-        }
 
 
 
@@ -648,7 +419,6 @@ namespace BEEACCOUNT.Model
 
                     }
                     dr["Username"] = Username1; // double.Parse(sourceData.Rows[rowixd][Delivery_Qtyid].ToString()); //sourceData.Rows[rowixd][Delivery_Qtyid].ToString().Trim();
-                    dr["macty"] = Model.Username.getmacty();// Username1; // double.Parse(sourceData.Rows[rowixd][Delivery_Qtyid].ToString()); //sourceData.Rows[rowixd][Delivery_Qtyid].ToString().Trim();
                     dr["makhachhang"] = "04";// Model.Username.getmacty();// Username1; // double.Parse(sourceData.Rows[rowixd][Delivery_Qtyid].ToString()); //sourceData.Rows[rowixd][Delivery_Qtyid].ToString().Trim();
 
 
@@ -718,12 +488,7 @@ namespace BEEACCOUNT.Model
 
             //   LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
 
-            var typeffmain = typeof(tbl_DonhangtheoSPvaMKHTemp);
-            var typeffsub = typeof(tbl_DonhangtheoSPvaMKHTemp);
-
-            View.BeeInputchange inputcdata1 = new View.BeeInputchange("", "ĐƠN HÀNG NETCO ", dc, "tbl_DonhangtheoSPvaMKHTemp", "tbl_DonhangtheoSPvaMKHTemp", typeffmain, typeffsub, "id", "id", Username1);
-            inputcdata1.ShowDialog();
-
+     
 
 
         }

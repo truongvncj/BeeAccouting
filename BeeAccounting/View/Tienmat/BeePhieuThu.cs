@@ -722,8 +722,7 @@ namespace BEEACCOUNT.View
                 }
                 soquy.Ngayghiso = DateTime.Today;
                 soquy.Username = Utils.getusername();
-                soquy.macty = Model.Username.getmacty();
-
+         
                 soquy.Machungtu = "PT";
 
 
@@ -930,7 +929,7 @@ namespace BEEACCOUNT.View
                                 socai.Diengiai = dataGridViewTkCo.Rows[idrow].Cells["Diễn_giải"].Value.ToString();
                                 socai.manghiepvu = "PT";
                                 socai.Sohieuchungtu = txtsophieu.Text.ToString().Trim();
-                                socai.macty = Model.Username.getmacty();
+                              //  socai.macty = Model.Username.getmacty();
 
                                 socai.Ngayctu = datepickngayphieu.Value;
 
@@ -1330,13 +1329,12 @@ namespace BEEACCOUNT.View
                 #region  insert vao rpt phieu thu
 
                 Rpt_PhieuThu pt = new Rpt_PhieuThu();
-                string macty = Model.Username.getmacty();
-
-                pt.tencongty = Model.Congty.getnamecongty(macty);
-                pt.diachicongty = Model.Congty.getdiachicongty(macty);
-                pt.masothue = Model.Congty.getmasothuecongty(macty);
-                pt.tengiamdoc = Model.Congty.gettengiamdoccongty(macty);
-                pt.tenketoantruong = Model.Congty.gettenketoantruongcongty(macty);
+         
+                pt.tencongty = Model.Congty.getnamecongty();
+                pt.diachicongty = Model.Congty.getdiachicongty();
+                pt.masothue = Model.Congty.getmasothuecongty();
+                pt.tengiamdoc = Model.Congty.gettengiamdoccongty();
+                pt.tenketoantruong = Model.Congty.gettenketoantruongcongty();
                 pt.phieuthuso = phieuthu.sophieuthu;
                 pt.ngaychungtu = phieuthu.ngaychungtu;
                 pt.nguoinoptien = phieuthu.nguoinoptien;

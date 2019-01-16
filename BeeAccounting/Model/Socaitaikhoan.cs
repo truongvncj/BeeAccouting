@@ -269,10 +269,9 @@ namespace BEEACCOUNT.Model
 
 
             LinqtoSQLDataContext db = dc;
-            string macty =  Model.Username.getmacty();
-
+       
             var rs = from p in dc.tbl_Socais
-                     where p.manghiepvu == "TH" && p.macty == macty
+                     where p.manghiepvu == "TH" 
                      select new
                      {
 

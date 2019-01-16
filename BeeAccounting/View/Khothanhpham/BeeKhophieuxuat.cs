@@ -754,7 +754,6 @@ namespace BEEACCOUNT.View
                 headphieuxuat.phieuso = txtsophieu.Text.Trim();
 
                 //       headphieuxuat.diengiai = txtlydoxuat.Text;
-                headphieuxuat.macty = Model.Username.getmacty();
                 headphieuxuat.createby = Utils.getusername();
                 headphieuxuat.createdate = DateTime.Today;
                 headphieuxuat.diengiai = txtlydoxuat.Text.Trim();
@@ -803,7 +802,6 @@ namespace BEEACCOUNT.View
             {
 
                 tbl_kho_phieuxuat_detail detail = new tbl_kho_phieuxuat_detail();
-                detail.macty = Model.Username.getmacty();
                 detail.ngayphieuxuat = datepickngayphieu.Value;
 
                 detail.makho = (cbkhohang.SelectedItem as ComboboxItem).Value.ToString();
@@ -1057,13 +1055,12 @@ namespace BEEACCOUNT.View
                 #region  insert vao rpt head
 
                 Rptphieuxuatkhohead pxk = new Rptphieuxuatkhohead();
-                string macty = Model.Username.getmacty();
-
-                pxk.tencongty = Model.Congty.getnamecongty(macty);
-                pxk.diachicongty = Model.Congty.getdiachicongty(macty);
-                pxk.masothue = Model.Congty.getmasothuecongty(macty);
-                pxk.tengiamdoc = Model.Congty.gettengiamdoccongty(macty);
-                pxk.tenketoantruong = Model.Congty.gettenketoantruongcongty(macty);
+      
+                pxk.tencongty = Model.Congty.getnamecongty();
+                pxk.diachicongty = Model.Congty.getdiachicongty();
+                pxk.masothue = Model.Congty.getmasothuecongty();
+                pxk.tengiamdoc = Model.Congty.gettengiamdoccongty();
+                pxk.tenketoantruong = Model.Congty.gettenketoantruongcongty();
                 pxk.phieuso = phieuxuat.phieuso;
                 pxk.ngaychungtu = phieuxuat.ngayphieuxuat;
                 pxk.nguoinhan = phieuxuat.nguoinhanhang;

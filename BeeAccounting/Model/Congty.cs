@@ -7,7 +7,7 @@ namespace BEEACCOUNT.Model
 {
     class Congty
     {
-        public static string getnamecongty(string macty)
+        public static string getnamecongty()
         {
           //  string username = Utils.getusername();
             string connection_string = Utils.getConnectionstr();
@@ -28,7 +28,7 @@ namespace BEEACCOUNT.Model
             }
 
         }
-        public static string getmasothuecongty(string macty)
+        public static string getmasothuecongty()
         {
           //  string username = Utils.getusername();
             string connection_string = Utils.getConnectionstr();
@@ -50,7 +50,7 @@ namespace BEEACCOUNT.Model
 
         }
 
-        public static string getdiachicongty(string macty)
+        public static string getdiachicongty()
         {
             //  string username = Utils.getusername();
             string connection_string = Utils.getConnectionstr();
@@ -72,7 +72,7 @@ namespace BEEACCOUNT.Model
 
         }
 
-        public static string gettengiamdoccongty(string macty)
+        public static string gettengiamdoccongty()
         {
             //  string username = Utils.getusername();
             string connection_string = Utils.getConnectionstr();
@@ -93,7 +93,7 @@ namespace BEEACCOUNT.Model
             }
 
         }
-        public static string gettenketoantruongcongty(string macty)
+        public static string gettenketoantruongcongty()
         {
             //  string username = Utils.getusername();
             string connection_string = Utils.getConnectionstr();

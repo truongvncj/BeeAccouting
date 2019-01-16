@@ -750,8 +750,7 @@ namespace BEEACCOUNT.View
 
                 tbl_kho_phieunhap_head headphieunhap = new tbl_kho_phieunhap_head();
                 headphieunhap.phieuso = txtsophieu.Text.Trim();
-                headphieunhap.macty = Model.Username.getmacty();
-
+            
 
                 headphieunhap.diengiai = txtdiengiai.Text;
                 headphieunhap.createby = Utils.getusername();
@@ -809,7 +808,7 @@ namespace BEEACCOUNT.View
                 detail.tenhang = dataGridViewTkCo.Rows[idrow].Cells["Tên_sản_phẩm"].Value.ToString();
                 detail.thanhtien = float.Parse(dataGridViewTkCo.Rows[idrow].Cells["Thành_tiền"].Value.ToString());
 
-                detail.macty = Model.Username.getmacty();
+           //     detail.macty = Model.Username.getmacty();
 
                 dc.tbl_kho_phieunhap_details.InsertOnSubmit(detail);
                 dc.SubmitChanges();
@@ -1076,12 +1075,11 @@ namespace BEEACCOUNT.View
                 #region  insert vao rpt phieu thu
 
                 Rptphieunhapkhohead pnk = new Rptphieunhapkhohead();
-                string macty = Model.Username.getmacty();
-                pnk.tencongty = Model.Congty.getnamecongty(macty);
-                pnk.diachicongty = Model.Congty.getdiachicongty(macty);
-                pnk.masothue = Model.Congty.getmasothuecongty(macty);
-                pnk.tengiamdoc = Model.Congty.gettengiamdoccongty(macty);
-                pnk.tenketoantruong = Model.Congty.gettenketoantruongcongty(macty);
+                 pnk.tencongty = Model.Congty.getnamecongty();
+                pnk.diachicongty = Model.Congty.getdiachicongty();
+                pnk.masothue = Model.Congty.getmasothuecongty();
+                pnk.tengiamdoc = Model.Congty.gettengiamdoccongty();
+                pnk.tenketoantruong = Model.Congty.gettenketoantruongcongty();
                 pnk.phieunhapso = phieunhap.phieuso;
                 pnk.ngaychungtu = phieunhap.ngayphieunhap;
                 pnk.nguoigiao = phieunhap.nguoigiao;

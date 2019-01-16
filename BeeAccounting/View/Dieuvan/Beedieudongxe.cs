@@ -17,7 +17,7 @@ namespace BEEACCOUNT.View
 
         View.Main main { get; set; }
 
-      
+
 
         void Control_KeyPress(object sender, KeyEventArgs e)
         {
@@ -119,7 +119,7 @@ namespace BEEACCOUNT.View
             {
                 ComboboxItem cb = new ComboboxItem();
                 cb.Value = item.bienso;
-                cb.Text = item.bienso + ":" + item.maNVT + "-" + item.tenNVT;
+                cb.Text = item.bienso + ":" + item.maNVT;
                 this.cbbiensoxe.Items.Add(cb); // CombomCollection.Add(cb);
 
             }
@@ -167,8 +167,6 @@ namespace BEEACCOUNT.View
             Model.dieuvan.deleteAlltheoSPPricetmp(dc);
             //   Model.dieuvan.listsanphamtheoSPchuacogia(dc);
 
-
-            gripghepxe.DataSource = Model.dieuvan.selectDonhangghep(dc);
 
 
 
@@ -629,8 +627,8 @@ namespace BEEACCOUNT.View
 
         }
 
-       
-       
+
+
 
         public void converttonew()
         {
@@ -938,48 +936,50 @@ namespace BEEACCOUNT.View
 
         private void cbkhachhang_SelectedValueChanged(object sender, EventArgs e)
         {
-            string connection_string = Utils.getConnectionstr();
-            string username = Utils.getusername();
+            //string connection_string = Utils.getConnectionstr();
+            //string username = Utils.getusername();
 
-            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
-            if (cbkhachhang.SelectedItem != null && cbloaidon.SelectedItem != null)
-            {
-                #region nếu là đơn hàng theo sản phẩm
-
-
+            //LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+            //if (cbkhachhang.SelectedItem != null && cbloaidon.SelectedItem != null)
+            //{
+            //    #region nếu là đơn hàng theo sản phẩm
 
 
-                if ((cbloaidon.SelectedItem as ComboboxItem).Value.ToString() == "1") // Nếu là đơn hàng theo sản phẩm
-                {
-
-                    Model.dieuvan.listsanphamtheoSPchuacogia(dc);
 
 
-                    var rs = from p in dc.tbl_DonhangtheoSPvaMKHs
-                             where p.Username == username && p.loadnumber == ""
-                             && p.maKH == (cbkhachhang.SelectedItem as ComboboxItem).Value.ToString()
-                             select p;
+            //    if ((cbloaidon.SelectedItem as ComboboxItem).Value.ToString() == "1") // Nếu là đơn hàng theo sản phẩm
+            //    {
 
-                    foreach (var item in rs)
-                    {
-                        item.Gia_VChuyen = Model.dieuvan.getpriceHDtheosanphamvamacty(dc, item.TEN_HANG, item.City);
-                        dc.SubmitChanges();
-                    }
+            //        Model.dieuvan.listsanphamtheoSPchuacogia(dc);
 
 
-                    var rs1 = Model.dieuvan.selectDonhangtheoSPPendingChuaghep(dc, (cbkhachhang.SelectedItem as ComboboxItem).Value.ToString());
+            //        var rs = from p in dc.tbl_DonhangtheoSPvaMKHs
+            //                 where p.Username == username && p.loadnumber == ""
+            //                 && p.maKH == (cbkhachhang.SelectedItem as ComboboxItem).Value.ToString()
+            //                 select p;
 
-                    griddonpending.DataSource = rs1;
+            //        foreach (var item in rs)
+            //        {
+            //            item.Gia_VChuyen = Model.dieuvan.getpriceHDtheosanphamvamacty(dc, item.TEN_HANG, item.City);
+            //            dc.SubmitChanges();
+            //        }
 
-                    Model.dieuvan.deleteAlldonhangtmp(dc);
 
-                    gripghepxe.DataSource = Model.dieuvan.selectDonhangghep(dc);
+            //        var rs1 = Model.dieuvan.selectDonhangtheoSPPendingChuaghep(dc, (cbkhachhang.SelectedItem as ComboboxItem).Value.ToString());
+
+            //        griddonpending.DataSource = rs1;
+
+            //        Model.dieuvan.deleteAlldonhangtmp(dc);
+
+            //        gripghepxe.DataSource = Model.dieuvan.selectDonhangghep(dc);
 
 
-                }
+            //    }
 
-                #endregion nếu là đơn hàng theo sản phẩm
-            }
+            //    #endregion nếu là đơn hàng theo sản phẩm
+            //}
+
+
         }
 
         private void griddonpending_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -1021,14 +1021,6 @@ namespace BEEACCOUNT.View
             Model.dieuvan.themvaodonhangTEMPtheoSPvaID(dc, idtk);
 
             string maKH = (cbkhachhang.SelectedItem as ComboboxItem).Value.ToString();
-
-            gripghepxe.DataSource = Model.dieuvan.selectDonhangghep(dc);
-            griddonpending.DataSource = Model.dieuvan.selectDonhangtheoSPPendingChuaghep(dc, maKH);
-
-
-            txttienhoadon.Text = Model.dieuvan.tinhgiaDonhangvanchuyenHD(dc).ToString();
-
-
 
 
 
@@ -1100,7 +1092,6 @@ namespace BEEACCOUNT.View
                 // chuyen data thành view =0
 
                 Model.dieuvan.updateunhidedonhangtheoSanphamvaID(dc, mainid);
-                griddonpending.DataSource = Model.dieuvan.selectDonhangtheoSPPendingChuaghep(dc, (cbkhachhang.SelectedItem as ComboboxItem).Value.ToString());
                 //   }
 
                 Model.dieuvan.deleteAlldonhangtmptheoID(dc, idtk);
@@ -1112,7 +1103,6 @@ namespace BEEACCOUNT.View
                 //  return;
             }
 
-            txttienhoadon.Text = Model.dieuvan.tinhgiaDonhangvanchuyenHD(dc).ToString();
 
 
 
@@ -1237,90 +1227,14 @@ namespace BEEACCOUNT.View
         private void button1_Click_2(object sender, EventArgs e)
         {
 
-            if (cbnhaxe.SelectedItem == null)
-            {
-                MessageBox.Show("Phải chọn nhà xe trước khi ghép !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            if (cbbiensoxe.SelectedItem == null)
-            {
-                MessageBox.Show("Phải chọn  xe trước khi ghép !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
 
-            string connection_string = Utils.getConnectionstr();
-
-            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
-
-            string Username = Utils.getusername();
-
-            var rs = from dh in dc.tbl_DonhangtheoSPvaMKHTemps
-                     where dh.Username == Username
-                     select dh;
-
-
-            foreach (var item in rs)
-            {
-                var rs2 = from dh in dc.tbl_DonhangtheoSPvaMKHs
-                          where dh.So_van_don == item.So_van_don
-
-                          select dh;
-                foreach (var item2 in rs2)
-                {
-                    item2.tennhaxe = (cbnhaxe.SelectedItem as ComboboxItem).Text.ToString();
-                    item2.manhaxe = (cbnhaxe.SelectedItem as ComboboxItem).Value.ToString();
-                    item2.biensoxe = (cbbiensoxe.SelectedItem as ComboboxItem).Value.ToString();
-                    item2.Gia_VChuyen = double.Parse(txttienhoadon.Text.ToString());
-                    item2.Tempview = 0;
-                    item2.ngayghepdon = cbngaythang.Value;
-
-                    dc.SubmitChanges();
-
-                }
-
-
-                dc.tbl_DonhangtheoSPvaMKHTemps.DeleteOnSubmit(item);
-                dc.SubmitChanges();
-
-
-            }
-
-
-
-            gripghepxe.DataSource = Model.dieuvan.selectDonhangghep(dc);
-
-            txtfind.Focus();
 
 
         }
 
         private void button5_Click_1(object sender, EventArgs e)
         {
-            View.Beefromdatetodate chondate = new Beefromdatetodate();
-            chondate.ShowDialog();
-
-            DateTime fromdate = chondate.fromdate;
-            DateTime todate = chondate.todate;
-            bool chon = chondate.chon;
-
-            if (chon)
-            {
-
-                #region  view
-                string connection_string = Utils.getConnectionstr();
-
-                LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
-
-                var rs1 = Model.dieuvan.selectDonhangtheoSPdaghep(dc, fromdate, todate);
-
-                Viewtable viewtbl = new Viewtable(rs1, dc, "DANH SÁCH ĐƠN HÀNG", 101, "1");// mã 1 là view đươn hàn netco
-                viewtbl.Show();
-                #endregion view
-
-
-
-            }
-
+        
 
 
 
@@ -1332,50 +1246,7 @@ namespace BEEACCOUNT.View
         private void button6_Click_2(object sender, EventArgs e)
         {
 
-            string connection_string = Utils.getConnectionstr();
-
-            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
-
-            string Username = Utils.getusername();
-
-            var rs = from dh in dc.tbl_DonhangtheoSPvaMKHTemps
-                     where dh.Username == Username
-                     select dh;
-
-
-            foreach (var item in rs)
-            {
-                var rs2 = from dh in dc.tbl_DonhangtheoSPvaMKHs
-                          where dh.So_van_don == item.So_van_don
-
-                          select dh;
-                foreach (var item2 in rs2)
-                {
-                    item2.tennhaxe = "Hủy đơn";// (cbnhaxe.SelectedItem as ComboboxItem).Text.ToString();
-                    item2.manhaxe = "Hủy đơn";// (cbnhaxe.SelectedItem as ComboboxItem).Value.ToString();
-                    item2.biensoxe = "Hủy đơn";// (cbbiensoxe.SelectedItem as ComboboxItem).Value.ToString();
-                    item2.Gia_VChuyen = 0;// double.Parse(txttienhoadon.Text.ToString());
-                    item2.Gia_Thue = 0;// double.Parse(txttienhoadon.Text.ToString());
-                    item2.Tempview = 0;
-                    item2.ngayghepdon = cbngaythang.Value;
-
-                    dc.SubmitChanges();
-
-                }
-
-
-                dc.tbl_DonhangtheoSPvaMKHTemps.DeleteOnSubmit(item);
-                dc.SubmitChanges();
-
-
-            }
-
-
-
-            gripghepxe.DataSource = Model.dieuvan.selectDonhangghep(dc);
-
-
-
+          
 
 
 
@@ -1411,75 +1282,6 @@ namespace BEEACCOUNT.View
             {
 
 
-                if (cbkhachhang.SelectedItem != null)
-
-                {
-
-                    string findtext = txtfind.Text;
-                    string connection_string = Utils.getConnectionstr();
-
-                    LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
-
-                    string maCty = Model.Username.getmacty();
-                    string maKH = (cbkhachhang.SelectedItem as ComboboxItem).Value.ToString();
-                    var rs = from dh in dc.tbl_DonhangtheoSPvaMKHs
-                             where dh.macty == maCty && dh.maKH == maKH
-                             && dh.So_van_don.Contains(findtext)
-                             select dh;
-
-                    if (rs.Count() > 0)
-                    {
-                        int idvalue;
-                             bool ketqua;
-                        if (rs.Count() == 1 && rs.FirstOrDefault().So_van_don == findtext)
-                        {
-                            
-                            idvalue = rs.FirstOrDefault().id;
-                            ketqua = true;
-                        }
-                        else
-                        {
-                            Beeviewandchoose findid = new Beeviewandchoose("  ", rs, dc);
-                            findid.ShowDialog();
-
-                             idvalue = findid.value;  //id
-                             ketqua = findid.kq;
-                        }
-                      
-
-                        if (ketqua) // có select  
-                        {
-                           
-
-                            // loai o tren voi id
-                            Model.dieuvan.updatehidedonhangtheoSPvaID(dc, idvalue);
-                            Model.dieuvan.themvaodonhangTEMPtheoSPvaID(dc, idvalue);
-                          //  string maKH = (cbkhachhang.SelectedItem as ComboboxItem).Value.ToString();
-
-                            gripghepxe.DataSource = Model.dieuvan.selectDonhangghep(dc);
-                            griddonpending.DataSource = Model.dieuvan.selectDonhangtheoSPPendingChuaghep(dc, maKH);
-                            txttienhoadon.Text = Model.dieuvan.tinhgiaDonhangvanchuyenHD(dc).ToString();
-
-                        }
-
-
-                      
-
-
-
-                    }
-
-                }
-                else
-                {
-                  
-                    MessageBox.Show("Please chọn code khách hàng !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-
-                }
-
-                txtfind.Focus();
-                txtfind.Text = "";
 
 
             }
@@ -1488,32 +1290,6 @@ namespace BEEACCOUNT.View
 
         private void button2_Click_2(object sender, EventArgs e)
         {
-            if (cbloaidon.SelectedItem == null)
-            {
-                MessageBox.Show("Please chọn loại đơn hàng !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-             
-                return;
-            }
-            if (cbkhachhang.SelectedItem == null)
-            {
-                MessageBox.Show("Please chọn khách hàng !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-
-                return;
-            }
-            if ((cbloaidon.SelectedItem as ComboboxItem).Value.ToString()=="1")// neu là đơn hàng theo san phẩm
-            {
-                string macty = Model.Username.getmacty();
-                string maKH = (cbkhachhang.SelectedItem as ComboboxItem).Value.ToString();
-
-                View.TaodonDHtheoSP taodonhangtheosp = new TaodonDHtheoSP(this.main, macty, maKH);
-                taodonhangtheosp.ShowDialog();
-            }
-        
-
-
-
 
 
         }

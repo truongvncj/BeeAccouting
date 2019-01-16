@@ -593,7 +593,7 @@ namespace BEEACCOUNT.View
 
 
                     //       detail.Ngayctu = Utils.ChageExceldatetoDate( dataGridViewdetail.Rows[idrow].Cells["Ngày_chứng_từ"].Value.ToString());
-                    detail.macty = Model.Username.getmacty();
+                   // detail.macty = Model.Username.getmacty();
                     detail.Ngayghiso = DateTime.Today;
                     detail.username = Utils.getusername();
                     detail.manghiepvu = "TH";
@@ -864,13 +864,11 @@ namespace BEEACCOUNT.View
                 #region  insert vao rpt phieu thu
 
                 RptBTTHhead Btthop = new RptBTTHhead();
-                string macty = Model.Username.getmacty();
-
-                Btthop.tencongty = Model.Congty.getnamecongty(macty);
-                Btthop.diachicongty = Model.Congty.getdiachicongty(macty);
-                Btthop.masothue = Model.Congty.getmasothuecongty(macty);
-                Btthop.tengiamdoc = Model.Congty.gettengiamdoccongty(macty);
-                Btthop.tenketoantruong = Model.Congty.gettenketoantruongcongty(macty);
+                Btthop.tencongty = Model.Congty.getnamecongty();
+                Btthop.diachicongty = Model.Congty.getdiachicongty();
+                Btthop.masothue = Model.Congty.getmasothuecongty();
+                Btthop.tengiamdoc = Model.Congty.gettengiamdoccongty();
+                Btthop.tenketoantruong = Model.Congty.gettenketoantruongcongty();
                 Btthop.phieuso = bttonghop.Sohieuchungtu;
                 Btthop.ngaychungtu = bttonghop.Ngayctu;
                 Btthop.nguoilapphieu = Utils.getname();

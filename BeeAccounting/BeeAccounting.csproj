@@ -143,12 +143,6 @@
     <Compile Include="shared\ExtractToDataTableOptions.cs" />
     <Compile Include="shared\LinQToExcel.cs" />
     <Compile Include="shared\StringExtensions.cs" />
-    <Compile Include="View\Dieuvan\TaodonDHtheoSP.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\Dieuvan\TaodonDHtheoSP.Designer.cs">
-      <DependentUpon>TaodonDHtheoSP.cs</DependentUpon>
-    </Compile>
     <Compile Include="View\Formview\Beeviewandchoose.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -523,9 +517,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\Paymentrequest.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\Dieuvan\TaodonDHtheoSP.resx">
-      <DependentUpon>TaodonDHtheoSP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Formview\Beeviewandchoose.resx">
       <DependentUpon>Beeviewandchoose.cs</DependentUpon>

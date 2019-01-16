@@ -34,10 +34,7 @@ namespace BEEACCOUNT.View
             string connection_string = Utils.getConnectionstr();
 
             LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
-            string macty = Model.Username.getmacty();
-
-            //        tbl_congty cty = new tbl_congty();
-
+          
             var cty = (from ctyi in dc.tbl_congties
                       // where ctyi.macty == macty
                        select ctyi).FirstOrDefault();
@@ -213,10 +210,7 @@ namespace BEEACCOUNT.View
             string connection_string = Utils.getConnectionstr();
 
             LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
-            string macty = Model.Username.getmacty();
-            //   tbl_congty cty = new tbl_congty();
-            //        tbl_congty cty = new tbl_congty();
-
+         
             var cty = (from ctyi in dc.tbl_congties
                      //  where ctyi.macty == macty
                        select ctyi).FirstOrDefault();
