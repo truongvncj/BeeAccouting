@@ -367,7 +367,6 @@ D:\GitHub\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.Beedieudongxe
 D:\GitHub\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.BeeSeachdieuvan.resources
 D:\GitHub\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.Beefromdatetodate.resources
 D:\GitHub\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.Beeviewandchoose.resources
-D:\GitHub\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.TaodonDHtheoSP.resources
 D:\GitHub\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.Beetaotaikhoanketoan.resources
 C:\Users\TRUONG\Desktop\BeeAccouting\BeeAccounting\bin\x86\Debug\BEE ACCOUNTING.exe.config
 C:\Users\TRUONG\Desktop\BeeAccouting\BeeAccounting\obj\x86\Debug\BEE ACCOUNTING.exe
