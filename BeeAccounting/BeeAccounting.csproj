@@ -769,6 +769,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="giphyipg_Pb0_3.ico" />
+    <None Include="Resources\note.gif" />
     <None Include="Resources\jelly-fluid-loader.gif" />
     <None Include="Resources\DIEUVAN3.png" />
     <None Include="Resources\KETOANTONGHOP2.jpg" />

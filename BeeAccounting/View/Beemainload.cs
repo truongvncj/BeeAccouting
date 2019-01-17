@@ -1302,5 +1302,11 @@ namespace BEEACCOUNT.View
         //    View.BarcodeSample bc = new BarcodeSample();
        //     bc.ShowDialog();
         }
+
+        private void button31_Click(object sender, EventArgs e)
+        {
+            View.Utility.Zalosend zalo = new Utility.Zalosend();
+            zalo.ShowDialog();
+        }
     }
 }
