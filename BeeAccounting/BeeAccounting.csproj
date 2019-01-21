@@ -221,6 +221,12 @@
     <Compile Include="View\Dieuvan\NPDanhsachnhavantai.Designer.cs">
       <DependentUpon>NPDanhsachnhavantai.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Ketoantonghop\BeePhaithu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Ketoantonghop\BeePhaithu.Designer.cs">
+      <DependentUpon>BeePhaithu.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Khothanhpham\BeeDanhsachsanpham.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -574,6 +580,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Dieuvan\NPDanhsachnhavantai.resx">
       <DependentUpon>NPDanhsachnhavantai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Ketoantonghop\BeePhaithu.resx">
+      <DependentUpon>BeePhaithu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Khothanhpham\BeeDanhsachsanpham.resx">
       <DependentUpon>BeeDanhsachsanpham.cs</DependentUpon>

@@ -2800,6 +2800,7 @@ namespace BEEACCOUNT.View
 
         private void sổTàiKhoảnTổngHợpToolStripMenuItem_Click(object sender, EventArgs e)
         {
+
             #region// bcsotonghop
 
 
@@ -3630,6 +3631,36 @@ namespace BEEACCOUNT.View
 
 
             #endregion
+
+        }
+
+        private void đơnBánHàngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bánHàngTạiQuầyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void phảiThuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            #region//btoanth
+
+
+
+            clearpannel();
+
+
+            View.BeePhaithu BeePhaithu = new BeePhaithu(this);
+            clearpannelload(BeePhaithu);
+
+
+
+            #endregion
+
 
         }
     }
