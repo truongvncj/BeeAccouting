@@ -55,7 +55,7 @@
             // 
             this.bl_priod.AutoSize = true;
             this.bl_priod.ForeColor = System.Drawing.Color.Red;
-            this.bl_priod.Location = new System.Drawing.Point(236, 104);
+            this.bl_priod.Location = new System.Drawing.Point(147, 104);
             this.bl_priod.Name = "bl_priod";
             this.bl_priod.Size = new System.Drawing.Size(36, 15);
             this.bl_priod.TabIndex = 4;
@@ -131,7 +131,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(106, 104);
+            this.label1.Location = new System.Drawing.Point(38, 104);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(66, 15);
             this.label1.TabIndex = 11;
@@ -174,7 +174,7 @@
             this.pk_todate.Size = new System.Drawing.Size(122, 21);
             this.pk_todate.TabIndex = 16;
             // 
-            // kaPriodmake
+            // Beekyketoan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -194,7 +194,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "kaPriodmake";
+            this.Name = "Beekyketoan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Kỳ kế toán";
             this.ResumeLayout(false);

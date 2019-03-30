@@ -65,7 +65,7 @@
             this.pkfromdate.CustomFormat = "dd.MM.yyyy";
             this.pkfromdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pkfromdate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.pkfromdate.Location = new System.Drawing.Point(138, 65);
+            this.pkfromdate.Location = new System.Drawing.Point(105, 70);
             this.pkfromdate.Name = "pkfromdate";
             this.pkfromdate.Size = new System.Drawing.Size(122, 24);
             this.pkfromdate.TabIndex = 1;
@@ -87,7 +87,7 @@
             this.pk_todate.CustomFormat = "dd.MM.yyyy";
             this.pk_todate.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pk_todate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.pk_todate.Location = new System.Drawing.Point(138, 96);
+            this.pk_todate.Location = new System.Drawing.Point(105, 101);
             this.pk_todate.Name = "pk_todate";
             this.pk_todate.Size = new System.Drawing.Size(122, 24);
             this.pk_todate.TabIndex = 2;
@@ -98,7 +98,7 @@
             this.lb_machitietno.AutoSize = true;
             this.lb_machitietno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_machitietno.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lb_machitietno.Location = new System.Drawing.Point(137, 39);
+            this.lb_machitietno.Location = new System.Drawing.Point(50, 39);
             this.lb_machitietno.Name = "lb_machitietno";
             this.lb_machitietno.Size = new System.Drawing.Size(40, 16);
             this.lb_machitietno.TabIndex = 65;
@@ -109,7 +109,7 @@
             this.lbtenchitietno.AutoSize = true;
             this.lbtenchitietno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbtenchitietno.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lbtenchitietno.Location = new System.Drawing.Point(183, 39);
+            this.lbtenchitietno.Location = new System.Drawing.Point(102, 44);
             this.lbtenchitietno.Name = "lbtenchitietno";
             this.lbtenchitietno.Size = new System.Drawing.Size(57, 16);
             this.lbtenchitietno.TabIndex = 64;
@@ -121,9 +121,9 @@
             this.cbtk.DropDownWidth = 350;
             this.cbtk.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbtk.FormattingEnabled = true;
-            this.cbtk.Location = new System.Drawing.Point(138, 10);
+            this.cbtk.Location = new System.Drawing.Point(105, 15);
             this.cbtk.Name = "cbtk";
-            this.cbtk.Size = new System.Drawing.Size(207, 26);
+            this.cbtk.Size = new System.Drawing.Size(244, 26);
             this.cbtk.TabIndex = 0;
             this.cbtk.SelectionChangeCommitted += new System.EventHandler(this.cbtk_SelectionChangeCommitted);
             // 

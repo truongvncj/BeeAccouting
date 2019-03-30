@@ -3,6 +3,7 @@ using System;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
+using BEEACCOUNT.shared;
 
 using System.Windows.Forms;
 
@@ -1030,17 +1031,17 @@ namespace BEEACCOUNT.Model
                         RptdetailSocaichitiet q = new RptdetailSocaichitiet();
                         if (item.Diengiai != "")
                         {
-                            q.diengiai = item.Diengiai.Trim();
+                            q.diengiai = item.Diengiai.Trim().Right(200);
                         }
 
-                        q.machungtu = item.manghiepvu + " " + item.Sohieuchungtu;
+                        q.machungtu = (item.manghiepvu.Trim() + " " + item.Sohieuchungtu).Right(10);
 
 
                         q.username = username;
                         q.Ngaychungtu = item.Ngayctu;
 
 
-                        q.taikhoandoiung = item.TkCo.Trim();
+                        q.taikhoandoiung = item.TkCo.Trim().Right(50);
                         q.psno = item.PsNo;
                         q.psco = 0;
 
