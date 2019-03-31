@@ -61,6 +61,9 @@ namespace BEEACCOUNT.View
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(Control_KeyPress);
 
             dataGridView1.DataSource = rs;
+
+            dataGridView1.Columns["id"].Visible = false;
+
             // cbselect.DataSource = CombomCollection;
             this.kq = false;
             //    this.value = 
@@ -116,6 +119,21 @@ namespace BEEACCOUNT.View
 
         private void dataGridView1_CellEnter(object sender, DataGridViewCellEventArgs e)
         {
+
+        }
+
+        private void dataGridView1_Paint(object sender, PaintEventArgs e)
+        {
+            //   Private Sub DataGridView1_Paint(ByVal sender As Object, ByVal e As System.Windows.Forms.PaintEventArgs) Handles DataGridView1.Paint
+            //  For Each c As DataGridViewColumn In dataGridViewListphieuthu.Columns
+
+            foreach (var c in dataGridView1.Columns)
+            {
+                DataGridViewColumn clm = (DataGridViewColumn)c;
+                clm.HeaderText = clm.HeaderText.Replace("_", " ");
+            }
+
+            // Next
 
         }
     }

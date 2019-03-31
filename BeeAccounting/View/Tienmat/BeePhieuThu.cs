@@ -2022,7 +2022,7 @@ namespace BEEACCOUNT.View
 
             #region if la slect tai khoan co chi tiet
 
-            if (colname == "Tk_Có" && SelectedItem != "" && currentCell.Value != null)
+            if (colname == "Tk_Có" && SelectedItem != "" && currentCell != null)
             {
                 string taikhoan = currentCell.Value.ToString();
                 string connection_string = Utils.getConnectionstr();

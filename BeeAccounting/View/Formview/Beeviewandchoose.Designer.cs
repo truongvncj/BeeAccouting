@@ -60,10 +60,12 @@
             this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnKeystroke;
             this.dataGridView1.Location = new System.Drawing.Point(12, 23);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.dataGridView1.Size = new System.Drawing.Size(507, 399);
             this.dataGridView1.TabIndex = 5;
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             this.dataGridView1.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellEnter);
+            this.dataGridView1.Paint += new System.Windows.Forms.PaintEventHandler(this.dataGridView1_Paint);
             this.dataGridView1.Enter += new System.EventHandler(this.dataGridView1_Enter);
             // 
             // Beeviewandchoose

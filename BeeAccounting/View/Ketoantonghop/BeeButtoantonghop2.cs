@@ -155,7 +155,7 @@ namespace BEEACCOUNT.View
 
             this.statusphieu = 1; // tạo mới
 
-            dataGridViewdetail = Model.hachtoantonghop.reloaddetailnewbuttoan(dataGridViewdetail);
+            dataGridViewdetail = Model.hachtoantonghop.reloaddetailnewbuttoandetail(dataGridViewdetail);
             #endregion
 
         }
@@ -327,7 +327,7 @@ namespace BEEACCOUNT.View
 
 
             //       dataGridViewTkCo.DataSource = Model.Khohang.danhsachphieunhapkho(dc);
-            dataGridViewdetail = Model.hachtoantonghop.reloaddetailnewbuttoan(dataGridViewdetail);
+            dataGridViewdetail = Model.hachtoantonghop.reloaddetailnewbuttoandetail(dataGridViewdetail);
 
             dataGridViewListBTTH.DataSource = Model.hachtoantonghop.danhsachbuttoantonghop(dc);
 
@@ -1098,7 +1098,7 @@ namespace BEEACCOUNT.View
 
                 }
 
-                dataGridViewdetail = Model.hachtoantonghop.reloaddetailnewbuttoan(dataGridViewdetail);
+                dataGridViewdetail = Model.hachtoantonghop.reloaddetailnewbuttoandetail(dataGridViewdetail);
 
                 #region adđ detail san phẩm
 

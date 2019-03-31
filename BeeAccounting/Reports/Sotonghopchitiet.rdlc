@@ -406,25 +406,25 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
               <Width>2.4717cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>9.1693cm</Width>
+              <Width>8.56822cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>2.5cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.12144cm</Width>
+              <Width>2.38602cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.27245cm</Width>
+              <Width>2.86789cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.7512cm</Width>
+              <Width>2.78329cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>2.5cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.7899cm</Width>
+              <Width>2.78427cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -975,7 +975,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
         <Top>4.07141cm</Top>
         <Left>0.28576cm</Left>
         <Height>1.2cm</Height>
-        <Width>27.86765cm</Width>
+        <Width>28.15305cm</Width>
         <ZIndex>10</ZIndex>
         <Style>
           <Border>
@@ -993,19 +993,19 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
               <Width>2.50378cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>9.1693cm</Width>
+              <Width>8.54177cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>2.5cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.12144cm</Width>
+              <Width>2.38039cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.27245cm</Width>
+              <Width>2.86789cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.7512cm</Width>
+              <Width>2.78329cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>2.5cm</Width>
@@ -1626,7 +1626,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
         <Top>5.27169cm</Top>
         <Left>0.28576cm</Left>
         <Height>1.2cm</Height>
-        <Width>27.8941cm</Width>
+        <Width>28.15305cm</Width>
         <ZIndex>11</ZIndex>
         <Style>
           <Border>
@@ -1725,7 +1725,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
         <Top>4.30652cm</Top>
         <Left>4.09498cm</Left>
         <Height>0.79583cm</Height>
-        <Width>9.03093cm</Width>
+        <Width>8.42239cm</Width>
         <ZIndex>14</ZIndex>
         <Style>
           <Border>
@@ -1787,7 +1787,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
         <Top>4.30652cm</Top>
         <Left>0.31751cm</Left>
         <Height>0.82406cm</Height>
-        <Width>1.19288cm</Width>
+        <Width>1.00767cm</Width>
         <ZIndex>16</ZIndex>
         <Style>
           <Border>
@@ -1809,7 +1809,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
       </Border>
     </Style>
   </Body>
-  <Width>28.17986cm</Width>
+  <Width>28.44444cm</Width>
   <Page>
     <PageFooter>
       <Height>0.77639cm</Height>
