@@ -84,10 +84,10 @@ namespace BEEACCOUNT.View
                     {
                         cn.Open();
                     }
-                    catch (Exception)
+                    catch (Exception ex)
                     {
 
-                        MessageBox.Show("Lỗi đường truyền dữ liệu !", "Connection !", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Lỗi đường truyền dữ liệu !" +ex.ToString() , "Connection !", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
                     }
 
