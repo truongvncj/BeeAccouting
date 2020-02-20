@@ -24,8 +24,8 @@ namespace BEEACCOUNT.View
         public int captk { get; set; }
         public string tkcaptren { get; set; }
 
-        public float nodauky { get; set; }
-        public float codauky { get; set; }
+        public double nodauky { get; set; }
+        public double codauky { get; set; }
 
 
         public class ComboboxItem
@@ -319,7 +319,7 @@ namespace BEEACCOUNT.View
 
             if (Utils.IsValidnumber(txtNodauky.Text))
             {
-                nodauky = float.Parse(txtNodauky.Text);
+                nodauky = double.Parse(txtNodauky.Text);
             }
             else
             {
@@ -330,7 +330,7 @@ namespace BEEACCOUNT.View
 
             if (Utils.IsValidnumber(txtCodauky.Text))
             {
-                codauky = float.Parse(txtCodauky.Text);
+                codauky = double.Parse(txtCodauky.Text);
             }
             else
             {
@@ -531,7 +531,7 @@ namespace BEEACCOUNT.View
 
             if (Utils.IsValidnumber(txtNodauky.Text))
             {
-                nodauky = float.Parse(txtNodauky.Text);
+                nodauky = double.Parse(txtNodauky.Text);
             }
             else
             {
@@ -542,7 +542,7 @@ namespace BEEACCOUNT.View
 
             if (Utils.IsValidnumber(txtCodauky.Text))
             {
-                codauky = float.Parse(txtCodauky.Text);
+                codauky = double.Parse(txtCodauky.Text);
             }
             else
             {

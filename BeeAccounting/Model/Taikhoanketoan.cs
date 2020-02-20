@@ -79,8 +79,8 @@ namespace BEEACCOUNT.Model
             int captk = createacc.captk;
             string tkcaptren = createacc.tkcaptren;
             string loaitk = createacc.loaitk;
-            float nodk = createacc.nodauky;
-            float codk = createacc.codauky;
+            double nodk = createacc.nodauky;
+            double codk = createacc.codauky;
 
 
             if (chon)
@@ -132,7 +132,7 @@ namespace BEEACCOUNT.Model
 
         public static void ghisocaitk(tbl_Socai socai)
         {
-            //  string username, string tkno, string tkco, float psno, float psco, string diengiai, string manghiepvu, int sochunngtu, DateTime ngaychungtu, DateTime ngayghiso
+            //  string username, string tkno, string tkco, double psno, double psco, string diengiai, string manghiepvu, int sochunngtu, DateTime ngaychungtu, DateTime ngayghiso
 
             string connection_string = Utils.getConnectionstr();
             LinqtoSQLDataContext db = new LinqtoSQLDataContext(connection_string);
