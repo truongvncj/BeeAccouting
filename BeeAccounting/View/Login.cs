@@ -87,7 +87,7 @@ namespace BEEACCOUNT.View
                     catch (Exception ex)
                     {
 
-                        MessageBox.Show("Lỗi đường truyền dữ liệu !" +ex.ToString() , "Connection !", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Lỗi đường truyền dữ liệu !"  , "Connection !", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
                     }
 
@@ -149,21 +149,7 @@ namespace BEEACCOUNT.View
 
 
 
-                        #region// read file xml và sửa app. config
-
-                        /// connection_string = connection_string + "111";
-                        //LinqtoSQLDataContext db = new LinqtoSQLDataContext(connection_string);
-
-                        //var rs = from tblCustomer in db.tblCustomers
-                        //         select tblCustomer;
-
-                        //if (rs!= null)
-                        //{
-                        //    MessageBox.Show(rs.Count().ToString() + "   ok");
-                        //}
-                        ////   string conString = ConfigurationManager.ConnectionStrings["ConString"].ConnectionString;
-                        #endregion//read file xml và sửa app. config
-
+                    
 
                     }
                     else
