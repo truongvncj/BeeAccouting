@@ -126,6 +126,7 @@
             this.txtsotien.Size = new System.Drawing.Size(190, 24);
             this.txtsotien.TabIndex = 72;
             this.txtsotien.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtsotien_KeyPress_1);
+            this.txtsotien.Leave += new System.EventHandler(this.txtsotien_Leave_1);
             // 
             // label4
             // 
@@ -156,8 +157,7 @@
             // 
             // cbtkno
             // 
-            this.cbtkno.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.cbtkno.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbtkno.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbtkno.DropDownWidth = 350;
             this.cbtkno.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbtkno.FormattingEnabled = true;
@@ -214,8 +214,7 @@
             // 
             // cbtkco
             // 
-            this.cbtkco.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.cbtkco.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbtkco.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbtkco.DropDownWidth = 350;
             this.cbtkco.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbtkco.FormattingEnabled = true;

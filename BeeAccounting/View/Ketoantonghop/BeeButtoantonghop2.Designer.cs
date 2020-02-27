@@ -156,9 +156,7 @@
             // 
             // cbtkno
             // 
-            this.cbtkno.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.cbtkno.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cbtkno.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
+            this.cbtkno.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbtkno.DropDownWidth = 350;
             this.cbtkno.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbtkno.FormattingEnabled = true;
@@ -215,9 +213,7 @@
             // 
             // cbtkco
             // 
-            this.cbtkco.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.cbtkco.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cbtkco.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
+            this.cbtkco.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbtkco.DropDownWidth = 350;
             this.cbtkco.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbtkco.FormattingEnabled = true;

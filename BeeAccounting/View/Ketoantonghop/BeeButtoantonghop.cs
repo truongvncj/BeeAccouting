@@ -23,6 +23,7 @@ namespace BEEACCOUNT.View
         public string tkco { get; set; }
         public int tkcochitiet { get; set; }
         public double sotien { get; set; }
+        public double sotienct { get; set; }
 
         public class ComboboxItem
         {
@@ -2483,6 +2484,7 @@ namespace BEEACCOUNT.View
                 return;
 
             }
+
             if (txtsotien.Text != "" && Utils.IsValidnumber(txtsotien.Text) == false)
             {
                 MessageBox.Show("Số tiền phải là số !", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -2528,8 +2530,8 @@ namespace BEEACCOUNT.View
 
             if (Utils.IsValidnumber(txtsotien.Text))
             {
-                socai.PsCo = double.Parse(txtsotien.Text.ToString());
-                socai.PsNo = double.Parse(txtsotien.Text.ToString());
+                socai.PsCo =  double.Parse(txtsotien.Text.ToString());
+                socai.PsNo =  double.Parse(txtsotien.Text.ToString());
 
             }
 
@@ -2556,6 +2558,7 @@ namespace BEEACCOUNT.View
             datepickngayphieu.Enabled = false;
             txtsophieu.Enabled = false;
             txtsotien.Text = "";
+         //   this.sotienct = 0;
 
         }
 
@@ -2939,6 +2942,31 @@ namespace BEEACCOUNT.View
         private void cbtkno_SelectedValueChanged(object sender, EventArgs e)
         {
             cbtkno.Focus();
+        }
+
+        private void txtsotien_Leave_1(object sender, EventArgs e)
+        {
+
+            //if (txtsotien.Text != "" && Utils.IsValidnumber(txtsotien.Text) == false)
+            //{
+            //    MessageBox.Show("Số tiền phải là số !", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //    //    checkdinhkhoan = false;
+            //    txtsotien.Focus();
+            //    return;
+
+            //}
+            //else
+            //{
+            //    this.sotienct = double.Parse(txtsotien.Text);
+
+            //    txtsotien.Text = string.Format("{0:#,##0.00}", double.Parse(txtsotien.Text));
+
+            //}
+
+
+
+
+
         }
     }
 }

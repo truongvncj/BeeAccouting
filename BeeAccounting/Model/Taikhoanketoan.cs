@@ -35,15 +35,7 @@ namespace BEEACCOUNT.Model
                          Dư_Nợ_đầu_kỳ = tbl_dstaikhoan.nodk,
                          Dư_Có_đầu_kỳ = tbl_dstaikhoan.codk,
 
-                         //CDKT_Mã_PS_Nợ = tbl_dstaikhoan.MCT_CDKT_PSNO,
-                         //CDKT_Mã_PS_Có = tbl_dstaikhoan.MCT_CDKT_PSCO,
-
-                         //KQKD_Mã_PS_Nợ = tbl_dstaikhoan.MCT_KQKD_PSNO,
-                         //KQKD_Mã_PS_Có = tbl_dstaikhoan.MCT_KQKD_PSCO,
-
-                         //LCTT_Mã_PS_Nợ = tbl_dstaikhoan.MCT_LCTT_PSNO,
-                         //LCTT_Mã_PS_Có = tbl_dstaikhoan.MCT_LCTT_PSCO,
-
+                 
 
 
                          ID = tbl_dstaikhoan.id,
