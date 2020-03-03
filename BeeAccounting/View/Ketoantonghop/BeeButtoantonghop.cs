@@ -22,7 +22,7 @@ namespace BEEACCOUNT.View
         public int tknochitiet { get; set; }
         public string tkco { get; set; }
         public int tkcochitiet { get; set; }
-        public double sotien { get; set; }
+        public double tongsotien { get; set; }
         public double sotienct { get; set; }
 
         public class ComboboxItem
@@ -255,7 +255,8 @@ namespace BEEACCOUNT.View
             this.KeyPreview = true;
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(Control_KeyPress);  // để đọc từ bàn phím phím tắt
 
-            this.sotien = 0;
+            this.sotienct = 0;
+            this.tongsotien = 0;
             //   this.pssotienco = 0;
             this.main1 = Main;
             //lbid.Text = "";
@@ -977,7 +978,7 @@ namespace BEEACCOUNT.View
                     if (buttoanth.PsCo != null)
                     {
 
-                        this.sotien = double.Parse(buttoanth.PsCo.ToString());
+                        this.sotienct = double.Parse(buttoanth.PsCo.ToString());
                         txtsotien.Text = buttoanth.PsCo.ToString();
                     }
 
@@ -1509,7 +1510,7 @@ namespace BEEACCOUNT.View
             }
 
             //txtValueSotienCo.Text = tongcong.ToString();
-            this.sotien = tongcong;
+            this.tongsotien = tongcong;
             txttongtien.Text = tongcong.ToString("#,#", CultureInfo.InvariantCulture);
 
             #endregion
@@ -2033,7 +2034,7 @@ namespace BEEACCOUNT.View
             }
 
             //txtValueSotienCo.Text = tongcong.ToString();
-            this.sotien = tongcong;
+            this.tongsotien = tongcong;
             txttongtien.Text = tongcong.ToString("#,#", CultureInfo.InvariantCulture);
 
             #endregion
@@ -2157,7 +2158,7 @@ namespace BEEACCOUNT.View
             }
 
             //txtValueSotienCo.Text = tongcong.ToString();
-            this.sotien = tongcong;
+            this.tongsotien = tongcong;
             txttongtien.Text = tongcong.ToString("#,#", CultureInfo.InvariantCulture);
 
             #endregion
@@ -2416,7 +2417,7 @@ namespace BEEACCOUNT.View
 
             }
 
-            if (txtsotien.Text != "" && Utils.IsValidnumber(txtsotien.Text.Replace(",","")) == false)
+            if (txtsotien.Text != "" && Utils.IsValidnumber(txtsotien.Text.Replace(",", "")) == false)
             {
                 MessageBox.Show("Số tiền phải là số !", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 //    checkdinhkhoan = false;
@@ -2451,23 +2452,12 @@ namespace BEEACCOUNT.View
             socai.Sohieuchungtu = txtsophieu.Text;
             socai.TkCo = this.tkco;
             socai.TkNo = this.tkno;
-            //if (cbtkco.SelectedItem != null)
-            //{
-            //    socai.TkCo = (cbtkco.SelectedItem as ComboboxItem).Value.ToString();
-            //}
+          
 
-            //if (cbtkno.SelectedItem != null)
-            //{
-            //    socai.TkNo = (cbtkno.SelectedItem as ComboboxItem).Value.ToString();
-            //}
 
-            if (Utils.IsValidnumber(txtsotien.Text))
-            {
-                socai.PsCo = this.sotienct;// double.Parse(txtsotien.Text.ToString());
-                socai.PsNo = this.sotienct;//.Parse(txtsotien.Text.ToString());
+            socai.PsCo = this.sotienct;// double.Parse(txtsotien.Text.ToString());
+            socai.PsNo = this.sotienct;//.Parse(txtsotien.Text.ToString());
 
-            }
-            //socai.MaCTietTKCo = this.tkcochitiet;// int.Parse(lb_machitietco.Text.ToString());
             if (lb_machitietco.Text != "" && Utils.IsValidnumber(lb_machitietco.Text))
             {
                 socai.MaCTietTKCo = int.Parse(lb_machitietco.Text.ToString());
@@ -2599,7 +2589,7 @@ namespace BEEACCOUNT.View
                 if (buttoanth.PsCo != null)
                 {
 
-                    this.sotien = double.Parse(buttoanth.PsCo.ToString());
+                    this.sotienct = double.Parse(buttoanth.PsCo.ToString());
                     txtsotien.Text = buttoanth.PsCo.ToString();
                 }
 
@@ -2860,7 +2850,7 @@ namespace BEEACCOUNT.View
 
                     txtsotien.Text = string.Format("{0:#,##0}", double.Parse(txtsotien.Text));
                 }
-              
+
 
             }
 
