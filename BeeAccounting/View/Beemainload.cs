@@ -1230,13 +1230,13 @@ namespace BEEACCOUNT.View
 
         private void pictureBox2_MouseClick(object sender, MouseEventArgs e)
         {
-        
-          
+
+
         }
 
         private void pictureBox1_MouseClick(object sender, MouseEventArgs e)
         {
-          
+
             this.pictureBox1.BorderStyle = BorderStyle.None;
         }
 
@@ -1247,16 +1247,8 @@ namespace BEEACCOUNT.View
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            //    string connection_string = Utils.getConnectionstr();
 
-            //   LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
-
-            //   var rs1 = Model.Nhacungcap.danhsachNVT(dc);
-            //    Viewtable viewtbl = new Viewtable(rs1, dc, "DANH SÁCH NHÀ VẬN TẢI", 8, "tk");// mã 8 là danh sach nha nha van tai
-            //   Viewtable viewtbl = new
-            View.beektth viewtbl = new beektth(this.main1);
-
-            viewtbl.Show();
+       
 
         }
 
@@ -1269,12 +1261,12 @@ namespace BEEACCOUNT.View
 
         private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
         {
-      
+
         }
 
         private void pictureBox2_MouseMove(object sender, MouseEventArgs e)
         {
-        
+
         }
 
         private void pictureBox2_MouseUp(object sender, MouseEventArgs e)
@@ -1299,8 +1291,8 @@ namespace BEEACCOUNT.View
 
         private void button2_Click_2(object sender, EventArgs e)
         {
-        //    View.BarcodeSample bc = new BarcodeSample();
-       //     bc.ShowDialog();
+            //    View.BarcodeSample bc = new BarcodeSample();
+            //     bc.ShowDialog();
         }
 
         private void button31_Click(object sender, EventArgs e)

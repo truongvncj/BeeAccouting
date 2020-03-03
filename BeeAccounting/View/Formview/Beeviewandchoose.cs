@@ -42,11 +42,11 @@ namespace BEEACCOUNT.View
             if (e.KeyData == Keys.Escape)
             {
                 this.Close();
-              
+
             }
 
 
-            }
+        }
 
 
 
@@ -135,6 +135,22 @@ namespace BEEACCOUNT.View
 
             // Next
 
+        }
+
+        private void dataGridView1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                if (this.dataGridView1.CurrentCell.RowIndex >= 0)
+                {
+                    this.value = int.Parse(this.dataGridView1.Rows[this.dataGridView1.CurrentCell.RowIndex].Cells["id"].Value.ToString());
+
+                    kq = true;
+
+                    this.Close();
+                }
+
+            }
         }
     }
 }

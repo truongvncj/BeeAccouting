@@ -221,12 +221,6 @@
     <Compile Include="View\Dieuvan\NPDanhsachnhavantai.Designer.cs">
       <DependentUpon>NPDanhsachnhavantai.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Ketoantonghop\BeeButtoantonghop2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\Ketoantonghop\BeeButtoantonghop2.Designer.cs">
-      <DependentUpon>BeeButtoantonghop2.cs</DependentUpon>
-    </Compile>
     <Compile Include="View\Ketoantonghop\xBeePhaithu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -586,9 +580,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Dieuvan\NPDanhsachnhavantai.resx">
       <DependentUpon>NPDanhsachnhavantai.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\Ketoantonghop\BeeButtoantonghop2.resx">
-      <DependentUpon>BeeButtoantonghop2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Ketoantonghop\xBeePhaithu.resx">
       <DependentUpon>xBeePhaithu.cs</DependentUpon>
