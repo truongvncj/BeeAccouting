@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using BEEACCOUNT.Control;
+using BEEACCOUNT.shared;
 
 namespace BEEACCOUNT.View
 {
@@ -803,7 +804,7 @@ namespace BEEACCOUNT.View
             if (txttenchitettaikhoan.Text != null && txttenchitettaikhoan.Text != "")
             {
 
-                tkchitiet.tenchitiet = txttenchitettaikhoan.Text;
+                tkchitiet.tenchitiet = txttenchitettaikhoan.Text.Truncate(50);
 
                 taikhoanchon = txttenchitettaikhoan.Text;
             }
@@ -821,8 +822,8 @@ namespace BEEACCOUNT.View
             #region  ten tai khoan chi tiet
             if ((cbtkno.SelectedItem as ComboboxItem).Value != null)
             {
-                tkchitiet.matk = (cbtkno.SelectedItem as ComboboxItem).Value.ToString();
-                tkchitiet.ghichu = txtghichu.Text;
+                tkchitiet.matk = (cbtkno.SelectedItem as ComboboxItem).Value.ToString().Truncate(50);
+                tkchitiet.ghichu = txtghichu.Text.Truncate(225);
             }
             else
             {
@@ -976,6 +977,69 @@ namespace BEEACCOUNT.View
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void txtmachitiet_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+
+
+                txttenchitettaikhoan.Focus();
+
+
+            }
+
+        }
+
+        private void txttenchitettaikhoan_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+
+
+                txtghichu.Focus();
+
+
+            }
+
+        }
+
+        private void txtghichu_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+
+
+                txtNodauky.Focus();
+
+
+            }
+        }
+
+        private void txtNodauky_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+
+
+                txtCodauky.Focus();
+
+
+            }
+        }
+
+        private void txtCodauky_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+
+
+                txtmachitiet.Focus();
+
+
+            }
         }
     }
 

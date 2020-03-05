@@ -1248,7 +1248,20 @@ namespace BEEACCOUNT.View
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
-       
+            #region//btoanth
+
+
+          //  this.Close();
+            this.main1.clearpannel();
+
+
+            View.BeeButtoantonghop buttoantonghop = new BeeButtoantonghop(this.main1);
+            this.main1.clearpannelload(buttoantonghop);
+
+
+
+            #endregion
+
 
         }
 
@@ -1299,6 +1312,54 @@ namespace BEEACCOUNT.View
         {
             View.Utility.Zalosend zalo = new Utility.Zalosend();
             zalo.ShowDialog();
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+
+            #region//btoanth
+
+
+            //  this.Close();
+            this.main1.clearpannel();
+
+
+            View.BeePhieuchi phieuchi = new BeePhieuchi(this.main1);
+            this.main1.clearpannelload(phieuchi);
+
+
+
+            #endregion
+        }
+
+        private void pictureBox4_MouseClick(object sender, MouseEventArgs e)
+        {
+            this.pictureBox4.BorderStyle = BorderStyle.None;
+        }
+
+        private void pictureBox4_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            this.pictureBox4.BorderStyle = BorderStyle.Fixed3D;
+        }
+
+        private void pictureBox4_MouseHover(object sender, EventArgs e)
+        {
+            this.pictureBox4.BorderStyle = BorderStyle.FixedSingle;
+        }
+
+        private void pictureBox4_MouseLeave(object sender, EventArgs e)
+        {
+            this.pictureBox4.BorderStyle = BorderStyle.None;
+        }
+
+        private void pictureBox4_MouseUp(object sender, MouseEventArgs e)
+        {
+            this.pictureBox4.BorderStyle = BorderStyle.None;
+        }
+
+        private void pictureBox4_MouseDown(object sender, MouseEventArgs e)
+        {
+            this.pictureBox4.BorderStyle = BorderStyle.Fixed3D;
         }
     }
 }

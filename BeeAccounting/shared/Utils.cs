@@ -267,7 +267,7 @@ namespace BEEACCOUNT
             else
             {
 
-                return rs.ToString();
+                return rs.ToString().Truncate(50);
             }
 
         }

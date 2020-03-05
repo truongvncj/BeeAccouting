@@ -8,6 +8,7 @@ using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using BEEACCOUNT.shared;
 
 namespace BEEACCOUNT.View
 {
@@ -80,7 +81,7 @@ namespace BEEACCOUNT.View
 
             drToAdd["Ngày_chứng_từ"] = socai.Ngayctu;
             drToAdd["Số_chứng_từ"] = socai.Sohieuchungtu;
-            drToAdd["Diễn_giải"] = socai.Diengiai.Trim();
+            drToAdd["Diễn_giải"] = socai.Diengiai.Truncate(225);
 
             drToAdd["Nợ_TK"] = socai.TkNo;
 
@@ -105,8 +106,8 @@ namespace BEEACCOUNT.View
                 drToAdd["Mã_chi_tiết_TK_Có"] = socai.MaCTietTKCo;
             }
 
-            drToAdd["Tên_chi_tiết_TK_Nợ"] = socai.tenchitietNo;
-            drToAdd["Tên_chi_tiết_TK_Có"] = socai.tenchitietCo;
+            drToAdd["Tên_chi_tiết_TK_Nợ"] = socai.tenchitietNo.Truncate(50);
+            drToAdd["Tên_chi_tiết_TK_Có"] = socai.tenchitietCo.Truncate(50);
 
 
 
@@ -2408,6 +2409,15 @@ namespace BEEACCOUNT.View
 
             }
 
+            if (txtdiengiai.Text.Length > 225)
+            {
+                MessageBox.Show("Mục diễn giải chỉ cho phép nhập 225 ký tự !", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //    checkdinhkhoan = false;
+                txtdiengiai.Focus();
+                return;
+
+            }
+
             if (txtsotien.Text == "")
             {
                 MessageBox.Show("Bạn chưa nhập số tiền !", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -2448,8 +2458,8 @@ namespace BEEACCOUNT.View
             socai.Ngayctu = datepickngayphieu.Value;
 
             socai.manghiepvu = "TH";
-            socai.Diengiai = txtdiengiai.Text;
-            socai.Sohieuchungtu = txtsophieu.Text;
+            socai.Diengiai = txtdiengiai.Text.Truncate(225);
+            socai.Sohieuchungtu = txtsophieu.Text.Truncate(50);
             socai.TkCo = this.tkco;
             socai.TkNo = this.tkno;
           

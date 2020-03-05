@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using BEEACCOUNT.shared;
 
 namespace BEEACCOUNT.Model
 {
@@ -24,7 +25,7 @@ namespace BEEACCOUNT.Model
             else
             {
 
-                return rs.ToString();
+                return rs.ToString().Truncate(225);
             }
 
         }
@@ -45,7 +46,7 @@ namespace BEEACCOUNT.Model
             else
             {
 
-                return rs.ToString();
+                return rs.ToString().Truncate(50);
             }
 
         }
@@ -67,7 +68,7 @@ namespace BEEACCOUNT.Model
             else
             {
 
-                return rs.ToString();
+                return rs.ToString().Truncate(225);
             }
 
         }
@@ -89,7 +90,7 @@ namespace BEEACCOUNT.Model
             else
             {
 
-                return rs.ToString();
+                return rs.ToString().Truncate(50);
             }
 
         }
@@ -110,7 +111,7 @@ namespace BEEACCOUNT.Model
             else
             {
 
-                return rs.ToString();
+                return rs.ToString().Truncate(50);
             }
 
         }

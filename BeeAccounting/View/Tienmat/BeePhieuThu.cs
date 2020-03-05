@@ -229,7 +229,7 @@ namespace BEEACCOUNT.View
 
 
             var rs2 = from tk in dc.tbl_dstaikhoans
-                   //   where tk.loaitkid == "tien" // mã 8 là tiền mặt
+                      where tk.loaitkid == "tien" // mã 8 là tiền mặt
                       select tk;
 
             //      string drowdownshow = "";

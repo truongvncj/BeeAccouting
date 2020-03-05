@@ -19,7 +19,7 @@ namespace BEEACCOUNT.Model
             //  Beeyearsellect
             string connection_string = Utils.getConnectionstr();
             string urs = Utils.getusername();
-    //        string macty = Model.Username.getmacty();
+            //        string macty = Model.Username.getmacty();
             //  var db = new LinqtoSQLDataContext(connection_string);
             LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
 
@@ -265,7 +265,7 @@ namespace BEEACCOUNT.Model
         {
             string connection_string = Utils.getConnectionstr();
             string urs = Utils.getusername();
-       //     string macty = Model.Username.getmacty();
+            //     string macty = Model.Username.getmacty();
             LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
 
 
@@ -335,10 +335,10 @@ namespace BEEACCOUNT.Model
 
 
                     headSocai.taikhoan = tentaikhoan.Trim(); //mataikhoan.Trim() + "-" + 
-               //     headSocai.tencongty = Model.Congty.getnamecongty(macty);
+                                                             //     headSocai.tencongty = Model.Congty.getnamecongty(macty);
                     headSocai.username = username;
-                 //   headSocai.diachicongty = Model.Congty.getdiachicongty(macty);
-                  //  headSocai.masothue = Model.Congty.getmasothuecongty(macty);
+                    //   headSocai.diachicongty = Model.Congty.getdiachicongty(macty);
+                    //  headSocai.masothue = Model.Congty.getmasothuecongty(macty);
                     headSocai.tungay = fromdate;
                     headSocai.denngay = todate;
 
@@ -422,10 +422,10 @@ namespace BEEACCOUNT.Model
                         RptdetailSoCai q = new RptdetailSoCai();
                         if (item.Diengiai != "")
                         {
-                            q.diengiai = item.Diengiai.Trim();
+                            q.diengiai = item.Diengiai.Truncate(225);
                         }
 
-                        q.machungtu = item.manghiepvu + " " + item.Sohieuchungtu;
+                        q.machungtu = (item.manghiepvu.Trim() + " " + item.Sohieuchungtu.Trim()).Truncate(10);
 
 
                         q.username = username;
@@ -457,10 +457,10 @@ namespace BEEACCOUNT.Model
                         RptdetailSoCai q = new RptdetailSoCai();
                         if (item.Diengiai != "")
                         {
-                            q.diengiai = item.Diengiai.Trim();
+                            q.diengiai = item.Diengiai.Truncate(225);
                         }
 
-                        q.machungtu = item.manghiepvu + " " + item.Sohieuchungtu;
+                        q.machungtu = (item.manghiepvu.Trim() + " " + item.Sohieuchungtu.Trim()).Truncate(10);
 
 
                         q.username = username;
@@ -576,7 +576,7 @@ namespace BEEACCOUNT.Model
                 string tentaikhoan = Beeselecttk.tentaikhoan;
                 int machitiettaikhoan = Beeselecttk.machitiettaikhoan;
                 string tentaikhoanchitiet = Beeselecttk.tentaikhoanchitiet;
-              //  string macty = Model.Username.getmacty();
+                //  string macty = Model.Username.getmacty();
 
                 if (chon)
                 {
@@ -611,10 +611,10 @@ namespace BEEACCOUNT.Model
 
                     headSoquy.taikhoan = tentaikhoan.Trim(); //mataikhoan.Trim() + "-" + 
                     headSoquy.loaiquy = tentaikhoanchitiet;
-                    headSoquy.tencongty = Model.Congty.getnamecongty();
+                    headSoquy.tencongty = Model.Congty.getnamecongty().Truncate(225);
                     headSoquy.username = username;
-                    headSoquy.diachicongty = Model.Congty.getdiachicongty();
-                    headSoquy.masothue = Model.Congty.getmasothuecongty();
+                    headSoquy.diachicongty = Model.Congty.getdiachicongty().Truncate(225);
+                    headSoquy.masothue = Model.Congty.getmasothuecongty().Truncate(50);
                     headSoquy.tungay = fromdate;
                     headSoquy.denngay = todate;
 
@@ -724,16 +724,16 @@ namespace BEEACCOUNT.Model
                     foreach (var item in detairpt)
                     {
                         RptdetailSoQuy q = new RptdetailSoQuy();
-                        q.diengiai = item.Diengiai;
+                        q.diengiai = item.Diengiai.Truncate(225);
 
                         if (item.Machungtu == "PC")
                         {
-                            q.machungtuchi = item.Machungtu + " " + item.Sophieu.Trim();
+                            q.machungtuchi = (item.Machungtu.Trim() + " " + item.Sophieu.Trim().Trim()).Truncate(10);
                             q.machungtuthu = "";
                         }
                         else
                         {
-                            q.machungtuthu = item.Machungtu + " " + item.Sophieu.Trim();
+                            q.machungtuthu = (item.Machungtu.Trim() + " " + item.Sophieu.Trim()).Truncate(10);
                             q.machungtuchi = "";
                         }
 
@@ -845,7 +845,7 @@ namespace BEEACCOUNT.Model
         {
             string connection_string = Utils.getConnectionstr();
             string urs = Utils.getusername();
-        //    string macty = Model.Username.getmacty();
+            //    string macty = Model.Username.getmacty();
 
             LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
 
@@ -995,10 +995,10 @@ namespace BEEACCOUNT.Model
                         RptdetailSocaichitiet q = new RptdetailSocaichitiet();
                         if (item.Diengiai != "")
                         {
-                            q.diengiai = item.Diengiai.Trim();
+                            q.diengiai = item.Diengiai.Truncate(225);
                         }
 
-                        q.machungtu = item.manghiepvu + " " + item.Sohieuchungtu;
+                        q.machungtu = (item.manghiepvu.Trim() + " " + item.Sohieuchungtu.Trim()).Truncate(10);
 
 
                         q.username = username;
@@ -1031,17 +1031,17 @@ namespace BEEACCOUNT.Model
                         RptdetailSocaichitiet q = new RptdetailSocaichitiet();
                         if (item.Diengiai != "")
                         {
-                            q.diengiai = item.Diengiai.Trim().Right(200);
+                            q.diengiai = item.Diengiai.Trim().Truncate(225);
                         }
 
-                        q.machungtu = (item.manghiepvu.Trim() + " " + item.Sohieuchungtu).Right(10);
+                        q.machungtu = (item.manghiepvu.Trim() + " " + item.Sohieuchungtu).Truncate(10);
 
 
                         q.username = username;
                         q.Ngaychungtu = item.Ngayctu;
 
 
-                        q.taikhoandoiung = item.TkCo.Trim().Right(50);
+                        q.taikhoandoiung = item.TkCo.Trim().Truncate(50);
                         q.psno = item.PsNo;
                         q.psco = 0;
 
@@ -1275,7 +1275,7 @@ namespace BEEACCOUNT.Model
 
 
                     RPtheadLCTTTtiep headrpt = new RPtheadLCTTTtiep();
-              //      string macty = Model.Username.getmacty();
+                    //      string macty = Model.Username.getmacty();
 
                     headrpt.nam = yearchon;
                     headrpt.tencongty = Model.Congty.getnamecongty();
@@ -1582,7 +1582,7 @@ namespace BEEACCOUNT.Model
 
 
                     RPtheadTHchitiet headTHchitiet = new RPtheadTHchitiet();
-               
+
                     headTHchitiet.taikhoan = tentaikhoan.Trim(); //mataikhoan.Trim() + "-" + 
                     headTHchitiet.tencongty = Model.Congty.getnamecongty();
                     headTHchitiet.username = username;
@@ -1621,7 +1621,7 @@ namespace BEEACCOUNT.Model
 
 
                             detail.machitiet = item.machitiet;
-                            detail.tenchitiet = item.tenchitiet;
+                            detail.tenchitiet = item.tenchitiet.Truncate(225);
 
                             detail.stt = stt;
                             detail.Codk = (from tbl_Socai in dc.tbl_Socais
@@ -1785,7 +1785,7 @@ namespace BEEACCOUNT.Model
 
                     RPtheadCDKT200mau01 headrpt = new RPtheadCDKT200mau01();
 
-                     headrpt.nam = yearchon;
+                    headrpt.nam = yearchon;
                     headrpt.tencongty = Model.Congty.getnamecongty();
                     headrpt.username = username;
                     headrpt.diachicongty = Model.Congty.getdiachicongty();
@@ -2011,7 +2011,7 @@ namespace BEEACCOUNT.Model
 
                     RPtheadKQKD200 headrpt = new RPtheadKQKD200();
 
-               
+
                     headrpt.nam = yearchon;
                     headrpt.tencongty = Model.Congty.getnamecongty();
                     headrpt.username = username;
@@ -2148,7 +2148,7 @@ namespace BEEACCOUNT.Model
 
                     DateTime fromdate = Utils.chageExceldatetoData("01/01/" + yearchon);
                     DateTime todate = Utils.chageExceldatetoData("31/12/" + yearchon);
-              
+
                     headCDPS.tencongty = Model.Congty.getnamecongty();
                     headCDPS.username = username;
                     headCDPS.diachicongty = Model.Congty.getdiachicongty();
@@ -2332,7 +2332,7 @@ namespace BEEACCOUNT.Model
 
 
                     RPtheadTHxuatnhapton headTHxnhapton = new RPtheadTHxuatnhapton();
-                 
+
                     headTHxnhapton.kho = tenkho.Trim(); //mataikhoan.Trim() + "-" + 
                     headTHxnhapton.tencongty = Model.Congty.getnamecongty();
                     headTHxnhapton.username = username;

@@ -30,6 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Beemosochitiettaikhoan));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtCodauky = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtNodauky = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtghichu = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -42,10 +46,6 @@
             this.btxoa = new System.Windows.Forms.Button();
             this.label20 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.txtCodauky = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtNodauky = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -74,6 +74,50 @@
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // txtCodauky
+            // 
+            this.txtCodauky.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCodauky.Location = new System.Drawing.Point(171, 200);
+            this.txtCodauky.Name = "txtCodauky";
+            this.txtCodauky.Size = new System.Drawing.Size(213, 26);
+            this.txtCodauky.TabIndex = 5;
+            this.txtCodauky.Text = "0";
+            this.txtCodauky.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodauky_KeyPress);
+            // 
+            // label6
+            // 
+            this.label6.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label6.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(15, 204);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(125, 20);
+            this.label6.TabIndex = 67;
+            this.label6.Text = "Số dư có đầu kỳ";
+            // 
+            // txtNodauky
+            // 
+            this.txtNodauky.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNodauky.Location = new System.Drawing.Point(171, 166);
+            this.txtNodauky.Name = "txtNodauky";
+            this.txtNodauky.Size = new System.Drawing.Size(213, 26);
+            this.txtNodauky.TabIndex = 4;
+            this.txtNodauky.Text = "0";
+            this.txtNodauky.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNodauky_KeyPress);
+            // 
+            // label5
+            // 
+            this.label5.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label5.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(15, 170);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(125, 20);
+            this.label5.TabIndex = 65;
+            this.label5.Text = "Số dư Nợ đầu kỳ";
+            // 
             // label3
             // 
             this.label3.BackColor = System.Drawing.SystemColors.ActiveCaption;
@@ -92,7 +136,8 @@
             this.txtghichu.Location = new System.Drawing.Point(171, 132);
             this.txtghichu.Name = "txtghichu";
             this.txtghichu.Size = new System.Drawing.Size(546, 26);
-            this.txtghichu.TabIndex = 57;
+            this.txtghichu.TabIndex = 3;
+            this.txtghichu.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtghichu_KeyPress);
             // 
             // label2
             // 
@@ -112,7 +157,9 @@
             this.txtmachitiet.Location = new System.Drawing.Point(171, 65);
             this.txtmachitiet.Name = "txtmachitiet";
             this.txtmachitiet.Size = new System.Drawing.Size(546, 26);
-            this.txtmachitiet.TabIndex = 55;
+            this.txtmachitiet.TabIndex = 1;
+            this.txtmachitiet.Tag = "";
+            this.txtmachitiet.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtmachitiet_KeyPress);
             // 
             // cbtkno
             // 
@@ -123,7 +170,7 @@
             this.cbtkno.Location = new System.Drawing.Point(170, 19);
             this.cbtkno.Name = "cbtkno";
             this.cbtkno.Size = new System.Drawing.Size(547, 28);
-            this.cbtkno.TabIndex = 54;
+            this.cbtkno.TabIndex = 7;
             this.cbtkno.SelectionChangeCommitted += new System.EventHandler(this.cbtkno_SelectionChangeCommitted);
             // 
             // bt_taomoi
@@ -158,7 +205,8 @@
             this.txttenchitettaikhoan.Location = new System.Drawing.Point(171, 99);
             this.txttenchitettaikhoan.Name = "txttenchitettaikhoan";
             this.txttenchitettaikhoan.Size = new System.Drawing.Size(546, 26);
-            this.txttenchitettaikhoan.TabIndex = 51;
+            this.txttenchitettaikhoan.TabIndex = 2;
+            this.txttenchitettaikhoan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txttenchitettaikhoan_KeyPress);
             // 
             // btupdate
             // 
@@ -213,48 +261,6 @@
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.Paint += new System.Windows.Forms.PaintEventHandler(this.dataGridView1_Paint);
-            // 
-            // txtCodauky
-            // 
-            this.txtCodauky.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodauky.Location = new System.Drawing.Point(171, 200);
-            this.txtCodauky.Name = "txtCodauky";
-            this.txtCodauky.Size = new System.Drawing.Size(213, 26);
-            this.txtCodauky.TabIndex = 66;
-            this.txtCodauky.Text = "0";
-            // 
-            // label6
-            // 
-            this.label6.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label6.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(15, 204);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(125, 20);
-            this.label6.TabIndex = 67;
-            this.label6.Text = "Số dư có đầu kỳ";
-            // 
-            // txtNodauky
-            // 
-            this.txtNodauky.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNodauky.Location = new System.Drawing.Point(171, 166);
-            this.txtNodauky.Name = "txtNodauky";
-            this.txtNodauky.Size = new System.Drawing.Size(213, 26);
-            this.txtNodauky.TabIndex = 64;
-            this.txtNodauky.Text = "0";
-            // 
-            // label5
-            // 
-            this.label5.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label5.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(15, 170);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(125, 20);
-            this.label5.TabIndex = 65;
-            this.label5.Text = "Số dư Nợ đầu kỳ";
             // 
             // Beemosochitiettaikhoan
             // 

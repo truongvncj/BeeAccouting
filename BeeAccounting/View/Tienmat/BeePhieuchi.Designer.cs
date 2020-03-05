@@ -42,6 +42,7 @@
             this.tbXoa = new System.Windows.Forms.Button();
             this.btsua = new System.Windows.Forms.Button();
             this.btluu = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -71,7 +72,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.datepickngayphieu = new System.Windows.Forms.DateTimePicker();
-            this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
@@ -180,6 +180,16 @@
             this.btluu.Text = "Lưu (Ctrl -S)";
             this.btluu.UseVisualStyleBackColor = true;
             this.btluu.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Georgia", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(536, 7);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(143, 27);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "PHIẾU CHI";
             // 
             // tabControl1
             // 
@@ -309,10 +319,10 @@
             // 
             this.txttaikhoanno.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txttaikhoanno.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txttaikhoanno.Location = new System.Drawing.Point(128, 6);
+            this.txttaikhoanno.Location = new System.Drawing.Point(122, 6);
             this.txttaikhoanno.Name = "txttaikhoanno";
             this.txttaikhoanno.ReadOnly = true;
-            this.txttaikhoanno.Size = new System.Drawing.Size(181, 24);
+            this.txttaikhoanno.Size = new System.Drawing.Size(187, 24);
             this.txttaikhoanno.TabIndex = 29;
             // 
             // panel1
@@ -535,16 +545,6 @@
             this.datepickngayphieu.TabIndex = 1;
             this.datepickngayphieu.Value = new System.DateTime(2017, 7, 18, 0, 0, 0, 0);
             this.datepickngayphieu.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.datepickngayphieu_KeyPress);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Georgia", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(536, 7);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(143, 27);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "PHIẾU CHI";
             // 
             // tabPage2
             // 
