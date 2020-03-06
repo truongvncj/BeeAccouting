@@ -778,6 +778,27 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="giphyipg_Pb0_3.ico" />
+    <None Include="Resources\GIASP.jpg" />
+    <None Include="Resources\tINHGIAHANGTON.jpg" />
+    <None Include="Resources\tHUEgtgt.jpg" />
+    <None Include="Resources\GiaybaocoNH.jpg" />
+    <None Include="Resources\TSCD.jpg" />
+    <None Include="Resources\Nhansutienluong.jpg" />
+    <None Include="Resources\ketoancongno.jpg" />
+    <None Include="Resources\unnamed.png" />
+    <None Include="Resources\phieuxuatkho1.jpg" />
+    <None Include="Resources\Phieunhapkho1.jpg" />
+    <None Include="Resources\Phieuthu1.jpg" />
+    <None Include="Resources\phieuxuatkho.jpg" />
+    <None Include="Resources\Phieunhapkho.jpg" />
+    <None Include="Resources\Banhangphaithu.jpg" />
+    <None Include="Resources\GiaybaocoNH.jpeg" />
+    <None Include="Resources\Ủy nhiệm chi.jpeg" />
+    <None Include="Resources\Phieuthu.jpg" />
+    <None Include="Resources\phieuchi1.jpeg" />
+    <None Include="Resources\phieuchi.jpeg" />
+    <None Include="Resources\ketoantonghop.jpg" />
+    <None Include="Resources\Phaitranguoiban.jpg" />
     <None Include="Resources\kETOANTHANTOAN1.jpg" />
     <None Include="Resources\kETOANTHANTOAN.jpg" />
     <None Include="Resources\note.gif" />

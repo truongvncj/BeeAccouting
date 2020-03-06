@@ -118,32 +118,92 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="DIEUVAN3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\DIEUVAN3.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="exit_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\exit_2.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="note" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\note.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="phieuxuatkho1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\phieuxuatkho1.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ketoancongno" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ketoancongno.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="exit" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\exit.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="jelly-fluid-loader" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\jelly-fluid-loader.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="tHUEgtgt" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tHUEgtgt.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="kETOANTHANTOAN" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\kETOANTHANTOAN.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Phieunhapkho" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Phieunhapkho1.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="giphy" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\giphy.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="GiaybaocoNH" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GiaybaocoNH.jpeg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tINHGIAHANGTON" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tINHGIAHANGTON.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="phieuchi1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\phieuchi1.jpeg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ủy nhiệm chi" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ủy nhiệm chi.jpeg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Banhangphaithu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Banhangphaithu.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="note" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\note.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Phieuthu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Phieuthu.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GiaybaocoNH1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GiaybaocoNH.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="phieuxuatkho" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\phieuxuatkho.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="KETOANTONGHOP2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\KETOANTONGHOP2.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="exit_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\exit_2.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="TSCD" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TSCD.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="kETOANTHANTOAN" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\kETOANTHANTOAN.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="unnamed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\unnamed.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ketoantonghop" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ketoantonghop.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="phieuchi" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\phieuchi.jpeg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Phieuthu1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Phieuthu1.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="jelly-fluid-loader" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\jelly-fluid-loader.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Nhansutienluong" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Nhansutienluong.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="giphy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\giphy.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DIEUVAN3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DIEUVAN3.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="kETOANTHANTOAN1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\kETOANTHANTOAN1.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Phaitranguoiban" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Phaitranguoiban.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="GIASP" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GIASP.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -1215,18 +1215,10 @@ namespace BEEACCOUNT.View
 
         private void pictureBox1_MouseHover(object sender, EventArgs e)
         {
-            this.pictureBox1.BorderStyle = BorderStyle.FixedSingle;
+            this.pictureBox1.BorderStyle = BorderStyle.None;
         }
 
-        private void pictureBox2_MouseHover(object sender, EventArgs e)
-        {
-            this.pictureBox2.BorderStyle = BorderStyle.FixedSingle;
-        }
-
-        private void pictureBox2_MouseLeave(object sender, EventArgs e)
-        {
-            this.pictureBox2.BorderStyle = BorderStyle.None;
-        }
+       
 
         private void pictureBox2_MouseClick(object sender, MouseEventArgs e)
         {
@@ -1242,7 +1234,7 @@ namespace BEEACCOUNT.View
 
         private void pictureBox1_MouseLeave(object sender, EventArgs e)
         {
-            this.pictureBox1.BorderStyle = BorderStyle.None;
+            this.pictureBox1.BorderStyle = BorderStyle.FixedSingle;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -1267,9 +1259,9 @@ namespace BEEACCOUNT.View
 
         private void pictureBox2_Click_1(object sender, EventArgs e)
         {
-            View.bedieuvan viewtbl = new bedieuvan(this.main1);
+            //View.bedieuvan viewtbl = new bedieuvan(this.main1);
 
-            viewtbl.Show();
+            //viewtbl.Show();
         }
 
         private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
@@ -1282,10 +1274,7 @@ namespace BEEACCOUNT.View
 
         }
 
-        private void pictureBox2_MouseUp(object sender, MouseEventArgs e)
-        {
-            this.pictureBox2.BorderStyle = BorderStyle.None;
-        }
+       
 
         private void pictureBox1_MouseUp(object sender, MouseEventArgs e)
         {
@@ -1297,10 +1286,7 @@ namespace BEEACCOUNT.View
             this.pictureBox1.BorderStyle = BorderStyle.Fixed3D;
         }
 
-        private void pictureBox2_MouseDown(object sender, MouseEventArgs e)
-        {
-            this.pictureBox2.BorderStyle = BorderStyle.Fixed3D;
-        }
+      
 
         private void button2_Click_2(object sender, EventArgs e)
         {
@@ -1344,12 +1330,12 @@ namespace BEEACCOUNT.View
 
         private void pictureBox4_MouseHover(object sender, EventArgs e)
         {
-            this.pictureBox4.BorderStyle = BorderStyle.FixedSingle;
+            this.pictureBox4.BorderStyle = BorderStyle.None;
         }
 
         private void pictureBox4_MouseLeave(object sender, EventArgs e)
         {
-            this.pictureBox4.BorderStyle = BorderStyle.None;
+            this.pictureBox4.BorderStyle = BorderStyle.FixedSingle;
         }
 
         private void pictureBox4_MouseUp(object sender, MouseEventArgs e)
@@ -1360,6 +1346,360 @@ namespace BEEACCOUNT.View
         private void pictureBox4_MouseDown(object sender, MouseEventArgs e)
         {
             this.pictureBox4.BorderStyle = BorderStyle.Fixed3D;
+        }
+
+        private void pictureBox3_MouseHover(object sender, EventArgs e)
+        {
+            this.pictureBox3.BorderStyle = BorderStyle.None;
+        }
+
+        private void pictureBox7_MouseHover(object sender, EventArgs e)
+        {
+            this.pictureBox7.BorderStyle = BorderStyle.None;
+        }
+
+        private void pictureBox11_MouseLeave(object sender, EventArgs e)
+        {
+            this.pictureBox11.BorderStyle = BorderStyle.FixedSingle;
+        }
+
+        private void pictureBox10_MouseHover(object sender, EventArgs e)
+        {
+            this.pictureBox10.BorderStyle = BorderStyle.None;
+        }
+
+        private void pictureBox2_MouseHover(object sender, EventArgs e)
+        {
+            this.pictureBox2.BorderStyle = BorderStyle.None;
+        }
+
+        private void pictureBox13_MouseHover(object sender, EventArgs e)
+        {
+            this.pictureBox13.BorderStyle = BorderStyle.FixedSingle;
+        }
+
+        private void pictureBox9_MouseHover(object sender, EventArgs e)
+        {
+            this.pictureBox9.BorderStyle = BorderStyle.FixedSingle;
+        }
+
+        private void pictureBox5_MouseHover(object sender, EventArgs e)
+        {
+            this.pictureBox5.BorderStyle = BorderStyle.None;
+        }
+
+        private void pictureBox6_MouseHover(object sender, EventArgs e)
+        {
+            this.pictureBox6.BorderStyle = BorderStyle.None;
+        }
+
+        private void pictureBox12_MouseHover(object sender, EventArgs e)
+        {
+            this.pictureBox12.BorderStyle = BorderStyle.None;
+        }
+
+        private void pictureBox8_MouseHover(object sender, EventArgs e)
+        {
+            this.pictureBox8.BorderStyle = BorderStyle.None;
+        }
+
+        private void pictureBox14_MouseHover(object sender, EventArgs e)
+        {
+            this.pictureBox14.BorderStyle = BorderStyle.None;
+        }
+
+        private void pictureBox15_MouseHover(object sender, EventArgs e)
+        {
+            this.pictureBox15.BorderStyle = BorderStyle.None;
+        }
+
+        private void pictureBox16_MouseHover(object sender, EventArgs e)
+        {
+            this.pictureBox16.BorderStyle = BorderStyle.None;
+        }
+
+        private void pictureBox17_MouseHover(object sender, EventArgs e)
+        {
+            this.pictureBox17.BorderStyle = BorderStyle.None;
+        }
+
+        private void pictureBox3_MouseDown(object sender, MouseEventArgs e)
+        {
+            this.pictureBox3.BorderStyle = BorderStyle.Fixed3D;
+        }
+
+        private void pictureBox7_MouseDown(object sender, MouseEventArgs e)
+        {
+            this.pictureBox7.BorderStyle = BorderStyle.Fixed3D;
+        }
+
+        private void pictureBox11_MouseDown(object sender, MouseEventArgs e)
+        {
+            this.pictureBox11.BorderStyle = BorderStyle.Fixed3D;
+        }
+
+        private void pictureBox10_MouseDown(object sender, MouseEventArgs e)
+        {
+            this.pictureBox10.BorderStyle = BorderStyle.Fixed3D;
+        }
+
+        private void pictureBox2_MouseDown(object sender, MouseEventArgs e)
+        {
+            this.pictureBox2.BorderStyle = BorderStyle.Fixed3D;
+        }
+
+        private void pictureBox13_MouseDown(object sender, MouseEventArgs e)
+        {
+            this.pictureBox13.BorderStyle = BorderStyle.Fixed3D;
+        }
+
+        private void pictureBox9_MouseDown(object sender, MouseEventArgs e)
+        {
+            this.pictureBox9.BorderStyle = BorderStyle.Fixed3D;
+        }
+
+        private void pictureBox5_MouseDown(object sender, MouseEventArgs e)
+        {
+            this.pictureBox5.BorderStyle = BorderStyle.Fixed3D;
+        }
+
+        private void pictureBox6_MouseDown(object sender, MouseEventArgs e)
+        {
+            this.pictureBox6.BorderStyle = BorderStyle.Fixed3D;
+        }
+
+        private void pictureBox12_MouseDown(object sender, MouseEventArgs e)
+        {
+            this.pictureBox12.BorderStyle = BorderStyle.Fixed3D;
+        }
+
+        private void pictureBox8_MouseDown(object sender, MouseEventArgs e)
+        {
+            this.pictureBox8.BorderStyle = BorderStyle.Fixed3D;
+        }
+
+        private void pictureBox14_MouseDown(object sender, MouseEventArgs e)
+        {
+            this.pictureBox14.BorderStyle = BorderStyle.Fixed3D;
+        }
+
+        private void pictureBox15_MouseDown(object sender, MouseEventArgs e)
+        {
+            this.pictureBox15.BorderStyle = BorderStyle.Fixed3D;
+        }
+
+        private void pictureBox16_MouseDown(object sender, MouseEventArgs e)
+        {
+            this.pictureBox16.BorderStyle = BorderStyle.Fixed3D;
+        }
+
+        private void pictureBox17_MouseDown(object sender, MouseEventArgs e)
+        {
+            this.pictureBox17.BorderStyle = BorderStyle.Fixed3D;
+        }
+
+        private void pictureBox3_MouseUp(object sender, MouseEventArgs e)
+        {
+            this.pictureBox3.BorderStyle = BorderStyle.None;
+        }
+
+        private void pictureBox7_MouseUp(object sender, MouseEventArgs e)
+        {
+            this.pictureBox7.BorderStyle = BorderStyle.None;
+        }
+
+        private void pictureBox11_MouseUp(object sender, MouseEventArgs e)
+        {
+            this.pictureBox11.BorderStyle = BorderStyle.None;
+        }
+
+        private void pictureBox10_MouseUp(object sender, MouseEventArgs e)
+        {
+            this.pictureBox10.BorderStyle = BorderStyle.None;
+        }
+
+        private void pictureBox2_MouseUp(object sender, MouseEventArgs e)
+        {
+            this.pictureBox2.BorderStyle = BorderStyle.None;
+        }
+
+        private void pictureBox13_MouseUp(object sender, MouseEventArgs e)
+        {
+            this.pictureBox13.BorderStyle = BorderStyle.None;
+        }
+
+        private void pictureBox9_MouseUp(object sender, MouseEventArgs e)
+        {
+            this.pictureBox9.BorderStyle = BorderStyle.None;
+        }
+
+        private void pictureBox5_MouseUp(object sender, MouseEventArgs e)
+        {
+            this.pictureBox5.BorderStyle = BorderStyle.None;
+        }
+
+        private void pictureBox6_MouseUp(object sender, MouseEventArgs e)
+        {
+            this.pictureBox6.BorderStyle = BorderStyle.None;
+        }
+
+        private void pictureBox12_MouseUp(object sender, MouseEventArgs e)
+        {
+            this.pictureBox12.BorderStyle = BorderStyle.None;
+        }
+
+        private void pictureBox8_MouseUp(object sender, MouseEventArgs e)
+        {
+            this.pictureBox8.BorderStyle = BorderStyle.None;
+        }
+
+        private void pictureBox14_MouseUp(object sender, MouseEventArgs e)
+        {
+            this.pictureBox14.BorderStyle = BorderStyle.None;
+        }
+
+        private void pictureBox15_MouseUp(object sender, MouseEventArgs e)
+        {
+            this.pictureBox15.BorderStyle = BorderStyle.None;
+        }
+
+        private void pictureBox16_MouseUp(object sender, MouseEventArgs e)
+        {
+            this.pictureBox16.BorderStyle = BorderStyle.None;
+        }
+
+        private void pictureBox17_MouseUp(object sender, MouseEventArgs e)
+        {
+            this.pictureBox17.BorderStyle = BorderStyle.None;
+        }
+
+        private void pictureBox3_MouseLeave(object sender, EventArgs e)
+        {
+            this.pictureBox3.BorderStyle = BorderStyle.FixedSingle;
+        }
+
+        private void pictureBox7_MouseLeave(object sender, EventArgs e)
+        {
+            this.pictureBox7.BorderStyle = BorderStyle.FixedSingle;
+        }
+
+        private void pictureBox10_MouseLeave(object sender, EventArgs e)
+        {
+            this.pictureBox10.BorderStyle = BorderStyle.FixedSingle;
+        }
+
+        private void pictureBox2_Click_2(object sender, EventArgs e)
+        {
+            #region//BeePhieuThu
+
+
+            //  this.Close();
+            this.main1.clearpannel();
+
+
+            View.BeePhieuThu BeePhieuThu = new BeePhieuThu(this.main1);
+            this.main1.clearpannelload(BeePhieuThu);
+
+
+
+            #endregion
+        }
+
+        private void pictureBox2_MouseLeave(object sender, EventArgs e)
+        {
+            this.pictureBox2.BorderStyle = BorderStyle.FixedSingle;
+        }
+
+        private void pictureBox13_MouseLeave(object sender, EventArgs e)
+        {
+            this.pictureBox13.BorderStyle = BorderStyle.FixedSingle;
+        }
+
+        private void pictureBox9_MouseLeave(object sender, EventArgs e)
+        {
+            this.pictureBox9.BorderStyle = BorderStyle.FixedSingle;
+        }
+
+        private void pictureBox5_MouseLeave(object sender, EventArgs e)
+        {
+            this.pictureBox5.BorderStyle = BorderStyle.FixedSingle;
+        }
+
+        private void pictureBox6_MouseLeave(object sender, EventArgs e)
+        {
+            this.pictureBox6.BorderStyle = BorderStyle.FixedSingle;
+        }
+
+        private void pictureBox12_MouseLeave(object sender, EventArgs e)
+        {
+            this.pictureBox12.BorderStyle = BorderStyle.FixedSingle;
+        }
+
+        private void pictureBox8_MouseLeave(object sender, EventArgs e)
+        {
+            this.pictureBox8.BorderStyle = BorderStyle.FixedSingle;
+        }
+
+        private void pictureBox14_MouseLeave(object sender, EventArgs e)
+        {
+            this.pictureBox14.BorderStyle = BorderStyle.FixedSingle;
+        }
+
+        private void pictureBox15_MouseLeave(object sender, EventArgs e)
+        {
+            this.pictureBox15.BorderStyle = BorderStyle.FixedSingle;
+        }
+
+        private void pictureBox16_MouseLeave(object sender, EventArgs e)
+        {
+            this.pictureBox16.BorderStyle = BorderStyle.FixedSingle;
+        }
+
+        private void pictureBox17_MouseLeave(object sender, EventArgs e)
+        {
+            this.pictureBox17.BorderStyle = BorderStyle.FixedSingle;
+        }
+
+        private void pictureBox11_MouseHover(object sender, EventArgs e)
+        {
+            this.pictureBox11.BorderStyle = BorderStyle.None;
+        }
+
+        private void pictureBox13_Click(object sender, EventArgs e)
+        {
+            #region//BeeKhophieunhap
+
+
+            //  this.Close();
+            this.main1.clearpannel();
+
+
+            View.BeeKhophieunhap BeeKhophieunhap = new BeeKhophieunhap(this.main1);
+            this.main1.clearpannelload(BeeKhophieunhap);
+
+
+
+            #endregion
+        }
+
+        private void pictureBox9_Click(object sender, EventArgs e)
+        {
+
+            #region//BeeKhophieuxuat
+
+
+            //  this.Close();
+            this.main1.clearpannel();
+
+
+            View.BeeKhophieuxuat BeeKhophieuxuat = new BeeKhophieuxuat(this.main1);
+            this.main1.clearpannelload(BeeKhophieuxuat);
+
+
+
+            #endregion
+
+
         }
     }
 }
