@@ -66,7 +66,8 @@
             this.cbmaloaitk.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbmaloaitk.FormattingEnabled = true;
             this.cbmaloaitk.Items.AddRange(new object[] {
-            "tien",
+            "tienmat",
+            "nganhang",
             "kho",
             "taisan",
             "nguonvon",

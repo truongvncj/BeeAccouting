@@ -35,14 +35,15 @@
             this.txtTongno = new System.Windows.Forms.TextBox();
             this.bt_themvao = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.tbmachitiet = new System.Windows.Forms.Label();
+            this.lbtaikhoannotext = new System.Windows.Forms.Label();
+            this.lb_machitietno = new System.Windows.Forms.Label();
+            this.tbchontkco = new System.Windows.Forms.TextBox();
+            this.lbtenchitietno = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtsotien = new System.Windows.Forms.TextBox();
-            this.txtdiachi = new System.Windows.Forms.TextBox();
+            this.txtdiengiai = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.lbtenchitiet = new System.Windows.Forms.Label();
-            this.cbtkno = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtTongco = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
@@ -90,76 +91,109 @@
             // 
             // bt_themvao
             // 
-            this.bt_themvao.Location = new System.Drawing.Point(370, 245);
+            this.bt_themvao.Location = new System.Drawing.Point(370, 287);
             this.bt_themvao.Name = "bt_themvao";
             this.bt_themvao.Size = new System.Drawing.Size(103, 23);
             this.bt_themvao.TabIndex = 7;
             this.bt_themvao.Text = "Thêm ";
             this.bt_themvao.UseVisualStyleBackColor = true;
             this.bt_themvao.Click += new System.EventHandler(this.bt_themvao_Click);
+            this.bt_themvao.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.bt_themvao_KeyPress);
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.tbmachitiet);
+            this.groupBox1.Controls.Add(this.lbtaikhoannotext);
+            this.groupBox1.Controls.Add(this.lb_machitietno);
+            this.groupBox1.Controls.Add(this.tbchontkco);
+            this.groupBox1.Controls.Add(this.lbtenchitietno);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.txtsotien);
-            this.groupBox1.Controls.Add(this.txtdiachi);
+            this.groupBox1.Controls.Add(this.txtdiengiai);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.lbtenchitiet);
-            this.groupBox1.Controls.Add(this.cbtkno);
             this.groupBox1.Location = new System.Drawing.Point(7, 87);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(534, 152);
+            this.groupBox1.Size = new System.Drawing.Size(534, 194);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = " --";
             // 
-            // tbmachitiet
+            // lbtaikhoannotext
             // 
-            this.tbmachitiet.AutoSize = true;
-            this.tbmachitiet.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbmachitiet.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.tbmachitiet.Location = new System.Drawing.Point(147, 56);
-            this.tbmachitiet.Name = "tbmachitiet";
-            this.tbmachitiet.Size = new System.Drawing.Size(40, 16);
-            this.tbmachitiet.TabIndex = 62;
-            this.tbmachitiet.Text = "Mã ct";
+            this.lbtaikhoannotext.AutoSize = true;
+            this.lbtaikhoannotext.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbtaikhoannotext.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lbtaikhoannotext.Location = new System.Drawing.Point(49, 67);
+            this.lbtaikhoannotext.Name = "lbtaikhoannotext";
+            this.lbtaikhoannotext.Size = new System.Drawing.Size(40, 16);
+            this.lbtaikhoannotext.TabIndex = 80;
+            this.lbtaikhoannotext.Text = "Mã ct";
+            // 
+            // lb_machitietno
+            // 
+            this.lb_machitietno.AutoSize = true;
+            this.lb_machitietno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_machitietno.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lb_machitietno.Location = new System.Drawing.Point(49, 83);
+            this.lb_machitietno.Name = "lb_machitietno";
+            this.lb_machitietno.Size = new System.Drawing.Size(40, 16);
+            this.lb_machitietno.TabIndex = 79;
+            this.lb_machitietno.Text = "Mã ct";
+            // 
+            // tbchontkco
+            // 
+            this.tbchontkco.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbchontkco.Location = new System.Drawing.Point(149, 28);
+            this.tbchontkco.Name = "tbchontkco";
+            this.tbchontkco.Size = new System.Drawing.Size(235, 24);
+            this.tbchontkco.TabIndex = 0;
+            this.tbchontkco.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbchontkco_KeyPress);
+            // 
+            // lbtenchitietno
+            // 
+            this.lbtenchitietno.AutoSize = true;
+            this.lbtenchitietno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbtenchitietno.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lbtenchitietno.Location = new System.Drawing.Point(95, 83);
+            this.lbtenchitietno.Name = "lbtenchitietno";
+            this.lbtenchitietno.Size = new System.Drawing.Size(57, 16);
+            this.lbtenchitietno.TabIndex = 78;
+            this.lbtenchitietno.Text = "Chi tiết 1";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(5, 35);
+            this.label1.Location = new System.Drawing.Point(8, 34);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 18);
+            this.label1.Size = new System.Drawing.Size(55, 18);
             this.label1.TabIndex = 39;
-            this.label1.Text = "Tk Nợ:";
+            this.label1.Text = "Nợ TK:";
             // 
             // txtsotien
             // 
             this.txtsotien.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtsotien.Location = new System.Drawing.Point(149, 79);
+            this.txtsotien.Location = new System.Drawing.Point(149, 114);
             this.txtsotien.Name = "txtsotien";
             this.txtsotien.Size = new System.Drawing.Size(207, 24);
             this.txtsotien.TabIndex = 1;
             this.txtsotien.TextChanged += new System.EventHandler(this.txtsotien_TextChanged);
             this.txtsotien.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtsotien_KeyPress);
             // 
-            // txtdiachi
+            // txtdiengiai
             // 
-            this.txtdiachi.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtdiachi.Location = new System.Drawing.Point(149, 112);
-            this.txtdiachi.Name = "txtdiachi";
-            this.txtdiachi.Size = new System.Drawing.Size(317, 24);
-            this.txtdiachi.TabIndex = 2;
-            this.txtdiachi.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtdiachi_KeyPress);
+            this.txtdiengiai.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtdiengiai.Location = new System.Drawing.Point(149, 147);
+            this.txtdiengiai.Name = "txtdiengiai";
+            this.txtdiengiai.Size = new System.Drawing.Size(317, 24);
+            this.txtdiengiai.TabIndex = 2;
+            this.txtdiengiai.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtdiachi_KeyPress);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(5, 82);
+            this.label8.Location = new System.Drawing.Point(8, 117);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(58, 18);
             this.label8.TabIndex = 36;
@@ -169,34 +203,11 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(5, 112);
+            this.label6.Location = new System.Drawing.Point(8, 147);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(64, 18);
             this.label6.TabIndex = 35;
             this.label6.Text = "Diễn giải";
-            // 
-            // lbtenchitiet
-            // 
-            this.lbtenchitiet.AutoSize = true;
-            this.lbtenchitiet.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbtenchitiet.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lbtenchitiet.Location = new System.Drawing.Point(193, 56);
-            this.lbtenchitiet.Name = "lbtenchitiet";
-            this.lbtenchitiet.Size = new System.Drawing.Size(72, 16);
-            this.lbtenchitiet.TabIndex = 34;
-            this.lbtenchitiet.Text = "Ten chi tiet";
-            // 
-            // cbtkno
-            // 
-            this.cbtkno.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbtkno.DropDownWidth = 350;
-            this.cbtkno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbtkno.FormattingEnabled = true;
-            this.cbtkno.Location = new System.Drawing.Point(149, 29);
-            this.cbtkno.Name = "cbtkno";
-            this.cbtkno.Size = new System.Drawing.Size(317, 24);
-            this.cbtkno.TabIndex = 0;
-            this.cbtkno.SelectionChangeCommitted += new System.EventHandler(this.cbtkco_SelectionChangeCommitted);
             // 
             // label9
             // 
@@ -222,7 +233,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(560, 282);
+            this.ClientSize = new System.Drawing.Size(560, 322);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.txtTongco);
             this.Controls.Add(this.groupBox1);
@@ -255,13 +266,14 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtsotien;
-        private System.Windows.Forms.TextBox txtdiachi;
+        private System.Windows.Forms.TextBox txtdiengiai;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label lbtenchitiet;
-        private System.Windows.Forms.ComboBox cbtkno;
-        private System.Windows.Forms.Label tbmachitiet;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtTongco;
+        private System.Windows.Forms.Label lb_machitietno;
+        private System.Windows.Forms.TextBox tbchontkco;
+        private System.Windows.Forms.Label lbtenchitietno;
+        private System.Windows.Forms.Label lbtaikhoannotext;
     }
 }

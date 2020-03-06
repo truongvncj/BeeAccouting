@@ -247,7 +247,7 @@ namespace BEEACCOUNT.View
 
 
 
-            dataGridViewTkCo = Model.Phieuthuchi.reloadnewdetailtaikhoanco(dataGridViewTkCo);
+       //    dataGridViewTkCo = Model.Phieuthuchi.reloadnewdetailtaikhoanco(dataGridViewTkCo);
 
             dataGridViewListphieuthu.DataSource = Model.Phieuthuchi.LisDanhSachphieuthu("PT");
 
@@ -1049,7 +1049,7 @@ namespace BEEACCOUNT.View
 
                 #endregion
 
-                dataGridViewTkCo = Model.Phieuthuchi.reloadnewdetailtaikhoanco(dataGridViewTkCo);
+            //    dataGridViewTkCo = Model.Phieuthuchi.reloadnewdetailtaikhoanco(dataGridViewTkCo);
 
                 dataGridViewListphieuthu.DataSource = Model.Phieuthuchi.LisDanhSachphieuthu("PT");
 
@@ -1263,7 +1263,7 @@ namespace BEEACCOUNT.View
 
             #endregion
 
-            dataGridViewTkCo = Model.Phieuthuchi.reloadnewdetailtaikhoanco(dataGridViewTkCo);
+         //   dataGridViewTkCo = Model.Phieuthuchi.reloadnewdetailtaikhoanco(dataGridViewTkCo);
 
         }
 
@@ -1516,8 +1516,8 @@ namespace BEEACCOUNT.View
 
 
                     this.statusphieuthu = 3;// View
-                    Model.Phieuthuchi.reloadnewdetailtaikhoanco(dataGridViewTkCo);
-                    Model.Phieuthuchi.reloaddetailtaikhoancophieuthu(this.dataGridViewTkCo, this, phieuthu.tkno.Trim(), phieuthu.sophieuthu);
+           //         Model.Phieuthuchi.reloadnewdetailtaikhoanco(dataGridViewTkCo);
+             //       Model.Phieuthuchi.reloaddetailtaikhoancophieuthu(this.dataGridViewTkCo, this, phieuthu.tkno.Trim(), phieuthu.sophieuthu);
                     btluu.Visible = false;
 
                 }
