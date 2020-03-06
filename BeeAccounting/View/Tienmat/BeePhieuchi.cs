@@ -147,27 +147,27 @@ namespace BEEACCOUNT.View
 
 
 
-            int i = dataTable.Rows.Count - 1;
-            //   int i = dataGridViewTkCo.RowCount -1;
+            //int i = dataTable.Rows.Count - 1;
+            ////   int i = dataGridViewTkCo.RowCount -1;
 
-            DataGridViewComboBoxCell cb = (DataGridViewComboBoxCell)dataGridViewTkNo.Rows[i].Cells["Tk_Có"];
-            DataGridViewCell dgvc = (DataGridViewCell)dataGridViewTkNo.Rows[i].Cells["Tk_Có"];
+            //DataGridViewComboBoxCell cb = (DataGridViewComboBoxCell)dataGridViewTkNo.Rows[i].Cells["Tk_Có"];
+            //DataGridViewCell dgvc = (DataGridViewCell)dataGridViewTkNo.Rows[i].Cells["Tk_Có"];
 
-            #region tim item comboboc
+            //#region tim item comboboc
 
-            foreach (ComboboxItem item in (List<ComboboxItem>)cb.DataSource)
-            {
+            //foreach (ComboboxItem item in (List<ComboboxItem>)cb.DataSource)
+            //{
 
-                if (item.Value.ToString().Trim() == socaitemp.TkNo.ToString().Trim())
-                {
+            //    if (item.Value.ToString().Trim() == socaitemp.TkNo.ToString().Trim())
+            //    {
 
-                    dataGridViewTkNo.Rows[i].Cells["Tk_Có"].Value = item.Value;
-                }
+            //        dataGridViewTkNo.Rows[i].Cells["Tk_Có"].Value = item.Value;
+            //    }
 
-            }
+            //}
 
 
-            #endregion tom item comboubox
+            //#endregion tom item comboubox
 
 
             //   ComboboxItem cbx = (ComboboxItem)cb.Items[3];
@@ -409,7 +409,7 @@ namespace BEEACCOUNT.View
             {
                 // datepickngayphieu.
                 e.Handled = true;
-                txttennguoinhan.Focus();
+                txtsophieu.Focus();
 
                 //    string valueinput = cb_customerka.Text;
 
@@ -580,21 +580,14 @@ namespace BEEACCOUNT.View
 
             bool checkhead = true;
 
-            #region  check từng dong sổ tk Có
+            #region  check từng dong sổ tk nợ
             for (int idrow = 0; idrow < dataGridViewTkNo.RowCount - 1; idrow++) // 'dataGridViewTkNo'
             {
                 if (dataGridViewTkNo.Rows[idrow].Cells["Nợ_TK"].Value != DBNull.Value)
                 {
 
 
-                    if (dataGridViewTkNo.Rows[idrow].Cells["Nợ_TK"].Value == "")
-                    {
-
-                        MessageBox.Show("Bạn chua định khoản tài khoản tiền mặt", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        checkhead = false;
-                        return;
-                    }
-
+                  
 
                     if (dataGridViewTkNo.Rows[idrow].Cells["Số_tiền"].Value == DBNull.Value)
                     {
@@ -604,6 +597,17 @@ namespace BEEACCOUNT.View
                         return;
                     }
 
+
+                }
+                else
+                {
+                    //if (dataGridViewTkNo.Rows[idrow].Cells["Nợ_TK"].Value == "")
+                    //{
+
+                        MessageBox.Show("Bạn chua định khoản tài khoản tiền mặt", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        checkhead = false;
+                        return;
+                    //}
 
                 }
 
@@ -1719,86 +1723,78 @@ namespace BEEACCOUNT.View
         private void dataGridViewTkCo_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
 
-            DataGridView view = (DataGridView)sender;
-            int i = e.RowIndex;
-            string colname = view.Columns[e.ColumnIndex].Name;
+            //DataGridView view = (DataGridView)sender;
+            //int i = e.RowIndex;
+            //string colname = view.Columns[e.ColumnIndex].Name;
 
-            //       #region if la slect tai khoan co chi tiet
+            ////       #region if la slect tai khoan co chi tiet
 
-            if (colname == "Nợ_TK")
-            {
-
-
-                //  string SelectedItem = view.Rows[i].Cells["Tk_Có"].Value.ToString();
+            //if (colname == "Nợ_TK")
+            //{
 
 
-                #region  view lai cac tk có
+         
+            //    #region  view lai cac tk có
 
-                String tkcotext = "";
+            //    String tkcotext = "";
 
 
-                int dem = 0;
-                for (int idrow = 0; idrow < dataGridViewTkNo.RowCount - 1; idrow++)
-                {
+            //    int dem = 0;
+            //    for (int idrow = 0; idrow < dataGridViewTkNo.RowCount - 1; idrow++)
+            //    {
 
-                    if (dataGridViewTkNo.Rows[idrow].Cells["Nợ_TK"].Value != null)
-                    {
+            //        if (dataGridViewTkNo.Rows[idrow].Cells["Nợ_TK"].Value != null)
+            //        {
 
 
 
-                        dem = dem + 1;
-                        if (dem > 1)
-                        {
+            //            dem = dem + 1;
+            //            if (dem > 1)
+            //            {
 
-                            tkcotext += ";" + dataGridViewTkNo.Rows[idrow].Cells["Nợ_TK"].Value.ToString().Trim(); // chính la program
+            //                tkcotext += ";" + dataGridViewTkNo.Rows[idrow].Cells["Nợ_TK"].Value.ToString().Trim(); // chính la program
 
-                        }
-                        else
-                        {
-                            tkcotext += dataGridViewTkNo.Rows[idrow].Cells["Nợ_TK"].Value.ToString().Trim(); // chính la program
-                                                                                                             //dataGridViewTkCo.Columns["Số_tiền"].DisplayIndex = 3;
-
-
-                        }
+            //            }
+            //            else
+            //            {
+            //                tkcotext += dataGridViewTkNo.Rows[idrow].Cells["Nợ_TK"].Value.ToString().Trim(); // chính la program
+            //                                                                                                 //dataGridViewTkCo.Columns["Số_tiền"].DisplayIndex = 3;
 
 
-                    }
+            //            }
 
 
-                }
-
-                txttaikhoanno.Text = tkcotext;
-                #endregion
-
-            }
+            //        }
 
 
-            //   if (colname == "Số_tiền")
-            //   {
+            //    }
+
+            //    txttaikhoanno.Text = tkcotext;
+            //    #endregion
+
+            //}
 
 
-            //  string SelectedItem = view.Rows[i].Cells["Tk_Có"].Value.ToString();
+         
+            //#region  view lai cac tk nợ
 
 
-            #region  view lai cac tk nợ
+            //double tongcong = 0;
 
 
-            double tongcong = 0;
+            //for (int idrow = 0; idrow < dataGridViewTkNo.RowCount - 1; idrow++)
+            //{
 
 
-            for (int idrow = 0; idrow < dataGridViewTkNo.RowCount - 1; idrow++)
-            {
+            //    if (dataGridViewTkNo.Rows[idrow].Cells["Số_tiền"] != null)
 
+            //    {
+            //        if (Utils.IsValidnumber(dataGridViewTkNo.Rows[idrow].Cells["Số_tiền"].Value.ToString()))
+            //        {
 
-                if (dataGridViewTkNo.Rows[idrow].Cells["Số_tiền"] != null)
-
-                {
-                    if (Utils.IsValidnumber(dataGridViewTkNo.Rows[idrow].Cells["Số_tiền"].Value.ToString()))
-                    {
-
-                        tongcong += double.Parse(dataGridViewTkNo.Rows[idrow].Cells["Số_tiền"].Value.ToString());
-                    }
-                }
+            //            tongcong += double.Parse(dataGridViewTkNo.Rows[idrow].Cells["Số_tiền"].Value.ToString());
+            //        }
+            //    }
 
 
 
@@ -1806,13 +1802,13 @@ namespace BEEACCOUNT.View
 
 
 
-            }
+            //}
 
-            //txtValueSotienCo.Text = tongcong.ToString();
-            this.pssotienno = tongcong;
-            txtsotienno.Text = tongcong.ToString("#,#", CultureInfo.InvariantCulture);
-            #endregion
-            //  }
+            ////txtValueSotienCo.Text = tongcong.ToString();
+            //this.pssotienno = tongcong;
+            //txtsotienno.Text = tongcong.ToString("#,#", CultureInfo.InvariantCulture);
+            //#endregion
+         
 
 
 
@@ -1825,116 +1821,116 @@ namespace BEEACCOUNT.View
         private void dataGridViewTkCo_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
 
-            DataGridView view = (DataGridView)sender;
-            int i = view.CurrentRow.Index;
-            string colname = view.Columns[view.CurrentCell.ColumnIndex].Name;
-            string SelectedItem = view.Rows[i].Cells["Nợ_TK"].Value.ToString();
+            //DataGridView view = (DataGridView)sender;
+            //int i = view.CurrentRow.Index;
+            //string colname = view.Columns[view.CurrentCell.ColumnIndex].Name;
+            //string SelectedItem = view.Rows[i].Cells["Nợ_TK"].Value.ToString();
 
-            #region if la slect tai khoan co chi tiet
+            //#region if la slect tai khoan co chi tiet
 
-            if (colname == "Nợ_TK" && SelectedItem != "")
-            {
-                string taikhoan = currentCell.Value.ToString();
-                string connection_string = Utils.getConnectionstr();
-                LinqtoSQLDataContext db = new LinqtoSQLDataContext(connection_string);
-
-
-                var detail = (from c in db.tbl_dstaikhoans
-                              where c.matk.Trim() == taikhoan.Trim()
-                              select c).FirstOrDefault();
-
-                if (detail.loaichitiet == true) // là co theo doi chi tiết
-                {
-
-                    List<beeselectinput.ComboboxItem> listcb = new List<beeselectinput.ComboboxItem>();
-                    var rs = from tbl_machitiettk in db.tbl_machitiettks
-                             where tbl_machitiettk.matk.Trim() == taikhoan.Trim()
-                             orderby tbl_machitiettk.machitiet
-                             select tbl_machitiettk;
-                    if (rs.Count() > 0)
-                    {
+            //if (colname == "Nợ_TK" && SelectedItem != "")
+            //{
+            //    string taikhoan = currentCell.Value.ToString();
+            //    string connection_string = Utils.getConnectionstr();
+            //    LinqtoSQLDataContext db = new LinqtoSQLDataContext(connection_string);
 
 
-                        foreach (var item2 in rs)
-                        {
-                            beeselectinput.ComboboxItem cb = new beeselectinput.ComboboxItem();
-                            cb.Value = item2.machitiet.ToString().Trim();
-                            cb.Text = item2.tenchitiet; //item2.machitiet.ToString().Trim() + ": " +
-                            listcb.Add(cb);
-                        }
+            //    var detail = (from c in db.tbl_dstaikhoans
+            //                  where c.matk.Trim() == taikhoan.Trim()
+            //                  select c).FirstOrDefault();
+
+            //    if (detail.loaichitiet == true) // là co theo doi chi tiết
+            //    {
+
+            //        List<beeselectinput.ComboboxItem> listcb = new List<beeselectinput.ComboboxItem>();
+            //        var rs = from tbl_machitiettk in db.tbl_machitiettks
+            //                 where tbl_machitiettk.matk.Trim() == taikhoan.Trim()
+            //                 orderby tbl_machitiettk.machitiet
+            //                 select tbl_machitiettk;
+            //        if (rs.Count() > 0)
+            //        {
 
 
-
-                        FormCollection fc = System.Windows.Forms.Application.OpenForms;
-
-                        bool kq = false;
-                        foreach (Form frm in fc)
-                        {
-                            if (frm.Text == "beeselectinput")
-
-
-                            {
-                                kq = true;
-                                frm.Close();
-
-                            }
-                        }
-
-                        if (kq == false)
-                        {
-                            //        beeselectinput
-
-                            View.beeselectinput selecdetail = new beeselectinput("Chọn chi tiết tài khoản ", listcb);
-
-                            selecdetail.ShowDialog();
-
-
-                            bool chon = selecdetail.kq;
-                            if (chon)
-                            {
-                                string machitiet = selecdetail.value;
-                                string namechitiet = selecdetail.valuetext;
-
-                                dataGridViewTkNo.Rows[i].Cells["Mã_chi_tiết"].Value = machitiet;
-                                dataGridViewTkNo.Rows[i].Cells["Tên_chi_tiết"].Value = namechitiet;
-
-
-                            }
-                            else
-                            {
-                                dataGridViewTkNo.Rows[i].Cells["Nợ_TK"].Value = "";
-                                dataGridViewTkNo.Rows[i].Cells["Mã_chi_tiết"].Value = "";
-                                dataGridViewTkNo.Rows[i].Cells["Tên_chi_tiết"].Value = "";
-                            }
+            //            foreach (var item2 in rs)
+            //            {
+            //                beeselectinput.ComboboxItem cb = new beeselectinput.ComboboxItem();
+            //                cb.Value = item2.machitiet.ToString().Trim();
+            //                cb.Text = item2.tenchitiet; //item2.machitiet.ToString().Trim() + ": " +
+            //                listcb.Add(cb);
+            //            }
 
 
 
+            //            FormCollection fc = System.Windows.Forms.Application.OpenForms;
 
-                        }
-                        else
-                        {
-                            dataGridViewTkNo.Rows[i].Cells["Mã_chi_tiết"].Value = "";
-                            dataGridViewTkNo.Rows[i].Cells["Tên_chi_tiết"].Value = "";
-
-
-                        }
+            //            bool kq = false;
+            //            foreach (Form frm in fc)
+            //            {
+            //                if (frm.Text == "beeselectinput")
 
 
-                    }
-                }
+            //                {
+            //                    kq = true;
+            //                    frm.Close();
+
+            //                }
+            //            }
+
+            //            if (kq == false)
+            //            {
+            //                //        beeselectinput
+
+            //                View.beeselectinput selecdetail = new beeselectinput("Chọn chi tiết tài khoản ", listcb);
+
+            //                selecdetail.ShowDialog();
 
 
-                else
-                {
-                    dataGridViewTkNo.Rows[i].Cells["Mã_chi_tiết"].Value = "";
-                    dataGridViewTkNo.Rows[i].Cells["Tên_chi_tiết"].Value = "";
+            //                bool chon = selecdetail.kq;
+            //                if (chon)
+            //                {
+            //                    string machitiet = selecdetail.value;
+            //                    string namechitiet = selecdetail.valuetext;
+
+            //                    dataGridViewTkNo.Rows[i].Cells["Mã_chi_tiết"].Value = machitiet;
+            //                    dataGridViewTkNo.Rows[i].Cells["Tên_chi_tiết"].Value = namechitiet;
 
 
-                }
+            //                }
+            //                else
+            //                {
+            //                    dataGridViewTkNo.Rows[i].Cells["Nợ_TK"].Value = "";
+            //                    dataGridViewTkNo.Rows[i].Cells["Mã_chi_tiết"].Value = "";
+            //                    dataGridViewTkNo.Rows[i].Cells["Tên_chi_tiết"].Value = "";
+            //                }
 
-            }
 
-            #endregion
+
+
+            //            }
+            //            else
+            //            {
+            //                dataGridViewTkNo.Rows[i].Cells["Mã_chi_tiết"].Value = "";
+            //                dataGridViewTkNo.Rows[i].Cells["Tên_chi_tiết"].Value = "";
+
+
+            //            }
+
+
+            //        }
+            //    }
+
+
+            //    else
+            //    {
+            //        dataGridViewTkNo.Rows[i].Cells["Mã_chi_tiết"].Value = "";
+            //        dataGridViewTkNo.Rows[i].Cells["Tên_chi_tiết"].Value = "";
+
+
+            //    }
+
+            //}
+
+            //#endregion
 
 
 
@@ -2022,16 +2018,13 @@ namespace BEEACCOUNT.View
                     {
 
                         tongcong += double.Parse(dataGridViewTkNo.Rows[idrow].Cells["Số_tiền"].Value.ToString());
+                      
+                        
+
                     }
                 }
 
-                if (dataGridViewTkNo.Rows[idrow].Cells["Nợ_TK"] != null)
-
-                {
-
-                    txttaikhoanno.Text += dataGridViewTkNo.Rows[idrow].Cells["Nợ_TK"].Value.ToString().Trim();
-
-                }
+               
 
             }
 
@@ -2040,24 +2033,6 @@ namespace BEEACCOUNT.View
             txtsotienno.Text = tongcong.ToString("#,#", CultureInfo.InvariantCulture);
             #endregion
 
-        }
-
-        private void txtsotienco_TextChanged(object sender, EventArgs e)
-        {
-            if (Utils.IsValidnumber(txtsotienno.Text.ToString()))
-            {
-                this.pssotienco = double.Parse(txtsotienno.Text);
-            }
-            //else
-            //{
-            //    txtsotienco.Text = "";
-            //}
-
-
-        }
-
-        private void dataGridViewTkNo_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
-        {
 
             #region  view lai cac tk có
 
@@ -2068,7 +2043,7 @@ namespace BEEACCOUNT.View
             for (int idrow = 0; idrow < dataGridViewTkNo.RowCount - 1; idrow++)
             {
 
-                if (dataGridViewTkNo.Rows[idrow].Cells["Nợ_TK"].Value != DBNull.Value)
+                if (dataGridViewTkNo.Rows[idrow].Cells["Nợ_TK"].Value != null)
                 {
 
 
@@ -2097,6 +2072,64 @@ namespace BEEACCOUNT.View
             txttaikhoanno.Text = tkcotext;
             #endregion
 
+
+        }
+
+        private void txtsotienco_TextChanged(object sender, EventArgs e)
+        {
+            if (Utils.IsValidnumber(txtsotienno.Text.ToString()))
+            {
+                this.pssotienco = double.Parse(txtsotienno.Text);
+            }
+            //else
+            //{
+            //    txtsotienco.Text = "";
+            //}
+
+
+        }
+
+        private void dataGridViewTkNo_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
+        {
+
+
+            #region  view lai cac tk có
+
+            String tkcotext = "";
+
+
+            int dem = 0;
+            for (int idrow = 0; idrow < dataGridViewTkNo.RowCount - 1; idrow++)
+            {
+
+                if (dataGridViewTkNo.Rows[idrow].Cells["Nợ_TK"].Value != null)
+                {
+
+
+
+                    dem = dem + 1;
+                    if (dem > 1)
+                    {
+
+                        tkcotext += ";" + dataGridViewTkNo.Rows[idrow].Cells["Nợ_TK"].Value.ToString().Trim(); // chính la program
+
+                    }
+                    else
+                    {
+                        tkcotext += dataGridViewTkNo.Rows[idrow].Cells["Nợ_TK"].Value.ToString().Trim(); // chính la program
+                                                                                                         //dataGridViewTkCo.Columns["Số_tiền"].DisplayIndex = 3;
+
+
+                    }
+
+
+                }
+
+
+            }
+
+            txttaikhoanno.Text = tkcotext;
+            #endregion
 
             #region  view lai cac tk nợ
 

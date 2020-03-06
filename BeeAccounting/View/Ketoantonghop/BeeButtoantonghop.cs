@@ -544,7 +544,7 @@ namespace BEEACCOUNT.View
                     detail.Ngayctu = (DateTime)dataGridViewdetail.Rows[idrow].Cells["Ngày_chứng_từ"].Value;
                     detail.Sohieuchungtu = dataGridViewdetail.Rows[idrow].Cells["Số_chứng_từ"].Value.ToString();
 
-                    detail.Diengiai = dataGridViewdetail.Rows[idrow].Cells["Diễn_giải"].Value.ToString();
+                    detail.Diengiai = dataGridViewdetail.Rows[idrow].Cells["Diễn_giải"].Value.ToString().Truncate(225);
                     detail.TkNo = dataGridViewdetail.Rows[idrow].Cells["Nợ_TK"].Value.ToString();
                     detail.TkCo = dataGridViewdetail.Rows[idrow].Cells["Có_TK"].Value.ToString();
                     detail.PsCo = double.Parse(dataGridViewdetail.Rows[idrow].Cells["Số_tiền"].Value.ToString());
@@ -2409,7 +2409,7 @@ namespace BEEACCOUNT.View
 
             }
 
-            if (txtdiengiai.Text.Length > 225)
+            if (txtdiengiai.Text.Trim().Length > 225)
             {
                 MessageBox.Show("Mục diễn giải chỉ cho phép nhập 225 ký tự !", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 //    checkdinhkhoan = false;

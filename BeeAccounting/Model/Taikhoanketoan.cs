@@ -1,4 +1,5 @@
 ﻿using BEEACCOUNT.View;
+using BEEACCOUNT.shared;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -141,15 +142,14 @@ namespace BEEACCOUNT.Model
             socaips.TkCo = socai.TkCo;
             socaips.PsCo = socai.PsCo;
             socaips.PsNo = socai.PsNo;
-            socaips.Diengiai = socai.Diengiai;
+            socaips.Diengiai = socai.Diengiai.Truncate(225);
             socaips.manghiepvu = socai.manghiepvu;
-            socaips.manghiepvu = socai.manghiepvu;
-
+         
             socaips.Ngayghiso = socai.Ngayghiso;
             socaips.username = socai.username;
 
 
-            socaips.Sohieuchungtu = socai.Sohieuchungtu;
+            socaips.Sohieuchungtu = socai.Sohieuchungtu.Truncate(50);
             socaips.Ngayctu = socai.Ngayctu;
             //  socaips.Soctu = socai.Soctu;
 
