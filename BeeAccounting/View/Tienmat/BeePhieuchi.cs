@@ -895,6 +895,36 @@ namespace BEEACCOUNT.View
 
                     if (checkdetail == true && checkhead == true)
                     {
+                        if (this.statusphieuchi == 2)
+                        {
+                            #region  xóa phiếu thu cũ nếu staus = 2  chang
+
+                            var phieuthu2 = (from tbl_SoQuy in dc.tbl_SoQuys
+                                             where tbl_SoQuy.Sophieu == this.sophieuchiold
+                                             select tbl_SoQuy).FirstOrDefault();
+
+                            if (phieuthu2 != null)
+                            {
+                                //   this.sophieuchi = phieuthu.Sophieu;
+
+                                Model.hachtoantonghop.xoa("PC", this.sophieuchiold);
+
+                                dc.tbl_SoQuys.DeleteOnSubmit(phieuthu2);
+                                dc.SubmitChanges();
+
+
+
+                            }
+
+
+
+
+                            #endregion
+
+                        }
+
+
+
                         ghisoQuy(soquy);
 
 
@@ -1046,35 +1076,7 @@ namespace BEEACCOUNT.View
 
                 MessageBox.Show("Số phiếu vừa lưu: " + this.sophieuchi, "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                if (this.statusphieuchi == 2)
-                {
-                    #region  xóa phiếu thu cũ nếu staus = 2  chang
-
-                    var phieuthu2 = (from tbl_SoQuy in dc.tbl_SoQuys
-                                     where tbl_SoQuy.Sophieu == this.sophieuchiold
-                                     select tbl_SoQuy).FirstOrDefault();
-
-                    if (phieuthu2 != null)
-                    {
-                        //   this.sophieuchi = phieuthu.Sophieu;
-
-                        Model.hachtoantonghop.xoa("PC", this.sophieuchiold);
-
-                        dc.tbl_SoQuys.DeleteOnSubmit(phieuthu2);
-                        dc.SubmitChanges();
-
-
-
-                    }
-
-
-
-
-                    #endregion
-
-                }
-
-
+           
 
 
             }
