@@ -469,6 +469,7 @@
             this.txtsophieu.Name = "txtsophieu";
             this.txtsophieu.Size = new System.Drawing.Size(121, 24);
             this.txtsophieu.TabIndex = 20;
+            this.txtsophieu.TextChanged += new System.EventHandler(this.txtsophieu_TextChanged);
             this.txtsophieu.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtsophieu_KeyPress);
             // 
             // label11

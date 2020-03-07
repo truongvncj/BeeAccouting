@@ -11,18 +11,10 @@ namespace BEEACCOUNT.Model
 {
     class Phieuthuchi
     {
+        
 
-        //public class ComboboxItem
-        //{
-        //    public string Text { get; set; }
-        //    public object Value { get; set; }
 
-        //    public override string ToString()
-        //    {
-        //        return Text;
-        //    }
-        //}
-       public string sophieuchi { get; set; }
+
 
         public static IQueryable LisDanhSachphieuthu(String Loaiphieu)
         {
@@ -66,8 +58,8 @@ namespace BEEACCOUNT.Model
                                    Ngày_chứng_từ = listpt.Ngayctu,
 
                                    Số_chứng_từ = listpt.Sophieu,
-                                   TK_Nợ = listpt.TKtienmat,
-                                   TK_Có = listpt.TKdoiung,
+                                   TK_Nợ = listpt.TKdoiung,
+                                   TK_Có = listpt.TKtienmat,
                                    Số_Tiền = listpt.PsCo,
                                    Diễn_Giải = listpt.Diengiai,
                                    Người_nộp = listpt.Nguoinopnhantien,
