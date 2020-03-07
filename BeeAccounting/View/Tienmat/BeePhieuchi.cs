@@ -784,7 +784,7 @@ namespace BEEACCOUNT.View
 
                 if (txtdiengiai.Text.Trim() != "")
                 {
-                    soquy.Diengiai = txttaikhoanno.Text.Truncate(225);
+                    soquy.Diengiai = txtdiengiai.Text.Truncate(225);
 
 
 
@@ -2503,9 +2503,9 @@ namespace BEEACCOUNT.View
 
                 } // nếu danh sách tài khoản có
 
+                txtsophieu.Focus();
 
                 //      xx
-                txtsophieu.Focus();
 
             }// end chon tai khoan no
 
