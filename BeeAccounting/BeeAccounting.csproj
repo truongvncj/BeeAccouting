@@ -126,6 +126,7 @@
     <Compile Include="Model\Nhacungcap.cs" />
     <Compile Include="Model\Taikhoanketoan.cs" />
     <Compile Include="Model\Username.cs" />
+    <Compile Include="Model\Uynhiemchi.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -275,6 +276,12 @@
     <Compile Include="View\Muahang\BeeNCCnewaccount.Designer.cs">
       <DependentUpon>BeeNCCnewaccount.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Tienmat\Beehtsocaiuynhiemchi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Tienmat\Beehtsocaiuynhiemchi.Designer.cs">
+      <DependentUpon>Beehtsocaiuynhiemchi.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Tienmat\BeeHtoansocaiphieuchi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -298,6 +305,12 @@
     </Compile>
     <Compile Include="View\Beemainload.Designer.cs">
       <DependentUpon>Beemainload.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Tienmat\Beeuynhiemchi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Tienmat\Beeuynhiemchi.Designer.cs">
+      <DependentUpon>Beeuynhiemchi.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Tienmat\BeePhieuchi.cs">
       <SubType>Form</SubType>
@@ -608,6 +621,9 @@
     <EmbeddedResource Include="View\Muahang\BeeNCCnewaccount.resx">
       <DependentUpon>BeeNCCnewaccount.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\Tienmat\Beehtsocaiuynhiemchi.resx">
+      <DependentUpon>Beehtsocaiuynhiemchi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Tienmat\BeeHtoansocaiphieuchi.resx">
       <DependentUpon>BeeHtoansocaiphieuchi.cs</DependentUpon>
     </EmbeddedResource>
@@ -619,6 +635,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Beemainload.resx">
       <DependentUpon>Beemainload.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Tienmat\Beeuynhiemchi.resx">
+      <DependentUpon>Beeuynhiemchi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Tienmat\BeePhieuchi.resx">
       <DependentUpon>BeePhieuchi.cs</DependentUpon>

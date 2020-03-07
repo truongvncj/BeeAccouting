@@ -9,7 +9,10 @@ using System.Windows.Forms;
 
 namespace BEEACCOUNT.Model
 {
-    class Phieuthuchi
+
+   
+
+        class Phieuthuchi
     {
         
 
@@ -467,6 +470,45 @@ namespace BEEACCOUNT.Model
 
 
         }
+
+        public static void reloaddetailuynhiemchi(DataGridView dataGridViewTkNo, View.Beeuynhiemchi sophieuuynhiemchi, string taikhoantienmatco, string Phieuchiso)
+        {
+
+
+
+
+            string connection_string = Utils.getConnectionstr();
+            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+
+            var socailist = from tbl_Socai in dc.tbl_Socais
+                            where tbl_Socai.TkCo.Trim() == taikhoantienmatco.Trim()
+                     && tbl_Socai.manghiepvu == "UNC"
+                    && tbl_Socai.Sohieuchungtu == Phieuchiso
+                            select tbl_Socai;
+
+
+            if (socailist.Count() > 0)
+            {
+                foreach (tbl_Socai socai in socailist)
+                {
+                    //   MessageBox.Show(socai.Diengiai, "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    sophieuuynhiemchi.add_detailGridviewTkNoUNC(socai);
+
+
+
+                }
+            }
+
+
+            //  return dataGridViewTkCo;
+
+
+        }
+
+
+
+
 
 
     }

@@ -1316,6 +1316,8 @@ namespace BEEACCOUNT.View
 
 
             #endregion
+
+
         }
 
         private void pictureBox4_MouseClick(object sender, MouseEventArgs e)
@@ -1698,6 +1700,29 @@ namespace BEEACCOUNT.View
 
 
             #endregion
+
+
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+
+            
+
+            #region//uy nhiem chi
+
+
+            //  this.Close();
+            this.main1.clearpannel();
+
+
+            View.Beeuynhiemchi Beeuynhiemchi = new Beeuynhiemchi(this.main1);
+            this.main1.clearpannelload(Beeuynhiemchi);
+
+
+
+            #endregion
+
 
 
         }

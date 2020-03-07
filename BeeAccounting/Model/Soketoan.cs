@@ -565,7 +565,7 @@ namespace BEEACCOUNT.Model
 
 
 
-                View.Beeselecttk Beeselecttk = new View.Beeselecttk("tien");
+                View.Beeselecttk Beeselecttk = new View.Beeselecttk("tienmat");
                 Beeselecttk.ShowDialog();
 
                 chon = Beeselecttk.chon;
@@ -718,6 +718,8 @@ namespace BEEACCOUNT.Model
                                    where tbl_SoQuy.Ngayctu >= fromdate && tbl_SoQuy.Ngayctu <= todate
                                         && tbl_SoQuy.TKtienmat.Trim() == mataikhoan
                                          && tbl_SoQuy.ChitietTM == machitiettaikhoan
+                                         && (tbl_SoQuy.Machungtu =="PC" 
+                                         || tbl_SoQuy.Machungtu == "PT")
                                    orderby tbl_SoQuy.Ngayctu
                                    select tbl_SoQuy;
 

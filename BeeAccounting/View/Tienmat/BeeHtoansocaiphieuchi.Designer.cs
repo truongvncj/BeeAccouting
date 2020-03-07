@@ -116,7 +116,6 @@
             this.groupBox1.Size = new System.Drawing.Size(534, 194);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = " --";
             // 
             // lbtaikhoannotext
             // 

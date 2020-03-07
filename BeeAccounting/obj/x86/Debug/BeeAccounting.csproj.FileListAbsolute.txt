@@ -451,3 +451,5 @@ C:\Users\TRUONG\Desktop\BeeAccouting\BeeAccounting\obj\x86\Debug\BeeAccounting.c
 C:\Users\TRUONG\Desktop\BeeAccouting\BeeAccounting\obj\x86\Debug\RdlCompile.cache
 C:\Users\TRUONG\Desktop\BeeAccouting\BeeAccounting\obj\x86\Debug\RdlCompile.compiled
 D:\GitHub\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.BeePhaithu.resources
+D:\GitHub\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.Beehtsocaiuynhiemchi.resources
+D:\GitHub\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.Beeuynhiemchi.resources
