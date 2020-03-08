@@ -718,16 +718,21 @@ namespace BEEACCOUNT.View
                         //{
                         var sophieuthu = (from tbl_SoQuy in dc.tbl_SoQuys
                                           where (tbl_SoQuy.Sophieu.Trim() == txtsophieu.Text.ToString().Trim())
-                                                && (tbl_SoQuy.Machungtu == "PC")
+                                                && (tbl_SoQuy.Machungtu == "UNC")
                                           select tbl_SoQuy).FirstOrDefault();
 
                         if (sophieuthu != null)
                         {
-                            MessageBox.Show("Số phiếu bị lặp, bạn xem lại số phiếu", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                            txtsophieu.Focus();
-                            soquy = null;
-                            checkdetail = false;
-                            return;
+                            if (this.statusphieuchi == 1)
+                            {
+                                MessageBox.Show("Số phiếu bị lặp, bạn xem lại số phiếu", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                txtsophieu.Focus();
+                                soquy = null;
+                                checkdetail = false;
+                                return;
+                            }
+
+                        
                         }
                         else
                         {
@@ -1215,7 +1220,7 @@ namespace BEEACCOUNT.View
                 Utils ut = new Utils();
                 var dataset1 = ut.ToDataTable(dc, rsphieuchi);
 
-                Reportsview rpt = new Reportsview(dataset1, null, "Phieuchi.rdlc");
+                Reportsview rpt = new Reportsview(dataset1, null, "Uynhiemchi.rdlc");
                 rpt.ShowDialog();
 
             }
