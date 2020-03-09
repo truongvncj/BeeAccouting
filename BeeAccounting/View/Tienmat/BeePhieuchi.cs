@@ -22,8 +22,8 @@ namespace BEEACCOUNT.View
         //    public string sophieuchi { get; set; }
         //      public string tkno { get; set; }
         //   public int tknochitiet { get; set; }
-        public string tkno { get; set; }
-        public int tknochitiet { get; set; }
+        public string tkco { get; set; }
+        public int tkcochitiet { get; set; }
         public double pssotienno { get; set; }
         public double pssotienco { get; set; }
 
@@ -650,9 +650,9 @@ namespace BEEACCOUNT.View
                 }
 
                 //if (this.cb_channel.SelectedItem != null)
-                if (this.tkno != "")
+                if (this.tkco != "")
                 {
-                    soquy.TKtienmat = this.tkno;// this.tkco;//;
+                    soquy.TKtienmat = this.tkco;// this.tkco;//;
                 }
                 else
                 {
@@ -704,7 +704,7 @@ namespace BEEACCOUNT.View
 
 
 
-                soquy.Chitietdoiung = this.tknochitiet;
+                soquy.Chitietdoiung = this.tkcochitiet;
 
 
                 if (Utils.IsValidnumber(txtsophieu.Text)) //số phiếu thu phaair  lớn hơn 0 và không lặp
@@ -739,6 +739,8 @@ namespace BEEACCOUNT.View
                         {
 
                             soquy.Sophieu = txtsophieu.Text.Trim();
+                            this.sophieuchi = txtsophieu.Text.Trim();
+
 
                         }
                         //}
@@ -759,8 +761,7 @@ namespace BEEACCOUNT.View
                         return;
                     }
 
-                    this.sophieuchi = txtsophieu.Text.Trim();
-
+                
 
 
                 }
@@ -959,14 +960,14 @@ namespace BEEACCOUNT.View
                                 {
 
 
-                                    if (Utils.IsValidnumber((string)dataGridViewTkNo.Rows[idrow].Cells["Mã_chi_tiết"].Value))
-                                    {
+                               //     if (Utils.IsValidnumber((string)dataGridViewTkNo.Rows[idrow].Cells["Mã_chi_tiết"].Value))
+                                 //   {
                                         socai.MaCTietTKCo = int.Parse(dataGridViewTkNo.Rows[idrow].Cells["Mã_chi_tiết"].Value.ToString());
-                                    }
-                                    else
-                                    {
-                                        socai.MaCTietTKCo = null;
-                                    }
+                                   // }
+                                   // else
+                                   // {
+                                       // socai.MaCTietTKCo = null;
+                                   // }
 
 
                                 }
@@ -981,7 +982,7 @@ namespace BEEACCOUNT.View
 
                                 if (dataGridViewTkNo.Rows[idrow].Cells["Nợ_TK"].Value != DBNull.Value)
                                 {
-                                    socai.TkCo = this.tkno; //this.tkco;//;
+                                    socai.TkCo = this.tkco; //this.tkco;//;
 
                                 }
                                 else
@@ -2076,7 +2077,7 @@ namespace BEEACCOUNT.View
 
         private void tbchontkco_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            string taikhoan = this.tkno;// this.tkco;//;
+            string taikhoan = this.tkco;// this.tkco;//;
             //     this.matk = taikhoan;
 
 
@@ -2147,7 +2148,7 @@ namespace BEEACCOUNT.View
 
                             lbtenchitietco.Visible = true;
                             lb_machitietco.Visible = true;
-                            this.tknochitiet = int.Parse(selecdetail.value.ToString());
+                            this.tkcochitiet = int.Parse(selecdetail.value.ToString());
                             lb_machitietco.Text = machitiet;
                             lbtenchitietco.Text = namechitiet;
 
@@ -2156,7 +2157,7 @@ namespace BEEACCOUNT.View
                     }
                     else
                     {
-                        this.tknochitiet = -1;// int.Parse(selecdetail.value.ToString());
+                        this.tkcochitiet = -1;// int.Parse(selecdetail.value.ToString());
                                               //     lb_machitietco.Text = machitiet;
                         lbtenchitietco.Text = "";//namechitiet;
                         lb_machitietco.Text = "";
@@ -2166,7 +2167,7 @@ namespace BEEACCOUNT.View
                 }
                 else
                 {
-                    this.tknochitiet = -1;// int.Parse(selecdetail.value.ToString());
+                    this.tkcochitiet = -1;// int.Parse(selecdetail.value.ToString());
                                           //     lb_machitietco.Text = machitiet;
                     lbtenchitietco.Text = "";//namechitiet;
                     lb_machitietco.Text = "";
@@ -2178,7 +2179,7 @@ namespace BEEACCOUNT.View
             }
             else
             {
-                this.tknochitiet = -1;// int.Parse(selecdetail.value.ToString());
+                this.tkcochitiet = -1;// int.Parse(selecdetail.value.ToString());
                                       //     lb_machitietco.Text = machitiet;
                 lbtenchitietco.Text = "";//namechitiet;
                 lb_machitietco.Text = "";
@@ -2246,7 +2247,7 @@ namespace BEEACCOUNT.View
                 if (phieuchi != null)
                 {
                     datepickngayphieu.Value = phieuchi.ngaychungtu;
-                    txtsophieu.Text = phieuchi.sophieuthu.ToString();
+                    txtsophieu.Text = phieuchi.sophieuthu;
 
                     this.sophieuchiold = phieuchi.sophieuthu;
                     this.sophieuchi = phieuchi.sophieuthu;
@@ -2283,7 +2284,7 @@ namespace BEEACCOUNT.View
                     }
                     if (phieuchi.tkno != null)
                     {
-                        this.tkno = phieuchi.tkno.Trim();
+                        this.tkco = phieuchi.tkno.Trim();
                         lbtkco.Text = phieuchi.tkno.Trim();
                     }
 
@@ -2389,7 +2390,7 @@ namespace BEEACCOUNT.View
                                             select c).FirstOrDefault();
 
 
-                        this.tkno = taikhoanchon.matk;
+                        this.tkco = taikhoanchon.matk;
                         lbtkco.Text = taikhoanchon.matk + ": " + taikhoanchon.tentk.Trim();
 
 
@@ -2405,7 +2406,7 @@ namespace BEEACCOUNT.View
 
                             List<beeselectinput.ComboboxItem> listcb = new List<beeselectinput.ComboboxItem>();
                             var rs = from tbl_machitiettk in db.tbl_machitiettks
-                                     where tbl_machitiettk.matk.Trim() == this.tkno.Trim()
+                                     where tbl_machitiettk.matk.Trim() == this.tkco.Trim()
                                      orderby tbl_machitiettk.machitiet
                                      select tbl_machitiettk;
                             if (rs.Count() > 0)
@@ -2454,7 +2455,7 @@ namespace BEEACCOUNT.View
 
                                         lbtenchitietco.Visible = true;
                                         lb_machitietco.Visible = true;
-                                        this.tknochitiet = int.Parse(selecdetail.value.ToString());
+                                        this.tkcochitiet = int.Parse(selecdetail.value.ToString());
                                         //     lb_machitietco.Text = machitiet;
                                         lbtenchitietco.Text = namechitiet;
                                         lb_machitietco.Text = machitiet;
@@ -2463,7 +2464,7 @@ namespace BEEACCOUNT.View
                                 }
                                 else
                                 {
-                                    this.tknochitiet = -1;// int.Parse(selecdetail.value.ToString());
+                                    this.tkcochitiet = -1;// int.Parse(selecdetail.value.ToString());
                                                           //     lb_machitietco.Text = machitiet;
                                     lbtenchitietco.Text = "";//namechitiet;
                                     lb_machitietco.Text = "";
@@ -2473,7 +2474,7 @@ namespace BEEACCOUNT.View
                             }
                             else
                             {
-                                this.tknochitiet = -1;// int.Parse(selecdetail.value.ToString());
+                                this.tkcochitiet = -1;// int.Parse(selecdetail.value.ToString());
                                                       //     lb_machitietco.Text = machitiet;
                                 lbtenchitietco.Text = "";//namechitiet;
                                 lb_machitietco.Text = "";
@@ -2485,7 +2486,7 @@ namespace BEEACCOUNT.View
                         }
                         else
                         {
-                            this.tknochitiet = -1;// int.Parse(selecdetail.value.ToString());
+                            this.tkcochitiet = -1;// int.Parse(selecdetail.value.ToString());
                                                   //     lb_machitietco.Text = machitiet;
                             lbtenchitietco.Text = "";//namechitiet;
                             lb_machitietco.Text = "";
@@ -2499,8 +2500,8 @@ namespace BEEACCOUNT.View
                     }
                     else
                     {
-                        this.tkno = "";
-                        this.tknochitiet = -1;
+                        this.tkco = "";
+                        this.tkcochitiet = -1;
                         lbtkco.Text = "";
                         lb_machitietco.Text = "";
                         tbchontkco.Focus();
@@ -2525,7 +2526,7 @@ namespace BEEACCOUNT.View
 
         private void txtsophieu_TextChanged(object sender, EventArgs e)
         {
-            this.sophieuchi = txtsophieu.Text.ToString();
+            //this.sophieuchi = txtsophieu.Text.ToString();
         }
     }
 }
