@@ -723,8 +723,8 @@ namespace BEEACCOUNT.View
 
                         if (sophieuthu != null)
                         {
-                            if (this.statusphieuchi == 1)
-                            {
+                        //    if (this.statusphieuchi == 1)
+                       //     {
 
                                 MessageBox.Show("Số phiếu bị lặp, bạn xem lại số phiếu", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                 txtsophieu.Focus();
@@ -732,7 +732,7 @@ namespace BEEACCOUNT.View
                                 checkdetail = false;
                                 return;
 
-                            }
+                        //    }
 
                         }
                         else

@@ -343,6 +343,11 @@ namespace BEEACCOUNT.View
 
         private void bt_themvao_Click(object sender, EventArgs e)
         {
+
+            if (this.pssotienco == this.pssotienno)
+            {
+                this.Close();
+            }
             string connection_string = Utils.getConnectionstr();
 
             LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
