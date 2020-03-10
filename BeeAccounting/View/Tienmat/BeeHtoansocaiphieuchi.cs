@@ -406,7 +406,7 @@ namespace BEEACCOUNT.View
             //lbtenchitiet
             if (lbtenchitietno.Text != "")
             {
-                socaitemp.tenchitietCo = lbtenchitietno.Text;
+                socaitemp.tenchitietNo = lbtenchitietno.Text;
             }
             //else
             //{
@@ -420,7 +420,7 @@ namespace BEEACCOUNT.View
 
             if (lb_machitietno.Text != "")
             {
-                socaitemp.MaCTietTKCo = int.Parse(lb_machitietno.Text.ToString());
+                socaitemp.MaCTietTKNo = int.Parse(lb_machitietno.Text.ToString());
             }
 
 

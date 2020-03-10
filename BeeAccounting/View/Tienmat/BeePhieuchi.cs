@@ -67,8 +67,8 @@ namespace BEEACCOUNT.View
                 drToAdd["Số_tiền"] = socaitemp.PsNo;
             }
 
-            drToAdd["Mã_chi_tiết"] = socaitemp.MaCTietTKCo;
-            drToAdd["Tên_chi_tiết"] = socaitemp.tenchitietCo;
+            drToAdd["Mã_chi_tiết"] = socaitemp.MaCTietTKNo;
+            drToAdd["Tên_chi_tiết"] = socaitemp.tenchitietNo;
 
             drToAdd["tkNohide"] = socaitemp.TkNo;
             drToAdd["Nợ_TK"] = socaitemp.TkNo;
@@ -958,29 +958,18 @@ namespace BEEACCOUNT.View
                                 socai.TkNo = dataGridViewTkNo.Rows[idrow].Cells["Nợ_TK"].Value.ToString().Trim();
                                 if (dataGridViewTkNo.Rows[idrow].Cells["Mã_chi_tiết"].Value != DBNull.Value)///zcxzv
                                 {
-
-
-                               //     if (Utils.IsValidnumber((string)dataGridViewTkNo.Rows[idrow].Cells["Mã_chi_tiết"].Value))
-                                 //   {
-                                        socai.MaCTietTKCo = int.Parse(dataGridViewTkNo.Rows[idrow].Cells["Mã_chi_tiết"].Value.ToString());
-                                   // }
-                                   // else
-                                   // {
-                                       // socai.MaCTietTKCo = null;
-                                   // }
-
-
+                                        socai.MaCTietTKNo = int.Parse(dataGridViewTkNo.Rows[idrow].Cells["Mã_chi_tiết"].Value.ToString());
                                 }
                                 if (dataGridViewTkNo.Rows[idrow].Cells["Tên_chi_tiết"].Value != DBNull.Value)
                                 {
 
-                                    socai.tenchitietCo = dataGridViewTkNo.Rows[idrow].Cells["Tên_chi_tiết"].Value.ToString();
+                                    socai.tenchitietNo = dataGridViewTkNo.Rows[idrow].Cells["Tên_chi_tiết"].Value.ToString();
 
                                 }
 
 
 
-                                if (dataGridViewTkNo.Rows[idrow].Cells["Nợ_TK"].Value != DBNull.Value)
+                                if (dataGridViewTkNo.Rows[idrow].Cells["Nợ_TK"].Value != DBNull.Value)// xác định có đinh khoản
                                 {
                                     socai.TkCo = this.tkco; //this.tkco;//;
 
@@ -993,18 +982,16 @@ namespace BEEACCOUNT.View
                                 }
 
 
-
-
                                 if (lb_machitietco.Text != "")
                                 {
                                     if (Utils.IsValidnumber(lb_machitietco.Text.ToString()))
                                     {
-                                        socai.MaCTietTKNo = int.Parse(lb_machitietco.Text.ToString());
+                                        socai.MaCTietTKCo = int.Parse(lb_machitietco.Text.ToString());
 
                                     }
                                     else
                                     {
-                                        socai.MaCTietTKNo = null;
+                                        socai.MaCTietTKCo = null;
                                     }
 
                                 }
@@ -1013,10 +1000,12 @@ namespace BEEACCOUNT.View
                                 if (lbtenchitietco.Text != "")
                                 {
 
-                                    socai.tenchitietNo = lbtenchitietco.Text.ToString().Trim();
+                                    socai.tenchitietCo = lbtenchitietco.Text.ToString().Trim();
 
 
                                 }
+
+
 
 
 
