@@ -1078,7 +1078,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Nguyễn Anh Sơn</Value>
+                <Value>=Fields!nguoithuhuong.Value</Value>
                 <Style>
                   <FontStyle>Normal</FontStyle>
                   <FontFamily>Times New Roman</FontFamily>
@@ -1113,7 +1113,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>19028424247017</Value>
+                <Value>=Fields!sotknguoithuhuong.Value</Value>
                 <Style>
                   <FontStyle>Normal</FontStyle>
                   <FontWeight>Bold</FontWeight>
@@ -1248,7 +1248,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Techcombank</Value>
+                <Value>=Fields!tainganhang.Value</Value>
                 <Style>
                   <FontStyle>Normal</FontStyle>
                   <FontFamily>Times New Roman</FontFamily>
@@ -1329,7 +1329,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Hà Nội</Value>
+                <Value>=Fields!tinhthanhcuanganhang.Value</Value>
                 <Style>
                   <FontStyle>Normal</FontStyle>
                   <FontFamily>Times New Roman</FontFamily>
@@ -1456,7 +1456,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>4000000</Value>
+                <Value>=Fields!sotienchuyen.Value</Value>
                 <Style>
                   <FontStyle>Normal</FontStyle>
                   <FontFamily>Times New Roman</FontFamily>
@@ -1569,7 +1569,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>.....................</Value>
+                <Value>=Fields!noidung.Value</Value>
                 <Style />
               </TextRun>
             </TextRuns>
@@ -3095,7 +3095,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Nguyễn Anh Sơn</Value>
+                <Value>=Fields!nguoithuhuong.Value</Value>
                 <Style>
                   <FontStyle>Normal</FontStyle>
                   <FontFamily>Times New Roman</FontFamily>
@@ -3130,7 +3130,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>19028424247017</Value>
+                <Value>=Fields!sotknguoithuhuong.Value</Value>
                 <Style>
                   <FontStyle>Normal</FontStyle>
                   <FontWeight>Bold</FontWeight>
@@ -3265,7 +3265,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Techcombank</Value>
+                <Value>=Fields!tainganhang.Value</Value>
                 <Style>
                   <FontStyle>Normal</FontStyle>
                   <FontFamily>Times New Roman</FontFamily>
@@ -3346,7 +3346,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Hà Nội</Value>
+                <Value>=Fields!tinhthanhcuanganhang.Value</Value>
                 <Style>
                   <FontStyle>Normal</FontStyle>
                   <FontFamily>Times New Roman</FontFamily>
@@ -3473,7 +3473,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>4000000</Value>
+                <Value>=Fields!sotienchuyen.Value</Value>
                 <Style>
                   <FontStyle>Normal</FontStyle>
                   <FontFamily>Times New Roman</FontFamily>
@@ -3586,7 +3586,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>.....................</Value>
+                <Value>=Fields!noidung.Value</Value>
                 <Style />
               </TextRun>
             </TextRuns>
@@ -4083,79 +4083,43 @@
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
-        <Field Name="tencongty">
-          <DataField>tencongty</DataField>
+        <Field Name="nguoithuhuong">
+          <DataField>nguoithuhuong</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="diachicongty">
-          <DataField>diachicongty</DataField>
+        <Field Name="sotknguoithuhuong">
+          <DataField>sotknguoithuhuong</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="masothue">
-          <DataField>masothue</DataField>
+        <Field Name="tainganhang">
+          <DataField>tainganhang</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="phieuthuso">
-          <DataField>phieuthuso</DataField>
+        <Field Name="tinhthanhcuanganhang">
+          <DataField>tinhthanhcuanganhang</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="ngaychungtu">
-          <DataField>ngaychungtu</DataField>
+        <Field Name="sotienchuyen">
+          <DataField>sotienchuyen</DataField>
           <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="nguoinoptien">
-          <DataField>nguoinoptien</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="nguoilapphieu">
-          <DataField>nguoilapphieu</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="diachinguoinop">
-          <DataField>diachinguoinop</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="lydothu">
-          <DataField>lydothu</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="sotien">
-          <DataField>sotien</DataField>
-          <rd:TypeName>System.Double</rd:TypeName>
         </Field>
         <Field Name="sotienbangchu">
           <DataField>sotienbangchu</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="sochungtugoc">
-          <DataField>sochungtugoc</DataField>
+        <Field Name="noidung">
+          <DataField>noidung</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="username">
-          <DataField>username</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="tengiamdoc">
-          <DataField>tengiamdoc</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="tenketoantruong">
-          <DataField>tenketoantruong</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="tkno">
-          <DataField>tkno</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="tkco">
-          <DataField>tkco</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
+        <Field Name="ngaychungtu">
+          <DataField>ngaychungtu</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>DataSet1</rd:DataSetName>
-        <rd:SchemaPath>E:\Product\BeeAccouting\BeeAccounting\Reports\dsCallogs.xsd</rd:SchemaPath>
-        <rd:TableName>PhieuthuRPT</rd:TableName>
+        <rd:SchemaPath>D:\GitHub\BeeAccouting\BeeAccounting\Reports\dsCallogs.xsd</rd:SchemaPath>
+        <rd:TableName>rptunchi</rd:TableName>
         <rd:TableAdapterFillMethod />
         <rd:TableAdapterGetDataMethod />
         <rd:TableAdapterName />
