@@ -180,12 +180,6 @@
     <Compile Include="View\BCTC\BeeBCKQKD200updatechotso.Designer.cs">
       <DependentUpon>BeeBCKQKD200updatechotso.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\beektth.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\beektth.Designer.cs">
-      <DependentUpon>beektth.cs</DependentUpon>
-    </Compile>
     <Compile Include="View\Dieuvan\BeeSeachdieuvan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -221,12 +215,6 @@
     </Compile>
     <Compile Include="View\Dieuvan\NPDanhsachnhavantai.Designer.cs">
       <DependentUpon>NPDanhsachnhavantai.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\Ketoantonghop\xBeePhaithu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\Ketoantonghop\xBeePhaithu.Designer.cs">
-      <DependentUpon>xBeePhaithu.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Khothanhpham\BeeDanhsachsanpham.cs">
       <SubType>Form</SubType>
@@ -576,9 +564,6 @@
     <EmbeddedResource Include="View\BCTC\BeeBCKQKD200updatechotso.resx">
       <DependentUpon>BeeBCKQKD200updatechotso.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\beektth.resx">
-      <DependentUpon>beektth.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="View\Dieuvan\BeeSeachdieuvan.resx">
       <DependentUpon>BeeSeachdieuvan.cs</DependentUpon>
     </EmbeddedResource>
@@ -596,9 +581,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Dieuvan\NPDanhsachnhavantai.resx">
       <DependentUpon>NPDanhsachnhavantai.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\Ketoantonghop\xBeePhaithu.resx">
-      <DependentUpon>xBeePhaithu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Khothanhpham\BeeDanhsachsanpham.resx">
       <DependentUpon>BeeDanhsachsanpham.cs</DependentUpon>

@@ -34,18 +34,18 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtTongno = new System.Windows.Forms.TextBox();
             this.bt_themvao = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lbtaikhoannotext = new System.Windows.Forms.Label();
             this.lb_machitietno = new System.Windows.Forms.Label();
             this.tbchontkco = new System.Windows.Forms.TextBox();
             this.lbtenchitietno = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtsotien = new System.Windows.Forms.TextBox();
             this.txtdiengiai = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.txtTongco = new System.Windows.Forms.TextBox();
+            this.txtsotieno = new System.Windows.Forms.TextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -100,23 +100,6 @@
             this.bt_themvao.Click += new System.EventHandler(this.bt_themvao_Click);
             this.bt_themvao.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.bt_themvao_KeyPress);
             // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.lbtaikhoannotext);
-            this.groupBox1.Controls.Add(this.lb_machitietno);
-            this.groupBox1.Controls.Add(this.tbchontkco);
-            this.groupBox1.Controls.Add(this.lbtenchitietno);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.txtsotien);
-            this.groupBox1.Controls.Add(this.txtdiengiai);
-            this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Location = new System.Drawing.Point(7, 87);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(534, 194);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            // 
             // lbtaikhoannotext
             // 
             this.lbtaikhoannotext.AutoSize = true;
@@ -138,6 +121,7 @@
             this.lb_machitietno.Size = new System.Drawing.Size(40, 16);
             this.lb_machitietno.TabIndex = 79;
             this.lb_machitietno.Text = "Mã ct";
+            this.lb_machitietno.TextChanged += new System.EventHandler(this.lb_machitietno_TextChanged);
             // 
             // tbchontkco
             // 
@@ -158,6 +142,7 @@
             this.lbtenchitietno.Size = new System.Drawing.Size(57, 16);
             this.lbtenchitietno.TabIndex = 78;
             this.lbtenchitietno.Text = "Chi tiết 1";
+            this.lbtenchitietno.TextChanged += new System.EventHandler(this.lbtenchitietno_TextChanged);
             // 
             // label1
             // 
@@ -169,16 +154,6 @@
             this.label1.TabIndex = 39;
             this.label1.Text = "Nợ TK:";
             // 
-            // txtsotien
-            // 
-            this.txtsotien.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtsotien.Location = new System.Drawing.Point(149, 114);
-            this.txtsotien.Name = "txtsotien";
-            this.txtsotien.Size = new System.Drawing.Size(207, 24);
-            this.txtsotien.TabIndex = 1;
-            this.txtsotien.TextChanged += new System.EventHandler(this.txtsotien_TextChanged);
-            this.txtsotien.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtsotien_KeyPress);
-            // 
             // txtdiengiai
             // 
             this.txtdiengiai.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -186,6 +161,7 @@
             this.txtdiengiai.Name = "txtdiengiai";
             this.txtdiengiai.Size = new System.Drawing.Size(317, 24);
             this.txtdiengiai.TabIndex = 2;
+            this.txtdiengiai.TextChanged += new System.EventHandler(this.txtdiengiai_TextChanged);
             this.txtdiengiai.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtdiachi_KeyPress);
             // 
             // label8
@@ -228,6 +204,33 @@
             this.txtTongco.TabIndex = 36;
             this.txtTongco.TabStop = false;
             // 
+            // txtsotieno
+            // 
+            this.txtsotieno.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtsotieno.Location = new System.Drawing.Point(149, 111);
+            this.txtsotieno.Name = "txtsotieno";
+            this.txtsotieno.Size = new System.Drawing.Size(235, 24);
+            this.txtsotieno.TabIndex = 81;
+            this.txtsotieno.TextChanged += new System.EventHandler(this.txtsotieno_TextChanged);
+            this.txtsotieno.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtsotieno_KeyPress);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.txtsotieno);
+            this.groupBox1.Controls.Add(this.lbtaikhoannotext);
+            this.groupBox1.Controls.Add(this.lb_machitietno);
+            this.groupBox1.Controls.Add(this.tbchontkco);
+            this.groupBox1.Controls.Add(this.lbtenchitietno);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.txtdiengiai);
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Location = new System.Drawing.Point(7, 87);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(534, 194);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
+            // 
             // BeeHtoansocaiphieuchi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -262,9 +265,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtTongno;
         private System.Windows.Forms.Button bt_themvao;
-        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtsotien;
         private System.Windows.Forms.TextBox txtdiengiai;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label6;
@@ -274,5 +275,7 @@
         private System.Windows.Forms.TextBox tbchontkco;
         private System.Windows.Forms.Label lbtenchitietno;
         private System.Windows.Forms.Label lbtaikhoannotext;
+        private System.Windows.Forms.TextBox txtsotieno;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

@@ -406,6 +406,7 @@ namespace BEEACCOUNT.View
                 return;
             }
 
+
             if (Utils.IsValidnumber(txtsotien.Text))
             {
                 socaitemp.PsCo = double.Parse(txtsotien.Text.Trim());

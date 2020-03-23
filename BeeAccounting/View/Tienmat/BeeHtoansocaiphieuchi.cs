@@ -14,6 +14,13 @@ namespace BEEACCOUNT.View
     {
         View.BeePhieuchi phieuchi;
 
+        public string diengiaitxt { get; set; }
+        public string sotientxt { get; set; }
+        public string machitiettxt { get; set; }
+
+        public string tenchitiettxt { get; set; }
+
+
         public string tkno { get; set; }
         public string tknoten { get; set; }
         public int tknochitiet { get; set; }
@@ -55,8 +62,13 @@ namespace BEEACCOUNT.View
             this.tkno = "";
             lb_machitietno.Text = "";
             lbtenchitietno.Text = "";
-            txtsotien.Text = "";
+            txtsotieno.Text = "";
             txtdiengiai.Text = "";
+            diengiaitxt = "";// { get; set; }
+            sotientxt = "";// { get; set; }
+            machitiettxt = "";
+
+            tenchitiettxt = "";//
             lbtaikhoannotext.Text = "";
 
             #endregion
@@ -230,7 +242,7 @@ namespace BEEACCOUNT.View
             }
 
 
-            txtsotien.Focus();
+            txtsotieno.Focus();
 
 
 
@@ -348,6 +360,7 @@ namespace BEEACCOUNT.View
             {
                 this.Close();
             }
+
             string connection_string = Utils.getConnectionstr();
 
             LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
@@ -367,24 +380,14 @@ namespace BEEACCOUNT.View
                 return;
             }
 
-            if (Utils.IsValidnumber(txtsotien.Text))
+            // txt dien giảu
+            //      txtdiengiai.Focus();
+            //    txtdiengiai.Enabled = true;
+            //   MessageBox.Show("....dien giai nhu sau:" + txtdiengiai.Text.ToString());
+            if (this.diengiaitxt != "")
             {
-                socaitemp.PsNo = double.Parse(txtsotien.Text.Trim());
-            }
-            else
-            {
-                MessageBox.Show("Số tiền gõ vào phải là số !", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtsotien.Focus();
-                return;
-            }
 
-
-
-            // txtdiachi
-
-            if (txtdiengiai.Text != "")
-            {
-                socaitemp.Diengiai = txtdiengiai.Text;
+                socaitemp.Diengiai = this.diengiaitxt;
             }
             else
             {
@@ -392,40 +395,57 @@ namespace BEEACCOUNT.View
                 txtdiengiai.Focus();
                 return;
             }
-            //datepickngayphieu
 
-            //socaitemp.Ngayctu = datepickngayphieu.Value;
 
-            ////     txtkyhieuctu
-            //if (txtkyhieuctu.Text != "")
-            //{
-            //    socaitemp.Kyhieuctu = txtkyhieuctu.Text;
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Bạn chưa gõ Tên chi tiét", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //    txtkyhieuctu.Focus();
-            //    return;
-            //}
 
-            //lbtenchitiet
-            if (lbtenchitietno.Text != "")
+            //    MessageBox.Show("....so tien dang la:" + txtsotieno.Text.ToString());
+
+            //  txtsotieno.Focus();
+            //txtsotieno.Enabled = true;
+
+
+            if (this.sotientxt != "")
             {
-                socaitemp.tenchitietNo = lbtenchitietno.Text;
-            }
-            //else
-            //{
-            //    MessageBox.Show("Bạn chưa gõ mã chi tiết", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //    txtkyhieuctu.Focus();
-            //    return;
-            //}
+                // MessageBox.Show("....so tien dang la:" + this.sotientxt);
+                if (Utils.IsValidnumber(this.sotientxt))
+                {
 
+                    socaitemp.PsNo = double.Parse(this.sotientxt.Trim());
+                }
+                else
+                {
+
+
+                    MessageBox.Show("Số tiền gõ vào phải là số ! ", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtsotieno.Focus();
+                    return;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Bạn chưa gõ số tiền !", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtsotieno.Focus();
+                return;
+            }
+
+        //    this.tenchitiettxt = lbtenchitietno.Text;
+        //}
+
+        //private void lb_machitietno_TextChanged(object sender, EventArgs e)
+        //{
+        //    this.machitiettxt = lb_machitietno.Text;
+
+
+            if (tenchitiettxt != "")
+            {
+                socaitemp.tenchitietNo = tenchitiettxt;
+            }
 
             // tbmachitiet
 
-            if (lb_machitietno.Text != "")
+            if (machitiettxt != "")
             {
-                socaitemp.MaCTietTKNo = int.Parse(lb_machitietno.Text.ToString());
+                socaitemp.MaCTietTKNo = int.Parse(machitiettxt);
             }
 
 
@@ -465,9 +485,13 @@ namespace BEEACCOUNT.View
 
             lb_machitietno.Text = "";
             lbtenchitietno.Text = "";
-            txtsotien.Text = "";
+            txtsotieno.Text = "";
             txtdiengiai.Text = "";
+            machitiettxt = "";
 
+            tenchitiettxt = "";//
+            diengiaitxt = "";// { get; set; }
+            sotientxt = "";// { get; set; }
             #endregion
 
 
@@ -636,7 +660,7 @@ namespace BEEACCOUNT.View
 
 
                 //      xx
-                txtsotien.Focus();
+                txtsotieno.Focus();
 
             }// end chon tai khoan no
 
@@ -665,6 +689,45 @@ namespace BEEACCOUNT.View
             }
 
 
+        }
+
+        private void txtsotieno_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                //  cbsophieu.
+                e.Handled = true;
+                txtdiengiai.Focus();
+
+                //    string valueinput = cb_customerka.Text;
+
+                //    string connection_string = Utils.getConnectionstr();
+                //    LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+                //    string username = Utils.getusername();
+
+
+            }
+        }
+
+        private void txtsotieno_TextChanged(object sender, EventArgs e)
+        {
+            this.sotientxt = txtsotieno.Text;
+        }
+
+        private void txtdiengiai_TextChanged(object sender, EventArgs e)
+        {
+            this.diengiaitxt = txtdiengiai.Text;
+        }
+
+        private void lbtenchitietno_TextChanged(object sender, EventArgs e)
+        {
+            this.tenchitiettxt = lbtenchitietno.Text;
+        }
+
+        private void lb_machitietno_TextChanged(object sender, EventArgs e)
+        {
+            this.machitiettxt = lb_machitietno.Text;
         }
     }
 }
