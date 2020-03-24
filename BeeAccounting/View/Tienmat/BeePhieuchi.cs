@@ -644,11 +644,11 @@ namespace BEEACCOUNT.View
 
                     if (txttaikhoanno.Text.Length > 225)
                     {
-                        soquy.TKdoiung = txttaikhoanno.Text.ToString().Substring(225);
+                        soquy.TKdoiung = txttaikhoanno.Text.Truncate(225);
                     }
                     else
                     {
-                        soquy.TKdoiung = txttaikhoanno.Text.ToString();
+                        soquy.TKdoiung = txttaikhoanno.Text.Truncate(225);
                     }
 
                 }
@@ -675,7 +675,7 @@ namespace BEEACCOUNT.View
 
                 if (lbtenchitietco.Text != "")
                 {
-                    soquy.TenchitietTM = lbtenchitietco.Text;
+                    soquy.TenchitietTM = lbtenchitietco.Text.Truncate(225);
                 }
 
 
@@ -714,8 +714,8 @@ namespace BEEACCOUNT.View
                         else
                         {
 
-                            soquy.Sophieu = txtsophieu.Text.Trim();
-                            this.sophieuchi = txtsophieu.Text.Trim();
+                            soquy.Sophieu = txtsophieu.Text.Truncate(50);
+                            this.sophieuchi = txtsophieu.Text.Truncate(50);
 
 
                         }
@@ -788,11 +788,11 @@ namespace BEEACCOUNT.View
 
                     if (txttennguoinhan.Text.Length > 100)
                     {
-                        soquy.Nguoinopnhantien = txttennguoinhan.Text.Trim().Substring(100);
+                        soquy.Nguoinopnhantien = txttennguoinhan.Text.Truncate(100);
                     }
                     else
                     {
-                        soquy.Nguoinopnhantien = txttennguoinhan.Text.Trim();
+                        soquy.Nguoinopnhantien = txttennguoinhan.Text.Truncate(100);
                     }
 
                 }
@@ -811,11 +811,11 @@ namespace BEEACCOUNT.View
 
                     if (txtdiachi.Text.Length > 225)
                     {
-                        soquy.Diachinguoinhannop = txtdiachi.Text.Trim().Substring(225);
+                        soquy.Diachinguoinhannop = txtdiachi.Text.Truncate(225);
                     }
                     else
                     {
-                        soquy.Diachinguoinhannop = txtdiachi.Text.Trim();
+                        soquy.Diachinguoinhannop = txtdiachi.Text.Truncate(225);
                     }
 
                 }
@@ -976,7 +976,7 @@ namespace BEEACCOUNT.View
                                 if (lbtenchitietco.Text != "")
                                 {
 
-                                    socai.tenchitietCo = lbtenchitietco.Text.ToString().Trim();
+                                    socai.tenchitietCo = lbtenchitietco.Text.ToString().Truncate(225);
 
 
                                 }
@@ -997,9 +997,9 @@ namespace BEEACCOUNT.View
                                     return;
                                 }
 
-                                socai.Diengiai = dataGridViewTkNo.Rows[idrow].Cells["Diễn_giải"].Value.ToString();
+                                socai.Diengiai = dataGridViewTkNo.Rows[idrow].Cells["Diễn_giải"].Value.ToString().Truncate(225);
                                 socai.manghiepvu = "PC";
-                                socai.Sohieuchungtu = txtsophieu.Text.ToString();
+                                socai.Sohieuchungtu = txtsophieu.Text.Truncate(50);
 
 
                                 socai.Ngayctu = datepickngayphieu.Value;
