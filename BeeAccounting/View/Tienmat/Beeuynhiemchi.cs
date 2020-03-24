@@ -202,11 +202,11 @@ namespace BEEACCOUNT.View
             datepickngayphieu.Enabled = true;
 
             txtsophieu.Enabled = true;
-            txttennguoinhan.Enabled = true;
-            txtdiachi.Enabled = true;
-            txtdiengiai.Enabled = true;
+            txttendonvithuhuong.Enabled = true;
+            txtsotaikhoan.Enabled = true;
+            txtnoidung.Enabled = true;
             txtsotien.Enabled = true;
-            txtsochungtugoc.Enabled = true;
+            //txtsochungtugoc.Enabled = true;
             btluu.Visible = true;
             btluu.Enabled = true;
             //    cbtaikhoanco.Enabled = true;
@@ -214,11 +214,11 @@ namespace BEEACCOUNT.View
             btsua.Enabled = false;
 
             txtsophieu.Text = "";
-            txttennguoinhan.Text = "";
-            txtdiachi.Text = "";
-            txtdiengiai.Text = "";
+            txttendonvithuhuong.Text = "";
+            txtsotaikhoan.Text = "";
+            txtnoidung.Text = "";
             txtsotien.Text = "";
-            txtsochungtugoc.Text = "";
+            //   txtsochungtugoc.Text = "";
 
             lbtenchitietco.Text = "";
 
@@ -234,7 +234,8 @@ namespace BEEACCOUNT.View
             this.phieuuynhiemchiID = -1;
 
             this.statusphieuchi = 1; // tạo mới
-            dataGridViewTkNo = Model.Phieuthuchi.reloadnewdetailtaikhoanNo(dataGridViewTkNo);
+            dataGridViewTkNo = Model.Uynhiemchi.reloadnewdetailtaikhoanNo(dataGridViewTkNo);
+          //  dataGridViewTkNo = Model.Phieuthuchi.reloadnewdetailtaikhoanNo(dataGridViewTkNo);
             #endregion
 
 
@@ -364,9 +365,13 @@ namespace BEEACCOUNT.View
 
 
 
-            dataGridViewTkNo = Model.Phieuthuchi.reloadnewdetailtaikhoanNo(dataGridViewTkNo);
+        //    dataGridViewTkNo = Model.Phieuthuchi.reloadnewdetailtaikhoanNo(dataGridViewTkNo);
 
-            dataGridViewListphieuchi.DataSource = Model.Phieuthuchi.LisDanhSachphieuchi("PC");
+            dataGridViewTkNo = Model.Uynhiemchi.reloadnewdetailtaikhoanNo(dataGridViewTkNo);
+            dataGridViewListphieuchi.DataSource = Model.Uynhiemchi.LisDanhSachuynhiemchi("UNC");
+
+
+          //  dataGridViewListphieuchi.DataSource = Model.Phieuthuchi.LisDanhSachphieuchi("PC");
 
             #endregion load datanew
 
@@ -393,7 +398,7 @@ namespace BEEACCOUNT.View
             {
                 //  cbsophieu.
                 e.Handled = true;
-                txttennguoinhan.Focus();
+                txttendonvithuhuong.Focus();
 
                 //    string valueinput = cb_customerka.Text;
 
@@ -441,7 +446,7 @@ namespace BEEACCOUNT.View
             if (e.KeyChar == (char)Keys.Enter)
             {
                 e.Handled = true;
-                txtdiachi.Focus();
+                txtsotaikhoan.Focus();
 
                 //    string valueinput = cb_customerka.Text;
 
@@ -459,7 +464,7 @@ namespace BEEACCOUNT.View
             if (e.KeyChar == (char)Keys.Enter)
             {
                 e.Handled = true;
-                txtdiengiai.Focus();
+                txtnoidung.Focus();
 
 
             }
@@ -483,7 +488,7 @@ namespace BEEACCOUNT.View
             if (e.KeyChar == (char)Keys.Enter)
             {
                 e.Handled = true;
-                txtsochungtugoc.Focus();
+                //     txtsochungtugoc.Focus();
 
                 //    string valueinput = cb_customerka.Text;
 
@@ -552,14 +557,14 @@ namespace BEEACCOUNT.View
             }
         }
 
-        public static void ghisoQuy(tbl_SoQuy soquy)
+        public static void ghisoBank(tbl_SoBANK soBank)
         {
 
             string connection_string = Utils.getConnectionstr();
 
             LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
 
-            dc.tbl_SoQuys.InsertOnSubmit(soquy);
+            dc.tbl_SoBANKs.InsertOnSubmit(soBank);
             dc.SubmitChanges();
 
         }
@@ -568,7 +573,7 @@ namespace BEEACCOUNT.View
         {
 
 
-            #region check phieu chi
+            #region check đối ứng unc
 
             if (this.pssotienco - this.pssotienno != 0)
             {
@@ -629,22 +634,22 @@ namespace BEEACCOUNT.View
                 string connection_string = Utils.getConnectionstr();
 
                 LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
-                tbl_SoQuy soquy = new tbl_SoQuy();
+                tbl_SoBANK soBank = new tbl_SoBANK();
 
 
 
 
-                soquy.PsNo = 0;
+                soBank.PsNo = 0;
 
                 if (Utils.IsValidnumber(txtsotien.Text.Replace(",", "")))
                 {
-                    soquy.PsCo = double.Parse(txtsotien.Text.Replace(",", "").Trim());
+                    soBank.PsCo = double.Parse(txtsotien.Text.Replace(",", "").Trim());
                 }
                 else
                 {
                     MessageBox.Show("Số tiền gõ vào phải là số !", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     txtsotien.Focus();
-                    soquy = null;
+                    soBank = null;
                     checkdetail = false;
                     return;
                 }
@@ -652,13 +657,13 @@ namespace BEEACCOUNT.View
                 //if (this.cb_channel.SelectedItem != null)
                 if (this.tkno != "")
                 {
-                    soquy.TKtienmat = this.tkno;// this.tkco;//;
+                    soBank.TKBANk = this.tkno;// this.tkco;//;
                 }
                 else
                 {
-                    MessageBox.Show("Bạn chưa chọn tài khoản tiền mặt ", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Bạn chưa chọn tài khoản Bank ", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     tbchontkco.Focus();
-                    soquy = null;
+                    soBank = null;
                     checkdetail = false;
                     return;
                 }
@@ -668,11 +673,11 @@ namespace BEEACCOUNT.View
 
                     if (txttaikhoanno.Text.Length > 225)
                     {
-                        soquy.TKdoiung = txttaikhoanno.Text.ToString().Substring(225);
+                        soBank.TKdoiung = txttaikhoanno.Text.ToString().Substring(225);
                     }
                     else
                     {
-                        soquy.TKdoiung = txttaikhoanno.Text.ToString();
+                        soBank.TKdoiung = txttaikhoanno.Text.ToString();
                     }
 
                 }
@@ -680,7 +685,7 @@ namespace BEEACCOUNT.View
                 {
                     MessageBox.Show("Bạn chưa hạch toán tài khoản", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     dataGridViewTkNo.Focus();
-                    soquy = null;
+                    soBank = null;
                     checkdetail = false;
                     return;
                 }
@@ -690,21 +695,21 @@ namespace BEEACCOUNT.View
 
                 if (lb_machitietco.Text != "")
                 {
-                    soquy.ChitietTM = int.Parse(lb_machitietco.Text.ToString());
+                    soBank.ChitietBAnk = int.Parse(lb_machitietco.Text.ToString());
                 }
                 else
                 {
-                    soquy.ChitietTM = 0;
+                    soBank.ChitietBAnk = 0;
                 }
 
                 if (lbtenchitietco.Text != "")
                 {
-                    soquy.TenchitietTM = lbtenchitietco.Text;
+                    soBank.TenchitietTM = lbtenchitietco.Text;
                 }
 
 
 
-                soquy.Chitietdoiung = this.tknochitiet;
+                soBank.Chitietdoiung = this.tknochitiet;
 
 
                 if (Utils.IsValidnumber(txtsophieu.Text)) //số phiếu thu phaair  lớn hơn 0 và không lặp
@@ -727,23 +732,23 @@ namespace BEEACCOUNT.View
                             {
                                 MessageBox.Show("Số phiếu bị lặp, bạn xem lại số phiếu", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                 txtsophieu.Focus();
-                                soquy = null;
+                                soBank = null;
                                 checkdetail = false;
                                 return;
                             }
 
-                        
+
                         }
                         else
                         {
 
-                            soquy.Sophieu = txtsophieu.Text.Trim();
+                            soBank.Sophieu = txtsophieu.Text.Trim();
 
                         }
                         //}
                         //else
                         //{
-                        //    soquy.Sophieu = txtsophieu.Text.Trim();
+                        //    soBank.Sophieu = txtsophieu.Text.Trim();
                         //}
 
 
@@ -751,9 +756,9 @@ namespace BEEACCOUNT.View
                     }
                     else
                     {
-                        MessageBox.Show("Số phiếu thu phải là số dương", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show("Số phiếu phải là số dương", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         txtsophieu.Focus();
-                        soquy = null;
+                        soBank = null;
                         checkdetail = false;
                         return;
                     }
@@ -767,92 +772,107 @@ namespace BEEACCOUNT.View
                 {
                     MessageBox.Show("Số phiếu gõ vào phải là số !", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     txtsophieu.Focus();
-                    soquy = null;
+                    soBank = null;
                     checkdetail = false;
                     return;
                 }
 
 
-                soquy.Ngayctu = datepickngayphieu.Value;
-                if (Utils.IsValidnumber(txtsochungtugoc.Text))
-                {
-                    soquy.Chungtugockemtheo = int.Parse(txtsochungtugoc.Text.Trim());
-                }
-                else
-                {
-                    MessageBox.Show("Số chứng từ gốc kèm theo phải là số", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    txtsochungtugoc.Focus();
-                    soquy = null;
-                    checkdetail = false;
-                    return;
-                }
+                soBank.Ngayctu = datepickngayphieu.Value;
 
-                if (txtdiengiai.Text.Trim() != "")
+
+                if (txtnoidung.Text.Trim() != "")
                 {
-                    soquy.Diengiai = txtdiengiai.Text.Truncate(225);
+                    soBank.noidung = txtnoidung.Text.Truncate(225);
 
 
 
                 }
                 else
                 {
-                    MessageBox.Show("Phải nhập diễn giải nội dung nộp tiền ", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    txtdiengiai.Focus();
-                    soquy = null;
+                    MessageBox.Show("Bạn chưa nhập nội dung !", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtnoidung.Focus();
+                    soBank = null;
                     checkdetail = false;
                     return;
                 }
 
 
-                if (txttennguoinhan.Text.Trim() != "")
+                if (txttendonvithuhuong.Text.Trim() != "")
                 {
 
 
-                    if (txttennguoinhan.Text.Length > 100)
+                    if (txttendonvithuhuong.Text.Length > 100)
                     {
-                        soquy.Nguoinopnhantien = txttennguoinhan.Text.Trim().Substring(100);
+                        soBank.nguoithuhuong = txttendonvithuhuong.Text.Trim().Substring(100);
                     }
                     else
                     {
-                        soquy.Nguoinopnhantien = txttennguoinhan.Text.Trim();
+                        soBank.nguoithuhuong = txttendonvithuhuong.Text.Trim();
                     }
 
                 }
                 else
                 {
-                    MessageBox.Show("Phải nhập tên người nộp tiền ", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    txttennguoinhan.Focus();
-                    soquy = null;
+                    MessageBox.Show("Bạn chưa nhập tên đơn vị thụ hưởng ! ", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txttendonvithuhuong.Focus();
+                    soBank = null;
                     checkdetail = false;
                     return;
                 }
 
-                if (txtdiachi.Text.Trim() != "")
+                if (txtsotaikhoan.Text.Trim() != "")
                 {
 
 
-                    if (txtdiachi.Text.Length > 225)
+                    if (txtsotaikhoan.Text.Length > 225)
                     {
-                        soquy.Diachinguoinhannop = txtdiachi.Text.Trim().Substring(225);
+                        soBank.sotknguoithuhuong = txtsotaikhoan.Text.Trim().Substring(225);
                     }
                     else
                     {
-                        soquy.Diachinguoinhannop = txtdiachi.Text.Trim();
+                        soBank.sotknguoithuhuong = txtsotaikhoan.Text.Trim();
                     }
 
                 }
                 else
                 {
-                    MessageBox.Show("Bạn chưa nhập địa chỉ ", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    txtdiachi.Focus();
-                    soquy = null;
+                    MessageBox.Show("Bạn chưa nhập số tài khoản ! ", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtsotaikhoan.Focus();
+                    soBank = null;
                     checkdetail = false;
                     return;
                 }
-                soquy.Ngayghiso = DateTime.Today;
-                soquy.Username = Utils.getusername();
-                //          soquy.macty = Model.Username.getmacty();
-                soquy.Machungtu = "PC";
+
+                if (txttinhthanh.Text.Trim() != "")
+                {
+
+
+                    if (txttinhthanh.Text.Length > 225)
+                    {
+                        soBank.tinhthanhcuanganhang = txttinhthanh.Text.Trim().Substring(225);
+                    }
+                    else
+                    {
+                        soBank.tinhthanhcuanganhang = txttinhthanh.Text.Trim();
+                    }
+
+                }
+                else
+                {
+                    MessageBox.Show("Bạn chưa nhập tỉnh thành của tài khoản ! ", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txttinhthanh.Focus();
+                    soBank = null;
+                    checkdetail = false;
+                    return;
+                }
+
+
+
+                soBank.Ngayghiso = DateTime.Today;
+                soBank.Username = Utils.getusername();
+                //          soBank.macty = Model.Username.getmacty();
+                soBank.Machungtu = "PC";
 
                 if (this.statusphieuchi == 1 || this.statusphieuchi == 2)// phieu thu mơi, hoặc sửa
                 {
@@ -904,17 +924,17 @@ namespace BEEACCOUNT.View
                         {
                             #region  xóa phiếu thu cũ nếu staus = 2  chang
 
-                            var phieuthu2 = (from tbl_SoQuy in dc.tbl_SoQuys
+                            var phieubank = (from tbl_SoQuy in dc.tbl_SoBANKs
                                              where tbl_SoQuy.Sophieu == this.sophieuuynhiemchiold
                                              select tbl_SoQuy).FirstOrDefault();
 
-                            if (phieuthu2 != null)
+                            if (phieubank != null)
                             {
                                 //   this.sophieuchi = phieuthu.Sophieu;
 
-                                Model.hachtoantonghop.xoa("PC", this.sophieuuynhiemchiold);
+                                Model.hachtoantonghop.xoa("UNC", this.sophieuuynhiemchiold);
 
-                                dc.tbl_SoQuys.DeleteOnSubmit(phieuthu2);
+                                dc.tbl_SoBANKs.DeleteOnSubmit(phieubank);
                                 dc.SubmitChanges();
 
 
@@ -930,7 +950,7 @@ namespace BEEACCOUNT.View
 
 
 
-                        ghisoQuy(soquy);
+              ghisoBank(soBank);
 
 
 
@@ -1031,7 +1051,7 @@ namespace BEEACCOUNT.View
                                 }
 
                                 socai.Diengiai = dataGridViewTkNo.Rows[idrow].Cells["Diễn_giải"].Value.ToString();
-                                socai.manghiepvu = "PC";
+                                socai.manghiepvu = "UNC";
                                 socai.Sohieuchungtu = txtsophieu.Text.ToString();
 
 
@@ -1081,7 +1101,7 @@ namespace BEEACCOUNT.View
 
                 MessageBox.Show("Số phiếu vừa lưu: " + this.sophieuuynhiemchi, "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-           
+
 
 
             }
@@ -1089,7 +1109,7 @@ namespace BEEACCOUNT.View
 
             this.cleartoblankphieu();
 
-            dataGridViewListphieuchi.DataSource = Model.Phieuthuchi.LisDanhSachphieuchi("PC");
+            dataGridViewListphieuchi.DataSource = Model.Uynhiemchi.LisDanhSachuynhiemchi("UNC");
 
         }
 
@@ -1317,11 +1337,11 @@ namespace BEEACCOUNT.View
 
 
 
-            txttennguoinhan.Enabled = true;
-            txtdiachi.Enabled = true;
-            txtdiengiai.Enabled = true;
+            txttendonvithuhuong.Enabled = true;
+            txtsotaikhoan.Enabled = true;
+            txtnoidung.Enabled = true;
             txtsotien.Enabled = true;
-            txtsochungtugoc.Enabled = true;
+            //    txtsochungtugoc.Enabled = true;
             btluu.Enabled = true;
 
             //   cbtaikhoanco.Enabled = true;
@@ -1337,7 +1357,7 @@ namespace BEEACCOUNT.View
             {
                 //  cbsophieu.
                 e.Handled = true;
-                txttennguoinhan.Focus();
+                txttendonvithuhuong.Focus();
 
                 //    string valueinput = cb_customerka.Text;
 
@@ -1356,7 +1376,7 @@ namespace BEEACCOUNT.View
             {
                 //  cbsophieu.
                 e.Handled = true;
-                txtdiachi.Focus();
+                txtsotaikhoan.Focus();
 
                 //    string valueinput = cb_customerka.Text;
 
@@ -1375,7 +1395,7 @@ namespace BEEACCOUNT.View
             {
                 //  cbsophieu.
                 e.Handled = true;
-                txtdiengiai.Focus();
+                txtnoidung.Focus();
 
                 //    string valueinput = cb_customerka.Text;
 
@@ -1413,7 +1433,7 @@ namespace BEEACCOUNT.View
             {
                 //  cbsophieu.
                 e.Handled = true;
-                txtsochungtugoc.Focus();
+                // txtsochungtugoc.Focus();
 
                 //    string valueinput = cb_customerka.Text;
 
@@ -2250,15 +2270,15 @@ namespace BEEACCOUNT.View
                     this.sophieuuynhiemchiold = phieuchi.sophieuthu;
                     this.sophieuuynhiemchi = phieuchi.sophieuthu;
 
-                    txttennguoinhan.Text = phieuchi.nguoinoptien;
-                    txtdiachi.Text = phieuchi.diachinguoinop;
-                    txtdiengiai.Text = phieuchi.lydothu;
+                    txttendonvithuhuong.Text = phieuchi.nguoinoptien;
+                    txtsotaikhoan.Text = phieuchi.diachinguoinop;
+                    txtnoidung.Text = phieuchi.lydothu;
                     txtsotien.Text = double.Parse(phieuchi.sotien.ToString()).ToString("#,#", CultureInfo.InvariantCulture);
                     //txtValueSotienNo.Text = phieuthu.sotien.ToString();
                     this.pssotienco = double.Parse(phieuchi.sotien.ToString());
 
 
-                    txtsochungtugoc.Text = phieuchi.sochungtugoc.ToString();
+                    //        txtsochungtugoc.Text = phieuchi.sochungtugoc.ToString();
 
                     txttaikhoanno.Text = phieuchi.taikhoandoiung;
                     if (phieuchi.machitietco != null)
@@ -2288,11 +2308,11 @@ namespace BEEACCOUNT.View
 
                     datepickngayphieu.Enabled = false;
                     txtsophieu.Enabled = false;
-                    txttennguoinhan.Enabled = false;
-                    txtdiachi.Enabled = false;
-                    txtdiengiai.Enabled = false;
+                    txttendonvithuhuong.Enabled = false;
+                    txtsotaikhoan.Enabled = false;
+                    txtnoidung.Enabled = false;
                     txtsotien.Enabled = false;
-                    txtsochungtugoc.Enabled = false;
+                    //       txtsochungtugoc.Enabled = false;
 
                     btsua.Enabled = true;
 
