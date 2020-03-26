@@ -10,11 +10,12 @@ using System.Text;
 using System.Windows.Forms;
 using BEEACCOUNT.shared;
 
+
 namespace BEEACCOUNT.View
 {
     public partial class Beeuynhiemchi : Form
     {
-        public int statusphieuchi { get; set; } // mới  // 2 suawra // 3 display //
+        public int statusphieu { get; set; } // mới  // 2 suawra // 3 display //
         public int phieuuynhiemchiID { get; set; }
         public string sophieuuynhiemchi { get; set; }
         public string sophieuuynhiemchiold { get; set; }
@@ -150,31 +151,7 @@ namespace BEEACCOUNT.View
 
 
 
-            //int i = dataTable.Rows.Count - 1;
-            ////   int i = dataGridViewTkCo.RowCount -1;
 
-            //DataGridViewComboBoxCell cb = (DataGridViewComboBoxCell)dataGridViewTkNo.Rows[i].Cells["Tk_Có"];
-            //DataGridViewCell dgvc = (DataGridViewCell)dataGridViewTkNo.Rows[i].Cells["Tk_Có"];
-
-            //#region tim item comboboc
-
-            //foreach (ComboboxItem item in (List<ComboboxItem>)cb.DataSource)
-            //{
-
-            //    if (item.Value.ToString().Trim() == socaitemp.TkNo.ToString().Trim())
-            //    {
-
-            //        dataGridViewTkNo.Rows[i].Cells["Tk_Có"].Value = item.Value;
-            //    }
-
-            //}
-
-
-            //#endregion tom item comboubox
-
-
-            //   ComboboxItem cbx = (ComboboxItem)cb.Items[3];
-            //     dataGridViewTkCo.Rows[i].Cells["Tk_Có"].Value = cbx.Value;
             if (Utils.IsValidnumber(txtsotienno.Text))
             {
                 this.pssotienno = double.Parse(txtsotienno.Text);
@@ -206,10 +183,12 @@ namespace BEEACCOUNT.View
             txtsotaikhoan.Enabled = true;
             txtnoidung.Enabled = true;
             txtsotien.Enabled = true;
-            //txtsochungtugoc.Enabled = true;
+            txttainganhang.Enabled = true;
+            txttinhthanh.Enabled = true;
+
             btluu.Visible = true;
             btluu.Enabled = true;
-            //    cbtaikhoanco.Enabled = true;
+
             tbchontkco.Enabled = true;
             btsua.Enabled = false;
 
@@ -218,6 +197,9 @@ namespace BEEACCOUNT.View
             txtsotaikhoan.Text = "";
             txtnoidung.Text = "";
             txtsotien.Text = "";
+            txttainganhang.Text = "";
+            txttinhthanh.Text = "";
+
             //   txtsochungtugoc.Text = "";
 
             lbtenchitietco.Text = "";
@@ -233,9 +215,9 @@ namespace BEEACCOUNT.View
 
             this.phieuuynhiemchiID = -1;
 
-            this.statusphieuchi = 1; // tạo mới
+            this.statusphieu = 1; // tạo mới
             dataGridViewTkNo = Model.Uynhiemchi.reloadnewdetailtaikhoanNo(dataGridViewTkNo);
-          //  dataGridViewTkNo = Model.Phieuthuchi.reloadnewdetailtaikhoanNo(dataGridViewTkNo);
+            //  dataGridViewTkNo = Model.Phieuthuchi.reloadnewdetailtaikhoanNo(dataGridViewTkNo);
             #endregion
 
 
@@ -327,7 +309,7 @@ namespace BEEACCOUNT.View
             this.pssotienco = 0;
             this.main1 = Main;
 
-            this.statusphieuchi = 1; // tạo mới
+            this.statusphieu = 1; // tạo mới
 
             Model.Username used = new Model.Username();
             string connection_string = Utils.getConnectionstr();
@@ -365,13 +347,13 @@ namespace BEEACCOUNT.View
 
 
 
-        //    dataGridViewTkNo = Model.Phieuthuchi.reloadnewdetailtaikhoanNo(dataGridViewTkNo);
+            //    dataGridViewTkNo = Model.Phieuthuchi.reloadnewdetailtaikhoanNo(dataGridViewTkNo);
 
             dataGridViewTkNo = Model.Uynhiemchi.reloadnewdetailtaikhoanNo(dataGridViewTkNo);
             dataGridViewListphieuchi.DataSource = Model.Uynhiemchi.LisDanhSachuynhiemchi("UNC");
 
 
-          //  dataGridViewListphieuchi.DataSource = Model.Phieuthuchi.LisDanhSachphieuchi("PC");
+            //  dataGridViewListphieuchi.DataSource = Model.Phieuthuchi.LisDanhSachphieuchi("PC");
 
             #endregion load datanew
 
@@ -464,7 +446,7 @@ namespace BEEACCOUNT.View
             if (e.KeyChar == (char)Keys.Enter)
             {
                 e.Handled = true;
-                txtnoidung.Focus();
+                txttainganhang.Focus();
 
 
             }
@@ -644,6 +626,9 @@ namespace BEEACCOUNT.View
                 if (Utils.IsValidnumber(txtsotien.Text.Replace(",", "")))
                 {
                     soBank.PsCo = double.Parse(txtsotien.Text.Replace(",", "").Trim());
+
+                    soBank.sotienbangchu = Utils.ChuyenSo(decimal.Parse(txtsotien.Text.Replace(",", "").Trim()));
+
                 }
                 else
                 {
@@ -673,11 +658,11 @@ namespace BEEACCOUNT.View
 
                     if (txttaikhoanno.Text.Length > 225)
                     {
-                        soBank.TKdoiung = txttaikhoanno.Text.ToString().Substring(225);
+                        soBank.TKdoiung = txttaikhoanno.Text.Truncate(225);
                     }
                     else
                     {
-                        soBank.TKdoiung = txttaikhoanno.Text.ToString();
+                        soBank.TKdoiung = txttaikhoanno.Text.Truncate(225);
                     }
 
                 }
@@ -704,7 +689,7 @@ namespace BEEACCOUNT.View
 
                 if (lbtenchitietco.Text != "")
                 {
-                    soBank.TenchitietTM = lbtenchitietco.Text;
+                    soBank.TenchitietTM = lbtenchitietco.Text.Truncate(225);
                 }
 
 
@@ -721,14 +706,14 @@ namespace BEEACCOUNT.View
                         // không lặp
                         //if (this.statusphieuchi == 1 || (this.statusphieuchi == 2) && this.sophieuchi != txtsophieu.Text.Trim())
                         //{
-                        var sophieuthu = (from tbl_SoQuy in dc.tbl_SoQuys
-                                          where (tbl_SoQuy.Sophieu.Trim() == txtsophieu.Text.ToString().Trim())
-                                                && (tbl_SoQuy.Machungtu == "UNC")
-                                          select tbl_SoQuy).FirstOrDefault();
+                        var uynhiemchi = (from ppbank in dc.tbl_SoBANKs
+                                          where (ppbank.Sophieu.Trim() == txtsophieu.Text.ToString().Trim())
+                                                && (ppbank.Machungtu == "UNC")
+                                          select ppbank).FirstOrDefault();
 
-                        if (sophieuthu != null)
+                        if (uynhiemchi != null)
                         {
-                            if (this.statusphieuchi == 1)
+                            if (this.statusphieu == 1)
                             {
                                 MessageBox.Show("Số phiếu bị lặp, bạn xem lại số phiếu", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                 txtsophieu.Focus();
@@ -742,14 +727,9 @@ namespace BEEACCOUNT.View
                         else
                         {
 
-                            soBank.Sophieu = txtsophieu.Text.Trim();
+                            soBank.Sophieu = txtsophieu.Text.Truncate(50);
 
                         }
-                        //}
-                        //else
-                        //{
-                        //    soBank.Sophieu = txtsophieu.Text.Trim();
-                        //}
 
 
 
@@ -763,7 +743,7 @@ namespace BEEACCOUNT.View
                         return;
                     }
 
-                    this.sophieuuynhiemchi = txtsophieu.Text.Trim();
+                    this.sophieuuynhiemchi = txtsophieu.Text.Truncate(50);
 
 
 
@@ -802,14 +782,7 @@ namespace BEEACCOUNT.View
                 {
 
 
-                    if (txttendonvithuhuong.Text.Length > 100)
-                    {
-                        soBank.nguoithuhuong = txttendonvithuhuong.Text.Trim().Substring(100);
-                    }
-                    else
-                    {
-                        soBank.nguoithuhuong = txttendonvithuhuong.Text.Trim();
-                    }
+                    soBank.nguoithuhuong = txttendonvithuhuong.Text.Truncate(100);
 
                 }
                 else
@@ -825,14 +798,7 @@ namespace BEEACCOUNT.View
                 {
 
 
-                    if (txtsotaikhoan.Text.Length > 225)
-                    {
-                        soBank.sotknguoithuhuong = txtsotaikhoan.Text.Trim().Substring(225);
-                    }
-                    else
-                    {
-                        soBank.sotknguoithuhuong = txtsotaikhoan.Text.Trim();
-                    }
+                    soBank.sotknguoithuhuong = txtsotaikhoan.Text.Truncate(225);
 
                 }
                 else
@@ -844,18 +810,27 @@ namespace BEEACCOUNT.View
                     return;
                 }
 
-                if (txttinhthanh.Text.Trim() != "")
+                // txttainganhang
+                if (txttainganhang.Text.Trim() != "")
                 {
 
 
-                    if (txttinhthanh.Text.Length > 225)
-                    {
-                        soBank.tinhthanhcuanganhang = txttinhthanh.Text.Trim().Substring(225);
-                    }
-                    else
-                    {
-                        soBank.tinhthanhcuanganhang = txttinhthanh.Text.Trim();
-                    }
+                    soBank.tainganhang = txttainganhang.Text.Truncate(225);
+
+                }
+                else
+                {
+                    MessageBox.Show("Bạn chưa nhập ngân hàng ! ", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txttainganhang.Focus();
+                    soBank = null;
+                    checkdetail = false;
+                    return;
+                }
+
+                if (txttinhthanh.Text.Trim() != "")
+                {
+
+                    soBank.tinhthanhcuanganhang = txttinhthanh.Text.Truncate(225);
 
                 }
                 else
@@ -872,9 +847,9 @@ namespace BEEACCOUNT.View
                 soBank.Ngayghiso = DateTime.Today;
                 soBank.Username = Utils.getusername();
                 //          soBank.macty = Model.Username.getmacty();
-                soBank.Machungtu = "PC";
+                soBank.Machungtu = "UNC";
 
-                if (this.statusphieuchi == 1 || this.statusphieuchi == 2)// phieu thu mơi, hoặc sửa
+                if (this.statusphieu == 1 || this.statusphieu == 2)// phieu thu mơi, hoặc sửa
                 {
 
                     string tkcotext = "";
@@ -920,13 +895,13 @@ namespace BEEACCOUNT.View
 
                     if (checkdetail == true && checkhead == true)
                     {
-                        if (this.statusphieuchi == 2)
+                        if (this.statusphieu == 2)
                         {
                             #region  xóa phiếu thu cũ nếu staus = 2  chang
 
-                            var phieubank = (from tbl_SoQuy in dc.tbl_SoBANKs
-                                             where tbl_SoQuy.Sophieu == this.sophieuuynhiemchiold
-                                             select tbl_SoQuy).FirstOrDefault();
+                            var phieubank = (from p in dc.tbl_SoBANKs
+                                             where p.Sophieu == this.sophieuuynhiemchiold
+                                             select p).FirstOrDefault();
 
                             if (phieubank != null)
                             {
@@ -950,7 +925,7 @@ namespace BEEACCOUNT.View
 
 
 
-              ghisoBank(soBank);
+                        ghisoBank(soBank);
 
 
 
@@ -992,7 +967,7 @@ namespace BEEACCOUNT.View
                                 if (dataGridViewTkNo.Rows[idrow].Cells["Tên_chi_tiết"].Value != DBNull.Value)
                                 {
 
-                                    socai.tenchitietCo = dataGridViewTkNo.Rows[idrow].Cells["Tên_chi_tiết"].Value.ToString();
+                                    socai.tenchitietCo = dataGridViewTkNo.Rows[idrow].Cells["Tên_chi_tiết"].Value.ToString().Truncate(225);
 
                                 }
 
@@ -1005,7 +980,7 @@ namespace BEEACCOUNT.View
                                 }
                                 else
                                 {
-                                    MessageBox.Show("Bạn chua định khoản tài khoản tiền mặt", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                    MessageBox.Show("Bạn chua định khoản tài khoản !", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                     dataGridViewTkNo.Focus();
                                     return;
                                 }
@@ -1031,7 +1006,7 @@ namespace BEEACCOUNT.View
                                 if (lbtenchitietco.Text != "")
                                 {
 
-                                    socai.tenchitietNo = lbtenchitietco.Text.ToString().Trim();
+                                    socai.tenchitietNo = lbtenchitietco.Text.ToString().Truncate(225);
 
 
                                 }
@@ -1052,7 +1027,7 @@ namespace BEEACCOUNT.View
 
                                 socai.Diengiai = dataGridViewTkNo.Rows[idrow].Cells["Diễn_giải"].Value.ToString();
                                 socai.manghiepvu = "UNC";
-                                socai.Sohieuchungtu = txtsophieu.Text.ToString();
+                                socai.Sohieuchungtu = txtsophieu.Text.Truncate(50);
 
 
                                 socai.Ngayctu = datepickngayphieu.Value;
@@ -1156,96 +1131,42 @@ namespace BEEACCOUNT.View
             string connection_string = Utils.getConnectionstr();
             LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
 
-            var rptphieuchi = from phieuthud in dc.Rpt_PhieuThus
-                              where phieuthud.username == username
-                              select phieuthud;
 
-            dc.Rpt_PhieuThus.DeleteAllOnSubmit(rptphieuchi);
-            dc.SubmitChanges();
+            var sophieuunc = (from ppunc in dc.tbl_SoBANKs
+                              where ppunc.id == this.phieuuynhiemchiID
+                              select new
+                              {
 
+                                  nguoithuhuong = ppunc.nguoithuhuong,
+                                  sotknguoithuhuong = ppunc.sotknguoithuhuong,
+                                  tainganhang = ppunc.tainganhang,
+                                  tinhthanhcuanganhang = ppunc.tinhthanhcuanganhang,
 
-            var phieuchi = (from tbl_SoQuy in dc.tbl_SoQuys
-                            where tbl_SoQuy.id == this.phieuuynhiemchiID
-                            select new
-                            {
-
-                                //     tencongty = Model.Congty.getnamecongty(),
-                                //     diachicongty = Model.Congty.getdiachicongty(),
-                                ////     masothue = Model.Congty.getmasothuecongty(),
-                                //   tengiamdoc = Model.Congty.gettengiamdoccongty(),
-                                //    tenketoantruong = Model.Congty.gettenketoantruongcongty(),
-
-                                sophieuthu = tbl_SoQuy.Sophieu,
-                                ngaychungtu = tbl_SoQuy.Ngayctu,
-                                nguoinoptien = tbl_SoQuy.Nguoinopnhantien,
-                                //    nguoilapphieu = Utils.getname(),
-                                diachinguoinop = tbl_SoQuy.Diachinguoinhannop,
-                                lydothu = tbl_SoQuy.Diengiai,
-                                sotien = tbl_SoQuy.PsCo,
-                                //   sotienbangchu = Utils.ChuyenSo(tbl_SoQuy.PsNo.ToString()),
-                                sochungtugoc = tbl_SoQuy.Chungtugockemtheo,
-                                //    username = Utils.getusername(),
-                                tkco = tbl_SoQuy.TKtienmat,
-                                tkno = tbl_SoQuy.TKdoiung,
+                                  sotienchuyen = ppunc.PsCo,
+                                  sotienbangchu = ppunc.sotienbangchu,// Utils.ChuyenSo(decimal.Parse(ppunc.PsCo.ToString())),
+                                  noidung = ppunc.noidung,
+                                  ngaychungtu = ppunc.Ngayctu,
 
 
-                            }).FirstOrDefault();
+
+                              });
 
             //   this.dataGridViewListphieuthu.DataSource = phieuthu;
 
-            #region  view reports payment request  
+            #region  view unc
 
-            //Control_ac ctrac = new Control_ac();
-
-            //var rs1 = ctrac.KArptdataset1(dc);
-            //var rs2 = ctrac.KArptdataset2(dc);
-
-
-
-            if (phieuchi != null)
+            if (sophieuunc != null)
             {
 
-
-                #region  insert vao rpt phieu thu
-
-                Rpt_PhieuThu pt = new Rpt_PhieuThu();
-                pt.tencongty = Model.Congty.getnamecongty();
-                pt.diachicongty = Model.Congty.getdiachicongty();
-                pt.masothue = Model.Congty.getmasothuecongty();
-                pt.tengiamdoc = Model.Congty.gettengiamdoccongty();
-                pt.tenketoantruong = Model.Congty.gettenketoantruongcongty();
-                pt.sotienbangchu = phieuchi.sophieuthu;
-                pt.ngaychungtu = phieuchi.ngaychungtu;
-                pt.nguoinoptien = phieuchi.nguoinoptien;
-                pt.nguoilapphieu = Utils.getname();
-                pt.diachinguoinop = phieuchi.diachinguoinop;
-                pt.lydothu = phieuchi.lydothu.Truncate(225);
-                pt.sotien = phieuchi.sotien;
-                pt.sotienbangchu = Utils.ChuyenSo(decimal.Parse(phieuchi.sotien.ToString()));
-                pt.sochungtugoc = phieuchi.sochungtugoc;
-                pt.username = Utils.getusername();
-                pt.tkno = phieuchi.tkno;
-                pt.tkco = phieuchi.tkco;
-                pt.phieuthuso = phieuchi.sophieuthu.Truncate(50);
-
-                dc.Rpt_PhieuThus.InsertOnSubmit(pt);
-                dc.SubmitChanges();
-                #endregion
-
-                var rsphieuchi = from tblRpt_PhieuThu in dc.Rpt_PhieuThus
-                                 where tblRpt_PhieuThu.username == username
-                                 select tblRpt_PhieuThu;
-
-
                 Utils ut = new Utils();
-                var dataset1 = ut.ToDataTable(dc, rsphieuchi);
+                var dataset1 = ut.ToDataTable(dc, sophieuunc);
 
                 Reportsview rpt = new Reportsview(dataset1, null, "Uynhiemchi.rdlc");
                 rpt.ShowDialog();
 
             }
 
-            #endregion view reports payment request  // 
+            #endregion view unc
 
         }
 
@@ -1265,50 +1186,34 @@ namespace BEEACCOUNT.View
             LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
 
 
-            var phieuthu = (from tbl_SoQuy in dc.tbl_SoQuys
-                            where tbl_SoQuy.id == this.phieuuynhiemchiID
-                            select tbl_SoQuy).FirstOrDefault();
+            var phieuunc = (from ppbank in dc.tbl_SoBANKs
+                            where ppbank.id == this.phieuuynhiemchiID
+                            select ppbank).FirstOrDefault();
 
-            if (phieuthu != null)
+            if (phieuunc != null)
             {
-                this.sophieuuynhiemchi = phieuthu.Sophieu;
+                this.sophieuuynhiemchi = phieuunc.Sophieu;
 
-                Model.hachtoantonghop.xoa("UNC", phieuthu.Sophieu);
+                Model.hachtoantonghop.xoa("UNC", phieuunc.Sophieu);
 
-                dc.tbl_SoQuys.DeleteOnSubmit(phieuthu);
+                dc.tbl_SoBANKs.DeleteOnSubmit(phieuunc);
                 dc.SubmitChanges();
 
 
 
 
                 MessageBox.Show("Đã xóa UNC: " + this.sophieuuynhiemchi, "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                //  Model.
-                #region load list phieu chi
-                var Listphieuthu = from listpt in dc.tbl_SoQuys
-                                   where listpt.Machungtu == "UNC" // mã 8 là tiền mặt
-                                   select new
-                                   {
 
-                                       Ngày_chứng_từ = listpt.Ngayctu,
-                                       Số_chứng_từ = listpt.Sophieu,
-                                       Nợ_TK = listpt.TKtienmat,
-                                       TK_Có = listpt.TKdoiung,
-                                       Số_Tiền = listpt.PsNo,
-                                       Diễn_Giải = listpt.Diengiai,
-                                       Người_nộp = listpt.Nguoinopnhantien,
-                                       Địa_chỉ = listpt.Diachinguoinhannop,
-                                       Username = listpt.Username,
-                                       Ngày_nhập_liệu = listpt.Ngayghiso,
-                                       ID = listpt.id
 
-                                   };
-
-                dataGridViewListphieuchi.DataSource = Listphieuthu;
-                #endregion
+                dataGridViewListphieuchi.DataSource = Model.Uynhiemchi.LisDanhSachuynhiemchi("UNC");
 
 
 
 
+            }
+            else
+            {
+                MessageBox.Show("Không tìm thấy số phiếu: " + this.sophieuuynhiemchi, "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
 
@@ -1320,7 +1225,7 @@ namespace BEEACCOUNT.View
         private void button2_Click(object sender, EventArgs e)
         {
 
-            this.statusphieuchi = 2;
+            this.statusphieu = 2;
 
             btluu.Visible = true;
 
@@ -1341,13 +1246,13 @@ namespace BEEACCOUNT.View
             txtsotaikhoan.Enabled = true;
             txtnoidung.Enabled = true;
             txtsotien.Enabled = true;
-            //    txtsochungtugoc.Enabled = true;
+            txttainganhang.Enabled = true;
             btluu.Enabled = true;
 
-            //   cbtaikhoanco.Enabled = true;
+            txttinhthanh.Enabled = true;
             tbchontkco.Enabled = true;
 
-            this.statusphieuchi = 2;
+            this.statusphieu = 2;
 
         }
 
@@ -2229,61 +2134,78 @@ namespace BEEACCOUNT.View
 
 
                 #region view load form
-                var phieuchi = (from tbl_SoQuy in dc.tbl_SoQuys
-                                where tbl_SoQuy.id == this.phieuuynhiemchiID
-                                //       && tbl_SoQuy.macty == macty
-                                select new
-                                {
+                var uynhiemchi = (from pp in dc.tbl_SoBANKs
+                                  where pp.id == this.phieuuynhiemchiID
+                                  //       && tbl_SoQuy.macty == macty
+                                  select new
+                                  {
 
-                                    //     tencongty = Model.Congty.getnamecongty(),
-                                    //     diachicongty = Model.Congty.getdiachicongty(),
-                                    ////     masothue = Model.Congty.getmasothuecongty(),
-                                    //   tengiamdoc = Model.Congty.gettengiamdoccongty(),
-                                    //    tenketoantruong = Model.Congty.gettenketoantruongcongty(),
+                                      //     tencongty = Model.Congty.getnamecongty(),
+                                      //     diachicongty = Model.Congty.getdiachicongty(),
+                                      ////     masothue = Model.Congty.getmasothuecongty(),
+                                      //   tengiamdoc = Model.Congty.gettengiamdoccongty(),
+                                      //    tenketoantruong = Model.Congty.gettenketoantruongcongty(),
 
-                                    sophieuthu = tbl_SoQuy.Sophieu,
-                                    ngaychungtu = tbl_SoQuy.Ngayctu,
-                                    nguoinoptien = tbl_SoQuy.Nguoinopnhantien,
-                                    //    nguoilapphieu = Utils.getname(),
-                                    diachinguoinop = tbl_SoQuy.Diachinguoinhannop,
-                                    lydothu = tbl_SoQuy.Diengiai,
-                                    sotien = tbl_SoQuy.PsCo,
-                                    //   sotienbangchu = Utils.ChuyenSo(tbl_SoQuy.PsNo.ToString()),
-                                    sochungtugoc = tbl_SoQuy.Chungtugockemtheo,
-                                    //    username = Utils.getusername(),
+                                      sophieu = pp.Sophieu,
+                                      ngaychungtu = pp.Ngayctu,
+                                      nguoithuhuong = pp.nguoithuhuong,
+                                      nganhangnguoithuhuong = pp.tainganhang,
+                                      tinhthanhcuanganhang = pp.tinhthanhcuanganhang,
+                                      //    nguoilapphieu = Utils.getname(),
+                                      sotaikhoan = pp.sotknguoithuhuong,
+                                      noidung = pp.noidung,
+                                      sotien = pp.PsCo,
+                                      //   sotienbangchu = Utils.ChuyenSo(tbl_SoQuy.PsNo.ToString()),
 
-
-                                    machitietco = tbl_SoQuy.ChitietTM,
-                                    tentkchitiet = tbl_SoQuy.TenchitietTM,
-                                    tkno = tbl_SoQuy.TKtienmat,
-
-                                    taikhoandoiung = tbl_SoQuy.TKdoiung,
-
-                                }).FirstOrDefault();
+                                      //    username = Utils.getusername(),
 
 
-                if (phieuchi != null)
+                                      machitietco = pp.ChitietBAnk,
+                                      tentkchitiet = pp.TenchitietTM,
+                                      tkco = pp.TKBANk,
+
+                                      taikhoandoiung = pp.TKdoiung,
+
+                                  }).FirstOrDefault();
+
+
+                if (uynhiemchi != null)
                 {
-                    datepickngayphieu.Value = phieuchi.ngaychungtu;
-                    txtsophieu.Text = phieuchi.sophieuthu.ToString();
+                    datepickngayphieu.Value = uynhiemchi.ngaychungtu;
+                    if (uynhiemchi.sophieu != null)
+                    {
+                        txtsophieu.Text = uynhiemchi.sophieu.ToString();
 
-                    this.sophieuuynhiemchiold = phieuchi.sophieuthu;
-                    this.sophieuuynhiemchi = phieuchi.sophieuthu;
+                    }
+                    else
+                    {
+                        txtsophieu.Text = "";
+                    }
+                    this.sophieuuynhiemchiold = uynhiemchi.sophieu;
+                    this.sophieuuynhiemchi = uynhiemchi.sophieu;
 
-                    txttendonvithuhuong.Text = phieuchi.nguoinoptien;
-                    txtsotaikhoan.Text = phieuchi.diachinguoinop;
-                    txtnoidung.Text = phieuchi.lydothu;
-                    txtsotien.Text = double.Parse(phieuchi.sotien.ToString()).ToString("#,#", CultureInfo.InvariantCulture);
+                    txttendonvithuhuong.Text = uynhiemchi.nguoithuhuong;
+
+
+
+                    txtsotaikhoan.Text = uynhiemchi.sotaikhoan;
+                    txttinhthanh.Text = uynhiemchi.tinhthanhcuanganhang;
+
+                    txttainganhang.Text = uynhiemchi.nganhangnguoithuhuong;
+
+
+                    txtnoidung.Text = uynhiemchi.noidung;
+                    txtsotien.Text = double.Parse(uynhiemchi.sotien.ToString()).ToString("#,#", CultureInfo.InvariantCulture);
                     //txtValueSotienNo.Text = phieuthu.sotien.ToString();
-                    this.pssotienco = double.Parse(phieuchi.sotien.ToString());
+                    this.pssotienco = double.Parse(uynhiemchi.sotien.ToString());
 
 
                     //        txtsochungtugoc.Text = phieuchi.sochungtugoc.ToString();
 
-                    txttaikhoanno.Text = phieuchi.taikhoandoiung;
-                    if (phieuchi.machitietco != null)
+                    txttaikhoanno.Text = uynhiemchi.taikhoandoiung;
+                    if (uynhiemchi.machitietco != null)
                     {
-                        lb_machitietco.Text = phieuchi.machitietco.ToString();
+                        lb_machitietco.Text = uynhiemchi.machitietco.ToString();
                     }
                     else
                     {
@@ -2291,19 +2213,19 @@ namespace BEEACCOUNT.View
                         lb_machitietco.Text = "";
                     }
 
-                    if (phieuchi.tentkchitiet != null)
+                    if (uynhiemchi.tentkchitiet != null)
                     {
-                        lbtenchitietco.Text = phieuchi.tentkchitiet.ToString();
+                        lbtenchitietco.Text = uynhiemchi.tentkchitiet.ToString();
                     }
                     else
                     {
                         lbtenchitietco.Text = "";
                         lb_machitietco.Text = "";
                     }
-                    if (phieuchi.tkno != null)
+                    if (uynhiemchi.tkco != null)
                     {
-                        this.tkno = phieuchi.tkno.Trim();
-                        lbtkco.Text = phieuchi.tkno.Trim();
+                        this.tkno = uynhiemchi.tkco.Trim();
+                        lbtkco.Text = uynhiemchi.tkco.Trim();
                     }
 
                     datepickngayphieu.Enabled = false;
@@ -2312,6 +2234,11 @@ namespace BEEACCOUNT.View
                     txtsotaikhoan.Enabled = false;
                     txtnoidung.Enabled = false;
                     txtsotien.Enabled = false;
+
+                    txttinhthanh.Enabled = false; ;
+
+                    txttainganhang.Enabled = false;
+
                     //       txtsochungtugoc.Enabled = false;
 
                     btsua.Enabled = true;
@@ -2322,13 +2249,13 @@ namespace BEEACCOUNT.View
                     tbchontkco.Enabled = false;
 
 
-                    this.statusphieuchi = 3;// View
+                    this.statusphieu = 3;// View
 
                     Model.Phieuthuchi.reloadnewdetailtaikhoanNo(dataGridViewTkNo);
 
-                    if (phieuchi.tkno != null)
+                    if (uynhiemchi.tkco != null)
                     {
-                        Model.Phieuthuchi.reloaddetailuynhiemchi(this.dataGridViewTkNo, this, phieuchi.tkno.Trim(), phieuchi.sophieuthu);
+                        Model.Phieuthuchi.reloaddetailuynhiemchi(this.dataGridViewTkNo, this, uynhiemchi.tkco.Trim(), uynhiemchi.sophieu);
 
                     }
 
@@ -2544,7 +2471,29 @@ namespace BEEACCOUNT.View
 
         private void txtsophieu_TextChanged(object sender, EventArgs e)
         {
-            this.sophieuuynhiemchi = txtsophieu.Text.ToString();
+            // this.sophieuuynhiemchi = txtsophieu.Text.ToString();
+        }
+
+        private void txttainganhang_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                e.Handled = true;
+                txttinhthanh.Focus();
+
+
+            }
+        }
+
+        private void txttinhthanh_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                e.Handled = true;
+                txtnoidung.Focus();
+
+
+            }
         }
     }
 }

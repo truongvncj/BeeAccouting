@@ -1275,6 +1275,7 @@
       <Column Name="TenchitietTM" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
       <Column Name="Sophieu" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="sotknguoithuhuong" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="sotienbangchu" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.tbl_Socai" Member="tbl_Socais">

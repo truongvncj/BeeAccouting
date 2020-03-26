@@ -1157,7 +1157,7 @@
                 </Style>
               </TextRun>
               <TextRun>
-                <Value>(ID/PP no):................................</Value>
+                <Value>(ID/PP no):.........................</Value>
                 <Style>
                   <FontStyle>Italic</FontStyle>
                   <FontFamily>Times New Roman</FontFamily>
@@ -1167,7 +1167,7 @@
                 </Style>
               </TextRun>
               <TextRun>
-                <Value>Ngày cấp (Date of issue):........................Nơi cấp (place of issue):..........................</Value>
+                <Value>Ngày cấp (Date of issue):......................Nơi cấp (place of issue):.....................</Value>
                 <Style>
                   <FontStyle>Italic</FontStyle>
                   <FontFamily>Times New Roman</FontFamily>
@@ -3174,7 +3174,7 @@
                 </Style>
               </TextRun>
               <TextRun>
-                <Value>(ID/PP no):................................</Value>
+                <Value>(ID/PP no):......................</Value>
                 <Style>
                   <FontStyle>Italic</FontStyle>
                   <FontFamily>Times New Roman</FontFamily>
@@ -3184,7 +3184,7 @@
                 </Style>
               </TextRun>
               <TextRun>
-                <Value>Ngày cấp (Date of issue):........................Nơi cấp (place of issue):..........................</Value>
+                <Value>Ngày cấp (Date of issue):......................Nơi cấp (place of issue):......................</Value>
                 <Style>
                   <FontStyle>Italic</FontStyle>
                   <FontFamily>Times New Roman</FontFamily>

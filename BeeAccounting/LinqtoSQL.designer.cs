@@ -27344,6 +27344,8 @@ namespace BEEACCOUNT
 		
 		private string _sotknguoithuhuong;
 		
+		private string _sotienbangchu;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -27384,6 +27386,8 @@ namespace BEEACCOUNT
     partial void OnSophieuChanged();
     partial void OnsotknguoithuhuongChanging(string value);
     partial void OnsotknguoithuhuongChanged();
+    partial void OnsotienbangchuChanging(string value);
+    partial void OnsotienbangchuChanged();
     #endregion
 		
 		public tbl_SoBANK()
@@ -27747,6 +27751,26 @@ namespace BEEACCOUNT
 					this._sotknguoithuhuong = value;
 					this.SendPropertyChanged("sotknguoithuhuong");
 					this.OnsotknguoithuhuongChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_sotienbangchu", DbType="NVarChar(225)")]
+		public string sotienbangchu
+		{
+			get
+			{
+				return this._sotienbangchu;
+			}
+			set
+			{
+				if ((this._sotienbangchu != value))
+				{
+					this.OnsotienbangchuChanging(value);
+					this.SendPropertyChanging();
+					this._sotienbangchu = value;
+					this.SendPropertyChanged("sotienbangchu");
+					this.OnsotienbangchuChanged();
 				}
 			}
 		}
