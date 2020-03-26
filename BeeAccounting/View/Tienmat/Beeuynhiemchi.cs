@@ -557,13 +557,18 @@ namespace BEEACCOUNT.View
 
             #region check đối ứng unc
 
-            if (this.pssotienco - this.pssotienno != 0)
+            if (Utils.IsValidnumber(txtsotien.Text.ToString()))
             {
-                MessageBox.Show("Phát sinh nợ và có phải bảng nhau, bạn hãy kiểm tra lại", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.pssotienco = double.Parse(txtsotien.Text);
+            }
+            else
+            {
+                MessageBox.Show("Kiểm tra lại số tiền của ủy nhiệm chi", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 //dataGridViewTkCo.Rows[idrow].Cells["Ký_hiêu"].
                 return;
             }
 
+          
 
             #endregion
 
@@ -605,6 +610,18 @@ namespace BEEACCOUNT.View
 
 
             #endregion
+
+
+            if (this.pssotienco - this.pssotienno != 0)
+            {
+                MessageBox.Show("Phát sinh nợ và có phải bảng nhau, bạn hãy kiểm tra lại", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //dataGridViewTkCo.Rows[idrow].Cells["Ký_hiêu"].
+                return;
+            }
+
+
+
+
 
 
             if (checkhead == true)
@@ -1884,10 +1901,10 @@ namespace BEEACCOUNT.View
 
         private void txtsotienco_TextChanged(object sender, EventArgs e)
         {
-            if (Utils.IsValidnumber(txtsotienno.Text.ToString()))
-            {
-                this.pssotienco = double.Parse(txtsotienno.Text);
-            }
+          //  if (Utils.IsValidnumber(txtsotienno.Text.ToString()))
+           // {
+          //      this.pssotienco = double.Parse(txtsotienno.Text);
+         //   }
             //else
             //{
             //    txtsotienco.Text = "";
@@ -2281,12 +2298,12 @@ namespace BEEACCOUNT.View
         {
 
 
-            if (Utils.IsValidnumber(txtsotien.Text))
-            {
+            //if (Utils.IsValidnumber(txtsotien.Text))
+            //{
 
-                this.pssotienco = double.Parse(txtsotien.Text);
+            //    this.pssotienco = double.Parse(txtsotien.Text);
 
-            }
+            //}
 
 
 
