@@ -81,6 +81,9 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.dataGridViewListphieuchi = new System.Windows.Forms.DataGridView();
+            this.cbluudanhsach = new System.Windows.Forms.CheckBox();
+            this.txttengoinhotaikhoan = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -333,6 +336,9 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.label10);
+            this.panel1.Controls.Add(this.txttengoinhotaikhoan);
+            this.panel1.Controls.Add(this.cbluudanhsach);
             this.panel1.Controls.Add(this.txttinhthanh);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.bttimkiem);
@@ -385,6 +391,7 @@
             this.bttimkiem.TabStop = false;
             this.bttimkiem.Text = ">> Tìm kiếm";
             this.bttimkiem.UseVisualStyleBackColor = true;
+            this.bttimkiem.Click += new System.EventHandler(this.bttimkiem_Click);
             // 
             // txttainganhang
             // 
@@ -472,7 +479,7 @@
             // txtsotien
             // 
             this.txtsotien.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtsotien.Location = new System.Drawing.Point(170, 196);
+            this.txtsotien.Location = new System.Drawing.Point(170, 222);
             this.txtsotien.Name = "txtsotien";
             this.txtsotien.Size = new System.Drawing.Size(207, 24);
             this.txtsotien.TabIndex = 24;
@@ -482,7 +489,7 @@
             // txtnoidung
             // 
             this.txtnoidung.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtnoidung.Location = new System.Drawing.Point(170, 158);
+            this.txtnoidung.Location = new System.Drawing.Point(170, 192);
             this.txtnoidung.Name = "txtnoidung";
             this.txtnoidung.Size = new System.Drawing.Size(551, 24);
             this.txtnoidung.TabIndex = 23;
@@ -530,7 +537,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(11, 202);
+            this.label8.Location = new System.Drawing.Point(12, 228);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(58, 18);
             this.label8.TabIndex = 14;
@@ -540,7 +547,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(12, 164);
+            this.label7.Location = new System.Drawing.Point(12, 195);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(71, 18);
             this.label7.TabIndex = 12;
@@ -675,6 +682,34 @@
             this.dataGridViewListphieuchi.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewListphieuchi_CellDoubleClick);
             this.dataGridViewListphieuchi.Paint += new System.Windows.Forms.PaintEventHandler(this.dataGridViewListphieuthu_Paint);
             // 
+            // cbluudanhsach
+            // 
+            this.cbluudanhsach.AutoSize = true;
+            this.cbluudanhsach.Location = new System.Drawing.Point(15, 165);
+            this.cbluudanhsach.Name = "cbluudanhsach";
+            this.cbluudanhsach.Size = new System.Drawing.Size(100, 17);
+            this.cbluudanhsach.TabIndex = 83;
+            this.cbluudanhsach.Text = "Lưu danh sách ";
+            this.cbluudanhsach.UseVisualStyleBackColor = true;
+            // 
+            // txttengoinhotaikhoan
+            // 
+            this.txttengoinhotaikhoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txttengoinhotaikhoan.Location = new System.Drawing.Point(386, 159);
+            this.txttengoinhotaikhoan.Name = "txttengoinhotaikhoan";
+            this.txttengoinhotaikhoan.Size = new System.Drawing.Size(335, 24);
+            this.txttengoinhotaikhoan.TabIndex = 84;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(168, 162);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(212, 18);
+            this.label10.TabIndex = 85;
+            this.label10.Text = "Ghi chú/ tên gợi nhớ tài khoản :";
+            // 
             // Beeuynhiemchi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -755,5 +790,8 @@
         private System.Windows.Forms.Button bttimkiem;
         private System.Windows.Forms.TextBox txttinhthanh;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox txttengoinhotaikhoan;
+        private System.Windows.Forms.CheckBox cbluudanhsach;
     }
 }

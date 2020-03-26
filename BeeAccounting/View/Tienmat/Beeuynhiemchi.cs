@@ -200,7 +200,8 @@ namespace BEEACCOUNT.View
             txttainganhang.Text = "";
             txttinhthanh.Text = "";
 
-            //   txtsochungtugoc.Text = "";
+            cbluudanhsach.Checked = false;
+            txttengoinhotaikhoan.Text = "";
 
             lbtenchitietco.Text = "";
 
@@ -428,7 +429,7 @@ namespace BEEACCOUNT.View
             if (e.KeyChar == (char)Keys.Enter)
             {
                 e.Handled = true;
-                txtsotaikhoan.Focus();
+                bttimkiem.Focus();
 
                 //    string valueinput = cb_customerka.Text;
 
@@ -470,14 +471,8 @@ namespace BEEACCOUNT.View
             if (e.KeyChar == (char)Keys.Enter)
             {
                 e.Handled = true;
-                //     txtsochungtugoc.Focus();
+                tbchontkco.Focus();
 
-                //    string valueinput = cb_customerka.Text;
-
-                //    string connection_string = Utils.getConnectionstr();
-                //    LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
-
-                //    string username = Utils.getusername();
 
 
             }
@@ -568,7 +563,7 @@ namespace BEEACCOUNT.View
                 return;
             }
 
-          
+
 
             #endregion
 
@@ -1093,7 +1088,23 @@ namespace BEEACCOUNT.View
 
                 MessageBox.Show("Số phiếu vừa lưu: " + this.sophieuuynhiemchi, "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+                if (cbluudanhsach.Checked == true)
+                {
+                    tbl_dstknganhang taikhoan = new tbl_dstknganhang();
 
+                    taikhoan.nguoithuhuong = txttendonvithuhuong.Text.Truncate(100);
+                    taikhoan.sotknguoithuhuong = txtsotaikhoan.Text.Truncate(225);
+                    taikhoan.tainganhang = txttainganhang.Text.Truncate(225);
+                    taikhoan.tinhthanhcuanganhang = txttinhthanh.Text.Truncate(225);
+                    taikhoan.ghichu = txttengoinhotaikhoan.Text.Truncate(225);
+
+
+                    dc.tbl_dstknganhangs.InsertOnSubmit(taikhoan);
+                    dc.SubmitChanges();
+
+                    cbluudanhsach.Checked = false;
+                    txttengoinhotaikhoan.Text = "";
+                }
 
 
             }
@@ -1901,10 +1912,10 @@ namespace BEEACCOUNT.View
 
         private void txtsotienco_TextChanged(object sender, EventArgs e)
         {
-          //  if (Utils.IsValidnumber(txtsotienno.Text.ToString()))
-           // {
-          //      this.pssotienco = double.Parse(txtsotienno.Text);
-         //   }
+            //  if (Utils.IsValidnumber(txtsotienno.Text.ToString()))
+            // {
+            //      this.pssotienco = double.Parse(txtsotienno.Text);
+            //   }
             //else
             //{
             //    txtsotienco.Text = "";
@@ -2511,6 +2522,80 @@ namespace BEEACCOUNT.View
 
 
             }
+        }
+
+        private void bttimkiem_Click(object sender, EventArgs e)
+        {
+            string seaching = txttendonvithuhuong.Text.Trim();
+
+            string connection_string = Utils.getConnectionstr();
+            LinqtoSQLDataContext db = new LinqtoSQLDataContext(connection_string);
+
+            var dstknganhang = from c in db.tbl_dstknganhangs
+                               where c.nguoithuhuong.Contains(seaching)
+                               select new
+                               {
+                                   Tên_đơn_vị_thụ_hưởng = c.nguoithuhuong,
+                                   Số_tài_khoản_ngân_hàng = c.sotknguoithuhuong,
+                                   Tại_ngân_hàng = c.tainganhang,
+                                   Chi_nhánh_ngân_hàng_tại = c.tinhthanhcuanganhang,
+                                   Ghi_chú = c.ghichu,
+                                   c.id
+
+                               };
+            if (dstknganhang.Count() > 0)
+            {
+                Beeviewandchoose chontaikhoan = new Beeviewandchoose("CHỌN TÀI KHOẢN NGÂN HÀNG", dstknganhang, db);
+                chontaikhoan.ShowDialog();
+                int idtaikhoan = chontaikhoan.value;
+                bool kq = chontaikhoan.kq;
+
+
+                if (kq)
+                {
+                    var taikhoanchon = (from c in db.tbl_dstknganhangs
+                                        where c.id == idtaikhoan
+                                        select c).FirstOrDefault();
+
+                    if (taikhoanchon != null)
+                    {
+                        txttendonvithuhuong.Text = taikhoanchon.nguoithuhuong;
+                        txtsotaikhoan.Text = taikhoanchon.sotknguoithuhuong;
+                        txttainganhang.Text = taikhoanchon.tainganhang;
+                        txttinhthanh.Text = taikhoanchon.tinhthanhcuanganhang;
+                        txtnoidung.Focus();
+                    }
+
+                    //  txtsophieu.Focus();
+                }
+                else
+                {
+                    txttendonvithuhuong.Text = "";
+                    txtsotaikhoan.Text = "";
+                    txttainganhang.Text = "";
+                    txttinhthanh.Text = "";
+
+
+                    txttendonvithuhuong.Focus();
+                }
+
+
+            }
+            else
+            {
+                txttendonvithuhuong.Text = "";
+                txtsotaikhoan.Text = "";
+                txttainganhang.Text = "";
+                txttinhthanh.Text = "";
+
+                MessageBox.Show("Không có tài khoản nào tìm thấy !", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                txttendonvithuhuong.Focus();
+
+            }
+            // nếu danh sách tài khoản có
+
+            //  txtsophieu.Focus();
         }
     }
 }
