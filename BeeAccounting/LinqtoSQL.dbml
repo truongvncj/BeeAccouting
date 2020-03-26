@@ -1004,11 +1004,11 @@
   <Table Name="dbo.tbl_dstknganhang" Member="tbl_dstknganhangs">
     <Type Name="tbl_dstknganhang">
       <Column Name="ghichu" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
-      <Column Name="nguoithuhuong" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
       <Column Name="sotknguoithuhuong" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
       <Column Name="tainganhang" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
       <Column Name="tinhthanhcuanganhang" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="nguoithuhuong" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.tbl_GiaHDtheoMCTvaSP" Member="tbl_GiaHDtheoMCTvaSPs">
@@ -1274,7 +1274,6 @@
       <Column Name="PsNo" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Column Name="PsCo" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Column Name="noidung" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
-      <Column Name="nguoithuhuong" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
       <Column Name="tainganhang" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
       <Column Name="tinhthanhcuanganhang" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
       <Column Name="Chitietdoiung" Type="System.Int32" DbType="Int" CanBeNull="true" />
@@ -1286,6 +1285,7 @@
       <Column Name="Sophieu" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="sotknguoithuhuong" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
       <Column Name="sotienbangchu" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="nguoithuhuong" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.tbl_Socai" Member="tbl_Socais">

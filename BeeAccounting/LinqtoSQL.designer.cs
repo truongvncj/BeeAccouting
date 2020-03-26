@@ -22211,8 +22211,6 @@ namespace BEEACCOUNT
 		
 		private string _ghichu;
 		
-		private string _nguoithuhuong;
-		
 		private string _sotknguoithuhuong;
 		
 		private string _tainganhang;
@@ -22221,14 +22219,14 @@ namespace BEEACCOUNT
 		
 		private int _id;
 		
+		private string _nguoithuhuong;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
     partial void OnghichuChanging(string value);
     partial void OnghichuChanged();
-    partial void OnnguoithuhuongChanging(string value);
-    partial void OnnguoithuhuongChanged();
     partial void OnsotknguoithuhuongChanging(string value);
     partial void OnsotknguoithuhuongChanged();
     partial void OntainganhangChanging(string value);
@@ -22237,6 +22235,8 @@ namespace BEEACCOUNT
     partial void OntinhthanhcuanganhangChanged();
     partial void OnidChanging(int value);
     partial void OnidChanged();
+    partial void OnnguoithuhuongChanging(string value);
+    partial void OnnguoithuhuongChanged();
     #endregion
 		
 		public tbl_dstknganhang()
@@ -22260,26 +22260,6 @@ namespace BEEACCOUNT
 					this._ghichu = value;
 					this.SendPropertyChanged("ghichu");
 					this.OnghichuChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_nguoithuhuong", DbType="NVarChar(100)")]
-		public string nguoithuhuong
-		{
-			get
-			{
-				return this._nguoithuhuong;
-			}
-			set
-			{
-				if ((this._nguoithuhuong != value))
-				{
-					this.OnnguoithuhuongChanging(value);
-					this.SendPropertyChanging();
-					this._nguoithuhuong = value;
-					this.SendPropertyChanged("nguoithuhuong");
-					this.OnnguoithuhuongChanged();
 				}
 			}
 		}
@@ -22360,6 +22340,26 @@ namespace BEEACCOUNT
 					this._id = value;
 					this.SendPropertyChanged("id");
 					this.OnidChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_nguoithuhuong", DbType="NVarChar(225)")]
+		public string nguoithuhuong
+		{
+			get
+			{
+				return this._nguoithuhuong;
+			}
+			set
+			{
+				if ((this._nguoithuhuong != value))
+				{
+					this.OnnguoithuhuongChanging(value);
+					this.SendPropertyChanging();
+					this._nguoithuhuong = value;
+					this.SendPropertyChanged("nguoithuhuong");
+					this.OnnguoithuhuongChanged();
 				}
 			}
 		}
@@ -27515,8 +27515,6 @@ namespace BEEACCOUNT
 		
 		private string _noidung;
 		
-		private string _nguoithuhuong;
-		
 		private string _tainganhang;
 		
 		private string _tinhthanhcuanganhang;
@@ -27539,6 +27537,8 @@ namespace BEEACCOUNT
 		
 		private string _sotienbangchu;
 		
+		private string _nguoithuhuong;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -27557,8 +27557,6 @@ namespace BEEACCOUNT
     partial void OnPsCoChanged();
     partial void OnnoidungChanging(string value);
     partial void OnnoidungChanged();
-    partial void OnnguoithuhuongChanging(string value);
-    partial void OnnguoithuhuongChanged();
     partial void OntainganhangChanging(string value);
     partial void OntainganhangChanged();
     partial void OntinhthanhcuanganhangChanging(string value);
@@ -27581,6 +27579,8 @@ namespace BEEACCOUNT
     partial void OnsotknguoithuhuongChanged();
     partial void OnsotienbangchuChanging(string value);
     partial void OnsotienbangchuChanged();
+    partial void OnnguoithuhuongChanging(string value);
+    partial void OnnguoithuhuongChanged();
     #endregion
 		
 		public tbl_SoBANK()
@@ -27724,26 +27724,6 @@ namespace BEEACCOUNT
 					this._noidung = value;
 					this.SendPropertyChanged("noidung");
 					this.OnnoidungChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_nguoithuhuong", DbType="NVarChar(100)")]
-		public string nguoithuhuong
-		{
-			get
-			{
-				return this._nguoithuhuong;
-			}
-			set
-			{
-				if ((this._nguoithuhuong != value))
-				{
-					this.OnnguoithuhuongChanging(value);
-					this.SendPropertyChanging();
-					this._nguoithuhuong = value;
-					this.SendPropertyChanged("nguoithuhuong");
-					this.OnnguoithuhuongChanged();
 				}
 			}
 		}
@@ -27964,6 +27944,26 @@ namespace BEEACCOUNT
 					this._sotienbangchu = value;
 					this.SendPropertyChanged("sotienbangchu");
 					this.OnsotienbangchuChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_nguoithuhuong", DbType="NVarChar(225)")]
+		public string nguoithuhuong
+		{
+			get
+			{
+				return this._nguoithuhuong;
+			}
+			set
+			{
+				if ((this._nguoithuhuong != value))
+				{
+					this.OnnguoithuhuongChanging(value);
+					this.SendPropertyChanging();
+					this._nguoithuhuong = value;
+					this.SendPropertyChanged("nguoithuhuong");
+					this.OnnguoithuhuongChanged();
 				}
 			}
 		}

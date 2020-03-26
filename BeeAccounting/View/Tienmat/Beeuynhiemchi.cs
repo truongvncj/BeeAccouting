@@ -794,7 +794,7 @@ namespace BEEACCOUNT.View
                 {
 
 
-                    soBank.nguoithuhuong = txttendonvithuhuong.Text.Truncate(100);
+                    soBank.nguoithuhuong = txttendonvithuhuong.Text.Truncate(225);
 
                 }
                 else
@@ -854,6 +854,22 @@ namespace BEEACCOUNT.View
                     return;
                 }
 
+                if (cbluudanhsach.Checked == true)
+                {
+
+                    if (txttengoinhotaikhoan.Text.Trim() == "")
+                    {
+                        MessageBox.Show("Bạn chưa nhập tên gợi nhớ của tài khoản ! ", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        txttengoinhotaikhoan.Focus();
+                        soBank = null;
+                        checkdetail = false;
+                        return;
+
+                    }
+                    
+
+              
+                }
 
 
                 soBank.Ngayghiso = DateTime.Today;
@@ -1092,7 +1108,7 @@ namespace BEEACCOUNT.View
                 {
                     tbl_dstknganhang taikhoan = new tbl_dstknganhang();
 
-                    taikhoan.nguoithuhuong = txttendonvithuhuong.Text.Truncate(100);
+                    taikhoan.nguoithuhuong = txttendonvithuhuong.Text.Truncate(225);
                     taikhoan.sotknguoithuhuong = txtsotaikhoan.Text.Truncate(225);
                     taikhoan.tainganhang = txttainganhang.Text.Truncate(225);
                     taikhoan.tinhthanhcuanganhang = txttinhthanh.Text.Truncate(225);
