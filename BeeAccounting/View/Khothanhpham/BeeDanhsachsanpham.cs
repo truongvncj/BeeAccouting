@@ -401,7 +401,7 @@ namespace BEEACCOUNT.View
 
         private void btnew_Click(object sender, EventArgs e)
         {
-            if (masanpham == "")
+            if (txtmasanpham.Text == "")
             {
                 MessageBox.Show("Bạn kiểm tra mã sản phẩm", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;

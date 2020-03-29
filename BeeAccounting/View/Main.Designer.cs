@@ -42,6 +42,15 @@
             this.lbusername = new System.Windows.Forms.Label();
             this.lb_user = new System.Windows.Forms.Label();
             this.panelmain = new System.Windows.Forms.Panel();
+            this.groupBox17 = new System.Windows.Forms.GroupBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button35 = new System.Windows.Forms.Button();
+            this.button34 = new System.Windows.Forms.Button();
+            this.button31 = new System.Windows.Forms.Button();
+            this.button30 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.dfasfToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ádfasdfToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -130,20 +139,11 @@
             this.báoCáoLCTTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nhậpSốĐầuKỳLCTTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sổCânĐốiTàiKhoảnPhátSinhToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.groupBox17 = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button35 = new System.Windows.Forms.Button();
-            this.button34 = new System.Windows.Forms.Button();
-            this.button31 = new System.Windows.Forms.Button();
-            this.button30 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panelmain.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.groupBox17.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -244,6 +244,102 @@
             this.panelmain.Name = "panelmain";
             this.panelmain.Size = new System.Drawing.Size(1106, 624);
             this.panelmain.TabIndex = 7;
+            // 
+            // groupBox17
+            // 
+            this.groupBox17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox17.Controls.Add(this.button2);
+            this.groupBox17.Controls.Add(this.button1);
+            this.groupBox17.Controls.Add(this.button35);
+            this.groupBox17.Controls.Add(this.button34);
+            this.groupBox17.Controls.Add(this.button31);
+            this.groupBox17.Controls.Add(this.button30);
+            this.groupBox17.Controls.Add(this.button6);
+            this.groupBox17.Location = new System.Drawing.Point(715, 87);
+            this.groupBox17.Name = "groupBox17";
+            this.groupBox17.Size = new System.Drawing.Size(225, 228);
+            this.groupBox17.TabIndex = 57;
+            this.groupBox17.TabStop = false;
+            this.groupBox17.Text = "Tính năng";
+            this.groupBox17.Visible = false;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(6, 194);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(160, 22);
+            this.button2.TabIndex = 19;
+            this.button2.TabStop = false;
+            this.button2.Text = "barcodesampe";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(6, 159);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(160, 22);
+            this.button1.TabIndex = 18;
+            this.button1.TabStop = false;
+            this.button1.Text = "einvoice- 8/2018";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button35
+            // 
+            this.button35.Location = new System.Drawing.Point(6, 131);
+            this.button35.Name = "button35";
+            this.button35.Size = new System.Drawing.Size(160, 22);
+            this.button35.TabIndex = 17;
+            this.button35.TabStop = false;
+            this.button35.Text = "Xem báo cáo từ web";
+            this.button35.UseVisualStyleBackColor = true;
+            // 
+            // button34
+            // 
+            this.button34.Location = new System.Drawing.Point(6, 103);
+            this.button34.Name = "button34";
+            this.button34.Size = new System.Drawing.Size(160, 22);
+            this.button34.TabIndex = 16;
+            this.button34.TabStop = false;
+            this.button34.Text = "Thực hiện từ điện thoại";
+            this.button34.UseVisualStyleBackColor = true;
+            // 
+            // button31
+            // 
+            this.button31.Location = new System.Drawing.Point(6, 75);
+            this.button31.Name = "button31";
+            this.button31.Size = new System.Drawing.Size(160, 22);
+            this.button31.TabIndex = 15;
+            this.button31.TabStop = false;
+            this.button31.Text = "Gửi  ZAlo/ facebook";
+            this.button31.UseVisualStyleBackColor = true;
+            // 
+            // button30
+            // 
+            this.button30.Location = new System.Drawing.Point(6, 47);
+            this.button30.Name = "button30";
+            this.button30.Size = new System.Drawing.Size(160, 22);
+            this.button30.TabIndex = 14;
+            this.button30.TabStop = false;
+            this.button30.Text = "Gửi  EMS";
+            this.button30.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(6, 19);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(160, 22);
+            this.button6.TabIndex = 13;
+            this.button6.TabStop = false;
+            this.button6.Text = "Gửi email";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Location = new System.Drawing.Point(76, 87);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(633, 178);
+            this.pictureBox3.TabIndex = 56;
+            this.pictureBox3.TabStop = false;
             // 
             // dfasfToolStripMenuItem
             // 
@@ -588,6 +684,7 @@
             this.danhSáchSảnPhẩmToolStripMenuItem1.Name = "danhSáchSảnPhẩmToolStripMenuItem1";
             this.danhSáchSảnPhẩmToolStripMenuItem1.Size = new System.Drawing.Size(256, 24);
             this.danhSáchSảnPhẩmToolStripMenuItem1.Text = "Danh sách sản phẩm";
+            this.danhSáchSảnPhẩmToolStripMenuItem1.Click += new System.EventHandler(this.danhSáchSảnPhẩmToolStripMenuItem1_Click);
             // 
             // khoHàngToolStripMenuItem
             // 
@@ -917,103 +1014,6 @@
             this.sổCânĐốiTàiKhoảnPhátSinhToolStripMenuItem.Text = "Sổ cân đối tài khoản phát sinh";
             this.sổCânĐốiTàiKhoảnPhátSinhToolStripMenuItem.Click += new System.EventHandler(this.sổCânĐốiTàiKhoảnPhátSinhToolStripMenuItem_Click);
             // 
-            // pictureBox3
-            // 
-         //   this.pictureBox3.Image = global::BEEACCOUNT.Properties.Resources.note;
-            this.pictureBox3.Location = new System.Drawing.Point(76, 87);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(633, 178);
-            this.pictureBox3.TabIndex = 56;
-            this.pictureBox3.TabStop = false;
-            // 
-            // groupBox17
-            // 
-            this.groupBox17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox17.Controls.Add(this.button2);
-            this.groupBox17.Controls.Add(this.button1);
-            this.groupBox17.Controls.Add(this.button35);
-            this.groupBox17.Controls.Add(this.button34);
-            this.groupBox17.Controls.Add(this.button31);
-            this.groupBox17.Controls.Add(this.button30);
-            this.groupBox17.Controls.Add(this.button6);
-            this.groupBox17.Location = new System.Drawing.Point(715, 87);
-            this.groupBox17.Name = "groupBox17";
-            this.groupBox17.Size = new System.Drawing.Size(225, 228);
-            this.groupBox17.TabIndex = 57;
-            this.groupBox17.TabStop = false;
-            this.groupBox17.Text = "Tính năng";
-            this.groupBox17.Visible = false;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(6, 194);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(160, 22);
-            this.button2.TabIndex = 19;
-            this.button2.TabStop = false;
-            this.button2.Text = "barcodesampe";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(6, 159);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(160, 22);
-            this.button1.TabIndex = 18;
-            this.button1.TabStop = false;
-            this.button1.Text = "einvoice- 8/2018";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button35
-            // 
-            this.button35.Location = new System.Drawing.Point(6, 131);
-            this.button35.Name = "button35";
-            this.button35.Size = new System.Drawing.Size(160, 22);
-            this.button35.TabIndex = 17;
-            this.button35.TabStop = false;
-            this.button35.Text = "Xem báo cáo từ web";
-            this.button35.UseVisualStyleBackColor = true;
-            // 
-            // button34
-            // 
-            this.button34.Location = new System.Drawing.Point(6, 103);
-            this.button34.Name = "button34";
-            this.button34.Size = new System.Drawing.Size(160, 22);
-            this.button34.TabIndex = 16;
-            this.button34.TabStop = false;
-            this.button34.Text = "Thực hiện từ điện thoại";
-            this.button34.UseVisualStyleBackColor = true;
-            // 
-            // button31
-            // 
-            this.button31.Location = new System.Drawing.Point(6, 75);
-            this.button31.Name = "button31";
-            this.button31.Size = new System.Drawing.Size(160, 22);
-            this.button31.TabIndex = 15;
-            this.button31.TabStop = false;
-            this.button31.Text = "Gửi  ZAlo/ facebook";
-            this.button31.UseVisualStyleBackColor = true;
-            // 
-            // button30
-            // 
-            this.button30.Location = new System.Drawing.Point(6, 47);
-            this.button30.Name = "button30";
-            this.button30.Size = new System.Drawing.Size(160, 22);
-            this.button30.TabIndex = 14;
-            this.button30.TabStop = false;
-            this.button30.Text = "Gửi  EMS";
-            this.button30.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(6, 19);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(160, 22);
-            this.button6.TabIndex = 13;
-            this.button6.TabStop = false;
-            this.button6.Text = "Gửi email";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1030,10 +1030,10 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panelmain.ResumeLayout(false);
+            this.groupBox17.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.groupBox17.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

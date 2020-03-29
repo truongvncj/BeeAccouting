@@ -3699,6 +3699,33 @@ namespace BEEACCOUNT.View
 
 
         }
+
+        private void danhSáchSảnPhẩmToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+
+
+            #region//BeeDanhsachsanpham
+
+            string connection_string = Utils.getConnectionstr();
+
+            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+            var rs6 = Model.Khohang.danhsachnhomsanpham(dc);
+            Viewtable viewtbl2 = new Viewtable(rs6, dc, "DANH SÁCH SẢN PHẨM", 7, "tk");// mã 7 là danh sách  sản phẩm
+
+
+       //     xxxx
+            viewtbl2.Show();
+
+            #endregion
+
+
+
+
+
+
+        }
     }
 
 
