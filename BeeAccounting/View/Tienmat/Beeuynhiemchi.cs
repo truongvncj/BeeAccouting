@@ -176,7 +176,7 @@ namespace BEEACCOUNT.View
         {
 
             #region  list black phiếu
-            datepickngayphieu.Enabled = true;
+            ngaychungtu.Enabled = true;
 
             txtsophieu.Enabled = true;
             txttendonvithuhuong.Enabled = true;
@@ -211,7 +211,7 @@ namespace BEEACCOUNT.View
             lbtenchitietco.Text = "";
             txttaikhoanno.Text = "";
 
-            datepickngayphieu.Focus();
+            ngaychungtu.Focus();
 
 
             this.phieuuynhiemchiID = -1;
@@ -320,7 +320,8 @@ namespace BEEACCOUNT.View
 
 
             #region load datenew
-            this.datepickngayphieu.Value = DateTime.Today.Date;
+            this.ngaychungtu.Value = DateTime.Today.Date;
+            datechonnam.Value = DateTime.Today.Date;
 
             this.lbtenchitietco.Text = "";
             lb_machitietco.Text = "";
@@ -351,7 +352,7 @@ namespace BEEACCOUNT.View
             //    dataGridViewTkNo = Model.Phieuthuchi.reloadnewdetailtaikhoanNo(dataGridViewTkNo);
 
             dataGridViewTkNo = Model.Uynhiemchi.reloadnewdetailtaikhoanNo(dataGridViewTkNo);
-            dataGridViewListphieuchi.DataSource = Model.Uynhiemchi.LisDanhSachuynhiemchi("UNC");
+            dataGridViewListphieuchi.DataSource = Model.Uynhiemchi.LisDanhSachuynhiemchi("UNC", datechonnam.Value);
 
 
             //  dataGridViewListphieuchi.DataSource = Model.Phieuthuchi.LisDanhSachphieuchi("PC");
@@ -770,7 +771,7 @@ namespace BEEACCOUNT.View
                 }
 
 
-                soBank.Ngayctu = datepickngayphieu.Value;
+                soBank.Ngayctu = ngaychungtu.Value;
 
 
                 if (txtnoidung.Text.Trim() != "")
@@ -1058,7 +1059,7 @@ namespace BEEACCOUNT.View
                                 socai.Sohieuchungtu = txtsophieu.Text.Truncate(50);
 
 
-                                socai.Ngayctu = datepickngayphieu.Value;
+                                socai.Ngayctu = ngaychungtu.Value;
                                 socai.Ngayghiso = DateTime.Today;
                                 socai.username = Utils.getusername();
 
@@ -1128,7 +1129,7 @@ namespace BEEACCOUNT.View
 
             this.cleartoblankphieu();
 
-            dataGridViewListphieuchi.DataSource = Model.Uynhiemchi.LisDanhSachuynhiemchi("UNC");
+            dataGridViewListphieuchi.DataSource = Model.Uynhiemchi.LisDanhSachuynhiemchi("UNC", ngaychungtu.Value);
 
         }
 
@@ -1249,7 +1250,7 @@ namespace BEEACCOUNT.View
                 MessageBox.Show("Đã xóa UNC: " + this.sophieuuynhiemchi, "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
-                dataGridViewListphieuchi.DataSource = Model.Uynhiemchi.LisDanhSachuynhiemchi("UNC");
+                dataGridViewListphieuchi.DataSource = Model.Uynhiemchi.LisDanhSachuynhiemchi("UNC",DateTime.Today);
 
 
 
@@ -1274,7 +1275,7 @@ namespace BEEACCOUNT.View
             btluu.Visible = true;
 
 
-            datepickngayphieu.Enabled = true;
+            ngaychungtu.Enabled = true;
 
 
             txtsophieu.Enabled = true;
@@ -2215,7 +2216,7 @@ namespace BEEACCOUNT.View
 
                 if (uynhiemchi != null)
                 {
-                    datepickngayphieu.Value = uynhiemchi.ngaychungtu;
+                    ngaychungtu.Value = uynhiemchi.ngaychungtu;
                     if (uynhiemchi.sophieu != null)
                     {
                         txtsophieu.Text = uynhiemchi.sophieu.ToString();
@@ -2272,7 +2273,7 @@ namespace BEEACCOUNT.View
                         lbtkco.Text = uynhiemchi.tkco.Trim();
                     }
 
-                    datepickngayphieu.Enabled = false;
+                    ngaychungtu.Enabled = false;
                     txtsophieu.Enabled = false;
                     txttendonvithuhuong.Enabled = false;
                     txtsotaikhoan.Enabled = false;
@@ -2612,6 +2613,13 @@ namespace BEEACCOUNT.View
             // nếu danh sách tài khoản có
 
             //  txtsophieu.Focus();
+        }
+
+        private void datechonnam_ValueChanged(object sender, EventArgs e)
+        {
+
+            dataGridViewListphieuchi.DataSource = Model.Uynhiemchi.LisDanhSachuynhiemchi("UNC", datechonnam.Value);
+
         }
     }
 }

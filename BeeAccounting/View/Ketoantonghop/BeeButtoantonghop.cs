@@ -17,7 +17,7 @@ namespace BEEACCOUNT.View
         public int statusphieu { get; set; } // mới  // 2 suawra // 3 display //
         public int buttoanid { get; set; }
         public string sobuttoan { get; set; }
-
+        public LinqtoSQLDataContext dcchung { get; set; }
         //   public string makho { get; set; }
         public string tkno { get; set; }
         public int tknochitiet { get; set; }
@@ -267,12 +267,14 @@ namespace BEEACCOUNT.View
             Model.Username used = new Model.Username();
             string connection_string = Utils.getConnectionstr();
             LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+            this.dcchung = dc;
 
             string username = Utils.getusername();
 
 
             #region load datenew
             this.datepickngayphieu.Value = DateTime.Today.Date;
+            datechonnam.Value = DateTime.Today.Date;
             this.tkno = "";
             this.tkco = "";
             this.lbtenchitietno.Text = "";
@@ -289,7 +291,7 @@ namespace BEEACCOUNT.View
             //       dataGridViewTkCo.DataSource = Model.Khohang.danhsachphieunhapkho(dc);
             dataGridViewdetail = Model.hachtoantonghop.reloaddetailnewbuttoandetail(dataGridViewdetail);
 
-            dataGridViewListBTTH.DataSource = Model.hachtoantonghop.danhsachbuttoantonghop(dc);
+            dataGridViewListBTTH.DataSource = Model.hachtoantonghop.danhsachbuttoantonghop(dc, DateTime.Today.Date);
 
 
             dataGridViewListBTTH.Columns["Số_tiền"].DefaultCellStyle.Format = "N0";
@@ -588,7 +590,7 @@ namespace BEEACCOUNT.View
 
 
             this.blankbuttoantonghop();
-            dataGridViewListBTTH.DataSource = Model.hachtoantonghop.danhsachbuttoantonghop(dc);
+            dataGridViewListBTTH.DataSource = Model.hachtoantonghop.danhsachbuttoantonghop(dc, DateTime.Today);
             //  this.sobuttoan
 
         }
@@ -1121,9 +1123,9 @@ namespace BEEACCOUNT.View
                 MessageBox.Show("Đã xóa phiếu hạch toán tổng hợp : " + phieunhaphead.Sohieuchungtu, "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
-                #region load list listphieunhapkho
+                #region load list 
 
-                var listphieuHTTH = Model.hachtoantonghop.danhsachbuttoantonghop(dc);//Model.Khohang.danhsachphieunhapkho(dc);
+                var listphieuHTTH = Model.hachtoantonghop.danhsachbuttoantonghop(dc, DateTime.Today);//Model.Khohang.danhsachphieunhapkho(dc);
 
 
                 dataGridViewListBTTH.DataSource = listphieuHTTH;
@@ -3203,6 +3205,19 @@ namespace BEEACCOUNT.View
 
             }// end chon tai khoan no
 
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+            #region load list 
+
+            var listphieuHTTH = Model.hachtoantonghop.danhsachbuttoantonghop(dcchung, datechonnam.Value);//Model.Khohang.danhsachphieunhapkho(dc);
+
+
+            dataGridViewListBTTH.DataSource = listphieuHTTH;
+            #endregion
+          
         }
     }
 }

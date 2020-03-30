@@ -219,7 +219,8 @@ namespace BEEACCOUNT.View
 
 
             #region load datenew
-            this.datepickngayphieu.Value = DateTime.Today.Date;
+            this.ngaychungtu.Value = DateTime.Today.Date;
+            datechonnam.Value = DateTime.Today.Date;
 
             this.lbtenchitietno.Text = "";
             lb_machitietno.Text = "";
@@ -247,9 +248,9 @@ namespace BEEACCOUNT.View
 
 
 
-       //    dataGridViewTkCo = Model.Phieuthuchi.reloadnewdetailtaikhoanco(dataGridViewTkCo);
+            //    dataGridViewTkCo = Model.Phieuthuchi.reloadnewdetailtaikhoanco(dataGridViewTkCo);
 
-            dataGridViewListphieuthu.DataSource = Model.Phieuthuchi.LisDanhSachphieuthu("PT");
+            dataGridViewListphieuthu.DataSource = Model.Phieuthuchi.LisDanhSachphieuthu("PT", datechonnam.Value);
 
             #endregion load datanew
 
@@ -386,7 +387,7 @@ namespace BEEACCOUNT.View
             if (e.KeyChar == (char)Keys.Enter)
             {
                 e.Handled = true;
-                datepickngayphieu.Focus();
+                ngaychungtu.Focus();
                 //  datepickngayphieu
                 //    string valueinput = cb_customerka.Text;
 
@@ -630,7 +631,7 @@ namespace BEEACCOUNT.View
 
                     this.phieuthuso = txtsophieu.Text.Trim();
 
-                 
+
                 }
                 else
                 {
@@ -641,7 +642,7 @@ namespace BEEACCOUNT.View
                 }
 
 
-                soquy.Ngayctu = datepickngayphieu.Value;
+                soquy.Ngayctu = ngaychungtu.Value;
                 if (Utils.IsValidnumber(txtsochungtugoc.Text))
                 {
                     soquy.Chungtugockemtheo = int.Parse(txtsochungtugoc.Text.Trim());
@@ -722,7 +723,7 @@ namespace BEEACCOUNT.View
                 }
                 soquy.Ngayghiso = DateTime.Today;
                 soquy.Username = Utils.getusername();
-         
+
                 soquy.Machungtu = "PT";
 
 
@@ -929,9 +930,9 @@ namespace BEEACCOUNT.View
                                 socai.Diengiai = dataGridViewTkCo.Rows[idrow].Cells["Diễn_giải"].Value.ToString();
                                 socai.manghiepvu = "PT";
                                 socai.Sohieuchungtu = txtsophieu.Text.ToString().Trim();
-                              //  socai.macty = Model.Username.getmacty();
+                                //  socai.macty = Model.Username.getmacty();
 
-                                socai.Ngayctu = datepickngayphieu.Value;
+                                socai.Ngayctu = ngaychungtu.Value;
 
                                 socai.Ngayghiso = DateTime.Today;
                                 socai.username = Utils.getusername();
@@ -1044,14 +1045,14 @@ namespace BEEACCOUNT.View
                 lb_machitietno.Text = "";
                 cbtkno.SelectedIndex = -1;
 
-                datepickngayphieu.Focus();
+                ngaychungtu.Focus();
 
 
                 #endregion
 
-            //    dataGridViewTkCo = Model.Phieuthuchi.reloadnewdetailtaikhoanco(dataGridViewTkCo);
+                //    dataGridViewTkCo = Model.Phieuthuchi.reloadnewdetailtaikhoanco(dataGridViewTkCo);
 
-                dataGridViewListphieuthu.DataSource = Model.Phieuthuchi.LisDanhSachphieuthu("PT");
+                dataGridViewListphieuthu.DataSource = Model.Phieuthuchi.LisDanhSachphieuthu("PT", ngaychungtu.Value);
 
 
 
@@ -1225,7 +1226,7 @@ namespace BEEACCOUNT.View
         private void button6_Click(object sender, EventArgs e)
         {
             #region  list black phiếu
-            datepickngayphieu.Enabled = true;
+            ngaychungtu.Enabled = true;
             // txtquyenso.Enabled = true;
             txtsophieu.Enabled = true;
             txttennguoinop.Enabled = true;
@@ -1254,7 +1255,7 @@ namespace BEEACCOUNT.View
             lbtenchitietno.Text = "";
             txttaikhoanco.Text = "";
 
-            datepickngayphieu.Focus();
+            ngaychungtu.Focus();
 
 
             this.phieuthuid = -1;
@@ -1263,7 +1264,7 @@ namespace BEEACCOUNT.View
 
             #endregion
 
-         //   dataGridViewTkCo = Model.Phieuthuchi.reloadnewdetailtaikhoanco(dataGridViewTkCo);
+            //   dataGridViewTkCo = Model.Phieuthuchi.reloadnewdetailtaikhoanco(dataGridViewTkCo);
 
         }
 
@@ -1329,7 +1330,7 @@ namespace BEEACCOUNT.View
                 #region  insert vao rpt phieu thu
 
                 Rpt_PhieuThu pt = new Rpt_PhieuThu();
-         
+
                 pt.tencongty = Model.Congty.getnamecongty();
                 pt.diachicongty = Model.Congty.getdiachicongty();
                 pt.masothue = Model.Congty.getmasothuecongty();
@@ -1449,7 +1450,7 @@ namespace BEEACCOUNT.View
 
                 if (phieuthu != null)
                 {
-                    datepickngayphieu.Value = phieuthu.ngaychungtu;
+                    ngaychungtu.Value = phieuthu.ngaychungtu;
                     txtsophieu.Text = phieuthu.sophieuthu.ToString();
                     txttennguoinop.Text = phieuthu.nguoinoptien;
                     txtdiachi.Text = phieuthu.diachinguoinop;
@@ -1499,7 +1500,7 @@ namespace BEEACCOUNT.View
 
 
 
-                    datepickngayphieu.Enabled = false;
+                    ngaychungtu.Enabled = false;
                     txtsophieu.Enabled = false;
                     txttennguoinop.Enabled = false;
                     txtdiachi.Enabled = false;
@@ -1516,8 +1517,8 @@ namespace BEEACCOUNT.View
 
 
                     this.statusphieuthu = 3;// View
-           //         Model.Phieuthuchi.reloadnewdetailtaikhoanco(dataGridViewTkCo);
-             //       Model.Phieuthuchi.reloaddetailtaikhoancophieuthu(this.dataGridViewTkCo, this, phieuthu.tkno.Trim(), phieuthu.sophieuthu);
+                                            //         Model.Phieuthuchi.reloadnewdetailtaikhoanco(dataGridViewTkCo);
+                                            //       Model.Phieuthuchi.reloaddetailtaikhoancophieuthu(this.dataGridViewTkCo, this, phieuthu.tkno.Trim(), phieuthu.sophieuthu);
                     btluu.Visible = false;
 
                 }
@@ -1608,7 +1609,7 @@ namespace BEEACCOUNT.View
             btluu.Visible = true;
 
 
-            datepickngayphieu.Enabled = true;
+            ngaychungtu.Enabled = true;
 
 
             txtsophieu.Enabled = true;
@@ -2383,6 +2384,12 @@ namespace BEEACCOUNT.View
 
         private void label9_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void datechonnam_ValueChanged(object sender, EventArgs e)
+        {
+            dataGridViewListphieuthu.DataSource = Model.Phieuthuchi.LisDanhSachphieuthu("PT", datechonnam.Value);
 
         }
     }

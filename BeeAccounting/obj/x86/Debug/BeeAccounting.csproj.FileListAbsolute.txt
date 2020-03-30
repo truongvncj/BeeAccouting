@@ -452,3 +452,4 @@ C:\Users\TRUONG\Desktop\BeeAccouting\BeeAccounting\obj\x86\Debug\RdlCompile.comp
 D:\GitHub\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.Beehtsocaiuynhiemchi.resources
 D:\GitHub\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.Beeuynhiemchi.resources
 D:\GitHub\BeeAccouting\BeeAccounting\bin\x86\Debug\Reports\Uynhiemchi.rdlc
+D:\GitHub\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.Toketheotaikhoan.resources

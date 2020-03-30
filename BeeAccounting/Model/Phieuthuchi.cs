@@ -10,23 +10,28 @@ using System.Windows.Forms;
 namespace BEEACCOUNT.Model
 {
 
-   
 
-        class Phieuthuchi
+
+    class Phieuthuchi
     {
-        
 
 
 
 
-        public static IQueryable LisDanhSachphieuthu(String Loaiphieu)
+
+        public static IQueryable LisDanhSachphieuthu(String Loaiphieu, DateTime thangnam)
         {
             string connection_string = Utils.getConnectionstr();
             LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
 
             #region load list phieu thu
             var Listphieuthu = from listpt in dc.tbl_SoQuys
-                               where listpt.Machungtu == Loaiphieu // mã 8 là tiền mặt loai"PT" là phiếu thu/ pc là phieu chi
+                               where listpt.Machungtu == Loaiphieu
+                                    && listpt.Ngayctu.Month == thangnam.Month
+                           && listpt.Ngayctu.Year == thangnam.Year
+
+
+                               // mã 8 là tiền mặt loai"PT" là phiếu thu/ pc là phieu chi
                                select new
                                {
 
@@ -47,23 +52,26 @@ namespace BEEACCOUNT.Model
             //     dataGridViewListphieuthu.DataSource = Listphieuthu;
             #endregion
         }
-        public static IQueryable LisDanhSachphieuchi(String Loaiphieu)
+
+
+
+        public static IQueryable LisDanhSachphieuchi(String Loaiphieu, DateTime thangnam)
         {
             string connection_string = Utils.getConnectionstr();
             LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
-
+            
             #region load list phieu thu
             var Listphieuthu = from listpt in dc.tbl_SoQuys
-                               where listpt.Machungtu == Loaiphieu // mã 8 là tiền mặt loai"PT" là phiếu thu/ pc là phieu chi
+                               where listpt.Machungtu == Loaiphieu
+                           && listpt.Ngayctu.Month == thangnam.Month
+                           && listpt.Ngayctu.Year == thangnam.Year
                                select new
                                {
-
                                    Ngày_chứng_từ = listpt.Ngayctu,
-
                                    Số_chứng_từ = listpt.Sophieu,
-                                   TK_Nợ = listpt.TKdoiung,
-                                   TK_Có = listpt.TKtienmat,
-                                   Số_Tiền = listpt.PsCo,
+                                   Nợ_TK = listpt.TKtienmat,
+                                   TK_Có = listpt.TKdoiung,
+                                   Số_Tiền = listpt.PsNo,
                                    Diễn_Giải = listpt.Diengiai,
                                    Người_nộp = listpt.Nguoinopnhantien,
                                    Địa_chỉ = listpt.Diachinguoinhannop,
@@ -75,6 +83,8 @@ namespace BEEACCOUNT.Model
             return Listphieuthu;
             //     dataGridViewListphieuthu.DataSource = Listphieuthu;
             #endregion
+
+
         }
 
 

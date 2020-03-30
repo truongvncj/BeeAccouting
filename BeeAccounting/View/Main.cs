@@ -3726,6 +3726,24 @@ namespace BEEACCOUNT.View
 
 
         }
+
+        private void tờKêPhátSinhNợTàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            #region//btoanth
+
+
+
+            clearpannel();
+
+
+            View.Toketheotaikhoan Toketheotaikhoan = new Toketheotaikhoan(this);
+            clearpannelload(Toketheotaikhoan);
+
+
+
+            #endregion
+
+        }
     }
 
 

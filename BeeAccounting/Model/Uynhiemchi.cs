@@ -44,14 +44,18 @@ namespace BEEACCOUNT.Model
             return Listphieuthu;
         }
 
-        public static IQueryable LisDanhSachuynhiemchi(String Loaiphieu)
+        public static IQueryable LisDanhSachuynhiemchi(String Loaiphieu, DateTime thangnam)
         {
             string connection_string = Utils.getConnectionstr();
             LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
 
             #region load list UNC
             var listUNC = from listpt in dc.tbl_SoBANKs
-                          where listpt.Machungtu == Loaiphieu // mã 8 là tiền mặt loai"PT" là phiếu thu/ pc là phieu chi
+                          where listpt.Machungtu == Loaiphieu
+                          && listpt.Ngayctu.Month == thangnam.Month
+                           && listpt.Ngayctu.Year == thangnam.Year
+
+
                           select new
                           {
 
