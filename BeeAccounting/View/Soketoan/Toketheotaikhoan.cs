@@ -139,7 +139,19 @@ namespace BEEACCOUNT.View
 
 
             
-            dataGridViewListBTTH.DataSource = Model.hachtoantonghop.danhsachbuttoantonghop(dc, DateTime.Today.Date);
+            dataGridViewListBTTH.DataSource = Model.hachtoantonghop.danhsachbuttoansocai(dc, DateTime.Today.Date, txttkNo.Text.Trim(), txttkco.Text.Trim());
+            //try
+            //{
+            //    dataGridViewListBTTH.Columns["Số_tiền"].DefaultCellStyle.Format = "N0";
+            //}
+            //catch (Exception)
+            //{
+
+            ////    throw;
+            //}
+          
+
+
 
         }
 
@@ -228,6 +240,152 @@ namespace BEEACCOUNT.View
         private void tbchontkno_KeyPress(object sender, KeyPressEventArgs e)
         {
 
+        }
+
+        private void comboBox1_TextChanged(object sender, EventArgs e)
+        {
+            dataGridViewListBTTH.DataSource = Model.hachtoantonghop.danhsachbuttoansocai(dcchung, DateTime.Today.Date, txttkNo.Text.Trim(), txttkco.Text.Trim());
+            //try
+            //{
+            //    dataGridViewListBTTH.Columns["Số_tiền"].DefaultCellStyle.Format = "N0";
+            //}
+            //catch (Exception)
+            //{
+
+            //    //    throw;
+            //}
+        }
+
+        private void comboBox2_TextChanged(object sender, EventArgs e)
+        {
+            dataGridViewListBTTH.DataSource = Model.hachtoantonghop.danhsachbuttoansocai(dcchung, DateTime.Today.Date, txttkNo.Text.Trim(), txttkco.Text.Trim());
+            //try
+            //{
+            //    dataGridViewListBTTH.Columns["Số_tiền"].DefaultCellStyle.Format = "N0";
+            //}
+            //catch (Exception)
+            //{
+
+            //    //    throw;
+            //}
+
+        }
+
+        private void txttkNo_TextChanged(object sender, EventArgs e)
+        {
+            dataGridViewListBTTH.DataSource = Model.hachtoantonghop.danhsachbuttoansocai(dcchung, DateTime.Today.Date, txttkNo.Text.Trim(), txttkco.Text.Trim());
+
+        }
+
+        private void txttkco_TextChanged(object sender, EventArgs e)
+        {
+            dataGridViewListBTTH.DataSource = Model.hachtoantonghop.danhsachbuttoansocai(dcchung, DateTime.Today.Date, txttkNo.Text.Trim(), txttkco.Text.Trim());
+        //    dataGridViewListBTTH.Columns["Số_tiền"].DefaultCellStyle.Format = "N0";
+
+        }
+
+        private void txttkNo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                //  string taikhoan = (cbtkno.SelectedItem as ComboboxItem).Value.ToString();
+                string seaching = txttkNo.Text.Trim();
+
+                string connection_string = Utils.getConnectionstr();
+                LinqtoSQLDataContext db = new LinqtoSQLDataContext(connection_string);
+
+                var danhsachtaikhoan = from c in db.tbl_dstaikhoans
+                                       where c.matk.Contains(seaching)
+                                       select new
+                                       {
+                                           Mã_tài_khoản = c.matk,
+                                           Tên_tài_khoản = c.tentk,
+                                           c.id
+
+                                       };
+                if (danhsachtaikhoan.Count() > 0)
+                {
+                    Beeviewandchoose chontaikhoan = new Beeviewandchoose("CHỌN TÀI KHOẢN KẾ TOÁN", danhsachtaikhoan, db);
+                    chontaikhoan.ShowDialog();
+                    int idtaikhoan = chontaikhoan.value;
+                    bool kq = chontaikhoan.kq;
+
+
+                    if (kq)
+                    {
+                        var taikhoanchon = (from c in db.tbl_dstaikhoans
+                                            where c.id == idtaikhoan
+                                            select c).FirstOrDefault();
+
+                        txttkNo.Text = taikhoanchon.matk;
+                        //      this.tkno = taikhoanchon.matk;
+                        //    lbtkno.Text = taikhoanchon.matk + ": " + taikhoanchon.tentk.Trim();
+
+
+
+                    }
+                    else
+                    {
+                        txttkNo.Text = "";
+                    }
+
+
+                } // nếu danh sách tài khoản có
+
+
+            }// end chon tai khoan no
+        }
+
+        private void txttkco_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                //  string taikhoan = (cbtkno.SelectedItem as ComboboxItem).Value.ToString();
+                string seaching = txttkco.Text.Trim();
+
+                string connection_string = Utils.getConnectionstr();
+                LinqtoSQLDataContext db = new LinqtoSQLDataContext(connection_string);
+
+                var danhsachtaikhoan = from c in db.tbl_dstaikhoans
+                                       where c.matk.Contains(seaching)
+                                       select new
+                                       {
+                                           Mã_tài_khoản = c.matk,
+                                           Tên_tài_khoản = c.tentk,
+                                           c.id
+
+                                       };
+                if (danhsachtaikhoan.Count() > 0)
+                {
+                    Beeviewandchoose chontaikhoan = new Beeviewandchoose("CHỌN TÀI KHOẢN KẾ TOÁN", danhsachtaikhoan, db);
+                    chontaikhoan.ShowDialog();
+                    int idtaikhoan = chontaikhoan.value;
+                    bool kq = chontaikhoan.kq;
+
+
+                    if (kq)
+                    {
+                        var taikhoanchon = (from c in db.tbl_dstaikhoans
+                                            where c.id == idtaikhoan
+                                            select c).FirstOrDefault();
+
+                        txttkco.Text = taikhoanchon.matk;
+                        //      this.tkno = taikhoanchon.matk;
+                        //    lbtkno.Text = taikhoanchon.matk + ": " + taikhoanchon.tentk.Trim();
+
+
+
+                    }
+                    else
+                    {
+                        txttkco.Text = "";
+                    }
+
+
+                } // nếu danh sách tài khoản có
+
+
+            }// end chon tai khoan no
         }
     }
 }

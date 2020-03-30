@@ -291,7 +291,7 @@ namespace BEEACCOUNT.View
             //       dataGridViewTkCo.DataSource = Model.Khohang.danhsachphieunhapkho(dc);
             dataGridViewdetail = Model.hachtoantonghop.reloaddetailnewbuttoandetail(dataGridViewdetail);
 
-            dataGridViewListBTTH.DataSource = Model.hachtoantonghop.danhsachbuttoantonghop(dc, DateTime.Today.Date);
+            dataGridViewListBTTH.DataSource = Model.hachtoantonghop.danhsachbuttoantonghop(dc, DateTime.Today.Date, txttaikhoan.Text.Trim());
 
 
             dataGridViewListBTTH.Columns["Số_tiền"].DefaultCellStyle.Format = "N0";
@@ -590,7 +590,7 @@ namespace BEEACCOUNT.View
 
 
             this.blankbuttoantonghop();
-            dataGridViewListBTTH.DataSource = Model.hachtoantonghop.danhsachbuttoantonghop(dc, DateTime.Today);
+            dataGridViewListBTTH.DataSource = Model.hachtoantonghop.danhsachbuttoantonghop(dc, DateTime.Today, txttaikhoan.Text.Trim());
             //  this.sobuttoan
 
         }
@@ -1125,7 +1125,7 @@ namespace BEEACCOUNT.View
 
                 #region load list 
 
-                var listphieuHTTH = Model.hachtoantonghop.danhsachbuttoantonghop(dc, DateTime.Today);//Model.Khohang.danhsachphieunhapkho(dc);
+                var listphieuHTTH = Model.hachtoantonghop.danhsachbuttoantonghop(dc, DateTime.Today, txttaikhoan.Text.Trim());//Model.Khohang.danhsachphieunhapkho(dc);
 
 
                 dataGridViewListBTTH.DataSource = listphieuHTTH;
@@ -3212,12 +3212,63 @@ namespace BEEACCOUNT.View
 
             #region load list 
 
-            var listphieuHTTH = Model.hachtoantonghop.danhsachbuttoantonghop(dcchung, datechonnam.Value);//Model.Khohang.danhsachphieunhapkho(dc);
+            var listphieuHTTH = Model.hachtoantonghop.danhsachbuttoantonghop(dcchung, datechonnam.Value, txttaikhoan.Text.Trim());//Model.Khohang.danhsachphieunhapkho(dc);
 
 
             dataGridViewListBTTH.DataSource = listphieuHTTH;
             #endregion
           
+        }
+
+        private void txttaikhoan_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                //  string taikhoan = (cbtkno.SelectedItem as ComboboxItem).Value.ToString();
+                string seaching = txttaikhoan.Text.Trim();
+
+                string connection_string = Utils.getConnectionstr();
+                LinqtoSQLDataContext db = new LinqtoSQLDataContext(connection_string);
+
+                var danhsachtaikhoan = from c in db.tbl_dstaikhoans
+                                       where c.matk.Contains(seaching)
+                                       select new
+                                       {
+                                           Mã_tài_khoản = c.matk,
+                                           Tên_tài_khoản = c.tentk,
+                                           c.id
+
+                                       };
+                if (danhsachtaikhoan.Count() > 0)
+                {
+                    Beeviewandchoose chontaikhoan = new Beeviewandchoose("CHỌN TÀI KHOẢN KẾ TOÁN", danhsachtaikhoan, db);
+                    chontaikhoan.ShowDialog();
+                    int idtaikhoan = chontaikhoan.value;
+                    bool kq = chontaikhoan.kq;
+
+
+                    if (kq)
+                    {
+                        var taikhoanchon = (from c in db.tbl_dstaikhoans
+                                            where c.id == idtaikhoan
+                                            select c).FirstOrDefault();
+
+                        txttaikhoan.Text = taikhoanchon.matk;
+                        //      this.tkno = taikhoanchon.matk;
+                        //    lbtkno.Text = taikhoanchon.matk + ": " + taikhoanchon.tentk.Trim();
+
+
+
+                    }
+
+
+
+                } // nếu danh sách tài khoản có
+
+
+            }// end chon tai khoan no
+
+
         }
     }
 }
