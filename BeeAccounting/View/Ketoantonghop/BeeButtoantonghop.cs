@@ -274,7 +274,10 @@ namespace BEEACCOUNT.View
 
             #region load datenew
             this.datepickngayphieu.Value = DateTime.Today.Date;
-            datechonnam.Value = DateTime.Today.Date;
+
+            cbthang.Text = DateTime.Today.Date.Month.ToString();
+            cbnam.Text = DateTime.Today.Date.Year.ToString();
+       //     datechonnam.Value = DateTime.Today.Date;
             this.tkno = "";
             this.tkco = "";
             this.lbtenchitietno.Text = "";
@@ -291,8 +294,7 @@ namespace BEEACCOUNT.View
             //       dataGridViewTkCo.DataSource = Model.Khohang.danhsachphieunhapkho(dc);
             dataGridViewdetail = Model.hachtoantonghop.reloaddetailnewbuttoandetail(dataGridViewdetail);
 
-            dataGridViewListBTTH.DataSource = Model.hachtoantonghop.danhsachbuttoantonghop(dc, DateTime.Today.Date, txttaikhoan.Text.Trim());
-
+            dataGridViewListBTTH.DataSource = Model.hachtoantonghop.danhsachbuttoantonghop(dcchung, cbthang.Text, cbnam.Text, txttaikhoan.Text.Trim());
 
             dataGridViewListBTTH.Columns["Số_tiền"].DefaultCellStyle.Format = "N0";
             dataGridViewListBTTH.Columns["Số_tiền"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight; // để hiện số có dấu phảy
@@ -590,8 +592,8 @@ namespace BEEACCOUNT.View
 
 
             this.blankbuttoantonghop();
-            dataGridViewListBTTH.DataSource = Model.hachtoantonghop.danhsachbuttoantonghop(dc, DateTime.Today, txttaikhoan.Text.Trim());
-            //  this.sobuttoan
+            dataGridViewListBTTH.DataSource = Model.hachtoantonghop.danhsachbuttoantonghop(dcchung, cbthang.Text, cbnam.Text, txttaikhoan.Text.Trim());
+
 
         }
 
@@ -1125,7 +1127,7 @@ namespace BEEACCOUNT.View
 
                 #region load list 
 
-                var listphieuHTTH = Model.hachtoantonghop.danhsachbuttoantonghop(dc, DateTime.Today, txttaikhoan.Text.Trim());//Model.Khohang.danhsachphieunhapkho(dc);
+                var listphieuHTTH = Model.hachtoantonghop.danhsachbuttoantonghop(dcchung, cbthang.Text, cbnam.Text, txttaikhoan.Text.Trim());
 
 
                 dataGridViewListBTTH.DataSource = listphieuHTTH;
@@ -3210,14 +3212,7 @@ namespace BEEACCOUNT.View
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
 
-            #region load list 
-
-            var listphieuHTTH = Model.hachtoantonghop.danhsachbuttoantonghop(dcchung, datechonnam.Value, txttaikhoan.Text.Trim());//Model.Khohang.danhsachphieunhapkho(dc);
-
-
-            dataGridViewListBTTH.DataSource = listphieuHTTH;
-            #endregion
-          
+         
         }
 
         private void txttaikhoan_KeyPress(object sender, KeyPressEventArgs e)
@@ -3268,6 +3263,39 @@ namespace BEEACCOUNT.View
 
             }// end chon tai khoan no
 
+
+        }
+
+        private void txttaikhoan_TextChanged(object sender, EventArgs e)
+        {
+            #region load list 
+
+            var listphieuHTTH = Model.hachtoantonghop.danhsachbuttoantonghop(dcchung, cbthang.Text, cbnam.Text, txttaikhoan.Text.Trim());
+
+            dataGridViewListBTTH.DataSource = listphieuHTTH;
+            #endregion
+
+        }
+
+        private void cbthang_SelectedValueChanged(object sender, EventArgs e)
+        {
+            #region load list 
+
+            var listphieuHTTH = Model.hachtoantonghop.danhsachbuttoantonghop(dcchung, cbthang.Text, cbnam.Text, txttaikhoan.Text.Trim());
+
+            dataGridViewListBTTH.DataSource = listphieuHTTH;
+            #endregion
+
+        }
+
+        private void cbnam_SelectedValueChanged(object sender, EventArgs e)
+        {
+            #region load list 
+
+            var listphieuHTTH = Model.hachtoantonghop.danhsachbuttoantonghop(dcchung, cbthang.Text, cbnam.Text, txttaikhoan.Text.Trim());
+
+            dataGridViewListBTTH.DataSource = listphieuHTTH;
+            #endregion
 
         }
     }

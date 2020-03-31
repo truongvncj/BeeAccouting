@@ -19,7 +19,7 @@ namespace BEEACCOUNT.Model
 
 
 
-        public static IQueryable LisDanhSachphieuthu(String Loaiphieu, DateTime thangnam)
+        public static IQueryable LisDanhSachphieuthu(String Loaiphieu, string thang, string nam)
         {
             string connection_string = Utils.getConnectionstr();
             LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
@@ -27,8 +27,8 @@ namespace BEEACCOUNT.Model
             #region load list phieu thu
             var Listphieuthu = from listpt in dc.tbl_SoQuys
                                where listpt.Machungtu == Loaiphieu
-                                    && listpt.Ngayctu.Month == thangnam.Month
-                           && listpt.Ngayctu.Year == thangnam.Year
+                                    && listpt.Ngayctu.Month.ToString() == thang
+                           && listpt.Ngayctu.Year.ToString() == nam
 
 
                                // mã 8 là tiền mặt loai"PT" là phiếu thu/ pc là phieu chi
@@ -55,16 +55,16 @@ namespace BEEACCOUNT.Model
 
 
 
-        public static IQueryable LisDanhSachphieuchi(String Loaiphieu, DateTime thangnam)
+        public static IQueryable LisDanhSachphieuchi(String Loaiphieu, string thang, string nam)
         {
             string connection_string = Utils.getConnectionstr();
             LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
-            
+
             #region load list phieu thu
             var Listphieuthu = from listpt in dc.tbl_SoQuys
                                where listpt.Machungtu == Loaiphieu
-                           && listpt.Ngayctu.Month == thangnam.Month
-                           && listpt.Ngayctu.Year == thangnam.Year
+                           && listpt.Ngayctu.Month.ToString() == thang
+                           && listpt.Ngayctu.Year.ToString() == nam
                                select new
                                {
                                    Ngày_chứng_từ = listpt.Ngayctu,

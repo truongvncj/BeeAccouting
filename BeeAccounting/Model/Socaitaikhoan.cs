@@ -492,7 +492,7 @@ namespace BEEACCOUNT.Model
         }
 
 
-        public static object danhsachbuttoantonghop(LinqtoSQLDataContext dc, DateTime ngaythangnam, string taikhoan)
+        public static object danhsachbuttoantonghop(LinqtoSQLDataContext dc, String thang, String nam, string taikhoan)
 
         {
 
@@ -501,9 +501,9 @@ namespace BEEACCOUNT.Model
        
             var rs = from p in dc.tbl_Socais
                      where p.manghiepvu == "TH" 
-                     && p.Ngayctu.Value.Month == ngaythangnam.Month
-                     && p.Ngayctu.Value.Year == ngaythangnam.Year
-                     && (p.TkNo == taikhoan || p.TkCo == taikhoan)
+                     && p.Ngayctu.Value.Month.ToString() == thang
+                     && p.Ngayctu.Value.Year.ToString() == nam
+                     && (p.TkNo.Contains(taikhoan) || p.TkCo.Contains(taikhoan))
 
                      select new
                      {

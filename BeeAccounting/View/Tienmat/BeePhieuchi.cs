@@ -189,7 +189,7 @@ namespace BEEACCOUNT.View
             //    cbtaikhoanco.Enabled = true;
             tbchontkco.Enabled = true;
             btsua.Enabled = false;
-
+        
             txtsophieu.Text = "";
             txttennguoinhan.Text = "";
             txtdiachi.Text = "";
@@ -314,19 +314,24 @@ namespace BEEACCOUNT.View
 
             #region load datenew
             this.ngaychungtu.Value = DateTime.Today.Date;
-            datechonnam.Value = DateTime.Today.Date;
+        //    datechonnam.Value = DateTime.Today.Date;
 
             this.lbtenchitietco.Text = "";
             lb_machitietco.Text = "";
 
-
+            cbthang.Text = DateTime.Today.Date.Month.ToString();
+            cbnam.Text = DateTime.Today.Date.Year.ToString();
 
 
 
 
             dataGridViewTkNo = Model.Phieuthuchi.reloadnewdetailtaikhoanNo(dataGridViewTkNo);
 
-            dataGridViewListphieuchi.DataSource = Model.Phieuthuchi.LisDanhSachphieuchi("PC", this.ngaychungtu.Value);
+            dataGridViewListphieuchi.DataSource = Model.Phieuthuchi.LisDanhSachphieuchi("PC", cbthang.Text, cbnam.Text);
+
+            dataGridViewListphieuchi.Columns["Số_Tiền"].DefaultCellStyle.Format = "N0";
+            dataGridViewListphieuchi.Columns["Số_Tiền"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight; // để hiện số có dấu phảy
+
 
             #endregion load datanew
 
@@ -1040,7 +1045,7 @@ namespace BEEACCOUNT.View
 
             this.cleartoblankphieu();
 
-            dataGridViewListphieuchi.DataSource = Model.Phieuthuchi.LisDanhSachphieuchi("PC", this.ngaychungtu.Value);
+            dataGridViewListphieuchi.DataSource = Model.Phieuthuchi.LisDanhSachphieuchi("PC", cbthang.Text, cbnam.Text);
 
         }
 
@@ -1215,7 +1220,7 @@ namespace BEEACCOUNT.View
                 MessageBox.Show("Đã xóa phiếu chi: " + this.sophieuchi, "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 //  Model.
 
-                dataGridViewListphieuchi.DataSource = Model.Phieuthuchi.LisDanhSachphieuchi("PC", this.ngaychungtu.Value);
+                dataGridViewListphieuchi.DataSource = Model.Phieuthuchi.LisDanhSachphieuchi("PC", cbthang.Text, cbnam.Text);
 
 
 
@@ -2295,7 +2300,7 @@ namespace BEEACCOUNT.View
 
                 var danhsachtaikhoan = from c in db.tbl_dstaikhoans
                                        where c.matk.Contains(seaching)
-                                       && c.loaitkid == "tienmat"// == "tien"
+                                       && c.loaitkid == "tienmat"//
                                        select new
                                        {
                                            Mã_tài_khoản = c.matk,
@@ -2459,7 +2464,18 @@ namespace BEEACCOUNT.View
 
         private void datechonnam_ValueChanged(object sender, EventArgs e)
         {
-            dataGridViewListphieuchi.DataSource = Model.Phieuthuchi.LisDanhSachphieuchi("PC", datechonnam.Value);
+          
+        }
+
+        private void cbthang_SelectedValueChanged(object sender, EventArgs e)
+        {
+            dataGridViewListphieuchi.DataSource = Model.Phieuthuchi.LisDanhSachphieuchi("PC", cbthang.Text, cbnam.Text);
+
+        }
+
+        private void cbnam_SelectedValueChanged(object sender, EventArgs e)
+        {
+            dataGridViewListphieuchi.DataSource = Model.Phieuthuchi.LisDanhSachphieuchi("PC", cbthang.Text, cbnam.Text);
 
         }
     }

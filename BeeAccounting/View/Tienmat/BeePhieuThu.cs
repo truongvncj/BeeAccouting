@@ -41,9 +41,6 @@ namespace BEEACCOUNT.View
         {
 
 
-
-
-
             string connection_string = Utils.getConnectionstr();
             LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
 
@@ -220,8 +217,8 @@ namespace BEEACCOUNT.View
 
             #region load datenew
             this.ngaychungtu.Value = DateTime.Today.Date;
-            datechonnam.Value = DateTime.Today.Date;
-
+            cbthang.Text = DateTime.Today.Date.Month.ToString();
+            cbnam.Text = DateTime.Today.Date.Year.ToString();
             this.lbtenchitietno.Text = "";
             lb_machitietno.Text = "";
 
@@ -230,7 +227,7 @@ namespace BEEACCOUNT.View
 
 
             var rs2 = from tk in dc.tbl_dstaikhoans
-                      where tk.loaitkid == "tien" // mã 8 là tiền mặt
+                      where tk.loaitkid == "tienmat" // mã 8 là tiền mặt
                       select tk;
 
             //      string drowdownshow = "";
@@ -248,9 +245,9 @@ namespace BEEACCOUNT.View
 
 
 
-            //    dataGridViewTkCo = Model.Phieuthuchi.reloadnewdetailtaikhoanco(dataGridViewTkCo);
+            dataGridViewTkCo = Model.Phieuthuchi.reloadnewdetailtaikhoanco(dataGridViewTkCo);
 
-            dataGridViewListphieuthu.DataSource = Model.Phieuthuchi.LisDanhSachphieuthu("PT", datechonnam.Value);
+            dataGridViewListphieuthu.DataSource = Model.Phieuthuchi.LisDanhSachphieuthu("PT", cbthang.Text, cbnam.Text);
 
             #endregion load datanew
 
@@ -961,6 +958,7 @@ namespace BEEACCOUNT.View
 
 
                         MessageBox.Show("Số phiếu vừa lưu: " + this.phieuthuso, "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        //    dataGridViewTkCo = Model.Phieuthuchi.reloadnewdetailtaikhoanco(dataGridViewTkCo);
 
 
                     }
@@ -1050,9 +1048,9 @@ namespace BEEACCOUNT.View
 
                 #endregion
 
-                //    dataGridViewTkCo = Model.Phieuthuchi.reloadnewdetailtaikhoanco(dataGridViewTkCo);
+                dataGridViewTkCo = Model.Phieuthuchi.reloadnewdetailtaikhoanco(dataGridViewTkCo);
 
-                dataGridViewListphieuthu.DataSource = Model.Phieuthuchi.LisDanhSachphieuthu("PT", ngaychungtu.Value);
+                dataGridViewListphieuthu.DataSource = Model.Phieuthuchi.LisDanhSachphieuthu("PT", cbthang.Text, cbnam.Text);
 
 
 
@@ -2389,7 +2387,18 @@ namespace BEEACCOUNT.View
 
         private void datechonnam_ValueChanged(object sender, EventArgs e)
         {
-            dataGridViewListphieuthu.DataSource = Model.Phieuthuchi.LisDanhSachphieuthu("PT", datechonnam.Value);
+
+        }
+
+        private void cbthang_SelectedValueChanged(object sender, EventArgs e)
+        {
+            dataGridViewListphieuthu.DataSource = Model.Phieuthuchi.LisDanhSachphieuthu("PT", cbthang.Text, cbnam.Text);
+
+        }
+
+        private void cbnam_SelectedValueChanged(object sender, EventArgs e)
+        {
+            dataGridViewListphieuthu.DataSource = Model.Phieuthuchi.LisDanhSachphieuthu("PT", cbthang.Text, cbnam.Text);
 
         }
     }

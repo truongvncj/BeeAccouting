@@ -54,22 +54,12 @@ namespace BEEACCOUNT.View
                   //    where tk.loaitkid == 8 // mã 8 là tiền mặt
                       select tk;
 
-            //            tien
-            //kho
-            //taisan
-            //nguonvon
-            //doanhthu
-            //chiphi
-            //xacdinhkqkd
-            //loinhuan
-            //phaithu
-            //phaichi
-            //tamung
+           
 
-            if (loaitaikhoan =="tien")
+            if (loaitaikhoan == "tienmat")
             {
             rs2 = from tk in dc.tbl_dstaikhoans
-                          where tk.loaitkid == "tien" // mã 8 là tiền mặt
+                          where tk.loaitkid == "tienmat" // mã 8 là tiền mặt
                   select tk;
 
             }

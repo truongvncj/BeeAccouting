@@ -518,7 +518,7 @@ namespace BEEACCOUNT.View
 
                 var danhsachtaikhoan = from c in db.tbl_dstaikhoans
                                        where c.matk.Contains(seaching)
-                                       && c.loaitkid != "tienmat"// == "tien"
+                                       && c.loaitkid != "tienmat"
                                        select new
                                        {
                                            Mã_tài_khoản = c.matk,

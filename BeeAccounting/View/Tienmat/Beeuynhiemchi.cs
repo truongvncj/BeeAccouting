@@ -327,29 +327,6 @@ namespace BEEACCOUNT.View
             lb_machitietco.Text = "";
 
 
-            //#region load tk tmat
-
-
-            //var rs2 = from tk in dc.tbl_dstaikhoans
-            //          where tk.loaitkid == "tien" // mã 8 là tiền mặt
-            //          select tk;
-
-            ////      string drowdownshow = "";
-
-            //foreach (var item in rs2)
-            //{
-            //    ComboboxItem cb = new ComboboxItem();
-            //    cb.Value = item.matk;
-            //    cb.Text = item.matk + ":" + item.tentk;
-            //    this.tbchontkco.Items.Add(cb); // CombomCollection.Add(cb);
-
-            //}
-
-            //#endregion load tk nợ
-
-
-
-            //    dataGridViewTkNo = Model.Phieuthuchi.reloadnewdetailtaikhoanNo(dataGridViewTkNo);
 
             dataGridViewTkNo = Model.Uynhiemchi.reloadnewdetailtaikhoanNo(dataGridViewTkNo);
             dataGridViewListphieuchi.DataSource = Model.Uynhiemchi.LisDanhSachuynhiemchi("UNC", datechonnam.Value);
@@ -2357,7 +2334,7 @@ namespace BEEACCOUNT.View
 
                 var danhsachtaikhoan = from c in db.tbl_dstaikhoans
                                        where c.matk.Contains(seaching)
-                                       && c.loaitkid == "nganhang"// == "tien"
+                                       && c.loaitkid == "nganhang"
                                        select new
                                        {
                                            Mã_tài_khoản = c.matk,

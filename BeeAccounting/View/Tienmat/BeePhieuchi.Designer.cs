@@ -79,8 +79,10 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.dataGridViewListphieuchi = new System.Windows.Forms.DataGridView();
+            this.cbnam = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.datechonnam = new System.Windows.Forms.DateTimePicker();
+            this.cbthang = new System.Windows.Forms.ComboBox();
+            this.label16 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -569,8 +571,10 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.cbnam);
             this.tabPage2.Controls.Add(this.label3);
-            this.tabPage2.Controls.Add(this.datechonnam);
+            this.tabPage2.Controls.Add(this.cbthang);
+            this.tabPage2.Controls.Add(this.label16);
             this.tabPage2.Controls.Add(this.panel3);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
@@ -655,29 +659,68 @@
             this.dataGridViewListphieuchi.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewListphieuchi_CellDoubleClick);
             this.dataGridViewListphieuchi.Paint += new System.Windows.Forms.PaintEventHandler(this.dataGridViewListphieuthu_Paint);
             // 
+            // cbnam
+            // 
+            this.cbnam.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbnam.FormattingEnabled = true;
+            this.cbnam.Items.AddRange(new object[] {
+            "2016",
+            "2017",
+            "2018",
+            "2019",
+            "2020",
+            "2021",
+            "2022",
+            "2023",
+            "2024"});
+            this.cbnam.Location = new System.Drawing.Point(189, 8);
+            this.cbnam.Name = "cbnam";
+            this.cbnam.Size = new System.Drawing.Size(77, 21);
+            this.cbnam.TabIndex = 82;
+            this.cbnam.SelectedValueChanged += new System.EventHandler(this.cbnam_SelectedValueChanged);
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(56, 9);
+            this.label3.Location = new System.Drawing.Point(143, 11);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(117, 18);
-            this.label3.TabIndex = 69;
-            this.label3.Text = "Chọn năm tháng";
+            this.label3.Size = new System.Drawing.Size(40, 18);
+            this.label3.TabIndex = 81;
+            this.label3.Text = "Năm";
             // 
-            // datechonnam
+            // cbthang
             // 
-            this.datechonnam.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.datechonnam.CustomFormat = "MM.yyyy";
-            this.datechonnam.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
-            this.datechonnam.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.datechonnam.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.datechonnam.Location = new System.Drawing.Point(179, 6);
-            this.datechonnam.Name = "datechonnam";
-            this.datechonnam.Size = new System.Drawing.Size(96, 24);
-            this.datechonnam.TabIndex = 68;
-            this.datechonnam.Value = new System.DateTime(2020, 3, 30, 0, 0, 0, 0);
-            this.datechonnam.ValueChanged += new System.EventHandler(this.datechonnam_ValueChanged);
+            this.cbthang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbthang.FormattingEnabled = true;
+            this.cbthang.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12"});
+            this.cbthang.Location = new System.Drawing.Point(58, 8);
+            this.cbthang.Name = "cbthang";
+            this.cbthang.Size = new System.Drawing.Size(61, 21);
+            this.cbthang.TabIndex = 80;
+            this.cbthang.SelectedValueChanged += new System.EventHandler(this.cbthang_SelectedValueChanged);
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(3, 10);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(49, 18);
+            this.label16.TabIndex = 79;
+            this.label16.Text = "Tháng";
             // 
             // BeePhieuchi
             // 
@@ -758,7 +801,9 @@
         private System.Windows.Forms.Label lb_machitietco;
         private System.Windows.Forms.TextBox tbchontkco;
         private System.Windows.Forms.Label lbtenchitietco;
+        private System.Windows.Forms.ComboBox cbnam;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DateTimePicker datechonnam;
+        private System.Windows.Forms.ComboBox cbthang;
+        private System.Windows.Forms.Label label16;
     }
 }
