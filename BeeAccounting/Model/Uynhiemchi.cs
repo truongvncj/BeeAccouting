@@ -44,7 +44,7 @@ namespace BEEACCOUNT.Model
             return Listphieuthu;
         }
 
-        public static IQueryable LisDanhSachuynhiemchi(String Loaiphieu, DateTime thangnam)
+        public static IQueryable LisDanhSachuynhiemchi(String Loaiphieu, string thang, string nam)
         {
             string connection_string = Utils.getConnectionstr();
             LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
@@ -52,8 +52,8 @@ namespace BEEACCOUNT.Model
             #region load list UNC
             var listUNC = from listpt in dc.tbl_SoBANKs
                           where listpt.Machungtu == Loaiphieu
-                          && listpt.Ngayctu.Month == thangnam.Month
-                           && listpt.Ngayctu.Year == thangnam.Year
+                          && listpt.Ngayctu.Month.ToString() == thang
+                           && listpt.Ngayctu.Year.ToString() == nam
 
 
                           select new

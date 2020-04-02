@@ -317,23 +317,23 @@ namespace BEEACCOUNT.View
             LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
 
             string username = Utils.getusername();
+            cbthang.Text = DateTime.Today.Date.Month.ToString();
+            cbnam.Text = DateTime.Today.Date.Year.ToString();
 
 
             #region load datenew
             this.ngaychungtu.Value = DateTime.Today.Date;
-            datechonnam.Value = DateTime.Today.Date;
-
+            
             this.lbtenchitietco.Text = "";
             lb_machitietco.Text = "";
 
 
 
             dataGridViewTkNo = Model.Uynhiemchi.reloadnewdetailtaikhoanNo(dataGridViewTkNo);
-            dataGridViewListphieuchi.DataSource = Model.Uynhiemchi.LisDanhSachuynhiemchi("UNC", datechonnam.Value);
+            dataGridViewListphieuchi.DataSource = Model.Uynhiemchi.LisDanhSachuynhiemchi("UNC", cbthang.Text, cbnam.Text);
 
 
-            //  dataGridViewListphieuchi.DataSource = Model.Phieuthuchi.LisDanhSachphieuchi("PC");
-
+           
             #endregion load datanew
 
         }
@@ -1106,7 +1106,7 @@ namespace BEEACCOUNT.View
 
             this.cleartoblankphieu();
 
-            dataGridViewListphieuchi.DataSource = Model.Uynhiemchi.LisDanhSachuynhiemchi("UNC", ngaychungtu.Value);
+            dataGridViewListphieuchi.DataSource = Model.Uynhiemchi.LisDanhSachuynhiemchi("UNC", cbthang.Text, cbnam.Text);
 
         }
 
@@ -1227,7 +1227,7 @@ namespace BEEACCOUNT.View
                 MessageBox.Show("Đã xóa UNC: " + this.sophieuuynhiemchi, "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
-                dataGridViewListphieuchi.DataSource = Model.Uynhiemchi.LisDanhSachuynhiemchi("UNC",DateTime.Today);
+                dataGridViewListphieuchi.DataSource = Model.Uynhiemchi.LisDanhSachuynhiemchi("UNC", cbthang.Text, cbnam.Text);
 
 
 
@@ -2595,7 +2595,18 @@ namespace BEEACCOUNT.View
         private void datechonnam_ValueChanged(object sender, EventArgs e)
         {
 
-            dataGridViewListphieuchi.DataSource = Model.Uynhiemchi.LisDanhSachuynhiemchi("UNC", datechonnam.Value);
+         
+        }
+
+        private void cbnam_SelectedValueChanged(object sender, EventArgs e)
+        {
+            dataGridViewListphieuchi.DataSource = Model.Uynhiemchi.LisDanhSachuynhiemchi("UNC", cbthang.Text, cbnam.Text);
+
+        }
+
+        private void cbthang_SelectedValueChanged(object sender, EventArgs e)
+        {
+            dataGridViewListphieuchi.DataSource = Model.Uynhiemchi.LisDanhSachuynhiemchi("UNC", cbthang.Text, cbnam.Text);
 
         }
     }
