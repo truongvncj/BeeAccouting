@@ -2595,6 +2595,7 @@ namespace BEEACCOUNT.View
         private void datechonnam_ValueChanged(object sender, EventArgs e)
         {
 
+
          
         }
 
