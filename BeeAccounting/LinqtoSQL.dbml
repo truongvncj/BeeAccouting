@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="BEE" Class="LinqtoSQLDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=HAN-L-3PFF7H2;Initial Catalog=BEE;Persist Security Info=True;User ID=sa" SettingsObjectName="BEEACCOUNT.Properties.Settings" SettingsPropertyName="BEEConnectionString4" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-UVMCLH1;Initial Catalog=BEE;Integrated Security=True" SettingsObjectName="BEEACCOUNT.Properties.Settings" SettingsPropertyName="BEEConnectionString5" Provider="System.Data.SqlClient" />
   <Table Name="dbo.CDKT200Dauky" Member="CDKT200Daukies">
     <Type Name="CDKT200Dauky">
       <Column Name="nam" Type="System.Int32" DbType="Int" CanBeNull="true" />
@@ -1004,11 +1004,11 @@
   <Table Name="dbo.tbl_dstknganhang" Member="tbl_dstknganhangs">
     <Type Name="tbl_dstknganhang">
       <Column Name="ghichu" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="nguoithuhuong" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
       <Column Name="sotknguoithuhuong" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
       <Column Name="tainganhang" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
       <Column Name="tinhthanhcuanganhang" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="nguoithuhuong" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.tbl_GiaHDtheoMCTvaSP" Member="tbl_GiaHDtheoMCTvaSPs">
@@ -1283,8 +1283,8 @@
       <Column Name="TKdoiung" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
       <Column Name="TenchitietTM" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
       <Column Name="Sophieu" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="sotknguoithuhuong" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
       <Column Name="sotienbangchu" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="sotknguoithuhuong" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
       <Column Name="nguoithuhuong" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
     </Type>
   </Table>

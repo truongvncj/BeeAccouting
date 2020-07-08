@@ -47,3 +47,87 @@ E:\Desktop\Developing product\Bee Accounting\Bee Accounting\BeeAccounting\obj\De
 E:\Desktop\Developing product\Bee Accounting\Bee Accounting\BeeAccounting\obj\Debug\RdlCompile.compiled
 D:\Product\BeeAccouting\BeeAccounting\bin\Debug\BEE ACCOUNTING.exe.config
 E:\Product\BeeAccouting\BeeAccounting\bin\Debug\BEE ACCOUNTING.exe.config
+E:\Github\BeeAccouting\BeeAccounting\bin\Debug\BEE ACCOUNTING.exe.config
+E:\Github\BeeAccouting\BeeAccounting\obj\Debug\BeeAccounting.csprojResolveAssemblyReference.cache
+E:\Github\BeeAccouting\BeeAccounting\obj\Debug\BEEACCOUNT.View.Beeviewandchoose.resources
+E:\Github\BeeAccouting\BeeAccounting\obj\Debug\BEEACCOUNT.View.Beedieudongxe.resources
+E:\Github\BeeAccouting\BeeAccounting\obj\Debug\BEEACCOUNT.View.bedieuvan.resources
+E:\Github\BeeAccouting\BeeAccounting\obj\Debug\BEEACCOUNT.View.BeeLCTT200dauky.resources
+E:\Github\BeeAccouting\BeeAccounting\obj\Debug\BEEACCOUNT.View.BeeCDKT200nhapsocho.resources
+E:\Github\BeeAccouting\BeeAccounting\obj\Debug\BEEACCOUNT.View.BeeBCKQKD200updatechotso.resources
+E:\Github\BeeAccouting\BeeAccounting\obj\Debug\BEEACCOUNT.View.BeeSeachdieuvan.resources
+E:\Github\BeeAccouting\BeeAccounting\obj\Debug\BEEACCOUNT.View.Beefromdatetodate.resources
+E:\Github\BeeAccouting\BeeAccounting\obj\Debug\BEEACCOUNT.View.NPgiavantaitheotuyen.resources
+E:\Github\BeeAccouting\BeeAccounting\obj\Debug\BEEACCOUNT.View.NPDanhsackhachhangvantai.resources
+E:\Github\BeeAccouting\BeeAccounting\obj\Debug\BEEACCOUNT.View.NPdanhsachxe.resources
+E:\Github\BeeAccouting\BeeAccounting\obj\Debug\BEEACCOUNT.View.NPDanhsachnhavantai.resources
+E:\Github\BeeAccouting\BeeAccounting\obj\Debug\BEEACCOUNT.View.Toketheotaikhoan.resources
+E:\Github\BeeAccouting\BeeAccounting\obj\Debug\BEEACCOUNT.View.BeeDanhsachsanpham.resources
+E:\Github\BeeAccouting\BeeAccounting\obj\Debug\BEEACCOUNT.View.BeeDanhsachnhomsanpham.resources
+E:\Github\BeeAccouting\BeeAccounting\obj\Debug\BEEACCOUNT.View.BeeDanhsachkho.resources
+E:\Github\BeeAccouting\BeeAccounting\obj\Debug\BEEACCOUNT.View.BeeHtdoiungphieuxuatkho.resources
+E:\Github\BeeAccouting\BeeAccounting\obj\Debug\BEEACCOUNT.View.BeeHtdoiungphieunhapkho.resources
+E:\Github\BeeAccouting\BeeAccounting\obj\Debug\BEEACCOUNT.View.BeeButtoantonghop.resources
+E:\Github\BeeAccouting\BeeAccounting\obj\Debug\BEEACCOUNT.View.BeeKhophieuxuat.resources
+E:\Github\BeeAccouting\BeeAccounting\obj\Debug\BEEACCOUNT.View.BeeNCCnewaccount.resources
+E:\Github\BeeAccouting\BeeAccounting\obj\Debug\BEEACCOUNT.View.Beehtsocaiuynhiemchi.resources
+E:\Github\BeeAccouting\BeeAccounting\obj\Debug\BEEACCOUNT.View.BeeHtoansocaiphieuchi.resources
+E:\Github\BeeAccouting\BeeAccounting\obj\Debug\BEEACCOUNT.View.Beeloaitaikhoan.resources
+E:\Github\BeeAccouting\BeeAccounting\obj\Debug\BEEACCOUNT.View.Beemosochitiettaikhoan.resources
+E:\Github\BeeAccouting\BeeAccounting\obj\Debug\BEEACCOUNT.View.Beemainload.resources
+E:\Github\BeeAccouting\BeeAccounting\obj\Debug\BEEACCOUNT.View.Beeuynhiemchi.resources
+E:\Github\BeeAccouting\BeeAccounting\obj\Debug\BEEACCOUNT.View.BeePhieuchi.resources
+E:\Github\BeeAccouting\BeeAccounting\obj\Debug\BEEACCOUNT.View.BeeKhophieunhap.resources
+E:\Github\BeeAccouting\BeeAccounting\obj\Debug\BEEACCOUNT.View.BeePhieuThu.resources
+E:\Github\BeeAccouting\BeeAccounting\obj\Debug\BEEACCOUNT.View.Beechooseslect.resources
+E:\Github\BeeAccouting\BeeAccounting\obj\Debug\BEEACCOUNT.View.BeeHtoansocaidoiungphieuthu.resources
+E:\Github\BeeAccouting\BeeAccounting\obj\Debug\BEEACCOUNT.View.Beeseleckhobcxnt.resources
+E:\Github\BeeAccouting\BeeAccounting\obj\Debug\BEEACCOUNT.View.BeeselecSocai.resources
+E:\Github\BeeAccouting\BeeAccounting\obj\Debug\BEEACCOUNT.View.BeeCaculating.resources
+E:\Github\BeeAccouting\BeeAccounting\obj\Debug\BEEACCOUNT.View.Beetaotaikhoanketoan.resources
+E:\Github\BeeAccouting\BeeAccounting\obj\Debug\BEEACCOUNT.View.BeeSeachtwofield.resources
+E:\Github\BeeAccouting\BeeAccounting\obj\Debug\BEEACCOUNT.View.Beeselecttk.resources
+E:\Github\BeeAccouting\BeeAccounting\obj\Debug\BEEACCOUNT.View.BeeThongtindoanhnghiep.resources
+E:\Github\BeeAccouting\BeeAccounting\obj\Debug\BEEACCOUNT.View.Beeyearsellect.resources
+E:\Github\BeeAccouting\BeeAccounting\obj\Debug\BEEACCOUNT.View.Noouthourise.resources
+E:\Github\BeeAccouting\BeeAccounting\obj\Debug\BEEACCOUNT.View.Passwordchange.resources
+E:\Github\BeeAccouting\BeeAccounting\obj\Debug\BEEACCOUNT.View.beeselectinput.resources
+E:\Github\BeeAccouting\BeeAccounting\obj\Debug\BEEACCOUNT.View.Viewdatatable.resources
+E:\Github\BeeAccouting\BeeAccounting\obj\Debug\BEEACCOUNT.View.Beekyketoan.resources
+E:\Github\BeeAccouting\BeeAccounting\obj\Debug\BEEACCOUNT.View.kareportsform.resources
+E:\Github\BeeAccouting\BeeAccounting\obj\Debug\BEEACCOUNT.View.Datepick.resources
+E:\Github\BeeAccouting\BeeAccounting\obj\Debug\BEEACCOUNT.View.kaPriodpicker.resources
+E:\Github\BeeAccouting\BeeAccounting\obj\Debug\BEEACCOUNT.View.Login.resources
+E:\Github\BeeAccouting\BeeAccounting\obj\Debug\BEEACCOUNT.View.Seachcode.resources
+E:\Github\BeeAccouting\BeeAccounting\obj\Debug\BEEACCOUNT.View.BeeServersetup.resources
+E:\Github\BeeAccouting\BeeAccounting\obj\Debug\BEEACCOUNT.View.valueinput.resources
+E:\Github\BeeAccouting\BeeAccounting\obj\Debug\BEEACCOUNT.View.BeeInputchange.resources
+E:\Github\BeeAccouting\BeeAccounting\obj\Debug\BEEACCOUNT.View.Reportsview.resources
+E:\Github\BeeAccouting\BeeAccounting\obj\Debug\BEEACCOUNT.View.Viewtable.resources
+E:\Github\BeeAccouting\BeeAccounting\obj\Debug\BEEACCOUNT.View.Main.resources
+E:\Github\BeeAccouting\BeeAccounting\obj\Debug\BEEACCOUNT.Properties.Resources.resources
+E:\Github\BeeAccouting\BeeAccounting\obj\Debug\BeeAccounting.csproj.GenerateResource.Cache
+E:\Github\BeeAccouting\BeeAccounting\obj\Debug\RdlCompile.cache
+E:\Github\BeeAccouting\BeeAccounting\obj\Debug\RdlCompile.compiled
+E:\Github\BeeAccouting\BeeAccounting\bin\Debug\Reports\BangCDKToant200lt.rdlc
+E:\Github\BeeAccouting\BeeAccounting\bin\Debug\Reports\BaocaoLuuchuyenttett.rdlc
+E:\Github\BeeAccouting\BeeAccounting\bin\Debug\Reports\Uynhiemchi.rdlc
+E:\Github\BeeAccouting\BeeAccounting\bin\Debug\Reports\Phieuketoanth.rdlc
+E:\Github\BeeAccouting\BeeAccounting\bin\Debug\Reports\Phieuxuatkho.rdlc
+E:\Github\BeeAccouting\BeeAccounting\bin\Debug\Reports\Phieunhapkho.rdlc
+E:\Github\BeeAccouting\BeeAccounting\bin\Debug\Reports\Phieuchi.rdlc
+E:\Github\BeeAccouting\BeeAccounting\bin\Debug\Reports\BaocaoKQKD.rdlc
+E:\Github\BeeAccouting\BeeAccounting\bin\Debug\Reports\Sonhatkychung.rdlc
+E:\Github\BeeAccouting\BeeAccounting\bin\Debug\Reports\Sochitetsocai.rdlc
+E:\Github\BeeAccouting\BeeAccounting\bin\Debug\Reports\SoCai.rdlc
+E:\Github\BeeAccouting\BeeAccounting\bin\Debug\Reports\Socandoitkphatsinh.rdlc
+E:\Github\BeeAccouting\BeeAccounting\bin\Debug\Reports\Sotonghopxuatnhapton.rdlc
+E:\Github\BeeAccouting\BeeAccounting\bin\Debug\Reports\Sotonghopchitiet.rdlc
+E:\Github\BeeAccouting\BeeAccounting\bin\Debug\Reports\Soquy.rdlc
+E:\Github\BeeAccouting\BeeAccounting\bin\Debug\Reports\Phieuthu.rdlc
+E:\Github\BeeAccouting\BeeAccounting\bin\Debug\Reports\Paymentrequest.rdlc
+E:\Github\BeeAccouting\BeeAccounting\bin\Debug\BEE ACCOUNTING.exe
+E:\Github\BeeAccouting\BeeAccounting\bin\Debug\BEE ACCOUNTING.pdb
+E:\Github\BeeAccouting\BeeAccounting\bin\Debug\DocumentFormat.OpenXml.dll
+E:\Github\BeeAccouting\BeeAccounting\obj\Debug\BEE ACCOUNTING.exe
+E:\Github\BeeAccouting\BeeAccounting\obj\Debug\BEE ACCOUNTING.pdb

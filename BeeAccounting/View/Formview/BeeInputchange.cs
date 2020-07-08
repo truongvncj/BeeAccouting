@@ -898,14 +898,14 @@ namespace BEEACCOUNT.View
 
 
                 string connection_string = Utils.getConnectionstr();
-                var db = new LinqtoSQLDataContext(connection_string);
+                var dc = new LinqtoSQLDataContext(connection_string);
                 string username = Utils.getusername();
                 //  var rs = from tblEDLP in db.tblEDLPs
                 //          select tblEDLP;
                 //  tbl_Kasa
-                db.ExecuteCommand("DELETE FROM " + tblnamesub + " where " + tblnamesub + ".Username = '" + username + "'");
+                dc.ExecuteCommand("DELETE FROM " + tblnamesub + " where " + tblnamesub + ".Username = '" + username + "'");
                 //    dc.tblFBL5Nnewthisperiods.DeleteAllOnSubmit(rsthisperiod);
-                db.SubmitChanges();
+                dc.SubmitChanges();
 
 
                 //        string slqtext = "";
@@ -918,7 +918,7 @@ namespace BEEACCOUNT.View
                     slqtext = "select *  from  " + tblnamesub;// + " where " + tblnamesub + ".Username ='" + Username + "'"; // EXCEPT (" + IDsub + ") 
                 }
 
-                var results2 = db.ExecuteQuery(Typeofftablesub, slqtext);
+                var results2 = dc.ExecuteQuery(Typeofftablesub, slqtext);
                 source1.DataSource = results2;
                 this.dataGridView1.DataSource = source1;
 
