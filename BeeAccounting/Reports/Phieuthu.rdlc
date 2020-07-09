@@ -1318,7 +1318,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Ngày ....tháng .... năm 201....</Value>
+                <Value>Ngày ....tháng .... năm 20....</Value>
                 <Style>
                   <FontStyle>Italic</FontStyle>
                   <FontFamily>Times New Roman</FontFamily>
@@ -2863,7 +2863,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Ngày ....tháng .... năm 201....</Value>
+                <Value>Ngày ....tháng .... năm 20....</Value>
                 <Style>
                   <FontStyle>Italic</FontStyle>
                   <FontFamily>Times New Roman</FontFamily>
