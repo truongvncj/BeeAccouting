@@ -1461,6 +1461,7 @@
                   <FontStyle>Normal</FontStyle>
                   <FontFamily>Times New Roman</FontFamily>
                   <FontWeight>Bold</FontWeight>
+                  <Format>#,0</Format>
                   <TextDecoration>None</TextDecoration>
                 </Style>
               </TextRun>
@@ -3526,6 +3527,7 @@
                   <FontStyle>Normal</FontStyle>
                   <FontFamily>Times New Roman</FontFamily>
                   <FontWeight>Bold</FontWeight>
+                  <Format>#,0;(#,0)</Format>
                   <TextDecoration>None</TextDecoration>
                 </Style>
               </TextRun>
