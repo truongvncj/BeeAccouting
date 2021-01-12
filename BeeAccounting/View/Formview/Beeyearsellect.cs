@@ -18,21 +18,20 @@ namespace BEEACCOUNT.View
         public Beeyearsellect()
         {
             InitializeComponent();
-            cb_year.Items.Clear();
-            int yearnow = DateTime.Today.Year-5;
-            year = yearnow.ToString();
+            //cb_year.Items.Clear();
+            //int yearnow = DateTime.Today.Year-5;
+            //year = yearnow.ToString();
 
-            chon = false;
-            for (int i = 0; i < 10; i++)
-            {
-                yearnow = yearnow + 1;
-                cb_year.Items.Add(yearnow);
+            //chon = false;
+            //for (int i = 0; i < 10; i++)
+            //{
+            //    yearnow = yearnow + 1;
+            //    cb_year.Items.Add(yearnow);
 
-            }
-            cb_year.SelectedIndex = 4;
-            //        cb_month.SelectedIndex = 0;
-            //       bl_priod.Text = StringExtensions.Right(cb_year.Text, 2) + cb_month.Text;
-        //    year = yearnow;
+            //}
+            //cb_year.SelectedIndex = 4;
+           
+
         }
 
         private void cb_year_SelectedValueChanged(object sender, EventArgs e)

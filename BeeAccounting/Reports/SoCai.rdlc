@@ -163,8 +163,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>0.64041in</Top>
-        <Left>3.68961in</Left>
+        <Top>0.87432in</Top>
+        <Left>3.06696in</Left>
         <Height>0.30208in</Height>
         <Width>3.4665in</Width>
         <ZIndex>3</ZIndex>
@@ -268,8 +268,8 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>1.22721in</Top>
-        <Left>3.67294in</Left>
+        <Top>1.46112in</Top>
+        <Left>3.05029in</Left>
         <Height>0.22222in</Height>
         <Width>0.69375in</Width>
         <ZIndex>6</ZIndex>
@@ -307,8 +307,8 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>1.22583in</Top>
-        <Left>4.39863in</Left>
+        <Top>1.45974in</Top>
+        <Left>3.77598in</Left>
         <Height>0.22222in</Height>
         <Width>0.8032in</Width>
         <ZIndex>7</ZIndex>
@@ -343,8 +343,8 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>1.22028in</Top>
-        <Left>5.22127in</Left>
+        <Top>1.45419in</Top>
+        <Left>4.59862in</Left>
         <Height>0.22222in</Height>
         <Width>0.66458in</Width>
         <ZIndex>8</ZIndex>
@@ -382,8 +382,8 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>1.22028in</Top>
-        <Left>5.91641in</Left>
+        <Top>1.45419in</Top>
+        <Left>5.29376in</Left>
         <Height>0.22222in</Height>
         <Width>0.99486in</Width>
         <ZIndex>9</ZIndex>
@@ -437,10 +437,10 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>3.74354cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>3.65059cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -1015,9 +1015,9 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
         <Top>2.51124cm</Top>
-        <Left>20.64777cm</Left>
+        <Left>18.26157cm</Left>
         <Height>2.4cm</Height>
-        <Width>7.5cm</Width>
+        <Width>9.89413cm</Width>
         <ZIndex>10</ZIndex>
         <Style>
           <Border>
@@ -2170,8 +2170,8 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>0.97305in</Top>
-        <Left>3.67294in</Left>
+        <Top>1.20696in</Top>
+        <Left>3.05029in</Left>
         <Height>0.22222in</Height>
         <Width>0.70544in</Width>
         <ZIndex>14</ZIndex>
@@ -2207,8 +2207,8 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>0.98417in</Top>
-        <Left>4.39782in</Left>
+        <Top>1.21808in</Top>
+        <Left>3.77517in</Left>
         <Height>0.21156in</Height>
         <Width>3.34498in</Width>
         <ZIndex>15</ZIndex>

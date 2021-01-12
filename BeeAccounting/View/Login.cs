@@ -88,7 +88,7 @@ namespace BEEACCOUNT.View
                     {
 
                         MessageBox.Show("Lỗi đường truyền dữ liệu !"  , "Connection !", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        MessageBox.Show(connection_string);
+                        MessageBox.Show(connection_string + ex.ToString());
                         return;
                     }
 

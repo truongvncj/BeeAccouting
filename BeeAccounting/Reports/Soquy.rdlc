@@ -272,7 +272,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
         <Top>1.1999in</Top>
         <Left>4.17201in</Left>
         <Height>0.22247in</Height>
-        <Width>3.34498in</Width>
+        <Width>3.33329in</Width>
         <ZIndex>6</ZIndex>
         <Style>
           <Border>
@@ -474,10 +474,10 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>3.42443cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>3.23969cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -946,7 +946,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                 </GroupExpressions>
               </Group>
               <TablixHeader>
-                <Size>2.5cm</Size>
+                <Size>2.21974cm</Size>
                 <CellContents>
                   <Textbox Name="Textbox127">
                     <CanGrow>true</CanGrow>
@@ -980,7 +980,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
             </TablixMember>
             <TablixMember>
               <TablixHeader>
-                <Size>2.5cm</Size>
+                <Size>2.21974cm</Size>
                 <CellContents>
                   <Textbox Name="Textbox135">
                     <CanGrow>true</CanGrow>
@@ -1015,7 +1015,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
             </TablixMember>
             <TablixMember>
               <TablixHeader>
-                <Size>2.5cm</Size>
+                <Size>2.21974cm</Size>
                 <CellContents>
                   <Textbox Name="Textbox138">
                     <CanGrow>true</CanGrow>
@@ -1052,9 +1052,9 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
         <Top>2.51124cm</Top>
-        <Left>20.64777cm</Left>
+        <Left>19.26954cm</Left>
         <Height>2.4cm</Height>
-        <Width>7.5cm</Width>
+        <Width>8.88386cm</Width>
         <ZIndex>11</ZIndex>
         <Style>
           <Border>
