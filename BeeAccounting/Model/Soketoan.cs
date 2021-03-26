@@ -1505,6 +1505,120 @@ namespace BEEACCOUNT.Model
 
 
 
+                    Viewtable viewtbl = new Viewtable(rs1, dc, "BẢNG CÂN ĐỐI PHÁT PHÁT SINH CÓ CHI TIẾT NĂM " + yearchon.ToUpper(), 12, "0");// mã 12 là danh sach BẢNG CÂN ĐỐI PHÁT SINH
+                    viewtbl.Show();
+
+
+
+                }
+
+            }
+
+            // throw new NotImplementedException();
+        }
+        public static void Bangcandoiphatsinhtonghopketoantt200lientuc()
+        {
+
+            //  Beeyearsellect
+            string connection_string = Utils.getConnectionstr();
+            string urs = Utils.getusername();
+            //  var db = new LinqtoSQLDataContext(connection_string);
+            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+
+            FormCollection fc = System.Windows.Forms.Application.OpenForms;
+            bool chon;
+            string yearchon;
+            bool kq = false;
+            foreach (Form frm in fc)
+            {
+
+                if (frm.Text == "Chọn năm")
+                {
+                    kq = true;
+                    frm.Focus();
+
+                }
+            }
+
+            if (!kq)
+            {
+
+
+
+                View.Beeyearsellect Beeyearsellect = new View.Beeyearsellect();
+                Beeyearsellect.ShowDialog();
+
+                yearchon = Beeyearsellect.year;
+                chon = Beeyearsellect.chon;
+
+
+                if (chon)
+                {
+
+
+
+
+                    #region caculation cdphat sinh lien tuc
+                    SqlConnection conn2 = null;
+                    SqlDataReader rdr1 = null;
+
+                    string destConnString = Utils.getConnectionstr();
+                    try
+                    {
+
+                        conn2 = new SqlConnection(destConnString);
+                        conn2.Open();
+                        SqlCommand cmd1 = new SqlCommand("calulationCDphatsinh200tonghop", conn2);
+                        cmd1.CommandType = CommandType.StoredProcedure;
+                        cmd1.CommandTimeout = 0;
+                        cmd1.Parameters.Add("@username", SqlDbType.VarChar).Value = Utils.getusername();
+                        cmd1.Parameters.Add("@yearchon", SqlDbType.Int).Value = int.Parse(yearchon);
+                        //   cmd1.Parameters.Add("@todate", SqlDbType.DateTime).Value = todate;
+
+
+
+
+                        rdr1 = cmd1.ExecuteReader();
+
+
+
+                    }
+                    finally
+                    {
+                        if (conn2 != null)
+                        {
+                            conn2.Close();
+                        }
+                        if (rdr1 != null)
+                        {
+                            rdr1.Close();
+                        }
+                    }
+                    //     MessageBox.Show("ok", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    #endregion
+
+
+                    //     Loại_ngắn_hạn = p.loainganhan,
+
+                    var rs1 = from p in dc.RptPhatsinhcdkt200s
+                              where p.username == Utils.getusername()
+                              select new
+                              {
+                                  Mã_tài_khoản = p.matk,
+                                  Tên_tài_khoản = p.tentk.Trim(),
+                                  Phát_sinh_có = p.tPSCo,
+                                  Phát_sinh_nợ = p.tPSNo,
+                                  Số_dư_Nợ = p.tPsNotruPSco,
+                           
+
+
+
+                              };
+
+
+
                     Viewtable viewtbl = new Viewtable(rs1, dc, "BẢNG TỔNG HỢP PHÁT SINH NĂM " + yearchon.ToUpper(), 12, "0");// mã 12 là danh sach BẢNG CÂN ĐỐI PHÁT SINH
                     viewtbl.Show();
 

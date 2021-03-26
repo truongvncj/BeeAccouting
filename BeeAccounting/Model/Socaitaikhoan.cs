@@ -63,7 +63,7 @@ namespace BEEACCOUNT.Model
             dt.Columns.Add(new DataColumn("Tên_chi_tiết_TK_Nợ", typeof(string)));
             dt.Columns.Add(new DataColumn("Mã_chi_tiết_TK_Có", typeof(int)));
 
-       
+
             dt.Columns.Add(new DataColumn("Tên_chi_tiết_TK_Có", typeof(string)));
 
 
@@ -493,14 +493,13 @@ namespace BEEACCOUNT.Model
 
 
         public static object danhsachbuttoantonghop(LinqtoSQLDataContext dc, String thang, String nam, string taikhoan)
-
         {
 
 
             LinqtoSQLDataContext db = dc;
-       
+
             var rs = from p in dc.tbl_Socais
-                     where p.manghiepvu == "TH" 
+                     where p.manghiepvu == "TH"
                      && p.Ngayctu.Value.Month.ToString() == thang
                      && p.Ngayctu.Value.Year.ToString() == nam
                      && (p.TkNo.Contains(taikhoan) || p.TkCo.Contains(taikhoan))
@@ -520,7 +519,7 @@ namespace BEEACCOUNT.Model
                          Tên_chi_tiết_TK_Có = p.tenchitietCo,
                          Tên_chi_tiết_TK_Nợ = p.tenchitietNo,
 
-                    
+
 
 
                          Tạo_bởi = p.username,
@@ -539,67 +538,24 @@ namespace BEEACCOUNT.Model
         }
 
 
-        public static object danhsachbuttoansocai(LinqtoSQLDataContext dc, DateTime ngaythangnam, string taikhoanno , string taikhoanco)
-
+        public static object danhsachbuttoansocai(LinqtoSQLDataContext dc, int nam, string taikhoanno, string taikhoanco)
         {
 
 
-            LinqtoSQLDataContext db = dc;
+          //  LinqtoSQLDataContext db = dc;
             IQueryable  rs = null;
-            #region  tờ kê nợ
-            if (taikhoanno !="" && taikhoanco =="")
+
+      
+
+            if (taikhoanno == "")
             {
-                 rs = from p in dc.tbl_Socais
-                         where
-                         //-- p.manghiepvu == "TH"
-                         p.Ngayctu.Value.Month == ngaythangnam.Month
-                         && p.Ngayctu.Value.Year == ngaythangnam.Year
-                         && p.TkNo == taikhoanno
-                 //        && p.TkCo == taikhoanco
-
-                         select new
-                         {
-
-                             Ngày_chứng_từ = p.Ngayctu,
-                             Số_chứng_từ = p.Sohieuchungtu,
-                             Nợ_TK = p.TkNo,
-                             Có_TK = p.TkCo,
-                             Số_tiền = p.PsCo,
-                             Diễn_giải = p.Diengiai.Trim(),
-                             Mã_chi_tiết_TK_Có = p.MaCTietTKCo,
-                             Mã_chi_tiết_TK_Nợ = p.MaCTietTKNo,
-
-                             Tên_chi_tiết_TK_Có = p.tenchitietCo,
-                             Tên_chi_tiết_TK_Nợ = p.tenchitietNo,
-
-
-
-
-                             Tạo_bởi = p.username,
-
-
-
-                             ID = p.id
-                         };
-
-
-            }
-            #endregion
-
-
-            #region tờ kê có tk
-
-
-     
-            if (taikhoanno == "" && taikhoanco != "")
-            {
-            rs = from p in dc.tbl_Socais
+                #region  tờ kê có
+                rs = from p in dc.tbl_Socais
                      where
-                     //-- p.manghiepvu == "TH"
-                     p.Ngayctu.Value.Month == ngaythangnam.Month
-                     && p.Ngayctu.Value.Year == ngaythangnam.Year
-                //     && p.TkNo == taikhoanno
-                     && p.TkCo == taikhoanco
+                         //-- p.manghiepvu == "TH"
+             //            p.Ngayctu.Value.Month == thang
+              p.Ngayctu.Value.Year == nam
+                   &&                 p.TkCo == taikhoanco
 
                      select new
                      {
@@ -608,12 +564,14 @@ namespace BEEACCOUNT.Model
                          Số_chứng_từ = p.Sohieuchungtu,
                          Nợ_TK = p.TkNo,
                          Có_TK = p.TkCo,
-                         Số_tiền = p.PsCo,
                          Diễn_giải = p.Diengiai.Trim(),
+                         Số_tiền = p.PsCo,
+                       
                          Mã_chi_tiết_TK_Có = p.MaCTietTKCo,
-                         Mã_chi_tiết_TK_Nợ = p.MaCTietTKNo,
+                        
 
                          Tên_chi_tiết_TK_Có = p.tenchitietCo,
+                         Mã_chi_tiết_TK_Nợ = p.MaCTietTKNo,
                          Tên_chi_tiết_TK_Nợ = p.tenchitietNo,
 
 
@@ -627,75 +585,58 @@ namespace BEEACCOUNT.Model
                      };
 
 
-
+                #endregion
 
             }
-
-            #endregion
-
-
-            #region tờ kê có tk
-
-
-
-            if (taikhoanno != "" && taikhoanco != "")
+            else
             {
-             rs = from p in dc.tbl_Socais
-                         where
+                #region  tờ kê nợ
+                rs = from p in dc.tbl_Socais
+                     where
                          //-- p.manghiepvu == "TH"
-                         p.Ngayctu.Value.Month == ngaythangnam.Month
-                         && p.Ngayctu.Value.Year == ngaythangnam.Year
-                         && p.TkNo == taikhoanno
-                         && p.TkCo == taikhoanco
+              //       p.Ngayctu.Value.Month == thang
+                   p.Ngayctu.Value.Year == nam
+                     && p.TkNo == taikhoanno
+                  //   && p.TkCo == taikhoanco
 
-                         select new
-                         {
-
-                             Ngày_chứng_từ = p.Ngayctu,
-                             Số_chứng_từ = p.Sohieuchungtu,
-                             Nợ_TK = p.TkNo,
-                             Có_TK = p.TkCo,
-                             Số_tiền = p.PsCo,
-                             Diễn_giải = p.Diengiai.Trim(),
-                             Mã_chi_tiết_TK_Có = p.MaCTietTKCo,
-                             Mã_chi_tiết_TK_Nợ = p.MaCTietTKNo,
-
-                             Tên_chi_tiết_TK_Có = p.tenchitietCo,
-                             Tên_chi_tiết_TK_Nợ = p.tenchitietNo,
+                     select new
+                     {
 
 
+                         Ngày_chứng_từ = p.Ngayctu,
+                         Số_chứng_từ = p.Sohieuchungtu,
+                         Nợ_TK = p.TkNo,
+                         Có_TK = p.TkCo,
+                         Diễn_giải = p.Diengiai.Trim(),
+                         Số_tiền = p.PsCo,
+
+                         Mã_chi_tiết_TK_Có = p.MaCTietTKCo,
 
 
-                             Tạo_bởi = p.username,
+                         Tên_chi_tiết_TK_Có = p.tenchitietCo,
+                         Mã_chi_tiết_TK_Nợ = p.MaCTietTKNo,
+                         Tên_chi_tiết_TK_Nợ = p.tenchitietNo,
 
 
-
-                             ID = p.id
-                         };
+                         Tạo_bởi = p.username,
 
 
 
+                         ID = p.id
+                     };
+
+
+                #endregion
 
             }
 
-            #endregion
-
-
-
+   
             return rs;
 
         }
 
 
 
-
-        //public static void ghibuttoannotk(string matk, string manghiepvu, string sochungtu) // vd phieu thu nghiep vu là phieu thu: PT,
-        //{
-
-
-
-
-        //}
 
 
 

@@ -969,6 +969,7 @@ namespace BEEACCOUNT.View
                 #region view load form
                 var buttoanth = (from p in dc.tbl_Socais
                                  where p.id == this.buttoanid
+                                 && p.manghiepvu =="TH"
                                  select p).FirstOrDefault();
 
 
@@ -1059,6 +1060,7 @@ namespace BEEACCOUNT.View
 
                 var lisdetailbuttoanTH = from p in dc.tbl_Socais
                                          where p.Sohieuchungtu == buttoanth.Sohieuchungtu
+                                           && p.manghiepvu == "TH"
                                          select p;
 
                 if (lisdetailbuttoanTH.Count() >= 0)
@@ -1110,7 +1112,7 @@ namespace BEEACCOUNT.View
 
             var phieunhaphead = (from p in dc.tbl_Socais
                                  where p.id == this.buttoanid
-
+                          //      && p.manghiepvu == "TH"
                                  select p).FirstOrDefault();
 
             #region CÓ SỐ PHIÊU

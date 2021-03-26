@@ -10,7 +10,7 @@ using System.Data.Sql;
 using BEEACCOUNT.Model;
 using BEEACCOUNT.Control;
 //using BEEACCOUNT.Entity;
-
+using BEEACCOUNT.shared;
 using System.Threading;
 using System.Data.SqlClient;
 //using System.Collections.Generic;
@@ -2476,7 +2476,7 @@ namespace BEEACCOUNT.View
             //}
         }
 
-   
+
         private void iNPUTPERIODDEPOSITAMOUNTToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
@@ -2572,7 +2572,7 @@ namespace BEEACCOUNT.View
             this.Close();
         }
 
-    
+
         private void usersSetupToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
@@ -2951,7 +2951,7 @@ namespace BEEACCOUNT.View
 
         private void thôngTínDoanhNghiệpToolStripMenuItem_Click(object sender, EventArgs e)
         {
-         
+
         }
 
         private void danhSáchLoạiTàiKhoảnToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -2960,7 +2960,7 @@ namespace BEEACCOUNT.View
 
         private void danhSáchLoạiTàiKhoảnToolStripMenuItem2_Click(object sender, EventArgs e)
         {
-         
+
 
         }
 
@@ -3065,16 +3065,7 @@ namespace BEEACCOUNT.View
         {
 
 
-            #region//bangsoducd
-            //if (name == "bcsonhatkychung")
-            //{
-
-            Model.Soketoan.Bangcandoiphatsinhketoantt200lientuc();
-
-            //  }
-            #endregion
-
-
+     
         }
 
         private void báoCáoLCTTToolStripMenuItem_Click(object sender, EventArgs e)
@@ -3175,7 +3166,7 @@ namespace BEEACCOUNT.View
             LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
 
             var rs = from p in dc.tbl_NP_khachhangvanchuyens
-                         //     where p.Code != "DIS"
+                     //     where p.Code != "DIS"
                      orderby p.maKH
                      select p;
             foreach (var item2 in rs)
@@ -3451,7 +3442,7 @@ namespace BEEACCOUNT.View
 
         private void pictureBox1_MouseHover(object sender, EventArgs e)
         {
-            
+
         }
 
         private void thôngTínDoanhNghiệpToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -3544,7 +3535,7 @@ namespace BEEACCOUNT.View
         private void phảiThuToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
-           
+
 
 
         }
@@ -3715,7 +3706,7 @@ namespace BEEACCOUNT.View
             Viewtable viewtbl2 = new Viewtable(rs6, dc, "DANH SÁCH SẢN PHẨM", 7, "tk");// mã 7 là danh sách  sản phẩm
 
 
-       //     xxxx
+            //     xxxx
             viewtbl2.Show();
 
             #endregion
@@ -3733,15 +3724,317 @@ namespace BEEACCOUNT.View
 
 
 
-            clearpannel();
+            string connection_string = Utils.getConnectionstr();
+            string username = Utils.getusername();
+            //     string macty = Model.Username.getmacty();
+            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
 
 
-            View.Toketheotaikhoan Toketheotaikhoan = new Toketheotaikhoan(this);
-            clearpannelload(Toketheotaikhoan);
+            #region  chọn sổ cái
+
+
+            FormCollection fc = System.Windows.Forms.Application.OpenForms;
+            bool chon;
+            bool kq = false;
+            foreach (Form frm in fc)
+            {
+                ///  KAcontractlisting
+                ///    if (frm.Text == "CreatenewContract")
+                if (frm.Text == "Chọn tài khoản")
+                {
+                    kq = true;
+                    frm.Focus();
+
+                }
+            }
+
+            if (!kq)
+            {
+
+
+
+                View.BeeselecSocai BeeselecSocai = new View.BeeselecSocai("socai");
+                BeeselecSocai.ShowDialog();
+
+                chon = BeeselecSocai.chon;
+                DateTime fromdate = BeeselecSocai.fromdate;
+                DateTime todate = BeeselecSocai.todate;
+
+                string mataikhoan = BeeselecSocai.mataikhoan;
+                string tentaikhoan = BeeselecSocai.tentaikhoan;
+                //   int machitiettaikhoan = Beeselecttk.machitiettaikhoan;
+                //    string tentaikhoanchitiet = Beeselecttk.tentaikhoanchitiet;
+
+
+                if (chon)
+                {
+
+                    #region showreport
+                    var listRptdetailSocai = from RptdetailSocai in dc.RptdetailSoCais
+                                             where RptdetailSocai.username == username
+                                             select RptdetailSocai;
+
+                    dc.RptdetailSoCais.DeleteAllOnSubmit(listRptdetailSocai);
+                    dc.SubmitChanges();
+
+                    var detairpt = from tbl_Socai in dc.tbl_Socais
+                                   where tbl_Socai.Ngayctu >= fromdate && tbl_Socai.Ngayctu <= todate
+                                        && tbl_Socai.TkCo.Trim() == mataikhoan
+                                   orderby tbl_Socai.Ngayctu
+                                   select tbl_Socai;
+
+                    foreach (var item in detairpt)
+                    {
+                        RptdetailSoCai q = new RptdetailSoCai();
+                        if (item.Diengiai != "")
+                        {
+                            q.diengiai = item.Diengiai.Truncate(225);
+                        }
+
+                        q.machungtu = (item.manghiepvu.Trim() + " " + item.Sohieuchungtu.Trim()).Truncate(10);
+
+
+                        q.username = username;
+                        q.Ngaychungtu = item.Ngayctu;
+
+
+                        q.taikhoandoiung = item.TkNo.Trim();
+                        q.psno = 0;
+                        q.psco = item.PsCo;
+
+
+                        //       q.ton = daukysave + item.PSNo - item.PSCo;
+                        //        daukysave = daukysave + (double)item.PSNo - (double)item.PSCo;
+
+                        dc.RptdetailSoCais.InsertOnSubmit(q);
+                        dc.SubmitChanges();
+
+
+                    }
+
+
+
+                    var rptdetail = from RptdetailSocai in dc.RptdetailSoCais
+                                    where RptdetailSocai.username == username
+                                    orderby RptdetailSocai.Ngaychungtu
+
+                                    select new
+                                    {
+
+
+                                        Ngày_chứng_từ = RptdetailSocai.Ngaychungtu,
+                                        Mã_chứng_từ = RptdetailSocai.machungtu,
+
+                                    
+                                        TK_Đối_ứng = RptdetailSocai.taikhoandoiung,
+                                        Diễn_giải = RptdetailSocai.diengiai,
+
+                                        Số_tiền = RptdetailSocai.psco,
+
+
+                                    };
+
+
+
+
+                    Viewtable view = new Viewtable(rptdetail, dc, "Tờ kê có theo tài khoản: " + mataikhoan, 12, "0");
+
+                    view.Show();
+
+
+
+
+                    #endregion showreports
+
+                }
+
+
+            }
+
+
 
 
 
             #endregion
+
+
+
+
+            #endregion
+
+        }
+
+        private void tờKêNợPhátSinhTheoTàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            #region//btoanth
+
+
+
+            string connection_string = Utils.getConnectionstr();
+            string username = Utils.getusername();
+            //     string macty = Model.Username.getmacty();
+            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+
+            #region  chọn sổ cái
+
+
+            FormCollection fc = System.Windows.Forms.Application.OpenForms;
+            bool chon;
+            bool kq = false;
+            foreach (Form frm in fc)
+            {
+                ///  KAcontractlisting
+                ///    if (frm.Text == "CreatenewContract")
+                if (frm.Text == "Chọn tài khoản")
+                {
+                    kq = true;
+                    frm.Focus();
+
+                }
+            }
+
+            if (!kq)
+            {
+
+
+
+                View.BeeselecSocai BeeselecSocai = new View.BeeselecSocai("socai");
+                BeeselecSocai.ShowDialog();
+
+                chon = BeeselecSocai.chon;
+                DateTime fromdate = BeeselecSocai.fromdate;
+                DateTime todate = BeeselecSocai.todate;
+
+                string mataikhoan = BeeselecSocai.mataikhoan;
+                string tentaikhoan = BeeselecSocai.tentaikhoan;
+                //   int machitiettaikhoan = Beeselecttk.machitiettaikhoan;
+                //    string tentaikhoanchitiet = Beeselecttk.tentaikhoanchitiet;
+
+
+                if (chon)
+                {
+
+                    #region showreport
+                    var listRptdetailSocai = from RptdetailSocai in dc.RptdetailSoCais
+                                             where RptdetailSocai.username == username
+                                             select RptdetailSocai;
+
+                    dc.RptdetailSoCais.DeleteAllOnSubmit(listRptdetailSocai);
+                    dc.SubmitChanges();
+
+                    var detairpt = from tbl_Socai in dc.tbl_Socais
+                                   where tbl_Socai.Ngayctu >= fromdate && tbl_Socai.Ngayctu <= todate
+                                        && tbl_Socai.TkNo.Trim() == mataikhoan
+                                   orderby tbl_Socai.Ngayctu
+                                   select tbl_Socai;
+
+                    foreach (var item in detairpt)
+                    {
+                        RptdetailSoCai q = new RptdetailSoCai();
+                        if (item.Diengiai != "")
+                        {
+                            q.diengiai = item.Diengiai.Truncate(225);
+                        }
+
+                        q.machungtu = (item.manghiepvu.Trim() + " " + item.Sohieuchungtu.Trim()).Truncate(10);
+
+
+                        q.username = username;
+                        q.Ngaychungtu = item.Ngayctu;
+
+
+                        q.taikhoandoiung = item.TkCo.Trim();
+                        q.psno = item.PsNo;
+                        //  q.psco = 0;
+
+
+                        //       q.ton = daukysave + item.PSNo - item.PSCo;
+                        //        daukysave = daukysave + (double)item.PSNo - (double)item.PSCo;
+
+                        dc.RptdetailSoCais.InsertOnSubmit(q);
+                        dc.SubmitChanges();
+
+
+                    }
+
+
+
+                    var rptdetail = from RptdetailSocai in dc.RptdetailSoCais
+                                    where RptdetailSocai.username == username
+                                    orderby RptdetailSocai.Ngaychungtu
+
+                                    select new
+                                    {
+
+
+                                        Ngày_chứng_từ = RptdetailSocai.Ngaychungtu,
+                                        Mã_chứng_từ = RptdetailSocai.machungtu,
+
+                                       
+                                        TK_Đối_ứng = RptdetailSocai.taikhoandoiung,
+                                        Diễn_giải = RptdetailSocai.diengiai,
+
+                                        Số_tiền = RptdetailSocai.psno,
+
+
+                                    };
+
+
+
+
+                    Viewtable view = new Viewtable(rptdetail, dc, "Tờ kê nợ theo tài khoản: " + mataikhoan, 12, "0");
+                    view.Show();
+
+
+
+
+                    #endregion showreports
+
+                }
+
+
+            }
+
+
+
+
+
+            #endregion
+
+
+
+
+            #endregion
+
+        }
+
+        private void bảngCấnĐốiPhátSinhToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            #region//bangsoducd
+            //if (name == "bcsonhatkychung")
+            //{
+
+            Model.Soketoan.Bangcandoiphatsinhketoantt200lientuc();
+
+            //  }
+            #endregion
+
+
+        }
+
+        private void bảngTổngHợpCânĐốiPhátSinhToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            #region//bangsoducd
+            //if (name == "bcsonhatkychung")
+            //{
+
+            Model.Soketoan.Bangcandoiphatsinhtonghopketoantt200lientuc();
+
+            //  }
+            #endregion
+
 
         }
     }
