@@ -3065,7 +3065,7 @@ namespace BEEACCOUNT.View
         {
 
 
-     
+
         }
 
         private void báoCáoLCTTToolStripMenuItem_Click(object sender, EventArgs e)
@@ -3222,14 +3222,6 @@ namespace BEEACCOUNT.View
         private void sổCânĐốiTàiKhoảnPhátSinhToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
-            #region//bccan doi ke toan
-            //if (name == "bcsonhatkychung")
-            //{
-
-            Model.Soketoan.bangcandoiphatsinhtaikhoan();
-
-            //  }
-            #endregion
 
 
 
@@ -3825,7 +3817,7 @@ namespace BEEACCOUNT.View
                                         Ngày_chứng_từ = RptdetailSocai.Ngaychungtu,
                                         Mã_chứng_từ = RptdetailSocai.machungtu,
 
-                                    
+
                                         TK_Đối_ứng = RptdetailSocai.taikhoandoiung,
                                         Diễn_giải = RptdetailSocai.diengiai,
 
@@ -3972,7 +3964,7 @@ namespace BEEACCOUNT.View
                                         Ngày_chứng_từ = RptdetailSocai.Ngaychungtu,
                                         Mã_chứng_từ = RptdetailSocai.machungtu,
 
-                                       
+
                                         TK_Đối_ứng = RptdetailSocai.taikhoandoiung,
                                         Diễn_giải = RptdetailSocai.diengiai,
 
@@ -4041,6 +4033,83 @@ namespace BEEACCOUNT.View
         private void button2_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void regionbccanDoiKeToanToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            #region//bccan doi ke toan
+            //if (name == "bcsonhatkychung")
+            //{
+
+            Model.Soketoan.bangcandoiphatsinhtaikhoan();
+
+            //  }
+            #endregion
+
+        }
+
+        private void kếtChuyểnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string connection_string = Utils.getConnectionstr();
+            string username = Utils.getusername();
+            //  var db = new LinqtoSQLDataContext(connection_string);
+            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+
+            FormCollection fc = System.Windows.Forms.Application.OpenForms;
+            bool chon;
+            string yearchon;
+            bool kq = false;
+            foreach (Form frm in fc)
+            {
+
+                if (frm.Text == "Chọn năm")
+                {
+                    kq = true;
+                    frm.Focus();
+
+                }
+            }
+
+            if (!kq)
+            {
+
+
+                View.Beeyearsellect Beeyearsellect = new View.Beeyearsellect();
+                Beeyearsellect.ShowDialog();
+
+                yearchon = Beeyearsellect.year;
+                chon = Beeyearsellect.chon;
+
+
+                if (chon)
+                {
+
+                    var rptdetail = from p in dc.RptdetaiCDPs
+                                    where p.username == username
+                                    orderby p.matk
+
+                                    select new
+                                    {
+                                      //  p.Codk,
+                                       // p.Nodk,
+                                       Mã_tài_khoản = p.matk,
+                                       Tên_tài_khoản = p.tentk.Trim(),
+                                    //    PS_Có = p.Psco.GetValueOrDefault(0),
+                                      //  Psno = p.Psno.GetValueOrDefault(0),
+                                        Nợ_Cuối_kỳ = p.Nock.GetValueOrDefault(0),
+                                        Có_Cuối_kỳ = p.Cock.GetValueOrDefault(0),
+
+
+
+                                    };
+
+
+                    Viewtable viewtbl = new Viewtable(rptdetail, dc, "BẢNG TỔNG HỢP PHÁT SINH NĂM " + yearchon.ToUpper(), 121, yearchon.ToString());// mã 121 là danh sach BẢNG CÂN ĐỐI PHÁT SINH view va ket chuyen
+                    viewtbl.Show();
+
+                }
+            }
         }
     }
 

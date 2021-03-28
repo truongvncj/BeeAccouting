@@ -260,7 +260,7 @@ namespace BEEACCOUNT.View
             //      this.bt_sendinggroup.Visible = false;
             //     this.lb_seach.Visible = false;
             this.Pl_endview.Visible = false;
-            //   gboxUnpaid.Visible = false; // an nhom field upaid
+            this.btketchuyen.Visible = false; 
 
             this.formlabel.Text = fornname;
 
@@ -273,6 +273,16 @@ namespace BEEACCOUNT.View
             this.KeyPreview = true;
 
             #region  // viewcode ==12  la view bang tong hop phat sinh
+            if (this.viewcode == 121) // view đơn hang netco
+            {
+                //lb_seach.Visible = false;
+
+                btketchuyen.Visible = true;
+                bt_themmoi.Visible = false;
+
+                bt_sua.Visible = false;
+            
+            }
 
 
             if (this.valuesave == "1") // view đơn hang netco
@@ -1502,6 +1512,61 @@ namespace BEEACCOUNT.View
 
             }
             #endregion
+
+
+        }
+
+        private void btketchuyen_Click(object sender, EventArgs e)
+        {
+
+
+            #region caculation cdkt200 lien tuc
+            SqlConnection conn2 = null;
+            SqlDataReader rdr1 = null;
+
+            string destConnString = Utils.getConnectionstr();
+            try
+            {
+
+                conn2 = new SqlConnection(destConnString);
+                conn2.Open();
+                SqlCommand cmd1 = new SqlCommand("ketchuyenCDPS", conn2);
+                cmd1.CommandType = CommandType.StoredProcedure;
+                cmd1.CommandTimeout = 0;
+                cmd1.Parameters.Add("@username", SqlDbType.VarChar).Value = Utils.getusername();
+                cmd1.Parameters.Add("@yearchon", SqlDbType.Int).Value = int.Parse(valuesave);
+                //   cmd1.Parameters.Add("@todate", SqlDbType.DateTime).Value = todate;
+
+
+
+
+                rdr1 = cmd1.ExecuteReader();
+
+
+
+            }
+            finally
+            {
+                if (conn2 != null)
+                {
+                    conn2.Close();
+                }
+                if (rdr1 != null)
+                {
+                    rdr1.Close();
+                }
+            }
+              MessageBox.Show("Kết chuyển phát sinh đã hoàn thành", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            #endregion
+
+
+
+
+
+
+
+
 
 
         }

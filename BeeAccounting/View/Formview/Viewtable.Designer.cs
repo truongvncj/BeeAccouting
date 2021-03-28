@@ -52,6 +52,7 @@ namespace BEEACCOUNT.View
             this.lb_bilingqtt = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btketchuyen = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.Pl_endview.SuspendLayout();
@@ -79,6 +80,7 @@ namespace BEEACCOUNT.View
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel2.Controls.Add(this.btketchuyen);
             this.panel2.Controls.Add(this.bt_sua);
             this.panel2.Controls.Add(this.bt_exporttoex);
             this.panel2.Controls.Add(this.bt_themmoi);
@@ -313,6 +315,18 @@ namespace BEEACCOUNT.View
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             this.dataGridView1.Paint += new System.Windows.Forms.PaintEventHandler(this.dataGridView1_Paint);
             // 
+            // btketchuyen
+            // 
+            this.btketchuyen.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btketchuyen.Location = new System.Drawing.Point(991, 2);
+            this.btketchuyen.Name = "btketchuyen";
+            this.btketchuyen.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.btketchuyen.Size = new System.Drawing.Size(177, 23);
+            this.btketchuyen.TabIndex = 6;
+            this.btketchuyen.Text = "Kết chuyển số dư tài khoản";
+            this.btketchuyen.UseVisualStyleBackColor = true;
+            this.btketchuyen.Click += new System.EventHandler(this.btketchuyen_Click);
+            // 
             // Viewtable
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -363,5 +377,6 @@ namespace BEEACCOUNT.View
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button bt_sua;
         private System.Windows.Forms.Button bt_themmoi;
+        private System.Windows.Forms.Button btketchuyen;
     }
 }

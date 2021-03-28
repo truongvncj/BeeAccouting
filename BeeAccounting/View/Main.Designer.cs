@@ -142,6 +142,8 @@
             this.báoCáoLCTTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nhậpSốĐầuKỳLCTTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sổCânĐốiTàiKhoảnPhátSinhToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.regionbccanDoiKeToanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.kếtChuyểnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.panelmain.SuspendLayout();
             this.groupBox17.SuspendLayout();
@@ -1039,10 +1041,27 @@
             // 
             // sổCânĐốiTàiKhoảnPhátSinhToolStripMenuItem
             // 
+            this.sổCânĐốiTàiKhoảnPhátSinhToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.regionbccanDoiKeToanToolStripMenuItem,
+            this.kếtChuyểnToolStripMenuItem});
             this.sổCânĐốiTàiKhoảnPhátSinhToolStripMenuItem.Name = "sổCânĐốiTàiKhoảnPhátSinhToolStripMenuItem";
             this.sổCânĐốiTàiKhoảnPhátSinhToolStripMenuItem.Size = new System.Drawing.Size(285, 24);
             this.sổCânĐốiTàiKhoảnPhátSinhToolStripMenuItem.Text = "Sổ cân đối tài khoản phát sinh";
             this.sổCânĐốiTàiKhoảnPhátSinhToolStripMenuItem.Click += new System.EventHandler(this.sổCânĐốiTàiKhoảnPhátSinhToolStripMenuItem_Click);
+            // 
+            // regionbccanDoiKeToanToolStripMenuItem
+            // 
+            this.regionbccanDoiKeToanToolStripMenuItem.Name = "regionbccanDoiKeToanToolStripMenuItem";
+            this.regionbccanDoiKeToanToolStripMenuItem.Size = new System.Drawing.Size(242, 24);
+            this.regionbccanDoiKeToanToolStripMenuItem.Text = "Sổ cân đối phát sinh";
+            this.regionbccanDoiKeToanToolStripMenuItem.Click += new System.EventHandler(this.regionbccanDoiKeToanToolStripMenuItem_Click);
+            // 
+            // kếtChuyểnToolStripMenuItem
+            // 
+            this.kếtChuyểnToolStripMenuItem.Name = "kếtChuyểnToolStripMenuItem";
+            this.kếtChuyểnToolStripMenuItem.Size = new System.Drawing.Size(242, 24);
+            this.kếtChuyểnToolStripMenuItem.Text = "Kết chuyển CDPS Cuối kỳ";
+            this.kếtChuyểnToolStripMenuItem.Click += new System.EventHandler(this.kếtChuyểnToolStripMenuItem_Click);
             // 
             // Main
             // 
@@ -1179,6 +1198,8 @@
         private ToolStripMenuItem tờKêNợPhátSinhTheoTàiKhoảnToolStripMenuItem;
         private ToolStripMenuItem bảngCấnĐốiPhátSinhToolStripMenuItem;
         private ToolStripMenuItem bảngTổngHợpCânĐốiPhátSinhToolStripMenuItem;
+        private ToolStripMenuItem regionbccanDoiKeToanToolStripMenuItem;
+        private ToolStripMenuItem kếtChuyểnToolStripMenuItem;
     }
 }
 
