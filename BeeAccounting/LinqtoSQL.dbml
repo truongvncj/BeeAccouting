@@ -39,6 +39,15 @@
       <Column Name="username" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
     </Type>
   </Table>
+  <Table Name="dbo.CDPSdauky" Member="CDPSdaukies">
+    <Type Name="CDPSdauky">
+      <Column Name="nam" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="matk" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Nodk" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Codk" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+    </Type>
+  </Table>
   <Table Name="dbo.KQKD200Dauky" Member="KQKD200Daukies">
     <Type Name="KQKD200Dauky">
       <Column Name="nam" Type="System.Int32" DbType="Int" CanBeNull="true" />

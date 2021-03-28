@@ -171,5 +171,41 @@ namespace BEEACCOUNT.View
 
 
         }
+
+        private void pkfromdate_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+
+
+                pk_todate.Focus();
+
+
+            }
+        }
+
+        private void pk_todate_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+
+
+                pkfromdate.Focus();
+
+
+            }
+        }
+
+        private void cbtk_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+
+
+                pkfromdate.Focus();
+
+
+            }
+        }
     }
 }

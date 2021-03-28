@@ -4111,6 +4111,14 @@ namespace BEEACCOUNT.View
                 }
             }
         }
+
+        private void nhậpSốCDPSĐầuKỳToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            Model.Soketoan.nhapsodudaukyCDPS();
+
+
+        }
     }
 
 

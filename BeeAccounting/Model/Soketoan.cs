@@ -1111,6 +1111,60 @@ namespace BEEACCOUNT.Model
 
         }
 
+
+        public static void nhapsodudaukyCDPS()
+        {
+
+            //  Beeyearsellect
+            string connection_string = Utils.getConnectionstr();
+            string urs = Utils.getusername();
+            //  var db = new LinqtoSQLDataContext(connection_string);
+            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+
+            FormCollection fc = System.Windows.Forms.Application.OpenForms;
+            bool chon;
+            int yearchon;
+            bool kq = false;
+            foreach (Form frm in fc)
+            {
+
+                if (frm.Text == "Chọn năm")
+                {
+                    kq = true;
+                    frm.Focus();
+
+                }
+            }
+
+            if (!kq)
+            {
+
+                View.Beeyearsellect Beeyearsellect = new View.Beeyearsellect();
+                Beeyearsellect.ShowDialog();
+
+                yearchon = int.Parse(Beeyearsellect.year);
+                chon = Beeyearsellect.chon;
+
+                if (chon)
+                {
+
+                    View.BeeLCDPSdauky BeeLCDPSdauky = new BeeLCDPSdauky(yearchon);
+                    BeeLCDPSdauky.ShowDialog();
+                }
+
+
+
+
+
+            }
+
+
+
+
+            //  throw new NotImplementedException();
+        }
+
         public static void nhapsodudaukylctt()
         {
 

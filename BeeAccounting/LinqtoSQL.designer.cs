@@ -39,6 +39,9 @@ namespace BEEACCOUNT
     partial void InsertCDKT200P(CDKT200P instance);
     partial void UpdateCDKT200P(CDKT200P instance);
     partial void DeleteCDKT200P(CDKT200P instance);
+    partial void InsertCDPSdauky(CDPSdauky instance);
+    partial void UpdateCDPSdauky(CDPSdauky instance);
+    partial void DeleteCDPSdauky(CDPSdauky instance);
     partial void InsertKQKD200Dauky(KQKD200Dauky instance);
     partial void UpdateKQKD200Dauky(KQKD200Dauky instance);
     partial void DeleteKQKD200Dauky(KQKD200Dauky instance);
@@ -281,6 +284,14 @@ namespace BEEACCOUNT
 			get
 			{
 				return this.GetTable<CDKT200P>();
+			}
+		}
+		
+		public System.Data.Linq.Table<CDPSdauky> CDPSdaukies
+		{
+			get
+			{
+				return this.GetTable<CDPSdauky>();
 			}
 		}
 		
@@ -1526,6 +1537,164 @@ namespace BEEACCOUNT
 					this._username = value;
 					this.SendPropertyChanged("username");
 					this.OnusernameChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.CDPSdauky")]
+	public partial class CDPSdauky : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private System.Nullable<int> _nam;
+		
+		private string _matk;
+		
+		private System.Nullable<double> _Nodk;
+		
+		private System.Nullable<double> _Codk;
+		
+		private int _id;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnnamChanging(System.Nullable<int> value);
+    partial void OnnamChanged();
+    partial void OnmatkChanging(string value);
+    partial void OnmatkChanged();
+    partial void OnNodkChanging(System.Nullable<double> value);
+    partial void OnNodkChanged();
+    partial void OnCodkChanging(System.Nullable<double> value);
+    partial void OnCodkChanged();
+    partial void OnidChanging(int value);
+    partial void OnidChanged();
+    #endregion
+		
+		public CDPSdauky()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_nam", DbType="Int")]
+		public System.Nullable<int> nam
+		{
+			get
+			{
+				return this._nam;
+			}
+			set
+			{
+				if ((this._nam != value))
+				{
+					this.OnnamChanging(value);
+					this.SendPropertyChanging();
+					this._nam = value;
+					this.SendPropertyChanged("nam");
+					this.OnnamChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_matk", DbType="NVarChar(50)")]
+		public string matk
+		{
+			get
+			{
+				return this._matk;
+			}
+			set
+			{
+				if ((this._matk != value))
+				{
+					this.OnmatkChanging(value);
+					this.SendPropertyChanging();
+					this._matk = value;
+					this.SendPropertyChanged("matk");
+					this.OnmatkChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Nodk", DbType="Float")]
+		public System.Nullable<double> Nodk
+		{
+			get
+			{
+				return this._Nodk;
+			}
+			set
+			{
+				if ((this._Nodk != value))
+				{
+					this.OnNodkChanging(value);
+					this.SendPropertyChanging();
+					this._Nodk = value;
+					this.SendPropertyChanged("Nodk");
+					this.OnNodkChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Codk", DbType="Float")]
+		public System.Nullable<double> Codk
+		{
+			get
+			{
+				return this._Codk;
+			}
+			set
+			{
+				if ((this._Codk != value))
+				{
+					this.OnCodkChanging(value);
+					this.SendPropertyChanging();
+					this._Codk = value;
+					this.SendPropertyChanged("Codk");
+					this.OnCodkChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int id
+		{
+			get
+			{
+				return this._id;
+			}
+			set
+			{
+				if ((this._id != value))
+				{
+					this.OnidChanging(value);
+					this.SendPropertyChanging();
+					this._id = value;
+					this.SendPropertyChanged("id");
+					this.OnidChanged();
 				}
 			}
 		}

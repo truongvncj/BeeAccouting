@@ -144,6 +144,8 @@
             this.sổCânĐốiTàiKhoảnPhátSinhToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.regionbccanDoiKeToanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kếtChuyểnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nhậpSốCDPSĐầuKỳToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.panel1.SuspendLayout();
             this.panelmain.SuspendLayout();
             this.groupBox17.SuspendLayout();
@@ -1043,6 +1045,8 @@
             // 
             this.sổCânĐốiTàiKhoảnPhátSinhToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.regionbccanDoiKeToanToolStripMenuItem,
+            this.nhậpSốCDPSĐầuKỳToolStripMenuItem,
+            this.toolStripSeparator6,
             this.kếtChuyểnToolStripMenuItem});
             this.sổCânĐốiTàiKhoảnPhátSinhToolStripMenuItem.Name = "sổCânĐốiTàiKhoảnPhátSinhToolStripMenuItem";
             this.sổCânĐốiTàiKhoảnPhátSinhToolStripMenuItem.Size = new System.Drawing.Size(285, 24);
@@ -1062,6 +1066,18 @@
             this.kếtChuyểnToolStripMenuItem.Size = new System.Drawing.Size(242, 24);
             this.kếtChuyểnToolStripMenuItem.Text = "Kết chuyển CDPS Cuối kỳ";
             this.kếtChuyểnToolStripMenuItem.Click += new System.EventHandler(this.kếtChuyểnToolStripMenuItem_Click);
+            // 
+            // nhậpSốCDPSĐầuKỳToolStripMenuItem
+            // 
+            this.nhậpSốCDPSĐầuKỳToolStripMenuItem.Name = "nhậpSốCDPSĐầuKỳToolStripMenuItem";
+            this.nhậpSốCDPSĐầuKỳToolStripMenuItem.Size = new System.Drawing.Size(242, 24);
+            this.nhậpSốCDPSĐầuKỳToolStripMenuItem.Text = "Nhập số CDPS đầu kỳ";
+            this.nhậpSốCDPSĐầuKỳToolStripMenuItem.Click += new System.EventHandler(this.nhậpSốCDPSĐầuKỳToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator6
+            // 
+            this.toolStripSeparator6.Name = "toolStripSeparator6";
+            this.toolStripSeparator6.Size = new System.Drawing.Size(239, 6);
             // 
             // Main
             // 
@@ -1200,6 +1216,8 @@
         private ToolStripMenuItem bảngTổngHợpCânĐốiPhátSinhToolStripMenuItem;
         private ToolStripMenuItem regionbccanDoiKeToanToolStripMenuItem;
         private ToolStripMenuItem kếtChuyểnToolStripMenuItem;
+        private ToolStripMenuItem nhậpSốCDPSĐầuKỳToolStripMenuItem;
+        private ToolStripSeparator toolStripSeparator6;
     }
 }
 

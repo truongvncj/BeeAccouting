@@ -71,6 +71,7 @@
             this.pkfromdate.TabIndex = 1;
             this.pkfromdate.Value = new System.DateTime(2017, 8, 19, 6, 29, 10, 0);
             this.pkfromdate.ValueChanged += new System.EventHandler(this.pkfromdate_ValueChanged);
+            this.pkfromdate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.pkfromdate_KeyPress);
             // 
             // label5
             // 
@@ -92,6 +93,8 @@
             this.pk_todate.Size = new System.Drawing.Size(122, 24);
             this.pk_todate.TabIndex = 2;
             this.pk_todate.Value = new System.DateTime(2017, 8, 19, 6, 29, 34, 0);
+            this.pk_todate.ValueChanged += new System.EventHandler(this.pk_todate_ValueChanged);
+            this.pk_todate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.pk_todate_KeyPress);
             // 
             // lb_machitietno
             // 
@@ -126,6 +129,7 @@
             this.cbtk.Size = new System.Drawing.Size(244, 26);
             this.cbtk.TabIndex = 0;
             this.cbtk.SelectionChangeCommitted += new System.EventHandler(this.cbtk_SelectionChangeCommitted);
+            this.cbtk.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbtk_KeyPress);
             // 
             // label3
             // 
