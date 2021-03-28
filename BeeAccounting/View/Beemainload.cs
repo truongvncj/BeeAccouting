@@ -1407,7 +1407,7 @@ namespace BEEACCOUNT.View
 
         private void pictureBox14_MouseHover(object sender, EventArgs e)
         {
-            this.pictureBox14.BorderStyle = BorderStyle.None;
+           // this.pictureBox14.BorderStyle = BorderStyle.None;
         }
 
         private void pictureBox15_MouseHover(object sender, EventArgs e)
@@ -1482,7 +1482,7 @@ namespace BEEACCOUNT.View
 
         private void pictureBox14_MouseDown(object sender, MouseEventArgs e)
         {
-            this.pictureBox14.BorderStyle = BorderStyle.Fixed3D;
+          //  this.pictureBox14.BorderStyle = BorderStyle.Fixed3D;
         }
 
         private void pictureBox15_MouseDown(object sender, MouseEventArgs e)
@@ -1557,7 +1557,7 @@ namespace BEEACCOUNT.View
 
         private void pictureBox14_MouseUp(object sender, MouseEventArgs e)
         {
-            this.pictureBox14.BorderStyle = BorderStyle.None;
+           // this.pictureBox14.BorderStyle = BorderStyle.None;
         }
 
         private void pictureBox15_MouseUp(object sender, MouseEventArgs e)
@@ -1644,7 +1644,7 @@ namespace BEEACCOUNT.View
 
         private void pictureBox14_MouseLeave(object sender, EventArgs e)
         {
-            this.pictureBox14.BorderStyle = BorderStyle.FixedSingle;
+          //  this.pictureBox14.BorderStyle = BorderStyle.FixedSingle;
         }
 
         private void pictureBox15_MouseLeave(object sender, EventArgs e)
