@@ -95,7 +95,7 @@
             this.pictureBox17.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox17.Image = global::BEEACCOUNT.Properties.Resources.DIEUVAN3;
-            this.pictureBox17.Location = new System.Drawing.Point(907, 122);
+            this.pictureBox17.Location = new System.Drawing.Point(749, 19);
             this.pictureBox17.Name = "pictureBox17";
             this.pictureBox17.Size = new System.Drawing.Size(152, 97);
             this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -127,7 +127,7 @@
             this.pictureBox15.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox15.Image = global::BEEACCOUNT.Properties.Resources.tINHGIAHANGTON;
-            this.pictureBox15.Location = new System.Drawing.Point(749, 122);
+            this.pictureBox15.Location = new System.Drawing.Point(907, 122);
             this.pictureBox15.Name = "pictureBox15";
             this.pictureBox15.Size = new System.Drawing.Size(152, 97);
             this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -143,7 +143,7 @@
             this.pictureBox13.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox13.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox13.Image")));
-            this.pictureBox13.Location = new System.Drawing.Point(907, 8);
+            this.pictureBox13.Location = new System.Drawing.Point(218, 248);
             this.pictureBox13.Name = "pictureBox13";
             this.pictureBox13.Size = new System.Drawing.Size(152, 97);
             this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -176,7 +176,7 @@
             this.pictureBox11.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox11.Image = global::BEEACCOUNT.Properties.Resources.unnamed;
-            this.pictureBox11.Location = new System.Drawing.Point(433, 328);
+            this.pictureBox11.Location = new System.Drawing.Point(591, 328);
             this.pictureBox11.Name = "pictureBox11";
             this.pictureBox11.Size = new System.Drawing.Size(152, 97);
             this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -192,7 +192,7 @@
             this.pictureBox10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox10.Image = global::BEEACCOUNT.Properties.Resources.ketoancongno;
-            this.pictureBox10.Location = new System.Drawing.Point(433, 225);
+            this.pictureBox10.Location = new System.Drawing.Point(749, 225);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(152, 97);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -208,7 +208,7 @@
             this.pictureBox9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox9.Image = global::BEEACCOUNT.Properties.Resources.phieuxuatkho1;
-            this.pictureBox9.Location = new System.Drawing.Point(749, 8);
+            this.pictureBox9.Location = new System.Drawing.Point(218, 145);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(152, 97);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -241,7 +241,7 @@
             this.pictureBox7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox7.Image = global::BEEACCOUNT.Properties.Resources.Banhangphaithu;
-            this.pictureBox7.Location = new System.Drawing.Point(275, 225);
+            this.pictureBox7.Location = new System.Drawing.Point(749, 122);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(152, 97);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -257,7 +257,7 @@
             this.pictureBox6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox6.Image = global::BEEACCOUNT.Properties.Resources.GiaybaocoNH1;
-            this.pictureBox6.Location = new System.Drawing.Point(433, 122);
+            this.pictureBox6.Location = new System.Drawing.Point(591, 122);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(152, 97);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -273,7 +273,7 @@
             this.pictureBox5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox5.Image = global::BEEACCOUNT.Properties.Resources.Ủy_nhiệm_chi;
-            this.pictureBox5.Location = new System.Drawing.Point(433, 3);
+            this.pictureBox5.Location = new System.Drawing.Point(25, 351);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(152, 97);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -290,7 +290,7 @@
             this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox2.Image = global::BEEACCOUNT.Properties.Resources.Phieuthu1;
-            this.pictureBox2.Location = new System.Drawing.Point(275, 122);
+            this.pictureBox2.Location = new System.Drawing.Point(25, 248);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(152, 97);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -307,7 +307,7 @@
             this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox3.Image = global::BEEACCOUNT.Properties.Resources.Phaitranguoiban;
-            this.pictureBox3.Location = new System.Drawing.Point(275, 328);
+            this.pictureBox3.Location = new System.Drawing.Point(907, 19);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(152, 97);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -323,7 +323,7 @@
             this.pictureBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox4.Image = global::BEEACCOUNT.Properties.Resources.phieuchi1;
-            this.pictureBox4.Location = new System.Drawing.Point(275, 5);
+            this.pictureBox4.Location = new System.Drawing.Point(25, 145);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(152, 97);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -340,12 +340,12 @@
             // pictureBox1
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.ErrorImage = global::BEEACCOUNT.Properties.Resources.ketoantonghop;
-            this.pictureBox1.Image = global::BEEACCOUNT.Properties.Resources.ketoantonghop;
-            this.pictureBox1.InitialImage = global::BEEACCOUNT.Properties.Resources.ketoantonghop;
-            this.pictureBox1.Location = new System.Drawing.Point(35, 146);
+            this.pictureBox1.ErrorImage = global::BEEACCOUNT.Properties.Resources.ketoantonghop1;
+            this.pictureBox1.Image = global::BEEACCOUNT.Properties.Resources.ketoantonghop1;
+            this.pictureBox1.InitialImage = global::BEEACCOUNT.Properties.Resources.ketoantonghop1;
+            this.pictureBox1.Location = new System.Drawing.Point(25, 8);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(133, 131);
+            this.pictureBox1.Size = new System.Drawing.Size(152, 131);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 53;
             this.pictureBox1.TabStop = false;

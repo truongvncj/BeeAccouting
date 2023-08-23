@@ -793,6 +793,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="giphyipg_Pb0_3.ico" />
+    <None Include="Resources\ketoantonghop1.jpg" />
     <None Include="Resources\GIASP.jpg" />
     <None Include="Resources\tINHGIAHANGTON.jpg" />
     <None Include="Resources\tHUEgtgt.jpg" />
