@@ -1669,6 +1669,7 @@ namespace BEEACCOUNT.View
 
         private void pictureBox13_Click(object sender, EventArgs e)
         {
+
             #region//BeeKhophieunhap
 
 
@@ -1682,6 +1683,8 @@ namespace BEEACCOUNT.View
 
 
             #endregion
+
+
         }
 
         private void pictureBox9_Click(object sender, EventArgs e)

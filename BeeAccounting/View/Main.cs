@@ -3535,61 +3535,16 @@ namespace BEEACCOUNT.View
         private void phiếuThuToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
 
-            #region//tmphieuthu
-            //if (name == "tmphieuthu")
-            //{
-
-            //  Main.clearpannel();
-            //   Formload.
-            // clearpannel();
-            clearpannel();
-
-
-            View.BeePhieuThu accsup = new BeePhieuThu(this);
-            clearpannelload(accsup);
-            //    accsup.TopLevel = false;
-            //  accsup.AutoScroll = true;
-            //    panelmain.Controls.Add(accsup);
-            //    accsup.Show();
-
-            //   }
-            #endregion
-
         }
 
         private void phiếuChiToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-
-            #region//tmphieuchi
-
-
-            //  Main.clearpannel();
-
-            clearpannel();
-
-
-            View.BeePhieuchi accsup = new BeePhieuchi(this);
-            clearpannelload(accsup);
-            //    accsup.TopLevel = false;
-            //  accsup.AutoScroll = true;
-            //    panelmain.Controls.Add(accsup);
-            //    accsup.Show();
-
-
-            #endregion
 
         }
 
         private void sổQuỹToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
 
-            #region//soquy
-
-
-            Model.Soketoan.soQuy();
-
-
-            #endregion
         }
 
         private void phiếuNhậpKhoToolStripMenuItem_Click_1(object sender, EventArgs e)
@@ -4116,6 +4071,251 @@ namespace BEEACCOUNT.View
         {
 
             Model.Soketoan.nhapsodudaukyCDPS();
+
+
+        }
+
+        private void ThanhtoanToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void phiếuChiTiềnMặtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            #region//tmphieuchi
+
+
+            //  Main.clearpannel();
+
+            clearpannel();
+
+
+            View.BeePhieuchi accsup = new BeePhieuchi(this);
+            clearpannelload(accsup);
+            //    accsup.TopLevel = false;
+            //  accsup.AutoScroll = true;
+            //    panelmain.Controls.Add(accsup);
+            //    accsup.Show();
+
+
+            #endregion
+
+        }
+
+        private void phiếuThuTiềnMặtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            #region//tmphieuthu
+            //if (name == "tmphieuthu")
+            //{
+
+            //  Main.clearpannel();
+            //   Formload.
+            // clearpannel();
+            clearpannel();
+
+
+            View.BeePhieuThu accsup = new BeePhieuThu(this);
+            clearpannelload(accsup);
+            //    accsup.TopLevel = false;
+            //  accsup.AutoScroll = true;
+            //    panelmain.Controls.Add(accsup);
+            //    accsup.Show();
+
+            //   }
+            #endregion
+
+        }
+
+        private void sổQuỹTiềnMặtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            #region//soquy
+
+
+            Model.Soketoan.soQuy();
+
+
+            #endregion
+        
+        }
+
+        private void ủyNhiệmChiQuaNgânHàngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+
+            #region//uy nhiem chi
+
+
+            //  this.Close();
+            this.clearpannel();
+
+
+            View.Beeuynhiemchi Beeuynhiemchi = new Beeuynhiemchi(this);
+            this.clearpannelload(Beeuynhiemchi);
+
+
+
+            #endregion
+
+        }
+
+        private void phiếuNhậpHàngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void sổQuỹToolStripMenuItem2_Click_1(object sender, EventArgs e)
+        {
+
+            #region//soquy
+
+
+            Model.Soketoan.soQuy();
+
+
+            #endregion
+        
+        }
+
+        private void phiếuChiTiềnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            #region//tmphieuchi
+
+
+            //  Main.clearpannel();
+
+            clearpannel();
+
+
+            View.BeePhieuchi accsup = new BeePhieuchi(this);
+            clearpannelload(accsup);
+            //    accsup.TopLevel = false;
+            //  accsup.AutoScroll = true;
+            //    panelmain.Controls.Add(accsup);
+            //    accsup.Show();
+
+
+            #endregion
+
+        }
+
+        private void phiếuThuTiềnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            #region//tmphieuthu
+            //if (name == "tmphieuthu")
+            //{
+
+            //  Main.clearpannel();
+            //   Formload.
+            // clearpannel();
+            clearpannel();
+
+
+            View.BeePhieuThu accsup = new BeePhieuThu(this);
+            clearpannelload(accsup);
+            //    accsup.TopLevel = false;
+            //  accsup.AutoScroll = true;
+            //    panelmain.Controls.Add(accsup);
+            //    accsup.Show();
+
+            //   }
+            #endregion
+
+        }
+
+        private void kiểmKêToolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void phiếuXuấtKhoToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void phiếuXuấtKhoToolStripMenuItem1_Click_1(object sender, EventArgs e)
+        {
+
+            #region//BeeKhophieuxuat
+
+
+            //  this.Close();
+          //  this.main1.clearpannel();
+            clearpannel();
+
+
+            View.BeeKhophieuxuat BeeKhophieuxuat = new BeeKhophieuxuat(this);
+            this.clearpannelload(BeeKhophieuxuat);
+
+
+
+            #endregion
+
+        }
+
+        private void phiếuNhậpKhoToolStripMenuItem1_Click_1(object sender, EventArgs e)
+        {
+
+            #region//BeeKhophieunhap
+
+
+            //  this.Close();
+            this.clearpannel();
+
+
+            View.BeeKhophieunhap BeeKhophieunhap = new BeeKhophieunhap(this);
+            this.clearpannelload(BeeKhophieunhap);
+
+
+
+            #endregion
+
+        }
+
+        private void báoCáoNhậpXuấtTồnKhoToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+
+            #region//bcxuatnhapton
+
+
+            Model.Soketoan.sotonghopbaocaonhapxuatton();
+
+            #endregion
+
+        }
+
+        private void bảngCĐKTToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+            #region//cdktoan format
+            //if (name == "tmphieuthu")
+            //{
+
+            //  Main.clearpannel();
+            //   Formload.
+            // clearpannel();
+            clearpannel();
+
+
+            View.BeeformatCDKT accsup = new BeeformatCDKT(this);
+            clearpannelload(accsup);
+            //    accsup.TopLevel = false;
+            //  accsup.AutoScroll = true;
+            //    panelmain.Controls.Add(accsup);
+            //    accsup.Show();
+
+            //   }
+            #endregion
+
+
+
+
+
+
 
 
         }

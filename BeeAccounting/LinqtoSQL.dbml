@@ -28,6 +28,14 @@
       <Column Name="Macty" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
     </Type>
   </Table>
+  <Table Name="dbo.CDKT200format" Member="CDKT200formats">
+    <Type Name="CDKT200format">
+      <Column Name="machitieu" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="cachtinh" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ghichu" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
   <Table Name="dbo.CDKT200PS" Member="CDKT200Ps">
     <Type Name="CDKT200P">
       <Column Name="nam" Type="System.Int32" DbType="Int" CanBeNull="true" />
@@ -67,6 +75,14 @@
       <Column Name="laigiaomtrencphieu" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="username" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.KQKD200format" Member="KQKD200formats">
+    <Type Name="KQKD200format">
+      <Column Name="machitieu" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="cachtinh" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ghichu" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.LTTT200Dauky" Member="LTTT200Daukies">
@@ -507,6 +523,115 @@
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
     </Type>
   </Table>
+  <Table Name="dbo.RptPhatsinhcdkt200" Member="RptPhatsinhcdkt200s">
+    <Type Name="RptPhatsinhcdkt200">
+      <Column Name="matk" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="loainganhan" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="machitiet" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tPSNo" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="tPSCo" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="tPsNotruPSco" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="username" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="useRpt" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="tenchitiet" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="tentk" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Rptphieunhapkhodetail01" Member="Rptphieunhapkhodetail01s">
+    <Type Name="Rptphieunhapkhodetail01">
+      <Column Name="stt" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="username" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="tensanpham" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="masanpham" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="donvi" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="sophieunhap" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="soluongyeucau" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="soluongthucte" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dongia" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="thanhtien" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Rptphieunhapkhohead" Member="Rptphieunhapkhoheads">
+    <Type Name="Rptphieunhapkhohead">
+      <Column Name="tencongty" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="diachicongty" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="masothue" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="tengiamdoc" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="tenketoantruong" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="ngaychungtu" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="nguoigiao" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="nguoilapphieu" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="nhaptaikho" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="diachikho" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="sotienbangchu" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="sochungtugoc" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="username" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="tkno" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="tkco" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="theodonhang" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="phieunhapso" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Rptphieuxuatkhodetail01" Member="Rptphieuxuatkhodetail01s">
+    <Type Name="Rptphieuxuatkhodetail01">
+      <Column Name="stt" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="username" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="tensanpham" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="masanpham" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="donvi" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="sophieu" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="soluongyeucau" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="soluongthucte" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dongia" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="thanhtien" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Rptphieuxuatkhohead" Member="Rptphieuxuatkhoheads">
+    <Type Name="Rptphieuxuatkhohead">
+      <Column Name="tencongty" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="diachicongty" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="masothue" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="tengiamdoc" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="tenketoantruong" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="ngaychungtu" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="nguoinhan" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="nguoilapphieu" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="xuattaikho" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="diachibophan" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="sotienbangchu" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="sochungtugoc" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="username" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="tkno" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="tkco" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="lydoxuat" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="phieuso" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="sotien" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RPtsoQuy" Member="RPtsoQuys">
+    <Type Name="RPtsoQuy">
+      <Column Name="loaiquy" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="tungay" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="denngay" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="nodauky" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="codauky" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="psno" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="psco" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="cocuoiky" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="nocuoiky" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="tencongty" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="masothue" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="diachicongty" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="username" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="taikhoan" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
   <Table Name="dbo.RPtheadCDKT200mau01" Member="RPtheadCDKT200mau01s">
     <Type Name="RPtheadCDKT200mau01">
       <Column Name="nam" Type="System.String" DbType="NVarChar(4)" CanBeNull="true" />
@@ -637,115 +762,6 @@
       <Column Name="tungay" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="denngay" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="kho" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.RptPhatsinhcdkt200" Member="RptPhatsinhcdkt200s">
-    <Type Name="RptPhatsinhcdkt200">
-      <Column Name="matk" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
-      <Column Name="loainganhan" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Column Name="machitiet" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="tPSNo" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="tPSCo" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="tPsNotruPSco" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="username" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="useRpt" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
-      <Column Name="tenchitiet" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
-      <Column Name="tentk" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.Rptphieunhapkhodetail01" Member="Rptphieunhapkhodetail01s">
-    <Type Name="Rptphieunhapkhodetail01">
-      <Column Name="stt" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="username" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="tensanpham" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
-      <Column Name="masanpham" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
-      <Column Name="donvi" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="sophieunhap" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="soluongyeucau" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="soluongthucte" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="dongia" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="thanhtien" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-    </Type>
-  </Table>
-  <Table Name="dbo.Rptphieunhapkhohead" Member="Rptphieunhapkhoheads">
-    <Type Name="Rptphieunhapkhohead">
-      <Column Name="tencongty" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
-      <Column Name="diachicongty" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
-      <Column Name="masothue" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
-      <Column Name="tengiamdoc" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
-      <Column Name="tenketoantruong" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
-      <Column Name="ngaychungtu" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="nguoigiao" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
-      <Column Name="nguoilapphieu" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
-      <Column Name="nhaptaikho" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
-      <Column Name="diachikho" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
-      <Column Name="sotienbangchu" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
-      <Column Name="sochungtugoc" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
-      <Column Name="username" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="tkno" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
-      <Column Name="tkco" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
-      <Column Name="theodonhang" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
-      <Column Name="phieunhapso" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.Rptphieuxuatkhodetail01" Member="Rptphieuxuatkhodetail01s">
-    <Type Name="Rptphieuxuatkhodetail01">
-      <Column Name="stt" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="username" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="tensanpham" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
-      <Column Name="masanpham" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
-      <Column Name="donvi" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="sophieu" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="soluongyeucau" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="soluongthucte" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="dongia" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="thanhtien" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-    </Type>
-  </Table>
-  <Table Name="dbo.Rptphieuxuatkhohead" Member="Rptphieuxuatkhoheads">
-    <Type Name="Rptphieuxuatkhohead">
-      <Column Name="tencongty" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
-      <Column Name="diachicongty" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
-      <Column Name="masothue" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
-      <Column Name="tengiamdoc" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
-      <Column Name="tenketoantruong" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
-      <Column Name="ngaychungtu" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="nguoinhan" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
-      <Column Name="nguoilapphieu" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
-      <Column Name="xuattaikho" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
-      <Column Name="diachibophan" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
-      <Column Name="sotienbangchu" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
-      <Column Name="sochungtugoc" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
-      <Column Name="username" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="tkno" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
-      <Column Name="tkco" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
-      <Column Name="lydoxuat" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
-      <Column Name="phieuso" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="sotien" Type="System.Double" DbType="Float" CanBeNull="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.RPtsoQuy" Member="RPtsoQuys">
-    <Type Name="RPtsoQuy">
-      <Column Name="loaiquy" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="tungay" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="denngay" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="nodauky" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="codauky" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="psno" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="psco" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="cocuoiky" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="nocuoiky" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="tencongty" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
-      <Column Name="masothue" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="diachicongty" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
-      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="username" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="taikhoan" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.tbl_congty" Member="tbl_congties">
