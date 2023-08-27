@@ -157,6 +157,12 @@
     <Compile Include="View\Hethong\BeeformatCDKT.Designer.cs">
       <DependentUpon>BeeformatCDKT.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Hethong\ThemtktinhCDKT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Hethong\ThemtktinhCDKT.Designer.cs">
+      <DependentUpon>ThemtktinhCDKT.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\StringExtensions.cs" />
     <Compile Include="View\Formview\Beeviewandchoose.cs">
       <SubType>Form</SubType>
@@ -601,6 +607,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Hethong\BeeformatCDKT.resx">
       <DependentUpon>BeeformatCDKT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Hethong\ThemtktinhCDKT.resx">
+      <DependentUpon>ThemtktinhCDKT.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Khothanhpham\BeeDanhsachsanpham.resx">
       <DependentUpon>BeeDanhsachsanpham.cs</DependentUpon>

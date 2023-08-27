@@ -2290,170 +2290,6 @@ namespace BEEACCOUNT.View
 
         private void tbchontkno_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar == (char)Keys.Enter)
-            {
-                //  string taikhoan = (cbtkno.SelectedItem as ComboboxItem).Value.ToString();
-                string seaching = tbchontkco.Text.Trim();
-
-                string connection_string = Utils.getConnectionstr();
-                LinqtoSQLDataContext db = new LinqtoSQLDataContext(connection_string);
-
-                var danhsachtaikhoan = from c in db.tbl_dstaikhoans
-                                       where c.matk.Contains(seaching)
-                                       && c.loaitkid == "tienmat"//
-                                       select new
-                                       {
-                                           Mã_tài_khoản = c.matk,
-                                           Tên_tài_khoản = c.tentk,
-                                           c.id
-
-                                       };
-                if (danhsachtaikhoan.Count() > 0)
-                {
-                    Beeviewandchoose chontaikhoan = new Beeviewandchoose("CHỌN TÀI KHOẢN KẾ TOÁN", danhsachtaikhoan, db);
-                    chontaikhoan.ShowDialog();
-                    int idtaikhoan = chontaikhoan.value;
-                    bool kq = chontaikhoan.kq;
-
-
-                    if (kq)
-                    {
-                        var taikhoanchon = (from c in db.tbl_dstaikhoans
-                                            where c.id == idtaikhoan
-                                            select c).FirstOrDefault();
-
-
-                        this.tkco = taikhoanchon.matk;
-                        lbtkco.Text = taikhoanchon.matk + ": " + taikhoanchon.tentk.Trim();
-
-
-                        #region chọn tài khoản chi tiết
-                        //var detail = (from c in db.tbl_dstaikhoans
-                        //              where c.matk.Trim() == tkno.Trim()
-                        //              select c).FirstOrDefault();
-
-
-
-                        if (taikhoanchon.loaichitiet == true) // là co theo doi chi tiết
-                        {
-
-                            List<beeselectinput.ComboboxItem> listcb = new List<beeselectinput.ComboboxItem>();
-                            var rs = from tbl_machitiettk in db.tbl_machitiettks
-                                     where tbl_machitiettk.matk.Trim() == this.tkco.Trim()
-                                     orderby tbl_machitiettk.machitiet
-                                     select tbl_machitiettk;
-                            if (rs.Count() > 0)
-                            {
-
-
-                                foreach (var item2 in rs)
-                                {
-                                    beeselectinput.ComboboxItem cb = new beeselectinput.ComboboxItem();
-                                    cb.Value = item2.machitiet.ToString().Trim();
-                                    cb.Text = item2.tenchitiet; //item2.machitiet.ToString().Trim() + ": " +
-                                    listcb.Add(cb);
-                                }
-
-
-                                FormCollection fc = System.Windows.Forms.Application.OpenForms;
-
-                                bool kq2 = false;
-                                foreach (Form frm in fc)
-                                {
-                                    if (frm.Text == "beeselectinput")
-
-
-                                    {
-                                        kq2 = true;
-                                        frm.Focus();
-
-                                    }
-                                }
-
-                                if (!kq2)
-                                {
-                                    //    View.BeeSeachtwofield sheaching = new BeeSeachtwofield(this, "Người nôp", "Địa chỉ", "Nội dung");
-                                    //   sheaching.Show();
-
-
-                                    View.beeselectinput selecdetail = new beeselectinput("Chọn chi tiết tài khoản ", listcb);
-
-                                    selecdetail.ShowDialog();
-                                    bool chon = selecdetail.kq;
-                                    if (chon)
-                                    {
-                                        string machitiet = selecdetail.value;
-                                        string namechitiet = selecdetail.valuetext;
-                                        //     lb_machitietco.Visible = true;
-
-                                        lbtenchitietco.Visible = true;
-                                        lb_machitietco.Visible = true;
-                                        this.tkcochitiet = int.Parse(selecdetail.value.ToString());
-                                        //     lb_machitietco.Text = machitiet;
-                                        lbtenchitietco.Text = namechitiet;
-                                        lb_machitietco.Text = machitiet;
-                                    }
-
-                                }
-                                else
-                                {
-                                    this.tkcochitiet = -1;// int.Parse(selecdetail.value.ToString());
-                                                          //     lb_machitietco.Text = machitiet;
-                                    lbtenchitietco.Text = "";//namechitiet;
-                                    lb_machitietco.Text = "";
-                                }
-                                //  selecdetail.Text;
-
-                            }
-                            else
-                            {
-                                this.tkcochitiet = -1;// int.Parse(selecdetail.value.ToString());
-                                                      //     lb_machitietco.Text = machitiet;
-                                lbtenchitietco.Text = "";//namechitiet;
-                                lb_machitietco.Text = "";
-                            }
-
-
-
-
-                        }
-                        else
-                        {
-                            this.tkcochitiet = -1;// int.Parse(selecdetail.value.ToString());
-                                                  //     lb_machitietco.Text = machitiet;
-                            lbtenchitietco.Text = "";//namechitiet;
-                            lb_machitietco.Text = "";
-                        }
-
-
-
-                        #endregion
-
-                        txtsophieu.Focus();
-                    }
-                    else
-                    {
-                        this.tkco = "";
-                        this.tkcochitiet = -1;
-                        lbtkco.Text = "";
-                        lb_machitietco.Text = "";
-                        tbchontkco.Focus();
-                    }
-
-
-                } // nếu danh sách tài khoản có
-
-                txtsophieu.Focus();
-
-                //      xx
-
-            }// end chon tai khoan no
-
-
-
-
-
-
 
         }
 
@@ -2476,6 +2312,16 @@ namespace BEEACCOUNT.View
         private void cbnam_SelectedValueChanged(object sender, EventArgs e)
         {
             dataGridViewListphieuchi.DataSource = Model.Phieuthuchi.LisDanhSachphieuchi("PC", cbthang.Text, cbnam.Text);
+
+        }
+
+        private void tbchontkco_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbchontkco_KeyPress(object sender, KeyPressEventArgs e)
+        {
 
         }
     }

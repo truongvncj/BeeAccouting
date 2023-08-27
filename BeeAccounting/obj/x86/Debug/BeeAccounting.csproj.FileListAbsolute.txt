@@ -620,3 +620,4 @@ D:\Githup26032021\BeeAccouting\BeeAccounting\obj\x86\Debug\BeeAccounting.csprojR
 D:\Githup26032021\BeeAccouting\BeeAccounting\obj\x86\Debug\RdlCompile.cache
 D:\Githup26032021\BeeAccouting\BeeAccounting\obj\x86\Debug\RdlCompile.compiled
 D:\Githup26032021\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.BeeformatCDKT.resources
+D:\Githup26032021\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.ThemtktinhCDKT.resources
