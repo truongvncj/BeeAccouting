@@ -30,18 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ThemtktinhCDKT));
             this.bt_themvao = new System.Windows.Forms.Button();
-            this.tbchontkco = new System.Windows.Forms.TextBox();
+            this.tbchon = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.ckListcongtru = new System.Windows.Forms.CheckedListBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.ckListNoco = new System.Windows.Forms.CheckedListBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -61,15 +57,15 @@
             this.bt_themvao.Click += new System.EventHandler(this.bt_themvao_Click);
             this.bt_themvao.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.bt_themvao_KeyPress);
             // 
-            // tbchontkco
+            // tbchon
             // 
-            this.tbchontkco.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbchontkco.Location = new System.Drawing.Point(153, 32);
-            this.tbchontkco.Name = "tbchontkco";
-            this.tbchontkco.Size = new System.Drawing.Size(235, 24);
-            this.tbchontkco.TabIndex = 0;
-            this.tbchontkco.TextChanged += new System.EventHandler(this.tbchontkco_TextChanged);
-            this.tbchontkco.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbchontkco_KeyPress_1);
+            this.tbchon.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbchon.Location = new System.Drawing.Point(153, 32);
+            this.tbchon.Name = "tbchon";
+            this.tbchon.Size = new System.Drawing.Size(235, 24);
+            this.tbchon.TabIndex = 0;
+            this.tbchon.TextChanged += new System.EventHandler(this.tbchontkco_TextChanged);
+            this.tbchon.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbchontkco_KeyPress_1);
             // 
             // label13
             // 
@@ -83,8 +79,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.checkBox2);
-            this.groupBox2.Controls.Add(this.checkBox1);
+            this.groupBox2.Controls.Add(this.ckListcongtru);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Location = new System.Drawing.Point(12, 100);
@@ -93,25 +88,18 @@
             this.groupBox2.TabIndex = 81;
             this.groupBox2.TabStop = false;
             // 
-            // checkBox2
+            // ckListcongtru
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(110, 47);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(42, 17);
-            this.checkBox2.TabIndex = 79;
-            this.checkBox2.Text = "Trừ";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(110, 24);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(51, 17);
-            this.checkBox1.TabIndex = 78;
-            this.checkBox1.Text = "Cộng";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.ckListcongtru.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckListcongtru.FormattingEnabled = true;
+            this.ckListcongtru.Items.AddRange(new object[] {
+            "Cộng",
+            "Trừ"});
+            this.ckListcongtru.Location = new System.Drawing.Point(81, 19);
+            this.ckListcongtru.Name = "ckListcongtru";
+            this.ckListcongtru.Size = new System.Drawing.Size(106, 46);
+            this.ckListcongtru.TabIndex = 85;
+            this.ckListcongtru.SelectedIndexChanged += new System.EventHandler(this.ckListcongtru_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -135,63 +123,32 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.checkBox6);
-            this.groupBox3.Controls.Add(this.checkBox5);
-            this.groupBox3.Controls.Add(this.checkBox3);
-            this.groupBox3.Controls.Add(this.checkBox4);
+            this.groupBox3.Controls.Add(this.ckListNoco);
             this.groupBox3.Controls.Add(this.label5);
             this.groupBox3.Controls.Add(this.label6);
-            this.groupBox3.Location = new System.Drawing.Point(278, 100);
+            this.groupBox3.Location = new System.Drawing.Point(278, 99);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(260, 129);
+            this.groupBox3.Size = new System.Drawing.Size(260, 96);
             this.groupBox3.TabIndex = 82;
             this.groupBox3.TabStop = false;
             // 
-            // checkBox6
+            // ckListNoco
             // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.Location = new System.Drawing.Point(138, 93);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(56, 17);
-            this.checkBox6.TabIndex = 81;
-            this.checkBox6.Text = "PS Có";
-            this.checkBox6.UseVisualStyleBackColor = true;
-            // 
-            // checkBox5
-            // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(138, 70);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(57, 17);
-            this.checkBox5.TabIndex = 80;
-            this.checkBox5.Text = "PS Nợ";
-            this.checkBox5.UseVisualStyleBackColor = true;
-            // 
-            // checkBox3
-            // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(138, 47);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(55, 17);
-            this.checkBox3.TabIndex = 79;
-            this.checkBox3.Text = "Dư có";
-            this.checkBox3.UseVisualStyleBackColor = true;
-            // 
-            // checkBox4
-            // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(138, 24);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(57, 17);
-            this.checkBox4.TabIndex = 78;
-            this.checkBox4.Text = "Dư Nợ";
-            this.checkBox4.UseVisualStyleBackColor = true;
+            this.ckListNoco.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckListNoco.FormattingEnabled = true;
+            this.ckListNoco.Items.AddRange(new object[] {
+            "Dư nợ",
+            "Dư Có"});
+            this.ckListNoco.Location = new System.Drawing.Point(128, 24);
+            this.ckListNoco.Name = "ckListNoco";
+            this.ckListNoco.Size = new System.Drawing.Size(109, 46);
+            this.ckListNoco.TabIndex = 85;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(6, 19);
+            this.label5.Location = new System.Drawing.Point(6, 28);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(116, 18);
             this.label5.TabIndex = 73;
@@ -233,7 +190,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(560, 322);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.tbchontkco);
+            this.Controls.Add(this.tbchon);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtchuoi);
             this.Controls.Add(this.groupBox3);
@@ -244,7 +201,7 @@
             this.MinimizeBox = false;
             this.Name = "ThemtktinhCDKT";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Chỉ tiêu tài khoản ";
+            this.Text = "Tài khoản";
             this.Deactivate += new System.EventHandler(this.BeeHtoansocaidoiungphieuthu_Deactivate);
             this.Load += new System.EventHandler(this.BeeHtoansocaidoiungphieuthu_Load);
             this.groupBox2.ResumeLayout(false);
@@ -259,21 +216,17 @@
         #endregion
 
         private System.Windows.Forms.Button bt_themvao;
-        private System.Windows.Forms.TextBox tbchontkco;
+        private System.Windows.Forms.TextBox tbchon;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.CheckBox checkBox6;
-        private System.Windows.Forms.CheckBox checkBox5;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtchuoi;
+        private System.Windows.Forms.CheckedListBox ckListcongtru;
+        private System.Windows.Forms.CheckedListBox ckListNoco;
     }
 }

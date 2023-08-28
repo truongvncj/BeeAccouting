@@ -51,43 +51,11 @@ namespace BEEACCOUNT.View
         }
 
 
-
         void Control_KeyPress(object sender, KeyEventArgs e)
         {
 
 
-            if (e.KeyCode == Keys.F3)
-            {
 
-
-
-
-
-                FormCollection fc = System.Windows.Forms.Application.OpenForms;
-
-                bool kq = false;
-                foreach (Form frm in fc)
-                {
-                    if (frm.Text == "BeeSeach")
-
-
-                    {
-                        kq = true;
-                        frm.Focus();
-
-                    }
-                }
-
-                if (!kq)
-                {
-                    //View.BeeSeachtwofield sheaching = new BeeSeachtwofield(this, "Người nôp", "Địa chỉ", "Nội dung");
-                    //sheaching.Show();
-                }
-
-
-
-
-            }
 
 
             if (e.Control == true && e.KeyCode == Keys.N)
@@ -102,9 +70,7 @@ namespace BEEACCOUNT.View
                 bool kq = false;
                 foreach (Form frm in fc)
                 {
-                    if (frm.Text == "BeeHtoansocaidoiung")
-
-
+                    if (frm.Text == "Tài khoản")
                     {
                         kq = true;
                         frm.Focus();
@@ -114,7 +80,8 @@ namespace BEEACCOUNT.View
 
                 if (!kq)
                 {
-
+                    View.ThemtktinhCDKT ThemtktinhCDKT = new ThemtktinhCDKT(this);
+                    ThemtktinhCDKT.Show();
                 }
 
 
