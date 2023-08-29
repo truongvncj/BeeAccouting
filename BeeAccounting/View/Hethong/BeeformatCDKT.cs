@@ -969,7 +969,11 @@ namespace BEEACCOUNT.View
                 if (cacttinh != null)
                 {
                     txtchuoicachtinh.Text = cacttinh;
-   
+
+                }
+                else
+                {
+                    txtchuoicachtinh.Text = "";
                 }
              
 
@@ -1003,6 +1007,42 @@ namespace BEEACCOUNT.View
         private void txtmachitieu_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void dataGridViewformatBCTC_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridViewformatBCTC.RowCount > 0)
+            {
+
+
+
+
+                if (this.dataGridViewformatBCTC.CurrentCell.RowIndex >= 0)
+                {
+                    string machitieu = this.dataGridViewformatBCTC.Rows[this.dataGridViewformatBCTC.CurrentCell.RowIndex].Cells["Mã_chỉ_tiêu"].Value.ToString();
+
+
+                    string connection_string = Utils.getConnectionstr();
+                    LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+                 
+                    var chitieuchon = (from p in dc.CDKT200formats
+                                       where p.machitieu == machitieu
+                                       select p).FirstOrDefault();
+
+                    if (chitieuchon != null)
+                    {
+                        txtmachitieu.Text = chitieuchon.machitieu;
+                        txtchuoicachtinh.Text = chitieuchon.cachtinh;
+                    }
+
+                }
+                
+
+
+
+            }
+            
         }
     }
 }

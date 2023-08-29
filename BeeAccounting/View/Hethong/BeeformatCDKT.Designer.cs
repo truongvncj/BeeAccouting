@@ -39,12 +39,12 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dataGridViewformatBCTC = new System.Windows.Forms.DataGridView();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.txtmachitieu = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtchuoicachtinh = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.txtchuoicachtinh = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtmachitieu = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewformatBCTC)).BeginInit();
@@ -123,6 +123,7 @@
             this.dataGridViewformatBCTC.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridViewformatBCTC.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -151,10 +152,11 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewformatBCTC.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridViewformatBCTC.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.dataGridViewformatBCTC.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dataGridViewformatBCTC.Size = new System.Drawing.Size(1059, 443);
             this.dataGridViewformatBCTC.TabIndex = 3;
             this.dataGridViewformatBCTC.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewTkCo_CellEndEdit);
+            this.dataGridViewformatBCTC.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewformatBCTC_CellDoubleClick);
             this.dataGridViewformatBCTC.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewTkCo_CellEndEdit);
             this.dataGridViewformatBCTC.CellErrorTextChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewTkCo_CellErrorTextChanged);
             this.dataGridViewformatBCTC.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewTkCo_CellValueChanged);
@@ -181,6 +183,33 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1073, 537);
             this.panel4.TabIndex = 64;
+            // 
+            // txtmachitieu
+            // 
+            this.txtmachitieu.Location = new System.Drawing.Point(108, 20);
+            this.txtmachitieu.Name = "txtmachitieu";
+            this.txtmachitieu.Size = new System.Drawing.Size(143, 20);
+            this.txtmachitieu.TabIndex = 84;
+            this.txtmachitieu.TextChanged += new System.EventHandler(this.txtmachitieu_TextChanged);
+            this.txtmachitieu.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtmachitieu_KeyPress);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(357, 18);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(202, 20);
+            this.label2.TabIndex = 63;
+            this.label2.Text = "CtrL + N  để thêm tài khoản";
+            // 
+            // txtchuoicachtinh
+            // 
+            this.txtchuoicachtinh.Location = new System.Drawing.Point(108, 52);
+            this.txtchuoicachtinh.Name = "txtchuoicachtinh";
+            this.txtchuoicachtinh.Size = new System.Drawing.Size(682, 20);
+            this.txtchuoicachtinh.TabIndex = 62;
+            this.txtchuoicachtinh.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtchuoicachtinh_KeyPress);
             // 
             // label7
             // 
@@ -210,33 +239,6 @@
             this.tabPage1.Size = new System.Drawing.Size(1081, 568);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // txtchuoicachtinh
-            // 
-            this.txtchuoicachtinh.Location = new System.Drawing.Point(108, 52);
-            this.txtchuoicachtinh.Name = "txtchuoicachtinh";
-            this.txtchuoicachtinh.Size = new System.Drawing.Size(682, 20);
-            this.txtchuoicachtinh.TabIndex = 62;
-            this.txtchuoicachtinh.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtchuoicachtinh_KeyPress);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(357, 18);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(202, 20);
-            this.label2.TabIndex = 63;
-            this.label2.Text = "CtrL + N  để thêm tài khoản";
-            // 
-            // txtmachitieu
-            // 
-            this.txtmachitieu.Location = new System.Drawing.Point(108, 20);
-            this.txtmachitieu.Name = "txtmachitieu";
-            this.txtmachitieu.Size = new System.Drawing.Size(143, 20);
-            this.txtmachitieu.TabIndex = 84;
-            this.txtmachitieu.TextChanged += new System.EventHandler(this.txtmachitieu_TextChanged);
-            this.txtmachitieu.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtmachitieu_KeyPress);
             // 
             // BeeformatCDKT
             // 
