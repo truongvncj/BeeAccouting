@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ThemtktinhCDKT));
             this.bt_themvao = new System.Windows.Forms.Button();
-            this.tbchon = new System.Windows.Forms.TextBox();
+            this.txtmatk = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.ckListcongtru = new System.Windows.Forms.CheckedListBox();
@@ -42,6 +42,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.txtchuoi = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtmachitieu = new System.Windows.Forms.TextBox();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
@@ -57,21 +59,21 @@
             this.bt_themvao.Click += new System.EventHandler(this.bt_themvao_Click);
             this.bt_themvao.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.bt_themvao_KeyPress);
             // 
-            // tbchon
+            // txtmatk
             // 
-            this.tbchon.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbchon.Location = new System.Drawing.Point(153, 32);
-            this.tbchon.Name = "tbchon";
-            this.tbchon.Size = new System.Drawing.Size(235, 24);
-            this.tbchon.TabIndex = 0;
-            this.tbchon.TextChanged += new System.EventHandler(this.tbchontkco_TextChanged);
-            this.tbchon.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbchontkco_KeyPress_1);
+            this.txtmatk.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtmatk.Location = new System.Drawing.Point(153, 55);
+            this.txtmatk.Name = "txtmatk";
+            this.txtmatk.Size = new System.Drawing.Size(235, 24);
+            this.txtmatk.TabIndex = 0;
+            this.txtmatk.TextChanged += new System.EventHandler(this.tbchontkco_TextChanged);
+            this.txtmatk.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbchontkco_KeyPress_1);
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(12, 35);
+            this.label13.Location = new System.Drawing.Point(12, 58);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(126, 18);
             this.label13.TabIndex = 82;
@@ -100,6 +102,7 @@
             this.ckListcongtru.Size = new System.Drawing.Size(106, 46);
             this.ckListcongtru.TabIndex = 85;
             this.ckListcongtru.SelectedIndexChanged += new System.EventHandler(this.ckListcongtru_SelectedIndexChanged);
+            this.ckListcongtru.SelectedValueChanged += new System.EventHandler(this.ckListcongtru_SelectedValueChanged);
             // 
             // label2
             // 
@@ -137,12 +140,13 @@
             this.ckListNoco.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ckListNoco.FormattingEnabled = true;
             this.ckListNoco.Items.AddRange(new object[] {
-            "Dư nợ",
+            "Dư Nợ",
             "Dư Có"});
             this.ckListNoco.Location = new System.Drawing.Point(128, 24);
             this.ckListNoco.Name = "ckListNoco";
             this.ckListNoco.Size = new System.Drawing.Size(109, 46);
             this.ckListNoco.TabIndex = 85;
+            this.ckListNoco.SelectedIndexChanged += new System.EventHandler(this.ckListNoco_SelectedIndexChanged);
             // 
             // label5
             // 
@@ -184,13 +188,34 @@
             this.txtchuoi.Size = new System.Drawing.Size(209, 24);
             this.txtchuoi.TabIndex = 83;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(12, 26);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(79, 18);
+            this.label1.TabIndex = 86;
+            this.label1.Text = "Mã chi tiêu";
+            // 
+            // txtmachitieu
+            // 
+            this.txtmachitieu.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtmachitieu.Location = new System.Drawing.Point(153, 23);
+            this.txtmachitieu.Name = "txtmachitieu";
+            this.txtmachitieu.ReadOnly = true;
+            this.txtmachitieu.Size = new System.Drawing.Size(119, 24);
+            this.txtmachitieu.TabIndex = 85;
+            // 
             // ThemtktinhCDKT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(560, 322);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtmachitieu);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.tbchon);
+            this.Controls.Add(this.txtmatk);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtchuoi);
             this.Controls.Add(this.groupBox3);
@@ -216,7 +241,7 @@
         #endregion
 
         private System.Windows.Forms.Button bt_themvao;
-        private System.Windows.Forms.TextBox tbchon;
+        private System.Windows.Forms.TextBox txtmatk;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -228,5 +253,7 @@
         private System.Windows.Forms.TextBox txtchuoi;
         private System.Windows.Forms.CheckedListBox ckListcongtru;
         private System.Windows.Forms.CheckedListBox ckListNoco;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtmachitieu;
     }
 }

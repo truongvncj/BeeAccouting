@@ -2610,5 +2610,10 @@ namespace BEEACCOUNT.View
             dataGridViewListphieuchi.DataSource = Model.Uynhiemchi.LisDanhSachuynhiemchi("UNC", cbthang.Text, cbnam.Text);
 
         }
+
+        private void tbchontkco_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

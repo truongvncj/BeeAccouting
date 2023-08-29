@@ -15,13 +15,15 @@ namespace BEEACCOUNT.View
     {
         // View.BeeformatCDKT BeeformatCDKT;
 
-
+        View.BeeformatCDKT formatcdkt;
 
         public string matk { get; set; }
 
         public string congtru { get; set; }
 
-        public string laynohayco { get; set; }
+        public string Noco { get; set; }
+
+        public string txtaddingtaikhoan { get; set; }
         public bool click { get; set; }
 
         public class ComboboxItem
@@ -46,32 +48,28 @@ namespace BEEACCOUNT.View
 
             InitializeComponent();
 
-            //  txtTongno.Text = phieuchi.pssotienno.ToString("#,#", CultureInfo.InvariantCulture);
-            // txtTongco.Text = phieuchi.pssotienco.ToString("#,#", CultureInfo.InvariantCulture);
-
-            //    this.KeyUp += new System.Windows.Forms.KeyEventHandler(Control_KeyPress);  // để đọc từ bàn phím phím tắt
-
-            // this.pssotienco = phieuchi.pssotienco;
-            //   this.pssotienno = phieuchi.pssotienno;
-
-            //  txtChenlech.Text = (-this.pssotienno + this.pssotienco).ToString("#,#", CultureInfo.InvariantCulture);
-
+           
             #region clearr to new
 
             this.matk = "";
 
             this.congtru = "";// { get; set; }
-            this.laynohayco = "";// { get; set; }
+            this.Noco = "N";// { get; set; }
 
             #endregion
 
 
 
+            this.formatcdkt = formatcdkt;
+
+            
 
             this.click = false;
-
-
-
+            
+            this.ckListcongtru.SetItemChecked(0, true);
+            this.ckListNoco.SetItemChecked(0, true);
+            
+          //  txtmachitieu.Text = formatcdkt.
 
 
         }
@@ -337,8 +335,14 @@ namespace BEEACCOUNT.View
         private void bt_themvao_Click(object sender, EventArgs e)
         {
 
+         //   txtchuoicachtinh.
 
+            //    formatcdkt.
+           
 
+            this.formatcdkt.reloadgridview();
+
+            this.formatcdkt.reloadtxtchuoitinh(txtchuoi.Text);
 
         }
 
@@ -356,7 +360,7 @@ namespace BEEACCOUNT.View
             {
                 //  cbsophieu.
                 e.Handled = true;
-                tbchon.Focus();
+                txtmatk.Focus();
 
 
             }
@@ -404,7 +408,7 @@ namespace BEEACCOUNT.View
             if (e.KeyChar == (char)Keys.Enter)
             {
                 //  string taikhoan = (cbtkno.SelectedItem as ComboboxItem).Value.ToString();
-                string seaching = tbchon.Text.Trim();
+                string seaching = txtmatk.Text.Trim();
                 //    MessageBox.Show("test" + seaching, "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 string connection_string = Utils.getConnectionstr();
@@ -438,7 +442,7 @@ namespace BEEACCOUNT.View
                         this.matk = taikhoanchon.matk;
 
                         //    tbchon.Text = taikhoanchon.matk;
-                        txtchuoi.Text = this.congtru + this.laynohayco + this.matk;
+                        txtchuoi.Text = this.congtru + this.Noco + this.matk;
 
 
                     }
@@ -448,7 +452,7 @@ namespace BEEACCOUNT.View
 
 
 
-                        tbchon.Focus();
+                        txtmatk.Focus();
                     }
 
 
@@ -469,8 +473,72 @@ namespace BEEACCOUNT.View
         private void ckListcongtru_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-         
-    
+            ckListcongtru.SetItemChecked(ckListcongtru.SelectedIndex, true);
+
+            for (int i = 0; i < ckListcongtru.Items.Count; i++)
+            {
+
+                if (ckListcongtru.SelectedIndex != i)
+                {
+                    ckListcongtru.SetItemChecked(i, false);      
+                }
+              
+            }
+
+            if (ckListcongtru.SelectedIndex == 0)
+            {
+                this.congtru = "";
+
+            }
+            else
+            {
+                this.congtru = "-";
+            }
+
+            txtchuoi.Text = this.congtru + this.Noco + this.matk;
+
+        }
+
+        private void ckListNoco_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ckListNoco.SetItemChecked(ckListNoco.SelectedIndex, true);
+
+            for (int i = 0; i < ckListNoco.Items.Count; i++)
+            {
+
+                if (ckListNoco.SelectedIndex != i)
+                {
+                    ckListNoco.SetItemChecked(i, false);
+                }
+
+              
+
+            }
+
+            if (ckListNoco.SelectedIndex == 0)
+            {
+                this.Noco = "N";
+
+            }
+            else
+            {
+                this.Noco = "C";
+            }
+
+            txtchuoi.Text = this.congtru + this.Noco + this.matk;
+
+
+        }
+
+        private void ckListcongtru_SelectedValueChanged(object sender, EventArgs e)
+        {
+
+           
+
+
+
+
+
         }
 
 

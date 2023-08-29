@@ -26,30 +26,42 @@ namespace BEEACCOUNT.View
         }
 
 
-        public void add_detailGridviewTkCophieuthu(tbl_Socai socaitemp)
+    
+        public void reloadgridview()
         {
 
-
-            string connection_string = Utils.getConnectionstr();
-            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
-
-
-         
+   
             dataGridViewformatBCTC.DataSource = Model.formatBCTC.LisDanhSachformat();
 
-
         }
 
-        public void reloadseachview(string nguoinop, string diachi, string noidung)
+        
+
+     public void reloadtxtchuoitinh(string chuoitinhmoi)
         {
 
 
+            if (txtchuoicachtinh.Text.Trim().Length ==0 )
+            {
 
-            //  dataGridViewformatBCTC.DataSource = Model.Phieuthuchi.reloadseachview("PT", nguoinop, diachi, noidung);
+                this.txtchuoicachtinh.Text = chuoitinhmoi.Trim();
 
+            }
+            else
+            {
+                if (!this.txtchuoicachtinh.Text.Contains(chuoitinhmoi.Trim()))
+                {
+                    this.txtchuoicachtinh.Text = this.txtchuoicachtinh.Text.Trim() + "," + chuoitinhmoi.Trim();
+  
+                }
+
+              
+
+            }
+
+           
 
         }
-
 
         void Control_KeyPress(object sender, KeyEventArgs e)
         {
@@ -106,7 +118,7 @@ namespace BEEACCOUNT.View
 
             string username = Utils.getusername();
 
-
+            this.txtchuoicachtinh.Text = "";
             #region load datenew
           
 
@@ -893,6 +905,104 @@ namespace BEEACCOUNT.View
         private void cbnam_SelectedValueChanged(object sender, EventArgs e)
         {
         
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            if (txtmachitieu.Text.Trim()=="")
+            {
+            MessageBox.Show("Bạn phải có mã chỉ tiêu trước !" , "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            else
+            {
+
+                string connection_string = Utils.getConnectionstr();
+                LinqtoSQLDataContext db = new LinqtoSQLDataContext(connection_string);
+
+
+                var formatcachtinh = (from c in db.CDKT200formats
+                                where c.machitieu.Trim() == txtmachitieu.Text.Trim()
+                                select c).FirstOrDefault();
+
+
+                if (formatcachtinh != null)
+                {
+                    formatcachtinh.cachtinh = txtchuoicachtinh.Text;
+                    db.SubmitChanges();
+
+
+                }
+                else
+                {
+                    CDKT200format chitieu = new CDKT200format();
+                    chitieu.cachtinh = txtchuoicachtinh.Text.Trim();
+                    chitieu.machitieu = txtmachitieu.Text.Trim();
+                    db.CDKT200formats.InsertOnSubmit(chitieu);
+                    db.SubmitChanges();
+                }
+
+
+                dataGridViewformatBCTC.DataSource = Model.formatBCTC.LisDanhSachformat();
+
+
+
+            }
+
+
+        }
+
+        private void txtmachitieu_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+
+                string connection_string = Utils.getConnectionstr();
+                LinqtoSQLDataContext db = new LinqtoSQLDataContext(connection_string);
+
+
+                var cacttinh = (from c in db.CDKT200formats
+                              where c.machitieu.Trim() == txtmachitieu.Text.Trim()
+                              select c.cachtinh).FirstOrDefault();
+
+
+                if (cacttinh != null)
+                {
+                    txtchuoicachtinh.Text = cacttinh;
+   
+                }
+             
+
+
+
+                txtchuoicachtinh.Focus();
+
+               
+
+
+            }
+        }
+
+        private void txtchuoicachtinh_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+
+
+                txtmachitieu.Focus();
+
+
+
+
+            }
+
+
+
+        }
+
+        private void txtmachitieu_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
