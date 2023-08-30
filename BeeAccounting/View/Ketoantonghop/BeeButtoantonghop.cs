@@ -178,70 +178,156 @@ namespace BEEACCOUNT.View
         {
 
 
-            if (e.KeyCode == Keys.F3)
-            {
-
-
-
-
-
-                FormCollection fc = System.Windows.Forms.Application.OpenForms;
-
-                bool kq = false;
-                foreach (Form frm in fc)
-                {
-                    if (frm.Text == "BeeSeach")
-
-
-                    {
-                        kq = true;
-                        frm.Focus();
-
-                    }
-                }
-
-                if (!kq)
-                {
-                    //               View.BeeSeachtwofield sheaching = new BeeSeachtwofield(this, "Người nôp", "Địa chỉ", "Nội dung");
-                    //             sheaching.Show();
-                }
-
-
-
-
-            }
-
+           
 
             if (e.Control == true && e.KeyCode == Keys.N)
             {
 
 
-
-
-
-                FormCollection fc = System.Windows.Forms.Application.OpenForms;
-
-                bool kq = false;
-                foreach (Form frm in fc)
+                //  bool check 
+                #region check chi tiết head phiếu
+                #region  chcek so phieu co ký tu khong
+                if (txtsophieu.Text == "")
                 {
-                    if (frm.Text == "BeeHtdoiungphieunhapkho")
+                    MessageBox.Show("Phiếu số chứng từ !", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    //   checkdinhkhoan = false;
+                    txtsophieu.Focus();
+                    return;
+
+                }
 
 
+                #endregion  check so phieu co ky tu không
+
+
+                #region check phieu so có lặp hay kkoog
+                //  txtsophieu
+                string connection_string = Utils.getConnectionstr();
+
+                LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+
+                var sophieunhaplap = (from p in dc.tbl_Socais
+                                      where (p.Sohieuchungtu.Trim() == txtsophieu.Text.ToString().Trim())
+                                      && p.manghiepvu == "TH"
+                                      select p).FirstOrDefault();
+
+                if (sophieunhaplap != null)
+                {
+
+                    MessageBox.Show("Số phiếu bị lặp !", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    //    checkdinhkhoan = false;
+                    txtsophieu.Focus();
+                    return;
+
+
+                }
+
+
+                #endregion check phieu so
+
+                if (datepickngayphieu.Value == null)
+                {
+                    MessageBox.Show("Bạn chưa chọn ngày chứng từ !", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    //  checkdinhkhoan = false;
+                    datepickngayphieu.Focus();
+                    return;
+
+                }
+
+
+                if (txtdiengiai.Text == "")
+                {
+                    MessageBox.Show("Kiểm tra diễn giải !", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    //    checkdinhkhoan = false;
+                    txtdiengiai.Focus();
+                    return;
+
+                }
+
+                if (txtdiengiai.Text.Trim().Length > 225)
+                {
+                    MessageBox.Show("Mục diễn giải chỉ cho phép nhập 225 ký tự !", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    //    checkdinhkhoan = false;
+                    txtdiengiai.Focus();
+                    return;
+
+                }
+
+                if (txtsotien.Text == "")
+                {
+                    MessageBox.Show("Bạn chưa nhập số tiền !", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    //    checkdinhkhoan = false;
+                    txtsotien.Focus();
+                    return;
+
+                }
+
+                if (txtsotien.Text != "" && Utils.IsValidnumber(txtsotien.Text.Replace(",", "")) == false)
+                {
+                    MessageBox.Show("Số tiền phải là số !", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    //    checkdinhkhoan = false;
+                    txtsotien.Focus();
+                    return;
+
+                }
+
+
+                if (dataGridViewdetail.RowCount - 1 > 0) // check số phiếu phải cùng số phiếu
+                {
+                    this.sobuttoan = dataGridViewdetail.Rows[0].Cells["Số_chứng_từ"].Value.ToString();
+                    if (this.sobuttoan != txtsophieu.Text)
                     {
-                        kq = true;
-                        frm.Focus();
+                        MessageBox.Show("Bạn kiểm tra lại số phiếu:  " + this.sobuttoan + " so với: " + txtsophieu.Text, "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
+                        txtsophieu.Focus();
+                        return;
                     }
+
                 }
 
-                if (!kq)
+                #endregion  end check
+
+
+                tbl_Socai socai = new tbl_Socai();
+
+                socai.Ngayctu = datepickngayphieu.Value;
+
+                socai.manghiepvu = "TH";
+                socai.Diengiai = txtdiengiai.Text.Truncate(225);
+                socai.Sohieuchungtu = txtsophieu.Text.Truncate(50);
+                socai.TkCo = this.tkco;
+                socai.TkNo = this.tkno;
+
+
+
+                socai.PsCo = this.sotienct;// double.Parse(txtsotien.Text.ToString());
+                socai.PsNo = this.sotienct;//.Parse(txtsotien.Text.ToString());
+
+                if (lb_machitietco.Text != "" && Utils.IsValidnumber(lb_machitietco.Text))
                 {
-                    //     View.BeeHtdoiungphieunhapkho BeeHtdoiungphieunhapkho = new BeeHtdoiungphieunhapkho(this, "Địa chỉ", "", "");
-                    //   BeeHtdoiungphieunhapkho.Show();
+                    socai.MaCTietTKCo = int.Parse(lb_machitietco.Text.ToString());
+                }
+                if (lb_machitietno.Text != "" && Utils.IsValidnumber(lb_machitietno.Text))
+                {
+                    socai.MaCTietTKNo = int.Parse(lb_machitietno.Text.ToString());
                 }
 
 
+                socai.tenchitietCo = lbtenchitietco.Text.ToString();
+                socai.tenchitietNo = lbtenchitietno.Text.ToString();
 
+
+
+
+                //      Model.hachtoantonghop.
+
+
+                add_detailGridviewBTThop(socai);
+                datepickngayphieu.Enabled = false;
+                txtsophieu.Enabled = false;
+                txtsotien.Text = "";
+                txtsophieu.Focus();
 
             }
 
@@ -2497,6 +2583,7 @@ namespace BEEACCOUNT.View
             datepickngayphieu.Enabled = false;
             txtsophieu.Enabled = false;
             txtsotien.Text = "";
+            txtsophieu.Focus();
             //   this.sotienct = 0;
 
         }
