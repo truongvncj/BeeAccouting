@@ -42,15 +42,13 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.txtchuoi = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtmachitieu = new System.Windows.Forms.TextBox();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // bt_themvao
             // 
-            this.bt_themvao.Location = new System.Drawing.Point(370, 287);
+            this.bt_themvao.Location = new System.Drawing.Point(387, 255);
             this.bt_themvao.Name = "bt_themvao";
             this.bt_themvao.Size = new System.Drawing.Size(103, 23);
             this.bt_themvao.TabIndex = 7;
@@ -62,7 +60,7 @@
             // txtmatk
             // 
             this.txtmatk.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtmatk.Location = new System.Drawing.Point(153, 55);
+            this.txtmatk.Location = new System.Drawing.Point(159, 18);
             this.txtmatk.Name = "txtmatk";
             this.txtmatk.Size = new System.Drawing.Size(235, 24);
             this.txtmatk.TabIndex = 0;
@@ -73,7 +71,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(12, 58);
+            this.label13.Location = new System.Drawing.Point(18, 21);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(126, 18);
             this.label13.TabIndex = 82;
@@ -84,7 +82,7 @@
             this.groupBox2.Controls.Add(this.ckListcongtru);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Location = new System.Drawing.Point(12, 100);
+            this.groupBox2.Location = new System.Drawing.Point(13, 63);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(260, 76);
             this.groupBox2.TabIndex = 81;
@@ -129,7 +127,7 @@
             this.groupBox3.Controls.Add(this.ckListNoco);
             this.groupBox3.Controls.Add(this.label5);
             this.groupBox3.Controls.Add(this.label6);
-            this.groupBox3.Location = new System.Drawing.Point(278, 99);
+            this.groupBox3.Location = new System.Drawing.Point(279, 62);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(260, 96);
             this.groupBox3.TabIndex = 82;
@@ -172,7 +170,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(20, 250);
+            this.label7.Location = new System.Drawing.Point(19, 178);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(82, 18);
             this.label7.TabIndex = 84;
@@ -182,38 +180,17 @@
             // 
             this.txtchuoi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtchuoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtchuoi.Location = new System.Drawing.Point(117, 247);
+            this.txtchuoi.Location = new System.Drawing.Point(116, 175);
             this.txtchuoi.Name = "txtchuoi";
             this.txtchuoi.ReadOnly = true;
             this.txtchuoi.Size = new System.Drawing.Size(209, 24);
             this.txtchuoi.TabIndex = 83;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 26);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(79, 18);
-            this.label1.TabIndex = 86;
-            this.label1.Text = "Mã chi tiêu";
-            // 
-            // txtmachitieu
-            // 
-            this.txtmachitieu.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtmachitieu.Location = new System.Drawing.Point(153, 23);
-            this.txtmachitieu.Name = "txtmachitieu";
-            this.txtmachitieu.ReadOnly = true;
-            this.txtmachitieu.Size = new System.Drawing.Size(119, 24);
-            this.txtmachitieu.TabIndex = 85;
-            // 
             // ThemtktinhCDKT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(560, 322);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtmachitieu);
+            this.ClientSize = new System.Drawing.Size(560, 310);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.txtmatk);
             this.Controls.Add(this.label7);
@@ -253,7 +230,5 @@
         private System.Windows.Forms.TextBox txtchuoi;
         private System.Windows.Forms.CheckedListBox ckListcongtru;
         private System.Windows.Forms.CheckedListBox ckListNoco;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtmachitieu;
     }
 }

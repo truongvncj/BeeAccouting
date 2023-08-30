@@ -2615,5 +2615,10 @@ namespace BEEACCOUNT.View
         {
 
         }
+
+        private void txttinhthanh_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

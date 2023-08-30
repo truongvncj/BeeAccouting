@@ -66,37 +66,39 @@ namespace BEEACCOUNT.View
         void Control_KeyPress(object sender, KeyEventArgs e)
         {
 
+           
 
 
 
 
-            if (e.Control == true && e.KeyCode == Keys.N)
+            if (e.Control == true && e.KeyCode == Keys.N )
             {
 
 
+              
+
+              
+                                    FormCollection fc = System.Windows.Forms.Application.OpenForms;
+
+                                    bool kq = false;
+                                    foreach (Form frm in fc)
+                                    {
+                                        if (frm.Text == "Tài khoản")
+                                        {
+                                            kq = true;
+                                            frm.Focus();
+
+                                        }
+                                    }
+
+                                    if (!kq)
+                                    {
+                                        View.ThemtktinhCDKT ThemtktinhCDKT = new ThemtktinhCDKT(this);
+                                        ThemtktinhCDKT.Show();
+                                    }
 
 
-
-                FormCollection fc = System.Windows.Forms.Application.OpenForms;
-
-                bool kq = false;
-                foreach (Form frm in fc)
-                {
-                    if (frm.Text == "Tài khoản")
-                    {
-                        kq = true;
-                        frm.Focus();
-
-                    }
-                }
-
-                if (!kq)
-                {
-                    View.ThemtktinhCDKT ThemtktinhCDKT = new ThemtktinhCDKT(this);
-                    ThemtktinhCDKT.Show();
-                }
-
-
+                
 
 
             }
@@ -979,7 +981,7 @@ namespace BEEACCOUNT.View
 
 
 
-                txtchuoicachtinh.Focus();
+               txtchuoicachtinh.Focus();
 
                
 
@@ -993,7 +995,7 @@ namespace BEEACCOUNT.View
             {
 
 
-                txtmachitieu.Focus();
+                txtchuoicachtinh.Focus();
 
 
 

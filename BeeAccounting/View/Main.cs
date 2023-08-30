@@ -4319,6 +4319,55 @@ namespace BEEACCOUNT.View
 
 
         }
+
+        private void bảngKQKDToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //  BeeformatKQKD
+
+
+            #region//cdktoan format
+            //if (name == "tmphieuthu")
+            //{
+
+            //  Main.clearpannel();
+            //   Formload.
+            // clearpannel();
+            clearpannel();
+
+
+            View.BeeformatKQKD accsup = new BeeformatKQKD(this);
+            clearpannelload(accsup);
+            //    accsup.TopLevel = false;
+            //  accsup.AutoScroll = true;
+            //    panelmain.Controls.Add(accsup);
+            //    accsup.Show();
+
+            //   }
+            #endregion
+
+
+
+
+        }
+
+        private void bảngLCTTToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // BeeformatLCTT
+
+            // clearpannel();
+            clearpannel();
+
+
+            View.BeeformatLCTT accsup = new BeeformatLCTT(this);
+            clearpannelload(accsup);
+            //    accsup.TopLevel = false;
+            //  accsup.AutoScroll = true;
+            //    panelmain.Controls.Add(accsup);
+            //    accsup.Show();
+
+            //   }
+
+        }
     }
 
 

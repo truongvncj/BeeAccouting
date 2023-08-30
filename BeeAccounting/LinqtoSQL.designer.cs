@@ -51,6 +51,9 @@ namespace BEEACCOUNT
     partial void InsertKQKD200format(KQKD200format instance);
     partial void UpdateKQKD200format(KQKD200format instance);
     partial void DeleteKQKD200format(KQKD200format instance);
+    partial void InsertLCTTTT200format(LCTTTT200format instance);
+    partial void UpdateLCTTTT200format(LCTTTT200format instance);
+    partial void DeleteLCTTTT200format(LCTTTT200format instance);
     partial void InsertLTTT200Dauky(LTTT200Dauky instance);
     partial void UpdateLTTT200Dauky(LTTT200Dauky instance);
     partial void DeleteLTTT200Dauky(LTTT200Dauky instance);
@@ -322,6 +325,14 @@ namespace BEEACCOUNT
 			get
 			{
 				return this.GetTable<KQKD200format>();
+			}
+		}
+		
+		public System.Data.Linq.Table<LCTTTT200format> LCTTTT200formats
+		{
+			get
+			{
+				return this.GetTable<LCTTTT200format>();
 			}
 		}
 		
@@ -2351,6 +2362,140 @@ namespace BEEACCOUNT
     #endregion
 		
 		public KQKD200format()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_machitieu", DbType="NVarChar(10)")]
+		public string machitieu
+		{
+			get
+			{
+				return this._machitieu;
+			}
+			set
+			{
+				if ((this._machitieu != value))
+				{
+					this.OnmachitieuChanging(value);
+					this.SendPropertyChanging();
+					this._machitieu = value;
+					this.SendPropertyChanged("machitieu");
+					this.OnmachitieuChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_cachtinh", DbType="NVarChar(255)")]
+		public string cachtinh
+		{
+			get
+			{
+				return this._cachtinh;
+			}
+			set
+			{
+				if ((this._cachtinh != value))
+				{
+					this.OncachtinhChanging(value);
+					this.SendPropertyChanging();
+					this._cachtinh = value;
+					this.SendPropertyChanged("cachtinh");
+					this.OncachtinhChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int id
+		{
+			get
+			{
+				return this._id;
+			}
+			set
+			{
+				if ((this._id != value))
+				{
+					this.OnidChanging(value);
+					this.SendPropertyChanging();
+					this._id = value;
+					this.SendPropertyChanged("id");
+					this.OnidChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ghichu", DbType="NVarChar(255)")]
+		public string ghichu
+		{
+			get
+			{
+				return this._ghichu;
+			}
+			set
+			{
+				if ((this._ghichu != value))
+				{
+					this.OnghichuChanging(value);
+					this.SendPropertyChanging();
+					this._ghichu = value;
+					this.SendPropertyChanged("ghichu");
+					this.OnghichuChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.LCTTTT200format")]
+	public partial class LCTTTT200format : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _machitieu;
+		
+		private string _cachtinh;
+		
+		private int _id;
+		
+		private string _ghichu;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnmachitieuChanging(string value);
+    partial void OnmachitieuChanged();
+    partial void OncachtinhChanging(string value);
+    partial void OncachtinhChanged();
+    partial void OnidChanging(int value);
+    partial void OnidChanged();
+    partial void OnghichuChanging(string value);
+    partial void OnghichuChanged();
+    #endregion
+		
+		public LCTTTT200format()
 		{
 			OnCreated();
 		}

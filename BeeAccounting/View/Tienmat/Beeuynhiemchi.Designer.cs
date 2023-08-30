@@ -401,6 +401,7 @@
             this.txttinhthanh.Name = "txttinhthanh";
             this.txttinhthanh.Size = new System.Drawing.Size(174, 24);
             this.txttinhthanh.TabIndex = 82;
+            this.txttinhthanh.TextChanged += new System.EventHandler(this.txttinhthanh_TextChanged);
             this.txttinhthanh.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txttinhthanh_KeyPress);
             // 
             // label9

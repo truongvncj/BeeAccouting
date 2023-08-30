@@ -85,6 +85,14 @@
       <Column Name="ghichu" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
     </Type>
   </Table>
+  <Table Name="dbo.LCTTTT200format" Member="LCTTTT200formats">
+    <Type Name="LCTTTT200format">
+      <Column Name="machitieu" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="cachtinh" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ghichu" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
   <Table Name="dbo.LTTT200Dauky" Member="LTTT200Daukies">
     <Type Name="LTTT200Dauky">
       <Column Name="nam" Type="System.Int32" DbType="Int" CanBeNull="true" />
