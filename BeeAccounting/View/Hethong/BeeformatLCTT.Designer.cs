@@ -45,6 +45,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewformatBCTC)).BeginInit();
@@ -153,7 +154,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewformatBCTC.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewformatBCTC.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            this.dataGridViewformatBCTC.Size = new System.Drawing.Size(1059, 443);
+            this.dataGridViewformatBCTC.Size = new System.Drawing.Size(665, 443);
             this.dataGridViewformatBCTC.TabIndex = 3;
             this.dataGridViewformatBCTC.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewTkCo_CellEndEdit);
             this.dataGridViewformatBCTC.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewformatBCTC_CellDoubleClick);
@@ -172,6 +173,7 @@
             this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.label3);
             this.panel4.Controls.Add(this.txtmachitieu);
             this.panel4.Controls.Add(this.button1);
             this.panel4.Controls.Add(this.label2);
@@ -183,6 +185,7 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1073, 537);
             this.panel4.TabIndex = 64;
+            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
             // txtmachitieu
             // 
@@ -207,7 +210,7 @@
             // 
             this.txtchuoicachtinh.Location = new System.Drawing.Point(108, 52);
             this.txtchuoicachtinh.Name = "txtchuoicachtinh";
-            this.txtchuoicachtinh.Size = new System.Drawing.Size(682, 20);
+            this.txtchuoicachtinh.Size = new System.Drawing.Size(616, 20);
             this.txtchuoicachtinh.TabIndex = 62;
             this.txtchuoicachtinh.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtchuoicachtinh_KeyPress);
             // 
@@ -239,6 +242,15 @@
             this.tabPage1.Size = new System.Drawing.Size(1081, 568);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(699, 153);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(369, 208);
+            this.label3.TabIndex = 88;
+            this.label3.Text = resources.GetString("label3.Text");
             // 
             // BeeformatLCTT
             // 
@@ -280,5 +292,6 @@
         private System.Windows.Forms.TextBox txtchuoicachtinh;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtmachitieu;
+        private System.Windows.Forms.Label label3;
     }
 }

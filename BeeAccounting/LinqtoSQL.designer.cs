@@ -28629,9 +28629,7 @@ namespace BEEACCOUNT
 		
 		private string _Sohieuchungtu;
 		
-		private System.Nullable<bool> _nganhan;
-		
-		private string _macty;
+		private System.Nullable<System.DateTime> _Ngaydenhan;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -28667,10 +28665,8 @@ namespace BEEACCOUNT
     partial void OnPsCoChanged();
     partial void OnSohieuchungtuChanging(string value);
     partial void OnSohieuchungtuChanged();
-    partial void OnnganhanChanging(System.Nullable<bool> value);
-    partial void OnnganhanChanged();
-    partial void OnmactyChanging(string value);
-    partial void OnmactyChanged();
+    partial void OnNgaydenhanChanging(System.Nullable<System.DateTime> value);
+    partial void OnNgaydenhanChanged();
     #endregion
 		
 		public tbl_Socai()
@@ -28978,42 +28974,22 @@ namespace BEEACCOUNT
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_nganhan", DbType="Bit")]
-		public System.Nullable<bool> nganhan
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Ngaydenhan", DbType="DateTime")]
+		public System.Nullable<System.DateTime> Ngaydenhan
 		{
 			get
 			{
-				return this._nganhan;
+				return this._Ngaydenhan;
 			}
 			set
 			{
-				if ((this._nganhan != value))
+				if ((this._Ngaydenhan != value))
 				{
-					this.OnnganhanChanging(value);
+					this.OnNgaydenhanChanging(value);
 					this.SendPropertyChanging();
-					this._nganhan = value;
-					this.SendPropertyChanged("nganhan");
-					this.OnnganhanChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_macty", DbType="NVarChar(50)")]
-		public string macty
-		{
-			get
-			{
-				return this._macty;
-			}
-			set
-			{
-				if ((this._macty != value))
-				{
-					this.OnmactyChanging(value);
-					this.SendPropertyChanging();
-					this._macty = value;
-					this.SendPropertyChanged("macty");
-					this.OnmactyChanged();
+					this._Ngaydenhan = value;
+					this.SendPropertyChanged("Ngaydenhan");
+					this.OnNgaydenhanChanged();
 				}
 			}
 		}

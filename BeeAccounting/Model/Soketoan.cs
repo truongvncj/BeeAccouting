@@ -1247,19 +1247,22 @@ namespace BEEACCOUNT.Model
 
                 View.Beeyearsellect Beeyearsellect = new View.Beeyearsellect();
                 Beeyearsellect.ShowDialog();
-
-                yearchon = int.Parse(Beeyearsellect.year);
-                chon = Beeyearsellect.chon;
-
-                if (chon)
+                if (Beeyearsellect.year != null)
                 {
+                    yearchon = int.Parse(Beeyearsellect.year);
+                    chon = Beeyearsellect.chon;
 
-                    View.BeeCDKT200nhapsocho xemsuacdkt = new BeeCDKT200nhapsocho(yearchon);
-                    xemsuacdkt.ShowDialog();
+                    if (chon)
+                    {
+
+                        View.BeeCDKT200nhapsocho xemsuacdkt = new BeeCDKT200nhapsocho(yearchon);
+                        xemsuacdkt.ShowDialog();
+                    }
+
+
+
                 }
-
-
-
+                
 
 
             }
