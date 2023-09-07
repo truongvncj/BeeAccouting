@@ -47,9 +47,12 @@ namespace BEEACCOUNT.View
                      {
                          //       Năm = p.nam,
                          Mã_tài_khoản = p.matk,
-
+                         Tên_tài_khoản = p.tentk,
                          Nợ_ĐK = p.Nodk,
                          Có_ĐK = p.Codk,
+                         Mã_chi_tiết = p.machitiet,
+                         Tên_TK_chi_tiết = p.tentkchitiet,
+
                          //    ID = p.id
 
                      };
@@ -344,11 +347,11 @@ namespace BEEACCOUNT.View
                     dc.CDPSdaukies.InsertOnSubmit(p);
                     dc.SubmitChanges();
                 }
-               
+
 
                 //    p.username = Utils.getname();
 
-              
+
             }
             MessageBox.Show("Đã cập nhật theo dữ liệu nhập vào ! ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Close();

@@ -254,16 +254,16 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>8.25187cm</Width>
+              <Width>7.03479cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>1.09052cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.54138cm</Width>
+              <Width>2.75846cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.7406cm</Width>
+              <Width>3.65182cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>3.32896cm</Width>
@@ -414,7 +414,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Thuyết </Value>
+                              <Value />
                               <Style>
                                 <FontStyle>Normal</FontStyle>
                                 <FontFamily>Times New Roman</FontFamily>
@@ -432,7 +432,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>minh</Value>
+                              <Value>Số cuối năm(3)</Value>
                               <Style>
                                 <FontStyle>Normal</FontStyle>
                                 <FontFamily>Times New Roman</FontFamily>
@@ -485,9 +485,14 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value xml:space="preserve"> </Value>
+                              <Value />
                               <Style>
+                                <FontStyle>Normal</FontStyle>
+                                <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                                <TextDecoration>None</TextDecoration>
+                                <Color>#000000</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -498,7 +503,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Số cuối năm (3)</Value>
+                              <Value>Số phát sinh năm nay (2)</Value>
                               <Style>
                                 <FontStyle>Normal</FontStyle>
                                 <FontFamily>Times New Roman</FontFamily>
@@ -1239,7 +1244,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox47">
+                    <Textbox Name="Textbox94">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -1258,7 +1263,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox47</rd:DefaultName>
+                      <rd:DefaultName>Textbox94</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>Solid</Style>
@@ -1289,6 +1294,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -1486,7 +1492,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox33">
+                    <Textbox Name="Textbox98">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -1505,7 +1511,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox33</rd:DefaultName>
+                      <rd:DefaultName>Textbox98</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>Solid</Style>
@@ -1572,7 +1578,6 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -29339,7 +29344,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
         <Top>4.44044cm</Top>
         <Left>0.46787cm</Left>
         <Height>74.90083cm</Height>
-        <Width>17.95333cm</Width>
+        <Width>17.86455cm</Width>
         <ZIndex>6</ZIndex>
         <Style>
           <Border>
@@ -29937,6 +29942,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox1</rd:DefaultName>
+          <Top>0cm</Top>
           <Left>0.46787cm</Left>
           <Height>0.6cm</Height>
           <Width>2.5cm</Width>

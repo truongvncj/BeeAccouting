@@ -251,6 +251,7 @@
             this.txtsotienno.ReadOnly = true;
             this.txtsotienno.Size = new System.Drawing.Size(176, 24);
             this.txtsotienno.TabIndex = 63;
+            this.txtsotienno.TextChanged += new System.EventHandler(this.txtsotienno_TextChanged);
             // 
             // label15
             // 

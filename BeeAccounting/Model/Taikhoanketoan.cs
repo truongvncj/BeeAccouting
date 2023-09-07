@@ -33,8 +33,8 @@ namespace BEEACCOUNT.Model
                          Mã_tài_khoản_cấp_trên = tbl_dstaikhoan.matktren,
                          Cấp_tài_khoản = tbl_dstaikhoan.captk,
                          Theo_dõi_chi_tiết = tbl_dstaikhoan.loaichitiet,
-                         Dư_Nợ_đầu_kỳ = tbl_dstaikhoan.nodk,
-                         Dư_Có_đầu_kỳ = tbl_dstaikhoan.codk,
+                       //  Dư_Nợ_đầu_kỳ = tbl_dstaikhoan.nodk,
+                      //   Dư_Có_đầu_kỳ = tbl_dstaikhoan.codk,
 
                  
 
@@ -91,8 +91,8 @@ namespace BEEACCOUNT.Model
                 tk.captk = captk;
                 tk.matktren = tkcaptren;
                 tk.loaichitiet = chitiettheodoi;
-                tk.nodk = nodk;
-                tk.codk = codk;
+             //   tk.nodk = nodk;
+            //    tk.codk = codk;
 
                 db.tbl_dstaikhoans.InsertOnSubmit(tk);
                 db.SubmitChanges();

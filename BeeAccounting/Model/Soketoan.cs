@@ -335,29 +335,35 @@ namespace BEEACCOUNT.Model
 
 
                     headSocai.taikhoan = tentaikhoan.Trim(); //mataikhoan.Trim() + "-" + 
-                                                             //     headSocai.tencongty = Model.Congty.getnamecongty(macty);
+                    //     headSocai.tencongty = Model.Congty.getnamecongty(macty);
                     headSocai.username = username;
                     //   headSocai.diachicongty = Model.Congty.getdiachicongty(macty);
                     //  headSocai.masothue = Model.Congty.getmasothuecongty(macty);
                     headSocai.tungay = fromdate;
                     headSocai.denngay = todate;
 
+                    //     && tbl_Socai.Ngayctu >=   new DateTime(9999, 12, 31)
 
 
                     headSocai.codauky = (from tbl_Socai in dc.tbl_Socais
                                          where tbl_Socai.Ngayctu < fromdate
+                                         && tbl_Socai.Ngayctu >= new DateTime(fromdate.Year, 01, 01)
+
                                          && tbl_Socai.TkCo.Trim() == mataikhoan
-                                         select tbl_Socai.PsCo).Sum().GetValueOrDefault(0) + (from tbl_dstaikhoan in dc.tbl_dstaikhoans
-                                                                                              where tbl_dstaikhoan.matk == mataikhoan
-                                                                                              select tbl_dstaikhoan.codk).FirstOrDefault();
+                                         select tbl_Socai.PsCo).Sum().GetValueOrDefault(0) + (from CDPSdauky in dc.CDPSdaukies
+                                                                                              where CDPSdauky.matk == mataikhoan
+                                                                                              && CDPSdauky.nam == fromdate.Year
+                                                                                              select CDPSdauky.Codk).FirstOrDefault().GetValueOrDefault(0);
 
                     headSocai.nodauky = (from tbl_Socai in dc.tbl_Socais
                                          where tbl_Socai.Ngayctu < fromdate
-                                              && tbl_Socai.TkNo.Trim() == mataikhoan
+                                          && tbl_Socai.Ngayctu >= new DateTime(fromdate.Year, 01, 01)
+                                          && tbl_Socai.TkNo.Trim() == mataikhoan
                                          //  && tbl_SoQuy.ChitietTM == machitiettaikhoan
-                                         select tbl_Socai.PsNo).Sum().GetValueOrDefault(0) + (from tbl_dstaikhoan in dc.tbl_dstaikhoans
-                                                                                              where tbl_dstaikhoan.matk == mataikhoan
-                                                                                              select tbl_dstaikhoan.nodk).FirstOrDefault();
+                                         select tbl_Socai.PsNo).Sum().GetValueOrDefault(0) + (from CDPSdauky in dc.CDPSdaukies
+                                                                                              where CDPSdauky.matk == mataikhoan
+                                                                                              && CDPSdauky.nam == fromdate.Year
+                                                                                              select CDPSdauky.Nodk).FirstOrDefault().GetValueOrDefault(0);
 
 
 
@@ -630,6 +636,11 @@ namespace BEEACCOUNT.Model
                                                                                                   && tbl_machitiettk.matk == mataikhoan
                                                                                                   select tbl_machitiettk.codk).FirstOrDefault();
 
+
+
+
+
+
                         headSoquy.nodauky = (from tbl_SoQuy in dc.tbl_SoQuys
                                              where tbl_SoQuy.Ngayctu < fromdate
                                                   && tbl_SoQuy.TKtienmat.Trim() == mataikhoan
@@ -645,19 +656,26 @@ namespace BEEACCOUNT.Model
 
                         headSoquy.codauky = (from tbl_SoQuy in dc.tbl_SoQuys
                                              where tbl_SoQuy.Ngayctu < fromdate
+                                             && tbl_SoQuy.Ngayctu >= new DateTime(fromdate.Year, 01, 01)
                                              && tbl_SoQuy.TKtienmat.Trim() == mataikhoan
                                              && tbl_SoQuy.ChitietTM == machitiettaikhoan
-                                             select tbl_SoQuy.PsCo).Sum().GetValueOrDefault(0) + (from tbl_dstaikhoan in dc.tbl_dstaikhoans
-                                                                                                  where tbl_dstaikhoan.matk == mataikhoan
-                                                                                                  select tbl_dstaikhoan.codk).FirstOrDefault();
+                                             select tbl_SoQuy.PsCo).Sum().GetValueOrDefault(0) + (from CDPSdauky in dc.CDPSdaukies
+                                                                                                  where CDPSdauky.matk == mataikhoan
+                                                                                                  && CDPSdauky.nam == fromdate.Year
+                                                                                                  select CDPSdauky.Codk).FirstOrDefault().GetValueOrDefault(0);
+
+
+
 
                         headSoquy.nodauky = (from tbl_SoQuy in dc.tbl_SoQuys
                                              where tbl_SoQuy.Ngayctu < fromdate
+                                               && tbl_SoQuy.Ngayctu >= new DateTime(fromdate.Year, 01, 01)
                                                   && tbl_SoQuy.TKtienmat.Trim() == mataikhoan
                                       && tbl_SoQuy.ChitietTM == machitiettaikhoan
-                                             select tbl_SoQuy.PsNo).Sum().GetValueOrDefault(0) + (from tbl_dstaikhoan in dc.tbl_dstaikhoans
-                                                                                                  where tbl_dstaikhoan.matk == mataikhoan
-                                                                                                  select tbl_dstaikhoan.nodk).FirstOrDefault();
+                                             select tbl_SoQuy.PsNo).Sum().GetValueOrDefault(0) + (from CDPSdauky in dc.CDPSdaukies
+                                                                                                  where CDPSdauky.matk == mataikhoan
+                                                                                                  && CDPSdauky.nam == fromdate.Year
+                                                                                                  select CDPSdauky.Nodk).FirstOrDefault().GetValueOrDefault(0);
 
 
 
@@ -718,7 +736,7 @@ namespace BEEACCOUNT.Model
                                    where tbl_SoQuy.Ngayctu >= fromdate && tbl_SoQuy.Ngayctu <= todate
                                         && tbl_SoQuy.TKtienmat.Trim() == mataikhoan
                                          && tbl_SoQuy.ChitietTM == machitiettaikhoan
-                                         && (tbl_SoQuy.Machungtu =="PC" 
+                                         && (tbl_SoQuy.Machungtu == "PC"
                                          || tbl_SoQuy.Machungtu == "PT")
                                    orderby tbl_SoQuy.Ngayctu
                                    select tbl_SoQuy;
@@ -1142,18 +1160,21 @@ namespace BEEACCOUNT.Model
 
                 View.Beeyearsellect Beeyearsellect = new View.Beeyearsellect();
                 Beeyearsellect.ShowDialog();
-
-                yearchon = int.Parse(Beeyearsellect.year);
-                chon = Beeyearsellect.chon;
-
-                if (chon)
+                if (Beeyearsellect.year != null)
                 {
 
-                    View.BeeLCDPSdauky BeeLCDPSdauky = new BeeLCDPSdauky(yearchon);
-                    BeeLCDPSdauky.ShowDialog();
+
+                    yearchon = int.Parse(Beeyearsellect.year);
+                    chon = Beeyearsellect.chon;
+
+                    if (chon)
+                    {
+
+                        View.BeeLCDPSdauky BeeLCDPSdauky = new BeeLCDPSdauky(yearchon);
+                        BeeLCDPSdauky.ShowDialog();
+                    }
+
                 }
-
-
 
 
 
@@ -1262,7 +1283,7 @@ namespace BEEACCOUNT.Model
 
 
                 }
-                
+
 
 
             }
@@ -1371,7 +1392,7 @@ namespace BEEACCOUNT.Model
                     //     caculationServerCD200(yearchon);
 
 
-                    #region luu chuye ttt truc tiep 
+                    #region luu chuye ttt truc tiep
                     SqlConnection conn2 = null;
                     SqlDataReader rdr1 = null;
 
@@ -1547,13 +1568,14 @@ namespace BEEACCOUNT.Model
                                                   ? ""
                                                  : p.machitiet.ToString(),
 
+                                //  Mã_chi_tiết =  p.machitiet.ToString(),
 
 
                                   Tên_chi_tiết = p.tenchitiet,
                                   Phát_sinh_có = p.tPSCo,
                                   Phát_sinh_nợ = p.tPSNo,
                                   Số_dư_Nợ = p.tPsNotruPSco,
-                                  Phân_loại_ngắn_hạn = p.loainganhan,
+                                  //  Phân_loại_ngắn_hạn = p.loainganhan,
 
 
 
@@ -1562,7 +1584,7 @@ namespace BEEACCOUNT.Model
 
 
 
-                    Viewtable viewtbl = new Viewtable(rs1, dc, "BẢNG CÂN ĐỐI PHÁT PHÁT SINH CÓ CHI TIẾT NĂM " + yearchon.ToUpper(), 12, "0");// mã 12 là danh sach BẢNG CÂN ĐỐI PHÁT SINH
+                    Viewtable viewtbl = new Viewtable(rs1, dc, "BẢNG CÂN ĐỐI PHÁT PHÁT SINH CHI TIẾT NĂM " + yearchon.ToUpper(), 12, "0");// mã 12 là danh sach BẢNG CÂN ĐỐI PHÁT SINH
                     viewtbl.Show();
 
 
@@ -1668,7 +1690,7 @@ namespace BEEACCOUNT.Model
                                   Phát_sinh_có = p.tPSCo,
                                   Phát_sinh_nợ = p.tPSNo,
                                   Số_dư_Nợ = p.tPsNotruPSco,
-                           
+
 
 
 
@@ -2501,7 +2523,7 @@ namespace BEEACCOUNT.Model
 
 
 
-                    #region  // update head mới  
+                    #region  // update head mới
 
 
                     RPtheadTHxuatnhapton headTHxnhapton = new RPtheadTHxuatnhapton();
@@ -2528,7 +2550,7 @@ namespace BEEACCOUNT.Model
                     Utils ut = new Utils();
                     var dataset1 = ut.ToDataTable(dc, header);
 
-                    #endregion  // update head mới  
+                    #endregion  // update head mới
 
                     #region  update data detail mới
 

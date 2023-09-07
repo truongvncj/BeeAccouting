@@ -66,18 +66,17 @@
             this.cbmaloaitk.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbmaloaitk.FormattingEnabled = true;
             this.cbmaloaitk.Items.AddRange(new object[] {
-            "tienmat",
-            "nganhang",
-            "kho",
-            "taisan",
-            "nguonvon",
-            "doanhthu",
-            "chiphi",
-            "xacdinhkqkd",
-            "loinhuan",
-            "phaithu",
-            "phaitra",
-            "tamung"});
+            "TIENMAT",
+            "NGANHANG",
+            "KHO",
+            "TAISAN",
+            "NGUONVON",
+            "DOANHTHU",
+            "CHIPHI",
+            "TINHKQKD",
+            "LOINHUAN",
+            "PHAITHU",
+            "PHAITRA"});
             this.cbmaloaitk.Location = new System.Drawing.Point(171, 57);
             this.cbmaloaitk.Name = "cbmaloaitk";
             this.cbmaloaitk.Size = new System.Drawing.Size(214, 21);

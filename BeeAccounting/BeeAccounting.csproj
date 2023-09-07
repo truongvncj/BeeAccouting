@@ -145,6 +145,12 @@
     <Compile Include="shared\Constants.cs" />
     <Compile Include="shared\ExtractToDataTableOptions.cs" />
     <Compile Include="shared\LinQToExcel.cs" />
+    <Compile Include="View\BCTC\BeeAutoketchuyencuoinam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\BCTC\BeeAutoketchuyencuoinam.Designer.cs">
+      <DependentUpon>BeeAutoketchuyencuoinam.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\BCTC\BeeLCDPSdauky.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -589,6 +595,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\Paymentrequest.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\BCTC\BeeAutoketchuyencuoinam.resx">
+      <DependentUpon>BeeAutoketchuyencuoinam.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\BCTC\BeeLCDPSdauky.resx">
       <DependentUpon>BeeLCDPSdauky.cs</DependentUpon>

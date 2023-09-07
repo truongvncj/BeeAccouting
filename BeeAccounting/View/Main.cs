@@ -4005,66 +4005,7 @@ namespace BEEACCOUNT.View
 
         private void kếtChuyểnToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string connection_string = Utils.getConnectionstr();
-            string username = Utils.getusername();
-            //  var db = new LinqtoSQLDataContext(connection_string);
-            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
 
-
-            FormCollection fc = System.Windows.Forms.Application.OpenForms;
-            bool chon;
-            string yearchon;
-            bool kq = false;
-            foreach (Form frm in fc)
-            {
-
-                if (frm.Text == "Chọn năm")
-                {
-                    kq = true;
-                    frm.Focus();
-
-                }
-            }
-
-            if (!kq)
-            {
-
-
-                View.Beeyearsellect Beeyearsellect = new View.Beeyearsellect();
-                Beeyearsellect.ShowDialog();
-
-                yearchon = Beeyearsellect.year;
-                chon = Beeyearsellect.chon;
-
-
-                if (chon)
-                {
-
-                    var rptdetail = from p in dc.RptdetaiCDPs
-                                    where p.username == username
-                                    orderby p.matk
-
-                                    select new
-                                    {
-                                      //  p.Codk,
-                                       // p.Nodk,
-                                       Mã_tài_khoản = p.matk,
-                                       Tên_tài_khoản = p.tentk.Trim(),
-                                    //    PS_Có = p.Psco.GetValueOrDefault(0),
-                                      //  Psno = p.Psno.GetValueOrDefault(0),
-                                        Nợ_Cuối_kỳ = p.Nock.GetValueOrDefault(0),
-                                        Có_Cuối_kỳ = p.Cock.GetValueOrDefault(0),
-
-
-
-                                    };
-
-
-                    Viewtable viewtbl = new Viewtable(rptdetail, dc, "BẢNG TỔNG HỢP PHÁT SINH NĂM " + yearchon.ToUpper(), 121, yearchon.ToString());// mã 121 là danh sach BẢNG CÂN ĐỐI PHÁT SINH view va ket chuyen
-                    viewtbl.Show();
-
-                }
-            }
         }
 
         private void nhậpSốCDPSĐầuKỳToolStripMenuItem_Click(object sender, EventArgs e)
@@ -4138,7 +4079,7 @@ namespace BEEACCOUNT.View
 
 
             #endregion
-        
+
         }
 
         private void ủyNhiệmChiQuaNgânHàngToolStripMenuItem_Click(object sender, EventArgs e)
@@ -4176,7 +4117,7 @@ namespace BEEACCOUNT.View
 
 
             #endregion
-        
+
         }
 
         private void phiếuChiTiềnToolStripMenuItem_Click(object sender, EventArgs e)
@@ -4244,7 +4185,7 @@ namespace BEEACCOUNT.View
 
 
             //  this.Close();
-          //  this.main1.clearpannel();
+            //  this.main1.clearpannel();
             clearpannel();
 
 
@@ -4366,6 +4307,144 @@ namespace BEEACCOUNT.View
             //    accsup.Show();
 
             //   }
+
+        }
+
+        private void tiềnMặtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void đóngSổVàKếtChuyểnSốDưQuaNămSauToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string connection_string = Utils.getConnectionstr();
+            string username = Utils.getusername();
+            //  var db = new LinqtoSQLDataContext(connection_string);
+            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+
+            FormCollection fc = System.Windows.Forms.Application.OpenForms;
+            bool chon;
+            string yearchon;
+            bool kq = false;
+            foreach (Form frm in fc)
+            {
+
+                if (frm.Text == "Chọn năm")
+                {
+                    kq = true;
+                    frm.Focus();
+
+                }
+            }
+
+            if (!kq)
+            {
+
+
+                View.Beeyearsellect Beeyearsellect = new View.Beeyearsellect();
+
+
+                Beeyearsellect.ShowDialog();
+
+
+                if (Beeyearsellect.year != null)
+                {
+
+
+                    yearchon = Beeyearsellect.year;
+                    chon = Beeyearsellect.chon;
+
+
+                    if (chon)
+                    {
+
+                        // tính số 
+
+
+                        #region caculation cdkt200 lien tuc
+                        SqlConnection conn2 = null;
+                        SqlDataReader rdr1 = null;
+
+                        string destConnString = Utils.getConnectionstr();
+                        try
+                        {
+
+                            conn2 = new SqlConnection(destConnString);
+                            conn2.Open();
+                            SqlCommand cmd1 = new SqlCommand("calulationCDPStoRptdetaiCDP", conn2);
+                            cmd1.CommandType = CommandType.StoredProcedure;
+                            cmd1.CommandTimeout = 0;
+                            cmd1.Parameters.Add("@username", SqlDbType.VarChar).Value = Utils.getusername();
+                            cmd1.Parameters.Add("@yearchon", SqlDbType.Int).Value = int.Parse(yearchon);
+                            //   cmd1.Parameters.Add("@todate", SqlDbType.DateTime).Value = todate;
+
+
+
+
+                            rdr1 = cmd1.ExecuteReader();
+
+
+
+                        }
+                        finally
+                        {
+                            if (conn2 != null)
+                            {
+                                conn2.Close();
+                            }
+                            if (rdr1 != null)
+                            {
+                                rdr1.Close();
+                            }
+                        }
+                        //     MessageBox.Show("ok", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        #endregion
+
+
+
+
+
+                        // tính số
+
+                        var rptdetail = from p in dc.RptdetaiCDPs
+                                        where p.username == username
+                                        orderby p.matk
+
+                                        select new
+                                        {
+                                            //  p.Codk,
+                                            // p.Nodk,
+                                            Mã_tài_khoản = p.matk,
+                                            Tên_tài_khoản = p.tentk.Trim(),
+                                            Đầu_kỳ_Có = p.Codk.GetValueOrDefault(0),
+                                            Đầu_kỳ_Nợ = p.Nodk.GetValueOrDefault(0),
+                                            PS_Có = p.Psco.GetValueOrDefault(0),
+                                            PS_Nợ = p.Psno.GetValueOrDefault(0),
+                                            Nợ_Cuối_kỳ = p.Nock.GetValueOrDefault(0),
+                                            Có_Cuối_kỳ = p.Cock.GetValueOrDefault(0),
+
+
+
+                                        };
+
+
+                        Viewtable viewtbl = new Viewtable(rptdetail, dc, "BẢNG TỔNG HỢP PHÁT SINH NĂM " + yearchon.ToUpper(), 121, yearchon.ToString());// mã 121 là danh sach BẢNG CÂN ĐỐI PHÁT SINH view va ket chuyen
+                        viewtbl.Show();
+
+                    }
+                }
+            }
+        }
+
+        private void menuStrip1_ItemClicked_1(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void đóngSổCuốiNămToolStripMenuItem_Click(object sender, EventArgs e)
+        {
 
         }
     }

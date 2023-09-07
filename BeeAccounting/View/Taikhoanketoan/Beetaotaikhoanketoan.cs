@@ -167,8 +167,8 @@ namespace BEEACCOUNT.View
 
                     this.cbtkmother.Text = rs1.matktren.Trim();
                     this.checkbookchitiet.Checked = rs1.loaichitiet;
-                    txtCodauky.Text = rs1.codk.ToString();
-                    txtNodauky.Text = rs1.nodk.ToString();
+              //      txtCodauky.Text = rs1.codk.ToString();
+                 //   txtNodauky.Text = rs1.nodk.ToString();
                 
 
                 }
@@ -619,8 +619,8 @@ namespace BEEACCOUNT.View
                     rs.loaitkid = loaitk;
                     rs.captk = captk;
                     rs.matktren = tkcaptren;
-                    rs.nodk = nodauky;
-                    rs.codk = codauky;
+                //    rs.nodk = nodauky;
+                //    rs.codk = codauky;
                
                     if (checkbookchitiet.Checked == true)
                     {

@@ -283,22 +283,25 @@ namespace BEEACCOUNT.View
                 foreach (var c in dataGridView1.Rows)
                 {
                     DataGridViewRow ro = (DataGridViewRow)c;
-                    int id2 = (int)ro.Cells["ID"].Value;
+                    string machitieu =  (string)ro.Cells["Mã_số"].Value.ToString();
+
                     var ma = (from p in dc.CDKT200Daukies
-                              where p.id == id2
+                              where p.Machitieu == machitieu && p.nam == namchon
+
+
                               select p).FirstOrDefault();
 
 
                     if (ma != null)
                     {
 
-                        ma.Machitieu = (int)ro.Cells["Mã_số"].Value;
+                        ma.Machitieu = (string)ro.Cells["Mã_số"].Value;
                         ma.Tenchitieu = (string)ro.Cells["Chỉ_tiêu"].Value;
                         ma.Cachghi = (string)ro.Cells["Cách_ghi"].Value;
                         ma.Sotien = (double)ro.Cells["Số_đầu_kỳ"].Value;
                         ma.stat = 0;
                         ma.username = Utils.getname();
-
+                       
                      
                         dc.SubmitChanges();
                     }
@@ -325,7 +328,7 @@ namespace BEEACCOUNT.View
                     CDKT200Dauky p = new CDKT200Dauky();
                     p.nam = this.namchon;
                   
-                    p.Machitieu = (int)ro.Cells["Mã_số"].Value;
+                    p.Machitieu = (string)ro.Cells["Mã_số"].Value;
                     p.Tenchitieu = (string)ro.Cells["Chỉ_tiêu"].Value;
                     p.Cachghi = (string)ro.Cells["Cách_ghi"].Value;
                     p.Sotien = (double)ro.Cells["Số_đầu_kỳ"].Value;

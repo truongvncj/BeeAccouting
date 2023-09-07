@@ -841,8 +841,6 @@ namespace BEEACCOUNT
 		
 		private System.Nullable<int> _nam;
 		
-		private System.Nullable<int> _Machitieu;
-		
 		private string _Tenchitieu;
 		
 		private string _Cachghi;
@@ -855,14 +853,14 @@ namespace BEEACCOUNT
 		
 		private string _username;
 		
+		private string _Machitieu;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
     partial void OnnamChanging(System.Nullable<int> value);
     partial void OnnamChanged();
-    partial void OnMachitieuChanging(System.Nullable<int> value);
-    partial void OnMachitieuChanged();
     partial void OnTenchitieuChanging(string value);
     partial void OnTenchitieuChanged();
     partial void OnCachghiChanging(string value);
@@ -875,6 +873,8 @@ namespace BEEACCOUNT
     partial void OnidChanged();
     partial void OnusernameChanging(string value);
     partial void OnusernameChanged();
+    partial void OnMachitieuChanging(string value);
+    partial void OnMachitieuChanged();
     #endregion
 		
 		public CDKT200Dauky()
@@ -898,26 +898,6 @@ namespace BEEACCOUNT
 					this._nam = value;
 					this.SendPropertyChanged("nam");
 					this.OnnamChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Machitieu", DbType="Int")]
-		public System.Nullable<int> Machitieu
-		{
-			get
-			{
-				return this._Machitieu;
-			}
-			set
-			{
-				if ((this._Machitieu != value))
-				{
-					this.OnMachitieuChanging(value);
-					this.SendPropertyChanging();
-					this._Machitieu = value;
-					this.SendPropertyChanged("Machitieu");
-					this.OnMachitieuChanged();
 				}
 			}
 		}
@@ -1038,6 +1018,26 @@ namespace BEEACCOUNT
 					this._username = value;
 					this.SendPropertyChanged("username");
 					this.OnusernameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Machitieu", DbType="NVarChar(10)")]
+		public string Machitieu
+		{
+			get
+			{
+				return this._Machitieu;
+			}
+			set
+			{
+				if ((this._Machitieu != value))
+				{
+					this.OnMachitieuChanging(value);
+					this.SendPropertyChanging();
+					this._Machitieu = value;
+					this.SendPropertyChanged("Machitieu");
+					this.OnMachitieuChanged();
 				}
 			}
 		}
@@ -1745,6 +1745,12 @@ namespace BEEACCOUNT
 		
 		private int _id;
 		
+		private System.Nullable<int> _machitiet;
+		
+		private string _tentkchitiet;
+		
+		private string _tentk;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -1759,6 +1765,12 @@ namespace BEEACCOUNT
     partial void OnCodkChanged();
     partial void OnidChanging(int value);
     partial void OnidChanged();
+    partial void OnmachitietChanging(System.Nullable<int> value);
+    partial void OnmachitietChanged();
+    partial void OntentkchitietChanging(string value);
+    partial void OntentkchitietChanged();
+    partial void OntentkChanging(string value);
+    partial void OntentkChanged();
     #endregion
 		
 		public CDPSdauky()
@@ -1862,6 +1874,66 @@ namespace BEEACCOUNT
 					this._id = value;
 					this.SendPropertyChanged("id");
 					this.OnidChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_machitiet", DbType="Int")]
+		public System.Nullable<int> machitiet
+		{
+			get
+			{
+				return this._machitiet;
+			}
+			set
+			{
+				if ((this._machitiet != value))
+				{
+					this.OnmachitietChanging(value);
+					this.SendPropertyChanging();
+					this._machitiet = value;
+					this.SendPropertyChanged("machitiet");
+					this.OnmachitietChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tentkchitiet", DbType="NChar(225)")]
+		public string tentkchitiet
+		{
+			get
+			{
+				return this._tentkchitiet;
+			}
+			set
+			{
+				if ((this._tentkchitiet != value))
+				{
+					this.OntentkchitietChanging(value);
+					this.SendPropertyChanging();
+					this._tentkchitiet = value;
+					this.SendPropertyChanged("tentkchitiet");
+					this.OntentkchitietChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tentk", DbType="NChar(225)")]
+		public string tentk
+		{
+			get
+			{
+				return this._tentk;
+			}
+			set
+			{
+				if ((this._tentk != value))
+				{
+					this.OntentkChanging(value);
+					this.SendPropertyChanging();
+					this._tentk = value;
+					this.SendPropertyChanged("tentk");
+					this.OntentkChanged();
 				}
 			}
 		}
@@ -22501,16 +22573,6 @@ namespace BEEACCOUNT
 		
 		private bool _loaichitiet;
 		
-		private System.Nullable<double> _nodk;
-		
-		private System.Nullable<double> _codk;
-		
-		private string _maKQKD;
-		
-		private string _maCDKT;
-		
-		private string _maLCTT;
-		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -22529,16 +22591,6 @@ namespace BEEACCOUNT
     partial void OnloaitkidChanged();
     partial void OnloaichitietChanging(bool value);
     partial void OnloaichitietChanged();
-    partial void OnnodkChanging(System.Nullable<double> value);
-    partial void OnnodkChanged();
-    partial void OncodkChanging(System.Nullable<double> value);
-    partial void OncodkChanged();
-    partial void OnmaKQKDChanging(string value);
-    partial void OnmaKQKDChanged();
-    partial void OnmaCDKTChanging(string value);
-    partial void OnmaCDKTChanged();
-    partial void OnmaLCTTChanging(string value);
-    partial void OnmaLCTTChanged();
     #endregion
 		
 		public tbl_dstaikhoan()
@@ -22682,106 +22734,6 @@ namespace BEEACCOUNT
 					this._loaichitiet = value;
 					this.SendPropertyChanged("loaichitiet");
 					this.OnloaichitietChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_nodk", DbType="Float")]
-		public System.Nullable<double> nodk
-		{
-			get
-			{
-				return this._nodk;
-			}
-			set
-			{
-				if ((this._nodk != value))
-				{
-					this.OnnodkChanging(value);
-					this.SendPropertyChanging();
-					this._nodk = value;
-					this.SendPropertyChanged("nodk");
-					this.OnnodkChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_codk", DbType="Float")]
-		public System.Nullable<double> codk
-		{
-			get
-			{
-				return this._codk;
-			}
-			set
-			{
-				if ((this._codk != value))
-				{
-					this.OncodkChanging(value);
-					this.SendPropertyChanging();
-					this._codk = value;
-					this.SendPropertyChanged("codk");
-					this.OncodkChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_maKQKD", DbType="NVarChar(10)")]
-		public string maKQKD
-		{
-			get
-			{
-				return this._maKQKD;
-			}
-			set
-			{
-				if ((this._maKQKD != value))
-				{
-					this.OnmaKQKDChanging(value);
-					this.SendPropertyChanging();
-					this._maKQKD = value;
-					this.SendPropertyChanged("maKQKD");
-					this.OnmaKQKDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_maCDKT", DbType="NVarChar(10)")]
-		public string maCDKT
-		{
-			get
-			{
-				return this._maCDKT;
-			}
-			set
-			{
-				if ((this._maCDKT != value))
-				{
-					this.OnmaCDKTChanging(value);
-					this.SendPropertyChanging();
-					this._maCDKT = value;
-					this.SendPropertyChanged("maCDKT");
-					this.OnmaCDKTChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_maLCTT", DbType="NVarChar(10)")]
-		public string maLCTT
-		{
-			get
-			{
-				return this._maLCTT;
-			}
-			set
-			{
-				if ((this._maLCTT != value))
-				{
-					this.OnmaLCTTChanging(value);
-					this.SendPropertyChanging();
-					this._maLCTT = value;
-					this.SendPropertyChanged("maLCTT");
-					this.OnmaLCTTChanged();
 				}
 			}
 		}
