@@ -1030,6 +1030,7 @@
       <Column Name="matktren" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
       <Column Name="loaitkid" Type="System.String" DbType="NChar(50)" CanBeNull="true" />
       <Column Name="loaichitiet" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="matkketchuyen" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.tbl_dstknganhang" Member="tbl_dstknganhangs">

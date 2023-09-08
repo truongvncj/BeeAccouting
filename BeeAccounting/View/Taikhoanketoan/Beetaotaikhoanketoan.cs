@@ -24,8 +24,10 @@ namespace BEEACCOUNT.View
         public int captk { get; set; }
         public string tkcaptren { get; set; }
 
-        public double nodauky { get; set; }
-        public double codauky { get; set; }
+        public string matkketchuyencuoinam { get; set; }
+
+        //  public double nodauky { get; set; }
+        //        public double codauky { get; set; }
 
 
         public class ComboboxItem
@@ -48,7 +50,7 @@ namespace BEEACCOUNT.View
             this.tentk = this.txt_nametk.Text;
             chon = false;
             this.captk = 1;
-
+            this.matkketchuyencuoinam = "";
 
             #region load loại tk
 
@@ -69,9 +71,9 @@ namespace BEEACCOUNT.View
 
                 ComboboxItem cb1 = new ComboboxItem();
                 cb1.Value = item.idloaitk;
-                cb1.Text =  item.name; //item.idloaitk.Trim() + ": " +
+                cb1.Text = item.name; //item.idloaitk.Trim() + ": " +
                 this.cbloaitk.Items.Add(cb1); // CombomCollection.Add(cb);
-                                              //this.cb_customerka.se = cb_customerka.Items.Count+1;
+                //this.cb_customerka.se = cb_customerka.Items.Count+1;
 
 
 
@@ -107,16 +109,61 @@ namespace BEEACCOUNT.View
             {
 
                 ComboboxItem cb1 = new ComboboxItem();
-                cb1.Value = item.matk;
-                cb1.Text = item.matk.Trim() + ": " + item.tentk;   //
+                cb1.Value = item.matk.Trim();
+                cb1.Text = item.matk.Trim() + ": " + item.tentk.Trim();   //
                 this.cbtkmother.Items.Add(cb1); // CombomCollection.Add(cb);
-                                                //this.cb_customerka.se = cb_customerka.Items.Count+1;
+                //this.cb_customerka.se = cb_customerka.Items.Count+1;
 
 
 
 
             }
             this.cbtkmother.SelectedIndex = 0;
+
+
+            #endregion
+
+
+            #region load  cb tk ket chuyen cuoi nam
+
+            //        string connection_string = Utils.getConnectionstr();
+            //    LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+
+
+
+            var rscbkc = from tbl_dstaikhoan in dc.tbl_dstaikhoans
+                      where tbl_dstaikhoan.loaitkid == "TINHKQKD"
+
+                     select tbl_dstaikhoan;
+
+            // string drowdownshow = "";
+
+            // string drowdownshow = "";
+            ComboboxItem bbkc = new ComboboxItem();
+            bbkc.Value = "";
+            bbkc.Text = " Không kết chuyển cuối năm";
+            this.cbtaikhoanketchuyencuoinam.Items.Add(bbkc); // CombomCollection.Add(cb);
+
+            ComboboxItem bbkc1 = new ComboboxItem();
+            bbkc1.Value = "421";
+            bbkc1.Text = "421" + ":  Lợi nhuận sau thuế chưa phân phối";
+            this.cbtaikhoanketchuyencuoinam.Items.Add(bbkc1); // CombomCollection.Add(cb);
+
+            foreach (var item in rscbkc)
+            {
+
+                ComboboxItem cb1 = new ComboboxItem();
+                cb1.Value = item.matk.Trim();
+                cb1.Text = item.matk.Trim() + ": " + item.tentk.Trim();   //
+                this.cbtaikhoanketchuyencuoinam.Items.Add(cb1); // CombomCollection.Add(cb);
+                //this.cb_customerka.se = cb_customerka.Items.Count+1;
+
+
+
+
+            }
+            this.cbtaikhoanketchuyencuoinam.SelectedIndex = 0;
 
 
             #endregion
@@ -143,7 +190,7 @@ namespace BEEACCOUNT.View
 
                 if (rs1 != null)
                 {
-                
+
                     if (rs1.loaitkid != null)
                     {
                         foreach (var item in cbloaitk.Items)
@@ -159,7 +206,7 @@ namespace BEEACCOUNT.View
 
 
 
-                   
+
                     }
                     this.txt_nametk.Text = rs1.tentk.ToString().Trim();
 
@@ -167,9 +214,9 @@ namespace BEEACCOUNT.View
 
                     this.cbtkmother.Text = rs1.matktren.Trim();
                     this.checkbookchitiet.Checked = rs1.loaichitiet;
-              //      txtCodauky.Text = rs1.codk.ToString();
-                 //   txtNodauky.Text = rs1.nodk.ToString();
-                
+                    //      txtCodauky.Text = rs1.codk.ToString();
+                    //   txtNodauky.Text = rs1.nodk.ToString();
+
 
                 }
 
@@ -307,7 +354,7 @@ namespace BEEACCOUNT.View
             {
                 //  newcontract.Channel = this.cb_channel.SelectedItem.ToString();
 
-                loaitk = (string)(cbloaitk.SelectedItem as ComboboxItem).Value;// (cbm.SelectedItem as ComboboxItem).Value.ToString();
+                loaitk = (cbloaitk.SelectedItem as ComboboxItem).Value.ToString().Trim();// (cbm.SelectedItem as ComboboxItem).Value.ToString();
 
             }
             else
@@ -317,27 +364,18 @@ namespace BEEACCOUNT.View
             }
 
 
-            if (Utils.IsValidnumber(txtNodauky.Text))
-            {
-                nodauky = double.Parse(txtNodauky.Text);
-            }
-            else
-            {
-                MessageBox.Show("Bạn kiểm tra lại số dư nợ đầu kỳ ", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
 
-            }
+            //if (Utils.IsValidnumber(txtCodauky.Text))
+            //{
+            //    codauky = double.Parse(txtCodauky.Text);
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Bạn kiểm tra lại số dư có đầu kỳ ", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //    return;
 
-            if (Utils.IsValidnumber(txtCodauky.Text))
-            {
-                codauky = double.Parse(txtCodauky.Text);
-            }
-            else
-            {
-                MessageBox.Show("Bạn kiểm tra lại số dư có đầu kỳ ", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
+            //}
 
-            }
 
 
 
@@ -373,7 +411,7 @@ namespace BEEACCOUNT.View
 
             if (this.txtcode.Text == "")
             {
-            
+
 
                 MessageBox.Show("Bạn chưa có  mã tài khoản", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -381,13 +419,13 @@ namespace BEEACCOUNT.View
             else
             {
 
-                    string connection_string = Utils.getConnectionstr();
-                    LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+                string connection_string = Utils.getConnectionstr();
+                LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
 
 
-                    var rs1 = (from tbl_dstaikhoan in dc.tbl_dstaikhoans
-                              where tbl_dstaikhoan.matk == matk
-                              select tbl_dstaikhoan.matk).FirstOrDefault();
+                var rs1 = (from tbl_dstaikhoan in dc.tbl_dstaikhoans
+                           where tbl_dstaikhoan.matk == matk
+                           select tbl_dstaikhoan.matk).FirstOrDefault();
 
                 //    captk = rs + 1;
 
@@ -426,14 +464,74 @@ namespace BEEACCOUNT.View
                 tkchitiet = false;
             }
 
-             
+            #region chọn tài khoản kết chuyển cuối năm   matkketchuyencuoinam
+
+            if (this.cbtaikhoanketchuyencuoinam.SelectedItem.ToString().Trim() != "" && matk != "")
+            {
+
+                this.matkketchuyencuoinam = (cbtaikhoanketchuyencuoinam.SelectedItem as ComboboxItem).Value.ToString().Trim();// (cbm.SelectedItem as ComboboxItem).Value.ToString();
+
+                string connection_string = Utils.getConnectionstr();
+                LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+                if (loaitk == "DOANHTHU" || loaitk == "CHIPHI" || loaitk == "TINHKQKD")
+                {
+                    if (matkketchuyencuoinam == "")
+                    {
+                        MessageBox.Show("Bạn cần chọn tài khoản kết chuyển cuối năm !", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
 
 
-            if (matk != "" && tentk != "" && loaitk !="")
+                }
+
+
+            }
+            else
+            {
+                this.matkketchuyencuoinam = "";
+                //  captk = 1;
+
+
+
+
+
+            }
+
+            #endregion
+
+
+
+            if (matk != "" && tentk != "" && loaitk != "")
             {
                 chon = true;
+
+                string connection_string = Utils.getConnectionstr();
+                // string urs = Utils.getusername();
+                //  var db = new LinqtoSQLDataContext(connection_string);
+                LinqtoSQLDataContext db = new LinqtoSQLDataContext(connection_string);
+
+                tbl_dstaikhoan tk = new tbl_dstaikhoan();
+
+
+
+                tk.matk = matk;
+                tk.tentk = tentk;
+                tk.loaitkid = loaitk;
+                tk.captk = captk;
+                tk.matktren = tkcaptren;
+                tk.matkketchuyen = matkketchuyencuoinam;
+                tk.loaichitiet = tkchitiet;
+
+                db.tbl_dstaikhoans.InsertOnSubmit(tk);
+
+                db.SubmitChanges();
                 this.Close();
             }
+
+
+
+
 
 
 
@@ -488,9 +586,9 @@ namespace BEEACCOUNT.View
 
             if (rs1 != null)
             {
-              var  rs5 = (from tbl_dstaikhoan in dc.tbl_dstaikhoans
-                       where tbl_dstaikhoan.matktren == matk
-                       select tbl_dstaikhoan).FirstOrDefault();
+                var rs5 = (from tbl_dstaikhoan in dc.tbl_dstaikhoans
+                           where tbl_dstaikhoan.matktren == matk
+                           select tbl_dstaikhoan).FirstOrDefault();
 
                 if (rs5 != null)
                 {
@@ -504,7 +602,7 @@ namespace BEEACCOUNT.View
                     this.Close();
                 }
 
-            
+
             }
 
 
@@ -520,7 +618,7 @@ namespace BEEACCOUNT.View
             {
                 //  newcontract.Channel = this.cb_channel.SelectedItem.ToString();
 
-                loaitk = (String)(cbloaitk.SelectedItem as ComboboxItem).Value;// (cbm.SelectedItem as ComboboxItem).Value.ToString();
+                loaitk = (cbloaitk.SelectedItem as ComboboxItem).Value.ToString().Trim();// (cbm.SelectedItem as ComboboxItem).Value.ToString();
 
             }
             else
@@ -529,27 +627,27 @@ namespace BEEACCOUNT.View
                 return;
             }
 
-            if (Utils.IsValidnumber(txtNodauky.Text))
-            {
-                nodauky = double.Parse(txtNodauky.Text);
-            }
-            else
-            {
-                MessageBox.Show("Bạn kiểm tra lại số dư nợ đầu kỳ ", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
+            //if (Utils.IsValidnumber(txtNodauky.Text))
+            //{
+            //    nodauky = double.Parse(txtNodauky.Text);
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Bạn kiểm tra lại số dư nợ đầu kỳ ", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //    return;
 
-            }
+            //}
 
-            if (Utils.IsValidnumber(txtCodauky.Text))
-            {
-                codauky = double.Parse(txtCodauky.Text);
-            }
-            else
-            {
-                MessageBox.Show("Bạn kiểm tra lại số dư có đầu kỳ ", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
+            //if (Utils.IsValidnumber(txtCodauky.Text))
+            //{
+            //    codauky = double.Parse(txtCodauky.Text);
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Bạn kiểm tra lại số dư có đầu kỳ ", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //    return;
 
-            }
+            //}
 
 
             if (this.cbtkmother.SelectedItem != null && this.cbtkmother.SelectedItem.ToString().Trim() != "0")
@@ -582,7 +680,7 @@ namespace BEEACCOUNT.View
 
             matk = this.txtcode.Text;
 
-          
+
 
 
             tentk = this.txt_nametk.Text;
@@ -592,9 +690,45 @@ namespace BEEACCOUNT.View
                 return;
             }
 
+            #region chọn tài khoản kết chuyển cuối năm
+
+            if (this.cbtaikhoanketchuyencuoinam.SelectedItem.ToString().Trim() != "" && matk != "")
+            {
+
+                this.matkketchuyencuoinam = (cbtaikhoanketchuyencuoinam.SelectedItem as ComboboxItem).Value.ToString().Trim();// (cbm.SelectedItem as ComboboxItem).Value.ToString();
+
+                string connection_string = Utils.getConnectionstr();
+                LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+                if (loaitk == "DOANHTHU" || loaitk == "CHIPHI" || loaitk == "TINHKQKD")
+                {
+                    if (matkketchuyencuoinam == "")
+                    {
+                        MessageBox.Show("Bạn cần chọn tài khoản kết chuyển cuối năm !", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
 
 
-            if (matk != "" && tentk != "" && loaitk !="")
+                }
+
+
+            }
+            else
+            {
+                this.matkketchuyencuoinam = "";
+                //  captk = 1;
+
+
+
+
+
+            }
+
+            #endregion
+
+
+
+            if (matk != "" && tentk != "" && loaitk != "")
             {
                 chon = true;
                 string connection_string = Utils.getConnectionstr();
@@ -607,9 +741,9 @@ namespace BEEACCOUNT.View
 
                 //    MeasureItemEventArgs.re
                 var rs = (from tbl_dstaikhoan in db.tbl_dstaikhoans
-                       where tbl_dstaikhoan.matk == matk
-                         //  orderby tbl_dstaikhoan.matk
-                         select tbl_dstaikhoan).FirstOrDefault();
+                          where tbl_dstaikhoan.matk == matk
+                          //  orderby tbl_dstaikhoan.matk
+                          select tbl_dstaikhoan).FirstOrDefault();
 
 
                 if (rs != null)
@@ -619,9 +753,10 @@ namespace BEEACCOUNT.View
                     rs.loaitkid = loaitk;
                     rs.captk = captk;
                     rs.matktren = tkcaptren;
-                //    rs.nodk = nodauky;
-                //    rs.codk = codauky;
-               
+                    rs.matkketchuyen = matkketchuyencuoinam;
+                    //    rs.nodk = nodauky;
+                    //    rs.codk = codauky;
+
                     if (checkbookchitiet.Checked == true)
                     {
                         rs.loaichitiet = true;
@@ -634,7 +769,7 @@ namespace BEEACCOUNT.View
                     db.SubmitChanges();
                     this.Close();
                 }
-            
+
 
 
             }
@@ -646,6 +781,41 @@ namespace BEEACCOUNT.View
 
 
 
+
+        }
+
+        private void txtcode_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_nametk_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbloaitk_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtcaptaikhoan_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbtkmother_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkbookchitiet_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
 
         }
     }

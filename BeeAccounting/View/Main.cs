@@ -4447,6 +4447,51 @@ namespace BEEACCOUNT.View
         {
 
         }
+
+        private void chọnDoanhNghiệpHạchToánToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void khoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void thiếtLậpBCTCToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void kếtChuyểnDoanhThuChiPhíCuốiNămToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            #region//cdktoan format
+            //if (name == "tmphieuthu")
+            //{
+
+            //  Main.clearpannel();
+            //   Formload.
+            // clearpannel();
+            clearpannel();
+
+
+            View.BeeAutoketchuyencuoinam accsup = new BeeAutoketchuyencuoinam(this);
+            clearpannelload(accsup);
+            //    accsup.TopLevel = false;
+            //  accsup.AutoScroll = true;
+            //    panelmain.Controls.Add(accsup);
+            //    accsup.Show();
+
+            //   }
+            #endregion
+
+        }
+
+        private void hệThốngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
 

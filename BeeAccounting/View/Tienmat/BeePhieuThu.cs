@@ -1419,12 +1419,7 @@ namespace BEEACCOUNT.View
                                 select new
                                 {
 
-                                    //     tencongty = Model.Congty.getnamecongty(),
-                                    //     diachicongty = Model.Congty.getdiachicongty(),
-                                    ////     masothue = Model.Congty.getmasothuecongty(),
-                                    //   tengiamdoc = Model.Congty.gettengiamdoccongty(),
-                                    //    tenketoantruong = Model.Congty.gettenketoantruongcongty(),
-
+                                
                                     sophieuthu = tbl_SoQuy.Sophieu,
                                     ngaychungtu = tbl_SoQuy.Ngayctu,
                                     nguoinoptien = tbl_SoQuy.Nguoinopnhantien,
@@ -2376,6 +2371,147 @@ namespace BEEACCOUNT.View
 
         private void dataGridViewListphieuthu_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+
+            string connection_string = Utils.getConnectionstr();
+            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+
+            try
+            {
+                this.phieuthuid = (int)this.dataGridViewListphieuthu.Rows[this.dataGridViewListphieuthu.CurrentCell.RowIndex].Cells["ID"].Value;
+
+
+            }
+            catch (Exception)
+            {
+
+                this.phieuthuid = 0;
+            }
+
+            if (this.phieuthuid != 0)
+            {
+
+
+                #region view load form
+                var phieuthu = (from tbl_SoQuy in dc.tbl_SoQuys
+                                where tbl_SoQuy.id == this.phieuthuid
+                                //       && tbl_SoQuy.macty == macty
+                                select new
+                                {
+
+                                    //     tencongty = Model.Congty.getnamecongty(),
+                                    //     diachicongty = Model.Congty.getdiachicongty(),
+                                    ////     masothue = Model.Congty.getmasothuecongty(),
+                                    //   tengiamdoc = Model.Congty.gettengiamdoccongty(),
+                                    //    tenketoantruong = Model.Congty.gettenketoantruongcongty(),
+
+                                    sophieuthu = tbl_SoQuy.Sophieu,
+                                    ngaychungtu = tbl_SoQuy.Ngayctu,
+                                    nguoinoptien = tbl_SoQuy.Nguoinopnhantien,
+                                    //    nguoilapphieu = Utils.getname(),
+                                    diachinguoinop = tbl_SoQuy.Diachinguoinhannop,
+                                    lydothu = tbl_SoQuy.Diengiai,
+                                    sotien = tbl_SoQuy.PsNo,
+                                    //   sotienbangchu = Utils.ChuyenSo(tbl_SoQuy.PsNo.ToString()),
+                                    sochungtugoc = tbl_SoQuy.Chungtugockemtheo,
+                                    //    username = Utils.getusername(),
+
+
+                                    machitietco = tbl_SoQuy.ChitietTM,
+                                    tentkchitiet = tbl_SoQuy.TenchitietTM,
+                                    tkno = tbl_SoQuy.TKtienmat,
+
+                                    taikhoandoiung = tbl_SoQuy.TKdoiung,
+
+                                }).FirstOrDefault();
+
+
+                if (phieuthu != null)
+                {
+                    ngaychungtu.Value = phieuthu.ngaychungtu;
+                    txtsophieu.Text = phieuthu.sophieuthu;
+
+                    this.maphieuthuOld = phieuthu.sophieuthu;
+                    this.phieuthuso = phieuthu.sophieuthu;
+
+                    txttennguoinop.Text = phieuthu.nguoinoptien;
+                    txtdiachi.Text = phieuthu.diachinguoinop;
+                    txtdiengiai.Text = phieuthu.lydothu;
+                   txtsotien.Text = double.Parse(phieuthu.sotien.ToString()).ToString("#,#", CultureInfo.InvariantCulture);
+
+                 //   txtsotien.Text = phieuthu.sotien.ToString();
+
+                    //txtValueSotienNo.Text = phieuthu.sotien.ToString();
+                    this.pssotienco = double.Parse(phieuthu.sotien.ToString());
+
+
+                    txtsochungtugoc.Text = phieuthu.sochungtugoc.ToString();
+
+                    txttaikhoanco.Text = phieuthu.taikhoandoiung;
+                    if (phieuthu.machitietco != null)
+                    {
+                        lb_machitietno.Text = phieuthu.machitietco.ToString();
+                    }
+                    else
+                    {
+                        lbtenchitietno.Text = "";
+                        lb_machitietno.Text = "";
+                    }
+
+                    if (phieuthu.tentkchitiet != null)
+                    {
+                        lbtenchitietno.Text = phieuthu.tentkchitiet.ToString();
+                    }
+                    else
+                    {
+                        lbtenchitietno.Text = "";
+                        lb_machitietno.Text = "";
+                    }
+                    if (phieuthu.tkno != null)
+                    {
+                        this.tkno = phieuthu.tkno.Trim();
+                     //   txttaikhoanco.Text = phieuthu.tkno.Trim();
+                    }
+
+                    ngaychungtu.Enabled = false;
+                    txtsophieu.Enabled = false;
+                    txttennguoinop.Enabled = false;
+                    txtdiachi.Enabled = false;
+                    txtdiengiai.Enabled = false;
+                    txtsotien.Enabled = false;
+                    txtsochungtugoc.Enabled = false;
+
+                    btsua.Enabled = true;
+
+
+
+
+                    cbtkno.Enabled = false;
+
+
+                    this.statusphieuthu = 3;// View
+
+                    Model.Phieuthuchi.reloadnewdetailtaikhoanco(dataGridViewTkCo);
+
+                    if (phieuthu.tkno != null)
+                    {
+                        Model.Phieuthuchi.reloaddetailtaikhoancophieuthu(this.dataGridViewTkCo, this, phieuthu.tkno.Trim(), phieuthu.sophieuthu);
+
+                    }
+
+                    btluu.Visible = false;
+
+                }
+
+
+
+                #endregion view load form
+
+
+            }
+
+
+            
             tabControl1.SelectedTab = tabPage1;
 
         }

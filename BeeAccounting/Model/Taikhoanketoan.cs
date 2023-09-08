@@ -33,6 +33,7 @@ namespace BEEACCOUNT.Model
                          Mã_tài_khoản_cấp_trên = tbl_dstaikhoan.matktren,
                          Cấp_tài_khoản = tbl_dstaikhoan.captk,
                          Theo_dõi_chi_tiết = tbl_dstaikhoan.loaichitiet,
+                         Mã_tài_khoản_kết_chuyển_cuối_năm = tbl_dstaikhoan.matkketchuyen,
                        //  Dư_Nợ_đầu_kỳ = tbl_dstaikhoan.nodk,
                       //   Dư_Có_đầu_kỳ = tbl_dstaikhoan.codk,
 
@@ -72,8 +73,8 @@ namespace BEEACCOUNT.Model
             int captk = createacc.captk;
             string tkcaptren = createacc.tkcaptren;
             string loaitk = createacc.loaitk;
-            double nodk = createacc.nodauky;
-            double codk = createacc.codauky;
+          //  double nodk = createacc.nodauky;
+           // double codk = createacc.codauky;
 
 
             if (chon)
@@ -134,12 +135,13 @@ namespace BEEACCOUNT.Model
 
      //       socaips.macty = Model.Username.getmacty();
             socaips.TkNo = socai.TkNo;
+            socaips.TkCo = socai.TkCo;
             socaips.MaCTietTKCo = socai.MaCTietTKCo;
             socaips.MaCTietTKNo = socai.MaCTietTKNo;
             socaips.tenchitietNo = socai.tenchitietNo;
             socaips.tenchitietCo = socai.tenchitietCo;
 
-            socaips.TkCo = socai.TkCo;
+           
             socaips.PsCo = socai.PsCo;
             socaips.PsNo = socai.PsNo;
             socaips.Diengiai = socai.Diengiai.Truncate(225);

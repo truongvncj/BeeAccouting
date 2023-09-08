@@ -68,8 +68,8 @@ namespace BEEACCOUNT.View
                 drToAdd["Số_tiền"] = socaitemp.PsNo;
             }
 
-            drToAdd["Mã_chi_tiết"] = socaitemp.MaCTietTKCo;
-            drToAdd["Tên_chi_tiết"] = socaitemp.tenchitietCo;
+            drToAdd["Mã_chi_tiết"] = socaitemp.MaCTietTKNo;
+            drToAdd["Tên_chi_tiết"] = socaitemp.tenchitietNo;
 
             drToAdd["tkNohide"] = socaitemp.TkNo;
             drToAdd["Nợ_TK"] = socaitemp.TkNo;
@@ -873,6 +873,8 @@ namespace BEEACCOUNT.View
                         if (dataGridViewTkNo.Rows[idrow].Cells["Nợ_TK"].Value != DBNull.Value && checkhead == true)
                         {
 
+
+
                             if (dataGridViewTkNo.Rows[idrow].Cells["Số_tiền"].Value == DBNull.Value)
                             {
                                 MessageBox.Show("Bạn chua nhập số tiền dòng: " + idrow.ToString(), "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -954,7 +956,8 @@ namespace BEEACCOUNT.View
                                 //  //  string username, string tkno, string tkco, float psno, float psco, string diengiai, string manghiepvu, int sochunngtu, DateTime ngaychungtu, DateTime ngayghiso
 
 
-                                socai.TkNo = dataGridViewTkNo.Rows[idrow].Cells["Nợ_TK"].Value.ToString().Trim();
+                             socai.TkNo = dataGridViewTkNo.Rows[idrow].Cells["Nợ_TK"].Value.ToString().Trim();
+
                                 if (dataGridViewTkNo.Rows[idrow].Cells["Mã_chi_tiết"].Value != DBNull.Value)///zcxzv
                                 {
 
@@ -981,7 +984,7 @@ namespace BEEACCOUNT.View
 
                                 if (dataGridViewTkNo.Rows[idrow].Cells["Nợ_TK"].Value != DBNull.Value)
                                 {
-                                    socai.TkCo = this.tkco; //this.tkco;//;
+                                    socai.TkCo = this.tkco;
 
                                 }
                                 else

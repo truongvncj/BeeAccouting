@@ -22573,6 +22573,8 @@ namespace BEEACCOUNT
 		
 		private bool _loaichitiet;
 		
+		private string _matkketchuyen;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -22591,6 +22593,8 @@ namespace BEEACCOUNT
     partial void OnloaitkidChanged();
     partial void OnloaichitietChanging(bool value);
     partial void OnloaichitietChanged();
+    partial void OnmatkketchuyenChanging(string value);
+    partial void OnmatkketchuyenChanged();
     #endregion
 		
 		public tbl_dstaikhoan()
@@ -22734,6 +22738,26 @@ namespace BEEACCOUNT
 					this._loaichitiet = value;
 					this.SendPropertyChanged("loaichitiet");
 					this.OnloaichitietChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_matkketchuyen", DbType="NVarChar(10)")]
+		public string matkketchuyen
+		{
+			get
+			{
+				return this._matkketchuyen;
+			}
+			set
+			{
+				if ((this._matkketchuyen != value))
+				{
+					this.OnmatkketchuyenChanging(value);
+					this.SendPropertyChanging();
+					this._matkketchuyen = value;
+					this.SendPropertyChanged("matkketchuyen");
+					this.OnmatkketchuyenChanged();
 				}
 			}
 		}
