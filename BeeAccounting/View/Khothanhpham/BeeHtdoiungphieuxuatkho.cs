@@ -342,7 +342,7 @@ namespace BEEACCOUNT.View
             LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
 
 
-            tbl_kho_phieuxuat_detail sanpham = new tbl_kho_phieuxuat_detail();
+            tbl_kho_phieunhapxuat_detail sanpham = new tbl_kho_phieunhapxuat_detail();
 
             //if (this.cb_channel.SelectedItem != null)
             if (cbmasanpham.SelectedItem != null)
@@ -361,7 +361,7 @@ namespace BEEACCOUNT.View
             {
                 sanpham.donvi = txtdonvi.Text;
                 sanpham.tenhang = txttensanpham.Text;
-                sanpham.soluongxuat = double.Parse(txtsoluong.Text.Trim());
+                sanpham.soluong = double.Parse(txtsoluong.Text.Trim());
             }
             else
             {
@@ -370,27 +370,7 @@ namespace BEEACCOUNT.View
                 return;
             }
 
-            if (Utils.IsValidnumber(txtdongia.Text))
-            {
-                sanpham.dongia = double.Parse(txtdongia.Text.Trim());
-            }
-            else
-            {
-                MessageBox.Show("Đơn giá phải là số !", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtdongia.Focus();
-                return;
-            }
 
-            if (Utils.IsValidnumber(txtthanhtien.Text))
-            {
-                sanpham.thanhtien = double.Parse(txtthanhtien.Text.Trim());
-            }
-            else
-            {
-                MessageBox.Show("Thành tiền phải là số !", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtdongia.Focus();
-                return;
-            }
            
 
 
@@ -437,16 +417,11 @@ namespace BEEACCOUNT.View
 
             if (e.KeyChar == (char)Keys.Enter)
             {
-                //  cbsophieu.
-                e.Handled = true;
-                txtdongia.Focus();
+                
+                 e.Handled = true;
+                 bt_themvao.Focus();
 
-                //    string valueinput = cb_customerka.Text;
-
-                //    string connection_string = Utils.getConnectionstr();
-                //    LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
-
-                //    string username = Utils.getusername();
+                
 
 
             }
@@ -478,17 +453,7 @@ namespace BEEACCOUNT.View
         {
 
 
-            try
-            {
-                txtthanhtien.Text = (float.Parse(txtsoluong.Text.ToString()) * float.Parse(txtdongia.Text.ToString())).ToString();
-
-            }
-            catch (Exception)
-            {
-
-                txtthanhtien.Text = "0";
-            }
-
+           
 
 
 
@@ -498,16 +463,7 @@ namespace BEEACCOUNT.View
         private void txtdongia_TextChanged(object sender, EventArgs e)
         {
 
-            try
-            {
-                txtthanhtien.Text = (float.Parse(txtsoluong.Text.ToString()) * float.Parse(txtdongia.Text.ToString())).ToString();
-
-            }
-            catch (Exception)
-            {
-
-                txtthanhtien.Text = "0";
-            }
+          
 
 
 
@@ -532,6 +488,11 @@ namespace BEEACCOUNT.View
 
             }
 
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
 
         }
     }

@@ -364,7 +364,17 @@ namespace BEEACCOUNT.View
 
             if (Utils.IsValidnumber(txtsotien.Text))
             {
-                socaitemp.PsNo = double.Parse(txtsotien.Text.Trim());
+                if (double.Parse(txtsotien.Text.Trim()) > 0)
+                {
+                    socaitemp.PsNo = double.Parse(txtsotien.Text.Trim());
+                }
+                else
+                {
+                    MessageBox.Show("Số tiền gõ vào phải không là số âm !", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtsotien.Focus();
+                    return;
+                }
+                
             }
             else
             {

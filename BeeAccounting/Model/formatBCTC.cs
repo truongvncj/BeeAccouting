@@ -72,6 +72,38 @@ namespace BEEACCOUNT.Model
             #endregion
         }
 
+        public static IQueryable LisDanhSachbuttoanketchuyen()
+        {
+            string connection_string = Utils.getConnectionstr();
+            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+            #region load list danh sach format
+            var ds = from p in dc.CDKTtempketchuyens
+                     where p.DuCock -p.DuNock != 0
+                                 select new
+                                 {
+                                       ID = p.id,
+                                     Năm = p.nam,
+                                     Mã_tài_khoản = p.matk,
+                                     Dư_nợ = p.DuNock ,
+                                     Dư_có = p.DuCock,
+                                     Kết_chuyển = p.matkketchuyen,
+                                     Chọn = p.chon,
+
+
+                                 };
+
+
+
+
+
+
+
+            return ds;
+            //     dataGridViewListphieuthu.DataSource = Listphieuthu;
+            #endregion
+        }
+
 
         public static IQueryable LisDanhSachKQKDformat()
         {

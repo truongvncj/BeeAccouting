@@ -5155,22 +5155,4 @@
         /w/xBNR+sWQNaQAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="label3.Text" xml:space="preserve">
-    <value>Ghi chú định nghĩa cách tính
-Số kỳ này là số phát sinh cộng số đầu kỳ của báo cáo
-
- DN: Dư Nợ  PS-- Là số PS Nợ - PS có
- DC: Dư Có PS  -- Là số Dư Có - Dư Nợ 
- FN : Dư Nợ Nếu có --  Lấy bằng 0 hoặc số dư PS Nợ - PS có nếu  &gt;0 
- FC : Dư  Có Nếu có -- Lấy bằng 0 hoặc số dư PS Có - PS nợ nếu  &gt;0
-PN : Tổng PS Nợ
-PC : Tổng PS Có 
-NN: Dư Nợ Ngăn Hạn -- Lấy số của sổ chi tiết dư nợ  - Ngắn hạn  
-ND: Dư Nợ Dài Hạn -- Lấy số của sổ chi tiết dư nợ - Dài hạn   
-CN: Dư  Nợ Ngăn Hạn -- Lấy số của sổ chi tiết dư có  - Ngắn hạn  
-CD: Dư Có  Dài Hạn -- Lấy số của sổ chi tiết dư có - Dài hạn   
-UC: Đối ứng Có của TK, VD UC511;111;222;333 là có 511 của Nợ 111,222
-UN: Đối ứng Nợ của TK, VD UC511;111;222;333 là Nợ 511 của Có 111,222
-Ví dụ cách lập công thức tính: DN141,-DC242</value>
-  </data>
 </root>

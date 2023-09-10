@@ -211,7 +211,7 @@ namespace BEEACCOUNT.View
             this.phieuchiid = -1;
 
             this.statusphieuchi = 1; // tạo mới
-            dataGridViewTkNo = Model.Phieuthuchi.reloadnewdetailtaikhoanNo(dataGridViewTkNo);
+            dataGridViewTkNo = Model.Phieuthuchi.reloadnewdetailphieuchi(dataGridViewTkNo);
             #endregion
 
 
@@ -325,7 +325,7 @@ namespace BEEACCOUNT.View
 
 
 
-            dataGridViewTkNo = Model.Phieuthuchi.reloadnewdetailtaikhoanNo(dataGridViewTkNo);
+            dataGridViewTkNo = Model.Phieuthuchi.reloadnewdetailphieuchi(dataGridViewTkNo);
 
             dataGridViewListphieuchi.DataSource = Model.Phieuthuchi.LisDanhSachphieuchi("PC", cbthang.Text, cbnam.Text);
 
@@ -2239,7 +2239,7 @@ namespace BEEACCOUNT.View
 
                     this.statusphieuchi = 3;// View
 
-                    Model.Phieuthuchi.reloadnewdetailtaikhoanNo(dataGridViewTkNo);
+                    Model.Phieuthuchi.reloadnewdetailphieuchi(dataGridViewTkNo);
 
                     if (phieuchi.tkno != null)
                     {

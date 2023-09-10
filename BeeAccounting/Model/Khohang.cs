@@ -3,7 +3,9 @@ using BEEACCOUNT.View;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
@@ -47,7 +49,7 @@ namespace BEEACCOUNT.Model
         public static void themmoikhohang()
         {
             View.BeeDanhsachkho p = new BeeDanhsachkho(3, -1);  // 3 là thêm ới/ 4 là sửa xóa
-                                                                //  View.BeeDanhsachkho p = new View.BeeDanhsachkho
+            //  View.BeeDanhsachkho p = new View.BeeDanhsachkho
             p.ShowDialog();
 
 
@@ -58,6 +60,9 @@ namespace BEEACCOUNT.Model
             // throw new NotImplementedException();
         }
 
+
+
+
         public static void suaxoadanhsachkho(int iddanhscahkho)
         {
 
@@ -65,7 +70,7 @@ namespace BEEACCOUNT.Model
 
 
             View.BeeDanhsachkho p = new BeeDanhsachkho(4, iddanhscahkho);  // 3 là thêm ới/ 4 là sửa xóa
-                                                                           //  View.BeeDanhsachkho p = new View.BeeDanhsachkho
+            //  View.BeeDanhsachkho p = new View.BeeDanhsachkho
             p.ShowDialog();
 
 
@@ -116,7 +121,7 @@ namespace BEEACCOUNT.Model
         {
 
             View.BeeDanhsachnhomsanpham p = new BeeDanhsachnhomsanpham(3, -1);  // 3 là thêm ới/ 4 là sửa xóa
-                                                                                //  View.BeeDanhsachkho p = new View.BeeDanhsachkho
+            //  View.BeeDanhsachkho p = new View.BeeDanhsachkho
             p.ShowDialog();
 
 
@@ -133,12 +138,135 @@ namespace BEEACCOUNT.Model
 
 
             View.BeeDanhsachnhomsanpham p = new BeeDanhsachnhomsanpham(4, idtk);  // 3 là thêm ới/ 4 là sửa xóa
-                                                                                  //  View.BeeDanhsachkho p = new View.BeeDanhsachkho
+            //  View.BeeDanhsachkho p = new View.BeeDanhsachkho
             p.ShowDialog();
 
 
 
             //throw new NotImplementedException();
+        }
+
+        //   Model.Khohang.tinhnvlxuatkhoppbinhquantheothang(namchon, thangchon);
+
+        public static void tinhnvlxuatkhoppbinhquantheothang(string namchon, string thangchon)
+        {
+
+            string connection_string = Utils.getConnectionstr();
+            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+            
+         
+                // tinh giá
+                #region caculation getCaculgiaxuatnvlppbinhquanlannhap
+                SqlConnection conn2 = null;
+                SqlDataReader rdr1 = null;
+
+                string destConnString = Utils.getConnectionstr();
+                try
+                {
+
+                    conn2 = new SqlConnection(destConnString);
+                    conn2.Open();
+                    SqlCommand cmd1 = new SqlCommand("getCaculgiaxuatnvlppbinhquan1thang", conn2);
+                    cmd1.CommandType = CommandType.StoredProcedure;
+                    cmd1.CommandTimeout = 0;
+                    //  cmd1.Parameters.Add("@Year", SqlDbType.Int).Value = yearchon;
+                    cmd1.Parameters.Add("@nam", SqlDbType.Int).Value = int.Parse(namchon);
+
+                    cmd1.Parameters.Add("@thang", SqlDbType.Int).Value = int.Parse(thangchon);
+
+
+
+                    rdr1 = cmd1.ExecuteReader();
+
+
+
+                }
+                finally
+                {
+                    if (conn2 != null)
+                    {
+                        conn2.Close();
+                    }
+                    if (rdr1 != null)
+                    {
+                        rdr1.Close();
+                    }
+                }
+                //     MessageBox.Show("ok", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                #endregion
+
+
+           
+
+
+
+        }
+
+        public static void tinhnvlxuatkhoppbinhquanlannhap(string phieuso, string loaiphieu)
+        {
+
+               string connection_string = Utils.getConnectionstr();
+            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+
+            var rs = from p in dc.tbl_kho_phieunhapxuat_details
+                     where p.loaiphieuxn == loaiphieu
+                     && p.phieuso == phieuso
+                     select p.id;
+
+
+            foreach (var item in rs)
+            {
+
+                // tinh giá
+                #region caculation getCaculgiaxuatnvlppbinhquanlannhap
+                SqlConnection conn2 = null;
+                SqlDataReader rdr1 = null;
+
+                string destConnString = Utils.getConnectionstr();
+                try
+                {
+
+                    conn2 = new SqlConnection(destConnString);
+                    conn2.Open();
+                    SqlCommand cmd1 = new SqlCommand("getCaculgiaxuatnvlppbinhquanlannhap", conn2);
+                    cmd1.CommandType = CommandType.StoredProcedure;
+                    cmd1.CommandTimeout = 0;
+                    //  cmd1.Parameters.Add("@Year", SqlDbType.Int).Value = yearchon;
+                    //cmd1.Parameters.Add("@thang", SqlDbType.Int).Value = thang;
+                    cmd1.Parameters.Add("@id", SqlDbType.Int).Value = item;
+
+                    
+
+                    rdr1 = cmd1.ExecuteReader();
+
+
+
+                }
+                finally
+                {
+                    if (conn2 != null)
+                    {
+                        conn2.Close();
+                    }
+                    if (rdr1 != null)
+                    {
+                        rdr1.Close();
+                    }
+                }
+                //     MessageBox.Show("ok", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                #endregion
+   
+
+            }
+
+
+
+
+
         }
 
         public static IQueryable danhsachsanpham(LinqtoSQLDataContext dc)
@@ -188,7 +316,7 @@ namespace BEEACCOUNT.Model
         {
 
             View.BeeDanhsachsanpham p = new BeeDanhsachsanpham(3, -1);  // 3 là thêm ới/ 4 là sửa xóa
-                                                                        //  View.BeeDanhsachkho p = new View.BeeDanhsachkho
+            //  View.BeeDanhsachkho p = new View.BeeDanhsachkho
             p.ShowDialog();
 
 
@@ -202,7 +330,7 @@ namespace BEEACCOUNT.Model
         {
 
             View.BeeDanhsachsanpham p = new BeeDanhsachsanpham(4, idtk);  // 3 là thêm ới/ 4 là sửa xóa
-                                                                          //  View.BeeDanhsachkho p = new View.BeeDanhsachkho
+            //  View.BeeDanhsachkho p = new View.BeeDanhsachkho
             p.ShowDialog();
 
             //  throw new NotImplementedException();
@@ -210,12 +338,12 @@ namespace BEEACCOUNT.Model
 
         public static IQueryable danhsachphieunhapkho(LinqtoSQLDataContext dc)
         {
-        
+
             LinqtoSQLDataContext db = dc;
 
 
-            var rs = from p in dc.tbl_kho_phieunhap_heads 
-           
+            var rs = from p in dc.tbl_kho_phieunhap_heads
+
                      select new
                      {
 
@@ -257,11 +385,11 @@ namespace BEEACCOUNT.Model
         public static IQueryable danhsachphieuxuatkho(LinqtoSQLDataContext dc)
         {
 
-             LinqtoSQLDataContext db = dc;
+            LinqtoSQLDataContext db = dc;
 
 
             var rs = from p in dc.tbl_kho_phieuxuat_heads
-                  
+
                      select new
                      {
 
@@ -270,7 +398,7 @@ namespace BEEACCOUNT.Model
                          Tên_kho = p.tenkho,
                          Phiếu_số = p.phieuso,
                          Người_nhận = p.nguoinhanhang,
-                  //       Theo_đơn_hàng = p.theodonhang,
+                         //       Theo_đơn_hàng = p.theodonhang,
                          Diễn_giải = p.diengiai,
                          Có_TK = p.cotk,
                          Chi_tiết_TK_Có = p.MaCTietTKCo,
@@ -316,7 +444,7 @@ namespace BEEACCOUNT.Model
 
 
             //   dt.Columns.Add(new DataColumn("Ngày_chứng_từ", typeof(DGV_DateTimePicker.DateTimePickerCell)));
-            dt.Columns.Add(new DataColumn("masanpham", typeof(string)));
+            dt.Columns.Add(new DataColumn("Mã_sản_phẩm", typeof(string)));
             dt.Columns.Add(new DataColumn("Tên_sản_phẩm", typeof(string)));
 
             dt.Columns.Add(new DataColumn("Đơn_vị", typeof(string)));
@@ -337,56 +465,8 @@ namespace BEEACCOUNT.Model
             dataGridViewdetailPNK.DataSource = dt;
 
 
-            //DGV_DateTimePicker.DateTimePickerColumn col = new DGV_DateTimePicker.DateTimePickerColumn();
-            //col.HeaderText = "Ngày chứng từ";
-            //col.Name = "Ngày_chứng_từ";
-            //col.DataPropertyName = "ngayctuhide";
-            //dataGridViewdetailPNK.Columns.Add(col);
-
-
-            //    dataGridViewTkCo.Columns.Remove("Tk_Có");
-
-            #region  //  mã sản phẩm
-            string connection_string = Utils.getConnectionstr();
-            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
-
-            DataGridViewComboBoxColumn cmbdgv = new DataGridViewComboBoxColumn();
-
-
-            List<View.BeeKhophieunhap.ComboboxItem> CombomCollection = new List<View.BeeKhophieunhap.ComboboxItem>();
-
-            var rs = from p in dc.tbl_kho_sanphams
-                     where p.makho == makho
-                     orderby p.masp
-                     select p;
-            foreach (var item in rs)
-            {
-                View.BeeKhophieunhap.ComboboxItem cb = new View.BeeKhophieunhap.ComboboxItem();
-                cb.Value = item.masp;
-                cb.Text = item.masp.Trim() + ": " + item.tensp;
-                CombomCollection.Add(cb);
-            }
-
-            cmbdgv.DataSource = CombomCollection;
-            cmbdgv.HeaderText = "Mã_sản_phẩm";
-            cmbdgv.Name = "Mã_sản_phẩm";
-            cmbdgv.ValueMember = "Value";
-            cmbdgv.DisplayMember = "Text";
-            cmbdgv.Width = 300;
-            cmbdgv.DropDownWidth = 300;
-            cmbdgv.DataPropertyName = "masanpham"; //Bound value to the datasource
-
-
-            dataGridViewdetailPNK.Columns.Add(cmbdgv);
-
-
-
-
-
-            #endregion binddata
-
-            dataGridViewdetailPNK.Columns["masanpham"].Visible = false;
-            dataGridViewdetailPNK.Columns["Mã_sản_phẩm"].DisplayIndex = 0;
+           
+          //  dataGridViewdetailPNK.Columns["Mã_sản_phẩm"].DisplayIndex = 0;
 
             dataGridViewdetailPNK.Columns["Tên_sản_phẩm"].ReadOnly = true;
             dataGridViewdetailPNK.Columns["Đơn_vị"].ReadOnly = true;
@@ -403,7 +483,7 @@ namespace BEEACCOUNT.Model
             dataGridViewdetailPNK.Columns["Đơn_giá"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
             dataGridViewdetailPNK.Columns["Thành_tiền"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
 
-        //    this.dataGridView1.Columns["CustomerCode"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
+            //    this.dataGridView1.Columns["CustomerCode"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
             //this.dataGridView1.Columns["CustomerCode"].DefaultCellStyle.Format = "N0";
             //this.dataGridView1.Columns["CustomerCode"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;// = "N0";
 
@@ -487,7 +567,9 @@ namespace BEEACCOUNT.Model
 
 
             //   dt.Columns.Add(new DataColumn("Ngày_chứng_từ", typeof(DGV_DateTimePicker.DateTimePickerCell)));
-            dt.Columns.Add(new DataColumn("masanpham", typeof(string)));
+          //  dt.Columns.Add(new DataColumn("masanpham", typeof(string)));
+            dt.Columns.Add(new DataColumn("Mã_sản_phẩm", typeof(string)));
+            
             dt.Columns.Add(new DataColumn("Tên_sản_phẩm", typeof(string)));
 
             dt.Columns.Add(new DataColumn("Đơn_vị", typeof(string)));
@@ -517,48 +599,48 @@ namespace BEEACCOUNT.Model
 
             //    dataGridViewTkCo.Columns.Remove("Tk_Có");
 
-            #region  //  mã sản phẩm
-            string connection_string = Utils.getConnectionstr();
-            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+            //#region  //  mã sản phẩm
+            //string connection_string = Utils.getConnectionstr();
+            //LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
 
-            DataGridViewComboBoxColumn cmbdgv = new DataGridViewComboBoxColumn();
-
-
-            List<View.BeeKhophieuxuat.ComboboxItem> CombomCollection = new List<View.BeeKhophieuxuat.ComboboxItem>();
-
-            var rs = from p in dc.tbl_kho_sanphams
-                     where p.makho == makho
-
-                     orderby p.masp
-                     select p;
-            foreach (var item in rs)
-            {
-                View.BeeKhophieuxuat.ComboboxItem cb = new View.BeeKhophieuxuat.ComboboxItem();
-                cb.Value = item.masp;
-                cb.Text = item.masp.Trim() + ": " + item.tensp;
-                CombomCollection.Add(cb);
-            }
-
-            cmbdgv.DataSource = CombomCollection;
-            cmbdgv.HeaderText = "Mã_sản_phẩm";
-            cmbdgv.Name = "Mã_sản_phẩm";
-            cmbdgv.ValueMember = "Value";
-            cmbdgv.DisplayMember = "Text";
-            cmbdgv.Width = 300;
-            cmbdgv.DropDownWidth = 300;
-            cmbdgv.DataPropertyName = "masanpham"; //Bound value to the datasource
+            //DataGridViewComboBoxColumn cmbdgv = new DataGridViewComboBoxColumn();
 
 
-            dataGridViewdetailPXK.Columns.Add(cmbdgv);
+            //List<View.BeeKhophieuxuat.ComboboxItem> CombomCollection = new List<View.BeeKhophieuxuat.ComboboxItem>();
+
+            //var rs = from p in dc.tbl_kho_sanphams
+            //         where p.makho == makho
+
+            //         orderby p.masp
+            //         select p;
+            //foreach (var item in rs)
+            //{
+            //    View.BeeKhophieuxuat.ComboboxItem cb = new View.BeeKhophieuxuat.ComboboxItem();
+            //    cb.Value = item.masp;
+            //    cb.Text = item.masp.Trim() + ": " + item.tensp;
+            //    CombomCollection.Add(cb);
+            //}
+
+            //cmbdgv.DataSource = CombomCollection;
+            //cmbdgv.HeaderText = "Mã_sản_phẩm";
+            //cmbdgv.Name = "Mã_sản_phẩm";
+            //cmbdgv.ValueMember = "Value";
+            //cmbdgv.DisplayMember = "Text";
+            //cmbdgv.Width = 300;
+            //cmbdgv.DropDownWidth = 300;
+            //cmbdgv.DataPropertyName = "masanpham"; //Bound value to the datasource
 
 
+            //dataGridViewdetailPXK.Columns.Add(cmbdgv);
 
 
 
-            #endregion binddata
 
-            dataGridViewdetailPXK.Columns["masanpham"].Visible = false;
-            dataGridViewdetailPXK.Columns["Mã_sản_phẩm"].DisplayIndex = 0;
+
+            //#endregion binddata
+
+          //  dataGridViewdetailPXK.Columns["masanpham"].Visible = false;
+          //  dataGridViewdetailPXK.Columns["Mã_sản_phẩm"].DisplayIndex = 0;
 
             dataGridViewdetailPXK.Columns["Tên_sản_phẩm"].ReadOnly = true;
             dataGridViewdetailPXK.Columns["Đơn_vị"].ReadOnly = true;

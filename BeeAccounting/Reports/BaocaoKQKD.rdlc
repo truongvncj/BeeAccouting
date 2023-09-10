@@ -3536,14 +3536,14 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox68">
+                    <Textbox Name="nay01dt1">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!nay01dt.Value - Fields!nay02giamdt.Value -Fields!nay11giavon.Value +Fields!naydttaichinh.Value-Fields!naycftaichinh.Value -Fields!naycfbanhang.Value -Fields!naycfquanlydn.Value</Value>
+                              <Value>=Fields!nay01dt.Value+Fields!naydttaichinh.Value-Fields!nay02giamdt.Value+Fields!naydttaichinh.Value-Fields!naycftaichinh.Value-Fields!naycfbanhang.Value-Fields!naycfquanlydn.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -3557,7 +3557,7 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox68</rd:DefaultName>
+                      <rd:DefaultName>nay01dt1</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>Solid</Style>
@@ -5890,7 +5890,6 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
         </TablixRowHierarchy>
         <DataSetName>DataSet2</DataSetName>
         <Top>4.44044cm</Top>
-        <Left>0cm</Left>
         <Height>14.435cm</Height>
         <Width>18.8004cm</Width>
         <ZIndex>6</ZIndex>
@@ -6470,8 +6469,6 @@ ngày 22/12/2014 của Bộ trưởng BTC)</Value>
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox1</rd:DefaultName>
-          <Top>0cm</Top>
-          <Left>0cm</Left>
           <Height>0.6cm</Height>
           <Width>2.5cm</Width>
           <Style>

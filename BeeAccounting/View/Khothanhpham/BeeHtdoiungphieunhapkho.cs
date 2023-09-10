@@ -342,7 +342,7 @@ namespace BEEACCOUNT.View
             LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
 
 
-            tbl_kho_phieunhap_detail sanpham = new tbl_kho_phieunhap_detail();
+            tbl_kho_phieunhapxuat_detail sanpham = new tbl_kho_phieunhapxuat_detail();
 
             //if (this.cb_channel.SelectedItem != null)
             if (cbmasanpham.SelectedItem != null)
@@ -361,7 +361,7 @@ namespace BEEACCOUNT.View
             {
                 sanpham.donvi = txtdonvi.Text;
                 sanpham.tenhang = txttensanpham.Text;
-                sanpham.soluongnhap = double.Parse(txtsoluong.Text.Trim());
+                sanpham.soluong = double.Parse(txtsoluong.Text.Trim());
             }
             else
             {
@@ -520,15 +520,9 @@ namespace BEEACCOUNT.View
             {
                 //  cbsophieu.
                 e.Handled = true;
-                txtsoluong.Focus();
+                bt_themvao.Focus();
 
-                //    string valueinput = cb_customerka.Text;
-
-                //    string connection_string = Utils.getConnectionstr();
-                //    LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
-
-                //    string username = Utils.getusername();
-
+              
 
             }
 

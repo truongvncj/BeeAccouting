@@ -157,6 +157,12 @@
     <Compile Include="View\BCTC\BeeLCDPSdauky.Designer.cs">
       <DependentUpon>BeeLCDPSdauky.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Formview\Beemonthandyearsellect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Formview\Beemonthandyearsellect.Designer.cs">
+      <DependentUpon>Beemonthandyearsellect.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Hethong\BeeformatLCTT.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -314,6 +320,12 @@
     <Compile Include="View\Muahang\BeeNCCnewaccount.Designer.cs">
       <DependentUpon>BeeNCCnewaccount.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Tienmat\BeeHtoansocaiphieuthu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Tienmat\BeeHtoansocaiphieuthu.Designer.cs">
+      <DependentUpon>BeeHtoansocaiphieuthu.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Tienmat\Beehtsocaiuynhiemchi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -373,12 +385,6 @@
     </Compile>
     <Compile Include="View\Formview\Beechooseslect.Designer.cs">
       <DependentUpon>Beechooseslect.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\Tienmat\BeeHtoansocaidoiungphieuthu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\Tienmat\BeeHtoansocaidoiungphieuthu.Designer.cs">
-      <DependentUpon>BeeHtoansocaidoiungphieuthu.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Khothanhpham\Beeseleckhobcxnt.cs">
       <SubType>Form</SubType>
@@ -601,27 +607,34 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\BCTC\BeeLCDPSdauky.resx">
       <DependentUpon>BeeLCDPSdauky.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Formview\Beeviewandchoose.resx">
       <DependentUpon>Beeviewandchoose.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Dieuvan\Beedieudongxe.resx">
       <DependentUpon>Beedieudongxe.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Dieuvan\bedieuvan.resx">
       <DependentUpon>bedieuvan.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="View\BCTC\BeeLCTT200dauky.resx">
       <DependentUpon>BeeLCTT200dauky.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="View\BCTC\BeeCDKT200nhapsocho.resx">
       <DependentUpon>BeeCDKT200nhapsocho.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="View\BCTC\BeeBCKQKD200updatechotso.resx">
       <DependentUpon>BeeBCKQKD200updatechotso.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Dieuvan\BeeSeachdieuvan.resx">
       <DependentUpon>BeeSeachdieuvan.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Formview\Beefromdatetodate.resx">
       <DependentUpon>Beefromdatetodate.cs</DependentUpon>
@@ -631,12 +644,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Dieuvan\NPDanhsackhachhangvantai.resx">
       <DependentUpon>NPDanhsackhachhangvantai.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Dieuvan\NPdanhsachxe.resx">
       <DependentUpon>NPdanhsachxe.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Dieuvan\NPDanhsachnhavantai.resx">
       <DependentUpon>NPDanhsachnhavantai.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Formview\Beemonthandyearsellect.resx">
+      <DependentUpon>Beemonthandyearsellect.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Hethong\BeeformatLCTT.resx">
       <DependentUpon>BeeformatLCTT.cs</DependentUpon>
@@ -680,6 +699,9 @@
     <EmbeddedResource Include="View\Muahang\BeeNCCnewaccount.resx">
       <DependentUpon>BeeNCCnewaccount.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\Tienmat\BeeHtoansocaiphieuthu.resx">
+      <DependentUpon>BeeHtoansocaiphieuthu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Tienmat\Beehtsocaiuynhiemchi.resx">
       <DependentUpon>Beehtsocaiuynhiemchi.cs</DependentUpon>
     </EmbeddedResource>
@@ -694,6 +716,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Beemainload.resx">
       <DependentUpon>Beemainload.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Tienmat\Beeuynhiemchi.resx">
       <DependentUpon>Beeuynhiemchi.cs</DependentUpon>
@@ -709,9 +732,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Formview\Beechooseslect.resx">
       <DependentUpon>Beechooseslect.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\Tienmat\BeeHtoansocaidoiungphieuthu.resx">
-      <DependentUpon>BeeHtoansocaidoiungphieuthu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Khothanhpham\Beeseleckhobcxnt.resx">
       <DependentUpon>Beeseleckhobcxnt.cs</DependentUpon>

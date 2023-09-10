@@ -2574,23 +2574,26 @@ namespace BEEACCOUNT.Model
                             detail.donvi = item.donvi;
 
 
-                            detail.tondaukysoluong = (from p in dc.tbl_kho_phieunhap_details
-                                                      where p.ngayphieunhap < fromdate
+                            detail.tondaukysoluong = (from p in dc.tbl_kho_phieunhapxuat_details
+                                                      where p.ngayphieu < fromdate
+                                                      && p.loaiphieuxn=="n"
                                            && p.makho == item.makho
                                            && p.mahang == item.masp
-                                                      select p.soluongnhap).Sum().GetValueOrDefault(0)
+                                                      select p.soluong).Sum().GetValueOrDefault(0)
                                                       + (from p in dc.tbl_kho_sanphams
                                                          where p.masp == item.masp
                                                         && p.makho == item.makho
                                                          select p.tondksoluong).FirstOrDefault()
-                                      - (from p in dc.tbl_kho_phieuxuat_details
-                                         where p.ngayphieuxuat < fromdate
+                                      - (from p in dc.tbl_kho_phieunhapxuat_details
+                                         where p.ngayphieu < fromdate
+                                           && p.loaiphieuxn == "x"
                                               && p.makho == item.makho
                                           && p.mahang == item.masp
-                                         select p.soluongxuat).Sum().GetValueOrDefault(0);
+                                         select p.soluong).Sum().GetValueOrDefault(0);
 
-                            detail.tondaukythanhtien = (from p in dc.tbl_kho_phieunhap_details
-                                                        where p.ngayphieunhap < fromdate
+                            detail.tondaukythanhtien = (from p in dc.tbl_kho_phieunhapxuat_details
+                                                        where p.ngayphieu < fromdate
+                                                             && p.loaiphieuxn == "n"
                                              && p.makho == item.makho
                                              && p.mahang == item.masp
                                                         select p.thanhtien).Sum().GetValueOrDefault(0)
@@ -2598,38 +2601,43 @@ namespace BEEACCOUNT.Model
                                                            where p.masp == item.masp
                                                             && p.makho == item.makho
                                                            select p.tondkthanhtien).FirstOrDefault()
-                                                        - (from p in dc.tbl_kho_phieuxuat_details
-                                                           where p.ngayphieuxuat < fromdate
+                                                        - (from p in dc.tbl_kho_phieunhapxuat_details
+                                                           where p.ngayphieu < fromdate
+                                                                && p.loaiphieuxn == "x"
                                                                && p.makho == item.makho
                                                                && p.mahang == item.masp
                                                            select p.thanhtien).Sum().GetValueOrDefault(0);
 
 
-                            detail.nhaptrongkysoluong = (from p in dc.tbl_kho_phieunhap_details
-                                                         where p.ngayphieunhap >= fromdate
-                                                         && p.ngayphieunhap <= todate
+                            detail.nhaptrongkysoluong = (from p in dc.tbl_kho_phieunhapxuat_details
+                                                         where p.ngayphieu>= fromdate
+                                                          && p.loaiphieuxn == "n"
+                                                         && p.ngayphieu <= todate
                                               && p.makho == item.makho
                                               && p.mahang == item.masp
-                                                         select p.soluongnhap).Sum().GetValueOrDefault(0);
+                                                         select p.soluong).Sum().GetValueOrDefault(0);
 
-                            detail.nhaptrongkythanhtien = (from p in dc.tbl_kho_phieunhap_details
-                                                           where p.ngayphieunhap >= fromdate
-                                                           && p.ngayphieunhap <= todate
+                            detail.nhaptrongkythanhtien = (from p in dc.tbl_kho_phieunhapxuat_details
+                                                           where p.ngayphieu >= fromdate
+                                                                && p.loaiphieuxn == "n"
+                                                           && p.ngayphieu <= todate
                                                 && p.makho == item.makho
                                                 && p.mahang == item.masp
                                                            select p.thanhtien).Sum().GetValueOrDefault(0);
 
 
-                            detail.xuattrongkysoluong = (from p in dc.tbl_kho_phieuxuat_details
-                                                         where p.ngayphieuxuat >= fromdate
-                                                         && p.ngayphieuxuat <= todate
+                            detail.xuattrongkysoluong = (from p in dc.tbl_kho_phieunhapxuat_details
+                                                         where p.ngayphieu >= fromdate
+                                                            && p.loaiphieuxn == "n"
+                                                         && p.ngayphieu <= todate
                                               && p.makho == item.makho
                                               && p.mahang == item.masp
-                                                         select p.soluongxuat).Sum().GetValueOrDefault(0);
+                                                         select p.soluong).Sum().GetValueOrDefault(0);
 
-                            detail.xuattrongkythanhtien = (from p in dc.tbl_kho_phieuxuat_details
-                                                           where p.ngayphieuxuat >= fromdate
-                                                           && p.ngayphieuxuat <= todate
+                            detail.xuattrongkythanhtien = (from p in dc.tbl_kho_phieunhapxuat_details
+                                                           where p.ngayphieu >= fromdate
+                                                           && p.ngayphieu <= todate
+                                                            && p.loaiphieuxn == "x"
                                                 && p.makho == item.makho
                                                 && p.mahang == item.masp
                                                            select p.thanhtien).Sum().GetValueOrDefault(0);

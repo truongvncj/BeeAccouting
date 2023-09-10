@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Globalization;
 using System.Linq;
@@ -13,7 +14,7 @@ namespace BEEACCOUNT.View
 {
     public partial class BeeAutoketchuyencuoinam : Form
     {
-       
+
         public class ComboboxItem
         {
             public string Text { get; set; }
@@ -25,80 +26,55 @@ namespace BEEACCOUNT.View
             }
         }
 
+        public string namchon; 
 
-    
         public void reloadgridview()
         {
 
-   
-            dataGridViewformatBCTC.DataSource = Model.formatBCTC.LisDanhSachformat();
+
+            dataGridViewketchuyen.DataSource = Model.formatBCTC.LisDanhSachbuttoanketchuyen();
+            dataGridViewketchuyen.Columns["ID"].Visible = false;
 
         }
 
-        
 
-     public void reloadtxtchuoitinh(string chuoitinhmoi)
-        {
-
-
-            if (txtchuoicachtinh.Text.Trim().Length ==0 )
-            {
-
-                this.txtchuoicachtinh.Text = chuoitinhmoi.Trim();
-
-            }
-            else
-            {
-                if (!this.txtchuoicachtinh.Text.Contains(chuoitinhmoi.Trim()))
-                {
-                    this.txtchuoicachtinh.Text = this.txtchuoicachtinh.Text.Trim() + "," + chuoitinhmoi.Trim();
-  
-                }
-
-              
-
-            }
-
-           
-
-        }
 
         void Control_KeyPress(object sender, KeyEventArgs e)
         {
 
-           
 
 
 
 
-            if (e.Control == true && e.KeyCode == Keys.N )
+
+            if (e.Control == true && e.KeyCode == Keys.N)
             {
 
 
-              
-
-              
-                                    FormCollection fc = System.Windows.Forms.Application.OpenForms;
-
-                                    bool kq = false;
-                                    foreach (Form frm in fc)
-                                    {
-                                        if (frm.Text == "Tài khoản")
-                                        {
-                                            kq = true;
-                                            frm.Focus();
-
-                                        }
-                                    }
-
-                                    if (!kq)
-                                    {
-                                       // View.ThemtktinhCDKT ThemtktinhCDKT = new ThemtktinhCDKT(this);
-                                   //     ThemtktinhCDKT.Show();
-                                    }
 
 
-                
+
+                FormCollection fc = System.Windows.Forms.Application.OpenForms;
+
+                bool kq = false;
+                foreach (Form frm in fc)
+                {
+                    if (frm.Text == "Tài khoản")
+                    {
+                        kq = true;
+                        frm.Focus();
+
+                    }
+                }
+
+                if (!kq)
+                {
+                    // View.ThemtktinhCDKT ThemtktinhCDKT = new ThemtktinhCDKT(this);
+                    //     ThemtktinhCDKT.Show();
+                }
+
+
+
 
 
             }
@@ -120,17 +96,100 @@ namespace BEEACCOUNT.View
 
             string username = Utils.getusername();
 
-            this.txtchuoicachtinh.Text = "";
+
+
+
+
+            FormCollection fc = System.Windows.Forms.Application.OpenForms;
+            bool chon;
+            string yearchon;
+            bool kq = false;
+            foreach (Form frm in fc)
+            {
+
+                if (frm.Text == "Chọn năm")
+                {
+                    kq = true;
+                    frm.Focus();
+
+                }
+            }
+
+            if (!kq)
+            {
+
+              //  this.namchon = 
+
+                View.Beeyearsellect Beeyearsellect = new View.Beeyearsellect();
+                Beeyearsellect.ShowDialog();
+
+                yearchon = Beeyearsellect.year;
+                chon = Beeyearsellect.chon;
+
+
+                if (chon)
+                {
+
+                    this.namchon = yearchon;
+
+
+                    #region caculation tinhsoducactaikhoanketchuyen
+                    SqlConnection conn2 = null;
+                    SqlDataReader rdr1 = null;
+
+                    string destConnString = Utils.getConnectionstr();
+                    try
+                    {
+
+                        conn2 = new SqlConnection(destConnString);
+                        conn2.Open();
+                        SqlCommand cmd1 = new SqlCommand("tinhsoducactaikhoanketchuyen", conn2);
+                        cmd1.CommandType = CommandType.StoredProcedure;
+                        cmd1.CommandTimeout = 0;
+                        cmd1.Parameters.Add("@username", SqlDbType.VarChar).Value = Utils.getusername();
+                        cmd1.Parameters.Add("@yearchon", SqlDbType.Int).Value = int.Parse(yearchon);
+                        //   cmd1.Parameters.Add("@todate", SqlDbType.DateTime).Value = todate;
+
+
+
+
+                        rdr1 = cmd1.ExecuteReader();
+
+
+
+                    }
+                    finally
+                    {
+                        if (conn2 != null)
+                        {
+                            conn2.Close();
+                        }
+                        if (rdr1 != null)
+                        {
+                            rdr1.Close();
+                        }
+                    }
+                    //     MessageBox.Show("ok", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    #endregion
+
+
+
+                }
+
+            }
+
+
             #region load datenew
-          
 
-            dataGridViewformatBCTC.DataSource = Model.formatBCTC.LisDanhSachformat();
+            reloadgridview();
+            //            dataGridViewformatBCTC.DataSource = // Model.formatBCTC.LisDanhSachformat();
 
 
 
-        //    dataGridViewformatBCTC = Model.Phieuthuchi.reloadnewdetailtaikhoanco(dataGridViewformatBCTC);
+            //    dataGridViewformatBCTC = Model.Phieuthuchi.reloadnewdetailtaikhoanco(dataGridViewformatBCTC);
 
-       
+
             #endregion load datanew
 
         }
@@ -156,7 +215,7 @@ namespace BEEACCOUNT.View
             {
                 //  cbsophieu.
                 e.Handled = true;
-              
+
 
             }
         }
@@ -167,7 +226,7 @@ namespace BEEACCOUNT.View
             {
                 // datepickngayphieu.
                 e.Handled = true;
-              
+
 
 
             }
@@ -189,7 +248,7 @@ namespace BEEACCOUNT.View
             if (e.KeyChar == (char)Keys.Enter)
             {
                 e.Handled = true;
-              
+
 
 
             }
@@ -200,7 +259,7 @@ namespace BEEACCOUNT.View
             if (e.KeyChar == (char)Keys.Enter)
             {
                 e.Handled = true;
-          
+
 
             }
         }
@@ -210,7 +269,7 @@ namespace BEEACCOUNT.View
             if (e.KeyChar == (char)Keys.Enter)
             {
                 e.Handled = true;
-         
+
 
 
 
@@ -223,7 +282,7 @@ namespace BEEACCOUNT.View
             if (e.KeyChar == (char)Keys.Enter)
             {
                 e.Handled = true;
-       
+
 
                 //    string valueinput = cb_customerka.Text;
 
@@ -243,7 +302,7 @@ namespace BEEACCOUNT.View
             if (e.KeyChar == (char)Keys.Enter)
             {
                 e.Handled = true;
-       
+
                 //  datepickngayphieu
                 //    string valueinput = cb_customerka.Text;
 
@@ -311,7 +370,7 @@ namespace BEEACCOUNT.View
             LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
 
 
-        
+
 
 
 
@@ -341,7 +400,7 @@ namespace BEEACCOUNT.View
 
         private void cbtkno_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            
+
 
         }
 
@@ -353,20 +412,20 @@ namespace BEEACCOUNT.View
 
         private void button6_Click(object sender, EventArgs e)
         {
-         
+
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
 
-          
+
 
         }
 
         private void dataGridViewListphieuthu_CellClick(object sender, DataGridViewCellEventArgs e)
         {
 
-          
+
 
 
         }
@@ -376,12 +435,12 @@ namespace BEEACCOUNT.View
 
         }
 
-      
+
 
         private void button2_Click(object sender, EventArgs e)
         {
 
-         
+
         }
 
         private void txtsophieu_KeyPress(object sender, KeyPressEventArgs e)
@@ -390,7 +449,7 @@ namespace BEEACCOUNT.View
             {
                 //  cbsophieu.
                 e.Handled = true;
-         
+
 
                 //    string valueinput = cb_customerka.Text;
 
@@ -409,7 +468,7 @@ namespace BEEACCOUNT.View
             {
                 //  cbsophieu.
                 e.Handled = true;
-         
+
 
                 //    string valueinput = cb_customerka.Text;
 
@@ -428,7 +487,7 @@ namespace BEEACCOUNT.View
             {
                 //  cbsophieu.
                 e.Handled = true;
-             
+
                 //    string valueinput = cb_customerka.Text;
 
                 //    string connection_string = Utils.getConnectionstr();
@@ -446,7 +505,7 @@ namespace BEEACCOUNT.View
             {
                 //  cbsophieu.
                 e.Handled = true;
-          
+
                 //    string valueinput = cb_customerka.Text;
 
                 //    string connection_string = Utils.getConnectionstr();
@@ -458,8 +517,8 @@ namespace BEEACCOUNT.View
             }
         }
 
-      
-     
+
+
         private void bthachtoan_Click(object sender, EventArgs e)
         {
 
@@ -470,8 +529,6 @@ namespace BEEACCOUNT.View
             foreach (Form frm in fc)
             {
                 if (frm.Text == "BeeHtoansocaidoiung")
-
-
                 {
                     kq = true;
                     frm.Focus();
@@ -481,8 +538,8 @@ namespace BEEACCOUNT.View
 
             if (!kq)
             {
-             
-            
+
+
             }
 
 
@@ -521,7 +578,7 @@ namespace BEEACCOUNT.View
             //   Private Sub DataGridView1_Paint(ByVal sender As Object, ByVal e As System.Windows.Forms.PaintEventArgs) Handles DataGridView1.Paint
             //  For Each c As DataGridViewColumn In dataGridViewListphieuthu.Columns
 
-            foreach (var c in dataGridViewformatBCTC.Columns)
+            foreach (var c in dataGridViewketchuyen.Columns)
             {
                 DataGridViewColumn clm = (DataGridViewColumn)c;
                 clm.HeaderText = clm.HeaderText.Replace("_", " ");
@@ -556,9 +613,9 @@ namespace BEEACCOUNT.View
 
                     // int i = dataGridProgramdetail.CurrentRow.Index;
                     int i = currentCell.RowIndex;
-                    string colname = this.dataGridViewformatBCTC.Columns[this.dataGridViewformatBCTC.CurrentCell.ColumnIndex].Name;
+                    string colname = this.dataGridViewketchuyen.Columns[this.dataGridViewketchuyen.CurrentCell.ColumnIndex].Name;
 
-                    dataGridViewformatBCTC.Rows[i].Cells[colname].Value = SelectedItem;
+                    dataGridViewketchuyen.Rows[i].Cells[colname].Value = SelectedItem;
 
 
 
@@ -585,7 +642,7 @@ namespace BEEACCOUNT.View
                 }
 
 
-                currentCell = this.dataGridViewformatBCTC.CurrentCell;
+                currentCell = this.dataGridViewketchuyen.CurrentCell;
 
 
 
@@ -593,7 +650,7 @@ namespace BEEACCOUNT.View
             }
         }
 
-   
+
         private void dataGridViewTkCo_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -603,8 +660,8 @@ namespace BEEACCOUNT.View
 
             //       #region if la slect tai khoan co chi tiet
 
-          
-           
+
+
 
 
 
@@ -615,10 +672,10 @@ namespace BEEACCOUNT.View
         private void dataGridViewTkCo_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
 
-            DataGridView view = (DataGridView)sender;
-            int i = view.CurrentRow.Index;
-            string colname = view.Columns[view.CurrentCell.ColumnIndex].Name;
-      //      string SelectedItem = view.Rows[i].Cells["Tk_Có"].Value.ToString();
+            //DataGridView view = (DataGridView)sender;
+            //int i = view.CurrentRow.Index;
+            //string colname = view.Columns[view.CurrentCell.ColumnIndex].Name;
+            ////      string SelectedItem = view.Rows[i].Cells["Tk_Có"].Value.ToString();
 
             //#region if la slect tai khoan co chi tiet
 
@@ -737,11 +794,7 @@ namespace BEEACCOUNT.View
 
         }
 
-        private void dataGridViewTkCo_CellErrorTextChanged(object sender, DataGridViewCellEventArgs e)
-        {
 
-
-        }
 
         private void dataGridViewTkCo_DataError(object sender, DataGridViewDataErrorEventArgs anError)
         {
@@ -866,21 +919,21 @@ namespace BEEACCOUNT.View
 
         private void txtsotienco_TextChanged(object sender, EventArgs e)
         {
-         
+
 
         }
 
         private void dataGridViewTkCo_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
         {
 
-        
+
 
 
         }
 
         private void txtsotien_Leave(object sender, EventArgs e)
         {
-          
+
         }
 
         private void dataGridViewListphieuthu_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -901,107 +954,145 @@ namespace BEEACCOUNT.View
 
         private void cbthang_SelectedValueChanged(object sender, EventArgs e)
         {
-        
+
         }
 
         private void cbnam_SelectedValueChanged(object sender, EventArgs e)
         {
-        
+
         }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            if (txtmachitieu.Text.Trim()=="")
+            string connection_string = Utils.getConnectionstr();
+            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+            var ds = from p in dc.CDKTtempketchuyens
+                     where p.DuCock - p.DuNock != 0
+                     && p.chon == true
+                     select p;
+
+
+            foreach (var item in ds)
             {
-            MessageBox.Show("Bạn phải có mã chỉ tiêu trước !" , "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-            }
-            else
-            {
-
-                string connection_string = Utils.getConnectionstr();
-                LinqtoSQLDataContext db = new LinqtoSQLDataContext(connection_string);
+                tbl_Socai socai = new tbl_Socai();
 
 
-                var formatcachtinh = (from c in db.CDKT200formats
-                                where c.machitieu.Trim() == txtmachitieu.Text.Trim()
-                                select c).FirstOrDefault();
+                #region  ghi vao so cai
 
-
-                if (formatcachtinh != null)
+                if (item.DuCock > 0) // sẽ kết chuyển từ có qua nợ của tk kết chuyển == > nọ tk kc  có tk đích
                 {
-                    formatcachtinh.cachtinh = txtchuoicachtinh.Text;
-                    db.SubmitChanges();
+                    socai.TkCo = item.matkketchuyen;
+                    socai.TkNo = item.matk;
+                    socai.Sohieuchungtu = "AutoKC" + item.nam;
+                    socai.PsCo = item.DuCock;
+                    socai.PsNo = item.DuCock;
+                    //   DateTime tem = new DateTime(int.Parse(item.nam.ToString()), 12, 31);
+                    socai.Ngayctu = new DateTime(int.Parse(item.nam.ToString()), 12, 31); // ngay 31 tháng 12 năm đó
+                    socai.manghiepvu = "TH";
+                    socai.Ngayghiso = new DateTime(int.Parse(item.nam.ToString()), 12, 31); // ngay 31 tháng 12 năm đó
+                    socai.username = Utils.getusername();
+                    socai.Diengiai = "Auto Kết chuyển cuối năm";
+
 
 
                 }
-                else
+
+                if (item.DuNock > 0) // sẽ kết chuyển từ no qua co của tk kết chuyển == > co tk kc  no tk đích
                 {
-                    CDKT200format chitieu = new CDKT200format();
-                    chitieu.cachtinh = txtchuoicachtinh.Text.Trim();
-                    chitieu.machitieu = txtmachitieu.Text.Trim();
-                    db.CDKT200formats.InsertOnSubmit(chitieu);
-                    db.SubmitChanges();
+                 
+                    socai.TkCo = item.matk;
+                    socai.TkNo = item.matkketchuyen;
+                    socai.Sohieuchungtu = "AutoKC" + item.nam;
+                    socai.PsCo = item.DuNock;
+                    socai.PsNo = item.DuNock;
+                    //   DateTime tem = new DateTime(int.Parse(item.nam.ToString()), 12, 31);
+                    socai.Ngayctu = new DateTime(int.Parse(item.nam.ToString()), 12, 31); // ngay 31 tháng 12 năm đó
+                    socai.manghiepvu = "TH";
+                    socai.Ngayghiso = new DateTime(int.Parse(item.nam.ToString()), 12, 31); // ngay 31 tháng 12 năm đó
+                    socai.username = Utils.getusername();
+                    socai.Diengiai = "Auto Kết chuyển cuối năm";
+
+
+
                 }
 
 
-                dataGridViewformatBCTC.DataSource = Model.formatBCTC.LisDanhSachformat();
+
+
+                Model.Taikhoanketoan.ghisocaitk(socai);
+
+
+                // = yearchon;
+
+
+                #region caculation tinhsoducactaikhoanketchuyen
+                SqlConnection conn2 = null;
+                SqlDataReader rdr1 = null;
+
+                string destConnString = Utils.getConnectionstr();
+                try
+                {
+
+                    conn2 = new SqlConnection(destConnString);
+                    conn2.Open();
+                    SqlCommand cmd1 = new SqlCommand("tinhsoducactaikhoanketchuyen", conn2);
+                    cmd1.CommandType = CommandType.StoredProcedure;
+                    cmd1.CommandTimeout = 0;
+                    cmd1.Parameters.Add("@username", SqlDbType.VarChar).Value = Utils.getusername();
+                    cmd1.Parameters.Add("@yearchon", SqlDbType.Int).Value = int.Parse(this.namchon);
+                    //   cmd1.Parameters.Add("@todate", SqlDbType.DateTime).Value = todate;
+
+
+
+
+                    rdr1 = cmd1.ExecuteReader();
+
+
+
+                }
+                finally
+                {
+                    if (conn2 != null)
+                    {
+                        conn2.Close();
+                    }
+                    if (rdr1 != null)
+                    {
+                        rdr1.Close();
+                    }
+                }
+                //     MessageBox.Show("ok", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                #endregion
+
+
+
+
+                #endregion
+
+
+
 
 
 
             }
+
+
+            MessageBox.Show("Kết chuyển thành công !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            reloadgridview(); //   this.u
 
 
         }
 
         private void txtmachitieu_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar == (char)Keys.Enter)
-            {
 
-                string connection_string = Utils.getConnectionstr();
-                LinqtoSQLDataContext db = new LinqtoSQLDataContext(connection_string);
-
-
-                var cacttinh = (from c in db.CDKT200formats
-                              where c.machitieu.Trim() == txtmachitieu.Text.Trim()
-                              select c.cachtinh).FirstOrDefault();
-
-
-                if (cacttinh != null)
-                {
-                    txtchuoicachtinh.Text = cacttinh;
-
-                }
-                else
-                {
-                    txtchuoicachtinh.Text = "";
-                }
-             
-
-
-
-               txtchuoicachtinh.Focus();
-
-               
-
-
-            }
         }
 
         private void txtchuoicachtinh_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar == (char)Keys.Enter)
-            {
-
-
-                txtchuoicachtinh.Focus();
-
-
-
-
-            }
-
 
 
         }
@@ -1013,38 +1104,42 @@ namespace BEEACCOUNT.View
 
         private void dataGridViewformatBCTC_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dataGridViewformatBCTC.RowCount > 0)
+            if (dataGridViewketchuyen.RowCount > 0)
             {
 
 
 
 
-                if (this.dataGridViewformatBCTC.CurrentCell.RowIndex >= 0)
+                if (this.dataGridViewketchuyen.CurrentCell.RowIndex >= 0)
                 {
-                    string machitieu = this.dataGridViewformatBCTC.Rows[this.dataGridViewformatBCTC.CurrentCell.RowIndex].Cells["Mã_chỉ_tiêu"].Value.ToString();
+                    int id = int.Parse(this.dataGridViewketchuyen.Rows[this.dataGridViewketchuyen.CurrentCell.RowIndex].Cells["ID"].Value.ToString());
 
 
                     string connection_string = Utils.getConnectionstr();
                     LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
 
-                 
-                    var chitieuchon = (from p in dc.CDKT200formats
-                                       where p.machitieu == machitieu
-                                       select p).FirstOrDefault();
 
-                    if (chitieuchon != null)
+                    var kq = (from p in dc.CDKTtempketchuyens
+                              where p.id == id
+                              select p).FirstOrDefault();
+
+                    if (kq != null)
                     {
-                        txtmachitieu.Text = chitieuchon.machitieu;
-                        txtchuoicachtinh.Text = chitieuchon.cachtinh;
+                        kq.chon = !kq.chon;
+                        dc.SubmitChanges();
+
+                        reloadgridview(); //   this.u
+                        //         txtmachitieu.Text = chitieuchon.machitieu;
+                        //       txtchuoicachtinh.Text = chitieuchon.cachtinh;
                     }
 
                 }
-                
+
 
 
 
             }
-            
+
         }
 
         private void panel4_Paint(object sender, PaintEventArgs e)

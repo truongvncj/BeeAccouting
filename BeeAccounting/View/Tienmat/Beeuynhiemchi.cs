@@ -81,29 +81,6 @@ namespace BEEACCOUNT.View
 
 
 
-            //int i = dataTable.Rows.Count - 1;
-            ////   int i = dataGridViewTkCo.RowCount -1;
-
-            //DataGridViewComboBoxCell cb = (DataGridViewComboBoxCell)dataGridViewTkNo.Rows[i].Cells["Nợ_TK"];
-            //DataGridViewCell dgvc = (DataGridViewCell)dataGridViewTkNo.Rows[i].Cells["Nợ_TK"];
-
-            //#region tim item comboboc
-
-            //foreach (ComboboxItem item in (List<ComboboxItem>)cb.DataSource)
-            //{
-
-            //    if (item.Value.ToString().Trim() == socaitemp.TkNo.ToString().Trim())
-            //    {
-
-            //        dataGridViewTkNo.Rows[i].Cells["Nợ_TK"].Value = item.Value;
-            //    }
-
-            //}
-
-
-            //#endregion tom item comboubox
-
-
             //   ComboboxItem cbx = (ComboboxItem)cb.Items[3];
             //     dataGridViewTkCo.Rows[i].Cells["Tk_Có"].Value = cbx.Value;
             if (Utils.IsValidnumber(txtsotienno.Text))
@@ -2276,7 +2253,7 @@ namespace BEEACCOUNT.View
 
                     this.statusphieu = 3;// View
 
-                    Model.Phieuthuchi.reloadnewdetailtaikhoanNo(dataGridViewTkNo);
+                    Model.Phieuthuchi.reloadnewdetailphieuchi(dataGridViewTkNo);
 
                     if (uynhiemchi.tkco != null)
                     {
@@ -2625,6 +2602,16 @@ namespace BEEACCOUNT.View
         }
 
         private void txtsotienno_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint_1(object sender, PaintEventArgs e)
         {
 
         }

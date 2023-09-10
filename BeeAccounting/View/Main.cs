@@ -4492,6 +4492,52 @@ namespace BEEACCOUNT.View
         {
 
         }
+
+        private void phiếuTínhGiáNVLXuấtKhoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tínhGiáThànhPhẩmHaiBướcToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void hạchToánKếToánTổngHợpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void báoCáoLưuChuyểnTiềnTệToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tínhGiáBìnhQuânTheoThángToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Beemonthandyearsellect viewchon = new Beemonthandyearsellect();
+            viewchon.ShowDialog();
+
+            string namchon = viewchon.year;
+            string thangchon = viewchon.month;
+
+
+            if (namchon !="" && thangchon !="")
+            {
+             
+            Model.Khohang.tinhnvlxuatkhoppbinhquantheothang(namchon, thangchon);
+   
+            }
+
+
+            MessageBox.Show("Tính giá xong " + thangchon + "/ " +namchon , "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+
+
+
+
+        }
     }
 
 
