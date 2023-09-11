@@ -1811,74 +1811,40 @@ namespace BEEACCOUNT.View
 
         private void dataGridViewTkCo_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
         {
-            //int i = e.RowIndex;
-            //DataGridView view = (DataGridView)sender;
 
-            //for (int b = 0; b < view.ColumnCount; b++)
-            //{
-            //   // string colname = dataGridViewTkCo.Columns[b].Name;
-            //    string colname = view.Columns[b].Name;
-            //    //   dataGridViewTkCo.Rows[i].Cells[colname].Value = colname;
-            // //   view.Rows[i].Cells[colname].Value = colname;
-            //    //  view.Columns[b].Name;
-            //}
+            #region  view cong tong thanh tien
 
 
-            //   dataGridViewTkCo.Rows[e.RowIndex].Cells[0].Value = "xxx";
-            //  DataGridView view = (DataGridView)sender;
-            //  view.Rows[i].Cells[1].Value = "tesst";// view.Rows[i].Cells["tkCohide"].Value.ToString();
-            //   view.Rows[i].Value = "tesst";// view.Rows[i].Cells["tkCohide"].Value.ToString();
-
-            //   if ((String)dataGridViewTkCo.Rows[e.RowIndex].Cells["Tk_Có"].Value == null)
-            //   {
-
-            //    }
-
-            //      string SelectedItem = (cbm.SelectedItem as ComboboxItem).Value.ToString();// (cbm.SelectedItem as ComboboxItem).Value.ToString();
+            double tongcong = 0;
 
 
-            //if (dataGridViewTkCo.Rows[i].Cells[1].Value == null && dataGridViewTkCo.Rows[i].Cells["tkCohide"].Value != null)
-            //{
+            for (int idrow = 0; idrow < dataGridViewTkCo.RowCount - 1; idrow++)
+            {
+                
 
-            //    //     string colname = this.dataGridViewTkCo.Columns[this.dataGridViewTkCo.CurrentCell.ColumnIndex].Name;
+                if (dataGridViewTkCo.Rows[idrow].Cells["Thành_tiền"] != null)
+                {
+                    if (Utils.IsValidnumber(dataGridViewTkCo.Rows[idrow].Cells["Thành_tiền"].Value.ToString()))
+                    {
 
-            //    dataGridViewTkCo.Rows[i].Cells[1].Value = dataGridViewTkCo.Rows[i].Cells["tkCohide"].Value;
-
-
-            //}
-
-            // int i = dataGridProgramdetail.CurrentRow.Index;
+                        tongcong += double.Parse(dataGridViewTkCo.Rows[idrow].Cells["Thành_tiền"].Value.ToString());
 
 
 
-            //    (String)dataGridViewTkCo.Rows[e.RowIndex].Cells["Tk_Có"]. != null
-
-            // tkCohide
-
-            //string SelectedItem = (cbm.SelectedItem as ComboboxItem).Value.ToString();// (cbm.SelectedItem as ComboboxItem).Value.ToString();
-
-            //           // int i = dataGridProgramdetail.CurrentRow.Index;
-            //           int i = currentCell.RowIndex;
-            //           string colname = this.dataGridViewTkCo.Columns[this.dataGridViewTkCo.CurrentCell.ColumnIndex].Name;
-
-            //           dataGridViewTkCo.Rows[i].Cells[colname].Value = SelectedItem;
-
-            //  if (e.RowIndex is ComboBox)
-            //  {
-
-            //     cbm = (ComboBox)e.Control;
-
-            //     if (cbm != null)
-            //    {
-            //   cbm.SelectedIndexChanged += new EventHandler(cbm_SelectedIndexChanged);
-            //    }
-
-
-            //currentCell = this.dataGridViewTkCo.CurrentCell;
+                    }
+                }
 
 
 
-            //   }
+            }
+
+            //txtValueSotienCo.Text = tongcong.ToString();
+            this.sotien = tongcong;
+            txtsotiendisplay.Text = tongcong.ToString("#,#", CultureInfo.InvariantCulture);
+          //  txtsotiendisplay.Text = tongcong.ToString("#,#", CultureInfo.InvariantCulture);
+            #endregion
+
+
         }
 
 

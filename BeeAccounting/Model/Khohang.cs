@@ -146,7 +146,176 @@ namespace BEEACCOUNT.Model
             //throw new NotImplementedException();
         }
 
-        //   Model.Khohang.tinhnvlxuatkhoppbinhquantheothang(namchon, thangchon);
+         // getCaculgiaPPBinhquansaunhapxuat1thang
+        //        Model.Khohang.tinhnvlPPBinhquansaunhapxuat1thang(namchon, thangchon);
+
+        public static void tinhnvlPPBinhquansaunhapxuat1thang(string namchon, string thangchon)
+        {
+
+            string connection_string = Utils.getConnectionstr();
+            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+
+
+            // tinh giá
+            #region caculation getCaculgiaxuatnvlppbinhquanlannhap
+            SqlConnection conn2 = null;
+            SqlDataReader rdr1 = null;
+
+            string destConnString = Utils.getConnectionstr();
+            try
+            {
+
+                conn2 = new SqlConnection(destConnString);
+                conn2.Open();
+                SqlCommand cmd1 = new SqlCommand("getCaculgiaPPBinhquansaunhapxuat1thang", conn2);
+                cmd1.CommandType = CommandType.StoredProcedure;
+                cmd1.CommandTimeout = 0;
+                //  cmd1.Parameters.Add("@Year", SqlDbType.Int).Value = yearchon;
+                cmd1.Parameters.Add("@nam", SqlDbType.Int).Value = int.Parse(namchon);
+
+                cmd1.Parameters.Add("@thang", SqlDbType.Int).Value = int.Parse(thangchon);
+
+
+
+                rdr1 = cmd1.ExecuteReader();
+
+
+
+            }
+            finally
+            {
+                if (conn2 != null)
+                {
+                    conn2.Close();
+                }
+                if (rdr1 != null)
+                {
+                    rdr1.Close();
+                }
+            }
+            //     MessageBox.Show("ok", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            #endregion
+
+
+
+
+
+
+        }
+
+        public static void tinhnvlxuatkhoLifitheothang(string namchon, string thangchon)
+        {
+
+            string connection_string = Utils.getConnectionstr();
+            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+
+
+            // tinh giá
+            #region caculation getCaculgiaxuatnvlppbinhquanlannhap
+            SqlConnection conn2 = null;
+            SqlDataReader rdr1 = null;
+
+            string destConnString = Utils.getConnectionstr();
+            try
+            {
+
+                conn2 = new SqlConnection(destConnString);
+                conn2.Open();
+                SqlCommand cmd1 = new SqlCommand("getCaculgiaxuatLIFo1thang", conn2);
+                cmd1.CommandType = CommandType.StoredProcedure;
+                cmd1.CommandTimeout = 0;
+                //  cmd1.Parameters.Add("@Year", SqlDbType.Int).Value = yearchon;
+                cmd1.Parameters.Add("@nam", SqlDbType.Int).Value = int.Parse(namchon);
+
+                cmd1.Parameters.Add("@thang", SqlDbType.Int).Value = int.Parse(thangchon);
+
+
+
+                rdr1 = cmd1.ExecuteReader();
+
+
+
+            }
+            finally
+            {
+                if (conn2 != null)
+                {
+                    conn2.Close();
+                }
+                if (rdr1 != null)
+                {
+                    rdr1.Close();
+                }
+            }
+            //     MessageBox.Show("ok", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            #endregion
+
+
+
+
+
+
+        }
+
+        public static void tinhnvlxuatkhoFifitheothang(string namchon, string thangchon)
+        {
+
+            string connection_string = Utils.getConnectionstr();
+            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+
+
+            // tinh giá
+            #region caculation getCaculgiaxuatnvlppbinhquanlannhap
+            SqlConnection conn2 = null;
+            SqlDataReader rdr1 = null;
+
+            string destConnString = Utils.getConnectionstr();
+            try
+            {
+
+                conn2 = new SqlConnection(destConnString);
+                conn2.Open();
+                SqlCommand cmd1 = new SqlCommand("getCaculgiaxuatFIFo1thang", conn2);
+                cmd1.CommandType = CommandType.StoredProcedure;
+                cmd1.CommandTimeout = 0;
+                //  cmd1.Parameters.Add("@Year", SqlDbType.Int).Value = yearchon;
+                cmd1.Parameters.Add("@nam", SqlDbType.Int).Value = int.Parse(namchon);
+
+                cmd1.Parameters.Add("@thang", SqlDbType.Int).Value = int.Parse(thangchon);
+
+
+
+                rdr1 = cmd1.ExecuteReader();
+
+
+
+            }
+            finally
+            {
+                if (conn2 != null)
+                {
+                    conn2.Close();
+                }
+                if (rdr1 != null)
+                {
+                    rdr1.Close();
+                }
+            }
+            //     MessageBox.Show("ok", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            #endregion
+
+
+
+
+
+
+        }
 
         public static void tinhnvlxuatkhoppbinhquantheothang(string namchon, string thangchon)
         {

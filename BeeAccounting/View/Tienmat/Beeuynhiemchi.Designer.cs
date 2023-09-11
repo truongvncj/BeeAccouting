@@ -230,16 +230,15 @@
             // 
             this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel4.Controls.Add(this.txtsotienno);
             this.panel4.Controls.Add(this.label15);
             this.panel4.Controls.Add(this.dataGridViewTkNo);
-            this.panel4.Controls.Add(this.label14);
             this.panel4.Controls.Add(this.label4);
             this.panel4.Controls.Add(this.txttaikhoanno);
-            this.panel4.Location = new System.Drawing.Point(0, 260);
+            this.panel4.Location = new System.Drawing.Point(0, 288);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1086, 281);
+            this.panel4.Size = new System.Drawing.Size(1086, 253);
             this.panel4.TabIndex = 67;
             // 
             // txtsotienno
@@ -297,7 +296,7 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewTkNo.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridViewTkNo.Size = new System.Drawing.Size(1072, 240);
+            this.dataGridViewTkNo.Size = new System.Drawing.Size(1070, 210);
             this.dataGridViewTkNo.TabIndex = 3;
             this.dataGridViewTkNo.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewTkCo_CellEndEdit);
             this.dataGridViewTkNo.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewTkCo_CellValueChanged);
@@ -312,11 +311,11 @@
             this.label14.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.label14.Location = new System.Drawing.Point(602, 9);
+            this.label14.Location = new System.Drawing.Point(12, 260);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(99, 15);
+            this.label14.Size = new System.Drawing.Size(201, 15);
             this.label14.TabIndex = 60;
-            this.label14.Text = "(Thêm:  Ctrl + N )";
+            this.label14.Text = "( Ctrl + N: Thêm định khoản chi tiết )";
             // 
             // label4
             // 
@@ -340,10 +339,11 @@
             // 
             // panel1
             // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.txttengoinhotaikhoan);
             this.panel1.Controls.Add(this.cbluudanhsach);
+            this.panel1.Controls.Add(this.label14);
             this.panel1.Controls.Add(this.txttinhthanh);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.bttimkiem);
@@ -364,7 +364,7 @@
             this.panel1.Controls.Add(this.ngaychungtu);
             this.panel1.Location = new System.Drawing.Point(-4, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1090, 251);
+            this.panel1.Size = new System.Drawing.Size(1090, 279);
             this.panel1.TabIndex = 65;
             // 
             // label10

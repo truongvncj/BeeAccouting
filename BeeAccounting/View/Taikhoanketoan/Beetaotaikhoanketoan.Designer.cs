@@ -117,7 +117,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(171, 17);
             this.label4.TabIndex = 58;
-            this.label4.Text = "Theo dõi chi tiết";
+            this.label4.Text = "Đăng ký mở sổ dõi chi tiết";
             // 
             // btupdate
             // 

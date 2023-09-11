@@ -4538,6 +4538,83 @@ namespace BEEACCOUNT.View
 
 
         }
+
+        private void bảngTínhGiáFIFOToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // getCaculgiaxuatFIFo1thang
+
+            Beemonthandyearsellect viewchon = new Beemonthandyearsellect();
+            viewchon.ShowDialog();
+
+            string namchon = viewchon.year;
+            string thangchon = viewchon.month;
+
+
+            if (namchon != "" && thangchon != "")
+            {
+                // getCaculgiaxuatFIFo1thang
+                Model.Khohang.tinhnvlxuatkhoFifitheothang(namchon, thangchon);
+
+            }
+
+
+            MessageBox.Show("Tính giá xong " + thangchon + "/ " + namchon, "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+
+
+
+        }
+
+        private void bảngTínhGiáLIFOToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            Beemonthandyearsellect viewchon = new Beemonthandyearsellect();
+            viewchon.ShowDialog();
+
+            string namchon = viewchon.year;
+            string thangchon = viewchon.month;
+
+
+            if (namchon != "" && thangchon != "")
+            {
+                // getCaculgiaxuatFIFo1thang
+                Model.Khohang.tinhnvlxuatkhoLifitheothang(namchon, thangchon);
+
+            }
+
+
+            MessageBox.Show("Tính giá xong " + thangchon + "/ " + namchon, "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+
+
+        }
+
+        private void bảngTínhGiáBìnhQuânSauMỗiLầnNhậpXuấtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // getCaculgiaPPBinhquansaunhapxuat1thang
+
+            Beemonthandyearsellect viewchon = new Beemonthandyearsellect();
+            viewchon.ShowDialog();
+
+            string namchon = viewchon.year;
+            string thangchon = viewchon.month;
+
+
+            if (namchon != "" && thangchon != "")
+            {
+                // getCaculgiaPPBinhquansaunhapxuat1thang
+                Model.Khohang.tinhnvlPPBinhquansaunhapxuat1thang(namchon, thangchon);
+
+            }
+
+
+            MessageBox.Show("Tính giá xong " + thangchon + "/ " + namchon, "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+
+        }
     }
 
 

@@ -1956,7 +1956,7 @@ namespace BEEACCOUNT.View
             double tongcong = 0;
 
 
-            for (int idrow = 0; idrow < dataGridViewTkCo.RowCount - 1; idrow++)
+            for (int idrow = 0; idrow <= dataGridViewTkCo.RowCount - 1; idrow++)
             {
 
 
@@ -1988,7 +1988,7 @@ namespace BEEACCOUNT.View
 
 
             int dem = 0;
-            for (int idrow = 0; idrow < dataGridViewTkCo.RowCount - 1; idrow++)
+            for (int idrow = 0; idrow <= dataGridViewTkCo.RowCount - 1; idrow++)
             {
 
                 if (dataGridViewTkCo.Rows[idrow].Cells["Có_TK"].Value != null)
@@ -2045,7 +2045,7 @@ namespace BEEACCOUNT.View
             double tongcong = 0;
 
 
-            for (int idrow = 0; idrow < dataGridViewTkCo.RowCount - 1; idrow++)
+            for (int idrow = 0; idrow <= dataGridViewTkCo.RowCount - 1; idrow++)
             {
 
 
@@ -2077,7 +2077,7 @@ namespace BEEACCOUNT.View
 
 
             int dem = 0;
-            for (int idrow = 0; idrow < dataGridViewTkCo.RowCount - 1; idrow++)
+            for (int idrow = 0; idrow <= dataGridViewTkCo.RowCount - 1; idrow++)
             {
 
                 if (dataGridViewTkCo.Rows[idrow].Cells["Có_TK"].Value != null)
