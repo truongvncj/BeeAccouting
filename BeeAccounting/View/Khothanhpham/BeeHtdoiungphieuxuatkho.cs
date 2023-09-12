@@ -14,7 +14,10 @@ namespace BEEACCOUNT.View
     {
         //    View.BeePhieuThu phieuchi;
         View.BeeKhophieuxuat phieuxuatkho;
-        public int tkcochitiet { get; set; }
+        //  public int tkcochitiet { get; set; }
+        public float giasanphamxuat { get; set; }
+
+        public string masanpham { get; set; }
         public bool click { get; set; }
 
         public class ComboboxItem
@@ -28,7 +31,7 @@ namespace BEEACCOUNT.View
             }
         }
 
-     //   public double pssotienno { get; set; }
+        //   public double pssotienno { get; set; }
         public double sotien { get; set; }
 
         public BeeHtdoiungphieuxuatkho(View.BeeKhophieuxuat phieuxuatkho, string labe1, string labe2, string labe3)
@@ -38,17 +41,8 @@ namespace BEEACCOUNT.View
 
 
             InitializeComponent();
-            //if (phieuthu.pssotienno =="")
-            //{
-            //    phieuthu.pssotienno = "0";
-            //}
-            //if (phieuthu.pssotienco == "")
-            //{
-            //    phieuthu.pssotienco = "0";
-            //}
-            //txtTongno.Text = phieunhapkho.pssotienno.ToString("#,#", CultureInfo.InvariantCulture);
-            //txtTongco.Text = phieunhapkho.pssotienco.ToString("#,#", CultureInfo.InvariantCulture);
-           // this.pssotienco = phieunhapkho.pssotienco;
+            this.masanpham = "";
+
             this.sotien = phieuxuatkho.sotien;
 
             //   txtChenlech.Text = (this.pssotienno - this.pssotienco).ToString("#,#", CultureInfo.InvariantCulture);
@@ -80,7 +74,7 @@ namespace BEEACCOUNT.View
             tbl_loaitk tkkt = new tbl_loaitk();
 
             var rs1 = from p in dc.tbl_kho_sanphams
-                          //   where tk.loaitkid == "nguonvon" || tk.loaitkid == "phaitra" || tk.loaitkid == "tamung"  // 5.nguon von;  7 phai tra; 9. tam ung
+                      //   where tk.loaitkid == "nguonvon" || tk.loaitkid == "phaitra" || tk.loaitkid == "tamung"  // 5.nguon von;  7 phai tra; 9. tam ung
                       select p;
 
             //      string drowdownshow = "";
@@ -371,11 +365,12 @@ namespace BEEACCOUNT.View
             }
 
 
-           
+            sanpham.mahang = this.masanpham;
 
 
 
-           this.phieuxuatkho.add_detailGridviewPXkho(sanpham);
+
+            this.phieuxuatkho.add_detailGridviewPXkho(sanpham);
 
             //       txtTongco.Text = phieunhapkho.pssotienco.ToString("#,#", CultureInfo.InvariantCulture);
             //  this.pssotienco = phieunhapkho.pssotienco;
@@ -386,12 +381,10 @@ namespace BEEACCOUNT.View
             #region clearr to new
 
             cbmasanpham.SelectedIndex = -1;
-            //     tbmachitiet.Text = "";
-            //      lbtenchitiet.Text = "";
-            //    txtsotien.Text = "";
-            //    txtdiachi.Text = "";
-            //     txtkyhieuctu.Text = "";
-            //    txtsochungtu.Text = "";
+            this.masanpham = "";
+            txtmasanpham.Text = "";
+            txtmasanpham.Focus();
+           
 
             #endregion
 
@@ -417,11 +410,11 @@ namespace BEEACCOUNT.View
 
             if (e.KeyChar == (char)Keys.Enter)
             {
-                
-                 e.Handled = true;
-                 bt_themvao.Focus();
 
-                
+                e.Handled = true;
+                bt_themvao.Focus();
+
+
 
 
             }
@@ -453,7 +446,7 @@ namespace BEEACCOUNT.View
         {
 
 
-           
+
 
 
 
@@ -463,7 +456,7 @@ namespace BEEACCOUNT.View
         private void txtdongia_TextChanged(object sender, EventArgs e)
         {
 
-          
+
 
 
 
@@ -495,5 +488,114 @@ namespace BEEACCOUNT.View
         {
 
         }
+
+        private void txtmasanpham_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+               
+
+                string connection_string = Utils.getConnectionstr();
+                LinqtoSQLDataContext db = new LinqtoSQLDataContext(connection_string);
+
+                string seaching = txtmasanpham.Text.Trim();
+                var sanpham = from c in db.tbl_kho_sanphams
+                              where c.masp == seaching
+                              && c.makho == phieuxuatkho.makho
+                              select c;
+                if (sanpham.Count() == 1) // neu có mã san pham do thi khong tim nưa
+                {
+
+                }
+                else
+                {
+                   
+
+                    var dssanpham = from c in db.tbl_kho_sanphams
+                                    where c.masp.Contains(seaching)
+                                     && c.makho == phieuxuatkho.makho
+                                    select new {
+                                        c.id,
+                                       
+                                    Mã_sản_phẩm = c.masp,
+                                    Tên_sản_phẩm =c.tensp,
+
+                                    };
+
+                    if (dssanpham.Count() > 0)
+                    {
+                        Beeviewandchoose dsanphamchon = new Beeviewandchoose("CHỌN SẢN PHẨM", dssanpham, db);
+                        dsanphamchon.ShowDialog();
+                        int idsanpham = dsanphamchon.value;
+                        bool kq = dsanphamchon.kq;
+
+
+                        if (kq)
+                        {
+                            var sanphamchon = (from c in db.tbl_kho_sanphams
+                                               where c.id == idsanpham
+                                               select c).FirstOrDefault();
+
+
+                            txtmasanpham.Text = sanphamchon.masp;
+                            txttensanpham.Text = sanphamchon.tensp;
+                            txtdonvi.Text = sanphamchon.donvi;
+                            this.masanpham = sanphamchon.masp;
+
+                            var pptinhgiaxuat = from c in db.tbl_khohangs
+                                                where c.PPtinhgiaxuat == "dichdanh"
+                                 && c.makho == phieuxuatkho.makho
+                                                select c;
+
+
+
+                            if (pptinhgiaxuat != null) // là la tính giá theo ppp đich danh
+                            {
+                                //     this.giasanphamxuat
+                                var dshangton = (from c in db.tbl_kho_sanphams
+                                                 where c.id == idsanpham
+                                                 select c);
+
+                                Beeviewandchoose danhmuchangton = new Beeviewandchoose("CHỌN MẶT HÀNG XUẤT", dshangton, db);
+                                danhmuchangton.ShowDialog();
+                                int idhangton = dsanphamchon.value;
+                                bool kq2 = dsanphamchon.kq;
+
+
+                                if (kq2)
+                                {
+
+                                    // doan nay updaet giá và chọn giá
+                                }
+
+
+
+                            }
+
+                            txtsoluong.Focus();
+                        }//chon san p
+                        else
+                        {
+                            txtmasanpham.Text = "";
+                            txttensanpham.Text = "";
+                            txtdonvi.Text = "";
+                            this.masanpham = "";
+                            txtmasanpham.Focus();
+
+
+                           
+                        }
+
+
+                    }
+
+
+                }
+            }
+        }//end 
+
+
+
+        // /------------------
     }
 }

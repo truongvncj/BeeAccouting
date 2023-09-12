@@ -24361,6 +24361,16 @@ namespace BEEACCOUNT
 		
 		private System.Nullable<double> _dongiaxuatbqlannhap;
 		
+		private System.Nullable<double> _dongiaxuatbqcaky1thang;
+		
+		private System.Nullable<double> _thanhtienfifo;
+		
+		private System.Nullable<double> _dongiafifo;
+		
+		private System.Nullable<double> _thanhtienLifo;
+		
+		private System.Nullable<double> _dongiaLifo;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -24389,6 +24399,16 @@ namespace BEEACCOUNT
     partial void OnngayphieuChanged();
     partial void OndongiaxuatbqlannhapChanging(System.Nullable<double> value);
     partial void OndongiaxuatbqlannhapChanged();
+    partial void Ondongiaxuatbqcaky1thangChanging(System.Nullable<double> value);
+    partial void Ondongiaxuatbqcaky1thangChanged();
+    partial void OnthanhtienfifoChanging(System.Nullable<double> value);
+    partial void OnthanhtienfifoChanged();
+    partial void OndongiafifoChanging(System.Nullable<double> value);
+    partial void OndongiafifoChanged();
+    partial void OnthanhtienLifoChanging(System.Nullable<double> value);
+    partial void OnthanhtienLifoChanged();
+    partial void OndongiaLifoChanging(System.Nullable<double> value);
+    partial void OndongiaLifoChanged();
     #endregion
 		
 		public tbl_kho_phieunhapxuat_detail()
@@ -24632,6 +24652,106 @@ namespace BEEACCOUNT
 					this._dongiaxuatbqlannhap = value;
 					this.SendPropertyChanged("dongiaxuatbqlannhap");
 					this.OndongiaxuatbqlannhapChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dongiaxuatbqcaky1thang", DbType="Float")]
+		public System.Nullable<double> dongiaxuatbqcaky1thang
+		{
+			get
+			{
+				return this._dongiaxuatbqcaky1thang;
+			}
+			set
+			{
+				if ((this._dongiaxuatbqcaky1thang != value))
+				{
+					this.Ondongiaxuatbqcaky1thangChanging(value);
+					this.SendPropertyChanging();
+					this._dongiaxuatbqcaky1thang = value;
+					this.SendPropertyChanged("dongiaxuatbqcaky1thang");
+					this.Ondongiaxuatbqcaky1thangChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_thanhtienfifo", DbType="Float")]
+		public System.Nullable<double> thanhtienfifo
+		{
+			get
+			{
+				return this._thanhtienfifo;
+			}
+			set
+			{
+				if ((this._thanhtienfifo != value))
+				{
+					this.OnthanhtienfifoChanging(value);
+					this.SendPropertyChanging();
+					this._thanhtienfifo = value;
+					this.SendPropertyChanged("thanhtienfifo");
+					this.OnthanhtienfifoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dongiafifo", DbType="Float")]
+		public System.Nullable<double> dongiafifo
+		{
+			get
+			{
+				return this._dongiafifo;
+			}
+			set
+			{
+				if ((this._dongiafifo != value))
+				{
+					this.OndongiafifoChanging(value);
+					this.SendPropertyChanging();
+					this._dongiafifo = value;
+					this.SendPropertyChanged("dongiafifo");
+					this.OndongiafifoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_thanhtienLifo", DbType="Float")]
+		public System.Nullable<double> thanhtienLifo
+		{
+			get
+			{
+				return this._thanhtienLifo;
+			}
+			set
+			{
+				if ((this._thanhtienLifo != value))
+				{
+					this.OnthanhtienLifoChanging(value);
+					this.SendPropertyChanging();
+					this._thanhtienLifo = value;
+					this.SendPropertyChanged("thanhtienLifo");
+					this.OnthanhtienLifoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dongiaLifo", DbType="Float")]
+		public System.Nullable<double> dongiaLifo
+		{
+			get
+			{
+				return this._dongiaLifo;
+			}
+			set
+			{
+				if ((this._dongiaLifo != value))
+				{
+					this.OndongiaLifoChanging(value);
+					this.SendPropertyChanging();
+					this._dongiaLifo = value;
+					this.SendPropertyChanged("dongiaLifo");
+					this.OndongiaLifoChanged();
 				}
 			}
 		}
@@ -25529,6 +25649,8 @@ namespace BEEACCOUNT
 		
 		private System.Nullable<double> _dongia;
 		
+		private System.Nullable<System.DateTime> _ngaynhapkho;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -25555,6 +25677,8 @@ namespace BEEACCOUNT
     partial void OnthangtonChanged();
     partial void OndongiaChanging(System.Nullable<double> value);
     partial void OndongiaChanged();
+    partial void OnngaynhapkhoChanging(System.Nullable<System.DateTime> value);
+    partial void OnngaynhapkhoChanged();
     #endregion
 		
 		public tbl_kho_Tonkho()
@@ -25782,6 +25906,26 @@ namespace BEEACCOUNT
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ngaynhapkho", DbType="Date")]
+		public System.Nullable<System.DateTime> ngaynhapkho
+		{
+			get
+			{
+				return this._ngaynhapkho;
+			}
+			set
+			{
+				if ((this._ngaynhapkho != value))
+				{
+					this.OnngaynhapkhoChanging(value);
+					this.SendPropertyChanging();
+					this._ngaynhapkho = value;
+					this.SendPropertyChanged("ngaynhapkho");
+					this.OnngaynhapkhoChanged();
+				}
+			}
+		}
+		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -25819,6 +25963,8 @@ namespace BEEACCOUNT
 		
 		private string _ghichu;
 		
+		private string _PPtinhgiaxuat;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -25833,6 +25979,8 @@ namespace BEEACCOUNT
     partial void OndiachikhoChanged();
     partial void OnghichuChanging(string value);
     partial void OnghichuChanged();
+    partial void OnPPtinhgiaxuatChanging(string value);
+    partial void OnPPtinhgiaxuatChanged();
     #endregion
 		
 		public tbl_khohang()
@@ -25936,6 +26084,26 @@ namespace BEEACCOUNT
 					this._ghichu = value;
 					this.SendPropertyChanged("ghichu");
 					this.OnghichuChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PPtinhgiaxuat", DbType="NVarChar(50)")]
+		public string PPtinhgiaxuat
+		{
+			get
+			{
+				return this._PPtinhgiaxuat;
+			}
+			set
+			{
+				if ((this._PPtinhgiaxuat != value))
+				{
+					this.OnPPtinhgiaxuatChanging(value);
+					this.SendPropertyChanging();
+					this._PPtinhgiaxuat = value;
+					this.SendPropertyChanged("PPtinhgiaxuat");
+					this.OnPPtinhgiaxuatChanged();
 				}
 			}
 		}

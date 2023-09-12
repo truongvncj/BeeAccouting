@@ -1126,6 +1126,11 @@
       <Column Name="makho" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="ngayphieu" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="dongiaxuatbqlannhap" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dongiaxuatbqcaky1thang" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="thanhtienfifo" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dongiafifo" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="thanhtienLifo" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dongiaLifo" Type="System.Double" DbType="Float" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.tbl_kho_phieuxuat_head" Member="tbl_kho_phieuxuat_heads">
@@ -1181,6 +1186,7 @@
       <Column Name="namton" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="thangton" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="dongia" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ngaynhapkho" Type="System.DateTime" DbType="Date" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.tbl_khohang" Member="tbl_khohangs">
@@ -1190,6 +1196,7 @@
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="diachikho" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="ghichu" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PPtinhgiaxuat" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.tbl_loaitk" Member="tbl_loaitks">

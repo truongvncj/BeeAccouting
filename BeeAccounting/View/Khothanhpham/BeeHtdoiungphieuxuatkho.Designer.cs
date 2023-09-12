@@ -39,6 +39,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.cbmasanpham = new System.Windows.Forms.ComboBox();
+            this.txtmasanpham = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,6 +56,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtmasanpham);
             this.groupBox1.Controls.Add(this.txtdonvi);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.txttensanpham);
@@ -147,10 +149,19 @@
             this.cbmasanpham.FormattingEnabled = true;
             this.cbmasanpham.Location = new System.Drawing.Point(127, 29);
             this.cbmasanpham.Name = "cbmasanpham";
-            this.cbmasanpham.Size = new System.Drawing.Size(208, 24);
+            this.cbmasanpham.Size = new System.Drawing.Size(125, 24);
             this.cbmasanpham.TabIndex = 0;
             this.cbmasanpham.SelectionChangeCommitted += new System.EventHandler(this.cbtkco_SelectionChangeCommitted);
             this.cbmasanpham.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbmasanpham_KeyPress);
+            // 
+            // txtmasanpham
+            // 
+            this.txtmasanpham.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtmasanpham.Location = new System.Drawing.Point(280, 29);
+            this.txtmasanpham.Name = "txtmasanpham";
+            this.txtmasanpham.Size = new System.Drawing.Size(156, 24);
+            this.txtmasanpham.TabIndex = 50;
+            this.txtmasanpham.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtmasanpham_KeyPress);
             // 
             // BeeHtdoiungphieuxuatkho
             // 
@@ -184,5 +195,6 @@
         private System.Windows.Forms.TextBox txtsoluong;
         private System.Windows.Forms.TextBox txtdonvi;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtmasanpham;
     }
 }
