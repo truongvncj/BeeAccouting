@@ -4615,6 +4615,188 @@ namespace BEEACCOUNT.View
 
 
         }
+
+        private void danhSáchKhoHàngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            #region//khodskho
+            string connection_string = Utils.getConnectionstr();
+
+            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+            var rs5 = Model.Khohang.Danhsachkho(dc);
+            Viewtable viewtbl66 = new Viewtable(rs5, dc, "DANH SÁCH KHO HÀNG", 4, "tk");// mã 4 là danh sách kho
+
+            viewtbl66.Show();
+
+            //  }
+            #endregion
+
+        }
+
+        private void danhSáchNhómSảnPhẩmToolStripMenuItem_Click_2(object sender, EventArgs e)
+        {
+
+            #region//khonhomsanpham
+
+            string connection_string = Utils.getConnectionstr();
+
+            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+            var rs6 = Model.Khohang.danhsachnhomsanpham(dc);
+            if (rs6 != null)
+            {
+          
+            Viewtable viewtbl2 = new Viewtable(rs6, dc, "DANH SÁCH NHÓM SẢN PHẨM", 6, "tk");// mã 6 là danh sách nhóm sản phẩm
+
+            viewtbl2.Show();
+
+            }
+            #endregion
+
+        }
+
+        private void danhSáchSảnPhẩmToolStripMenuItem_Click_2(object sender, EventArgs e)
+        {
+
+
+            #region//BeeDanhsachsanpham
+
+            string connection_string = Utils.getConnectionstr();
+
+            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+            var rs6 = Model.Khohang.danhsachnhomsanpham(dc);
+            Viewtable viewtbl2 = new Viewtable(rs6, dc, "DANH SÁCH SẢN PHẨM", 7, "tk");// mã 7 là danh sách  sản phẩm
+
+
+            //     xxxx
+            viewtbl2.Show();
+
+            #endregion
+
+
+        }
+
+        private void bảngTínhGiáPPĐíchDanhToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            #region//Beeshowgiuwa ttong xuất và só đã xuất updaet
+
+
+            Beemonthandyearsellect viewchon = new Beemonthandyearsellect();
+            viewchon.ShowDialog();
+
+            string namchon = viewchon.year;
+            string thangchon = viewchon.month;
+
+
+            if (namchon != "" && thangchon != "")
+            {
+             
+            string connection_string = Utils.getConnectionstr();
+
+            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+                var rs6 = Model.Khohang.danhsachtongxuatvasodaxuatcuaphieunhapppDichdanh(dc,int.Parse(namchon),int.Parse(thangchon));
+                if (rs6 != null)
+                {
+                    Viewtable viewtbl2 = new Viewtable(rs6, dc, "BẢNG ĐỐI CHIẾU GIÁ XUẤT PP TRỰC TIẾP ĐÍCH DANH", 12, "PPtinhgiadichdanh");// mã 12 là danh sách  sản phẩm
+
+          
+            //     xxxx
+            viewtbl2.Show();
+                }
+            #endregion
+            }
+        }
+
+        private void đăngKýPhânXưởngNhàMáyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            #region// danh sach nha may san xuat
+            string connection_string = Utils.getConnectionstr();
+
+            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+            var rs5 = Model.Sanxuat.Danhsachnhanmay(dc);
+            Viewtable viewtbl66 = new Viewtable(rs5, dc, "DANH SÁCH NHÀ MÁY SẢN XUẤT", 13, "tk");// mã 4 là danh sách kho
+
+            viewtbl66.Show();
+
+            //  }
+            #endregion
+        }
+
+        private void đăngKýPhânXưởngSảnXuấtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            #region// danh sach phân xuwrorng san xuất
+            string connection_string = Utils.getConnectionstr();
+
+            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+            var rs5 = Model.Sanxuat.Danhsachphanxuongsx(dc);
+            Viewtable viewtbl66 = new Viewtable(rs5, dc, "DANH SÁCH CÁC PHÂN XƯỞNG SẢN XUẤT", 14, "tk");// mã 14 là danh sách phân xưởng
+
+            viewtbl66.Show();
+
+            //  }
+            #endregion
+        }
+
+        private void bảngTínhGiáThànhSảnPhẩmToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void đăngKýSảnPhẩmToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            #region// danh sach sản phẩm san xuất
+            string connection_string = Utils.getConnectionstr();
+
+            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+            var rs5 = Model.Sanxuat.Danhsachsanphamsx(dc);
+            Viewtable viewtbl66 = new Viewtable(rs5, dc, "DANH SÁCH CÁC SẢN PHẨM SẢN XUẤT", 15, "tk");// mã 15 là danh sản phẩm sản xuất
+
+            viewtbl66.Show();
+
+            //  }
+            #endregion
+        }
+
+        private void kiểmKêVàTínhSảnPhẩmDởDangCuốiKỳToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           
+            #region// danh sach sản phẩm san xuất
+          
+           
+
+          
+            //  }
+            #endregion
+
+            #region//cdktoan format
+            Beemonthandyearsellect viewchon = new Beemonthandyearsellect();
+            viewchon.ShowDialog();
+
+            string namchon = viewchon.year;
+            string thangchon = viewchon.month;
+
+
+            if (namchon != "" && thangchon != "")
+            {
+                clearpannel();
+
+
+                View.fkiemkevatinhspdd accsup = new fkiemkevatinhspdd(this,namchon,thangchon);
+                clearpannelload(accsup);
+            }
+            #endregion
+
+        
+        }
     }
 
 

@@ -627,3 +627,9 @@ D:\Githup26032021\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.Themt
 D:\Githup26032021\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.BeeAutoketchuyencuoinam.resources
 D:\Githup26032021\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.BeeHtoansocaiphieuthu.resources
 D:\Githup26032021\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.Beemonthandyearsellect.resources
+D:\Githup26032021\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.fdanhsachnhamay.resources
+D:\Githup26032021\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.fdanhsachphanxuongsx.resources
+D:\Githup26032021\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.fdanhsachsanphamsx.resources
+D:\Githup26032021\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.fkiemkevatinhspdd.resources
+D:\Githup26032021\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.Seachproductofchoose.resources
+D:\Githup26032021\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.Chooseproductsx.resources

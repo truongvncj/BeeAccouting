@@ -3103,6 +3103,42 @@ namespace BEEACCOUNT.View
 
                         #endregion
 
+                        if (taikhoanchon.loaitkid.Trim() =="TINHGIASP")
+                        {
+                            
+                    
+         //                   var td = from s in cv.Entity_Product_Points join r in dt.PlanMasters on s.Product_ID equals r.Product_ID
+         //where s.Entity_ID = getEntity
+         //select s;
+
+                        #region chọn tài khoản sản phẩm nếu là nợ loại tk xác đinh giá thành
+                        var Listphieu = from cc in db.tbl_sx_sanphams
+                                     join     rx in db.tbl_sx_dsnhamays
+                                     on cc.manhamay equals rx.maNhamay
+                                         
+                                  //      where
+
+                        //       listpt.tensp.Contains(tensp)
+                        //       && listpt.masp.Contains(masp)
+                         //      && listpt.manhamay.Contains(nhamayct)
+                                        select new
+                                        {
+
+                                            Tên_sản_phẩm = cc.tensp,
+                                            Mã_sản_phẩm = cc.masp,
+                                            Tại = rx.tenNhamay,
+                                         //   listpt.maphanxuong,
+                                          //  listpt.macongdoan,
+                                            ID = cc.id
+
+                                        };
+
+                        Chooseproductsx choproduct = new Chooseproductsx("Chọn sản phẩm", Listphieu,db);
+                         choproduct.ShowDialog();
+                         int idproduct = choproduct.value;
+                         bool kqproduct = choproduct.kq;
+                        #endregion
+                        }
                         tbchontkco.Focus();
                     }
                     else
@@ -3271,6 +3307,42 @@ namespace BEEACCOUNT.View
 
                         #endregion
 
+                        if (taikhoanchon.loaitkid.Trim() == "TINHGIASP")
+                        {
+
+
+                            //                   var td = from s in cv.Entity_Product_Points join r in dt.PlanMasters on s.Product_ID equals r.Product_ID
+                            //where s.Entity_ID = getEntity
+                            //select s;
+
+                            #region chọn tài khoản sản phẩm nếu là nợ loại tk xác đinh giá thành
+                            var Listphieu = from cc in db.tbl_sx_sanphams
+                                            join rx in db.tbl_sx_dsnhamays
+                                            on cc.manhamay equals rx.maNhamay
+
+                                            //      where
+
+                                            //       listpt.tensp.Contains(tensp)
+                                            //       && listpt.masp.Contains(masp)
+                                            //      && listpt.manhamay.Contains(nhamayct)
+                                            select new
+                                            {
+
+                                                Tên_sản_phẩm = cc.tensp,
+                                                Mã_sản_phẩm = cc.masp,
+                                                Tại = rx.tenNhamay,
+                                                //   listpt.maphanxuong,
+                                                //  listpt.macongdoan,
+                                                ID = cc.id
+
+                                            };
+
+                            Chooseproductsx choproduct = new Chooseproductsx("Chọn sản phẩm", Listphieu, db);
+                            choproduct.ShowDialog();
+                            int idproduct = choproduct.value;
+                            bool kqproduct = choproduct.kq;
+                            #endregion
+                        }
                         txtsotien.Focus();
                     }
                     else

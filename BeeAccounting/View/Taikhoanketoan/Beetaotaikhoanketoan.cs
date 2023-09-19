@@ -133,7 +133,7 @@ namespace BEEACCOUNT.View
 
 
             var rscbkc = from tbl_dstaikhoan in dc.tbl_dstaikhoans
-                      where tbl_dstaikhoan.loaitkid == "TINHKQKD"
+                         where tbl_dstaikhoan.loaitkid == "TINHKQKD" || tbl_dstaikhoan.loaitkid == "TINHGIASP"
 
                      select tbl_dstaikhoan;
 

@@ -107,7 +107,7 @@
             this.MinimizeBox = false;
             this.Name = "Viewdatatable";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Data view";
+            this.Text = "View";
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

@@ -33,6 +33,7 @@ namespace BEEACCOUNT.View
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Viewtable));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btketchuyen = new System.Windows.Forms.Button();
             this.bt_sua = new System.Windows.Forms.Button();
             this.bt_exporttoex = new System.Windows.Forms.Button();
             this.bt_themmoi = new System.Windows.Forms.Button();
@@ -52,7 +53,6 @@ namespace BEEACCOUNT.View
             this.lb_bilingqtt = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btketchuyen = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.Pl_endview.SuspendLayout();
@@ -88,6 +88,18 @@ namespace BEEACCOUNT.View
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1332, 28);
             this.panel2.TabIndex = 45;
+            // 
+            // btketchuyen
+            // 
+            this.btketchuyen.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btketchuyen.Location = new System.Drawing.Point(991, 2);
+            this.btketchuyen.Name = "btketchuyen";
+            this.btketchuyen.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.btketchuyen.Size = new System.Drawing.Size(177, 23);
+            this.btketchuyen.TabIndex = 6;
+            this.btketchuyen.Text = "Kết chuyển số dư tài khoản";
+            this.btketchuyen.UseVisualStyleBackColor = true;
+            this.btketchuyen.Click += new System.EventHandler(this.btketchuyen_Click);
             // 
             // bt_sua
             // 
@@ -315,18 +327,6 @@ namespace BEEACCOUNT.View
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             this.dataGridView1.Paint += new System.Windows.Forms.PaintEventHandler(this.dataGridView1_Paint);
             // 
-            // btketchuyen
-            // 
-            this.btketchuyen.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btketchuyen.Location = new System.Drawing.Point(991, 2);
-            this.btketchuyen.Name = "btketchuyen";
-            this.btketchuyen.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btketchuyen.Size = new System.Drawing.Size(177, 23);
-            this.btketchuyen.TabIndex = 6;
-            this.btketchuyen.Text = "Kết chuyển số dư tài khoản";
-            this.btketchuyen.UseVisualStyleBackColor = true;
-            this.btketchuyen.Click += new System.EventHandler(this.btketchuyen_Click);
-            // 
             // Viewtable
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -337,7 +337,7 @@ namespace BEEACCOUNT.View
             this.KeyPreview = true;
             this.Name = "Viewtable";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Data View";
+            this.Text = "View";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Viewtable_FormClosed);
             this.panel1.ResumeLayout(false);

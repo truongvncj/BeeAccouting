@@ -351,51 +351,7 @@ namespace BEEACCOUNT.View
         {
 
 
-            #region  // viewcode ==11  la danh gia theo tuyen
-
-
-            if (this.viewcode == 11)
-            {
-
-
-                string makh = valuesave;
-
-
-
-
-
-                Model.Nhacungcap.themmoigiavantaitheotuyen(makh);
-                var rs = Model.Nhacungcap.danhsachgiatheotuyenvamanhavantai(this.db, makh);
-
-                dataGridView1.DataSource = rs;
-
-
-
-            }
-
-
-
-            #endregion
-
-            #region  // viewcode ==10  la danh sách khách hàng kế toán
-
-
-            if (this.viewcode == 10)
-            {
-
-                Model.Nhacungcap.themmoikhachhangvantai();
-                var rs = Model.Nhacungcap.danhsachkhachhangvantai(this.db);
-
-                dataGridView1.DataSource = rs;
-
-
-
-            }
-
-
-
-            #endregion
-
+          
 
             #region  // viewcode ==0  la danh sách tài k khoản kê toán
 
@@ -550,6 +506,126 @@ namespace BEEACCOUNT.View
 
             }
             #endregion
+
+            #region  // viewcode ==11  la danh gia theo tuyen
+
+
+            if (this.viewcode == 11)
+            {
+
+
+                string makh = valuesave;
+
+
+
+
+
+                Model.Nhacungcap.themmoigiavantaitheotuyen(makh);
+                var rs = Model.Nhacungcap.danhsachgiatheotuyenvamanhavantai(this.db, makh);
+
+                dataGridView1.DataSource = rs;
+
+
+
+            }
+
+
+
+            #endregion
+
+
+
+            #region  // viewcode ==10  la danh sách khách hàng kế toán
+
+
+            if (this.viewcode == 10)
+            {
+
+                Model.Nhacungcap.themmoikhachhangvantai();
+                var rs = Model.Nhacungcap.danhsachkhachhangvantai(this.db);
+
+                dataGridView1.DataSource = rs;
+
+
+
+            }
+
+
+
+            #endregion
+
+
+
+            #region  // viewcode ==13  la danh sách nha may san xuat
+
+
+            if (this.viewcode == 13)
+            {
+
+                View.fdanhsachnhamay p = new fdanhsachnhamay(3, -1);  // 3 là thêm ới
+
+                p.ShowDialog();
+
+
+                var rs = Model.Sanxuat.Danhsachnhanmay(this.db);
+
+                dataGridView1.DataSource = rs;
+
+
+
+            }
+
+
+
+            #endregion
+
+               #region  // viewcode ==14  la danh sách phân xưorng san xuat
+
+
+            if (this.viewcode == 14)
+            {
+
+                View.fdanhsachphanxuongsx p = new fdanhsachphanxuongsx(3, -1);  // 3 là thêm ới
+
+                p.ShowDialog();
+
+
+                var rs = Model.Sanxuat.Danhsachphanxuongsx(this.db);
+
+                dataGridView1.DataSource = rs;
+
+
+
+            }
+
+
+
+            #endregion
+
+
+            #region  // viewcode ==15  la danh sản phâm  san xuat
+
+
+            if (this.viewcode == 15)
+            {
+
+                View.fdanhsachsanphamsx p = new fdanhsachsanphamsx(3, -1);  // 3 là thêm ới
+
+                p.ShowDialog();
+
+
+                var rs = Model.Sanxuat.Danhsachsanphamsx(this.db);
+
+                dataGridView1.DataSource = rs;
+
+
+
+            }
+
+
+
+            #endregion
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -1513,6 +1589,114 @@ namespace BEEACCOUNT.View
             }
             #endregion
 
+
+            #region // viewcode == 13  lA DANH SACH nhà máy
+
+            if (this.viewcode == 13)
+            {
+                int idtk = 0;
+                try
+                {
+                    idtk = (int)this.dataGridView1.Rows[this.dataGridView1.CurrentCell.RowIndex].Cells["ID"].Value;
+
+
+
+                }
+                catch (Exception)
+                {
+
+                    MessageBox.Show("Chọn một nhà máy để sửa !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+
+
+                View.fdanhsachnhamay p = new fdanhsachnhamay(4, idtk);  // 3 là thêm ới
+
+                p.ShowDialog();
+        
+             
+                var rs = Model.Sanxuat.Danhsachnhanmay(dc);
+                dataGridView1.DataSource = rs;
+
+
+
+            }
+            #endregion
+
+            
+            #region // viewcode == 14  lA DANH SACH phân xuwrorng sax
+
+            if (this.viewcode == 14)
+            {
+                int idtk = 0;
+                try
+                {
+                    idtk = (int)this.dataGridView1.Rows[this.dataGridView1.CurrentCell.RowIndex].Cells["ID"].Value;
+
+
+
+                }
+                catch (Exception)
+                {
+
+                    MessageBox.Show("Chọn một phân xưởng để sửa !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+
+
+                View.fdanhsachphanxuongsx p = new fdanhsachphanxuongsx(4, idtk);  // 3 là thêm ới
+
+                p.ShowDialog();
+        
+             
+                var rs = Model.Sanxuat.Danhsachphanxuongsx(dc);
+                dataGridView1.DataSource = rs;
+
+
+
+            }
+            #endregion
+
+
+
+            #region // viewcode == 15  lA DANH SACHsan phẩm sax
+
+            if (this.viewcode == 15)
+            {
+                int idtk = 0;
+                try
+                {
+                    idtk = (int)this.dataGridView1.Rows[this.dataGridView1.CurrentCell.RowIndex].Cells["ID"].Value;
+
+
+
+                }
+                catch (Exception)
+                {
+
+                    MessageBox.Show("Chọn một sản phẩm để sửa !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+
+
+                View.fdanhsachsanphamsx p = new fdanhsachsanphamsx(4, idtk);  // 3 là thêm ới
+
+                p.ShowDialog();
+
+
+                var rs = Model.Sanxuat.Danhsachsanphamsx(dc);
+                dataGridView1.DataSource = rs;
+
+
+
+            }
+            #endregion
+
+
+            
 
         }
 

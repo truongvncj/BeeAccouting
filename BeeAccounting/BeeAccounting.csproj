@@ -112,6 +112,7 @@
     <Compile Include="Model\dieuvan.cs" />
     <Compile Include="Model\Khohang.cs" />
     <Compile Include="Model\formatBCTC.cs" />
+    <Compile Include="Model\Sanxuat.cs" />
     <Compile Include="Model\Soketoan.cs" />
     <Compile Include="Model\Congty.cs" />
     <Compile Include="Model\Danhsachtkchitiet.cs" />
@@ -199,6 +200,42 @@
     <Compile Include="View\Hethong\ThemtktinhCDKT.Designer.cs">
       <DependentUpon>ThemtktinhCDKT.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Ketoantonghop\Seachproductofchoose.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Ketoantonghop\Seachproductofchoose.Designer.cs">
+      <DependentUpon>Seachproductofchoose.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Ketoantonghop\Chooseproductsx.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Ketoantonghop\Chooseproductsx.Designer.cs">
+      <DependentUpon>Chooseproductsx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Sanxuat\fkiemkevatinhspdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Sanxuat\fkiemkevatinhspdd.Designer.cs">
+      <DependentUpon>fkiemkevatinhspdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Sanxuat\fdanhsachsanphamsx.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Sanxuat\fdanhsachsanphamsx.Designer.cs">
+      <DependentUpon>fdanhsachsanphamsx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Sanxuat\fdanhsachphanxuongsx.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Sanxuat\fdanhsachphanxuongsx.Designer.cs">
+      <DependentUpon>fdanhsachphanxuongsx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Sanxuat\fdanhsachnhamay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Sanxuat\fdanhsachnhamay.Designer.cs">
+      <DependentUpon>fdanhsachnhamay.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\StringExtensions.cs" />
     <Compile Include="View\Formview\Beeviewandchoose.cs">
       <SubType>Form</SubType>
@@ -272,34 +309,34 @@
     <Compile Include="View\Dieuvan\NPDanhsachnhavantai.Designer.cs">
       <DependentUpon>NPDanhsachnhavantai.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Khothanhpham\BeeDanhsachsanpham.cs">
+    <Compile Include="View\Khohanghoa\BeeDanhsachsanpham.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Khothanhpham\BeeDanhsachsanpham.Designer.cs">
+    <Compile Include="View\Khohanghoa\BeeDanhsachsanpham.Designer.cs">
       <DependentUpon>BeeDanhsachsanpham.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Khothanhpham\BeeDanhsachnhomsanpham.cs">
+    <Compile Include="View\Khohanghoa\BeeDanhsachnhomsanpham.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Khothanhpham\BeeDanhsachnhomsanpham.Designer.cs">
+    <Compile Include="View\Khohanghoa\BeeDanhsachnhomsanpham.Designer.cs">
       <DependentUpon>BeeDanhsachnhomsanpham.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Khothanhpham\BeeDanhsachkho.cs">
+    <Compile Include="View\Khohanghoa\BeeDanhsachkho.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Khothanhpham\BeeDanhsachkho.Designer.cs">
+    <Compile Include="View\Khohanghoa\BeeDanhsachkho.Designer.cs">
       <DependentUpon>BeeDanhsachkho.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Khothanhpham\BeeHtdoiungphieuxuatkho.cs">
+    <Compile Include="View\Khohanghoa\BeeHtdoiungphieuxuatkho.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Khothanhpham\BeeHtdoiungphieuxuatkho.Designer.cs">
+    <Compile Include="View\Khohanghoa\BeeHtdoiungphieuxuatkho.Designer.cs">
       <DependentUpon>BeeHtdoiungphieuxuatkho.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Khothanhpham\BeeHtdoiungphieunhapkho.cs">
+    <Compile Include="View\Khohanghoa\BeeHtdoiungphieunhapkho.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Khothanhpham\BeeHtdoiungphieunhapkho.Designer.cs">
+    <Compile Include="View\Khohanghoa\BeeHtdoiungphieunhapkho.Designer.cs">
       <DependentUpon>BeeHtdoiungphieunhapkho.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Ketoantonghop\BeeButtoantonghop.cs">
@@ -308,10 +345,10 @@
     <Compile Include="View\Ketoantonghop\BeeButtoantonghop.Designer.cs">
       <DependentUpon>BeeButtoantonghop.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Khothanhpham\BeeKhophieuxuat.cs">
+    <Compile Include="View\Khohanghoa\BeeKhophieuxuat.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Khothanhpham\BeeKhophieuxuat.Designer.cs">
+    <Compile Include="View\Khohanghoa\BeeKhophieuxuat.Designer.cs">
       <DependentUpon>BeeKhophieuxuat.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Muahang\BeeNCCnewaccount.cs">
@@ -368,10 +405,10 @@
     <Compile Include="View\Tienmat\BeePhieuchi.Designer.cs">
       <DependentUpon>BeePhieuchi.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Khothanhpham\BeeKhophieunhap.cs">
+    <Compile Include="View\Khohanghoa\BeeKhophieunhap.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Khothanhpham\BeeKhophieunhap.Designer.cs">
+    <Compile Include="View\Khohanghoa\BeeKhophieunhap.Designer.cs">
       <DependentUpon>BeeKhophieunhap.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Tienmat\BeePhieuThu.cs">
@@ -386,10 +423,10 @@
     <Compile Include="View\Formview\Beechooseslect.Designer.cs">
       <DependentUpon>Beechooseslect.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Khothanhpham\Beeseleckhobcxnt.cs">
+    <Compile Include="View\Khohanghoa\Beeseleckhobcxnt.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Khothanhpham\Beeseleckhobcxnt.Designer.cs">
+    <Compile Include="View\Khohanghoa\Beeseleckhobcxnt.Designer.cs">
       <DependentUpon>Beeseleckhobcxnt.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Ketoantonghop\BeeselecSocai.cs">
@@ -675,29 +712,47 @@
     <EmbeddedResource Include="View\Hethong\ThemtktinhCDKT.resx">
       <DependentUpon>ThemtktinhCDKT.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Khothanhpham\BeeDanhsachsanpham.resx">
+    <EmbeddedResource Include="View\Ketoantonghop\Seachproductofchoose.resx">
+      <DependentUpon>Seachproductofchoose.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Ketoantonghop\Chooseproductsx.resx">
+      <DependentUpon>Chooseproductsx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Khohanghoa\BeeDanhsachsanpham.resx">
       <DependentUpon>BeeDanhsachsanpham.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Khothanhpham\BeeDanhsachnhomsanpham.resx">
+    <EmbeddedResource Include="View\Khohanghoa\BeeDanhsachnhomsanpham.resx">
       <DependentUpon>BeeDanhsachnhomsanpham.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Khothanhpham\BeeDanhsachkho.resx">
+    <EmbeddedResource Include="View\Khohanghoa\BeeDanhsachkho.resx">
       <DependentUpon>BeeDanhsachkho.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Khothanhpham\BeeHtdoiungphieuxuatkho.resx">
+    <EmbeddedResource Include="View\Khohanghoa\BeeHtdoiungphieuxuatkho.resx">
       <DependentUpon>BeeHtdoiungphieuxuatkho.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Khothanhpham\BeeHtdoiungphieunhapkho.resx">
+    <EmbeddedResource Include="View\Khohanghoa\BeeHtdoiungphieunhapkho.resx">
       <DependentUpon>BeeHtdoiungphieunhapkho.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Ketoantonghop\BeeButtoantonghop.resx">
       <DependentUpon>BeeButtoantonghop.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Khothanhpham\BeeKhophieuxuat.resx">
+    <EmbeddedResource Include="View\Khohanghoa\BeeKhophieuxuat.resx">
       <DependentUpon>BeeKhophieuxuat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Muahang\BeeNCCnewaccount.resx">
       <DependentUpon>BeeNCCnewaccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Sanxuat\fkiemkevatinhspdd.resx">
+      <DependentUpon>fkiemkevatinhspdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Sanxuat\fdanhsachsanphamsx.resx">
+      <DependentUpon>fdanhsachsanphamsx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Sanxuat\fdanhsachphanxuongsx.resx">
+      <DependentUpon>fdanhsachphanxuongsx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Sanxuat\fdanhsachnhamay.resx">
+      <DependentUpon>fdanhsachnhamay.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Tienmat\BeeHtoansocaiphieuthu.resx">
       <DependentUpon>BeeHtoansocaiphieuthu.cs</DependentUpon>
@@ -724,7 +779,7 @@
     <EmbeddedResource Include="View\Tienmat\BeePhieuchi.resx">
       <DependentUpon>BeePhieuchi.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Khothanhpham\BeeKhophieunhap.resx">
+    <EmbeddedResource Include="View\Khohanghoa\BeeKhophieunhap.resx">
       <DependentUpon>BeeKhophieunhap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Tienmat\BeePhieuThu.resx">
@@ -733,7 +788,7 @@
     <EmbeddedResource Include="View\Formview\Beechooseslect.resx">
       <DependentUpon>Beechooseslect.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Khothanhpham\Beeseleckhobcxnt.resx">
+    <EmbeddedResource Include="View\Khohanghoa\Beeseleckhobcxnt.resx">
       <DependentUpon>Beeseleckhobcxnt.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Ketoantonghop\BeeselecSocai.resx">

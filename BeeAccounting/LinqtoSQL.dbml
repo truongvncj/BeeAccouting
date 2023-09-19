@@ -1131,6 +1131,9 @@
       <Column Name="dongiafifo" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Column Name="thanhtienLifo" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Column Name="dongiaLifo" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="soluongxuatPPdichdanh" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dongiaxuatPPdichdanh" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="idphieunhapPPdichdanh" Type="System.Int32" DbType="Int" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.tbl_kho_phieuxuat_head" Member="tbl_kho_phieuxuat_heads">
@@ -1339,6 +1342,10 @@
       <Column Name="PsCo" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Column Name="Sohieuchungtu" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="Ngaydenhan" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="masanpham" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="maphanxuong" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="macongdoan" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="manhamay" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.tbl_SoQuy" Member="tbl_SoQuys">
@@ -1366,6 +1373,65 @@
       <Column Name="cashadvandapproval1" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
       <Column Name="cashadvanapproval2" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
       <Column Name="macty" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_sx_dsnhamay" Member="tbl_sx_dsnhamays">
+    <Type Name="tbl_sx_dsnhamay">
+      <Column Name="tenNhamay" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="maNhamay" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ghichu" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_sx_dsphanxuong" Member="tbl_sx_dsphanxuongs">
+    <Type Name="tbl_sx_dsphanxuong">
+      <Column Name="tenphanxuong" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="maphanxuong" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ghichu" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="manhamay" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_sx_pptinhspddcuoiky" Member="tbl_sx_pptinhspddcuoikies">
+    <Type Name="tbl_sx_pptinhspddcuoiky">
+      <Column Name="mapp" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="tenpptinhspddang" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_sx_phieutinhspddcuoiky" Member="tbl_sx_phieutinhspddcuoikies">
+    <Type Name="tbl_sx_phieutinhspddcuoiky">
+      <Column Name="namdd" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="thangdd" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="masp" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="tensp" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Nhancongps" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="chiphisxchungps" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="giatrisanphamddcuoiky" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="soluongspdd" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="manhamay" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="maphaxuong" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="macongdoan" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="giatrispdauky" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="nguyenvatlieups" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_sx_sanpham" Member="tbl_sx_sanphams">
+    <Type Name="tbl_sx_sanpham">
+      <Column Name="masp" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="tensp" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="donvi" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PPtinhgiasx" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PPspdodang" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="nvldinhmuc" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="nhancongdinhmuc" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="cphichungdinhmuc" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="manhamay" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="maphanxuong" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="macongdoan" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="loaisp" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
     </Type>
   </Table>
 </Database>
