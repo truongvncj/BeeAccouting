@@ -4711,23 +4711,7 @@ namespace BEEACCOUNT.View
             }
         }
 
-        private void đăngKýPhânXưởngNhàMáyToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-            #region// danh sach nha may san xuat
-            string connection_string = Utils.getConnectionstr();
-
-            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
-
-            var rs5 = Model.Sanxuat.Danhsachnhanmay(dc);
-            Viewtable viewtbl66 = new Viewtable(rs5, dc, "DANH SÁCH NHÀ MÁY SẢN XUẤT", 13, "tk");// mã 4 là danh sách kho
-
-            viewtbl66.Show();
-
-            //  }
-            #endregion
-        }
-
+    
         private void đăngKýPhânXưởngSảnXuấtToolStripMenuItem_Click(object sender, EventArgs e)
         {
 

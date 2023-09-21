@@ -30,8 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fdanhsachphanxuongsx));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txtcbmanhamay = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.txtghichu = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.btupdate = new System.Windows.Forms.Button();
@@ -46,8 +44,6 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.txtcbmanhamay);
-            this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.txtghichu);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.btupdate);
@@ -59,36 +55,14 @@
             this.panel1.Controls.Add(this.label21);
             this.panel1.Location = new System.Drawing.Point(5, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(578, 199);
+            this.panel1.Size = new System.Drawing.Size(578, 169);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
-            // txtcbmanhamay
-            // 
-            this.txtcbmanhamay.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.txtcbmanhamay.FormattingEnabled = true;
-            this.txtcbmanhamay.Location = new System.Drawing.Point(174, 91);
-            this.txtcbmanhamay.Name = "txtcbmanhamay";
-            this.txtcbmanhamay.Size = new System.Drawing.Size(206, 21);
-            this.txtcbmanhamay.TabIndex = 63;
-            this.txtcbmanhamay.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtnhomsanpham_KeyPress);
-            // 
-            // label6
-            // 
-            this.label6.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label6.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(18, 91);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(125, 20);
-            this.label6.TabIndex = 62;
-            this.label6.Text = "Tại nhà máy";
             // 
             // txtghichu
             // 
             this.txtghichu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtghichu.Location = new System.Drawing.Point(174, 128);
+            this.txtghichu.Location = new System.Drawing.Point(174, 90);
             this.txtghichu.Name = "txtghichu";
             this.txtghichu.Size = new System.Drawing.Size(370, 20);
             this.txtghichu.TabIndex = 59;
@@ -100,7 +74,7 @@
             this.label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label5.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(18, 128);
+            this.label5.Location = new System.Drawing.Point(18, 90);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(125, 20);
             this.label5.TabIndex = 60;
@@ -112,7 +86,7 @@
             this.btupdate.BackColor = System.Drawing.Color.Transparent;
             this.btupdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btupdate.ForeColor = System.Drawing.Color.Red;
-            this.btupdate.Location = new System.Drawing.Point(336, 175);
+            this.btupdate.Location = new System.Drawing.Point(339, 145);
             this.btupdate.Name = "btupdate";
             this.btupdate.Size = new System.Drawing.Size(94, 21);
             this.btupdate.TabIndex = 6;
@@ -126,7 +100,7 @@
             this.btxoa.BackColor = System.Drawing.Color.Transparent;
             this.btxoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btxoa.ForeColor = System.Drawing.Color.Red;
-            this.btxoa.Location = new System.Drawing.Point(199, 175);
+            this.btxoa.Location = new System.Drawing.Point(202, 145);
             this.btxoa.Name = "btxoa";
             this.btxoa.Size = new System.Drawing.Size(94, 21);
             this.btxoa.TabIndex = 6;
@@ -140,7 +114,7 @@
             this.btnew.BackColor = System.Drawing.Color.Transparent;
             this.btnew.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnew.ForeColor = System.Drawing.Color.Red;
-            this.btnew.Location = new System.Drawing.Point(447, 175);
+            this.btnew.Location = new System.Drawing.Point(450, 145);
             this.btnew.Name = "btnew";
             this.btnew.Size = new System.Drawing.Size(94, 21);
             this.btnew.TabIndex = 8;
@@ -194,7 +168,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(588, 213);
+            this.ClientSize = new System.Drawing.Size(588, 180);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -221,7 +195,5 @@
         private System.Windows.Forms.Button btxoa;
         private System.Windows.Forms.TextBox txtghichu;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox txtcbmanhamay;
-        private System.Windows.Forms.Label label6;
     }
 }

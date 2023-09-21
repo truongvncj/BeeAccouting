@@ -91,21 +91,19 @@ namespace BEEACCOUNT.View
             LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
 
             var Listphieu = from cc in dc.tbl_sx_sanphams
-                            join rx in dc.tbl_sx_dsnhamays
-                            on cc.manhamay equals rx.maNhamay
+                          
                             where
 
                       cc.tensp.Contains(tensp)
                       && cc.masp.Contains(masp)
-                      && cc.manhamay.Contains(nhamayct)
+                   
                             select new
                             {
 
                                 Tên_sản_phẩm = cc.tensp,
                                 Mã_sản_phẩm = cc.masp,
-                                Tại = rx.tenNhamay,
-                                //   listpt.maphanxuong,
-                                //  listpt.macongdoan,
+                               
+
                                 ID = cc.id
 
                             };

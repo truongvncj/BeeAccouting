@@ -118,30 +118,7 @@ namespace BEEACCOUNT.View
 
 
 
-            #region load ds nhà máy
-
-          //  string connection_string = Utils.getConnectionstr();
-          //  LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
-
-            var rs1 = from p in dc.tbl_sx_dsnhamays
-                      //   where tk.loaitkid == 5 || tk.loaitkid == 9 || tk.loaitkid == 7  // 5.nguon von;  7 phai tra; 9. tam ung
-                      select p;
-
-            //      string drowdownshow = "";
-
-            foreach (var item in rs1)
-            {
-                ComboboxItem cb = new ComboboxItem();
-                cb.Value = item.maNhamay;
-                cb.Text = item.tenNhamay;
-                this.txtcbmanhamay.Items.Add(cb); // CombomCollection.Add(cb);
-
-            }
-
-            #endregion load tk nợ
-
-
-
+       
 
 
 
@@ -750,7 +727,7 @@ namespace BEEACCOUNT.View
 
             var rs2 = from p in dc.tbl_sx_dsphanxuongs
 
-                      where p.manhamay == manhamay
+           
                       select p;
 
             //      string drowdownshow = "";
@@ -779,8 +756,8 @@ namespace BEEACCOUNT.View
 
             var rs2 = from p in dc.tbl_sx_sanphams
 
-                      where p.manhamay == manhamay
-                      && p.maphanxuong  == maphanxuong
+                      where 
+                     p.maphanxuong  == maphanxuong
                       select p;
 
             //      string drowdownshow = "";
@@ -812,8 +789,8 @@ namespace BEEACCOUNT.View
 
             var sp = (from p in dc.tbl_sx_sanphams
 
-                      where p.manhamay == manhamay
-                      && p.maphanxuong == maphanxuong
+                      where 
+                  p.maphanxuong == maphanxuong
                           && p.masp == masanpham
 
 

@@ -106,29 +106,6 @@ namespace BEEACCOUNT.View
 
 
 
-            #region load ds nhà máy
-
-              string connection_string = Utils.getConnectionstr();
-             LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
-
-            var rs1 = from p in dc.tbl_sx_dsnhamays
-                          //   where tk.loaitkid == 5 || tk.loaitkid == 9 || tk.loaitkid == 7  // 5.nguon von;  7 phai tra; 9. tam ung
-                      select p;
-
-            //      string drowdownshow = "";
-
-            foreach (var item in rs1)
-            {
-                ComboboxItem cb = new ComboboxItem();
-                cb.Value = item.maNhamay;
-                cb.Text = item.tenNhamay;
-                this.txtcbmanhamay.Items.Add(cb); // CombomCollection.Add(cb);
-
-            }
-
-            #endregion load tk nợ
-
-
 
             this.id = idsanpham;
 
@@ -139,6 +116,8 @@ namespace BEEACCOUNT.View
                 txtmasanpham.Text = idsanpham.ToString();
                 txtmasanpham.Enabled = false;
 
+                string connection_string = Utils.getConnectionstr();
+                LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
 
 
                 var item = (from p in dc.tbl_sx_sanphams
@@ -153,25 +132,6 @@ namespace BEEACCOUNT.View
                     txttensanpham.Text = item.tensp;
                     txtdonvi.Text = item.donvi;
 
-                    #region ma nha may
-                   
-                    foreach (var sp in txtcbmanhamay.Items)
-                    {
-
-                        if ((string)(sp as ComboboxItem).Value == item.manhamay)
-                        {
-                            //      loaitk = (int)(cbloaitk.SelectedItem as ComboboxItem).Value;
-                            //     cmbEmployeeStatus.SelectedValue = cmbEmployeeStatus.Items.FindByText("text").Value;
-
-                            txtcbmanhamay.SelectedItem = sp;
-                            //      cbtkmother.(iten);
-
-                        }
-
-
-                    }
-
-                    #endregion
 
                     #region ma phan xuong
 
@@ -345,16 +305,7 @@ namespace BEEACCOUNT.View
             }
 
 
-            if (txtcbmanhamay.SelectedItem != null)
-            {
-                this.manhamay = (string)(txtcbmanhamay.SelectedItem as ComboboxItem).Value;// (cbm.SelectedItem as ComboboxItem).Value.ToString();
-
-            }
-            else
-            {
-                MessageBox.Show("Kiểm tra nhà máy !", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
+           
 
             if (txtcbphanxuong.SelectedItem != null)
             {
@@ -412,7 +363,7 @@ namespace BEEACCOUNT.View
                     rs.masp = this.masp;// = this.txtmaNCC.Text;
                     rs.tensp = this.tensp;// this.txttenNCC.Text;
                     rs.maphanxuong = this.maphanxuong;// this.txttenNCC.Text;
-                    rs.manhamay = this.manhamay;// this.txttenNCC.Text;
+                
                     rs.donvi = this.donvi;
                     rs.PPspdodang = PPspdodang;
                     rs.PPtinhgiasx = PPtinhgiasx;
@@ -453,16 +404,6 @@ namespace BEEACCOUNT.View
 
           
 
-            if (txtcbmanhamay.SelectedItem != null)
-            {
-                this.manhamay = (string)(txtcbmanhamay.SelectedItem as ComboboxItem).Value;// (cbm.SelectedItem as ComboboxItem).Value.ToString();
-
-            }
-            else
-            {
-                MessageBox.Show("Kiểm tra nhà máy !", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
 
             if (txtcbphanxuong.SelectedItem != null)
             {
@@ -518,7 +459,7 @@ namespace BEEACCOUNT.View
             p.tensp = this.tensp;
             p.donvi = this.donvi;// this.txttenNCC.Text;
            
-            p.manhamay = this.manhamay;
+
             p.maphanxuong = this.maphanxuong;
             p.PPtinhgiasx = this.PPtinhgiasx;
             p.PPspdodang = this.PPspdodang;
@@ -594,8 +535,7 @@ namespace BEEACCOUNT.View
             {
 
 
-                txtcbmanhamay.Focus();
-
+             
 
             }
 
@@ -617,35 +557,7 @@ namespace BEEACCOUNT.View
 
         }
 
-        private void txtcbmanhamay_SelectedValueChanged(object sender, EventArgs e)
-        {
-            this.manhamay = (string)(txtcbmanhamay.SelectedItem as ComboboxItem).Value;
-            this.txtcbphanxuong.Items.Clear();
-
-            #region load ds phân xưorng
-
-            string connection_string = Utils.getConnectionstr();
-            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
-
-            var rs2 = from p in dc.tbl_sx_dsphanxuongs
-                      
-                       where p.manhamay == manhamay
-                       select p;
-
-            //      string drowdownshow = "";
-
-            foreach (var item in rs2)
-            {
-                ComboboxItem cb = new ComboboxItem();
-                cb.Value = item.maphanxuong;
-                cb.Text = item.tenphanxuong;
-                this.txtcbphanxuong.Items.Add(cb); // CombomCollection.Add(cb);
-
-            }
-
-            #endregion load tk nợ
-
-        }
+       
 
         private void tabPagettsanpham_Click(object sender, EventArgs e)
         {

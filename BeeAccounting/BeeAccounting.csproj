@@ -230,12 +230,6 @@
     <Compile Include="View\Sanxuat\fdanhsachphanxuongsx.Designer.cs">
       <DependentUpon>fdanhsachphanxuongsx.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Sanxuat\fdanhsachnhamay.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\Sanxuat\fdanhsachnhamay.Designer.cs">
-      <DependentUpon>fdanhsachnhamay.cs</DependentUpon>
-    </Compile>
     <Compile Include="View\StringExtensions.cs" />
     <Compile Include="View\Formview\Beeviewandchoose.cs">
       <SubType>Form</SubType>
@@ -751,9 +745,6 @@
     <EmbeddedResource Include="View\Sanxuat\fdanhsachphanxuongsx.resx">
       <DependentUpon>fdanhsachphanxuongsx.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Sanxuat\fdanhsachnhamay.resx">
-      <DependentUpon>fdanhsachnhamay.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="View\Tienmat\BeeHtoansocaiphieuthu.resx">
       <DependentUpon>BeeHtoansocaiphieuthu.cs</DependentUpon>
     </EmbeddedResource>
@@ -932,6 +923,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="giphyipg_Pb0_3.ico" />
+    <None Include="Resources\xuong.jpg" />
     <None Include="Resources\ketoantonghop1.jpg" />
     <None Include="Resources\GIASP.jpg" />
     <None Include="Resources\tINHGIAHANGTON.jpg" />

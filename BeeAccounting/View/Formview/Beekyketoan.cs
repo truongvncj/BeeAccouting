@@ -142,5 +142,10 @@ namespace BEEACCOUNT.View
         {
 
         }
+
+        private void bt_thuchien_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

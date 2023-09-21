@@ -14,33 +14,47 @@ namespace BEEACCOUNT.Model
         public static IQueryable danhsachtaikhoan(LinqtoSQLDataContext dc)
         {
 
-
+             //= from s in source  
+             // join i in inner  
+             // on pk(s) equals fk(i) into joinData  
+             // from left in joinData.DefaultIfEmpty()  
+             // select result(s, left);  
 
 
             //// string connection_string = Utils.getConnectionstr();
 
             //   LinqtoSQLDataContext db = new LinqtoSQLDataContext(connection_string);
             LinqtoSQLDataContext db = dc;
-            var rs = from tbl_dstaikhoan in db.tbl_dstaikhoans
-                     orderby tbl_dstaikhoan.matk, tbl_dstaikhoan.matktren
+            var rs = from s in db.tbl_dstaikhoans
+                     join i in db.tbl_loaitks
+
+                     on s.loaitkid equals i.idloaitk into joinData
+
+                     from left in joinData.DefaultIfEmpty()  
+                  //  select result(s, left);
+                   //  orderby cc.matk, cc.matktren
                      select new
                      {
 
 
-                         Mã_tài_khoản = tbl_dstaikhoan.matk,
-                         Tên_tài_khoản = tbl_dstaikhoan.tentk.Trim(),
-                         //     Loại_tài_khoản = tbl_dstaikhoan.loaitkid,
-                         Mã_tài_khoản_cấp_trên = tbl_dstaikhoan.matktren,
-                         Cấp_tài_khoản = tbl_dstaikhoan.captk,
-                         Theo_dõi_chi_tiết = tbl_dstaikhoan.loaichitiet,
-                         Mã_tài_khoản_kết_chuyển_cuối_năm = tbl_dstaikhoan.matkketchuyen,
-                       //  Dư_Nợ_đầu_kỳ = tbl_dstaikhoan.nodk,
-                      //   Dư_Có_đầu_kỳ = tbl_dstaikhoan.codk,
-
-                 
+                         Mã_tài_khoản = s.matk,
+                         Tên_tài_khoản = s.tentk.Trim(),
+                        
+                         Tài_khoản_cấp_trên = s.matktren.Trim(),
+                         Cấp_tài_khoản = s.captk,
+                         Theo_dõi_chi_tiết = s.loaichitiet,
+                         Tài_khoản_kết_chuyển = s.matkketchuyen.Trim(),
+                         Loại_tài_khoản = left.name.Trim(),
 
 
-                         ID = tbl_dstaikhoan.id,
+                        // Loại_tài_khoản = cc.loaitkid =="" ? "":pp.name.Trim(),
+                         
+                         //Mã_chi_tiết = p.machitiet == -1
+                         //                              ? ""
+                         //                             : p.machitiet.ToString(),
+
+
+                         ID = s.id,
                      };
 
             //    grviewlisttk.DataSource = rs;

@@ -240,9 +240,6 @@ namespace BEEACCOUNT
     partial void Inserttbl_SoQuy(tbl_SoQuy instance);
     partial void Updatetbl_SoQuy(tbl_SoQuy instance);
     partial void Deletetbl_SoQuy(tbl_SoQuy instance);
-    partial void Inserttbl_sx_dsnhamay(tbl_sx_dsnhamay instance);
-    partial void Updatetbl_sx_dsnhamay(tbl_sx_dsnhamay instance);
-    partial void Deletetbl_sx_dsnhamay(tbl_sx_dsnhamay instance);
     partial void Inserttbl_sx_dsphanxuong(tbl_sx_dsphanxuong instance);
     partial void Updatetbl_sx_dsphanxuong(tbl_sx_dsphanxuong instance);
     partial void Deletetbl_sx_dsphanxuong(tbl_sx_dsphanxuong instance);
@@ -844,14 +841,6 @@ namespace BEEACCOUNT
 			get
 			{
 				return this.GetTable<tbl_SoQuy>();
-			}
-		}
-		
-		public System.Data.Linq.Table<tbl_sx_dsnhamay> tbl_sx_dsnhamays
-		{
-			get
-			{
-				return this.GetTable<tbl_sx_dsnhamay>();
 			}
 		}
 		
@@ -29828,140 +29817,6 @@ namespace BEEACCOUNT
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tbl_sx_dsnhamay")]
-	public partial class tbl_sx_dsnhamay : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private string _tenNhamay;
-		
-		private string _maNhamay;
-		
-		private int _id;
-		
-		private string _ghichu;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OntenNhamayChanging(string value);
-    partial void OntenNhamayChanged();
-    partial void OnmaNhamayChanging(string value);
-    partial void OnmaNhamayChanged();
-    partial void OnidChanging(int value);
-    partial void OnidChanged();
-    partial void OnghichuChanging(string value);
-    partial void OnghichuChanged();
-    #endregion
-		
-		public tbl_sx_dsnhamay()
-		{
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tenNhamay", DbType="NVarChar(50)")]
-		public string tenNhamay
-		{
-			get
-			{
-				return this._tenNhamay;
-			}
-			set
-			{
-				if ((this._tenNhamay != value))
-				{
-					this.OntenNhamayChanging(value);
-					this.SendPropertyChanging();
-					this._tenNhamay = value;
-					this.SendPropertyChanged("tenNhamay");
-					this.OntenNhamayChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_maNhamay", DbType="NVarChar(10)")]
-		public string maNhamay
-		{
-			get
-			{
-				return this._maNhamay;
-			}
-			set
-			{
-				if ((this._maNhamay != value))
-				{
-					this.OnmaNhamayChanging(value);
-					this.SendPropertyChanging();
-					this._maNhamay = value;
-					this.SendPropertyChanged("maNhamay");
-					this.OnmaNhamayChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int id
-		{
-			get
-			{
-				return this._id;
-			}
-			set
-			{
-				if ((this._id != value))
-				{
-					this.OnidChanging(value);
-					this.SendPropertyChanging();
-					this._id = value;
-					this.SendPropertyChanged("id");
-					this.OnidChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ghichu", DbType="NVarChar(50)")]
-		public string ghichu
-		{
-			get
-			{
-				return this._ghichu;
-			}
-			set
-			{
-				if ((this._ghichu != value))
-				{
-					this.OnghichuChanging(value);
-					this.SendPropertyChanging();
-					this._ghichu = value;
-					this.SendPropertyChanged("ghichu");
-					this.OnghichuChanged();
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-	}
-	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tbl_sx_dsphanxuong")]
 	public partial class tbl_sx_dsphanxuong : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -29976,8 +29831,6 @@ namespace BEEACCOUNT
 		
 		private string _ghichu;
 		
-		private string _manhamay;
-		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -29990,8 +29843,6 @@ namespace BEEACCOUNT
     partial void OnidChanged();
     partial void OnghichuChanging(string value);
     partial void OnghichuChanged();
-    partial void OnmanhamayChanging(string value);
-    partial void OnmanhamayChanged();
     #endregion
 		
 		public tbl_sx_dsphanxuong()
@@ -30075,26 +29926,6 @@ namespace BEEACCOUNT
 					this._ghichu = value;
 					this.SendPropertyChanged("ghichu");
 					this.OnghichuChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_manhamay", DbType="NVarChar(10)")]
-		public string manhamay
-		{
-			get
-			{
-				return this._manhamay;
-			}
-			set
-			{
-				if ((this._manhamay != value))
-				{
-					this.OnmanhamayChanging(value);
-					this.SendPropertyChanging();
-					this._manhamay = value;
-					this.SendPropertyChanged("manhamay");
-					this.OnmanhamayChanged();
 				}
 			}
 		}
@@ -30628,8 +30459,6 @@ namespace BEEACCOUNT
 		
 		private System.Nullable<double> _cphichungdinhmuc;
 		
-		private string _manhamay;
-		
 		private string _maphanxuong;
 		
 		private string _macongdoan;
@@ -30658,8 +30487,6 @@ namespace BEEACCOUNT
     partial void OnnhancongdinhmucChanged();
     partial void OncphichungdinhmucChanging(System.Nullable<double> value);
     partial void OncphichungdinhmucChanged();
-    partial void OnmanhamayChanging(string value);
-    partial void OnmanhamayChanged();
     partial void OnmaphanxuongChanging(string value);
     partial void OnmaphanxuongChanged();
     partial void OnmacongdoanChanging(string value);
@@ -30849,26 +30676,6 @@ namespace BEEACCOUNT
 					this._cphichungdinhmuc = value;
 					this.SendPropertyChanged("cphichungdinhmuc");
 					this.OncphichungdinhmucChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_manhamay", DbType="NVarChar(10)")]
-		public string manhamay
-		{
-			get
-			{
-				return this._manhamay;
-			}
-			set
-			{
-				if ((this._manhamay != value))
-				{
-					this.OnmanhamayChanging(value);
-					this.SendPropertyChanging();
-					this._manhamay = value;
-					this.SendPropertyChanged("manhamay");
-					this.OnmanhamayChanged();
 				}
 			}
 		}

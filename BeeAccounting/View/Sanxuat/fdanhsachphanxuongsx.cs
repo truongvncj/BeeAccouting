@@ -19,8 +19,7 @@ namespace BEEACCOUNT.View
         public string maphanxuong { get; set; }
         public string tenphanxuong { get; set; }
 
-        public string manhamay { get; set; }
-       
+     
         public string ghichu { get; set; }
         public bool chon { get; set; }
 
@@ -46,28 +45,7 @@ namespace BEEACCOUNT.View
             //    cbkhohang
 
 
-            #region load ds nhà máy
-
-                  string connection_string = Utils.getConnectionstr();
-             LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
-
-            var rs1 = from p in dc.tbl_sx_dsnhamays
-                          //   where tk.loaitkid == 5 || tk.loaitkid == 9 || tk.loaitkid == 7  // 5.nguon von;  7 phai tra; 9. tam ung
-                      select p;
-
-            //      string drowdownshow = "";
-
-            foreach (var item in rs1)
-            {
-                ComboboxItem cb = new ComboboxItem();
-                cb.Value = item.maNhamay;
-                cb.Text = item.tenNhamay;
-                this.txtcbmanhamay.Items.Add(cb); // CombomCollection.Add(cb);
-
-            }
-
-            #endregion load tk nợ
-
+         
 
             this.id = idphanxuong;
 
@@ -83,8 +61,8 @@ namespace BEEACCOUNT.View
 
 
 
-                //    string connection_string = Utils.getConnectionstr();
-                //    LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+                string connection_string = Utils.getConnectionstr();
+                LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
 
 
 
@@ -104,23 +82,7 @@ namespace BEEACCOUNT.View
                     txtghichu.Text = item.ghichu;
                   
 
-                    foreach (var sp in txtcbmanhamay.Items)
-                    {
-
-                        if ((string)(sp as ComboboxItem).Value == item.manhamay)
-                        {
-                            //      loaitk = (int)(cbloaitk.SelectedItem as ComboboxItem).Value;
-                            //     cmbEmployeeStatus.SelectedValue = cmbEmployeeStatus.Items.FindByText("text").Value;
-
-                            txtcbmanhamay.SelectedItem = sp;
-                            //      cbtkmother.(iten);
-
-                        }
-
-
-
-                    }
-
+                 
                   
 
 
@@ -228,16 +190,7 @@ namespace BEEACCOUNT.View
                 return;
             }
 
-            if (txtcbmanhamay.SelectedItem != null)
-            {
-                this.manhamay = (string)(txtcbmanhamay.SelectedItem as ComboboxItem).Value;// (cbm.SelectedItem as ComboboxItem).Value.ToString();
-
-            }
-            else
-            {
-                MessageBox.Show("Kiểm tra nhà máy !", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
+          
 
             if (maphanxuong != "")
             {
@@ -261,7 +214,7 @@ namespace BEEACCOUNT.View
                     rs.maphanxuong = this.maphanxuong;// = this.txtmaNCC.Text;
                     rs.tenphanxuong = this.tenphanxuong;// this.txttenNCC.Text;
 
-                    rs.manhamay = this.manhamay;// this.txttenNCC.Text;
+              
 
                     rs.ghichu = this.ghichu;
 
@@ -296,16 +249,7 @@ namespace BEEACCOUNT.View
                 return;
             }
 
-            if (txtcbmanhamay.SelectedItem != null)
-            {
-                this.manhamay = (string)(txtcbmanhamay.SelectedItem as ComboboxItem).Value;// (cbm.SelectedItem as ComboboxItem).Value.ToString();
-
-            }
-            else
-            {
-                MessageBox.Show("Kiểm tra nhà máy !", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
+          
 
        
             this.maphanxuong = this.txtmaphanxuong.Text;
@@ -329,7 +273,7 @@ namespace BEEACCOUNT.View
             p.maphanxuong = this.maphanxuong;// = this.txtmaNCC.Text;
             p.tenphanxuong = this.tenphanxuong;// this.txttenNCC.Text;
           
-            p.manhamay = this.manhamay;
+       
             p.ghichu = this.ghichu;
 
             db.tbl_sx_dsphanxuongs.InsertOnSubmit(p);
@@ -401,7 +345,7 @@ namespace BEEACCOUNT.View
             {
 
 
-                txtcbmanhamay.Focus();
+             
 
 
             }

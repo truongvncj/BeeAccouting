@@ -556,29 +556,6 @@ namespace BEEACCOUNT.View
 
 
 
-            #region  // viewcode ==13  la danh sách nha may san xuat
-
-
-            if (this.viewcode == 13)
-            {
-
-                View.fdanhsachnhamay p = new fdanhsachnhamay(3, -1);  // 3 là thêm ới
-
-                p.ShowDialog();
-
-
-                var rs = Model.Sanxuat.Danhsachnhanmay(this.db);
-
-                dataGridView1.DataSource = rs;
-
-
-
-            }
-
-
-
-            #endregion
-
                #region  // viewcode ==14  la danh sách phân xưorng san xuat
 
 
@@ -1611,12 +1588,7 @@ namespace BEEACCOUNT.View
 
 
 
-                View.fdanhsachnhamay p = new fdanhsachnhamay(4, idtk);  // 3 là thêm ới
-
-                p.ShowDialog();
-        
-             
-                var rs = Model.Sanxuat.Danhsachnhanmay(dc);
+            
                 dataGridView1.DataSource = rs;
 
 

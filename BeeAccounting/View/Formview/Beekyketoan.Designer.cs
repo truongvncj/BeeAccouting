@@ -50,6 +50,7 @@
             this.bt_thuchien.TabIndex = 3;
             this.bt_thuchien.Text = "Mở kỳ kế toán";
             this.bt_thuchien.UseVisualStyleBackColor = true;
+            this.bt_thuchien.Click += new System.EventHandler(this.bt_thuchien_Click);
             // 
             // bl_priod
             // 
