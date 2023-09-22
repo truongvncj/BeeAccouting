@@ -1375,12 +1375,22 @@
       <Column Name="macty" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
     </Type>
   </Table>
+  <Table Name="dbo.tbl_sx_dscongdoan" Member="tbl_sx_dscongdoans">
+    <Type Name="tbl_sx_dscongdoan">
+      <Column Name="tencongdoan" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="macongdoan" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="maphanxuongcongtrinh" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ghichu" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
   <Table Name="dbo.tbl_sx_dsphanxuong" Member="tbl_sx_dsphanxuongs">
     <Type Name="tbl_sx_dsphanxuong">
       <Column Name="tenphanxuong" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="maphanxuong" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="ghichu" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="masanpham" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.tbl_sx_pptinhspddcuoiky" Member="tbl_sx_pptinhspddcuoikies">

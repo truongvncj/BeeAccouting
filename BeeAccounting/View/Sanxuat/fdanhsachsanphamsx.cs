@@ -133,26 +133,7 @@ namespace BEEACCOUNT.View
                     txtdonvi.Text = item.donvi;
 
 
-                    #region ma phan xuong
-
-                    foreach (var sp in txtcbphanxuong.Items)
-                    {
-
-                        if ((string)(sp as ComboboxItem).Value == item.maphanxuong)
-                        {
-                            //      loaitk = (int)(cbloaitk.SelectedItem as ComboboxItem).Value;
-                            //     cmbEmployeeStatus.SelectedValue = cmbEmployeeStatus.Items.FindByText("text").Value;
-
-                            txtcbphanxuong.SelectedItem = sp;
-                            //      cbtkmother.(iten);
-
-                        }
-
-
-
-                    }
-                    #endregion
-
+                
                     #region ma phan pp tinh dd
                     foreach (var sp in txtcbpptinhDD.Items)
                      {
@@ -307,16 +288,7 @@ namespace BEEACCOUNT.View
 
            
 
-            if (txtcbphanxuong.SelectedItem != null)
-            {
-                this.maphanxuong = (string)(txtcbphanxuong.SelectedItem as ComboboxItem).Value;// (cbm.SelectedItem as ComboboxItem).Value.ToString();
-
-            }
-            else
-            {
-                MessageBox.Show("Kiểm tra lựa chọn phân xưởng !", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
+          
 
             if (txtcbpptinhDD.SelectedItem != null)
             {
@@ -405,16 +377,6 @@ namespace BEEACCOUNT.View
           
 
 
-            if (txtcbphanxuong.SelectedItem != null)
-            {
-                this.maphanxuong = (string)(txtcbphanxuong.SelectedItem as ComboboxItem).Value;// (cbm.SelectedItem as ComboboxItem).Value.ToString();
-
-            }
-            else
-            {
-                MessageBox.Show("Kiểm tra lựa chọn phân xưởng !", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
 
             if (txtcbpptinhDD.SelectedItem != null)
             {
