@@ -146,6 +146,12 @@
     <Compile Include="shared\Constants.cs" />
     <Compile Include="shared\ExtractToDataTableOptions.cs" />
     <Compile Include="shared\LinQToExcel.cs" />
+    <Compile Include="View\Bank\Uploadbank.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Bank\Uploadbank.Designer.cs">
+      <DependentUpon>Uploadbank.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\BCTC\BeeAutoketchuyencuoinam.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -632,6 +638,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\Paymentrequest.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Bank\Uploadbank.resx">
+      <DependentUpon>Uploadbank.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\BCTC\BeeAutoketchuyencuoinam.resx">
       <DependentUpon>BeeAutoketchuyencuoinam.cs</DependentUpon>

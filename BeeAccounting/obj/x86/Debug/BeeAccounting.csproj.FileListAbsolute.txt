@@ -632,3 +632,4 @@ D:\Githup26032021\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.fdanh
 D:\Githup26032021\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.fkiemkevatinhspdd.resources
 D:\Githup26032021\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.Seachproductofchoose.resources
 D:\Githup26032021\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.Chooseproductsx.resources
+D:\Githup26032021\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.Uploadbank.resources

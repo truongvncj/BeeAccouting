@@ -57,7 +57,9 @@
             "2020",
             "2021",
             "2022",
-            "2023"});
+            "2023",
+            "2024",
+            "2025"});
             this.cb_year.Location = new System.Drawing.Point(75, 22);
             this.cb_year.Name = "cb_year";
             this.cb_year.Size = new System.Drawing.Size(93, 23);

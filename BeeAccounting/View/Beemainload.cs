@@ -1729,5 +1729,24 @@ namespace BEEACCOUNT.View
 
 
         }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+
+            #region//upload bank
+
+
+            //  this.Close();
+            this.main1.clearpannel();
+
+
+            View.Uploadbank uploadbank = new Uploadbank(this.main1);
+            this.main1.clearpannelload(uploadbank);
+
+
+
+            #endregion
+
+        }
     }
 }
