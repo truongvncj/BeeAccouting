@@ -110,6 +110,7 @@
       <AutoGen>True</AutoGen>
     </Compile>
     <Compile Include="Model\dieuvan.cs" />
+    <Compile Include="Model\Inputbankexcel.cs" />
     <Compile Include="Model\Khohang.cs" />
     <Compile Include="Model\formatBCTC.cs" />
     <Compile Include="Model\Sanxuat.cs" />

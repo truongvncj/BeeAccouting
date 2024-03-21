@@ -329,7 +329,9 @@ namespace BEEACCOUNT
         {
             if (query == null)
             {
-                throw new ArgumentNullException("query");
+            throw new ArgumentNullException("query");
+
+
             }
 
             IDbCommand cmd = ctx.GetCommand(query as IQueryable);
@@ -386,57 +388,9 @@ namespace BEEACCOUNT
         }
 
 
-        //show form full screen
-        /*      public static void FullScreen(Form f)
-              {
-                  f.Width = Screen.PrimaryScreen.WorkingArea.Width;
-                  f.Height = Screen.PrimaryScreen.WorkingArea.Height;
-                  f.StartPosition = FormStartPosition.CenterScreen;
-              }*/
+     
 
 
-        //show form full parent
-        /*       public static void ShowFormFullParent(Form f)
-               {
-                   f.Width = f.Parent.Width;
-                   f.Height = f.Parent.Height; // -30;
-               }
-
-               public static void ShowFormInPanel(Form f, Panel p)
-               {
-                   foreach (Control c in p.Controls)
-                   {
-                       if (c.GetType().BaseType.FullName == "System.Windows.Forms.Form")
-                       {
-                           Form old_frm = (Form)c;
-                           old_frm.Close();
-                       }
-                   }
-
-                   f.TopLevel = false;
-                   p.Controls.Clear();
-                   p.Controls.Add(f);
-                   f.Show();
-                   f.BringToFront();
-               }
-               */
-
-
-        /*      public static void ShowFormCenterOfParent(Form f)
-              {
-                  f.Left = (f.Parent.Width - f.Width) / 2;
-                  f.Top = (f.Parent.Height - f.Height) / 2;
-              }
-              */
-        //get function of FormMain
-        //    public static form getparentofsubform(form subform)
-        //  {
-        //    mainform fm = (mainform)subform.parent.parent;
-        //  return fm;
-
-        //}
-
-        //set value of specific cell in excel
         public static bool SetValueOfCellInExcel(cExcel.Worksheet sheet, int rowIndex, int clmIndex, string value)
         {
             // sheet.Cells[rowIndex,co]
@@ -481,176 +435,7 @@ namespace BEEACCOUNT
 
         }
 
-        //show message box when catch
-        /*     public static void ShowErrorGeneralMsgBox(Exception ex)
-             {
-                 if (MessageBox.Show(Constants.Err_General_msg, Constants.Err_Caption_msg, MessageBoxButtons.YesNo, MessageBoxIcon.Error) == DialogResult.Yes)
-                 {
-                     MessageBox.Show(ex.ToString(), Constants.Err_Caption_msg, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                 }
-             }
-             */
-        //show message box when can't convert datetime
-
-        /*public static void ShowErrorConvertDateTimeMsgBox(Exception ex)
-        {
-            if (MessageBox.Show(Constants.DateTime_Is_NOT_Valid_msg, Constants.Err_Caption_msg, MessageBoxButtons.YesNo, MessageBoxIcon.Error) == DialogResult.Yes)
-            {
-                MessageBox.Show(ex.ToString(), Constants.Err_Caption_msg, MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-        */
-
-        //ghi dữ liệu kiểu thông số ra file excel
-        /*       public static void Write_ThongSoEttData_ToSheet(List<TextBox> lstTxtBx, string sheetName, List<Model.ThongSo_Ett> lstThongSoEtt, double default_value)
-               {
-                   try
-                   {
-                       //save thông số vào đối tượng 
-                       for (int i = 0; i < lstTxtBx.Count; i++)
-                       {
-                           if (lstTxtBx[i].Text != "")
-                           {
-                               lstThongSoEtt[i].GiaTri = double.Parse(lstTxtBx[i].Text);
-                           }
-                           else
-                           {
-                               lstThongSoEtt[i].GiaTri = default_value;
-                           }
-                       }
-
-                       //save thông số vào file excel
-                       cExcel.Worksheet sheet2 = new cExcel.Worksheet();
-                       //kiểm tra xem đã có sheet tương ứng chưa.
-                       bool isExistent_Sheet = false;
-
-                       if (OpenFile_Excel_of_Project())
-                       {
-                           foreach (cExcel.Worksheet sheet in Constants.book.Worksheets)
-                           {
-                               //nếu đã tồn tại sheet thì gọi sheet đó ra
-                               if (sheet.Name.Equals(sheetName))
-                               {
-                                   isExistent_Sheet = true;
-                                   sheet2 = sheet;
-                               }
-                           }
-                           //nếu chưa tồn tại sheet này thì tạo sheet mới và chèn vào 
-                           if (!isExistent_Sheet)
-                           {
-                               sheet2 = Constants.book.Worksheets.Add();
-                               sheet2.Name = sheetName;
-                           }
-
-                           for (int i = 0; i < lstThongSoEtt.Count; i++)
-                           {
-                               if (SetHeader_ForSheet_NhapSL(sheet2))
-                               {
-                                   ThongSo_Ett ts = lstThongSoEtt[i];
-                                   //set value in file
-                                   Utils.SetValueOfCellInExcel(sheet2, i + 2, 1, ts.STT.ToString());
-                                   Utils.SetValueOfCellInExcel(sheet2, i + 2, 2, ts.TenThongSo);
-                                   Utils.SetValueOfCellInExcel(sheet2, i + 2, 3, ts.KyHieu);
-                                   Utils.SetValueOfCellInExcel(sheet2, i + 2, 4, ts.GiaTri.ToString());
-                                   Utils.SetValueOfCellInExcel(sheet2, i + 2, 5, ts.DonViTinh);
-                               }
-                           }
-
-                           Constants.book.Save();
-                           //đóng file excel sau khi sử dụng
-                           Close_File_Excel_of_Project();
-                           MessageBox.Show(Constants.Save_Data_Success_msg, Constants.Info_Caption_msg, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                       }
-                   }
-                   catch (Exception ex)
-                   {
-                       Utils.ShowErrorGeneralMsgBox(ex);
-                   }
-               }
-               */
-        //ghi dữ liệu kiểu validate request ra file excel
-
-
-        /*     public static void Write_ValidateRequestKTKCEttData_ToSheet(string sheetName, List<Model.KiemTraKC.Validate_Request_KTKC_Ett> lstValidateRequestKTKCEtt)
-             {
-                 try
-                 {
-                     //save thông số vào file excel
-                     cExcel.Worksheet sheet2 = new cExcel.Worksheet();
-                     //kiểm tra xem đã có sheet tương ứng chưa.
-                     bool isExistent_Sheet = false;
-
-                     if (OpenFile_Excel_of_Project())
-                     {
-                         foreach (cExcel.Worksheet sheet in Constants.book.Worksheets)
-                         {
-                             //nếu đã tồn tại sheet thì gọi sheet đó ra
-                             if (sheet.Name.Equals(sheetName))
-                             {
-                                 isExistent_Sheet = true;
-                                 sheet2 = sheet;
-                             }
-                         }
-                         //nếu chưa tồn tại sheet này thì tạo sheet mới và chèn vào 
-                         if (!isExistent_Sheet)
-                         {
-                             sheet2 = Constants.book.Worksheets.Add();
-                             sheet2.Name = sheetName;
-                         }
-
-                         for (int i = 0; i < lstValidateRequestKTKCEtt.Count; i++)
-                         {
-                             //if (SetHeader_ForSheet_NhapSL(sheet2))
-                             //{
-                             Validate_Request_KTKC_Ett ts = lstValidateRequestKTKCEtt[i];
-                             //set value in file
-                             Utils.SetValueOfCellInExcel(sheet2, i + 2, 2, ts.Name);
-                             if (ts.OK)
-                             {
-                                 Utils.SetValueOfCellInExcel(sheet2, i + 2, 3, Constants.Dat_text_Value);
-                             }
-                             else
-                             {
-                                 Utils.SetValueOfCellInExcel(sheet2, i + 2, 3, Constants.Khong_Dat_text_Value);
-                             }
-                             //}
-                         }
-
-                         Constants.book.Save();
-                         //đóng file excel sau khi sử dụng
-                         Close_File_Excel_of_Project();
-                         //MessageBox.Show(Constants.Save_Data_Success_msg, Constants.Info_Caption_msg, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                     }
-                 }
-                 catch (Exception ex)
-                 {
-                     Utils.ShowErrorGeneralMsgBox(ex);
-                 }
-             }
-
-             //phương thức ghi header cho toàn bộ Sheet NhapSL
-             public static bool SetHeader_ForSheet_NhapSL(cExcel.Worksheet sheet)
-             {
-                 try
-                 {
-                     Utils.SetValueOfCellInExcel(sheet, 1, 1, Model.ThongSo_HeaderName_ett.STT);
-                     Utils.SetValueOfCellInExcel(sheet, 1, 2, Model.ThongSo_HeaderName_ett.TenThongSo);
-                     Utils.SetValueOfCellInExcel(sheet, 1, 3, Model.ThongSo_HeaderName_ett.KyHieu);
-                     Utils.SetValueOfCellInExcel(sheet, 1, 4, Model.ThongSo_HeaderName_ett.GiaTri);
-                     Utils.SetValueOfCellInExcel(sheet, 1, 5, Model.ThongSo_HeaderName_ett.DonViTinh);
-
-                     return true;
-                 }
-                 catch (Exception ex)
-                 {
-                     ShowErrorGeneralMsgBox(ex);
-                     return false;
-                 }
-             }
-             */
-
-        //Phương thức check xem có workbook excel nào đang được mở hay k?
-
+       
 
         public static DateTime chageExceldatetoData(string exceldatedotstring)  // dd.MM.YYYY to date
         {
