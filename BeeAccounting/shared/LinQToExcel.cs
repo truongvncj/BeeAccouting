@@ -7,6 +7,8 @@ using System.Data.OleDb;
 using cExcel = Microsoft.Office.Interop.Excel;
 using System.Windows.Forms;
 
+using System.Threading;     // For setting the Localization of the thread to fit
+using System.Globalization; // the of the MS Excel localization, because of the MS bug
 //--
 
 using System.ComponentModel;
@@ -74,6 +76,9 @@ namespace BEEACCOUNT
         {
 
             var missing = System.Reflection.Missing.Value;
+
+            Thread.CurrentThread.CurrentCulture = new CultureInfo("en-US");
+         //   excelFileName = System.IO.Path.Combine(excelPath, "Ziperty Buy Model for Web 11_11_2011.xlsm");
 
 
             cExcel.Application xlApp = new cExcel.Application();
@@ -468,6 +473,8 @@ namespace BEEACCOUNT
 
 
             //       SetConnectionString();
+       
+
             // tim sheetName
             cExcel.Application ExcelObj = new cExcel.Application();
 

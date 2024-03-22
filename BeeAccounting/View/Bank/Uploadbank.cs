@@ -320,9 +320,9 @@ namespace BEEACCOUNT.View
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Model.Inputbankexcel ctrtemp = new Model.Inputbankexcel();
+            Model.Inputexcel ctrtemp = new Model.Inputexcel();
 
-            ctrtemp.customerinput();
+            ctrtemp.Bankinput();
 
             string connection_string = Utils.getConnectionstr();
             string username = Utils.getusername();
