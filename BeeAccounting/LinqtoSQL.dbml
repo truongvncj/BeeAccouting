@@ -12,15 +12,19 @@
       <Column Name="Machitieu" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
     </Type>
   </Table>
-  <Table Name="dbo.tbl_tempbankupload" Member="tbl_tempbankuploads">
-    <Type Name="tbl_tempbankupload">
+  <Table Name="dbo.tbl_tempVATinputupload" Member="tbl_tempVATinputuploads">
+    <Type Name="tbl_tempVATinputupload">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="ngayhachtoan" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="NHpsNo" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="NHpsCo" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="Nguoithuhuong" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Noidung" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="mabuttoanNH" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="ngaylaphoadon" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="kyhieuhoadon" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="sohoadon" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="masothuenguoiban" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="tenguoiban" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="tientruocvat" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="vatin" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="tongtienthanhtoan" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="tongtienchietkhauthuongmai" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="tongtienphi" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Column Name="Username" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
     </Type>
   </Table>
@@ -1444,6 +1448,34 @@
       <Column Name="Phân_quyền" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
       <Column Name="Thiết_lập_tài_khoản" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
       <Column Name="Macty" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_tempbankupload" Member="tbl_tempbankuploads">
+    <Type Name="tbl_tempbankupload">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ngayhachtoan" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="NHpsNo" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="NHpsCo" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Nguoithuhuong" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Noidung" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="mabuttoanNH" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Username" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_tempVAToutputupload" Member="tbl_tempVAToutputuploads">
+    <Type Name="tbl_tempVAToutputupload">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ngayhoadon" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="kyhieuhoadon" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="sohoadon" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="masothuenguoimua" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="tenguoimua" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="tientruocvat" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="vatout" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="tongtienthanhtoan" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="tongtienchietkhauthuongmai" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="tongtienphi" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Username" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
     </Type>
   </Table>
 </Database>

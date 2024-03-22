@@ -50,6 +50,7 @@ namespace BEEACCOUNT.View
             // panel1
             // 
             resources.ApplyResources(this.panel1, "panel1");
+            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.formlabel);
             this.panel1.Controls.Add(this.dataGridView1);
@@ -60,7 +61,6 @@ namespace BEEACCOUNT.View
             resources.ApplyResources(this.panel2, "panel2");
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.btketchuyen);
             this.panel2.Controls.Add(this.bt_sua);
             this.panel2.Controls.Add(this.bt_exporttoex);

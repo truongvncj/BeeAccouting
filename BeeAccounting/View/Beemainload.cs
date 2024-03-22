@@ -1748,5 +1748,54 @@ namespace BEEACCOUNT.View
             #endregion
 
         }
+
+        private void pictureBox14_Click(object sender, EventArgs e)
+        {
+
+            #region//upload bank
+
+
+            //  this.Close();
+            this.main1.clearpannel();
+
+
+            View.UploadVATin UploadVATin = new UploadVATin(this.main1);
+            this.main1.clearpannelload(UploadVATin);
+
+
+
+            #endregion
+
+
+        }
+
+        private void pictureBox17_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox7_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox18_Click(object sender, EventArgs e)
+        {
+
+            #region//vat bán ra bank
+
+
+            //  this.Close();
+            this.main1.clearpannel();
+
+
+            View.UploadVATout UploadVATout = new UploadVATout(this.main1);
+            this.main1.clearpannelload(UploadVATout);
+
+
+
+            #endregion
+
+        }
     }
 }

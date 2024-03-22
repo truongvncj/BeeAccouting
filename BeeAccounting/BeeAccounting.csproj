@@ -589,6 +589,18 @@
     <Compile Include="View\Utility\Zalosend.Designer.cs">
       <DependentUpon>Zalosend.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\VAT\UploadVATout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\VAT\UploadVATout.Designer.cs">
+      <DependentUpon>UploadVATout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\VAT\UploadVATin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\VAT\UploadVATin.Designer.cs">
+      <DependentUpon>UploadVATin.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Reports\BangCDKToant200lt.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
@@ -859,6 +871,12 @@
     <EmbeddedResource Include="View\Formview\Viewtable.resx">
       <DependentUpon>Viewtable.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\VAT\UploadVATout.resx">
+      <DependentUpon>UploadVATout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\VAT\UploadVATin.resx">
+      <DependentUpon>UploadVATin.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="app.config">
       <SubType>Designer</SubType>
     </None>
@@ -933,6 +951,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="giphyipg_Pb0_3.ico" />
+    <None Include="Resources\VAT out.png" />
+    <None Include="Resources\VAT in.png" />
     <None Include="Resources\xuong.jpg" />
     <None Include="Resources\ketoantonghop1.jpg" />
     <None Include="Resources\GIASP.jpg" />

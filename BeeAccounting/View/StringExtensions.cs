@@ -28,6 +28,26 @@ namespace BEEACCOUNT.shared
 
         }
 
+        public static string Left(this string str, int length)
+        {
+
+            if (str.Length - length > 0)
+            {
+                return str.Substring(0, length);
+
+            }
+            else
+            {
+                return str;
+            }
+
+
+
+
+
+        }
+
+
         public static string Truncate(this string source, int length)
         {
             if (source != null)

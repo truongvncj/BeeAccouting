@@ -441,31 +441,18 @@ namespace BEEACCOUNT
         {
 
             string get_data = exceldatedotstring;//.Replace("9999",(DateTime.Now.Year +1).ToString());
+            get_data = get_data.Left(10);
+            get_data = get_data.Replace(" ", "");
+            get_data = get_data.Replace("/", ".");
+            get_data = get_data.Replace("-", ".");
+
+            
             char spl2 = '.';
-            //get_data
-            if (get_data.Contains("/"))
-            {
-
-                spl2 = '/';
-            }
-            else
-            {
-                if (get_data.Contains("-"))
-                {
-                    spl2 = '-';
-
-                }
-                else
-                {
-                    spl2 = '.';
-
-                }
-
-            }
+          
 
             List<string> lst_get_data = get_data.Split(spl2).ToList();
             // cmd.Parameters.AddWithValue("?", GetDateWithoutMilliseconds(DateTime.Now));
-
+            // 30.12.2023
             //private DateTime GetDateWithoutMilliseconds(DateTime d)
             //        {
             //            return new DateTime(d.Year, d.Month, d.Day, d.Hour, d.Minute, d.Second);
