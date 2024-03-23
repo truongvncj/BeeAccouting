@@ -112,15 +112,34 @@ namespace BEEACCOUNT.View
             this.KeyPreview = true;
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(Control_KeyPress);
 
-            this.dataGridView1.DataSource = rs;
-            this.Dtgridview = dataGridView1;
-
+          //  this.dataGridView1.DataSource = rs;
+            //this.Dtgridview = dataGridView1;
+            this.main1 = Main;
             this.db = dc;
           //  this.viewcode = viewcode;
            // this.rs = rs;
-           
-            this.btketchuyen.Visible = false; 
+            var username = Utils.getusername().Truncate(50);
+            var masterlist = from p in dc.tbl_tempbankuploads
+                             where p.Username == username
+                             select new
+                             {
+                                 NGÀY_HẠCH_TOÁN = p.ngayhachtoan,
+                                 PHÁT_SINH_NỢ = p.NHpsNo,
+                                 PHÁT_SINH_CÓ = p.NHpsCo,
 
+                                 ĐƠN_VỊ_THỤ_HƯỞNG_ĐƠN_VỊ_CHUYỂN = p.Nguoithuhuong,
+                                 NỘI_DUNG = p.Noidung,
+                                 BÚT_TOÁN = p.mabuttoanNH
+
+
+
+                             };
+
+            dataGridView1.DataSource = masterlist;
+            this.rs = masterlist;
+
+           
+           
         
                                                                                                             //  this.lb_totalrecord.ForeColor = Color.Chocolate;
                                                                                                             //   this.Show();
@@ -251,8 +270,17 @@ namespace BEEACCOUNT.View
         private void btketchuyen_Click(object sender, EventArgs e)
         {
 
+            String taikhoanbank;
 
-            #region caculation cdkt200 lien tuc
+            // chọn tài khoản ngân hàng
+
+
+
+            //
+
+
+
+            #region add to bank data
             SqlConnection conn2 = null;
             SqlDataReader rdr1 = null;
 
@@ -262,11 +290,11 @@ namespace BEEACCOUNT.View
 
                 conn2 = new SqlConnection(destConnString);
                 conn2.Open();
-                SqlCommand cmd1 = new SqlCommand("ketchuyenCDPS", conn2);
+                SqlCommand cmd1 = new SqlCommand("ketchuyenBankdata", conn2);
                 cmd1.CommandType = CommandType.StoredProcedure;
                 cmd1.CommandTimeout = 0;
                 cmd1.Parameters.Add("@username", SqlDbType.VarChar).Value = Utils.getusername();
-                cmd1.Parameters.Add("@yearchon", SqlDbType.Int).Value = int.Parse(valuesave);
+              //  cmd1.Parameters.Add("@yearchon", SqlDbType.Int).Value = int.Parse(valuesave);
                 //   cmd1.Parameters.Add("@todate", SqlDbType.DateTime).Value = todate;
 
 
@@ -288,12 +316,31 @@ namespace BEEACCOUNT.View
                     rdr1.Close();
                 }
             }
-              MessageBox.Show("Kết chuyển phát sinh đã hoàn thành", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+            string username = Utils.getusername();
+            var masterlist = from p in dc.tbl_tempbankuploads
+                             where p.Username == username
+                             select new
+                             {
+                                 NGÀY_HẠCH_TOÁN = p.ngayhachtoan,
+                                 PHÁT_SINH_NỢ = p.NHpsNo,
+                                 PHÁT_SINH_CÓ = p.NHpsCo,
+
+                                 ĐƠN_VỊ_THỤ_HƯỞNG_ĐƠN_VỊ_CHUYỂN = p.Nguoithuhuong,
+                                 NỘI_DUNG = p.Noidung,
+                                 BÚT_TOÁN = p.mabuttoanNH
+
+
+
+                             };
+
+            dataGridView1.DataSource = masterlist;
+            this.rs = masterlist;
+
+            MessageBox.Show("Kết chuyển đã hoàn thành", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             #endregion
-
-
-
 
 
 
@@ -328,13 +375,31 @@ namespace BEEACCOUNT.View
             string connection_string = Utils.getConnectionstr();
             string username = Utils.getusername();
 
-            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+           // LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+
+
 
             var masterlist = from p in dc.tbl_tempbankuploads
                              where p.Username == username
-                             select p;
+                             select new {
+                                NGÀY_HẠCH_TOÁN = p.ngayhachtoan,
+                                PHÁT_SINH_NỢ = p.NHpsNo,
+                             PHÁT_SINH_CÓ =p.NHpsCo,
+
+                             ĐƠN_VỊ_THỤ_HƯỞNG_ĐƠN_VỊ_CHUYỂN =p.Nguoithuhuong,
+                             NỘI_DUNG = p.Noidung,
+                             BÚT_TOÁN =p.mabuttoanNH
+
+
+                             
+                             };
 
             dataGridView1.DataSource = masterlist;
+            this.rs = masterlist;
+
+
+
         }
     }
 

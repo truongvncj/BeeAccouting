@@ -5197,7 +5197,7 @@
     <value>NoControl</value>
   </data>
   <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>207, 3</value>
+    <value>8, 3</value>
   </data>
   <data name="button1.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
     <value>Yes</value>
@@ -5209,7 +5209,7 @@
     <value>57</value>
   </data>
   <data name="button1.Text" xml:space="preserve">
-    <value>Upload Bank data</value>
+    <value>Upload VAT input invoice</value>
   </data>
   <data name="&gt;&gt;button1.Name" xml:space="preserve">
     <value>button1</value>
@@ -5227,7 +5227,7 @@
     <value>Left</value>
   </data>
   <data name="btketchuyen.Location" type="System.Drawing.Point, System.Drawing">
-    <value>929, 2</value>
+    <value>374, 3</value>
   </data>
   <data name="btketchuyen.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
     <value>Yes</value>
@@ -5239,7 +5239,7 @@
     <value>6</value>
   </data>
   <data name="btketchuyen.Text" xml:space="preserve">
-    <value>Kết chuyển số dư tài khoản</value>
+    <value>Kết chuyển vào sổ VAT in</value>
   </data>
   <data name="&gt;&gt;btketchuyen.Name" xml:space="preserve">
     <value>btketchuyen</value>
@@ -5252,36 +5252,6 @@
   </data>
   <data name="&gt;&gt;btketchuyen.ZOrder" xml:space="preserve">
     <value>1</value>
-  </data>
-  <data name="bt_sua.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Left</value>
-  </data>
-  <data name="bt_sua.Location" type="System.Drawing.Point, System.Drawing">
-    <value>95, 2</value>
-  </data>
-  <data name="bt_sua.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
-    <value>Yes</value>
-  </data>
-  <data name="bt_sua.Size" type="System.Drawing.Size, System.Drawing">
-    <value>87, 23</value>
-  </data>
-  <data name="bt_sua.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="bt_sua.Text" xml:space="preserve">
-    <value>Sửa</value>
-  </data>
-  <data name="&gt;&gt;bt_sua.Name" xml:space="preserve">
-    <value>bt_sua</value>
-  </data>
-  <data name="&gt;&gt;bt_sua.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;bt_sua.Parent" xml:space="preserve">
-    <value>panel2</value>
-  </data>
-  <data name="&gt;&gt;bt_sua.ZOrder" xml:space="preserve">
-    <value>2</value>
   </data>
   <data name="bt_exporttoex.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -5311,37 +5281,7 @@
     <value>panel2</value>
   </data>
   <data name="&gt;&gt;bt_exporttoex.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="bt_themmoi.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Left</value>
-  </data>
-  <data name="bt_themmoi.Location" type="System.Drawing.Point, System.Drawing">
-    <value>2, 2</value>
-  </data>
-  <data name="bt_themmoi.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
-    <value>Yes</value>
-  </data>
-  <data name="bt_themmoi.Size" type="System.Drawing.Size, System.Drawing">
-    <value>87, 23</value>
-  </data>
-  <data name="bt_themmoi.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="bt_themmoi.Text" xml:space="preserve">
-    <value>Thêm mới</value>
-  </data>
-  <data name="&gt;&gt;bt_themmoi.Name" xml:space="preserve">
-    <value>bt_themmoi</value>
-  </data>
-  <data name="&gt;&gt;bt_themmoi.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;bt_themmoi.Parent" xml:space="preserve">
-    <value>panel2</value>
-  </data>
-  <data name="&gt;&gt;bt_themmoi.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>2</value>
   </data>
   <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 26</value>

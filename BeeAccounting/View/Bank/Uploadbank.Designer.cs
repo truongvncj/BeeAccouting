@@ -32,18 +32,16 @@ namespace BEEACCOUNT.View
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Uploadbank));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btketchuyen = new System.Windows.Forms.Button();
-            this.bt_sua = new System.Windows.Forms.Button();
             this.bt_exporttoex = new System.Windows.Forms.Button();
-            this.bt_themmoi = new System.Windows.Forms.Button();
             this.formlabel = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,15 +54,20 @@ namespace BEEACCOUNT.View
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Name = "panel1";
             // 
+            // pictureBox1
+            // 
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // panel2
             // 
             resources.ApplyResources(this.panel2, "panel2");
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.btketchuyen);
-            this.panel2.Controls.Add(this.bt_sua);
             this.panel2.Controls.Add(this.bt_exporttoex);
-            this.panel2.Controls.Add(this.bt_themmoi);
             this.panel2.Name = "panel2";
             // 
             // button1
@@ -74,13 +77,6 @@ namespace BEEACCOUNT.View
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // pictureBox1
-            // 
-            resources.ApplyResources(this.pictureBox1, "pictureBox1");
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // btketchuyen
             // 
             resources.ApplyResources(this.btketchuyen, "btketchuyen");
@@ -88,26 +84,12 @@ namespace BEEACCOUNT.View
             this.btketchuyen.UseVisualStyleBackColor = true;
             this.btketchuyen.Click += new System.EventHandler(this.btketchuyen_Click);
             // 
-            // bt_sua
-            // 
-            resources.ApplyResources(this.bt_sua, "bt_sua");
-            this.bt_sua.Name = "bt_sua";
-            this.bt_sua.UseVisualStyleBackColor = true;
-            this.bt_sua.Click += new System.EventHandler(this.bt_sua_Click);
-            // 
             // bt_exporttoex
             // 
             resources.ApplyResources(this.bt_exporttoex, "bt_exporttoex");
             this.bt_exporttoex.Name = "bt_exporttoex";
             this.bt_exporttoex.UseVisualStyleBackColor = true;
             this.bt_exporttoex.Click += new System.EventHandler(this.bt_exporttoex_Click);
-            // 
-            // bt_themmoi
-            // 
-            resources.ApplyResources(this.bt_themmoi, "bt_themmoi");
-            this.bt_themmoi.Name = "bt_themmoi";
-            this.bt_themmoi.UseVisualStyleBackColor = true;
-            this.bt_themmoi.Click += new System.EventHandler(this.bt_themmoi_Click);
             // 
             // formlabel
             // 
@@ -149,8 +131,8 @@ namespace BEEACCOUNT.View
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Viewtable_FormClosed);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
@@ -167,8 +149,6 @@ namespace BEEACCOUNT.View
         private System.Windows.Forms.Button bt_exporttoex;
         private System.Windows.Forms.Label formlabel;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button bt_sua;
-        private System.Windows.Forms.Button bt_themmoi;
         private System.Windows.Forms.Button btketchuyen;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button1;

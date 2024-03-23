@@ -441,8 +441,8 @@ namespace BEEACCOUNT
         {
 
             string get_data = exceldatedotstring;//.Replace("9999",(DateTime.Now.Year +1).ToString());
-            get_data = get_data.Left(10);
             get_data = get_data.Replace(" ", "");
+            get_data = get_data.Left(10);
             get_data = get_data.Replace("/", ".");
             get_data = get_data.Replace("-", ".");
 
@@ -965,8 +965,7 @@ namespace BEEACCOUNT
 
 
 
-
-
+     
         // doc file excel va so sanh vơi cac fied của data và update vào sql
         public static bool CopyFolder(string sourcePath, string targetPath)
         {

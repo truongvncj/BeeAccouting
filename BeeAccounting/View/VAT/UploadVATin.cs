@@ -114,7 +114,7 @@ namespace BEEACCOUNT.View
 
             this.dataGridView1.DataSource = rs;
             this.Dtgridview = dataGridView1;
-
+            this.main1 = Main;
             this.db = dc;
           //  this.viewcode = viewcode;
            // this.rs = rs;

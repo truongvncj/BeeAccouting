@@ -88,6 +88,11 @@ namespace BEEACCOUNT
 
             cExcel.Range xlRange = xlWorkSheet.UsedRange;
 
+
+       
+
+
+
             Array myValues = (Array)xlRange.Cells.Value2;
 
             int vertical = myValues.GetLength(0);
@@ -95,6 +100,9 @@ namespace BEEACCOUNT
 
             DataTable mainDt = new DataTable();
             DataTable MiscDt = new DataTable();
+
+
+            
 
             // must start with index = 1
             // get header information
@@ -116,7 +124,16 @@ namespace BEEACCOUNT
             {
 
 
+
+             
+
+
                 //SEE Below line for QUESTION..
+               // for (int a = 2; a <= vertical; a++)
+                //{
+                  //  if (a.Date.HasValue)
+                    //    worksheet.Cells[recordIndex, 15].Value = item.Date.Value.ToShortDateString();
+               // }
 
                 //Excel sheet cell has data as "11-30-11" but when i import it convert to "78608".  So i want import those data with data as "11-30-11".  
 
@@ -127,7 +144,18 @@ namespace BEEACCOUNT
                 //{                    
                 for (int b = 1; b <= horizontal; b++)
                 {
-                    poop[b - 1] = myValues.GetValue(a, b);
+
+                    
+
+
+                       
+
+                              //  (DateTime)(myValues.GetValue(a, b)).ToString("dd/MM/yyyy");// ("dd/MM/YYYY");
+	                    poop[b - 1] = myValues.GetValue(a, b);
+	               
+
+                    
+
                 }
                 DataRow row = mainDt.NewRow();
                 row.ItemArray = poop;
@@ -151,321 +179,33 @@ namespace BEEACCOUNT
 
             return mainDt;
         }
-        //-- get string dâttaable
-        // Create a new DataTable for every Worksheet
-        //public static DataTable GetDataFromExcel2(string filePath)
-        //{
-        //    DataTable table = new DataTable();
-        //    table.Columns.Add("PriceList", typeof(string));
-        //    table.Columns.Add("Material", typeof(string));
-        //    table.Columns.Add("MaterialNAme", typeof(string));
-        //    table.Columns.Add("Amount", typeof(double));
 
-        //    table.Columns.Add("Unit", typeof(string));
-        //    table.Columns.Add("UoM", typeof(string));
 
-        //    table.Columns.Add("Valid_From", typeof(DateTime));
-        //    table.Columns.Add("Valid_to", typeof(DateTime));
-
-
-
-
-        //    //... add as many columns as your excel file has!!
-
-        //    string connString = SetConnectionString(filePath);
-        //    cExcel.Worksheet worksheet = GetworksheetObject(filePath);
-
-        //    string  Pricelist = "";
-        //    int columpricelist = 0;
-        //    int columpmaterial = 0;
-        //    int columname = 0;
-        //    int columpamount = 0;
-        //    int columunit = 0;
-        //    int columUoM = 0;
-        //    int columValid_From = 0;
-        //    int columValid_to = 0;
-        //    int headindex =0;
-        //    for (int rowid = 0; rowid < worksheet.Rows.Count; rowid++)
-        //    {
-        //        headindex = 1;
-        //        for (int columid = 0; columid <= 30; columid++)
-        //          {
-
-        //            string value = Utils.GetValueOfCellInExcel(worksheet, rowid, columid);
-
-        //            if (value != null)
-        //            {
-
-        //                #region setcolum
-        //                if (value.Trim() == "CnTy")
-        //                {
-        //                    columpricelist = columid;
-        //                    headindex = 0;
-        //                }
-
-        //                if (value.Trim() == "Material")
-        //                {
-        //                    if (columname ==0)
-        //                    {
-        //                        columpmaterial = columid;
-        //                        headindex = 0;
-        //                    }
-
-        //                }
-
-
-        //                if (value.Trim() == "Material")
-        //                {
-        //                    if (columpmaterial != 0)
-        //                    {
-        //                        columname = columid;
-        //                        headindex = 0;
-        //                    }
-
-
-        //                }
-
-
-        //                if (value.Trim() == "Amount")
-        //                {
-        //                    columpamount = columid;
-        //                    headindex = 0;
-        //                }
-        //                if (value.Trim() == "Unit")
-        //                {
-        //                    columunit = columid;
-        //                    headindex = 0;
-        //                }
-
-        //                if (value.Trim() == "UoM")
-        //                {
-        //                    columUoM = columid;
-        //                    headindex = 0;
-        //                }
-
-        //                if (value.Trim() == "Valid From")
-        //                {
-        //                    columValid_From = columid;
-        //                    headindex = 0;
-        //                }
-
-        //                if (value.Trim() == "Valid to")
-        //                {
-        //                    columValid_to = columid;
-        //                    headindex = 0;
-        //                }
-
-        //                #endregion
-
-        //                #region setvalue of pricelist
-        //                 string     valuepricelist =     Utils.GetValueOfCellInExcel(worksheet, rowid, columpricelist);
-        //                if (headindex!=0 && valuepricelist != "" && valuepricelist != "YPR0")
-        //                {
-        //                    Pricelist = value;
-
-
-        //                }
-
-        //                if (headindex != 0 && value != "" && valuepricelist == "YPR0")
-        //                {
-        //                    DataRow dr = table.NewRow();
-        //                    dr["PriceList"] = Pricelist;
-        //                    dr["Material"] = Utils.GetValueOfCellInExcel(worksheet, rowid, columpmaterial); 
-        //                    dr["MaterialNAme"] = Utils.GetValueOfCellInExcel(worksheet, rowid, columname); 
-        //                    dr["Amount"] = Utils.GetValueOfCellInExcel(worksheet, rowid, columpamount);
-        //                    dr["Unit"] = Utils.GetValueOfCellInExcel(worksheet, rowid, columunit);
-        //                    dr["UoM"] = Utils.GetValueOfCellInExcel(worksheet, rowid, columUoM);
-        //                    dr["Valid_From"] = Utils.GetValueOfCellInExcel(worksheet, rowid, columValid_From);
-        //                    dr["Valid_to"] = Utils.GetValueOfCellInExcel(worksheet, rowid, columValid_to);
-
-
-
-        //                    table.Rows.Add(dr);
-
-
-
-        //                }
-
-
-
-        //                #endregion
-
-
-
-
-
-        //            }
-
-
-
-        //            // copy vao server
-
-
-
-        //        }
-
-        //    }
-
-
-
-
-
-        //    return table;
-        //}
-
-
-        //   public static DataTable GetDataFromExcel3(string fileName)
-        //   {
-        //       //        private DataTable GetExcelTable(string fileName, string sheetName)
-        //       //  {
-        //       // sheetName = sheetName.Replace(".", "#");
-        //       string sConnection = SetConnectionString(fileName);
-        //        string sSheetName = GetworksheetObject(fileName).Name;
-        //       //     string strSelect = string.Format("select * from [{0}$]", sheetName);
-
-        //       DataTable table = new DataTable();
-        //       //table.Columns.Add("PriceList", typeof(string));
-        //       //table.Columns.Add("Material", typeof(string));
-        //       //table.Columns.Add("MaterialNAme", typeof(string));
-        //       //table.Columns.Add("Amount", typeof(double));
-
-        //       //table.Columns.Add("Unit", typeof(string));
-        //       //table.Columns.Add("UoM", typeof(string));
-
-        //       //table.Columns.Add("Valid_From", typeof(DateTime));
-        //       //table.Columns.Add("Valid_to", typeof(DateTime));
-
-        //       cExcel.Application ExcelObj = new cExcel.Application();
-
-
-        //       OleDbCommand oleExcelCommand = default(OleDbCommand);
-        //       OleDbDataReader oleExcelReader = default(OleDbDataReader);
-        //       OleDbConnection oleExcelConnection = default(OleDbConnection);
-
-        //   //    sConnection = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\\Test.xls;Extended Properties=\"Excel 12.0;HDR=No;IMEX=1\"";
-
-        //       oleExcelConnection = new OleDbConnection(sConnection);
-        //       oleExcelConnection.Open();
-
-        ////       dtTablesList = oleExcelConnection.GetSchema("Tables");
-
-        //       //if (table.Rows.Count > 0)
-        //       //{
-        //       //    sSheetName = table.Rows[0]["TABLE_NAME"].ToString();
-        //       //}
-
-        //       table.Clear();
-        //       table.Dispose();
-
-
-        //       if (!string.IsNullOrEmpty(sSheetName))
-        //       {
-        //           oleExcelCommand = oleExcelConnection.CreateCommand();
-        //           oleExcelCommand.CommandText = "Select * From [" + sSheetName + "]";
-        //           oleExcelCommand.CommandType = CommandType.Text;
-        //           oleExcelReader = oleExcelCommand.ExecuteReader();
-        //       //    nowputRow = 0;
-
-        //           while (oleExcelReader.Read())
-        //           {
-
-
-        //               for (int i = 0; i < oleExcelReader.FieldCount; i++)
-        //               {
-        //                   if (oleExcelReader[i] != DBNull.Value )
-        //                   {
-
-        //            //           dr[i.ToString()] = (oleExcelReader[i]).ToString();
-        //                   }
-        //                   else
-        //                {
-        //          //             dr[i.ToString()] = "";
-        //                   }
-
-        //               }
-
-
-        //               DataRow dr = table.NewRow();
-        //               //dr["Material"] = Utils.GetValueOfCellInExcel(worksheet, rowid, columpmaterial);
-        //               //dr["MaterialNAme"] = Utils.GetValueOfCellInExcel(worksheet, rowid, columname);
-        //               //dr["Amount"] = Utils.GetValueOfCellInExcel(worksheet, rowid, columpamount);
-        //               //dr["Unit"] = Utils.GetValueOfCellInExcel(worksheet, rowid, columunit);
-        //               //dr["UoM"] = Utils.GetValueOfCellInExcel(worksheet, rowid, columUoM);
-        //               //dr["Valid_From"] = Utils.GetValueOfCellInExcel(worksheet, rowid, columValid_From);
-        //               //dr["Valid_to"] = Utils.GetValueOfCellInExcel(worksheet, rowid, columValid_to);
-
-
-
-        //               table.Rows.Add(dr);
-
-
-
-
-
-        //           }
-        //           oleExcelReader.Close();
-        //       }
-        //       oleExcelConnection.Close();
-
-        //       ExcelObj.Quit();
-
-        //       //releaseObject(xlWorkSheet);
-        //       //releaseObject(xlWorkBook);
-        //       //releaseObject.(ExcelObj);
-
-        //       return table;
-        //   }
-
-
-        // public static DataTable GetDataFromExcel(string filePath)
-        // {
-        //     DataTable dt = new DataTable();
-
-        //         string conStr = SetConnectionString(filePath);
-
-        //     OleDbConnection connExcel = new OleDbConnection(conStr);
-        //     OleDbCommand cmdExcel = new OleDbCommand();
-        //     OleDbDataAdapter oda = new OleDbDataAdapter();
-        ////     DataTable dt = new DataTable();
-        //     cmdExcel.Connection = connExcel;
-
-        //     //Get the name of First Sheet
-        //     connExcel.Open();
-        //     DataTable dtExcelSchema;
-        //     dtExcelSchema = connExcel.GetOleDbSchemaTable(OleDbSchemaGuid.Tables, null);
-        //     string SheetName = dtExcelSchema.Rows[0]["TABLE_NAME"].ToString();
-        //     connExcel.Close();
-
-        //     //Read Data from First Sheet
-        //     connExcel.Open();
-        //     cmdExcel.CommandText = "SELECT * From [" + SheetName + "]";
-        //     oda.SelectCommand = cmdExcel;
-        //     oda.Fill(dt);
-        //     connExcel.Close();
-
-        //     //Bind Data to GridView
-        //     return dt;
-
-        // }
-
-
-
-        //    //getstring datatable
-        //    public static string SetConnectionString(string fileName)
-        //{
-        //    //string ConnectionStringTemplate;
-        //    //if (fileName.Contains(".xlsx"))
-        //    //{
-        //    //    ConnectionStringTemplate = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + fileName + ";" + "Extended Properties=Excel 12.0;";
-        //    //}
-        //    //else
-        //    //{
-        //    //    ConnectionStringTemplate = "Provider=Microsoft.Jet.OLEDB.4.0; Data Source= " + fileName + ";" + "Extended Properties=Excel 8.0;";
-        //    //}
-
-        //    //return ConnectionStringTemplate;
-        //}
-
+    
+
+        public static string GetExcelCellFormat(string cellFormat )//= "G")
+        {
+            // MessageBox.Show("ok date !" + cellFormat);
+            //switch (cellFormat.Substring(0, 1))
+            //{
+               if (cellFormat.Contains("#"))
+	            {
+		        return "Number";
+                  
+	            }       
+                if (cellFormat.Contains("d"))
+	            {
+		        return "Date";
+                     
+	            } 
+      
+
+                
+               
+                    return "General";
+                    
+           // }
+        }
 
 
         public static cExcel.Worksheet GetworksheetObject(string FileName)
@@ -487,6 +227,47 @@ namespace BEEACCOUNT
 
             cExcel.Worksheet worksheet = (cExcel.Worksheet)sheets.get_Item(1);//Get the reference of second worksheet
 
+             cExcel.Range xlRange = worksheet.UsedRange;
+
+            //
+         //    int vertical = xlRange.VerticalAlignment;
+            //go through each 
+
+
+             foreach (var item in xlRange)
+             {
+                 cExcel.Range rg = (cExcel.Range)item;
+
+             
+                 String format =  GetExcelCellFormat(rg.NumberFormat.ToString());
+              
+                      if (format == "Date")
+	                    {
+                            string strdate;
+
+                            if (Utils.IsValidnumber(rg.Value2.ToString()))
+                            {
+                               
+                                strdate = Convert.ToDateTime(rg.Value).ToString("dd/MM/yyyy");
+                              //  MessageBox.Show("ok date !" + strdate);
+                            }
+                            else
+                            {
+                                strdate = rg.Value.ToString();
+                            }
+                          
+
+                      //   MessageBox.Show("ok date !" + strdate);
+                        rg.Value = strdate;
+
+
+                         // rg.set_Value( string , strdate);
+
+	                    } 
+                 
+                 
+
+             }
 
 
 

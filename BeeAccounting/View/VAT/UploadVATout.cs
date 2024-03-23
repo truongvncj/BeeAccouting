@@ -112,8 +112,8 @@ namespace BEEACCOUNT.View
             this.KeyPreview = true;
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(Control_KeyPress);
 
-          
 
+            this.main1 = Main;
             this.db = dc;
             var username  = Utils.getusername().Truncate(50);
             this.rs = from p in dc.tbl_tempVAToutputuploads

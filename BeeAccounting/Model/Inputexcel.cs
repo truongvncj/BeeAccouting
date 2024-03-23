@@ -275,7 +275,7 @@ City ,    Telephone1,  VATregistrationNo, Indirect,
                         }
 
 
-                        if (value.Trim().Contains("ĐƠN VỊ THỤ HƯỞNG/ĐƠN VỊ CHUYỂN") && headindex == rowid)
+                        if (value.Trim().Contains("ĐƠN VỊ THỤ HƯỞNG ĐƠN VỊ CHUYỂN") && headindex == rowid)
                         {
                             Nguoithuhuongid = columid;
                            
