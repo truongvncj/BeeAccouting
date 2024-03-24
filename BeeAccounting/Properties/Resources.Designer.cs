@@ -323,6 +323,26 @@ namespace BEEACCOUNT.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap thantoanbank {
+            get {
+                object obj = ResourceManager.GetObject("thantoanbank", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Thu_tien_ngan_hang {
+            get {
+                object obj = ResourceManager.GetObject("Thu tien ngan hang", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap tHUEgtgt {
             get {
                 object obj = ResourceManager.GetObject("tHUEgtgt", resourceCulture);

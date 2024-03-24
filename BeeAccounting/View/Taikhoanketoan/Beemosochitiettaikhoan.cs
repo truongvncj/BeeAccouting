@@ -586,7 +586,7 @@ namespace BEEACCOUNT.View
                 if (txttenchitettaikhoan.Text != null && txttenchitettaikhoan.Text != "")
                 {
 
-                    tkchitiet.tenchitiet = txttenchitettaikhoan.Text;
+                    tkchitiet.tenchitiet = txttenchitettaikhoan.Text.Truncate(50);
 
                     //  taikhoanchon = txttenchitettaikhoan.Text;
                 }
@@ -605,7 +605,7 @@ namespace BEEACCOUNT.View
                 if ((cbtkno.SelectedItem as ComboboxItem).Value != null)
                 {
                     tkchitiet.matk = (cbtkno.SelectedItem as ComboboxItem).Value.ToString();
-                    tkchitiet.ghichu = txtghichu.Text;
+                    tkchitiet.ghichu = txtghichu.Text.Trim().Truncate(225);
                 }
                 else
                 {
@@ -645,7 +645,7 @@ namespace BEEACCOUNT.View
                 }
 
 
-                tkchitiet.masothue = txtmasothue.Text.Trim();
+                tkchitiet.maso = txtmasothue.Text.Trim().Truncate(50);
 
 
                 
@@ -886,7 +886,7 @@ namespace BEEACCOUNT.View
                 return;
 
             }
-            tkchitiet.masothue = txtmasothue.Text.Trim();
+            tkchitiet.maso = txtmasothue.Text.Trim();
             #region  insernew
 
             db.tbl_machitiettks.InsertOnSubmit(tkchitiet);
@@ -963,9 +963,9 @@ namespace BEEACCOUNT.View
                         txtghichu.Text = machitiet.ghichu.ToString();
                     }
 
-                    if (machitiet.masothue != null)
+                    if (machitiet.maso != null)
                     {
-                        txtmasothue.Text = machitiet.masothue.ToString();
+                        txtmasothue.Text = machitiet.maso.ToString();
                     }
                     else
                     {

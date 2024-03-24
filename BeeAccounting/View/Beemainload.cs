@@ -1812,6 +1812,52 @@ namespace BEEACCOUNT.View
 
         }
 
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            // 
+
+
+        }
+
+        private void pictureBox11_Click(object sender, EventArgs e)
+        {
+
+            #region//ht hóa dơn mua vào bank
+
+
+            //  this.Close();
+            this.main1.clearpannel();
+
+
+            View.Bankthanhtoan Bankthanhtoan = new Bankthanhtoan(this.main1);
+            this.main1.clearpannelload(Bankthanhtoan);
+
+
+
+            #endregion
+
+
+        }
+
+        private void pictureBox15_Click(object sender, EventArgs e)
+        {
+
+            #region//ht hóa dơn mua vào bank
+
+
+            //  this.Close();
+            this.main1.clearpannel();
+
+
+            View.BankNhantien BankNhantien = new BankNhantien(this.main1);
+            this.main1.clearpannelload(BankNhantien);
+
+
+
+            #endregion
+
+        }
+
 
     }
 }

@@ -236,12 +236,12 @@ namespace BEEACCOUNT.View
 
 
             var dschitiet = from p in dc.tbl_machitiettks
-                            where p.masothue.Trim() == nguoimua.masothuenguoimua.Trim()
+                            where p.maso.Trim() == nguoimua.masothuenguoimua.Trim()
                                 && p.matk == "131"
                             select new
                             {
                                 Tên_khách_hàng = p.tenchitiet,
-                                Mã_số_thuế = p.masothue,
+                                Mã_số_thuế = p.maso,
                                 Ghi_chú = p.ghichu,
 
 

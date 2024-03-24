@@ -159,13 +159,14 @@
             // 
             this.pictureBox15.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox15.Image = global::BEEACCOUNT.Properties.Resources.tINHGIAHANGTON;
-            this.pictureBox15.Location = new System.Drawing.Point(907, 122);
+            this.pictureBox15.Image = global::BEEACCOUNT.Properties.Resources.Thu_tien_ngan_hang;
+            this.pictureBox15.Location = new System.Drawing.Point(575, 352);
             this.pictureBox15.Name = "pictureBox15";
             this.pictureBox15.Size = new System.Drawing.Size(152, 97);
             this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox15.TabIndex = 69;
             this.pictureBox15.TabStop = false;
+            this.pictureBox15.Click += new System.EventHandler(this.pictureBox15_Click);
             this.pictureBox15.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox15_MouseDown);
             this.pictureBox15.MouseLeave += new System.EventHandler(this.pictureBox15_MouseLeave);
             this.pictureBox15.MouseHover += new System.EventHandler(this.pictureBox15_MouseHover);
@@ -208,13 +209,14 @@
             // 
             this.pictureBox11.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox11.Image = global::BEEACCOUNT.Properties.Resources.unnamed;
-            this.pictureBox11.Location = new System.Drawing.Point(591, 328);
+            this.pictureBox11.Image = global::BEEACCOUNT.Properties.Resources.thantoanbank;
+            this.pictureBox11.Location = new System.Drawing.Point(383, 352);
             this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(152, 97);
+            this.pictureBox11.Size = new System.Drawing.Size(164, 97);
             this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox11.TabIndex = 65;
             this.pictureBox11.TabStop = false;
+            this.pictureBox11.Click += new System.EventHandler(this.pictureBox11_Click);
             this.pictureBox11.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox11_MouseDown);
             this.pictureBox11.MouseLeave += new System.EventHandler(this.pictureBox11_MouseLeave);
             this.pictureBox11.MouseHover += new System.EventHandler(this.pictureBox11_MouseHover);
@@ -348,6 +350,7 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 57;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             this.pictureBox3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox3_MouseDown);
             this.pictureBox3.MouseLeave += new System.EventHandler(this.pictureBox3_MouseLeave);
             this.pictureBox3.MouseHover += new System.EventHandler(this.pictureBox3_MouseHover);

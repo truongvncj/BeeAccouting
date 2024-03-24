@@ -147,6 +147,24 @@
     <Compile Include="shared\Constants.cs" />
     <Compile Include="shared\ExtractToDataTableOptions.cs" />
     <Compile Include="shared\LinQToExcel.cs" />
+    <Compile Include="View\BankNhantien\BankNhantien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\BankNhantien\BankNhantien.Designer.cs">
+      <DependentUpon>BankNhantien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\BankNhantien\Buttoannhantien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\BankNhantien\Buttoannhantien.Designer.cs">
+      <DependentUpon>Buttoannhantien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\BankNhantien\Dinhkhoannhantien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\BankNhantien\Dinhkhoannhantien.Designer.cs">
+      <DependentUpon>Dinhkhoannhantien.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Bank\Uploadbank.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -375,6 +393,30 @@
     </Compile>
     <Compile Include="View\Muahang\BeeNCCnewaccount.Designer.cs">
       <DependentUpon>BeeNCCnewaccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Taikhoanketoan\mosochitiettaikhoanloai2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Taikhoanketoan\mosochitiettaikhoanloai2.Designer.cs">
+      <DependentUpon>mosochitiettaikhoanloai2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\BankThanhtoan\Dinhkhoantt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\BankThanhtoan\Dinhkhoantt.Designer.cs">
+      <DependentUpon>Dinhkhoantt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\BankThanhtoan\Buttoanthanhtoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\BankThanhtoan\Buttoanthanhtoan.Designer.cs">
+      <DependentUpon>Buttoanthanhtoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\BankThanhtoan\Bankthanhtoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\BankThanhtoan\Bankthanhtoan.Designer.cs">
+      <DependentUpon>Bankthanhtoan.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Tienmat\BeeHtoansocaiphieuthu.cs">
       <SubType>Form</SubType>
@@ -670,6 +712,15 @@
     <EmbeddedResource Include="Reports\Paymentrequest.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\BankNhantien\BankNhantien.resx">
+      <DependentUpon>BankNhantien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\BankNhantien\Buttoannhantien.resx">
+      <DependentUpon>Buttoannhantien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\BankNhantien\Dinhkhoannhantien.resx">
+      <DependentUpon>Dinhkhoannhantien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Bank\Uploadbank.resx">
       <DependentUpon>Uploadbank.cs</DependentUpon>
     </EmbeddedResource>
@@ -793,6 +844,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Sanxuat\fdanhsachphanxuongsx.resx">
       <DependentUpon>fdanhsachphanxuongsx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Taikhoanketoan\mosochitiettaikhoanloai2.resx">
+      <DependentUpon>mosochitiettaikhoanloai2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\BankThanhtoan\Dinhkhoantt.resx">
+      <DependentUpon>Dinhkhoantt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\BankThanhtoan\Buttoanthanhtoan.resx">
+      <DependentUpon>Buttoanthanhtoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\BankThanhtoan\Bankthanhtoan.resx">
+      <DependentUpon>Bankthanhtoan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Tienmat\BeeHtoansocaiphieuthu.resx">
       <DependentUpon>BeeHtoansocaiphieuthu.cs</DependentUpon>
@@ -978,6 +1041,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="giphyipg_Pb0_3.ico" />
+    <None Include="Resources\Thu tien ngan hang.png" />
+    <None Include="Resources\thantoanbank.jpg" />
     <None Include="Resources\doanh thu hach toan.jpg" />
     <None Include="Resources\VAT out.png" />
     <None Include="Resources\VAT in.png" />

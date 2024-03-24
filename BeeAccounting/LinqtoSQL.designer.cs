@@ -26778,7 +26778,7 @@ namespace BEEACCOUNT
 		
 		private System.Nullable<double> _codk;
 		
-		private string _masothue;
+		private string _maso;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -26798,8 +26798,8 @@ namespace BEEACCOUNT
     partial void OnnodkChanged();
     partial void OncodkChanging(System.Nullable<double> value);
     partial void OncodkChanged();
-    partial void OnmasothueChanging(string value);
-    partial void OnmasothueChanged();
+    partial void OnmasoChanging(string value);
+    partial void OnmasoChanged();
     #endregion
 		
 		public tbl_machitiettk()
@@ -26947,22 +26947,22 @@ namespace BEEACCOUNT
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_masothue", DbType="NVarChar(50)")]
-		public string masothue
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_maso", DbType="NVarChar(50)")]
+		public string maso
 		{
 			get
 			{
-				return this._masothue;
+				return this._maso;
 			}
 			set
 			{
-				if ((this._masothue != value))
+				if ((this._maso != value))
 				{
-					this.OnmasothueChanging(value);
+					this.OnmasoChanging(value);
 					this.SendPropertyChanging();
-					this._masothue = value;
-					this.SendPropertyChanged("masothue");
-					this.OnmasothueChanged();
+					this._maso = value;
+					this.SendPropertyChanged("maso");
+					this.OnmasoChanged();
 				}
 			}
 		}
@@ -29182,6 +29182,8 @@ namespace BEEACCOUNT
 		
 		private string _manhamay;
 		
+		private System.Nullable<bool> _chiphihople;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -29226,6 +29228,8 @@ namespace BEEACCOUNT
     partial void OnmacongdoanChanged();
     partial void OnmanhamayChanging(string value);
     partial void OnmanhamayChanged();
+    partial void OnchiphihopleChanging(System.Nullable<bool> value);
+    partial void OnchiphihopleChanged();
     #endregion
 		
 		public tbl_Socai()
@@ -29629,6 +29633,26 @@ namespace BEEACCOUNT
 					this._manhamay = value;
 					this.SendPropertyChanged("manhamay");
 					this.OnmanhamayChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_chiphihople", DbType="Bit")]
+		public System.Nullable<bool> chiphihople
+		{
+			get
+			{
+				return this._chiphihople;
+			}
+			set
+			{
+				if ((this._chiphihople != value))
+				{
+					this.OnchiphihopleChanging(value);
+					this.SendPropertyChanging();
+					this._chiphihople = value;
+					this.SendPropertyChanged("chiphihople");
+					this.OnchiphihopleChanged();
 				}
 			}
 		}
@@ -32658,6 +32682,8 @@ namespace BEEACCOUNT
 		
 		private string _maKHsoinvoiceMST;
 		
+		private System.Nullable<bool> _dinhkhoan;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -32688,6 +32714,8 @@ namespace BEEACCOUNT
     partial void OnUsernameChanged();
     partial void OnmaKHsoinvoiceMSTChanging(string value);
     partial void OnmaKHsoinvoiceMSTChanged();
+    partial void OndinhkhoanChanging(System.Nullable<bool> value);
+    partial void OndinhkhoanChanged();
     #endregion
 		
 		public tbl_VATinputInvoice()
@@ -32951,6 +32979,26 @@ namespace BEEACCOUNT
 					this._maKHsoinvoiceMST = value;
 					this.SendPropertyChanged("maKHsoinvoiceMST");
 					this.OnmaKHsoinvoiceMSTChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dinhkhoan", DbType="Bit")]
+		public System.Nullable<bool> dinhkhoan
+		{
+			get
+			{
+				return this._dinhkhoan;
+			}
+			set
+			{
+				if ((this._dinhkhoan != value))
+				{
+					this.OndinhkhoanChanging(value);
+					this.SendPropertyChanging();
+					this._dinhkhoan = value;
+					this.SendPropertyChanged("dinhkhoan");
+					this.OndinhkhoanChanged();
 				}
 			}
 		}

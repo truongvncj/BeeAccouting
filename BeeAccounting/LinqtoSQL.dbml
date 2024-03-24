@@ -1234,7 +1234,7 @@
       <Column Name="ghichu" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
       <Column Name="nodk" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Column Name="codk" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="masothue" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="maso" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.tbl_NP_danhsachxe" Member="tbl_NP_danhsachxes">
@@ -1363,6 +1363,7 @@
       <Column Name="maphanxuong" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="macongdoan" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="manhamay" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="chiphihople" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.tbl_SoQuy" Member="tbl_SoQuys">
@@ -1528,6 +1529,7 @@
       <Column Name="tongtienphi" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Column Name="Username" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="maKHsoinvoiceMST" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="dinhkhoan" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
     </Type>
   </Table>
 </Database>
