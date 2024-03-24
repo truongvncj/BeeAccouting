@@ -139,7 +139,7 @@ namespace BEEACCOUNT.View
 
          
            
-            this.btketchuyen.Visible = false; 
+            //   this.btketchuyen.Visible = false; 
 
         
                                                                                                             //  this.lb_totalrecord.ForeColor = Color.Chocolate;
@@ -272,7 +272,7 @@ namespace BEEACCOUNT.View
         {
 
 
-            #region caculation cdkt200 lien tuc
+            #region [ketchuyenVATinvoiceout] lien tuc
             SqlConnection conn2 = null;
             SqlDataReader rdr1 = null;
 
@@ -282,11 +282,11 @@ namespace BEEACCOUNT.View
 
                 conn2 = new SqlConnection(destConnString);
                 conn2.Open();
-                SqlCommand cmd1 = new SqlCommand("ketchuyenCDPS", conn2);
+                SqlCommand cmd1 = new SqlCommand("ketchuyenVATinvoiceout", conn2);
                 cmd1.CommandType = CommandType.StoredProcedure;
                 cmd1.CommandTimeout = 0;
                 cmd1.Parameters.Add("@username", SqlDbType.VarChar).Value = Utils.getusername();
-                cmd1.Parameters.Add("@yearchon", SqlDbType.Int).Value = int.Parse(valuesave);
+              //  cmd1.Parameters.Add("@yearchon", SqlDbType.Int).Value = int.Parse(valuesave);
                 //   cmd1.Parameters.Add("@todate", SqlDbType.DateTime).Value = todate;
 
 
@@ -308,11 +308,31 @@ namespace BEEACCOUNT.View
                     rdr1.Close();
                 }
             }
-              MessageBox.Show("Kết chuyển phát sinh đã hoàn thành", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+              MessageBox.Show("Input VAT out đã hoàn thành", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             #endregion
 
+              var username = Utils.getusername().Truncate(50);
+              this.rs = from p in dc.tbl_tempVAToutputuploads
+                        where p.Username == username
+                        select new
+                        {
+                            Ký_hiệu_hóa_đơn = p.kyhieuhoadon,
+                            Số_hóa_đơn = p.sohoadon,
+                            Ngày_lập = p.ngayhoadon,
+                            MST_người_mua = p.masothuenguoimua,
 
+                            Tên_người_mua = p.tenguoimua,
+                            Tổng_tiền_chưa_thuế = p.tientruocvat,
+                            Tổng_tiền_thuế = p.vatout,
+
+
+
+                        };
+
+
+              this.dataGridView1.DataSource = rs;
+              this.Dtgridview = dataGridView1;
 
 
 

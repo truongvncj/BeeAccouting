@@ -447,7 +447,7 @@ City ,    Telephone1,  VATregistrationNo, Indirect,
             batable.Columns.Add("vatin", typeof(double));
             batable.Columns.Add("tongtienthanhtoan", typeof(double));
 
-
+            batable.Columns.Add("maKHsoinvoiceMST", typeof(string));
             batable.Columns.Add("Username", typeof(string));
 
      
@@ -575,11 +575,11 @@ City ,    Telephone1,  VATregistrationNo, Indirect,
 
                     dr["masothuenguoiban"] = sourceData.Rows[rowixd][masothuenguoibanid].ToString().Trim().Truncate(255);
 
-
-
                     dr["tenguoiban"] = sourceData.Rows[rowixd][tenguoibanid].ToString().Trim().Truncate(255);
 
+                    dr["maKHsoinvoiceMST"] = (sourceData.Rows[rowixd][kyhieuhoadonid].ToString().Trim().Truncate(255) + sourceData.Rows[rowixd][sohoadonid].ToString().Trim() + sourceData.Rows[rowixd][masothuenguoibanid].ToString().Trim().Truncate(255)).Trim().Truncate(255);
 
+                 
                     batable.Rows.Add(dr);
 
 
@@ -613,10 +613,10 @@ City ,    Telephone1,  VATregistrationNo, Indirect,
                 bulkCopy.ColumnMappings.Add("vatin", "vatin");
 
                 bulkCopy.ColumnMappings.Add("tongtienthanhtoan", "tongtienthanhtoan");
-
+                bulkCopy.ColumnMappings.Add("maKHsoinvoiceMST", "maKHsoinvoiceMST");
                 bulkCopy.ColumnMappings.Add("Username", "Username");
 
-
+                
 
 
 
@@ -691,11 +691,11 @@ City ,    Telephone1,  VATregistrationNo, Indirect,
             batable.Columns.Add("tientruocvat", typeof(double));
             batable.Columns.Add("vatout", typeof(double));
             batable.Columns.Add("tongtienthanhtoan", typeof(double));
-
+            batable.Columns.Add("maKHsoinvoiceMST", typeof(string));
 
             batable.Columns.Add("Username", typeof(string));
 
-
+          
 
 
             int kyhieuhoadonid = 0;
@@ -824,6 +824,9 @@ City ,    Telephone1,  VATregistrationNo, Indirect,
 
                     dr["tenguoimua"] = sourceData.Rows[rowixd][tenguoimuaid].ToString().Trim().Truncate(255);
 
+                    dr["maKHsoinvoiceMST"] = (sourceData.Rows[rowixd][kyhieuhoadonid].ToString().Trim().Truncate(255) + sourceData.Rows[rowixd][sohoadonid].ToString().Trim() + sourceData.Rows[rowixd][masothuenguoimuaid].ToString().Trim().Truncate(255)).Trim().Truncate(255);
+
+                    
 
                     batable.Rows.Add(dr);
 
@@ -858,6 +861,10 @@ City ,    Telephone1,  VATregistrationNo, Indirect,
                 bulkCopy.ColumnMappings.Add("vatout", "vatout");
 
                 bulkCopy.ColumnMappings.Add("tongtienthanhtoan", "tongtienthanhtoan");
+
+                bulkCopy.ColumnMappings.Add("maKHsoinvoiceMST", "maKHsoinvoiceMST");
+
+                
 
                 bulkCopy.ColumnMappings.Add("Username", "Username");
 
