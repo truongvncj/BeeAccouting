@@ -635,3 +635,6 @@ D:\Githup26032021\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.Choos
 D:\Githup26032021\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.Uploadbank.resources
 D:\Githup26032021\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.UploadVATin.resources
 D:\Githup26032021\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.UploadVATout.resources
+D:\Githup26032021\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.VAToutHTtonghop.resources
+D:\Githup26032021\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.Chonchitietphaithu.resources
+D:\Githup26032021\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.Buttoandoanhthu.resources

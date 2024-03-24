@@ -62,7 +62,7 @@ namespace BEEACCOUNT.View
         }
 
 
-        public Beemosochitiettaikhoan(int manghiepvu, string matk, int id) // manghiepvu = 1 xóa; int = 2 sửa ; int = 3 tao mới; int = 4 vừa sửa+ xóa
+        public Beemosochitiettaikhoan(int manghiepvu, string matk, int id) // manghiepvu = 1 xóa; int = 2 sửa ; int = 3 tao mới; int = 4 vừa sửa+ xóa; 5 ; vua sưa, xoa , tạo moi chỉ mỗi loại tk đó
         {
             InitializeComponent();
             this.matk = matk;
@@ -237,6 +237,29 @@ namespace BEEACCOUNT.View
 
             #endregion ma nghiep vu 2 
 
+            
+            #region ma nghiep vu 5 tạo mới
+
+
+
+
+
+            if (manghiepvu == 5) // moi + xóa+ sua
+            {
+
+                this.bt_taomoi.Visible = true;
+                this.btxoa.Visible = false;
+                this.btupdate.Visible = true;
+
+                cbtkno.Enabled = false;
+
+
+
+
+
+            }
+
+            #endregion ma nghiep vu 5 
 
 
             #region load detail detail of code
@@ -621,6 +644,11 @@ namespace BEEACCOUNT.View
 
                 }
 
+
+                tkchitiet.masothue = txtmasothue.Text.Trim();
+
+
+                
                 db.SubmitChanges();
 
                 var rs3 = viewgridloca(this.matk);
@@ -761,7 +789,7 @@ namespace BEEACCOUNT.View
 
 
 
-                #region ma chi tiet tai khoa
+            #region ma chi tiet tai khoa
 
 
 
@@ -858,7 +886,7 @@ namespace BEEACCOUNT.View
                 return;
 
             }
-
+            tkchitiet.masothue = txtmasothue.Text.Trim();
             #region  insernew
 
             db.tbl_machitiettks.InsertOnSubmit(tkchitiet);
@@ -867,7 +895,7 @@ namespace BEEACCOUNT.View
             txttenchitettaikhoan.Text = "";
             txtmachitiet.Text = "";
             txtghichu.Text = "";
-
+            txtmasothue.Text = "";
             //var rs1 = from dschitiet in db.tbl_machitiettks
             //          where dschitiet.matk.Trim() == (cbtkno.SelectedItem as ComboboxItem).Value.ToString()
             //          select new
@@ -935,6 +963,14 @@ namespace BEEACCOUNT.View
                         txtghichu.Text = machitiet.ghichu.ToString();
                     }
 
+                    if (machitiet.masothue != null)
+                    {
+                        txtmasothue.Text = machitiet.masothue.ToString();
+                    }
+                    else
+                    {
+                        txtmasothue.Text = "";
+                    }
 
 
                     if (machitiet.codk != null)

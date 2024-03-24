@@ -1777,6 +1777,20 @@ namespace BEEACCOUNT.View
         private void pictureBox7_Click_1(object sender, EventArgs e)
         {
 
+            #region//ht hóa dơn  bán ra bank
+
+
+            //  this.Close();
+            this.main1.clearpannel();
+
+
+            View.VAToutHTtonghop VAToutHTtonghop = new VAToutHTtonghop(this.main1);
+            this.main1.clearpannelload(VAToutHTtonghop);
+
+
+
+            #endregion
+
         }
 
         private void pictureBox18_Click(object sender, EventArgs e)
@@ -1797,5 +1811,7 @@ namespace BEEACCOUNT.View
             #endregion
 
         }
+
+
     }
 }

@@ -1216,6 +1216,8 @@ namespace BEEACCOUNT
 		
 		private string _maKHsoinvoiceMST;
 		
+		private System.Nullable<bool> _dinhkhoan;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -1246,6 +1248,8 @@ namespace BEEACCOUNT
     partial void OnUsernameChanged();
     partial void OnmaKHsoinvoiceMSTChanging(string value);
     partial void OnmaKHsoinvoiceMSTChanged();
+    partial void OndinhkhoanChanging(System.Nullable<bool> value);
+    partial void OndinhkhoanChanged();
     #endregion
 		
 		public tbl_VAToutputInvoice()
@@ -1509,6 +1513,26 @@ namespace BEEACCOUNT
 					this._maKHsoinvoiceMST = value;
 					this.SendPropertyChanged("maKHsoinvoiceMST");
 					this.OnmaKHsoinvoiceMSTChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dinhkhoan", DbType="Bit")]
+		public System.Nullable<bool> dinhkhoan
+		{
+			get
+			{
+				return this._dinhkhoan;
+			}
+			set
+			{
+				if ((this._dinhkhoan != value))
+				{
+					this.OndinhkhoanChanging(value);
+					this.SendPropertyChanging();
+					this._dinhkhoan = value;
+					this.SendPropertyChanged("dinhkhoan");
+					this.OndinhkhoanChanged();
 				}
 			}
 		}
@@ -26754,6 +26778,8 @@ namespace BEEACCOUNT
 		
 		private System.Nullable<double> _codk;
 		
+		private string _masothue;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -26772,6 +26798,8 @@ namespace BEEACCOUNT
     partial void OnnodkChanged();
     partial void OncodkChanging(System.Nullable<double> value);
     partial void OncodkChanged();
+    partial void OnmasothueChanging(string value);
+    partial void OnmasothueChanged();
     #endregion
 		
 		public tbl_machitiettk()
@@ -26915,6 +26943,26 @@ namespace BEEACCOUNT
 					this._codk = value;
 					this.SendPropertyChanged("codk");
 					this.OncodkChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_masothue", DbType="NVarChar(50)")]
+		public string masothue
+		{
+			get
+			{
+				return this._masothue;
+			}
+			set
+			{
+				if ((this._masothue != value))
+				{
+					this.OnmasothueChanging(value);
+					this.SendPropertyChanging();
+					this._masothue = value;
+					this.SendPropertyChanged("masothue");
+					this.OnmasothueChanged();
 				}
 			}
 		}

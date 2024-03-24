@@ -27,6 +27,7 @@
       <Column Name="tongtienphi" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Column Name="Username" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="maKHsoinvoiceMST" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="dinhkhoan" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.CDKT200format" Member="CDKT200formats">
@@ -1233,6 +1234,7 @@
       <Column Name="ghichu" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
       <Column Name="nodk" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Column Name="codk" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="masothue" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.tbl_NP_danhsachxe" Member="tbl_NP_danhsachxes">

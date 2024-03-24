@@ -46,6 +46,8 @@
             this.btxoa = new System.Windows.Forms.Button();
             this.label20 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtmasothue = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -53,6 +55,8 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.txtmasothue);
             this.panel1.Controls.Add(this.txtCodauky);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.txtNodauky);
@@ -70,14 +74,14 @@
             this.panel1.Controls.Add(this.label20);
             this.panel1.Location = new System.Drawing.Point(5, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(776, 280);
+            this.panel1.Size = new System.Drawing.Size(776, 347);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // txtCodauky
             // 
             this.txtCodauky.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodauky.Location = new System.Drawing.Point(171, 200);
+            this.txtCodauky.Location = new System.Drawing.Point(171, 238);
             this.txtCodauky.Name = "txtCodauky";
             this.txtCodauky.Size = new System.Drawing.Size(213, 26);
             this.txtCodauky.TabIndex = 5;
@@ -90,7 +94,7 @@
             this.label6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label6.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(15, 204);
+            this.label6.Location = new System.Drawing.Point(15, 242);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(125, 20);
             this.label6.TabIndex = 67;
@@ -99,7 +103,7 @@
             // txtNodauky
             // 
             this.txtNodauky.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNodauky.Location = new System.Drawing.Point(171, 166);
+            this.txtNodauky.Location = new System.Drawing.Point(171, 204);
             this.txtNodauky.Name = "txtNodauky";
             this.txtNodauky.Size = new System.Drawing.Size(213, 26);
             this.txtNodauky.TabIndex = 4;
@@ -112,7 +116,7 @@
             this.label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label5.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(15, 170);
+            this.label5.Location = new System.Drawing.Point(15, 208);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(125, 20);
             this.label5.TabIndex = 65;
@@ -179,7 +183,7 @@
             this.bt_taomoi.BackColor = System.Drawing.Color.Transparent;
             this.bt_taomoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_taomoi.ForeColor = System.Drawing.Color.Red;
-            this.bt_taomoi.Location = new System.Drawing.Point(536, 245);
+            this.bt_taomoi.Location = new System.Drawing.Point(536, 312);
             this.bt_taomoi.Name = "bt_taomoi";
             this.bt_taomoi.Size = new System.Drawing.Size(94, 27);
             this.bt_taomoi.TabIndex = 53;
@@ -214,7 +218,7 @@
             this.btupdate.BackColor = System.Drawing.Color.Transparent;
             this.btupdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btupdate.ForeColor = System.Drawing.Color.Red;
-            this.btupdate.Location = new System.Drawing.Point(392, 245);
+            this.btupdate.Location = new System.Drawing.Point(392, 312);
             this.btupdate.Name = "btupdate";
             this.btupdate.Size = new System.Drawing.Size(94, 27);
             this.btupdate.TabIndex = 6;
@@ -228,7 +232,7 @@
             this.btxoa.BackColor = System.Drawing.Color.Transparent;
             this.btxoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btxoa.ForeColor = System.Drawing.Color.Red;
-            this.btxoa.Location = new System.Drawing.Point(262, 245);
+            this.btxoa.Location = new System.Drawing.Point(262, 312);
             this.btxoa.Name = "btxoa";
             this.btxoa.Size = new System.Drawing.Size(94, 27);
             this.btxoa.TabIndex = 6;
@@ -254,13 +258,33 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(5, 289);
+            this.dataGridView1.Location = new System.Drawing.Point(5, 356);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(780, 334);
+            this.dataGridView1.Size = new System.Drawing.Size(780, 267);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.Paint += new System.Windows.Forms.PaintEventHandler(this.dataGridView1_Paint);
+            // 
+            // label4
+            // 
+            this.label4.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(15, 166);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(125, 20);
+            this.label4.TabIndex = 69;
+            this.label4.Text = "Số đối chiếu/ Mã số thuế";
+            // 
+            // txtmasothue
+            // 
+            this.txtmasothue.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtmasothue.Location = new System.Drawing.Point(171, 166);
+            this.txtmasothue.Name = "txtmasothue";
+            this.txtmasothue.Size = new System.Drawing.Size(546, 26);
+            this.txtmasothue.TabIndex = 68;
             // 
             // Beemosochitiettaikhoan
             // 
@@ -302,5 +326,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtNodauky;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtmasothue;
     }
 }

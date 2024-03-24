@@ -101,7 +101,7 @@
             this.pictureBox18.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox18.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox18.Image = global::BEEACCOUNT.Properties.Resources.VAT_out;
-            this.pictureBox18.Location = new System.Drawing.Point(487, 165);
+            this.pictureBox18.Location = new System.Drawing.Point(575, 8);
             this.pictureBox18.Name = "pictureBox18";
             this.pictureBox18.Size = new System.Drawing.Size(152, 97);
             this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -114,7 +114,7 @@
             this.pictureBox14.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox14.Image = global::BEEACCOUNT.Properties.Resources.VAT_in;
-            this.pictureBox14.Location = new System.Drawing.Point(487, 8);
+            this.pictureBox14.Location = new System.Drawing.Point(395, 8);
             this.pictureBox14.Name = "pictureBox14";
             this.pictureBox14.Size = new System.Drawing.Size(152, 97);
             this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -127,7 +127,7 @@
             this.pictureBox17.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox17.Image = global::BEEACCOUNT.Properties.Resources.DIEUVAN3;
-            this.pictureBox17.Location = new System.Drawing.Point(749, 19);
+            this.pictureBox17.Location = new System.Drawing.Point(907, 19);
             this.pictureBox17.Name = "pictureBox17";
             this.pictureBox17.Size = new System.Drawing.Size(152, 97);
             this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -273,10 +273,10 @@
             // 
             this.pictureBox7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox7.Image = global::BEEACCOUNT.Properties.Resources.Banhangphaithu;
-            this.pictureBox7.Location = new System.Drawing.Point(749, 122);
+            this.pictureBox7.Image = global::BEEACCOUNT.Properties.Resources.doanh_thu_hach_toan;
+            this.pictureBox7.Location = new System.Drawing.Point(383, 145);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(152, 97);
+            this.pictureBox7.Size = new System.Drawing.Size(164, 97);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox7.TabIndex = 61;
             this.pictureBox7.TabStop = false;
@@ -291,7 +291,7 @@
             this.pictureBox6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox6.Image = global::BEEACCOUNT.Properties.Resources.GiaybaocoNH1;
-            this.pictureBox6.Location = new System.Drawing.Point(301, 8);
+            this.pictureBox6.Location = new System.Drawing.Point(218, 8);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(152, 97);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -342,7 +342,7 @@
             this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox3.Image = global::BEEACCOUNT.Properties.Resources.Phaitranguoiban;
-            this.pictureBox3.Location = new System.Drawing.Point(907, 19);
+            this.pictureBox3.Location = new System.Drawing.Point(575, 145);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(152, 97);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
