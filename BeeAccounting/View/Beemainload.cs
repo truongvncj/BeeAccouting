@@ -1814,7 +1814,23 @@ namespace BEEACCOUNT.View
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            // 
+            //  VATinphaitra
+
+
+            #region//ht hóa dơn  bán ra bank
+
+
+            //  this.Close();
+            this.main1.clearpannel();
+
+
+            View.VATinphaitra VATinphaitra = new VATinphaitra(this.main1);
+            this.main1.clearpannelload(VATinphaitra);
+
+
+
+            #endregion
+
 
 
         }

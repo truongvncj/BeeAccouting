@@ -255,6 +255,30 @@
     <Compile Include="View\Ketoantonghop\Chooseproductsx.Designer.cs">
       <DependentUpon>Chooseproductsx.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\PhaitraVatin\Buttoanphaitra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\PhaitraVatin\Buttoanphaitra.Designer.cs">
+      <DependentUpon>Buttoanphaitra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\PhaitraVatin\Chonchitietphaitra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\PhaitraVatin\Chonchitietphaitra.Designer.cs">
+      <DependentUpon>Chonchitietphaitra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\PhaitraVatin\Dinhkhoanphaitra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\PhaitraVatin\Dinhkhoanphaitra.Designer.cs">
+      <DependentUpon>Dinhkhoanphaitra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\PhaitraVatin\VATinphaitra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\PhaitraVatin\VATinphaitra.Designer.cs">
+      <DependentUpon>VATinphaitra.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Sanxuat\fkiemkevatinhspdd.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -835,6 +859,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Muahang\BeeNCCnewaccount.resx">
       <DependentUpon>BeeNCCnewaccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\PhaitraVatin\Buttoanphaitra.resx">
+      <DependentUpon>Buttoanphaitra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\PhaitraVatin\Chonchitietphaitra.resx">
+      <DependentUpon>Chonchitietphaitra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\PhaitraVatin\Dinhkhoanphaitra.resx">
+      <DependentUpon>Dinhkhoanphaitra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\PhaitraVatin\VATinphaitra.resx">
+      <DependentUpon>VATinphaitra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Sanxuat\fkiemkevatinhspdd.resx">
       <DependentUpon>fkiemkevatinhspdd.cs</DependentUpon>
