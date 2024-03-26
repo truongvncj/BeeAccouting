@@ -13,6 +13,8 @@ namespace BEEACCOUNT.View
     public partial class Dinhkhoanphaitra : Form
     {
         public Boolean chon { get; set; }
+
+        public Boolean hoadonkhongkevat { get; set; }
         public string mataikhoan { get; set; }
         public string tentaikhoan { get; set; }
         public int machitiettaikhoan { get; set; }
@@ -39,7 +41,7 @@ namespace BEEACCOUNT.View
 
             lb_machitietno.Text = "";
             lbtenchitietno.Text = "";
-            lbtkno.Text = "";
+            lb_tkno.Text = "";
             lb_mactco.Text = mactphaitra;
             lb_tenctco.Text = tenchitiet;
 
@@ -92,7 +94,7 @@ namespace BEEACCOUNT.View
     
         private void bt_thuchien_Click(object sender, EventArgs e)
         {
-            if (this.mataikhoan == "")
+            if (lb_tkno.Text =="")//this.mataikhoan == "")
             {
               
                 MessageBox.Show("Bạn chưa chọn tài khoản", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -101,6 +103,7 @@ namespace BEEACCOUNT.View
             }
 
             this.noidung = txt_noidung.Text.Truncate(225);
+             //  this.hoadonkhongkevat = 
 
             if (Utils.IsValidnumber(lb_machitietno.Text))
             {
@@ -211,7 +214,7 @@ namespace BEEACCOUNT.View
 
 
                         this.mataikhoan = taikhoanchon.matk;
-                        lbtkno.Text = taikhoanchon.matk + ": " + taikhoanchon.tentk.Trim();
+                        lb_tkno.Text = taikhoanchon.matk + ": " + taikhoanchon.tentk.Trim();
 
 
                         #region chọn tài khoản chi tiết
@@ -320,7 +323,7 @@ namespace BEEACCOUNT.View
                     {
                       this.tentaikhoanchitiet = "";
                         this.machitiettaikhoan = -1;
-                        lbtkno.Text = "";
+                        lb_tkno.Text = "";
                         lb_machitietno.Text = "";
                         tbchontkno.Focus();
                     }
@@ -337,6 +340,19 @@ namespace BEEACCOUNT.View
 
 
             }// end chon tai khoan no
+
+        }
+
+        private void Dinhkhoanphaitra_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cb_khongkekhaivat_CheckedChanged(object sender, EventArgs e)
+        {
+          
+            this.hoadonkhongkevat = cb_khongkekhaivat.Checked;
+
 
         }
     }

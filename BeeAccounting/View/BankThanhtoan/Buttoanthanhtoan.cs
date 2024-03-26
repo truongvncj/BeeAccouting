@@ -583,7 +583,7 @@ namespace BEEACCOUNT.View
 
 
             this.blankbuttoantonghop();
-        //    dataGridViewListBTTH.DataSource = Model.hachtoantonghop.danhsachbuttoantonghop(dcchung, cbthang.Text, cbnam.Text, txttaikhoan.Text.Trim());
+           dataGridViewListBTTH.DataSource = Model.hachtoantonghop.danhsachbuttoantonghop(dcchung, cbthang.Text, cbnam.Text, txttaikhoan.Text.Trim());
 
 
 

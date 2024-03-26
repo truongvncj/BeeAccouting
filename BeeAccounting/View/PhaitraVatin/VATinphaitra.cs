@@ -339,15 +339,33 @@ namespace BEEACCOUNT.View
 
               //c 131
 
-              dkthue.Diengiai = "Thuế hóa đơn " + vatin.kyhieuhoadon + " " + vatin.sohoadon;
+           
 
               dkthue.Sohieuchungtu = vatin.kyhieuhoadon + " " + vatin.sohoadon;
               dkthue.manghiepvu = "TH";
               dkthue.Ngayctu = vatin.ngaylaphoadon;
               dkthue.Ngayghiso = vatin.ngaylaphoadon;
+
+
               dkthue.PsCo = vatin.vatin;
               dkthue.PsNo = vatin.vatin;
-              dkthue.TkNo = "1331";
+
+
+              if (dinhkhoan.hoadonkhongkevat == true)
+              {
+                //   dkthue.TkNo =
+                  dkthue.TkNo = dinhkhoan.mataikhoan;
+                  dkthue.MaCTietTKNo = dinhkhoan.machitiettaikhoan;
+                  dkthue.tenchitietNo = dinhkhoan.tentaikhoanchitiet;
+                  dkthue.Diengiai = "Thuế hóa đơn không khấu trừ " + vatin.kyhieuhoadon + " " + vatin.sohoadon;
+              }
+              else
+              {
+                  dkthue.Diengiai = "Thuế hóa đơn " + vatin.kyhieuhoadon + " " + vatin.sohoadon;
+                  dkthue.TkNo = "1331";
+              }
+
+             
               //chiphi.TkNo = dinhkhoan.mataikhoan;
               //chiphi.MaCTietTKNo = dinhkhoan.machitiettaikhoan;
               //chiphi.tenchitietNo = dinhkhoan.tentaikhoanchitiet;

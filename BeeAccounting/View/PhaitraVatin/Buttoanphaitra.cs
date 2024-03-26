@@ -2378,5 +2378,11 @@ namespace BEEACCOUNT.View
             #endregion
 
         }
+
+        private void cb_khongkekhaivat_CheckedChanged(object sender, EventArgs e)
+        {
+          
+
+        }
     }
 }
