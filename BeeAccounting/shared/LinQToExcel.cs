@@ -245,7 +245,7 @@ namespace BEEACCOUNT
 	                    {
                             string strdate;
 
-                            if (Utils.IsValidnumber(rg.Value2.ToString()))
+                          if (Utils.IsValidnumber(rg.Value.ToString()))  //Value2
                             {
                                
                                 strdate = Convert.ToDateTime(rg.Value).ToString("dd/MM/yyyy");
