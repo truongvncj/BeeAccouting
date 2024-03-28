@@ -301,6 +301,11 @@ namespace BEEACCOUNT.View
               dinhkhoan.ShowDialog();
 
 
+              if (dinhkhoan.chon == true)
+              {
+                  
+            
+
               List<tbl_Socai> detailbt = new List<tbl_Socai>();
 
 
@@ -322,16 +327,20 @@ namespace BEEACCOUNT.View
               chiphi.manghiepvu = "TH";
               chiphi.Ngayctu = vatin.ngaylaphoadon;
               chiphi.Ngayghiso = vatin.ngaylaphoadon;
-              chiphi.PsCo = vatin.tientruocvat;
+         
               chiphi.PsNo = vatin.tientruocvat;
+              chiphi.PsCo = vatin.tientruocvat;
+
               chiphi.TkCo = "331";
+            
               chiphi.MaCTietTKCo = Phaitract.machitiet;
               chiphi.tenchitietCo = Phaitract.tenchitiet;
 
               chiphi.TkNo = dinhkhoan.mataikhoan;
               chiphi.MaCTietTKNo = dinhkhoan.machitiettaikhoan;
               chiphi.tenchitietNo = dinhkhoan.tentaikhoanchitiet;
-             
+              chiphi.idsanphamno = dinhkhoan.idsanpham;
+
               chiphi.username = Utils.getname();
 
 
@@ -372,8 +381,8 @@ namespace BEEACCOUNT.View
              
               //  
               dkthue.TkCo = "331";
-              dkthue.MaCTietTKNo = Phaitract.machitiet;
-              dkthue.tenchitietNo = Phaitract.tenchitiet;
+              dkthue.MaCTietTKCo = Phaitract.machitiet;
+              dkthue.tenchitietCo = Phaitract.tenchitiet;
               dkthue.username = Utils.getname();
 
               detailbt.Add(chiphi);
@@ -385,6 +394,7 @@ namespace BEEACCOUNT.View
 
               Buttoanphaitra.ShowDialog();
 
+              }
 
 
             }

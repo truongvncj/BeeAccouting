@@ -20,6 +20,8 @@ namespace BEEACCOUNT.View
         public int machitiettaikhoan { get; set; }
         public string tentaikhoanchitiet { get; set; }
 
+        public int idsanpham { get; set; }
+
         public string noidung { get; set; }
 
         //public DateTime fromdate { get; set; }
@@ -113,11 +115,67 @@ namespace BEEACCOUNT.View
              
              
             }
-         
-        
-
-
             chon = true;
+
+
+         #region  // CHỌN SẢN PHẨM nếu mã tk là tk loại sản xuất thì sẽ phải chọn sẩn phẩm để tập hợp cf theo sản phẩm//
+
+
+                      //  MessageBox.Show(this.mataikhoan);
+
+                        if (this.mataikhoan.Trim() == "154" || this.mataikhoan.Trim() == "621" || this.mataikhoan.Trim() == "622" || this.mataikhoan.Trim() == "627") // nếu mã tk là tk loại sản xuất thì sẽ phải chọn sẩn phẩm để tập hợp cf theo sản phẩm
+                        {
+                            //  public int machitiettaikhoan { get; set; }
+
+                            string seaching = tbchontkno.Text.Trim();
+
+                            string connection_string = Utils.getConnectionstr();
+                            LinqtoSQLDataContext db = new LinqtoSQLDataContext(connection_string);
+
+                            var dssanpham = from c in db.tbl_sx_sanphams
+                                            //   where c.matk.Contains(seaching)
+                                            select new
+                                            {
+                                                Mã_sản_phẩm = c.masp,
+                                                Tên_sản_phẩm = c.tensp,
+                                                Sản_xuất_tại = c.maphanxuong,
+                                              //  Loại_sản_phẩm = c.loaisp,
+                                                c.id
+
+                                            };
+                            if (dssanpham.Count() > 0)
+                            {
+                                Beeviewandchoose chonsanpham = new Beeviewandchoose("CHỌN SẢN PHẨM ", dssanpham, db);
+                                chonsanpham.ShowDialog();
+                                int idtaikhoan = chonsanpham.value;
+                                bool kq = chonsanpham.kq;
+
+
+                                if (kq)
+                                {
+
+                                    this.idsanpham = chonsanpham.value;
+
+                                }
+                                else
+                                {
+                                    this.idsanpham = -1;
+                                    chon = false;
+                                    return;
+                                }
+
+
+
+
+
+
+                            }
+
+                        }
+
+            #endregion
+
+
             if (chon == true)
             {
                 this.Close();
@@ -317,7 +375,8 @@ namespace BEEACCOUNT.View
 
                         #endregion
 
-                     
+                        txt_noidung.Focus();
+
                     }
                     else
                     {

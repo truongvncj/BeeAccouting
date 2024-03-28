@@ -154,6 +154,9 @@ namespace BEEACCOUNT.Model
             socaips.MaCTietTKNo = socai.MaCTietTKNo;
             socaips.tenchitietNo = socai.tenchitietNo;
             socaips.tenchitietCo = socai.tenchitietCo;
+            socaips.idsanphamno = socai.idsanphamno;
+            socaips.idsanphamco = socai.idsanphamco;
+
 
            
             socaips.PsCo = socai.PsCo;

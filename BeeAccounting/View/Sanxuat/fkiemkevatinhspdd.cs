@@ -827,30 +827,7 @@ namespace BEEACCOUNT.View
                 #endregion
 
 
-                #region // tìm cf NVL
-
-
-                var psnvl = (from c in dc.tbl_Socais
-                             where
-                             c.manhamay == manhamay
-                          && c.maphanxuong == maphanxuong
-
-                              && c.masanpham == masanpham
-                          && c.Ngayctu.Value.Month == thang
-                           && c.Ngayctu.Value.Year == nam
-
-
-
-                             select c.PsNo).Sum();
-
-                if (psnvl != null)
-                {
-                   
-                    phieutinhdd.nguyenvatlieups = psnvl;
-                }
-
-                #endregion
-
+         
 
 
 

@@ -294,7 +294,9 @@ namespace BEEACCOUNT.Model
 
             dt.Columns.Add(new DataColumn("Tên_chi_tiết_TK_Có", typeof(string)));
 
+            dt.Columns.Add(new DataColumn("ID_Sản_phẩm_TK_Nợ", typeof(int)));
 
+            dt.Columns.Add(new DataColumn("ID_Sản_phẩm_TK_Có", typeof(int)));
 
             //        dt.Columns.Add(new DataColumn("Ngày_chứng_từ", typeof(DGV_DateTimePicker.DateTimePickerCell)));
             //    dt.Columns.Add(new DataColumn("masanpham", typeof(string)));

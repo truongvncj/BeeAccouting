@@ -82,7 +82,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.txttaikhoan = new System.Windows.Forms.TextBox();
-            this.cbchiphihople = new System.Windows.Forms.CheckBox();
+            this.checkboxchiphihoply = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -603,7 +603,7 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.cbchiphihople);
+            this.tabPage1.Controls.Add(this.checkboxchiphihoply);
             this.tabPage1.Controls.Add(this.button1);
             this.tabPage1.Controls.Add(this.panel1);
             this.tabPage1.Controls.Add(this.panel4);
@@ -732,17 +732,17 @@
             this.txttaikhoan.TextChanged += new System.EventHandler(this.txttaikhoan_TextChanged);
             this.txttaikhoan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txttaikhoan_KeyPress);
             // 
-            // cbchiphihople
+            // checkboxchiphihoply
             // 
-            this.cbchiphihople.AutoSize = true;
-            this.cbchiphihople.Checked = true;
-            this.cbchiphihople.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cbchiphihople.Location = new System.Drawing.Point(692, 249);
-            this.cbchiphihople.Name = "cbchiphihople";
-            this.cbchiphihople.Size = new System.Drawing.Size(153, 17);
-            this.cbchiphihople.TabIndex = 65;
-            this.cbchiphihople.Text = "Chi phí hợp lệ, có hóa đơn";
-            this.cbchiphihople.UseVisualStyleBackColor = true;
+            this.checkboxchiphihoply.AutoSize = true;
+            this.checkboxchiphihoply.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkboxchiphihoply.ForeColor = System.Drawing.Color.Red;
+            this.checkboxchiphihoply.Location = new System.Drawing.Point(611, 241);
+            this.checkboxchiphihoply.Name = "checkboxchiphihoply";
+            this.checkboxchiphihoply.Size = new System.Drawing.Size(250, 28);
+            this.checkboxchiphihoply.TabIndex = 76;
+            this.checkboxchiphihoply.Text = "Tick- Chi phí không hợp lệ";
+            this.checkboxchiphihoply.UseVisualStyleBackColor = true;
             // 
             // BeeButtoantonghop
             // 
@@ -828,6 +828,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cbthang;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.CheckBox cbchiphihople;
+        private System.Windows.Forms.CheckBox checkboxchiphihoply;
     }
 }

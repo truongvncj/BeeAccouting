@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Buttoanthanhtoan));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Buttoannhantien));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -47,6 +47,7 @@
             this.dataGridViewdetail = new System.Windows.Forms.DataGridView();
             this.label15 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.checkboxchiphihoply = new System.Windows.Forms.CheckBox();
             this.txttongtien = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
@@ -58,7 +59,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.txttaikhoan = new System.Windows.Forms.TextBox();
-            this.checkboxchiphihoply = new System.Windows.Forms.CheckBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
@@ -76,9 +76,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(591, 4);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(305, 29);
+            this.label1.Size = new System.Drawing.Size(390, 29);
             this.label1.TabIndex = 0;
-            this.label1.Text = "BÚT TOÁN  THANH TOÁN";
+            this.label1.Text = "BÚT TOÁN  TIỀN VỀ NGÂN HÀNG";
             // 
             // panel2
             // 
@@ -280,6 +280,18 @@
             this.panel4.Size = new System.Drawing.Size(1077, 560);
             this.panel4.TabIndex = 64;
             // 
+            // checkboxchiphihoply
+            // 
+            this.checkboxchiphihoply.AutoSize = true;
+            this.checkboxchiphihoply.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkboxchiphihoply.ForeColor = System.Drawing.Color.Red;
+            this.checkboxchiphihoply.Location = new System.Drawing.Point(698, 11);
+            this.checkboxchiphihoply.Name = "checkboxchiphihoply";
+            this.checkboxchiphihoply.Size = new System.Drawing.Size(250, 28);
+            this.checkboxchiphihoply.TabIndex = 75;
+            this.checkboxchiphihoply.Text = "Tick- Chi phí không hợp lệ";
+            this.checkboxchiphihoply.UseVisualStyleBackColor = true;
+            // 
             // txttongtien
             // 
             this.txttongtien.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -422,19 +434,7 @@
             this.txttaikhoan.TextChanged += new System.EventHandler(this.txttaikhoan_TextChanged);
             this.txttaikhoan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txttaikhoan_KeyPress);
             // 
-            // checkboxchiphihoply
-            // 
-            this.checkboxchiphihoply.AutoSize = true;
-            this.checkboxchiphihoply.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkboxchiphihoply.ForeColor = System.Drawing.Color.Red;
-            this.checkboxchiphihoply.Location = new System.Drawing.Point(698, 11);
-            this.checkboxchiphihoply.Name = "checkboxchiphihoply";
-            this.checkboxchiphihoply.Size = new System.Drawing.Size(250, 28);
-            this.checkboxchiphihoply.TabIndex = 75;
-            this.checkboxchiphihoply.Text = "Tick- Chi phí không hợp lệ";
-            this.checkboxchiphihoply.UseVisualStyleBackColor = true;
-            // 
-            // Buttoanthanhtoan
+            // Buttoannhantien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -444,7 +444,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Buttoanthanhtoan";
+            this.Name = "Buttoannhantien";
             this.Text = "BeePhieuThu";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel2.ResumeLayout(false);

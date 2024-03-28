@@ -108,6 +108,9 @@ namespace BEEACCOUNT.View
 
             drToAdd["Tên_chi_tiết_TK_Nợ"] = socai.tenchitietNo.Truncate(50);
             drToAdd["Tên_chi_tiết_TK_Có"] = socai.tenchitietCo.Truncate(50);
+            drToAdd["ID_Sản_phẩm_TK_Nợ"] = socai.idsanphamno.GetValueOrDefault();
+
+            drToAdd["ID_Sản_phẩm_TK_Có"] = socai.idsanphamco.GetValueOrDefault();
 
 
 
@@ -540,6 +543,20 @@ namespace BEEACCOUNT.View
                         detail.tenchitietNo = dataGridViewdetail.Rows[idrow].Cells["Tên_chi_tiết_TK_Nợ"].Value.ToString();
                     }
 
+                    if (dataGridViewdetail.Rows[idrow].Cells["ID_Sản_phẩm_TK_Nợ"].Value != null && Utils.IsValidnumber(dataGridViewdetail.Rows[idrow].Cells["ID_Sản_phẩm_TK_Nợ"].Value.ToString()))
+                    {
+                        detail.idsanphamno = int.Parse(dataGridViewdetail.Rows[idrow].Cells["ID_Sản_phẩm_TK_Nợ"].Value.ToString());
+                    }
+
+                    if (dataGridViewdetail.Rows[idrow].Cells["ID_Sản_phẩm_TK_Có"].Value != null && Utils.IsValidnumber(dataGridViewdetail.Rows[idrow].Cells["ID_Sản_phẩm_TK_Có"].Value.ToString()))
+                    {
+                        detail.idsanphamco = int.Parse(dataGridViewdetail.Rows[idrow].Cells["ID_Sản_phẩm_TK_Có"].Value.ToString());
+                    }
+
+
+
+
+
                     Model.Taikhoanketoan.ghisocaitk(detail);
                     //update tai khoan vat 
 
@@ -579,8 +596,8 @@ namespace BEEACCOUNT.View
 
 
 
-       //     this.blankbuttoantonghop();
-         //   dataGridViewListBTTH.DataSource = Model.hachtoantonghop.danhsachbuttoantonghop(dcchung, cbthang.Text, cbnam.Text, txttaikhoan.Text.Trim());
+          this.blankbuttoantonghop();
+            dataGridViewListBTTH.DataSource = Model.hachtoantonghop.danhsachbuttoantonghop(dcchung, cbthang.Text, cbnam.Text, txttaikhoan.Text.Trim());
 
 
 
@@ -2382,6 +2399,11 @@ namespace BEEACCOUNT.View
         private void cb_khongkekhaivat_CheckedChanged(object sender, EventArgs e)
         {
           
+
+        }
+
+        private void dataGridViewdetail_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }

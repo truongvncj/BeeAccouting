@@ -29174,15 +29174,11 @@ namespace BEEACCOUNT
 		
 		private System.Nullable<System.DateTime> _Ngaydenhan;
 		
-		private string _masanpham;
-		
-		private string _maphanxuong;
-		
-		private System.Nullable<int> _macongdoan;
-		
-		private string _manhamay;
-		
 		private System.Nullable<bool> _chiphihople;
+		
+		private System.Nullable<int> _idsanphamno;
+		
+		private System.Nullable<int> _idsanphamco;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -29220,16 +29216,12 @@ namespace BEEACCOUNT
     partial void OnSohieuchungtuChanged();
     partial void OnNgaydenhanChanging(System.Nullable<System.DateTime> value);
     partial void OnNgaydenhanChanged();
-    partial void OnmasanphamChanging(string value);
-    partial void OnmasanphamChanged();
-    partial void OnmaphanxuongChanging(string value);
-    partial void OnmaphanxuongChanged();
-    partial void OnmacongdoanChanging(System.Nullable<int> value);
-    partial void OnmacongdoanChanged();
-    partial void OnmanhamayChanging(string value);
-    partial void OnmanhamayChanged();
     partial void OnchiphihopleChanging(System.Nullable<bool> value);
     partial void OnchiphihopleChanged();
+    partial void OnidsanphamnoChanging(System.Nullable<int> value);
+    partial void OnidsanphamnoChanged();
+    partial void OnidsanphamcoChanging(System.Nullable<int> value);
+    partial void OnidsanphamcoChanged();
     #endregion
 		
 		public tbl_Socai()
@@ -29557,86 +29549,6 @@ namespace BEEACCOUNT
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_masanpham", DbType="NVarChar(50)")]
-		public string masanpham
-		{
-			get
-			{
-				return this._masanpham;
-			}
-			set
-			{
-				if ((this._masanpham != value))
-				{
-					this.OnmasanphamChanging(value);
-					this.SendPropertyChanging();
-					this._masanpham = value;
-					this.SendPropertyChanged("masanpham");
-					this.OnmasanphamChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_maphanxuong", DbType="NVarChar(50)")]
-		public string maphanxuong
-		{
-			get
-			{
-				return this._maphanxuong;
-			}
-			set
-			{
-				if ((this._maphanxuong != value))
-				{
-					this.OnmaphanxuongChanging(value);
-					this.SendPropertyChanging();
-					this._maphanxuong = value;
-					this.SendPropertyChanged("maphanxuong");
-					this.OnmaphanxuongChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_macongdoan", DbType="Int")]
-		public System.Nullable<int> macongdoan
-		{
-			get
-			{
-				return this._macongdoan;
-			}
-			set
-			{
-				if ((this._macongdoan != value))
-				{
-					this.OnmacongdoanChanging(value);
-					this.SendPropertyChanging();
-					this._macongdoan = value;
-					this.SendPropertyChanged("macongdoan");
-					this.OnmacongdoanChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_manhamay", DbType="NVarChar(50)")]
-		public string manhamay
-		{
-			get
-			{
-				return this._manhamay;
-			}
-			set
-			{
-				if ((this._manhamay != value))
-				{
-					this.OnmanhamayChanging(value);
-					this.SendPropertyChanging();
-					this._manhamay = value;
-					this.SendPropertyChanged("manhamay");
-					this.OnmanhamayChanged();
-				}
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_chiphihople", DbType="Bit")]
 		public System.Nullable<bool> chiphihople
 		{
@@ -29653,6 +29565,46 @@ namespace BEEACCOUNT
 					this._chiphihople = value;
 					this.SendPropertyChanged("chiphihople");
 					this.OnchiphihopleChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idsanphamno", DbType="Int")]
+		public System.Nullable<int> idsanphamno
+		{
+			get
+			{
+				return this._idsanphamno;
+			}
+			set
+			{
+				if ((this._idsanphamno != value))
+				{
+					this.OnidsanphamnoChanging(value);
+					this.SendPropertyChanging();
+					this._idsanphamno = value;
+					this.SendPropertyChanged("idsanphamno");
+					this.OnidsanphamnoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idsanphamco", DbType="Int")]
+		public System.Nullable<int> idsanphamco
+		{
+			get
+			{
+				return this._idsanphamco;
+			}
+			set
+			{
+				if ((this._idsanphamco != value))
+				{
+					this.OnidsanphamcoChanging(value);
+					this.SendPropertyChanging();
+					this._idsanphamco = value;
+					this.SendPropertyChanged("idsanphamco");
+					this.OnidsanphamcoChanged();
 				}
 			}
 		}
