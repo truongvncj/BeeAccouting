@@ -175,6 +175,9 @@ namespace BEEACCOUNT.Model
             // socaips.Soctu = socai.Soctu;
             // socaips.Soctu = socai.Soctu;
 
+            socaips.chiphihople = socai.chiphihople;
+          
+
             db.tbl_Socais.InsertOnSubmit(socaips);
             db.SubmitChanges();
         }

@@ -24,6 +24,10 @@ namespace BEEACCOUNT.View
 
         public int idsanphamdkno { get; set; }
         public int idsanphamdkco { get; set; }
+
+        public bool chiphihople { get; set; }
+
+
         public string tkco { get; set; }
         public int tkcochitiet { get; set; }
         public double tongsotien { get; set; }
@@ -117,6 +121,7 @@ namespace BEEACCOUNT.View
             drToAdd["ID_Sản_phẩm_TK_Nợ"] = socai.idsanphamno.GetValueOrDefault();
 
             drToAdd["ID_Sản_phẩm_TK_Có"] = socai.idsanphamco.GetValueOrDefault();
+            drToAdd["Chi_phi_hợp_lê"] = socai.chiphihople.GetValueOrDefault(true);
 
           
 
@@ -685,7 +690,12 @@ namespace BEEACCOUNT.View
                     {
                         detail.idsanphamco = int.Parse(dataGridViewdetail.Rows[idrow].Cells["ID_Sản_phẩm_TK_Có"].Value.ToString());
                     }
+                      if (dataGridViewdetail.Rows[idrow].Cells["ID_Sản_phẩm_TK_Có"].Value != null && Utils.IsValidnumber(dataGridViewdetail.Rows[idrow].Cells["ID_Sản_phẩm_TK_Có"].Value.ToString()))
+                    {
+                        detail.chiphihople = (bool)dataGridViewdetail.Rows[idrow].Cells["Chi_phi_hợp_lê"].Value;
+                    }
 
+               
 
                     Model.Taikhoanketoan.ghisocaitk(detail);
 
@@ -2606,7 +2616,7 @@ namespace BEEACCOUNT.View
                 socai.idsanphamco = this.idsanphamdkco;
 
             }
-         
+            this.sotienct = double.Parse(txtsotien.Text.ToString());
             socai.PsCo = this.sotienct;// double.Parse(txtsotien.Text.ToString());
             socai.PsNo = this.sotienct;//.Parse(txtsotien.Text.ToString());
 
@@ -2986,7 +2996,7 @@ namespace BEEACCOUNT.View
 
         private void txtsotien_Leave_1(object sender, EventArgs e)
         {
-
+            this.sotienct = double.Parse(txtsotien.Text.ToString());
 
 
             //if (txtsotien.Text != "" && Utils.IsValidnumber(txtsotien.Text.Replace(",", "")) == false)
@@ -3009,7 +3019,7 @@ namespace BEEACCOUNT.View
 
             //}
 
-
+        
 
 
 

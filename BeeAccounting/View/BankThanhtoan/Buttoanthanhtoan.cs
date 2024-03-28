@@ -508,6 +508,10 @@ namespace BEEACCOUNT.View
                     {
                         detail.chiphihople = false;
                     }
+                    else
+                    {
+                        detail.chiphihople = true;
+                    }
                     //       detail.Ngayctu = Utils.ChageExceldatetoDate( dataGridViewdetail.Rows[idrow].Cells["Ngày_chứng_từ"].Value.ToString());
                     // detail.macty = Model.Username.getmacty();
                     detail.Ngayghiso = (DateTime)dataGridViewdetail.Rows[idrow].Cells["Ngày_chứng_từ"].Value;// DateTime.Today;
