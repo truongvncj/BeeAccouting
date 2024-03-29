@@ -460,6 +460,24 @@ namespace BEEACCOUNT.View
                 return;
             }
 
+            if (this.tkco =="" || this.tkno =="")
+            {
+                MessageBox.Show("Bạn chưa định khoản tài khoản hạch toán !", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                checkdinhkhoan = false;
+
+                if (this.tkco =="")
+                {
+                    txtchontkco.Focus();
+                }
+                else
+                {
+                    txtchontkno.Focus();
+                }
+               
+
+
+                return;
+            }
 
 
             for (int idrow = 0; idrow < dataGridViewTkCo.RowCount - 1; idrow++)
@@ -541,6 +559,8 @@ namespace BEEACCOUNT.View
 
 
             #region check chi tiết head phiếu
+
+
             #region  chcek so phieu co ký tu khong
             if (txtsophieu.Text == "")
             {
@@ -710,7 +730,7 @@ namespace BEEACCOUNT.View
                 detail.tenhang = dataGridViewTkCo.Rows[idrow].Cells["Tên_sản_phẩm"].Value.ToString();
                 detail.thanhtien = float.Parse(dataGridViewTkCo.Rows[idrow].Cells["Thành_tiền"].Value.ToString());
 
-                //     detail.macty = Model.Username.getmacty();
+                  //  detail.ma = Model.Username.getmacty();
 
                 dc.tbl_kho_phieunhapxuat_details.InsertOnSubmit(detail);
                 dc.SubmitChanges();
@@ -1053,7 +1073,7 @@ namespace BEEACCOUNT.View
 
                    
 
-                    txtchontkno.Text = phieunhap.notk.Trim();
+                  //  txtchontkno.Text = phieunhap.notk.Trim();
 
                     txtchontkco.Text = phieunhap.cotk.Trim();
 
@@ -1940,6 +1960,9 @@ namespace BEEACCOUNT.View
             if (e.KeyChar == (char)Keys.Enter)
             {
                 //  string taikhoan = (cbtkno.SelectedItem as ComboboxItem).Value.ToString();
+              //  phieunhap.notk
+
+
                 string seaching = txtchontkco.Text.Trim();
 
                 string connection_string = Utils.getConnectionstr();
@@ -2136,6 +2159,9 @@ namespace BEEACCOUNT.View
 
 
                         this.tkno = taikhoanchon.matk;
+                     //   MessageBox.Show("ccc" + this.tkno);
+
+
                         lbtkno.Text = taikhoanchon.matk + ": " + taikhoanchon.tentk.Trim();
 
 

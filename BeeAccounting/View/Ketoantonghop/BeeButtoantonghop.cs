@@ -33,7 +33,7 @@ namespace BEEACCOUNT.View
         public double tongsotien { get; set; }
         public double sotienct { get; set; }
 
-
+        public int idrowcurrrent { get; set; }
 
         public class ComboboxItem
         {
@@ -2653,7 +2653,7 @@ namespace BEEACCOUNT.View
         private void txtsophieu_TextChanged(object sender, EventArgs e)
         {
 
-            if (this.statusphieu == 2 && dataGridViewdetail.RowCount > 0)
+            if ((this.statusphieu == 2 || this.statusphieu == 6 ) && dataGridViewdetail.RowCount > 0)
             {
 
 
@@ -2661,6 +2661,7 @@ namespace BEEACCOUNT.View
                 {
 
                     dataGridViewdetail.Rows[idrow].Cells["Số_chứng_từ"].Value = txtsophieu.Text;
+                    this.sobuttoan = dataGridViewdetail.Rows[idrow].Cells["Số_chứng_từ"].Value.ToString();
 
                     // this.sobuttoan = txtsophieu.Text;
                 }
@@ -2710,6 +2711,7 @@ namespace BEEACCOUNT.View
 
             DataGridView view = (DataGridView)sender;
             int i = view.CurrentRow.Index;
+            this.idrowcurrrent = i;  // dòng hiện tại
 
             if (dataGridViewdetail.Rows[i].Cells["Ngày_chứng_từ"].Value != DBNull.Value)
             {
@@ -2801,22 +2803,29 @@ namespace BEEACCOUNT.View
                 }
 
 
-                datepickngayphieu.Enabled = false;
-                txtsophieu.Enabled = false;
+                if (this.statusphieu != 6) // 6 là copy thì khong disabale 
+                {
 
-                txtdiengiai.Enabled = false;
-                txtsotien.Enabled = false;
-                btsua.Enabled = true;
+               
+                    datepickngayphieu.Enabled = false;
+                    txtsophieu.Enabled = false;
 
-                tbchontkno.Enabled = false;
-                tbchontkno.Enabled = false;
+                    txtdiengiai.Enabled = false;
+                    txtsotien.Enabled = false;
+                    btsua.Enabled = true;
 
-                this.statusphieu = 3;// View
-                                     //      Model.Phieuthuchi.reloadnewdetailtaikhoanco(dataGridViewTkCo);
-                                     //        Model.Phieuthuchi.reloaddetailtaikhoancophieuthu(this.dataGridViewTkCo, this, phieuthu.tkno.Trim(), phieuthu.sophieuthu);
-                btluu.Visible = false;
+                    tbchontkno.Enabled = false;
+                    tbchontkno.Enabled = false;
 
-                //        }
+                    this.statusphieu = 3;// View
+                    //      Model.Phieuthuchi.reloadnewdetailtaikhoanco(dataGridViewTkCo);
+                    //        Model.Phieuthuchi.reloaddetailtaikhoancophieuthu(this.dataGridViewTkCo, this, phieuthu.tkno.Trim(), phieuthu.sophieuthu);
+                    btluu.Visible = false;
+
+                    //        }
+                }
+
+              
 
 
 
@@ -3582,6 +3591,98 @@ namespace BEEACCOUNT.View
 
             dataGridViewListBTTH.DataSource = listphieuHTTH;
             #endregion
+
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            datepickngayphieu.Enabled = true;
+
+            txtsophieu.Enabled = true;
+
+            txtdiengiai.Enabled = true;
+            txtsotien.Enabled = true;
+
+            btluu.Visible = true;
+            btluu.Enabled = true;
+
+            tbchontkno.Enabled = true;
+            tbchontkco.Enabled = true;
+            btsua.Enabled = false;
+            this.buttoanid = -1;
+
+            this.statusphieu = 6; // copy
+
+
+        }
+
+        private void dataGridViewdetail_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void txtsotien_TextChanged_1(object sender, EventArgs e)
+        {
+            if ((this.statusphieu == 2 || this.statusphieu == 6) && dataGridViewdetail.RowCount > 0 && Utils.IsValidnumber(txtsotien.Text.ToString()))
+            {
+
+
+             
+
+                dataGridViewdetail.Rows[this.idrowcurrrent].Cells["Số_tiền"].Value = double.Parse(txtsotien.Text.ToString());
+
+                this.sobuttoan = txtsophieu.Text;
+               
+
+          
+
+
+            }
+        }
+
+        private void txtdiengiai_TextChanged(object sender, EventArgs e)
+        {
+            if ((this.statusphieu == 2 || this.statusphieu == 6) && dataGridViewdetail.RowCount > 0 )
+            {
+
+
+                // for (int idrow = 0; idrow < dataGridViewdetail.RowCount - 1; idrow++)
+                //{
+
+                dataGridViewdetail.Rows[this.idrowcurrrent].Cells["Diễn_giải"].Value =txtdiengiai.Text.ToString();
+
+                // this.sobuttoan = txtsophieu.Text;
+                // }
+                
+
+
+
+            }
+        }
+
+        private void datepickngayphieu_ValueChanged(object sender, EventArgs e)
+        {
+
+
+            if ((this.statusphieu == 2 || this.statusphieu == 6) && dataGridViewdetail.RowCount > 0)
+            {
+
+
+                 for (int idrow = 0; idrow < dataGridViewdetail.RowCount - 1; idrow++)
+                {
+
+                    dataGridViewdetail.Rows[idrow].Cells["Ngày_chứng_từ"].Value = datepickngayphieu.Value;
+
+                }
+               
+
+
+            }
+
+
+
+
+
 
         }
     }

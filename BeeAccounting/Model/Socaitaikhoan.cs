@@ -22,7 +22,7 @@ namespace BEEACCOUNT.Model
 
                 var rs = from tbl_Socai in dc.tbl_Socais
                          where tbl_Socai.manghiepvu == manghiepvu
-                         && tbl_Socai.Sohieuchungtu == sohieuchungtu
+                         && tbl_Socai.Sohieuchungtu.Trim() == sohieuchungtu
                          select tbl_Socai;
 
 

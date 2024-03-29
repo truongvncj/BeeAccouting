@@ -463,7 +463,24 @@ namespace BEEACCOUNT.View
                 return;
             }
 
+            if (this.tkco == "" || this.tkno == "")
+            {
+                MessageBox.Show("Bạn chưa định khoản tài khoản hạch toán !", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                checkdinhkhoan = false;
 
+                if (this.tkco == "")
+                {
+                    txtchontkco.Focus();
+                }
+                else
+                {
+                    txtchontkno.Focus();
+                }
+
+
+
+                return;
+            }
 
             for (int idrow = 0; idrow < dataGridViewTkCo.RowCount - 1; idrow++)
             {
@@ -1771,6 +1788,8 @@ namespace BEEACCOUNT.View
 
 
             tabControl1.SelectedTab = tabPage1;
+
+
         }
 
         private void cbkhohang_SelectedValueChanged(object sender, EventArgs e)

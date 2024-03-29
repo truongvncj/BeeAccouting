@@ -233,9 +233,24 @@ namespace BEEACCOUNT.View
                 return;
             }
 
+
+            ChonNCChoacNV chonloaitt = new View.ChonNCChoacNV();
+            chonloaitt.ShowDialog();
+
+            bool chonloai = chonloaitt.chon;
+            bool chonNCC = chonloaitt.chonNCC;
+
             string connection_string = Utils.getConnectionstr();
 
             LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+            if (chonloai && chonNCC)  // chon tt cho nha cung cấp
+            {
+
+         
+            #region  chon nha cc
+
+       
             var vatin = (from p in dc.tbl_VATinputInvoices
                             where p.id == idtk
                             select p).FirstOrDefault();
@@ -401,38 +416,188 @@ namespace BEEACCOUNT.View
 
 
 
-            // show dinh khoan
-            // no 331
-            // có 511
 
-            // có 3331
+            #endregion chon nh cung cap
 
+            }
 
-            // phải trả khách hàng nào ?
+            if (chonloai && chonNCC ==false) // chon tt tam ứng
 
-
+            {
 
 
-
-            // chọn tìm mã số thuế
-
-            //// List with default capacity
-            //List<Int16> list = new List<Int16>();
-            //// List with capacity = 5
-            //List<string> authors = new List<string>(5);
-            //string[] animals = { "Cow", "Camel", "Elephant" };
-            //List<string> animalsList = new List<string>(animals);
-            //string[] tkphaithu = {"131"}; // tk phải thu 131
-            //List<string> tkList = new List<string>(tkphaithu);
-
-            //Dinhkhoanttk DKtonghop = new Dinhkhoanttk(tkList, msothue);
-            //DKtonghop.ShowDialog();
+                #region  chon thanh toan tam ung
 
 
+                var vatin = (from p in dc.tbl_VATinputInvoices
+                             where p.id == idtk
+                             select p).FirstOrDefault();
 
 
-            //   }
+                var dschitiet = from p in dc.tbl_machitiettks
+                                where
+                           //     p.maso.Trim() == vatin.masothuenguoiban.Trim()
+                             //      &&
+                                p.matk == "141"
+                                select new
+                                {
+                                    Mã_chi_tiết = p.machitiet,
+                                    Tên_nhân_viên = p.tenchitiet,
+                                    Mã_số_thuế = p.maso,
+                                    Ghi_chú = p.ghichu,
 
+
+
+                                    ID = p.id
+
+
+
+                                };
+
+
+
+                //   Chonchitietphaithu phaithu = new Chonchitietphaithu("CHỌN PHẢI THU KHÁCH HÀNG", dschitiet, dc);
+
+
+
+
+                Chonchitietphaitra phaitra = new Chonchitietphaitra("CHỌN NHÂN VIÊN THANH TOÁN TẠM ỨNG ", dschitiet, dc);
+
+
+
+                phaitra.ShowDialog();
+
+                bool kq = phaitra.kq;
+
+                //   idtk  la id trong danh sach tk bank de update lai stau la đa hach toan
+                // update ma but toan, id but toan tong hop
+
+
+
+
+
+                if (kq) // newu tru tức là có chọn ta mở mục tài khoản định khoản tổng hợp chi tiết cho doanh thu
+                {
+
+                    var Phaitract = (from p in dc.tbl_machitiettks
+                                     where
+                                     p.id == phaitra.value
+                                        &&
+                                     p.matk == "141"
+                                     select p).FirstOrDefault();
+
+
+
+                    Dinhkhoanphaitra dinhkhoan = new Dinhkhoanphaitra("Hóa đơn " + vatin.kyhieuhoadon.Trim() + "Số " + vatin.sohoadon.ToString().Trim(), Phaitract.matk, Phaitract.tenchitiet);
+
+
+
+                    dinhkhoan.ShowDialog();
+
+
+                    if (dinhkhoan.chon == true)
+                    {
+
+
+
+                        List<tbl_Socai> detailbt = new List<tbl_Socai>();
+
+
+
+                        tbl_Socai buttoan = new tbl_Socai();
+
+
+
+                        tbl_Socai tttamung = new tbl_Socai();
+                        // ndktk
+                        // ndkchitiet
+
+                        // C331 -- chi tiet phaitra
+                        //   nguoimua
+                        //       tkchitiet
+                        tttamung.Diengiai = dinhkhoan.noidung;// "Doanh thu hóa đơn " + vatin.kyhieuhoadon + " " + vatin.sohoadon;
+
+                        tttamung.Sohieuchungtu = vatin.kyhieuhoadon + " " + vatin.sohoadon;
+                        tttamung.manghiepvu = "TH";
+                        tttamung.Ngayctu = vatin.ngaylaphoadon;
+                        tttamung.Ngayghiso = vatin.ngaylaphoadon;
+
+                        tttamung.PsNo = vatin.tientruocvat;
+                        tttamung.PsCo = vatin.tientruocvat;
+
+                        tttamung.TkCo = "141";
+
+                        tttamung.MaCTietTKCo = Phaitract.machitiet;
+                        tttamung.tenchitietCo = Phaitract.tenchitiet;
+
+                        tttamung.TkNo = dinhkhoan.mataikhoan;
+                        tttamung.MaCTietTKNo = dinhkhoan.machitiettaikhoan;
+                        tttamung.tenchitietNo = dinhkhoan.tentaikhoanchitiet;
+                        tttamung.idsanphamno = dinhkhoan.idsanpham;
+
+                        tttamung.username = Utils.getname();
+
+
+                        tbl_Socai dkthue = new tbl_Socai();
+
+                        //c 131
+
+
+
+                        dkthue.Sohieuchungtu = vatin.kyhieuhoadon + " " + vatin.sohoadon;
+                        dkthue.manghiepvu = "TH";
+                        dkthue.Ngayctu = vatin.ngaylaphoadon;
+                        dkthue.Ngayghiso = vatin.ngaylaphoadon;
+
+
+                        dkthue.PsCo = vatin.vatin;
+                        dkthue.PsNo = vatin.vatin;
+
+
+                        if (dinhkhoan.hoadonkhongkevat == true)
+                        {
+                            //   dkthue.TkNo =
+                            dkthue.TkNo = dinhkhoan.mataikhoan;
+                            dkthue.MaCTietTKNo = dinhkhoan.machitiettaikhoan;
+                            dkthue.tenchitietNo = dinhkhoan.tentaikhoanchitiet;
+                            dkthue.Diengiai = "Thuế hóa đơn không khấu trừ " + vatin.kyhieuhoadon + " " + vatin.sohoadon;
+                        }
+                        else
+                        {
+                            dkthue.Diengiai = "Thuế hóa đơn " + vatin.kyhieuhoadon + " " + vatin.sohoadon;
+                            dkthue.TkNo = "1331";
+                        }
+
+
+                        //chiphi.TkNo = dinhkhoan.mataikhoan;
+                        //chiphi.MaCTietTKNo = dinhkhoan.machitiettaikhoan;
+                        //chiphi.tenchitietNo = dinhkhoan.tentaikhoanchitiet;
+
+                        //  
+                        dkthue.TkCo = "141";
+                        dkthue.MaCTietTKCo = Phaitract.machitiet;
+                        dkthue.tenchitietCo = Phaitract.tenchitiet;
+                        dkthue.username = Utils.getname();
+
+                        detailbt.Add(tttamung);
+                        detailbt.Add(dkthue);
+
+
+
+                        Buttoanphaitra Buttoanphaitra = new Buttoanphaitra(detailbt, idtk);
+
+                        Buttoanphaitra.ShowDialog();
+
+                    }
+
+
+                }
+
+
+
+
+                #endregion chon nh cung cap
+            }
 
 
 

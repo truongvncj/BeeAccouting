@@ -47,6 +47,7 @@
             this.dataGridViewdetail = new System.Windows.Forms.DataGridView();
             this.label15 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.checkboxchiphihoply = new System.Windows.Forms.CheckBox();
             this.txttongtien = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
@@ -58,7 +59,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.txttaikhoan = new System.Windows.Forms.TextBox();
-            this.checkboxchiphihoply = new System.Windows.Forms.CheckBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
@@ -245,6 +245,7 @@
             this.dataGridViewdetail.Size = new System.Drawing.Size(1061, 503);
             this.dataGridViewdetail.TabIndex = 3;
             this.dataGridViewdetail.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewTkCo_CellEndEdit);
+            this.dataGridViewdetail.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewdetail_CellContentClick);
             this.dataGridViewdetail.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewdetail_CellDoubleClick);
             this.dataGridViewdetail.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewTkCo_CellEndEdit);
             this.dataGridViewdetail.CellErrorTextChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewTkCo_CellErrorTextChanged);
@@ -279,6 +280,18 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1077, 560);
             this.panel4.TabIndex = 64;
+            // 
+            // checkboxchiphihoply
+            // 
+            this.checkboxchiphihoply.AutoSize = true;
+            this.checkboxchiphihoply.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkboxchiphihoply.ForeColor = System.Drawing.Color.Red;
+            this.checkboxchiphihoply.Location = new System.Drawing.Point(698, 11);
+            this.checkboxchiphihoply.Name = "checkboxchiphihoply";
+            this.checkboxchiphihoply.Size = new System.Drawing.Size(250, 28);
+            this.checkboxchiphihoply.TabIndex = 75;
+            this.checkboxchiphihoply.Text = "Tick- Chi phí không hợp lệ";
+            this.checkboxchiphihoply.UseVisualStyleBackColor = true;
             // 
             // txttongtien
             // 
@@ -421,18 +434,6 @@
             this.txttaikhoan.TabIndex = 71;
             this.txttaikhoan.TextChanged += new System.EventHandler(this.txttaikhoan_TextChanged);
             this.txttaikhoan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txttaikhoan_KeyPress);
-            // 
-            // checkboxchiphihoply
-            // 
-            this.checkboxchiphihoply.AutoSize = true;
-            this.checkboxchiphihoply.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkboxchiphihoply.ForeColor = System.Drawing.Color.Red;
-            this.checkboxchiphihoply.Location = new System.Drawing.Point(698, 11);
-            this.checkboxchiphihoply.Name = "checkboxchiphihoply";
-            this.checkboxchiphihoply.Size = new System.Drawing.Size(250, 28);
-            this.checkboxchiphihoply.TabIndex = 75;
-            this.checkboxchiphihoply.Text = "Tick- Chi phí không hợp lệ";
-            this.checkboxchiphihoply.UseVisualStyleBackColor = true;
             // 
             // Buttoanthanhtoan
             // 

@@ -480,7 +480,7 @@ namespace BEEACCOUNT.View
 
             try
             {
-                txtthanhtien.Text = (float.Parse(txtsoluong.Text.ToString()) * float.Parse(txtdongia.Text.ToString())).ToString();
+                txtthanhtien.Text = (double.Parse(txtsoluong.Text.ToString()) * double.Parse(txtdongia.Text.ToString())).ToString();
 
             }
             catch (Exception)
@@ -500,7 +500,7 @@ namespace BEEACCOUNT.View
 
             try
             {
-                txtthanhtien.Text = (float.Parse(txtsoluong.Text.ToString()) * float.Parse(txtdongia.Text.ToString())).ToString();
+                txtthanhtien.Text = (double.Parse(txtsoluong.Text.ToString()) * double.Parse(txtdongia.Text.ToString())).ToString();
 
             }
             catch (Exception)

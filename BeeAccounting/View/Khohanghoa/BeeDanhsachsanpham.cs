@@ -408,10 +408,10 @@ namespace BEEACCOUNT.View
             }
 
             this.mavach = txtmavach.Text;
-            this.masanpham = this.txtmasanpham.Text;
-            this.tensanpham = this.txttensanpham.Text;
+            this.masanpham = txtmasanpham.Text;
+            this.tensanpham = txttensanpham.Text;
             this.donvi = txtdonvi.Text;
-            this.masanpham = txtmavach.Text;
+            this.mavach = txtmavach.Text;
             this.ghichu = txtghichu.Text;
 
             if (Utils.IsValidnumber(txttrongluong.Text))

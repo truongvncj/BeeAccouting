@@ -2385,5 +2385,10 @@ namespace BEEACCOUNT.View
             #endregion
 
         }
+
+        private void dataGridViewdetail_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

@@ -210,7 +210,7 @@ namespace BEEACCOUNT.View
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
 
-            #region  viewcode = 114 update thêm là edit và update vào hê thống code status
+            #region  đinh khoan thanh toan tu tien và tư ngan hang
 
 
             //if (this.viewcode == 114)  // viewcode ==0  la danh sách tài k khoản kê toán
@@ -238,26 +238,10 @@ namespace BEEACCOUNT.View
                             select p).FirstOrDefault();
 
 
-            //var dschitiet = from p in dc.tbl_machitiettks
-            //                where p.maso.Trim() == taikhoanbank.sotaikhoan.Trim()
-            //                    && p.matk == "112" // ngan hang
-            //                select new
-            //                {
-            //                    Tên_khách_hàng = p.tenchitiet,
-            //                    Mã_số_thuế = p.maso,
-            //                    Ghi_chú = p.ghichu,
 
 
 
-            //                    p.id
-
-
-
-            //                };
-
-
-
-            Dinhkhoantt thanhtoanbank = new Dinhkhoantt(taikhoanbank.Noidung,taikhoanbank.NHpsNo.ToString() );
+            Dinhkhoantt thanhtoanbank = new Dinhkhoantt(taikhoanbank.Noidung, taikhoanbank.NHpsNo.ToString(), taikhoanbank.mabuttoanNH);
 
 
 
@@ -291,7 +275,7 @@ namespace BEEACCOUNT.View
 
                 butoanbank.Diengiai = thanhtoanbank.noidung;// "Doanh thu hóa đơn " + nguoimua.kyhieuhoadon + " " + nguoimua.sohoadon;
 
-                butoanbank.Sohieuchungtu = taikhoanbank.mabuttoanNH;// nguoimua.kyhieuhoadon + " " + nguoimua.sohoadon;
+                butoanbank.Sohieuchungtu = thanhtoanbank.sohieuchungtu;// taikhoanbank.mabuttoanNH;// nguoimua.kyhieuhoadon + " " + nguoimua.sohoadon;
                 butoanbank.manghiepvu = "TH";
                 butoanbank.Ngayctu = taikhoanbank.ngayhachtoan;
                 butoanbank.Ngayghiso = taikhoanbank.ngayhachtoan;

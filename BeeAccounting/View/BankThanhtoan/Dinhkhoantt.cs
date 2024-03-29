@@ -19,6 +19,7 @@ namespace BEEACCOUNT.View
         public string tentaikhoanchitiet { get; set; }
 
         public string noidung { get; set; }
+        public string sohieuchungtu { get; set; }
 
         //public DateTime fromdate { get; set; }
         //public DateTime todate { get; set; }
@@ -33,7 +34,7 @@ namespace BEEACCOUNT.View
                 return Text;
             }
         }
-        public Dinhkhoantt(string noidung , string sotien)
+        public Dinhkhoantt(string noidung , string sotien, string sohieuchungtu)
         {
             InitializeComponent();
 
@@ -46,6 +47,7 @@ namespace BEEACCOUNT.View
 
             lb_sotien.Text = sotien;
             txt_noidung.Text = noidung;// = 
+            txt_sochungtu.Text = sohieuchungtu;
 
             chon = false;
 
@@ -99,6 +101,7 @@ namespace BEEACCOUNT.View
             }
 
             this.noidung = txt_noidung.Text.Truncate(225);
+            this.sohieuchungtu = txt_sochungtu.Text.Truncate(50);
 
             if (Utils.IsValidnumber(lb_machitietno.Text))
             {
