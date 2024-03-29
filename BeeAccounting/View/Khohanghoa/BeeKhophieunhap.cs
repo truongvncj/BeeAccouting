@@ -684,13 +684,13 @@ namespace BEEACCOUNT.View
                 headphieunhap.ngayphieunhap = datepickngayphieu.Value;
                 headphieunhap.nguoigiao = txttennguoigiao.Text.Trim();
 
-                headphieunhap.notk = this.tkno;// (cbtkno.SelectedItem as ComboboxItem).Value.ToString();
+          
                 if (lb_machitietno.Text != "" & Utils.IsValidnumber(lb_machitietno.Text))
                 {
                     headphieunhap.MaCTietTKNo = int.Parse(lb_machitietno.Text);
                 }
                 headphieunhap.TenCTietTKNo = lbtenchitietno.Text;
-
+                headphieunhap.notk = this.tkno;// (cbtkno.SelectedItem as ComboboxItem).Value.ToString();
                 headphieunhap.cotk = this.tkco;
 
                 if (lb_machitietco.Text != "" & Utils.IsValidnumber(lb_machitietco.Text))
@@ -1002,6 +1002,10 @@ namespace BEEACCOUNT.View
             #endregion
 
           
+
+           
+
+
             try
             {
                 this.phieunhapid = (int)this.dataGridViewListPNK.Rows[this.dataGridViewListPNK.CurrentCell.RowIndex].Cells["ID"].Value;
@@ -1071,11 +1075,14 @@ namespace BEEACCOUNT.View
                     lbtenchitietno.Text = phieunhap.tenchitietno;
                     lbtenchitietco.Text = phieunhap.tenchitietco;
 
-                   
 
-                  //  txtchontkno.Text = phieunhap.notk.Trim();
+                    txtchontkco.Text = phieunhap.cotk;
+                    txtchontkno.Text = phieunhap.notk;
 
-                    txtchontkco.Text = phieunhap.cotk.Trim();
+                    this.tkno = phieunhap.notk;
+                    this.tkco = phieunhap.cotk;
+
+                 
 
                     foreach (ComboboxItem item in (List<ComboboxItem>)cbkhohang.DataSource)
                     {
@@ -2127,7 +2134,7 @@ namespace BEEACCOUNT.View
             if (e.KeyChar == (char)Keys.Enter)
             {
                 //  string taikhoan = (cbtkno.SelectedItem as ComboboxItem).Value.ToString();
-                string seaching = txtchontkco.Text.Trim();
+                string seaching = txtchontkno.Text.Trim();
 
                 string connection_string = Utils.getConnectionstr();
                 LinqtoSQLDataContext db = new LinqtoSQLDataContext(connection_string);
@@ -2151,7 +2158,7 @@ namespace BEEACCOUNT.View
                     bool kq = chontaikhoan.kq;
 
 
-                    if (kq)
+                    if (kq == true)
                     {
                         var taikhoanchon = (from c in db.tbl_dstaikhoans
                                             where c.id == idtaikhoan
@@ -2278,6 +2285,11 @@ namespace BEEACCOUNT.View
                     }
 
 
+
+
+
+
+
                 } // nếu danh sách tài khoản có
 
                 txtsophieu.Focus();
@@ -2319,6 +2331,27 @@ namespace BEEACCOUNT.View
 
             }
             
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            datepickngayphieu.Enabled = true;
+
+            txtsophieu.Enabled = true;
+
+            txtdiengiai.Enabled = true;
+         
+
+            btluu.Visible = true;
+            btluu.Enabled = true;
+
+       
+            btsua.Enabled = false;
+            //this.buttoanid = -1;
+
+            //this.statusphieu = 6; // copy
+
+
         }
     }
 }

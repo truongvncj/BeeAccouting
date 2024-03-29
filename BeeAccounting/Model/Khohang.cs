@@ -703,60 +703,7 @@ namespace BEEACCOUNT.Model
             dataGridViewdetailPNK.Columns["Đơn_giá"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
             dataGridViewdetailPNK.Columns["Thành_tiền"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
 
-            //    this.dataGridView1.Columns["CustomerCode"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
-            //this.dataGridView1.Columns["CustomerCode"].DefaultCellStyle.Format = "N0";
-            //this.dataGridView1.Columns["CustomerCode"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;// = "N0";
-
-            //   dataGridViewdetailPNK.Columns["Đơn_giá"].DefaultCellStyle = datag  ;
-
-            //    dataGridViewdetailPNK.Columns["Tk_Có"].Visible = false;
-            // dataGridViewdetailPNK.Columns["masanpham"].Visible = false;
-
-            //     dataGridViewdetailPNK.Columns["Tk_Nợ"].DisplayIndex = 0;
-            //    dataGridViewdetailPNK.Columns["Tk_Nợ"].Width = 100;
-            //    dataGridViewdetailPNK.Columns["Tk_Nợ"].SortMode = DataGridViewColumnSortMode.NotSortable;
-
-            //dataGridViewdetailPNK.Columns["Mã_chi_tiết"].DisplayIndex = 1;
-            //dataGridViewdetailPNK.Columns["Mã_chi_tiết"].Width = 100;
-            //dataGridViewdetailPNK.Columns["Mã_chi_tiết"].SortMode = DataGridViewColumnSortMode.NotSortable;
-            //dataGridViewdetailPNK.Columns["Mã_chi_tiết"].ReadOnly = true;
-            //dataGridViewdetailPNK.Columns["Mã_chi_tiết"].DefaultCellStyle.BackColor = Color.LightGray;
-
-            //dataGridViewdetailPNK.Columns["Tên_chi_tiết"].DisplayIndex = 2;
-            //dataGridViewdetailPNK.Columns["Tên_chi_tiết"].Width = 200;
-            //dataGridViewdetailPNK.Columns["Tên_chi_tiết"].SortMode = DataGridViewColumnSortMode.NotSortable;
-            //dataGridViewdetailPNK.Columns["Tên_chi_tiết"].ReadOnly = true;
-            //dataGridViewdetailPNK.Columns["Tên_chi_tiết"].DefaultCellStyle.BackColor = Color.LightGray;
-
-
-            //dataGridViewdetailPNK.Columns["Số_tiền"].DisplayIndex = 3;
-            //dataGridViewdetailPNK.Columns["Số_tiền"].Width = 100;
-            //dataGridViewdetailPNK.Columns["Số_tiền"].SortMode = DataGridViewColumnSortMode.NotSortable;
-            //dataGridViewdetailPNK.Columns["Số_tiền"].DefaultCellStyle.Format = "N0";
-
-
-            //dataGridViewdetailPNK.Columns["Diễn_giải"].DisplayIndex = 4;
-            //dataGridViewdetailPNK.Columns["Diễn_giải"].Width = 300;
-            //dataGridViewdetailPNK.Columns["Diễn_giải"].SortMode = DataGridViewColumnSortMode.NotSortable;
-
-
-            //dataGridViewdetailPNK.Columns["Ký_hiêu"].DisplayIndex = 5;
-            //dataGridViewdetailPNK.Columns["Ký_hiêu"].Width = 100;
-            //dataGridViewdetailPNK.Columns["Ký_hiêu"].SortMode = DataGridViewColumnSortMode.NotSortable;
-
-
-            //dataGridViewdetailPNK.Columns["Ngày_chứng_từ"].DisplayIndex = 6;
-            //dataGridViewdetailPNK.Columns["Ngày_chứng_từ"].Width = 100;
-            //dataGridViewdetailPNK.Columns["Ngày_chứng_từ"].SortMode = DataGridViewColumnSortMode.NotSortable;
-
-
-            //dataGridViewdetailPNK.Columns["Số_chứng_từ"].DisplayIndex = 7;
-            //dataGridViewdetailPNK.Columns["Số_chứng_từ"].Width = 200;
-            //dataGridViewdetailPNK.Columns["Số_chứng_từ"].SortMode = DataGridViewColumnSortMode.NotSortable;
-
-
-
-
+        
 
 
             #endregion datatable temp
