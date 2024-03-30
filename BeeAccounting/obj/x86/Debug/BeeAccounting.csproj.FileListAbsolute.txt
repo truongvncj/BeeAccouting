@@ -650,3 +650,4 @@ D:\Githup26032021\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.Chonc
 D:\Githup26032021\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.Dinhkhoanphaitra.resources
 D:\Githup26032021\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.Buttoanphaitra.resources
 D:\Githup26032021\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.ChonNCChoacNV.resources
+D:\Githup26032021\BeeAccouting\BeeAccounting\obj\x86\Debug\BEEACCOUNT.View.ChonHanghoahayDv.resources

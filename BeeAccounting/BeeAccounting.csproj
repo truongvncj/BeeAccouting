@@ -267,6 +267,12 @@
     <Compile Include="View\PhaitraVatin\Chonchitietphaitra.Designer.cs">
       <DependentUpon>Chonchitietphaitra.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\PhaitraVatin\ChonHanghoahayDv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\PhaitraVatin\ChonHanghoahayDv.Designer.cs">
+      <DependentUpon>ChonHanghoahayDv.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\PhaitraVatin\ChonNCChoacNV.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -871,6 +877,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\PhaitraVatin\Chonchitietphaitra.resx">
       <DependentUpon>Chonchitietphaitra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\PhaitraVatin\ChonHanghoahayDv.resx">
+      <DependentUpon>ChonHanghoahayDv.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\PhaitraVatin\ChonNCChoacNV.resx">
       <DependentUpon>ChonNCChoacNV.cs</DependentUpon>

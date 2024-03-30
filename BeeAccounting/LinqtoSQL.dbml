@@ -28,6 +28,7 @@
       <Column Name="Username" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="maKHsoinvoiceMST" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
       <Column Name="dinhkhoan" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="SohieuchungtuSocai" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.CDKT200format" Member="CDKT200formats">
@@ -1099,6 +1100,47 @@
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
     </Type>
   </Table>
+  <Table Name="dbo.tbl_hr_detailbangtinhluong" Member="tbl_hr_detailbangtinhluongs">
+    <Type Name="tbl_hr_detailbangtinhluong">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="cmt" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ten" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="chucvu" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="luongchinh" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="pcantrua" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="pcdienthoai" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="pcxangxe" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="luongtong" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ngaycong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="luongCBdongBH" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="cfdn2KPCD" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="cfdn17x5BHXH" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="cfdn3x5BHYT" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="cfdn1x5BHTN" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="trichld8BHXH" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="trichld1x5BHYT" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="trichld1x5BHTN" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="thang" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="nam" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_hr_nguoilaodong" Member="tbl_hr_nguoilaodongs">
+    <Type Name="tbl_hr_nguoilaodong">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="cmt" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ten" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="chucvu" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="mabophan" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="luongchinh" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="luongCBdongBH" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="pcantrua" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="pcdienthoai" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="pcxangxe" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="luongtong" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ngaybatdauhd" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ngaykethuchd" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
   <Table Name="dbo.tbl_kho_nhomsanpham" Member="tbl_kho_nhomsanphams">
     <Type Name="tbl_kho_nhomsanpham">
       <Column Name="manhomsanpham" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
@@ -1126,6 +1168,8 @@
       <Column Name="TenCTietTKCo" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
       <Column Name="TenCTietTKNo" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
       <Column Name="tenkho" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="matchinginvoice" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Invoice" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.tbl_kho_phieunhapxuat_detail" Member="tbl_kho_phieunhapxuat_details">
@@ -1172,6 +1216,7 @@
       <Column Name="TenCTietTKCo" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
       <Column Name="TenCTietTKNo" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
       <Column Name="tenkho" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Column Name="masothuencc" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.tbl_kho_sanpham" Member="tbl_kho_sanphams">
@@ -1528,6 +1573,7 @@
       <Column Name="Username" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="maKHsoinvoiceMST" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
       <Column Name="dinhkhoan" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="SohieuchungtuSocai" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
     </Type>
   </Table>
 </Database>

@@ -56,7 +56,7 @@
             // 
             // tbsochitiet
             // 
-            this.tbsochitiet.Location = new System.Drawing.Point(472, 99);
+            this.tbsochitiet.Location = new System.Drawing.Point(472, 94);
             this.tbsochitiet.Name = "tbsochitiet";
             this.tbsochitiet.Size = new System.Drawing.Size(86, 23);
             this.tbsochitiet.TabIndex = 68;
@@ -79,7 +79,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label6.Location = new System.Drawing.Point(24, 190);
+            this.label6.Location = new System.Drawing.Point(18, 184);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(62, 16);
             this.label6.TabIndex = 74;
@@ -87,7 +87,7 @@
             // 
             // txt_noidung
             // 
-            this.txt_noidung.Location = new System.Drawing.Point(121, 187);
+            this.txt_noidung.Location = new System.Drawing.Point(115, 181);
             this.txt_noidung.Name = "txt_noidung";
             this.txt_noidung.Size = new System.Drawing.Size(335, 21);
             this.txt_noidung.TabIndex = 75;
@@ -97,7 +97,7 @@
             this.lb_tkno.AutoSize = true;
             this.lb_tkno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_tkno.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lb_tkno.Location = new System.Drawing.Point(123, 137);
+            this.lb_tkno.Location = new System.Drawing.Point(117, 131);
             this.lb_tkno.Name = "lb_tkno";
             this.lb_tkno.Size = new System.Drawing.Size(18, 16);
             this.lb_tkno.TabIndex = 80;
@@ -106,7 +106,7 @@
             // tbchontkno
             // 
             this.tbchontkno.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbchontkno.Location = new System.Drawing.Point(120, 99);
+            this.tbchontkno.Location = new System.Drawing.Point(114, 93);
             this.tbchontkno.Name = "tbchontkno";
             this.tbchontkno.Size = new System.Drawing.Size(281, 24);
             this.tbchontkno.TabIndex = 79;
@@ -116,7 +116,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(24, 105);
+            this.label7.Location = new System.Drawing.Point(18, 99);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(51, 18);
             this.label7.TabIndex = 76;
@@ -127,7 +127,7 @@
             this.lbtenchitietno.AutoSize = true;
             this.lbtenchitietno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbtenchitietno.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lbtenchitietno.Location = new System.Drawing.Point(123, 153);
+            this.lbtenchitietno.Location = new System.Drawing.Point(117, 147);
             this.lbtenchitietno.Name = "lbtenchitietno";
             this.lbtenchitietno.Size = new System.Drawing.Size(57, 16);
             this.lbtenchitietno.TabIndex = 77;
@@ -138,7 +138,7 @@
             this.lb_machitietno.AutoSize = true;
             this.lb_machitietno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_machitietno.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lb_machitietno.Location = new System.Drawing.Point(77, 153);
+            this.lb_machitietno.Location = new System.Drawing.Point(71, 147);
             this.lb_machitietno.Name = "lb_machitietno";
             this.lb_machitietno.Size = new System.Drawing.Size(40, 16);
             this.lb_machitietno.TabIndex = 78;
