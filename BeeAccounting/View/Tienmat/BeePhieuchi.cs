@@ -601,9 +601,9 @@ namespace BEEACCOUNT.View
 
                 soquy.PsNo = 0;
 
-                if (Utils.IsValidnumber(txtsotien.Text.Replace(",", "")))
+                if (Utils.IsValidnumber(txtsotien.Text))
                 {
-                    soquy.PsCo = double.Parse(txtsotien.Text.Replace(",", "").Trim());
+                    soquy.PsCo = double.Parse(txtsotien.Text.Trim());
                 }
                 else
                 {
@@ -921,6 +921,8 @@ namespace BEEACCOUNT.View
 
 
                                 socai.TkNo = dataGridViewTkNo.Rows[idrow].Cells["Nợ_TK"].Value.ToString().Trim();
+
+
                                 if (dataGridViewTkNo.Rows[idrow].Cells["Mã_chi_tiết"].Value != DBNull.Value)///zcxzv
                                 {
                                     socai.MaCTietTKNo = int.Parse(dataGridViewTkNo.Rows[idrow].Cells["Mã_chi_tiết"].Value.ToString());
@@ -934,7 +936,7 @@ namespace BEEACCOUNT.View
 
 
 
-                                if (dataGridViewTkNo.Rows[idrow].Cells["Nợ_TK"].Value != DBNull.Value)// xác định có đinh khoản
+                                if (this.tkco != "")// xác định có đinh khoản
                                 {
                                     socai.TkCo = this.tkco; //this.tkco;//;
 

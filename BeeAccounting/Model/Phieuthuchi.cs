@@ -53,7 +53,29 @@ namespace BEEACCOUNT.Model
             #endregion
         }
 
+        public static int xoaPhieu(String Loaiphieu, string sophieu)
+        {
+            string connection_string = Utils.getConnectionstr();
+            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
 
+            #region load list phieu thu
+            var Listphieuthu = from p in dc.tbl_SoQuys
+                               where p.Machungtu == Loaiphieu
+                                    && p.Sophieu == sophieu
+                      
+
+                           
+                               select p;
+
+            dc.tbl_SoQuys.DeleteAllOnSubmit(Listphieuthu);
+            dc.SubmitChanges();
+            
+            return 1;
+            //     dataGridViewListphieuthu.DataSource = Listphieuthu;
+            #endregion
+        }
+
+        
 
         public static IQueryable LisDanhSachphieuchi(String Loaiphieu, string thang, string nam)
         {

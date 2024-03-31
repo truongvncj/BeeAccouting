@@ -11064,8 +11064,6 @@ namespace BEEACCOUNT
 		
 		private System.Nullable<System.DateTime> _Ngaychungtu;
 		
-		private string _machungtu;
-		
 		private string _diengiai;
 		
 		private string _taikhoandoiung;
@@ -11078,6 +11076,8 @@ namespace BEEACCOUNT
 		
 		private int _id;
 		
+		private string _machungtu;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -11086,8 +11086,6 @@ namespace BEEACCOUNT
     partial void OnusernameChanged();
     partial void OnNgaychungtuChanging(System.Nullable<System.DateTime> value);
     partial void OnNgaychungtuChanged();
-    partial void OnmachungtuChanging(string value);
-    partial void OnmachungtuChanged();
     partial void OndiengiaiChanging(string value);
     partial void OndiengiaiChanged();
     partial void OntaikhoandoiungChanging(string value);
@@ -11100,6 +11098,8 @@ namespace BEEACCOUNT
     partial void OntonChanged();
     partial void OnidChanging(int value);
     partial void OnidChanged();
+    partial void OnmachungtuChanging(string value);
+    partial void OnmachungtuChanged();
     #endregion
 		
 		public RptdetailSoCai()
@@ -11143,26 +11143,6 @@ namespace BEEACCOUNT
 					this._Ngaychungtu = value;
 					this.SendPropertyChanged("Ngaychungtu");
 					this.OnNgaychungtuChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_machungtu", DbType="NVarChar(10) NOT NULL", CanBeNull=false)]
-		public string machungtu
-		{
-			get
-			{
-				return this._machungtu;
-			}
-			set
-			{
-				if ((this._machungtu != value))
-				{
-					this.OnmachungtuChanging(value);
-					this.SendPropertyChanging();
-					this._machungtu = value;
-					this.SendPropertyChanged("machungtu");
-					this.OnmachungtuChanged();
 				}
 			}
 		}
@@ -11283,6 +11263,26 @@ namespace BEEACCOUNT
 					this._id = value;
 					this.SendPropertyChanged("id");
 					this.OnidChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_machungtu", DbType="NVarChar(50)")]
+		public string machungtu
+		{
+			get
+			{
+				return this._machungtu;
+			}
+			set
+			{
+				if ((this._machungtu != value))
+				{
+					this.OnmachungtuChanging(value);
+					this.SendPropertyChanging();
+					this._machungtu = value;
+					this.SendPropertyChanged("machungtu");
+					this.OnmachungtuChanged();
 				}
 			}
 		}

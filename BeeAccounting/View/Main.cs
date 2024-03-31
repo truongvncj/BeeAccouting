@@ -3738,9 +3738,9 @@ namespace BEEACCOUNT.View
                             q.diengiai = item.Diengiai.Truncate(225);
                         }
 
-                        q.machungtu = (item.manghiepvu.Trim() + " " + item.Sohieuchungtu.Trim()).Truncate(10);
+                        q.machungtu =  item.Sohieuchungtu.Trim().Truncate(50);
 
-
+                        
                         q.username = username;
                         q.Ngaychungtu = item.Ngayctu;
 
@@ -3778,7 +3778,7 @@ namespace BEEACCOUNT.View
 
                                         Số_tiền = RptdetailSocai.psco,
 
-
+                                       //Số_hiệu_chứng_từ =   RptdetailSocai.machungtu,
                                     };
 
 
@@ -3885,7 +3885,7 @@ namespace BEEACCOUNT.View
                             q.diengiai = item.Diengiai.Truncate(225);
                         }
 
-                        q.machungtu = (item.manghiepvu.Trim() + " " + item.Sohieuchungtu.Trim()).Truncate(10);
+                        q.machungtu = item.Sohieuchungtu.Trim().Truncate(50);
 
 
                         q.username = username;
@@ -4780,6 +4780,38 @@ namespace BEEACCOUNT.View
             #endregion
 
         
+        }
+
+        private void bảngTổngHợpChiPhíKhôngTínhVàoThuếToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            #region//BeeDanhsachsanpham
+
+            string connection_string = Utils.getConnectionstr();
+
+            LinqtoSQLDataContext dc = new LinqtoSQLDataContext(connection_string);
+
+
+            var rs = from p in dc.tbl_Socais
+                     where p.chiphihople ==false
+                     select p;
+            
+            
+
+
+
+
+
+
+
+            Viewtable viewtbl2 = new Viewtable(rs, dc, "Bảng kê bút toán không khấu trừ thuế", 7, "0");// mã 7 là danh sách  sản phẩm
+
+
+            //     xxxx
+            viewtbl2.Show();
+
+            #endregion
+
         }
     }
 

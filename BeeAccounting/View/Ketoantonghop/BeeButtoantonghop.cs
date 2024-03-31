@@ -3005,8 +3005,13 @@ namespace BEEACCOUNT.View
 
         private void txtsotien_Leave_1(object sender, EventArgs e)
         {
-            this.sotienct = double.Parse(txtsotien.Text.ToString());
+            if (Utils.IsValidnumber(txtsotien.Text.ToString()))
+            {
+                this.sotienct = double.Parse(txtsotien.Text.ToString());
+  
+            }
 
+            
 
             //if (txtsotien.Text != "" && Utils.IsValidnumber(txtsotien.Text.Replace(",", "")) == false)
             //{
